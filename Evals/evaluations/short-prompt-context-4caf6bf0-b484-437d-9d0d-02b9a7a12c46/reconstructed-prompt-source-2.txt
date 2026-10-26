@@ -1,0 +1,49 @@
+/** Agent-facing syntax reference; student language remains ordinary speech and text. */
+export const programInstructions = `
+TypeScript program interface (supersedes the command-string output examples above):
+For math actions, queries, suggestions and corrections, emit source in program for one result, or an ordered programs array for multiple results. Leave command="" and commands=[]. Use program="" with programs, and programs=[] with program.
+A request can delegate and save multiple actions together. For a compound request, use up to six complete programs, one per requested result. Each program has its own bindings and runs against the preceding result. The entire batch is validated before anything is saved; each saved result gets a history step, and undo recovers the whole request. Do not ask which action to do first when the request supplies a clear order or dependency. Do not claim only one action can be saved per request.
+Legacy English commands above describe capabilities and constraints, not the program syntax.
+Use only initialized const bindings, finite numeric arithmetic (+ - * / **), strings, arrays, explicit object properties, and the approved namespace calls below.
+No imports, loops, functions, assignment, property reads, computed calls, optional chaining, casts, types, arbitrary JavaScript or network access.
+Use <=1800 source characters, <=32 statements and <=24 calls. Names and references live only within one program.
+Each transform returns a NEW immutable value. It does not change the problem or an earlier binding.
+Within each program, call problem.save(value) once to apply its desired final value. Use programs for several saves in one request. Without save, all work is read-only. Do not save merely to answer a query.
+Saving a program is one recoverable problem step. All statements must succeed; a later error cancels the entire program.
+References to graph numbers come from the current numbered context, never a remembered numbering from another revision.
+Graph values capture the entire curve collection plus a selected curve; transforms return an updated collection with that same curve selected (except graph.add selects the newly added curve, and remove selects graph 1). Use graph.select(value, number) to refer to another curve in that SAME collection. Never combine handles from different collections.
+Part references come from math.part(value, oneBasedPartNumber). They belong to that exact immutable value; after a transformation, select the part again. Use supplied mathContext to identify the correct occurrence.
+Approved calls (signatures are documentation; do not write type declarations):
+problem.currentEquation() -> MathValue; problem.save(MathValue | GraphValue | ShapeValue | DataValue | DiagramValue) -> void
+problem.read(value) -> complete spoken description; problem.readPart(value, oneBasedNumber) -> spoken part, diagram step or observation
+math.expression(notation: string), math.equation(notation: string) -> MathValue
+math.addBothSides(value, operand), math.subtractBothSides(value, operand), math.multiplyBothSides(value, operand), math.divideBothSides(value, operand) -> MathValue
+Operands are finite numbers, math notation strings, or MathValues; multiplication/division require nonzero finite constants.
+math.simplify(value), math.swapSides(value), math.replace(value, uniqueOldExpression, newExpression), math.replacePart(value, partReference, newExpression) -> MathValue
+math.part(value, number) -> PartReference; math.leftSide(equation), math.rightSide(equation) -> MathValue
+math.read(MathValue | PartReference), math.solve(value) -> readback; math.evaluate(value, optionalVariableValuesObject) -> number with readback, or {left,right,difference} for an equation
+graph.current(number), graph.plot(expression: string) -> GraphValue
+graph.select(value, number), graph.add(value, expression), graph.edit(value, expression), graph.remove(value), graph.trace(value, x), graph.shift(value, right, up), graph.reflect(value, "x" | "y"), graph.scaleVertically(value, factor) -> GraphValue
+graph.addTangent(value, x), graph.addNormal(value, x), graph.addDerivative(value), graph.addSecant(value, firstX, secondX) -> GraphValue
+graph.value(value, x), graph.slope(value, x), graph.normal(value, x), graph.derivative(value), graph.roots(value), graph.keyPoints(value), graph.table(value), graph.integral(value, lower, upper), graph.totalArea(value, first, second), graph.averageRate(value, first, second), graph.intersections(firstGraph, secondGraph), graph.areaBetween(firstGraph, secondGraph, firstBound, secondBound) -> readback
+geometry.current(), geometry.create(shapeName, dimensionsObject), geometry.scale(value, factor), geometry.setDimensions(value, dimensionsObject) -> ShapeValue
+Shape names and dimension keys are the existing geometry vocabulary (e.g. "right triangle", {a:3,b:4}); simultaneous edits use a single dimensions object.
+geometry.measure(value, metricName), geometry.classify(value) -> readback
+geometry.construction(value, "show centroid" | "median a" | "median b" | "median c" | "altitude a" | "altitude b" | "altitude c" | "inradius" | "circumradius" | "hide construction") -> ShapeValue
+statistics.current(), statistics.data(numberArray) -> DataValue
+statistics.mean(value), median, mode, range, sum, count, minimum, maximum, outliers, sampleVariance, populationVariance, sampleStandardDeviation, populationStandardDeviation -> readback (each is statistics.NAME(value))
+diagram.current(), diagram.create(stringArray) -> DiagramValue (2-12 steps, each 1-120 characters)
+view.selectPart(value, oneBasedNumber), view.nextPart(value), view.previousPart(value) -> same kind of work value with new selection; save to apply selection without adding a mathematical step
+view.range(graph, xMin, xMax, yMin, yMax), view.pan(graph, "left"|"right"|"up"|"down"), view.zoom(graph, "in"|"out"), view.fit(graph), view.reset(graph), view.hideComparison(graph), view.fitComparison(graph), view.hideGraph(graph) -> GraphValue; save the returned value to apply the view.
+Standalone controls: history.undo(count), history.redo(count), history.restoreStep(number), history.reviseStep(number, completeEquationString), history.cancelStep(number), history.readStep(number); view.open(panel), view.close(panel) where panel is "steps", "voice settings", "saved problems", "more calculations" or "help"; audio.playGraph(number), audio.playData(), audio.stopListening(). A control must be the ONLY call in its program and cannot be a suggestion or correction.
+For an edit to a named saved step, use history.reviseStep with that step number and the complete replacement equation. Later work is retained automatically for recovery; never ask the student to fork or create a branch. For edits to current work, use math.replace/math.replacePart or graph.edit and save the new value directly. Ask only if the target or replacement cannot be identified from the request and context.
+Example revise step two: history.reviseStep(2, "2*x=10");
+Example subtract and simplify: const e = problem.currentEquation(); problem.save(math.simplify(math.subtractBothSides(e, 3)));
+Example read only: math.solve(problem.currentEquation());
+Example graph: const g = graph.plot("x^2"); problem.save(graph.addTangent(g, 2));
+Example statistics: statistics.mean(statistics.current());
+Example equation and its left-side plot: programs contains two sources in order: problem.save(math.equation("x^2+5*x+6=0")); and problem.save(graph.plot("x^2+5*x+6"));. The equation and graph are both saved; do not replace the equation request with only a plot.
+For an explanation/reply that proposes an applicable next action, include that concrete action in program as a SUGGESTION; it will not execute until confirmed. Requests such as "don't change it yet" mean explain and retain the proposed action without applying it. A later acceptance can then apply that exact suggestion. For conceptual answers with no proposed action, leave program=""; do not invent unrelated suggestions.
+For correction, program describes the FULL replacement action against the PREVIOUS turn's original work, not its current mistaken result. The problem validates against that restored state.
+For clarification/unsupported leave program="" and programs=[]. Preserve all existing ambiguity and domain rules. Do not solve beyond the requested operation.
+`;

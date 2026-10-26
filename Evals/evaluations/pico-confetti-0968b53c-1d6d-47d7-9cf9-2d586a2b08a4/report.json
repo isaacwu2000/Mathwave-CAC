@@ -1,0 +1,26 @@
+{
+  "run": "0968b53c-1d6d-47d7-9cf9-2d586a2b08a4",
+  "revision": "93a614ffb52616ddd6a8b9cd22b042de423c2c39",
+  "environment": "Local Vinext app; actual applyCloudOperation and exact completion service; synthetic voice transport and isolated in-memory storage. No live provider or student data.",
+  "passed": false,
+  "checks": [],
+  "failure": "desktop: ready: click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Back to problem solving' })\u001b[22m\n",
+  "captures": [
+    {
+      "file": "desktop-01-ready.png",
+      "caption": "1280×900: approved Soft peak, matching eyes, no idle animation."
+    },
+    {
+      "file": "desktop-02-listening.png",
+      "caption": "Listening lean and input arrow; no speaking waves."
+    },
+    {
+      "file": "desktop-03-speaking.png",
+      "caption": "Listening and audible playback overlap; outward waves are separate from the input waveform."
+    },
+    {
+      "file": "desktop-failure.png",
+      "caption": "desktop: ready: TimeoutError: click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Back to problem solving' })\u001b[22m\n"
+    }
+  ]
+}

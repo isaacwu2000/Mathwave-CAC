@@ -1,0 +1,2033 @@
+{
+  "lane": "Authored reference answers injected into the local/web executor. No model inference.",
+  "createdAt": "2026-10-23T00:48:55.830Z",
+  "sourceRevision": "c7bfa28a8b36d907416f5c1fadf492a42f4f08bf",
+  "corpusSha256": {
+    "algebra.json": "fd1e33652bbafbd791c9df58e67f73f595ab8797cb72be619220d1890f729e1b",
+    "geometry.json": "7979962e64b306fadb6d351ce70ba52918f0d035a3efa93f781166c9f190a07c",
+    "graphs.json": "f5666d66c19622c7c1e7791285a432ac3b296ab367df76b802cdd15268492ecb",
+    "statistics-and-context.json": "b96d495d79b024487be34dd1ab80124d6108c92a274ab2aa40638cf6a30884c4"
+  },
+  "cases": 400,
+  "families": 400,
+  "turns": 1197,
+  "categories": {
+    "algebra": 100,
+    "geometry": 100,
+    "graphs": 100,
+    "statistics": 50,
+    "cross-topic": 25,
+    "history-and-diagrams": 25
+  },
+  "passingReferences": 398,
+  "results": [
+    {
+      "id": "alg-isolate-added-constant",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-restore-subtracted-constant",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-negative-leading-coefficient",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-negative-right-side",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-fraction-coefficient",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-decimal-coefficient",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-grouped-quotient",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-variables-both-sides",
+      "turns": 5,
+      "errors": []
+    },
+    {
+      "id": "alg-constant-first-order",
+      "turns": 5,
+      "errors": []
+    },
+    {
+      "id": "alg-fraction-answer-retained",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-double-negative-operand",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-negative-denominator",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-distribute-positive-factor",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-distribute-negative-factor",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-combine-repeated-variable",
+      "turns": 5,
+      "errors": []
+    },
+    {
+      "id": "alg-zero-solution",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-negative-variable-on-right",
+      "turns": 5,
+      "errors": []
+    },
+    {
+      "id": "alg-different-letter-a",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-different-letter-t",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-fraction-offset",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-fractional-right-side",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-decimal-offset",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-move-negative-variable",
+      "turns": 5,
+      "errors": []
+    },
+    {
+      "id": "alg-balance-variable-only",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-swap-final-orientation",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-clear-parenthesized-negative",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-coefficient-one-after-cancel",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-constant-on-both-sides",
+      "turns": 5,
+      "errors": []
+    },
+    {
+      "id": "alg-negative-fraction-coefficient",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-formula-simple-rearrange",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-square-negative-input",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-negative-outside-square",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-parenthesized-negative-square",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-two-variable-substitution",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-rectangle-perimeter-expression",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-triangle-area-expression",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-quadratic-three-terms",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-fraction-input",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-negative-exponent",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-cube-negative",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-difference-of-squares-value",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-rational-nonzero-input",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-natural-log-input",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-square-root-input",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-powers-before-products",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-nested-groups-value",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-fraction-sum-value",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-zero-exponent-value",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-mixed-sign-product-value",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-correct-coefficient",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-correct-negative-constant",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-correct-exponent",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-rename-variable",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-replace-group",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-change-denominator",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-change-root-radicand",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-replace-linear-term",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-constant-to-variable",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-remove-extra-term",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-negative-to-positive",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-decimal-correction",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-reciprocal-structure-edit",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-cube-to-square",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-replace-product-with-sum",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-solve-readonly-positive",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-solve-readonly-negative",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-solve-denominator-constant",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-solve-zero-root",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-solve-variable-both-sides",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-solve-grouped-linear",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-solve-noninteger",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-solve-square-two-roots",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-solve-zero-product",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-solve-quadratic-two-positive",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-solve-repeated-root",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-solve-opposite-roots",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-solve-negative-linear-divisor",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-solve-sides-reversed",
+      "turns": 2,
+      "errors": [
+        "turn 2: answer missing \"x = 5\": x = 3.8.\n1. Subtract the right side from both sides: (20 - 3) - (5 * x - 2) = 0.\n2. Collect like terms: -5*x + 19 = 0.\n3. This is linear: the coefficient of x is -5, and the constant is 19.\n4. Subtract the constant from both sides: -5*x = -19.\n5. Divide both sides by -5: x = (-19) / (-5). Therefore, x = 3.8."
+      ]
+    },
+    {
+      "id": "alg-read-left-only",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-read-right-only",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-read-negative-fraction",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-read-bracket-scope",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-evaluate-left-side-only",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-evaluate-right-side-only",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-query-unsaved-transform",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-query-temporary-simplification",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-read-right-constant-sign",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "alg-simplify-then-recheck",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-nested-parenthesis-simplify",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-expand-before-substitute",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-replace-whole-problem",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-expression-to-equation",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-separate-requested-steps",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-correct-equation-constant",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-simplify-cancelled-variable",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-undo-redo-balancing",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "alg-undo-two-separate-steps",
+      "turns": 4,
+      "errors": [
+        "turn 4: expression: expected \"3 * x + 6 = 21\", got \"3 * x + 6 = 20 - 1\""
+      ]
+    },
+    {
+      "id": "alg-correct-previous-operation",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-accept-unapplied-suggestion",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "alg-query-between-undo-and-redo",
+      "turns": 5,
+      "errors": []
+    },
+    {
+      "id": "geo-poster-area",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "geo-frame-border",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-screen-diagonal",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-square-fence",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "geo-square-tiles",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-ladder-length",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-ramp-area",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-right-angle-label",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-triangle-rope",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-triangle-heron",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-triangle-height",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "geo-slanted-parallelogram",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-trapezoid-average",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-trapezoid-base-edit",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "geo-circle-diameter",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-circle-resize",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "geo-ring-width",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-ring-hole-edit",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "geo-hexagon-turn",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-pentagon-corner",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-octagon-border",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-polygon-side-count",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "geo-box-capacity",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-box-wrapping",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-box-diagonal",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-cube-volume",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-cube-faces",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-cone-slant",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-triangle-inradius",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-triangle-circumradius",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-similar-area",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-similar-perimeter",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-model-half-volume",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-centroid-overlay",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-median-overlay",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-altitude-overlay",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-incircle-overlay",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-circumcircle-overlay",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-clear-overlay",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-classify-equilateral",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "geo-parallel-intersection",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-corresponding-angle-marks",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-alternate-interior-marks",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-same-side-interior-marks",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-alternate-exterior-marks",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-vertical-angles-at-crossing",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-linear-pair-at-crossing",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-perpendicular-transversal",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-slanted-parallels",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-vertical-parallels",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-two-transversals",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-parallel-strip-width",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-parallel-midline",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-parallel-through-corner",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-rectangle-parallel-sides",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-parallelogram-completion",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-midsegment-parallel",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-transversal-angle-bisector",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-parallel-ray-start",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-parallel-finite-strip",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-segment-midpoint",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-distance-diagonal",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-reflect-x-axis",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-reflect-y-axis",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-reflect-diagonal",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-project-oblique",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-perpendicular-bisector",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-right-angle-bisector",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-triangle-centroid",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-right-circumcenter",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-right-orthocenter",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-triangle-incenter",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-circle-chord-midpoint",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-circle-horizontal-intersections",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-circle-second-branch",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-tangent-foot",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-two-circle-upper",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-two-circle-lower",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-square-diagonal-center",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-kite-perpendicular-diagonals",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-midpoint-follows-endpoint",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-reflected-point-follows-original",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-parallel-follows-base",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-circle-point-radius-update",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-centroid-follows-vertex",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-foot-follows-height",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-circle-center-translation",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-intersection-follows-transversal",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-midsegment-follows-triangle",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-coordinate-correction",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-median-two-to-one",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-circumcircle-equal-radii",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-altitude-outside",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-isosceles-altitude-midpoint",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-rectangle-outside-extension",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-circle-diameter-right-angle",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-rhombus-diagonal-halves",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-parallel-equal-intercepts",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-triangle-angle-bisector-base",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "geo-translated-midpoint",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-linear-starting-value",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-negative-slope-cooling",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-quadratic-two-zeroes",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-repeated-root-touch",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-quadratic-no-real-crossing",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-cubic-odd-signs",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-absolute-distance",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-square-root-endpoint",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-cube-root-negative",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-reciprocal-signs",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-exponential-doubling",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-exponential-decay",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-natural-log-anchor",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-sine-radian-zero",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-cosine-quarter-cycle",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-tangent-origin",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-floor-step-boundary",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-ceiling-negative-step",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-parabola-right-translation",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-parabola-up-translation",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-absolute-left-down",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-reflect-odd-x",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-reflect-line-y",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-vertical-stretch-corner",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-vertical-compression",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-negative-scale-both-effects",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-translation-order",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-shift-then-stretch",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-compare-line-parabola",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-parallel-lines-no-meeting",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-perpendicular-linear-crossing",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-two-parabolas-selected-edit",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-remove-comparison-retain-original",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-replace-entire-graph",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-named-curves-select-by-name",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-rename-without-changing-values",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-trace-then-followup-value",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-secant-two-points",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-linked-slope-parameter",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-linked-intercept-parameter",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-shared-coefficient-two-curves",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-function-composition",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-function-input-shift",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-forward-reference-scene",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-named-function-redefinition",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-trig-amplitude-parameter",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-exponential-base-parameter",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-distance-function-two-inputs",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-nested-function-chain",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-scalar-dependency-chain",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-function-and-independent-curve",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-name-preserved-after-edit",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-implicit-circle-boundary",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-shifted-circle-center",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-ellipse-axis-endpoints",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-hyperbola-two-branches",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-vertical-line-not-horizontal",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-horizontal-relation-height",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-strict-linear-boundary",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-inclusive-linear-boundary",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-above-parabola-region",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-filled-disk",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-outside-circle-strict",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-vertical-half-plane",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-sideways-parabola",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-conic-edit-preserves-relation",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-multiple-regions-independent",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-parametric-ellipse-landmarks",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-parametric-linear-path",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-parametric-projectile",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-parametric-parabola-direction",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-polar-constant-circle",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-polar-cosine-circle",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-polar-cardioid-landmarks",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-polar-half-circle-domain",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-parametric-two-paths",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-polar-petal-domain",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-pan-not-shift",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-zoom-not-stretch",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-large-window-preserves-function",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-small-feature-window",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-reset-view-not-graph",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-fit-high-intercept",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-viewport-then-translation",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-comparison-shared-window",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-zoom-out-then-trace",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-piecewise-sign-branches",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-piecewise-boundary-choice",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-restricted-square-root",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-restricted-line-segment",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-max-function-floor",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-min-function-cap",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-rational-hole-values",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-factored-polynomial-crossings",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-average-rate-quadratic",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-table-then-specific-point",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-turning-point-vs-intercept",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-read-original-after-three-curves",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "graph-edit-sign-after-misstatement",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "graph-two-actions-one-request",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-average-homework",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-middle-unsorted",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-middle-even",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-repeat-frequency",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-temperature-spread",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-savings-total",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-duplicates-count",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-coldest-negative",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-largest-negative",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-population-variance",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-sample-variance",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-population-sd",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-sample-sd",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-one-large-outlier",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-zero-spread",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-signed-average",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-decimal-middle",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-zero-is-observation",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-negative-mode",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-symmetric-median",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-decimal-sum",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-smallest-zero",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-median-tied-center",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-negative-sum",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-same-data-two-centers",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-correct-last-score",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-append-missing-score",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-remove-extra-score",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-replace-entire-data",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-sign-correction-data",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-decimal-correction-data",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-sort-keeps-repeats",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-clear-dataset-outlier",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-scale-all-observations",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-add-to-all-observations",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-sample-to-population",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-sd-versus-variance",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-mean-not-total",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-range-not-maximum",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-minimum-after-mode",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-count-after-sum",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-tied-modes",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-negative-extremes",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-zero-variance-then-sd",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-smallest-supported-list",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-reorder-even-median",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-restore-duplicate",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-negative-to-zero",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-drop-missing-observation",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-retain-order-then-median",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-equation-temporary-mean",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-graph-temporary-median",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-shape-temporary-sum",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-data-temporary-equation",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-data-temporary-expression",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-equation-to-data",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-data-to-equation",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-graph-to-data",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-data-to-graph",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-rectangle-to-data",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-data-to-circle",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-equation-to-rectangle",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-shape-to-equation",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-circle-to-line-graph",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-graph-to-triangle",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-temporary-count-on-shape",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-temporary-range-on-equation",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-temporary-max-on-graph",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-temporary-math-on-circle",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-temporary-solve-on-graph",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-temporary-median-on-data",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-temporary-sample-on-data",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-two-temporary-queries",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "student-units-stay-numeric",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-population-after-edit",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "student-undo-data-replacement",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "student-redo-data-replacement",
+      "turns": 5,
+      "errors": []
+    },
+    {
+      "id": "student-query-not-undo-step",
+      "turns": 5,
+      "errors": []
+    },
+    {
+      "id": "student-undo-mode-change",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "student-redo-mode-change",
+      "turns": 5,
+      "errors": []
+    },
+    {
+      "id": "student-clear-and-recover-data",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "student-undo-two-lists",
+      "turns": 5,
+      "errors": []
+    },
+    {
+      "id": "student-redo-two-lists",
+      "turns": 6,
+      "errors": []
+    },
+    {
+      "id": "student-edit-after-undo-data",
+      "turns": 5,
+      "errors": []
+    },
+    {
+      "id": "student-clear-equation-recovery",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "student-diagram-sequence",
+      "turns": 2,
+      "errors": []
+    },
+    {
+      "id": "student-diagram-replace-operation",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-diagram-undo-label",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "student-diagram-redo-label",
+      "turns": 5,
+      "errors": []
+    },
+    {
+      "id": "student-diagram-case-insensitive",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-diagram-new-procedure",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-diagram-temporary-arithmetic",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-diagram-to-equation",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-equation-to-diagram",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-diagram-undo-new-flow",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "student-diagram-multi-edit",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "student-diagram-preserve-neighbors",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-diagram-clear-recovery",
+      "turns": 4,
+      "errors": []
+    },
+    {
+      "id": "student-diagram-temporary-statistics",
+      "turns": 3,
+      "errors": []
+    },
+    {
+      "id": "student-data-to-diagram-to-data",
+      "turns": 4,
+      "errors": []
+    }
+  ],
+  "modelAccuracy": "Not measured. Authored answers were supplied, not predicted.",
+  "visualReview": "Incomplete. This reference check does not establish full-suite visual acceptance.",
+  "studentUsability": "Not measured. These are synthetic author-created student utterances.",
+  "split": "Unassigned. No training updates or train/test split performed."
+}

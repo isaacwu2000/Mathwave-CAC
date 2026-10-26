@@ -1,0 +1,72 @@
+{
+  "split": "test-v22",
+  "mode": "endpoint",
+  "datasetSHA256": "2e6b30f41940697f9b69e876d12942092dc9eceec64eab1c40e63807494b0fc5",
+  "createdAt": "2026-10-14T15:47:53.407Z",
+  "total": 4,
+  "scored": 4,
+  "passed": 4,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "reflection-sector": {
+      "passed": 4,
+      "scored": 4
+    }
+  },
+  "results": [
+    {
+      "id": "reflection-sector-1",
+      "category": "reflection-sector",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "reflect graph 1 across x axis",
+        "message": ""
+      },
+      "latencyMs": 3714
+    },
+    {
+      "id": "reflection-sector-2",
+      "category": "reflection-sector",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "scale graph 2 vertically by 3",
+        "message": ""
+      },
+      "latencyMs": 2258
+    },
+    {
+      "id": "reflection-sector-3",
+      "category": "reflection-sector",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "sector radius 4 angle 90",
+        "message": ""
+      },
+      "latencyMs": 2733
+    },
+    {
+      "id": "reflection-sector-4",
+      "category": "reflection-sector",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "sector radius 4 angle 90",
+          "arc length"
+        ]
+      },
+      "latencyMs": 4003
+    }
+  ]
+}

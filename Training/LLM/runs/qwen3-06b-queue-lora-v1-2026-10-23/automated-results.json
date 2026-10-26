@@ -1,0 +1,200 @@
+{
+  "status": "Training, automated scoring and complete actual-app visual inspection finished; production acceptance fails.",
+  "scores": {
+    "baseline": {
+      "allRows": {
+        "total": 166,
+        "syntaxValid": 0,
+        "semanticCorrect": 0,
+        "pass": 0,
+        "exactTarget": 0,
+        "repliesChecked": 0,
+        "replyAssertionsSatisfied": 0,
+        "replyReferenceMatches": 0
+      },
+      "primaryUniqueInputs": {
+        "total": 164,
+        "pass": 0,
+        "syntaxValid": 0
+      },
+      "categories": {
+        "algebra": {
+          "total": 69,
+          "syntaxValid": 0,
+          "semanticCorrect": 0,
+          "pass": 0,
+          "exactTarget": 0,
+          "repliesChecked": 0,
+          "replyAssertionsSatisfied": 0,
+          "replyReferenceMatches": 0
+        },
+        "graphs": {
+          "total": 36,
+          "syntaxValid": 0,
+          "semanticCorrect": 0,
+          "pass": 0,
+          "exactTarget": 0,
+          "repliesChecked": 0,
+          "replyAssertionsSatisfied": 0,
+          "replyReferenceMatches": 0
+        },
+        "geometry": {
+          "total": 26,
+          "syntaxValid": 0,
+          "semanticCorrect": 0,
+          "pass": 0,
+          "exactTarget": 0,
+          "repliesChecked": 0,
+          "replyAssertionsSatisfied": 0,
+          "replyReferenceMatches": 0
+        },
+        "statistics": {
+          "total": 10,
+          "syntaxValid": 0,
+          "semanticCorrect": 0,
+          "pass": 0,
+          "exactTarget": 0,
+          "repliesChecked": 0,
+          "replyAssertionsSatisfied": 0,
+          "replyReferenceMatches": 0
+        },
+        "cross-topic": {
+          "total": 9,
+          "syntaxValid": 0,
+          "semanticCorrect": 0,
+          "pass": 0,
+          "exactTarget": 0,
+          "repliesChecked": 0,
+          "replyAssertionsSatisfied": 0,
+          "replyReferenceMatches": 0
+        },
+        "history-and-diagrams": {
+          "total": 7,
+          "syntaxValid": 0,
+          "semanticCorrect": 0,
+          "pass": 0,
+          "exactTarget": 0,
+          "repliesChecked": 0,
+          "replyAssertionsSatisfied": 0,
+          "replyReferenceMatches": 0
+        },
+        "arithmetic": {
+          "total": 9,
+          "syntaxValid": 0,
+          "semanticCorrect": 0,
+          "pass": 0,
+          "exactTarget": 0,
+          "repliesChecked": 0,
+          "replyAssertionsSatisfied": 0,
+          "replyReferenceMatches": 0
+        }
+      },
+      "jsonParseableResponses": {
+        "valid": 4,
+        "total": 166
+      }
+    },
+    "adapted": {
+      "allRows": {
+        "total": 166,
+        "syntaxValid": 135,
+        "semanticCorrect": 114,
+        "pass": 114,
+        "exactTarget": 107,
+        "repliesChecked": 48,
+        "replyAssertionsSatisfied": 46,
+        "replyReferenceMatches": 43
+      },
+      "primaryUniqueInputs": {
+        "total": 164,
+        "pass": 112,
+        "syntaxValid": 133
+      },
+      "categories": {
+        "algebra": {
+          "total": 69,
+          "syntaxValid": 57,
+          "semanticCorrect": 52,
+          "pass": 52,
+          "exactTarget": 50,
+          "repliesChecked": 17,
+          "replyAssertionsSatisfied": 16,
+          "replyReferenceMatches": 14
+        },
+        "graphs": {
+          "total": 36,
+          "syntaxValid": 27,
+          "semanticCorrect": 17,
+          "pass": 17,
+          "exactTarget": 16,
+          "repliesChecked": 9,
+          "replyAssertionsSatisfied": 8,
+          "replyReferenceMatches": 8
+        },
+        "geometry": {
+          "total": 26,
+          "syntaxValid": 19,
+          "semanticCorrect": 18,
+          "pass": 18,
+          "exactTarget": 16,
+          "repliesChecked": 9,
+          "replyAssertionsSatisfied": 9,
+          "replyReferenceMatches": 9
+        },
+        "statistics": {
+          "total": 10,
+          "syntaxValid": 10,
+          "semanticCorrect": 10,
+          "pass": 10,
+          "exactTarget": 10,
+          "repliesChecked": 5,
+          "replyAssertionsSatisfied": 5,
+          "replyReferenceMatches": 5
+        },
+        "cross-topic": {
+          "total": 9,
+          "syntaxValid": 8,
+          "semanticCorrect": 7,
+          "pass": 7,
+          "exactTarget": 6,
+          "repliesChecked": 5,
+          "replyAssertionsSatisfied": 5,
+          "replyReferenceMatches": 4
+        },
+        "history-and-diagrams": {
+          "total": 7,
+          "syntaxValid": 6,
+          "semanticCorrect": 2,
+          "pass": 2,
+          "exactTarget": 2,
+          "repliesChecked": 1,
+          "replyAssertionsSatisfied": 1,
+          "replyReferenceMatches": 1
+        },
+        "arithmetic": {
+          "total": 9,
+          "syntaxValid": 8,
+          "semanticCorrect": 8,
+          "pass": 8,
+          "exactTarget": 7,
+          "repliesChecked": 2,
+          "replyAssertionsSatisfied": 2,
+          "replyReferenceMatches": 2
+        }
+      },
+      "jsonParseableResponses": {
+        "valid": 166,
+        "total": 166
+      }
+    }
+  },
+  "cleanup": {
+    "atUnix": 1792790246.656218,
+    "ownedEndpointIds": [],
+    "pods": [],
+    "accountCurrentSpendPerHr": 0,
+    "accountBalanceDeltaUsd": 0.5251307433000001,
+    "note": "Account balance observation includes connectivity/smoke and earlier connection attempt; not an itemized reconciled invoice."
+  },
+  "visualReview": "full-visual-review/visual-review.json"
+}

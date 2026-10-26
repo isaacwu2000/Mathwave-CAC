@@ -1,0 +1,77 @@
+{
+  "scope": "Actual browser rendering of every captured provider outcome. Saved synthetic report data is replayed through a mocked problem API; no provider calls or student data. Capture alone is not visual review.",
+  "reportSha256": "4d3e214076f3c625c06a51de2c1512a03e42e69e28c5821f0edd7458cc8b0a10",
+  "reviews": [
+    {
+      "scenario": "two-curves-preview-1",
+      "variant": "generated",
+      "text": "Plot y=x squared and y=x plus one. Draw the first curve before adding the second.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/graph-catalog-16e2ba5a-70cb-41f9-9ce7-af3d2a26e48c/visual/00-generated-two-curves-preview-1.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Only y=x^2 is visible in the first preview."
+    },
+    {
+      "scenario": "two-curves-preview-2",
+      "variant": "generated",
+      "text": "Plot y=x squared and y=x plus one. Draw the first curve before adding the second.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/graph-catalog-16e2ba5a-70cb-41f9-9ce7-af3d2a26e48c/visual/01-generated-two-curves-preview-2.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Both y=x^2 and y=x+1 appear, with the original parabola preserved."
+    },
+    {
+      "scenario": "two-curves",
+      "variant": "generated",
+      "text": "Plot y=x squared and y=x plus one. Draw the first curve before adding the second.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/graph-catalog-16e2ba5a-70cb-41f9-9ce7-af3d2a26e48c/visual/02-generated-two-curves.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Both y=x^2 and y=x+1 appear, with the original parabola preserved."
+    },
+    {
+      "scenario": "segment-length-preview-1",
+      "variant": "generated",
+      "text": "Draw segment AB from A at zero, zero to B at three, four and show its length.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/graph-catalog-16e2ba5a-70cb-41f9-9ce7-af3d2a26e48c/visual/03-generated-segment-length-preview-1.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Segment AB from (0,0) to (3,4) appears with endpoint names and length label 5."
+    },
+    {
+      "scenario": "segment-length",
+      "variant": "generated",
+      "text": "Draw segment AB from A at zero, zero to B at three, four and show its length.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/graph-catalog-16e2ba5a-70cb-41f9-9ce7-af3d2a26e48c/visual/04-generated-segment-length.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Segment AB from (0,0) to (3,4) appears with endpoint names and length label 5."
+    }
+  ],
+  "reviewMethod": "Primary agent inspected all five full-size actual-app screenshots, including each intermediate preview. These are replayed provider frames, not live UI cadence evidence."
+}

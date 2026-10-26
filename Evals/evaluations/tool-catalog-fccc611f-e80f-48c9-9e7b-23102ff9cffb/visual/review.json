@@ -1,0 +1,343 @@
+{
+  "scope": "Actual browser rendering of every captured provider outcome. Saved synthetic report data is replayed through a mocked problem API; no provider calls or student data. Capture alone is not visual review.",
+  "reportSha256": "f531ad81172d2b3a0b5f4a3aa8bd3e1ac8bfb4ff7734e774cf59cc322eb7af8a",
+  "reviews": [
+    {
+      "scenario": "cancel-division",
+      "variant": "baseline",
+      "text": "Remove the division by seven.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/00-baseline-cancel-division.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Rendered x=21 above x/7=3."
+    },
+    {
+      "scenario": "cancel-division",
+      "variant": "short",
+      "text": "Remove the division by seven.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/01-short-cancel-division.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Rendered x=21 above x/7=3."
+    },
+    {
+      "scenario": "cancel-product",
+      "variant": "short",
+      "text": "Cancel the multiplication by six.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/02-short-cancel-product.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Rendered x=3 above 6*x=18."
+    },
+    {
+      "scenario": "cancel-product",
+      "variant": "baseline",
+      "text": "Cancel the multiplication by six.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/03-baseline-cancel-product.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Rendered x=3 above 6*x=18."
+    },
+    {
+      "scenario": "halve",
+      "variant": "baseline",
+      "text": "Halve the equation.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/04-baseline-halve.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Rendered x=4 above 2*x=8."
+    },
+    {
+      "scenario": "halve",
+      "variant": "short",
+      "text": "Halve the equation.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/05-short-halve.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Rendered x=4 above 2*x=8."
+    },
+    {
+      "scenario": "no-over-solving",
+      "variant": "short",
+      "text": "Let us solve the problem x plus five equals seven.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/06-short-no-over-solving.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Rendered x+5=7 without a solved result."
+    },
+    {
+      "scenario": "no-over-solving",
+      "variant": "baseline",
+      "text": "Let us solve the problem x plus five equals seven.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/07-baseline-no-over-solving.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Rendered x+5=7 without a solved result."
+    },
+    {
+      "scenario": "vague-circle",
+      "variant": "baseline",
+      "text": "Draw a circle.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/08-baseline-vague-circle.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "A complete circle is visible; chosen positive radius and shape agree with saved state."
+    },
+    {
+      "scenario": "vague-circle",
+      "variant": "short",
+      "text": "Draw a circle.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/09-short-vague-circle.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "A complete circle is visible; chosen positive radius and shape agree with saved state."
+    },
+    {
+      "scenario": "vague-edit",
+      "variant": "short",
+      "text": "Change that number to five.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/10-short-vague-edit.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Only coefficient changed to five; undo frame restores 2*x+3=9."
+    },
+    {
+      "scenario": "vague-edit",
+      "variant": "short",
+      "text": "Undo that.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/11-short-vague-edit.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Only coefficient changed to five; undo frame restores 2*x+3=9."
+    },
+    {
+      "scenario": "vague-edit",
+      "variant": "baseline",
+      "text": "Change that number to five.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/12-baseline-vague-edit.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Only coefficient changed to five; undo frame restores 2*x+3=9."
+    },
+    {
+      "scenario": "vague-edit",
+      "variant": "baseline",
+      "text": "Undo that.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/13-baseline-vague-edit.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Only coefficient changed to five; undo frame restores 2*x+3=9."
+    },
+    {
+      "scenario": "missing-divisor",
+      "variant": "baseline",
+      "text": "Divide both sides.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/14-baseline-missing-divisor.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Both sides visibly divided by two; equivalent to x=4."
+    },
+    {
+      "scenario": "missing-divisor",
+      "variant": "short",
+      "text": "Divide both sides.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/15-short-missing-divisor.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Both sides visibly divided by two; equivalent to x=4."
+    },
+    {
+      "scenario": "viewport",
+      "variant": "short",
+      "text": "Pan graph down.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/16-short-viewport.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Parabola and line both visible with translated viewport."
+    },
+    {
+      "scenario": "viewport",
+      "variant": "baseline",
+      "text": "Pan graph down.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/17-baseline-viewport.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Parabola and line both visible with translated viewport."
+    },
+    {
+      "scenario": "polar",
+      "variant": "baseline",
+      "text": "Plot r equals two times cosine theta for theta from zero to pi over two.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/18-baseline-polar.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Upper semicircle from (2,0) toward (0,0), matching r=2*cos(theta), theta in [0,pi/2]."
+    },
+    {
+      "scenario": "polar",
+      "variant": "short",
+      "text": "Plot r equals two times cosine theta for theta from zero to pi over two.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/19-short-polar.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "Upper semicircle from (2,0) toward (0,0), matching r=2*cos(theta), theta in [0,pi/2]."
+    },
+    {
+      "scenario": "segment-length",
+      "variant": "short",
+      "text": "Draw segment AB from A at zero, zero to B at three, four and show its length.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/20-short-segment-length.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "AB appears with length 5, then vertical AB with length 6 after moving B."
+    },
+    {
+      "scenario": "segment-length",
+      "variant": "short",
+      "text": "Move B to zero, six.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/21-short-segment-length.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "AB appears with length 5, then vertical AB with length 6 after moving B."
+    },
+    {
+      "scenario": "segment-length",
+      "variant": "baseline",
+      "text": "Draw segment AB from A at zero, zero to B at three, four and show its length.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/22-baseline-segment-length.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "AB appears with length 5, then vertical AB with length 6 after moving B."
+    },
+    {
+      "scenario": "segment-length",
+      "variant": "baseline",
+      "text": "Move B to zero, six.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/tool-catalog-fccc611f-e80f-48c9-9e7b-23102ff9cffb/visual/23-baseline-segment-length.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "mathMatches": true,
+      "notes": "AB appears with length 5, then vertical AB with length 6 after moving B."
+    }
+  ],
+  "reviewMethod": "Primary agent inspected all 24 original browser captures in three labeled contact sheets, with the first equation also inspected at full size. No real-time progressive transport or mobile claim from this replay."
+}

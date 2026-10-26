@@ -1,0 +1,311 @@
+/* Visual content uses the app palette; curves keep their identifying colors. */
+.learnunlock-controls {
+  color: var(--foreground);
+  accent-color: var(--accent-700);
+}
+.learnunlock-canvas {
+  position: relative;
+  width: 100%;
+  height: clamp(300px, 48vw, 460px);
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--neutral-light-100);
+  box-shadow: var(--shadow-inner);
+}
+.learnunlock-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+.learnunlock-canvas canvas:focus-visible {
+  outline: 2px solid var(--accent-700);
+  outline-offset: -4px;
+}
+.graph-display-failure {
+  position: absolute;
+  inset: 20% 10%;
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--card);
+  color: var(--error-600);
+  box-shadow: var(--shadow-md);
+}
+.learnunlock-controls .curve-number {
+  color: var(--neutral-light-100);
+}
+.graph-build-status {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 16px;
+}
+.graph-build-status[data-failed='true'] {
+  color: var(--error-600);
+}
+.graph-build-status button {
+  margin: 8px 8px 0 0;
+}
+.graph-preview-controls {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.graph-preview-controls[data-preview='true'] .learnunlock-canvas {
+  pointer-events: none;
+}
+.graph-expression > .math-input {
+  flex: 1 1 240px;
+}
+.graph-draft-error {
+  width: 100%;
+  color: var(--error-600);
+  font-size: 14px;
+}
+@media (forced-colors: active) {
+  .learnunlock-canvas,
+  .graph-display-failure,
+  .graph-build-status {
+    border: 1px solid CanvasText;
+  }
+}
+
+.construction-point {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+}
+.construction-point > .math-input {
+  flex: 1 1 140px;
+  min-width: 0;
+}
+
+.graph-step-notation {
+  display: grid;
+  gap: 12px;
+  padding: 8px 0;
+}
+.graph-notation-name {
+  font-family: var(--font-ui), sans-serif;
+  font-size: 14px;
+  color: var(--muted-foreground);
+}
+.graph-parameter-domain {
+  width: 100%;
+  padding: 8px 0;
+}
+.graph-parameter-domain[open] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.graph-parameter-domain summary {
+  width: 100%;
+  cursor: pointer;
+}
+.graph-parameter-domain > .math-input {
+  flex: 1 1 100px;
+  min-width: 0;
+}
+
+.graph-step-notation math {
+  font-family: 'STIX Two Math', math, serif;
+  font-size: 20px;
+}
+.equation-carousel li[data-focused='true'] .graph-step-notation math {
+  font-size: clamp(24px, 2.2vw, 30px);
+}
+/* Keep the editor compact and over the graph at every screen size. */
+.graph-studio {
+  display: block;
+  position: relative;
+}
+.graph-expression-panel {
+  position: absolute;
+  z-index: 2;
+  left: 12px;
+  bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  width: min(420px, calc(100% - 24px));
+  max-height: min(70%, 400px);
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: var(--shadow-md);
+}
+.graph-expression-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+.graph-expression-panel .graph-expressions {
+  display: block;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0 8px 8px;
+}
+.graph-expression-panel [hidden] {
+  display: none;
+}
+.graph-expression-panel .graph-expression {
+  gap: 0;
+  padding: 4px 0;
+}
+.graph-expression-panel .graph-expression > .math-input {
+  flex: 1 1 0;
+  min-width: 0;
+  border-radius: 10px;
+}
+.graph-expression-panel .graph-visibility + .math-input,
+.graph-expression-panel .graph-draft-color + .math-input {
+  border-radius: 0 10px 10px 0;
+}
+.graph-expression-panel .math-input:focus-within {
+  outline: none;
+  background: var(--neutral-light-600);
+}
+.graph-expression-panel .math-input math-field {
+  min-height: 44px;
+  padding: 6px 10px;
+  font-size: 20px;
+  --caret-color: var(--foreground);
+  --selection-background-color: #f3e4d9;
+  --contains-highlight-background-color: #f3e4d9;
+}
+.graph-expression-panel .math-input math-field::part(virtual-keyboard-toggle) {
+  display: none;
+}
+.graph-visibility,
+.graph-remove {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted-foreground);
+  cursor: pointer;
+}
+.graph-visibility,
+.graph-draft-color {
+  position: relative;
+  align-self: stretch;
+  flex: 0 0 12px;
+  width: 12px;
+  border-radius: 0;
+}
+.graph-visibility::before,
+.graph-draft-color::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  right: -3px;
+  width: 3px;
+  background: currentColor;
+}
+.graph-visibility::after {
+  content: '';
+  position: absolute;
+  inset: 0 -6px;
+}
+.graph-remove:disabled,
+.graph-add-button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.graph-add-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 44px;
+  margin-top: 4px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--neutral-dark-400);
+  font: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+.graph-expression-toggle:hover,
+.graph-visibility:hover,
+.graph-remove:not(:disabled):hover {
+  background: var(--peach);
+}
+.graph-add-button:not(:disabled):hover {
+  background: var(--neutral-light-600);
+}
+.graph-expression-panel button:focus-visible {
+  outline: 2px solid var(--muted-foreground);
+  outline-offset: -2px;
+}
+.graph-expression-panel .graph-draft-error {
+  padding: 4px 12px;
+}
+@media (forced-colors: active) {
+  .graph-expression-panel {
+    border: 1px solid CanvasText;
+  }
+  .graph-visibility {
+    forced-color-adjust: none;
+  }
+}
+
+/* Keep the remove target easy to tap while its visible surface stays small. */
+.graph-remove,
+.graph-remove-space {
+  flex: 0 0 32px;
+  width: 32px;
+}
+.graph-remove {
+  position: relative;
+  isolation: isolate;
+}
+.graph-remove::after {
+  content: '';
+  position: absolute;
+  inset: 0 -6px;
+}
+.graph-remove::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 8px 2px;
+  border-radius: 6px;
+}
+.graph-remove:not(:disabled):hover {
+  background: transparent;
+}
+.graph-remove:not(:disabled):hover::before {
+  background: var(--peach);
+}
+.graph-expression-panel .math-input:focus-within .math-input-error {
+  display: none;
+}

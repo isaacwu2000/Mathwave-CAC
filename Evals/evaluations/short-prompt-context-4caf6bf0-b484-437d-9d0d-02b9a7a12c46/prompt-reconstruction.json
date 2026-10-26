@@ -1,0 +1,26 @@
+{
+  "scope": "Supplemental reconstruction from tracked revision immediately after the campaign. Original raw report and scorer remain unchanged. Web prompt files were unmodified during that campaign; later edits are excluded. Expanded main prompt is preserved in the paired historical regression campaign.",
+  "revision": "3d2e46d",
+  "files": {
+    "Web/src/modules/ai/config/interpretation.ts": {
+      "file": "reconstructed-prompt-source-0.txt",
+      "sha256": "04353817828cf62385d92ac84a77cc3672d5e7ecd8c8072a8c71b272d580702f"
+    },
+    "Web/src/modules/commands/config/interpreter.ts": {
+      "file": "reconstructed-prompt-source-1.txt",
+      "sha256": "b21213bfa4e53b640ca493d991049a624ac183122ecf85a371cb07b6a01a13fd"
+    },
+    "Web/src/modules/commands/config/program-instructions.ts": {
+      "file": "reconstructed-prompt-source-2.txt",
+      "sha256": "1ab10c7d7571de9c18623518fbed0b697a9d77da621fe34982bd3960ad08fe23"
+    },
+    "Web/src/modules/commands/config/construction-instructions.ts": {
+      "file": "reconstructed-prompt-source-3.txt",
+      "sha256": "68b752fdeb6998737f24dc879342fb6475665077d19222c6f0523949bc37476b"
+    },
+    "Web/src/modules/commands/config/graph-scene-instructions.ts": {
+      "file": "reconstructed-prompt-source-4.txt",
+      "sha256": "da5c43a2fc7770ad7feceafb5da60bfa2c9880dd5b67580c2babd7a626a65483"
+    }
+  }
+}

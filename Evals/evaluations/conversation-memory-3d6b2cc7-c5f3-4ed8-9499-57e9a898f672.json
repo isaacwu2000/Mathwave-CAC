@@ -1,0 +1,232 @@
+{
+  "lane": "live text interpreter plus in-memory cloud operations; no DB or microphone",
+  "startedAt": "2026-10-18T18:49:50.417Z",
+  "modelCalls": 5,
+  "results": [
+    {
+      "text": "write 3*x+5=20",
+      "passed": true,
+      "ms": 5.267707999999999,
+      "modelCalls": 0,
+      "status": "command",
+      "message": "Your equation is now 3 times x plus 5 equals 20.",
+      "state": {
+        "mode": "equation",
+        "expression": "3 * x + 5 = 20",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      }
+    },
+    {
+      "text": "What would get the added five out of my way without changing the answer?",
+      "interpreterFailure": {
+        "status": 400,
+        "body": {
+          "error": "Invalid evaluation context."
+        }
+      }
+    },
+    {
+      "text": "What would get the added five out of my way without changing the answer?",
+      "passed": false,
+      "ms": 26.496417000000008,
+      "modelCalls": 1,
+      "status": "unsupported",
+      "message": "I don't recognize “what”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly.",
+      "state": {
+        "mode": "equation",
+        "expression": "3 * x + 5 = 20",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      }
+    },
+    {
+      "text": "Okay, go ahead.",
+      "interpreterFailure": {
+        "status": 400,
+        "body": {
+          "error": "Invalid evaluation context."
+        }
+      }
+    },
+    {
+      "text": "Okay, go ahead.",
+      "passed": false,
+      "ms": 23.814625000000007,
+      "modelCalls": 1,
+      "status": "unsupported",
+      "message": "Unsupported character “,” near character 5. Use numbers, variables, and + - * / ^ = ( ).",
+      "state": {
+        "mode": "equation",
+        "expression": "3 * x + 5 = 20",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      }
+    },
+    {
+      "memoryBytes": 1293,
+      "retainedBytes": 3405
+    },
+    {
+      "text": "Actually, take away seven instead of five.",
+      "interpreterFailure": {
+        "status": 400,
+        "body": {
+          "error": "Invalid evaluation context."
+        }
+      }
+    },
+    {
+      "text": "Actually, take away seven instead of five.",
+      "passed": false,
+      "ms": 28.202875000000006,
+      "modelCalls": 1,
+      "status": "unsupported",
+      "message": "Unsupported character “,” near character 9. Use numbers, variables, and + - * / ^ = ( ).",
+      "state": {
+        "mode": "equation",
+        "expression": "3 * x + 5 = 20",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      }
+    },
+    {
+      "text": "Simplify.",
+      "passed": false,
+      "ms": 0.5732910000000118,
+      "modelCalls": 0,
+      "status": "command",
+      "message": "No further supported simplification. 3 * x + 5 = 20",
+      "state": {
+        "mode": "equation",
+        "expression": "3 * x + 5 = 20",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      }
+    },
+    {
+      "text": "Why are we allowed to do that on both sides?",
+      "interpreterFailure": {
+        "status": 400,
+        "body": {
+          "error": "Invalid evaluation context."
+        }
+      }
+    },
+    {
+      "text": "Why are we allowed to do that on both sides?",
+      "passed": false,
+      "ms": 9.399084000000016,
+      "modelCalls": 1,
+      "status": "unsupported",
+      "message": "I don't recognize “why”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly.",
+      "state": {
+        "mode": "equation",
+        "expression": "3 * x + 5 = 20",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      }
+    },
+    {
+      "text": "Read the right side.",
+      "passed": false,
+      "ms": 0.17233300000000895,
+      "modelCalls": 0,
+      "status": "command",
+      "message": "right side: 20",
+      "state": {
+        "mode": "equation",
+        "expression": "3 * x + 5 = 20",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      }
+    },
+    {
+      "text": "Make the other one smaller.",
+      "interpreterFailure": {
+        "status": 400,
+        "body": {
+          "error": "Invalid evaluation context."
+        }
+      }
+    },
+    {
+      "text": "Make the other one smaller.",
+      "passed": false,
+      "ms": 8.787374999999997,
+      "modelCalls": 1,
+      "status": "unsupported",
+      "message": "I don't recognize “make”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly.",
+      "state": {
+        "mode": "equation",
+        "expression": "3 * x + 5 = 20",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      }
+    }
+  ]
+}

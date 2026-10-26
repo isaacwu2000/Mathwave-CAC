@@ -1,0 +1,15 @@
+{
+  "archiveBytes": 4320581,
+  "archive_sha256": "e354d62af4bfbdf2d0dc6d62dee75c82e61ce099c12753a243e8d08ad647374a",
+  "elapsedSeconds": 2364.641402537003,
+  "error": null,
+  "paidComputeUsd": null,
+  "payloadSha256": "166aaeb6d21381805cd74d0e62281981ec8c7c6b0ff9a8f8f1d7abf597e15817",
+  "phase": "train",
+  "runtime": {
+    "comparisonLimit": "CUDA and MPS runtime versions differ; before/after CUDA share this runtime.",
+    "cudaVersion": "12.8",
+    "mpsReferenceTorchVersion": "2.14.1",
+    "torchVersion": "2.9.1+cu128"
+  }
+}

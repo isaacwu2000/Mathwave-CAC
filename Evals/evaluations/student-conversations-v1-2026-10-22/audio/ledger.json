@@ -1,0 +1,705 @@
+{
+  "capUsd": 8,
+  "scope": "Only this new student-conversation audio campaign",
+  "models": [
+    {
+      "id": "google/gemini-2.5-flash-lite",
+      "pricing": {
+        "prompt": "0.0000001",
+        "completion": "0.0000004",
+        "image": "0.0000001",
+        "audio": "0.0000003",
+        "input_audio_cache": "0.00000003",
+        "web_search": "0.014",
+        "internal_reasoning": "0.0000004",
+        "input_cache_read": "0.00000001",
+        "input_cache_write": "0.0000000833333333333333"
+      },
+      "contextLength": 1048576,
+      "reservationUsd": 2
+    },
+    {
+      "id": "qwen/qwen3.8-omni-flash",
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.00000047",
+        "input_cache_read": "0.000000016"
+      },
+      "contextLength": 1000000,
+      "reservationUsd": 2
+    }
+  ],
+  "spentUsd": 0.00124458,
+  "reservedUnknownUsd": 2,
+  "records": [
+    {
+      "case": "alg-solve-sides-reversed",
+      "turn": 1,
+      "model": "google/gemini-2.5-flash-lite",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/alg-solve-sides-reversed-1.wav",
+      "sha256": "b6ca8f370154a5472d6448a4c9c49220c001a43dbdfd4621861bfff11b14cafd",
+      "reference": "Write twenty-three equals five x minus two.",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "complete",
+      "reservationUsd": 2,
+      "elapsedMs": 1504.982833999995,
+      "httpStatus": 200,
+      "generationId": "gen-1792715608-rXnFxJhgE41bJ5uA11LP",
+      "usage": {
+        "prompt_tokens": 116,
+        "completion_tokens": 10,
+        "total_tokens": 126,
+        "cost": 0.0000328,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 86,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0000328,
+          "upstream_inference_prompt_cost": 0.0000288,
+          "upstream_inference_completions_cost": 0.000004
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "transcript": "Right 23 = 5x - 2",
+      "costUsd": 0.0000328
+    },
+    {
+      "case": "alg-solve-sides-reversed",
+      "turn": 1,
+      "model": "qwen/qwen3.8-omni-flash",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/alg-solve-sides-reversed-1.wav",
+      "sha256": "b6ca8f370154a5472d6448a4c9c49220c001a43dbdfd4621861bfff11b14cafd",
+      "reference": "Write twenty-three equals five x minus two.",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "complete",
+      "reservationUsd": 2,
+      "elapsedMs": 5980.138542000001,
+      "httpStatus": 200,
+      "generationId": "gen-1792715609-BYKKjwXDKN6P6Jn5zYby",
+      "usage": {
+        "prompt_tokens": 98,
+        "completion_tokens": 300,
+        "total_tokens": 398,
+        "cost": 0.0001557,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001557,
+          "upstream_inference_prompt_cost": 0.0000147,
+          "upstream_inference_completions_cost": 0.000141
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 284,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "transcript": "Write 23 = 5x - 2.",
+      "costUsd": 0.0001557
+    },
+    {
+      "case": "alg-solve-sides-reversed",
+      "turn": 2,
+      "model": "google/gemini-2.5-flash-lite",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/alg-solve-sides-reversed-2.wav",
+      "sha256": "0d523f9813c11793e59c070389db9064dcb892db2e3ebc9fd546147cb03409d3",
+      "reference": "What should x be?",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "complete",
+      "reservationUsd": 2,
+      "elapsedMs": 1245.3864580000009,
+      "httpStatus": 200,
+      "generationId": "gen-1792715615-GhOtFppv3GMHm4jCVc7G",
+      "usage": {
+        "prompt_tokens": 67,
+        "completion_tokens": 3,
+        "total_tokens": 70,
+        "cost": 0.0000153,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 37,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0000153,
+          "upstream_inference_prompt_cost": 0.0000141,
+          "upstream_inference_completions_cost": 0.0000012
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "transcript": "What should X",
+      "costUsd": 0.0000153
+    },
+    {
+      "case": "alg-solve-sides-reversed",
+      "turn": 2,
+      "model": "qwen/qwen3.8-omni-flash",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/alg-solve-sides-reversed-2.wav",
+      "sha256": "0d523f9813c11793e59c070389db9064dcb892db2e3ebc9fd546147cb03409d3",
+      "reference": "What should x be?",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "complete",
+      "reservationUsd": 2,
+      "elapsedMs": 2161.962124999998,
+      "httpStatus": 200,
+      "generationId": "gen-1792715616-ZBaAKmPQ4rx9TVpDhMrB",
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 60,
+        "total_tokens": 151,
+        "cost": 0.00004185,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00004185,
+          "upstream_inference_prompt_cost": 0.00001365,
+          "upstream_inference_completions_cost": 0.0000282
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 51,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "transcript": "What should x be?",
+      "costUsd": 0.00004185
+    },
+    {
+      "case": "student-sign-correction-data",
+      "turn": 1,
+      "model": "google/gemini-2.5-flash-lite",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/student-sign-correction-data-1.wav",
+      "sha256": "525e6a837ead39c135ac069355f0ba7e8a766afa45a1010e84921541886a6d67",
+      "reference": "Use two, four, and six.",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "complete",
+      "reservationUsd": 2,
+      "elapsedMs": 1651.5231670000067,
+      "httpStatus": 200,
+      "generationId": "gen-1792715619-ligeJOxAq0F4Ozao0kno",
+      "usage": {
+        "prompt_tokens": 111,
+        "completion_tokens": 7,
+        "total_tokens": 118,
+        "cost": 0.0000301,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 81,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0000301,
+          "upstream_inference_prompt_cost": 0.0000273,
+          "upstream_inference_completions_cost": 0.0000028
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "transcript": "use 2 4 and 6",
+      "costUsd": 0.0000301
+    },
+    {
+      "case": "student-sign-correction-data",
+      "turn": 1,
+      "model": "qwen/qwen3.8-omni-flash",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/student-sign-correction-data-1.wav",
+      "sha256": "525e6a837ead39c135ac069355f0ba7e8a766afa45a1010e84921541886a6d67",
+      "reference": "Use two, four, and six.",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "complete",
+      "reservationUsd": 2,
+      "elapsedMs": 13796.574374999997,
+      "httpStatus": 200,
+      "generationId": "gen-1792715620-h7iPnFi872JTdFVxmn0E",
+      "usage": {
+        "prompt_tokens": 98,
+        "completion_tokens": 1030,
+        "total_tokens": 1128,
+        "cost": 0.0004988,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0004988,
+          "upstream_inference_prompt_cost": 0.0000147,
+          "upstream_inference_completions_cost": 0.0004841
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1016,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "transcript": "Use 2, 4, and 6.",
+      "costUsd": 0.0004988
+    },
+    {
+      "case": "student-sign-correction-data",
+      "turn": 2,
+      "model": "google/gemini-2.5-flash-lite",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/student-sign-correction-data-2.wav",
+      "sha256": "21c5ac48bb8e2020f4ccb0be4b06879d12f762735d8a6456088135cea62b9b1d",
+      "reference": "The first one should be negative two. Keep the others.",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "complete",
+      "reservationUsd": 2,
+      "elapsedMs": 1600.9648749999978,
+      "httpStatus": 200,
+      "generationId": "gen-1792715634-9lM4vjZ2Mo93ldcsrZsj",
+      "usage": {
+        "prompt_tokens": 142,
+        "completion_tokens": 12,
+        "total_tokens": 154,
+        "cost": 0.0000414,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 112,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0000414,
+          "upstream_inference_prompt_cost": 0.0000366,
+          "upstream_inference_completions_cost": 0.0000048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "transcript": "The first one should be negative two. Keep the others.",
+      "costUsd": 0.0000414
+    },
+    {
+      "case": "student-sign-correction-data",
+      "turn": 2,
+      "model": "qwen/qwen3.8-omni-flash",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/student-sign-correction-data-2.wav",
+      "sha256": "21c5ac48bb8e2020f4ccb0be4b06879d12f762735d8a6456088135cea62b9b1d",
+      "reference": "The first one should be negative two. Keep the others.",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "complete",
+      "reservationUsd": 2,
+      "elapsedMs": 3341.024750000004,
+      "httpStatus": 200,
+      "generationId": "gen-1792715636-V0GT9ubrzszVsl9qiNRd",
+      "usage": {
+        "prompt_tokens": 105,
+        "completion_tokens": 70,
+        "total_tokens": 175,
+        "cost": 0.00004865,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00004865,
+          "upstream_inference_prompt_cost": 0.00001575,
+          "upstream_inference_completions_cost": 0.0000329
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 55,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "transcript": "The first one should be negative two. Keep the others.",
+      "costUsd": 0.00004865
+    },
+    {
+      "case": "student-sign-correction-data",
+      "turn": 3,
+      "model": "google/gemini-2.5-flash-lite",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/student-sign-correction-data-3.wav",
+      "sha256": "340a1109be5a5041151bdf2097cb9e768ec9574657241d5a1dffc2e6e14e810d",
+      "reference": "What is the sum after that fix?",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "complete",
+      "reservationUsd": 2,
+      "elapsedMs": 1518.723417000001,
+      "httpStatus": 200,
+      "generationId": "gen-1792715639-a9juOS2f5bUIgabHgoFz",
+      "usage": {
+        "prompt_tokens": 96,
+        "completion_tokens": 8,
+        "total_tokens": 104,
+        "cost": 0.000026,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 66,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000026,
+          "upstream_inference_prompt_cost": 0.0000228,
+          "upstream_inference_completions_cost": 0.0000032
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "transcript": "What is the sum of that fix?",
+      "costUsd": 0.000026
+    },
+    {
+      "case": "student-sign-correction-data",
+      "turn": 3,
+      "model": "qwen/qwen3.8-omni-flash",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/student-sign-correction-data-3.wav",
+      "sha256": "340a1109be5a5041151bdf2097cb9e768ec9574657241d5a1dffc2e6e14e810d",
+      "reference": "What is the sum after that fix?",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "complete",
+      "reservationUsd": 2,
+      "elapsedMs": 2304.3420410000035,
+      "httpStatus": 200,
+      "generationId": "gen-1792715641-0HFkxZ16F5AydFLeHGQF",
+      "usage": {
+        "prompt_tokens": 98,
+        "completion_tokens": 69,
+        "total_tokens": 167,
+        "cost": 0.00004713,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00004713,
+          "upstream_inference_prompt_cost": 0.0000147,
+          "upstream_inference_completions_cost": 0.00003243
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 58,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "transcript": "What is the sum after that fix?",
+      "costUsd": 0.00004713
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 1,
+      "model": "google/gemini-2.5-flash-lite",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/geo-corresponding-angle-marks-1.wav",
+      "sha256": "9a618b4a0e141d29cc351d9dc1576434d804f3b0f8dbb554b9eea0bfe7bf34a7",
+      "reference": "Draw two horizontal parallel lines four units apart, with a transversal from zero zero through four eight.",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "complete",
+      "reservationUsd": 2,
+      "elapsedMs": 1566.6826250000013,
+      "httpStatus": 200,
+      "generationId": "gen-1792715643-G7OYBqA7f9fQANyGKjKK",
+      "usage": {
+        "prompt_tokens": 234,
+        "completion_tokens": 20,
+        "total_tokens": 254,
+        "cost": 0.0000722,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 204,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0000722,
+          "upstream_inference_prompt_cost": 0.0000642,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "transcript": "draw two horizontal parallel lines 4 units apart with a transversal from 00 through 48",
+      "costUsd": 0.0000722
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 1,
+      "model": "qwen/qwen3.8-omni-flash",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/geo-corresponding-angle-marks-1.wav",
+      "sha256": "9a618b4a0e141d29cc351d9dc1576434d804f3b0f8dbb554b9eea0bfe7bf34a7",
+      "reference": "Draw two horizontal parallel lines four units apart, with a transversal from zero zero through four eight.",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "complete",
+      "reservationUsd": 2,
+      "elapsedMs": 2799.073457999999,
+      "httpStatus": 200,
+      "generationId": "gen-1792715645-gPThsmJnvimC1ZtPUHgY",
+      "usage": {
+        "prompt_tokens": 126,
+        "completion_tokens": 96,
+        "total_tokens": 222,
+        "cost": 0.00006402,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00006402,
+          "upstream_inference_prompt_cost": 0.0000189,
+          "upstream_inference_completions_cost": 0.00004512
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 66,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "transcript": "Draw two horizontal parallel lines 4 units apart, with a transversal from (0,0) through (4,8).",
+      "costUsd": 0.00006402
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 2,
+      "model": "google/gemini-2.5-flash-lite",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/geo-corresponding-angle-marks-2.wav",
+      "sha256": "5b5098b40b0c06800094a88bec2ca65c470c2839f72805383e7db4a4954bac79",
+      "reference": "Mark the matching upper-right angles at the crossings.",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "complete",
+      "reservationUsd": 2,
+      "elapsedMs": 1295.2404999999999,
+      "httpStatus": 200,
+      "generationId": "gen-1792715647-A8ocxIP39xhJy5Wftln6",
+      "usage": {
+        "prompt_tokens": 124,
+        "completion_tokens": 10,
+        "total_tokens": 134,
+        "cost": 0.0000352,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 94,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0000352,
+          "upstream_inference_prompt_cost": 0.0000312,
+          "upstream_inference_completions_cost": 0.000004
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "transcript": "Mark the matching up the right angles at the crossings",
+      "costUsd": 0.0000352
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 2,
+      "model": "qwen/qwen3.8-omni-flash",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/geo-corresponding-angle-marks-2.wav",
+      "sha256": "5b5098b40b0c06800094a88bec2ca65c470c2839f72805383e7db4a4954bac79",
+      "reference": "Mark the matching upper-right angles at the crossings.",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "complete",
+      "reservationUsd": 2,
+      "elapsedMs": 2885.8517909999937,
+      "httpStatus": 200,
+      "generationId": "gen-1792715649-j9xmH19hwRul7QJsc3Sm",
+      "usage": {
+        "prompt_tokens": 98,
+        "completion_tokens": 123,
+        "total_tokens": 221,
+        "cost": 0.00007251,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00007251,
+          "upstream_inference_prompt_cost": 0.0000147,
+          "upstream_inference_completions_cost": 0.00005781
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 109,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "transcript": "Mark the matching upper right angles at the crossings.",
+      "costUsd": 0.00007251
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 3,
+      "model": "google/gemini-2.5-flash-lite",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/geo-corresponding-angle-marks-3.wav",
+      "sha256": "75a396efe0b676912737162889d7e2dae401ce53c983aeb50649d97d2fb71be9",
+      "reference": "Where is the upper crossing?",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "complete",
+      "reservationUsd": 2,
+      "elapsedMs": 1369.2739160000056,
+      "httpStatus": 200,
+      "generationId": "gen-1792715651-LtC8c0INZpOPiaHqOS0O",
+      "usage": {
+        "prompt_tokens": 82,
+        "completion_tokens": 5,
+        "total_tokens": 87,
+        "cost": 0.0000206,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 52,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0000206,
+          "upstream_inference_prompt_cost": 0.0000186,
+          "upstream_inference_completions_cost": 0.000002
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "transcript": "Where is the upper crossing",
+      "costUsd": 0.0000206
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 3,
+      "model": "qwen/qwen3.8-omni-flash",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/geo-corresponding-angle-marks-3.wav",
+      "sha256": "75a396efe0b676912737162889d7e2dae401ce53c983aeb50649d97d2fb71be9",
+      "reference": "Where is the upper crossing?",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "complete",
+      "reservationUsd": 2,
+      "elapsedMs": 2032.5559999999969,
+      "httpStatus": 200,
+      "generationId": "gen-1792715653-x7xDEiPi3e3nIksOTIOn",
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 61,
+        "total_tokens": 152,
+        "cost": 0.00004232,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00004232,
+          "upstream_inference_prompt_cost": 0.00001365,
+          "upstream_inference_completions_cost": 0.00002867
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 51,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "transcript": "Where is the upper crossing?",
+      "costUsd": 0.00004232
+    },
+    {
+      "case": "graph-viewport-then-translation",
+      "turn": 1,
+      "model": "google/gemini-2.5-flash-lite",
+      "audio": "Evals/evaluations/student-conversations-v1-2026-10-22/audio/graph-viewport-then-translation-1.wav",
+      "sha256": "4158988165aa7569954264efca1861485f5629f8fdbec54f7886f65ba8fac9e2",
+      "reference": "Graph x squared.",
+      "prompt": "Transcribe the English speech verbatim. Return only the transcript. Keep all numbers, signs, corrections and references. Do not answer the math question.",
+      "maxTokens": 256,
+      "status": "charge-unknown",
+      "reservationUsd": 2,
+      "elapsedMs": 253.18974999999045,
+      "httpStatus": 429,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "google/gemini-2.5-flash-lite is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "Google AI Studio",
+          "is_byok": false,
+          "provider_error_code": "429",
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+        }
+      },
+      "failure": "Provider did not report cost. Stopped without paid retries."
+    }
+  ],
+  "visualReview": "Incomplete; audio transcription only, no in-app result acceptance.",
+  "modelAccuracy": "Recorded-input transcription sample; not streaming, human speech or an agent benchmark."
+}

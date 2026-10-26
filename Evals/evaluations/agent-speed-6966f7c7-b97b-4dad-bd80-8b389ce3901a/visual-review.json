@@ -1,0 +1,276 @@
+{
+  "viewport": {
+    "width": 1000,
+    "height": 760
+  },
+  "method": "Actual browser screenshots inspected individually on labeled contact sheets. Final atomic command states, not progressive drawing. No responsive UI change; mobile not measured.",
+  "collectorFailure": false,
+  "cases": [
+    {
+      "screenshot": "00-before-0-equation.png",
+      "visuallyReviewed": true,
+      "notes": "Rendered 2x+3=11."
+    },
+    {
+      "screenshot": "01-after-0-equation.png",
+      "visuallyReviewed": true,
+      "notes": "Rendered 2x+3=11."
+    },
+    {
+      "screenshot": "02-before-1-equation.png",
+      "visuallyReviewed": true,
+      "notes": "Rendered 2x+3=11."
+    },
+    {
+      "screenshot": "03-after-1-equation.png",
+      "visuallyReviewed": true,
+      "notes": "Rendered 2x+3=11."
+    },
+    {
+      "screenshot": "04-after-1-both-sides.png",
+      "visuallyReviewed": true,
+      "notes": "Both sides subtract 3; original step retained."
+    },
+    {
+      "screenshot": "05-before-1-both-sides.png",
+      "visuallyReviewed": true,
+      "notes": "Both sides subtract 3; original step retained."
+    },
+    {
+      "screenshot": "06-before-1-two-steps.png",
+      "visuallyReviewed": true,
+      "notes": "Subtraction intermediate and division final visible; all three steps retained."
+    },
+    {
+      "screenshot": "07-after-1-two-steps.png",
+      "visuallyReviewed": true,
+      "notes": "Subtraction intermediate and division final visible; all three steps retained."
+    },
+    {
+      "screenshot": "08-after-1-explanation.png",
+      "visuallyReviewed": true,
+      "notes": "Worksheet unchanged; spoken explanation content not visually verified."
+    },
+    {
+      "screenshot": "09-before-1-explanation.png",
+      "visuallyReviewed": true,
+      "notes": "Worksheet unchanged; spoken explanation content not visually verified."
+    },
+    {
+      "screenshot": "10-before-1-parabola.png",
+      "visuallyReviewed": true,
+      "notes": "Parabola visible, vertex (0,-4), roots -2 and 2."
+    },
+    {
+      "screenshot": "11-after-1-parabola.png",
+      "visuallyReviewed": true,
+      "notes": "Parabola visible, vertex (0,-4), roots -2 and 2."
+    },
+    {
+      "screenshot": "12-after-1-rectangle.png",
+      "visuallyReviewed": true,
+      "notes": "Visible closed 6 by 4 rectangle with matching vertices/edge labels. Before trial 4 includes cluttered 0.48 corner-marker labels, but requested rectangle is correct.",
+      "passed": true,
+      "adjudication": "Stored construction format is supported. Automated checker tested state.geometry only and falsely rejected it; original report preserved."
+    },
+    {
+      "screenshot": "13-before-1-rectangle.png",
+      "visuallyReviewed": true,
+      "notes": "Visible closed 6 by 4 rectangle with matching vertices/edge labels. Before trial 4 includes cluttered 0.48 corner-marker labels, but requested rectangle is correct.",
+      "passed": true,
+      "adjudication": "Stored construction format is supported. Automated checker tested state.geometry only and falsely rejected it; original report preserved."
+    },
+    {
+      "screenshot": "14-after-2-both-sides.png",
+      "visuallyReviewed": true,
+      "notes": "Both sides subtract 3; original step retained."
+    },
+    {
+      "screenshot": "15-before-2-both-sides.png",
+      "visuallyReviewed": true,
+      "notes": "Both sides subtract 3; original step retained."
+    },
+    {
+      "screenshot": "16-before-2-two-steps.png",
+      "visuallyReviewed": true,
+      "notes": "Subtraction intermediate and division final visible; all three steps retained."
+    },
+    {
+      "screenshot": "17-after-2-two-steps.png",
+      "visuallyReviewed": true,
+      "notes": "Subtraction intermediate and division final visible; all three steps retained."
+    },
+    {
+      "screenshot": "18-after-2-explanation.png",
+      "visuallyReviewed": true,
+      "notes": "Worksheet unchanged; spoken explanation content not visually verified."
+    },
+    {
+      "screenshot": "19-before-2-explanation.png",
+      "visuallyReviewed": true,
+      "notes": "Worksheet unchanged; spoken explanation content not visually verified."
+    },
+    {
+      "screenshot": "20-before-2-parabola.png",
+      "visuallyReviewed": true,
+      "notes": "Parabola visible, vertex (0,-4), roots -2 and 2."
+    },
+    {
+      "screenshot": "21-after-2-parabola.png",
+      "visuallyReviewed": true,
+      "notes": "Parabola visible, vertex (0,-4), roots -2 and 2."
+    },
+    {
+      "screenshot": "22-after-2-rectangle.png",
+      "visuallyReviewed": true,
+      "notes": "Visible closed 6 by 4 rectangle with matching vertices/edge labels. Before trial 4 includes cluttered 0.48 corner-marker labels, but requested rectangle is correct.",
+      "passed": true,
+      "adjudication": "Stored construction format is supported. Automated checker tested state.geometry only and falsely rejected it; original report preserved."
+    },
+    {
+      "screenshot": "23-before-2-rectangle.png",
+      "visuallyReviewed": true,
+      "notes": "Visible closed 6 by 4 rectangle with matching vertices/edge labels. Before trial 4 includes cluttered 0.48 corner-marker labels, but requested rectangle is correct.",
+      "passed": true,
+      "adjudication": "Stored construction format is supported. Automated checker tested state.geometry only and falsely rejected it; original report preserved."
+    },
+    {
+      "screenshot": "24-before-2-equation.png",
+      "visuallyReviewed": true,
+      "notes": "Rendered 2x+3=11."
+    },
+    {
+      "screenshot": "25-after-2-equation.png",
+      "visuallyReviewed": true,
+      "notes": "Rendered 2x+3=11."
+    },
+    {
+      "screenshot": "26-before-3-two-steps.png",
+      "visuallyReviewed": true,
+      "notes": "Subtraction intermediate and division final visible; all three steps retained."
+    },
+    {
+      "screenshot": "27-after-3-two-steps.png",
+      "visuallyReviewed": true,
+      "notes": "Subtraction intermediate and division final visible; all three steps retained."
+    },
+    {
+      "screenshot": "28-after-3-explanation.png",
+      "visuallyReviewed": true,
+      "notes": "Worksheet unchanged; spoken explanation content not visually verified."
+    },
+    {
+      "screenshot": "29-before-3-explanation.png",
+      "visuallyReviewed": true,
+      "notes": "Worksheet unchanged; spoken explanation content not visually verified."
+    },
+    {
+      "screenshot": "30-before-3-parabola.png",
+      "visuallyReviewed": true,
+      "notes": "Parabola visible, vertex (0,-4), roots -2 and 2."
+    },
+    {
+      "screenshot": "31-after-3-parabola.png",
+      "visuallyReviewed": true,
+      "notes": "Parabola visible, vertex (0,-4), roots -2 and 2."
+    },
+    {
+      "screenshot": "32-after-3-rectangle.png",
+      "visuallyReviewed": true,
+      "notes": "Visible closed 6 by 4 rectangle with matching vertices/edge labels. Before trial 4 includes cluttered 0.48 corner-marker labels, but requested rectangle is correct.",
+      "passed": true,
+      "adjudication": "Stored construction format is supported. Automated checker tested state.geometry only and falsely rejected it; original report preserved."
+    },
+    {
+      "screenshot": "33-before-3-rectangle.png",
+      "visuallyReviewed": true,
+      "notes": "Visible closed 6 by 4 rectangle with matching vertices/edge labels. Before trial 4 includes cluttered 0.48 corner-marker labels, but requested rectangle is correct.",
+      "passed": true,
+      "adjudication": "Stored construction format is supported. Automated checker tested state.geometry only and falsely rejected it; original report preserved."
+    },
+    {
+      "screenshot": "34-before-3-equation.png",
+      "visuallyReviewed": true,
+      "notes": "Rendered 2x+3=11."
+    },
+    {
+      "screenshot": "35-after-3-equation.png",
+      "visuallyReviewed": true,
+      "notes": "Rendered 2x+3=11."
+    },
+    {
+      "screenshot": "36-after-3-both-sides.png",
+      "visuallyReviewed": true,
+      "notes": "Both sides subtract 3; original step retained."
+    },
+    {
+      "screenshot": "37-before-3-both-sides.png",
+      "visuallyReviewed": true,
+      "notes": "Both sides subtract 3; original step retained."
+    },
+    {
+      "screenshot": "38-after-4-explanation.png",
+      "visuallyReviewed": true,
+      "notes": "Worksheet unchanged; spoken explanation content not visually verified."
+    },
+    {
+      "screenshot": "39-before-4-explanation.png",
+      "visuallyReviewed": true,
+      "notes": "Worksheet unchanged; spoken explanation content not visually verified."
+    },
+    {
+      "screenshot": "40-before-4-parabola.png",
+      "visuallyReviewed": true,
+      "notes": "Parabola visible, vertex (0,-4), roots -2 and 2."
+    },
+    {
+      "screenshot": "41-after-4-parabola.png",
+      "visuallyReviewed": true,
+      "notes": "Parabola visible, vertex (0,-4), roots -2 and 2."
+    },
+    {
+      "screenshot": "42-after-4-rectangle.png",
+      "visuallyReviewed": true,
+      "notes": "Visible closed 6 by 4 rectangle with matching vertices/edge labels. Before trial 4 includes cluttered 0.48 corner-marker labels, but requested rectangle is correct.",
+      "passed": true,
+      "adjudication": "Stored construction format is supported. Automated checker tested state.geometry only and falsely rejected it; original report preserved."
+    },
+    {
+      "screenshot": "43-before-4-rectangle.png",
+      "visuallyReviewed": true,
+      "notes": "Visible closed 6 by 4 rectangle with matching vertices/edge labels. Before trial 4 includes cluttered 0.48 corner-marker labels, but requested rectangle is correct.",
+      "passed": true,
+      "adjudication": "Stored construction format is supported. Automated checker tested state.geometry only and falsely rejected it; original report preserved."
+    },
+    {
+      "screenshot": "44-before-4-equation.png",
+      "visuallyReviewed": true,
+      "notes": "Rendered 2x+3=11."
+    },
+    {
+      "screenshot": "45-after-4-equation.png",
+      "visuallyReviewed": true,
+      "notes": "Rendered 2x+3=11."
+    },
+    {
+      "screenshot": "46-after-4-both-sides.png",
+      "visuallyReviewed": true,
+      "notes": "Both sides subtract 3; original step retained."
+    },
+    {
+      "screenshot": "47-before-4-both-sides.png",
+      "visuallyReviewed": true,
+      "notes": "Both sides subtract 3; original step retained."
+    },
+    {
+      "screenshot": "48-before-4-two-steps.png",
+      "visuallyReviewed": true,
+      "notes": "Subtraction intermediate and division final visible; all three steps retained."
+    },
+    {
+      "screenshot": "49-after-4-two-steps.png",
+      "visuallyReviewed": true,
+      "notes": "Subtraction intermediate and division final visible; all three steps retained."
+    }
+  ]
+}

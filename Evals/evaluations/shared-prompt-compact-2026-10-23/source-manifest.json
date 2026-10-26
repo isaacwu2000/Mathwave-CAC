@@ -1,0 +1,30 @@
+{
+  "Web/src/modules/ai/config/interpretation.ts": {
+    "sha256": "b191b62c667c4a1f351f5d2c08fba08d35fa9c7792e50c65187a39f76e21557d",
+    "copy": "source/0.txt"
+  },
+  "Web/src/modules/ai/services/command-instructions.ts": {
+    "sha256": "7331ecc6110355213b8ed36ddc44e6180380004a2faebecc7103a8473f3aa1de",
+    "copy": "source/1.txt"
+  },
+  "Web/src/modules/commands/config/program-instructions.ts": {
+    "sha256": "ed30114f907d4524fbfa7d854c6dc5c1d37d9b5f1c9ddbfaded90b07b0405b7c",
+    "copy": "source/2.txt"
+  },
+  "Web/src/modules/commands/config/tool-catalog.ts": {
+    "sha256": "94fa9ee07fded255401fab195bb2aca7b2a38f2e76546b4e86cc7302e9b278ef",
+    "copy": "source/3.txt"
+  },
+  "Native/Engine/agent.ts": {
+    "sha256": "29e605ba135548f82cd5dd842ab8dce9460682ae1f4caf1bf552f55c86ecf366",
+    "copy": "source/4.txt"
+  },
+  "Evals/src/prompt-provider.ts": {
+    "sha256": "9f52425fbf52d352ce28c8fda5779ee4b96257980de156b54d5c716b4114c503",
+    "copy": "source/5.txt"
+  },
+  "Evals/scripts/check-compact-prompts.ts": {
+    "sha256": "60b4e5bd33caeebf8273d9244dbdb7690f48d1082ecb539ce2feb8cbf4387735",
+    "copy": "source/6.txt"
+  }
+}

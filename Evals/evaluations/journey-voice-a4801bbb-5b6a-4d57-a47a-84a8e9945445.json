@@ -1,0 +1,128 @@
+{
+  "runId": "a4801bbb-5b6a-4d57-a47a-84a8e9945445",
+  "startedAt": "2026-10-19T15:58:05.406Z",
+  "finishedAt": "2026-10-19T15:58:10.715Z",
+  "lane": "voice",
+  "revision": "0b9d86358c80144027034961c71025bec347d2bd",
+  "dirty": true,
+  "sourceSHA256": "ea15ca08b0b3f05ebfc4aa050405a9524302e5a299607ee7e608df69289631e1",
+  "runnerSHA256": "009f1dc83b7340cb344ebe8122c99e61b2d06ad6da5fd9627ba55b85b3ee67ca",
+  "models": {
+    "live": "gpt-live-1",
+    "command": "gpt-6-luna"
+  },
+  "commandProfile": "luna-default",
+  "reasoning": null,
+  "latencyDefinition": "Last detected input signal through React display commit; harnessElapsedMs includes fixture playback, polling and deliberate idle waits.",
+  "scope": "Synthetic recorded speech through browser, GPT Live, backend, persistence and React commit; excludes physical microphone and student usability.",
+  "repetitions": 1,
+  "planned": 3,
+  "unattempted": 0,
+  "groups": {
+    "cold-equation": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0,
+        "upper": 0.6215524967746471
+      },
+      "attempted": 1,
+      "passed": 0,
+      "failed": 1,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": 334.5529580000002,
+        "p95": 334.5529580000002
+      },
+      "stages": {}
+    },
+    "warm-step": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0,
+        "upper": 0.6215524967746471
+      },
+      "attempted": 1,
+      "passed": 0,
+      "failed": 1,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": 334.56795799999963,
+        "p95": 334.56795799999963
+      },
+      "stages": {}
+    },
+    "reconnected-equation": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0,
+        "upper": 0.6215524967746471
+      },
+      "attempted": 1,
+      "passed": 0,
+      "failed": 1,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": 334.5717910000003,
+        "p95": 334.5717910000003
+      },
+      "stages": {}
+    }
+  },
+  "summary": {
+    "successInterval80": null,
+    "attempted": 3,
+    "passed": 0,
+    "failed": 3,
+    "successMs": {
+      "p50": null,
+      "p95": null
+    },
+    "failureMs": {
+      "p50": 334.56795799999963,
+      "p95": 334.5717910000003
+    },
+    "stages": {}
+  },
+  "intervalMethod": "Two-sided 80% Wilson score; per scenario only. Pooled confidence omitted because scenarios share trials.",
+  "samples": [
+    {
+      "trial": 1,
+      "voice": "Daniel",
+      "scenario": "cold-equation",
+      "passed": false,
+      "responseLatencyMs": null,
+      "elapsedMs": 334.5529580000002,
+      "timings": [],
+      "failure": "Trial setup or capture failed: launch: Executable doesn't exist at /Users/santiagocofino/Library/Caches/ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+    },
+    {
+      "trial": 1,
+      "voice": "Daniel",
+      "scenario": "warm-step",
+      "passed": false,
+      "responseLatencyMs": null,
+      "elapsedMs": 334.56795799999963,
+      "timings": [],
+      "failure": "Trial setup or capture failed: launch: Executable doesn't exist at /Users/santiagocofino/Library/Caches/ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+    },
+    {
+      "trial": 1,
+      "voice": "Daniel",
+      "scenario": "reconnected-equation",
+      "passed": false,
+      "responseLatencyMs": null,
+      "elapsedMs": 334.5717910000003,
+      "timings": [],
+      "failure": "Trial setup or capture failed: launch: Executable doesn't exist at /Users/santiagocofino/Library/Caches/ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+    }
+  ]
+}

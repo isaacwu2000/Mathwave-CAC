@@ -1,0 +1,448 @@
+{
+  "runId": "09ea1a6d-6273-47ea-ad13-1194853a6035",
+  "startedAt": "2026-10-16T01:17:16.618Z",
+  "finishedAt": "2026-10-16T01:17:44.737Z",
+  "lane": "voice",
+  "revision": "3feedfae024ca241392d5ef02ac56aa92c8614c0",
+  "dirty": true,
+  "sourceSHA256": "9408e069804aeb365e58fca296ba0ccaf614eae298fa31489cba724c6f5fd7c0",
+  "runnerSHA256": "3c451d997c633cf3810ab1212f4a0c86f8f46237a19d901992d4b27c8e4a2d2c",
+  "models": {
+    "live": "gpt-live-1",
+    "command": "gpt-6-luna"
+  },
+  "scope": "Synthetic recorded speech through browser, GPT Live, backend, persistence and React commit; excludes physical microphone and student usability.",
+  "planned": 3,
+  "unattempted": 1,
+  "summary": {
+    "attempted": 2,
+    "passed": 1,
+    "failed": 1,
+    "successMs": {
+      "p50": 15304,
+      "p95": 15304
+    },
+    "failureMs": {
+      "p50": 50.031874999996944,
+      "p95": 50.031874999996944
+    },
+    "stages": {
+      "live-server:load": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 29,
+        "p95": 29
+      },
+      "live-server:live_provider_headers": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 433,
+        "p95": 433
+      },
+      "live-server:total": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 515,
+        "p95": 515
+      },
+      "problem-server:receipt": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 78,
+        "p95": 78
+      },
+      "problem-server:load": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 30,
+        "p95": 30
+      },
+      "problem-server:model_1": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 1973,
+        "p95": 1973
+      },
+      "problem-server:preview_1": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 22,
+        "p95": 22
+      },
+      "problem-server:model_2": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 1547,
+        "p95": 1547
+      },
+      "problem-server:validate_2": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 3,
+        "p95": 3
+      },
+      "problem-server:interpret": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 3547,
+        "p95": 3547
+      },
+      "problem-server:execute": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 3558,
+        "p95": 3558
+      },
+      "problem-server:commit": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 44,
+        "p95": 44
+      },
+      "problem-server:total": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 3712,
+        "p95": 3712
+      },
+      "input-detected": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 0,
+        "p95": 0
+      },
+      "connection-start": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 0.8000000007450581,
+        "p95": 0.8000000007450581
+      },
+      "connection-ready": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 1004,
+        "p95": 1004
+      },
+      "last-input-signal": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 2538.300000000745,
+        "p95": 2538.300000000745
+      },
+      "transcript-fallback": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 14048.60000000149,
+        "p95": 14048.60000000149
+      },
+      "voice-command": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 14049.5,
+        "p95": 14049.5
+      },
+      "save-confirmed": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 17804.5,
+        "p95": 17804.5
+      },
+      "workspace-result": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 17804.5,
+        "p95": 17804.5
+      },
+      "result-returned": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 17804.800000000745,
+        "p95": 17804.800000000745
+      },
+      "commentary-sent": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 17805,
+        "p95": 17805
+      },
+      "display-commit": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 17842.300000000745,
+        "p95": 17842.300000000745
+      },
+      "next-audio-observed": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 18629.200000001118,
+        "p95": 18629.200000001118
+      },
+      "connection": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 1003.1999999992549,
+        "p95": 1003.1999999992549
+      },
+      "webrtc-offer": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 14.300000000745058,
+        "p95": 14.300000000745058
+      },
+      "ice-gather": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 128.40000000037253,
+        "p95": 128.40000000037253
+      },
+      "live-token-request": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 542.0999999996275,
+        "p95": 542.0999999996275
+      },
+      "prior-save-wait": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 0,
+        "p95": 0
+      },
+      "save-queue": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 0.2000000011175871,
+        "p95": 0.2000000011175871
+      },
+      "request-body": {
+        "observed": 1,
+        "missing": 1,
+        "p50": 3752.699999999255,
+        "p95": 3752.699999999255
+      }
+    }
+  },
+  "samples": [
+    {
+      "scenario": "cold-equation",
+      "audio": "/demo-voices/daniel-equation.wav",
+      "sha256": "fecf429d7526b2908843a43f200dc1d8a929b17898dfda8d73bff4f78d0bd2d9",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 = 11",
+      "expression": "2 * x + 3 = 11",
+      "elapsedMs": 15304,
+      "responseLatencyMs": 15304,
+      "harnessElapsedMs": 19375.324875,
+      "timings": [
+        {
+          "stage": "live-server:load",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 29
+        },
+        {
+          "stage": "live-server:live_provider_headers",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 433
+        },
+        {
+          "stage": "live-server:total",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 515
+        },
+        {
+          "stage": "problem-server:receipt",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 78
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 30
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 1973
+        },
+        {
+          "stage": "problem-server:preview_1",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 22
+        },
+        {
+          "stage": "problem-server:model_2",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 1547
+        },
+        {
+          "stage": "problem-server:validate_2",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 3
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 3547
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 3558
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 44
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 3712
+        },
+        {
+          "stage": "input-detected",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "connection-start",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "milestone",
+          "duration": 0.8000000007450581
+        },
+        {
+          "stage": "connection-ready",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "milestone",
+          "duration": 1004
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "milestone",
+          "duration": 2538.300000000745
+        },
+        {
+          "stage": "transcript-fallback",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "milestone",
+          "duration": 14048.60000000149
+        },
+        {
+          "stage": "voice-command",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "milestone",
+          "duration": 14049.5
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "milestone",
+          "duration": 17804.5
+        },
+        {
+          "stage": "workspace-result",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "milestone",
+          "duration": 17804.5
+        },
+        {
+          "stage": "result-returned",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "milestone",
+          "duration": 17804.800000000745
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "milestone",
+          "duration": 17805
+        },
+        {
+          "stage": "display-commit",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "milestone",
+          "duration": 17842.300000000745
+        },
+        {
+          "stage": "next-audio-observed",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "milestone",
+          "duration": 18629.200000001118
+        },
+        {
+          "stage": "connection",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 1003.1999999992549
+        },
+        {
+          "stage": "webrtc-offer",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 14.300000000745058
+        },
+        {
+          "stage": "ice-gather",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 128.40000000037253
+        },
+        {
+          "stage": "live-token-request",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 542.0999999996275
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "save-queue",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 0.2000000011175871
+        },
+        {
+          "stage": "request-body",
+          "id": "13d047de-d825-4edb-86b1-9abe8045c678",
+          "kind": "span",
+          "duration": 3752.699999999255
+        }
+      ],
+      "audioObserved": true,
+      "connectionObserved": true
+    },
+    {
+      "scenario": "warm-step",
+      "audio": "/demo-voices/daniel-step.wav",
+      "sha256": "8a2189b916dc05c896a537df16af4fdab649319b417afd34adb5020b70d807c1",
+      "passed": false,
+      "expectedExpression": "2 * x + 3 - 3 = 11 - 3",
+      "expression": null,
+      "failure": "Warm connection was not available.",
+      "elapsedMs": 50.031874999996944,
+      "responseLatencyMs": null,
+      "harnessElapsedMs": 50.03208299999824,
+      "timings": [],
+      "audioObserved": false,
+      "connectionObserved": false
+    }
+  ]
+}

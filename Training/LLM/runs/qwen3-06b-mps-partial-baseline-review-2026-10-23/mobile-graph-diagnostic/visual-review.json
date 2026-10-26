@@ -1,0 +1,57 @@
+{
+  "reviewer": "llm_outcome_grader",
+  "lane": "Actual app saved-state replay of gold prestates from invalid partial MPS generations; not generated model correctness.",
+  "cssSha256": "ddeaad1e8ae8d9f61dc193f9bf88677c2fe9efcf8ff87c1f4579dc7074742611",
+  "finding": "Equal-specificity scene stylesheet mobile max-height360px overrode workspace16dvh; expression editor consumed374px flexpanel and collapsed chart wrapper to0px. Waiting5.3seconds did not repair it.",
+  "fix": "Mobile workspace-scoped selector caps scene editor at16dvh and uses4px12px padding independent of stylesheet load order.",
+  "inspected": [
+    {
+      "id": "graph-exponential-base-parameter:2:final",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/mobile-graph-diagnostic/graph-exponential-base-parameter-fixed-390.png",
+      "reviewed": true,
+      "result": "Graph grid and expected curves are visible; saved equation notation remains readable. Mobile expression editor scrolls below the retained drawing area; desktop rendering remains intact.",
+      "controls": "Hide/Show graph collapsed to48px then restored222.97px drawing region."
+    },
+    {
+      "id": "graph-exponential-base-parameter:2:final",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/mobile-graph-diagnostic/graph-exponential-base-parameter-fixed-1280.png",
+      "reviewed": true,
+      "result": "Graph grid and expected curves are visible; saved equation notation remains readable. Mobile expression editor scrolls below the retained drawing area; desktop rendering remains intact.",
+      "controls": "Desktop existing controls retained."
+    },
+    {
+      "id": "graph-named-function-redefinition:2:final",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/mobile-graph-diagnostic/graph-named-function-redefinition-fixed-390.png",
+      "reviewed": true,
+      "result": "Graph grid and expected curves are visible; saved equation notation remains readable. Mobile expression editor scrolls below the retained drawing area; desktop rendering remains intact.",
+      "controls": "Hide/Show graph collapsed to48px then restored222.97px drawing region."
+    },
+    {
+      "id": "graph-named-function-redefinition:2:final",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/mobile-graph-diagnostic/graph-named-function-redefinition-fixed-1280.png",
+      "reviewed": true,
+      "result": "Graph grid and expected curves are visible; saved equation notation remains readable. Mobile expression editor scrolls below the retained drawing area; desktop rendering remains intact.",
+      "controls": "Desktop existing controls retained."
+    }
+  ],
+  "limits": [
+    "No paid model inference, STT, physical iPhone, streaming or latency acceptance.",
+    "Two representative failing prestates reviewed in both viewports; full model visual review remains separately tracked."
+  ]
+}

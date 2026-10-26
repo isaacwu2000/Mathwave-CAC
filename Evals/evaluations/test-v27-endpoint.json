@@ -1,0 +1,68 @@
+{
+  "split": "test-v27",
+  "mode": "endpoint",
+  "datasetSHA256": "74a914890542954f6d3b0582450af945649908d93162e377c6bf61bfc0a7c844",
+  "createdAt": "2026-10-14T16:16:55.076Z",
+  "total": 4,
+  "scored": 4,
+  "passed": 4,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "exact-trace": {
+      "passed": 4,
+      "scored": 4
+    }
+  },
+  "results": [
+    {
+      "id": "exact-trace-1",
+      "category": "exact-trace",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "trace graph 2 at x 20.125",
+        "message": ""
+      },
+      "latencyMs": 2235
+    },
+    {
+      "id": "exact-trace-2",
+      "category": "exact-trace",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "slope of graph 2 at x 4",
+        "message": ""
+      },
+      "latencyMs": 2275
+    },
+    {
+      "id": "exact-trace-3",
+      "category": "exact-trace",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "diagonal",
+        "message": ""
+      },
+      "latencyMs": 4086
+    },
+    {
+      "id": "exact-trace-4",
+      "category": "exact-trace",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "trace graph 1 at x 0",
+        "message": ""
+      },
+      "latencyMs": 2024
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-19T16:01:03.453Z",
+  "scope": "isolated local development owner; real Neon persistence",
+  "checks": [
+    "database-backed write",
+    "retry does not duplicate work",
+    "stale write rejected",
+    "fresh read retains saved equation and revision"
+  ]
+}

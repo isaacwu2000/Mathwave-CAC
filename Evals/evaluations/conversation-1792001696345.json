@@ -1,0 +1,103 @@
+{
+  "createdAt": "2026-10-14T18:14:56.340Z",
+  "scope": "Live AI text dialogue and persisted notebook state; no microphone claims.",
+  "total": 6,
+  "passed": 6,
+  "results": [
+    {
+      "request": "Put down three x plus four equals nineteen.",
+      "status": "command",
+      "equation": "3 * x + 4 = 19",
+      "pass": true,
+      "actual": "3 * x + 4 = 19",
+      "prediction": {
+        "status": "command",
+        "command": "write 3*x+4=19",
+        "message": "I’ll write the equation 3x + 4 = 19."
+      },
+      "latencyMs": 4328
+    },
+    {
+      "request": "Why would subtracting four help here?",
+      "status": "explanation",
+      "equation": "3 * x + 4 = 19",
+      "pass": true,
+      "actual": "3 * x + 4 = 19",
+      "prediction": {
+        "status": "explanation",
+        "command": "",
+        "message": "Subtracting 4 from both sides keeps the equation balanced and cancels the +4, leaving 3*x = 15. This is only a suggestion; it hasn’t been applied.",
+        "commands": [
+          "subtract 4 from both sides",
+          "simplify"
+        ]
+      },
+      "latencyMs": 5101
+    },
+    {
+      "request": "Okay, go ahead and do that.",
+      "status": "command",
+      "equation": "3 * x = 15",
+      "pass": true,
+      "actual": "3 * x = 15",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "I’ll subtract 4 from both sides and simplify, leaving 3*x = 15.",
+        "commands": [
+          "subtract 4 from both sides",
+          "simplify"
+        ]
+      },
+      "latencyMs": 4239
+    },
+    {
+      "request": "Actually I meant subtract six, not four.",
+      "status": "correction",
+      "equation": "3 * x - 2 = 13",
+      "pass": true,
+      "actual": "3 * x - 2 = 13",
+      "prediction": {
+        "status": "correction",
+        "command": "",
+        "message": "",
+        "commands": [
+          "subtract 6 from both sides",
+          "simplify"
+        ]
+      },
+      "latencyMs": 9033
+    },
+    {
+      "request": "No, I meant subtract two instead.",
+      "status": "correction",
+      "equation": "3 * x + 2 = 17",
+      "pass": true,
+      "actual": "3 * x + 2 = 17",
+      "prediction": {
+        "status": "correction",
+        "command": "",
+        "message": "",
+        "commands": [
+          "subtract 2 from both sides",
+          "simplify"
+        ]
+      },
+      "latencyMs": 5160
+    },
+    {
+      "request": "Can you explain why we have to do the same thing to both sides?",
+      "status": "explanation",
+      "equation": "3 * x + 2 = 17",
+      "pass": true,
+      "actual": "3 * x + 2 = 17",
+      "prediction": {
+        "status": "explanation",
+        "command": "",
+        "message": "An equation says the two sides have the same value. Doing the same operation to both sides keeps them equal, like changing both sides of a balanced scale equally. Here, subtracting 2 from both sides cancels the +2 and keeps the equation balanced: 3*x = 15.",
+        "commands": []
+      },
+      "latencyMs": 3643
+    }
+  ]
+}

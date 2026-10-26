@@ -1,0 +1,3770 @@
+[
+  {
+    "id": "graph-linear-starting-value",
+    "family": "linear-starting-value",
+    "category": "graphs",
+    "focus": "Connect a starting fee with the vertical intercept",
+    "turns": [
+      {
+        "student": "Graph two x plus five. That is my taxi fare.",
+        "programs": [
+          "problem.save(graph.plot(\"2*x+5\"));"
+        ]
+      },
+      {
+        "student": "How much before I go anywhere?",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 5"
+          ]
+        }
+      },
+      {
+        "student": "And after three miles?",
+        "programs": [
+          "graph.value(graph.current(1),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 11"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-negative-slope-cooling",
+    "family": "negative-slope-cooling",
+    "category": "graphs",
+    "focus": "Track decreasing values without losing the sign",
+    "turns": [
+      {
+        "student": "Can you graph twenty minus three x?",
+        "programs": [
+          "problem.save(graph.plot(\"20-3*x\"));"
+        ]
+      },
+      {
+        "student": "What does it give at four?",
+        "programs": [],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 8"
+          ]
+        },
+        "previews": [
+          "graph.value(graph.current(1),4);"
+        ],
+        "status": "explanation",
+        "message": "At x = 4, y = 8, because 20 - 3 times 4 is 8."
+      },
+      {
+        "student": "What about at seven, even if it goes negative?",
+        "programs": [
+          "graph.value(graph.current(1),7);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -1"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-quadratic-two-zeroes",
+    "family": "quadratic-two-zeroes",
+    "category": "graphs",
+    "focus": "Contrast roots with a point between roots",
+    "turns": [
+      {
+        "student": "Show x squared minus nine.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2-9\"));"
+        ]
+      },
+      {
+        "student": "Where does it hit the x axis?",
+        "programs": [
+          "graph.roots(graph.current(1));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "-3, 3"
+          ]
+        }
+      },
+      {
+        "student": "What is halfway between those, at zero?",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -9"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-repeated-root-touch",
+    "family": "repeated-root-touch",
+    "category": "graphs",
+    "focus": "Distinguish a repeated root from two crossings",
+    "turns": [
+      {
+        "student": "Graph x squared minus six x plus nine.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2-6*x+9\"));"
+        ]
+      },
+      {
+        "student": "Check x equals three.",
+        "programs": [
+          "graph.value(graph.current(1),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0"
+          ]
+        }
+      },
+      {
+        "student": "What about just one over, at four?",
+        "programs": [
+          "graph.value(graph.current(1),4);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 1"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-quadratic-no-real-crossing",
+    "family": "quadratic-no-real-crossing",
+    "category": "graphs",
+    "focus": "Check a positive minimum and no real roots",
+    "turns": [
+      {
+        "student": "Show x squared plus four.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2+4\"));"
+        ]
+      },
+      {
+        "student": "What is its lowest point at zero?",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 4"
+          ]
+        }
+      },
+      {
+        "student": "Does it reach the x axis?",
+        "programs": [
+          "graph.roots(graph.current(1));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "No x intercepts"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-cubic-odd-signs",
+    "family": "cubic-odd-signs",
+    "category": "graphs",
+    "focus": "Read signed values on opposite sides of an odd curve",
+    "turns": [
+      {
+        "student": "Graph x cubed.",
+        "programs": [
+          "problem.save(graph.plot(\"x^3\"));"
+        ]
+      },
+      {
+        "student": "What is it at negative two?",
+        "programs": [
+          "graph.value(graph.current(1),-2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -8"
+          ]
+        }
+      },
+      {
+        "student": "And positive two?",
+        "programs": [
+          "graph.value(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 8"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-absolute-distance",
+    "family": "absolute-distance",
+    "category": "graphs",
+    "focus": "Interpret absolute value as distance",
+    "turns": [
+      {
+        "student": "Plot the absolute value of the quantity x minus three.",
+        "programs": [
+          "problem.save(graph.scene([\"abs(x-3)\"]));"
+        ]
+      },
+      {
+        "student": "How far away is zero?",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 3"
+          ]
+        }
+      },
+      {
+        "student": "And five?",
+        "programs": [
+          "graph.value(graph.current(1),5);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-square-root-endpoint",
+    "family": "square-root-endpoint",
+    "category": "graphs",
+    "focus": "Read the endpoint of a shifted square root",
+    "turns": [
+      {
+        "student": "Graph square root of x minus four, with the minus four inside the root.",
+        "programs": [
+          "problem.save(graph.plot(\"sqrt(x-4)\"));"
+        ]
+      },
+      {
+        "student": "Start where x is four.",
+        "programs": [
+          "graph.value(graph.current(1),4);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0"
+          ]
+        }
+      },
+      {
+        "student": "Try thirteen too.",
+        "programs": [
+          "graph.value(graph.current(1),13);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 3"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-cube-root-negative",
+    "family": "cube-root-negative",
+    "category": "graphs",
+    "focus": "Read a negative input through an odd root",
+    "turns": [
+      {
+        "student": "Show the cube root of x.",
+        "programs": [
+          "problem.save(graph.scene([\"cbrt(x)\"]));"
+        ]
+      },
+      {
+        "student": "What happens at negative eight?",
+        "programs": [
+          "graph.value(graph.current(1),-8);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -2"
+          ]
+        }
+      },
+      {
+        "student": "And twenty seven?",
+        "programs": [
+          "graph.value(graph.current(1),27);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 3"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-reciprocal-signs",
+    "family": "reciprocal-signs",
+    "category": "graphs",
+    "focus": "Compare the separate reciprocal branches",
+    "turns": [
+      {
+        "student": "Graph one over x.",
+        "programs": [
+          "problem.save(graph.plot(\"1/x\"));"
+        ]
+      },
+      {
+        "student": "Read it at two.",
+        "programs": [
+          "graph.value(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0.5"
+          ]
+        }
+      },
+      {
+        "student": "Now use negative two.",
+        "programs": [
+          "graph.value(graph.current(1),-2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -0.5"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-exponential-doubling",
+    "family": "exponential-doubling",
+    "category": "graphs",
+    "focus": "Compare consecutive inputs on exponential growth",
+    "turns": [
+      {
+        "student": "Graph two to the x.",
+        "programs": [
+          "problem.save(graph.plot(\"2^x\"));"
+        ]
+      },
+      {
+        "student": "What do I get at three?",
+        "programs": [
+          "graph.value(graph.current(1),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 8"
+          ]
+        }
+      },
+      {
+        "student": "And one step later?",
+        "programs": [
+          "graph.value(graph.current(1),4);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 16"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-exponential-decay",
+    "family": "exponential-decay",
+    "category": "graphs",
+    "focus": "Compare repeated halving over time",
+    "turns": [
+      {
+        "student": "Show one half to the x power.",
+        "programs": [
+          "problem.save(graph.plot(\"(1/2)^x\"));"
+        ]
+      },
+      {
+        "student": "What is left after two steps?",
+        "programs": [
+          "graph.value(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0.25"
+          ]
+        }
+      },
+      {
+        "student": "Go back to the start.",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 1"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-natural-log-anchor",
+    "family": "natural-log-anchor",
+    "category": "graphs",
+    "focus": "Check the logarithm identity at one",
+    "turns": [
+      {
+        "student": "Graph natural log of x.",
+        "programs": [
+          "problem.save(graph.plot(\"ln(x)\"));"
+        ]
+      },
+      {
+        "student": "Read the value at one.",
+        "programs": [
+          "graph.value(graph.current(1),1);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0"
+          ]
+        }
+      },
+      {
+        "student": "What about e?",
+        "programs": [
+          "graph.value(graph.current(1),2.718281828459045);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 1"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-sine-radian-zero",
+    "family": "sine-radian-zero",
+    "category": "graphs",
+    "focus": "Read a periodic curve at radian landmarks",
+    "turns": [
+      {
+        "student": "Show sine of x.",
+        "programs": [
+          "problem.save(graph.plot(\"sin(x)\"));"
+        ]
+      },
+      {
+        "student": "Check zero.",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0"
+          ]
+        }
+      },
+      {
+        "student": "Now pi over two. I mean radians.",
+        "programs": [
+          "graph.value(graph.current(1),1.5707963267948966);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 1"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-cosine-quarter-cycle",
+    "family": "cosine-quarter-cycle",
+    "category": "graphs",
+    "focus": "Follow a cosine wave through a half cycle",
+    "turns": [
+      {
+        "student": "Plot cosine x.",
+        "programs": [
+          "problem.save(graph.plot(\"cos(x)\"));"
+        ]
+      },
+      {
+        "student": "Where does it start at zero?",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 1"
+          ]
+        }
+      },
+      {
+        "student": "And at pi?",
+        "programs": [
+          "graph.value(graph.current(1),3.141592653589793);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -1"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-tangent-origin",
+    "family": "tangent-origin",
+    "category": "graphs",
+    "focus": "Check tangent away from a pole",
+    "turns": [
+      {
+        "student": "Graph tangent x, in radians.",
+        "programs": [
+          "problem.save(graph.scene([\"tan(x)\"]));"
+        ]
+      },
+      {
+        "student": "What happens at zero?",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0"
+          ]
+        }
+      },
+      {
+        "student": "Move the whole wave up one.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(1),\"tan(x)+1\"));"
+        ]
+      },
+      {
+        "student": "Read zero again.",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 1"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-floor-step-boundary",
+    "family": "floor-step-boundary",
+    "category": "graphs",
+    "focus": "Check a floor function on each side of an integer",
+    "turns": [
+      {
+        "student": "Show floor of x.",
+        "programs": [
+          "problem.save(graph.scene([\"floor(x)\"]));"
+        ]
+      },
+      {
+        "student": "Try one point nine.",
+        "programs": [
+          "graph.value(graph.current(1),1.9);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 1"
+          ]
+        }
+      },
+      {
+        "student": "Now exactly two.",
+        "programs": [
+          "graph.value(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-ceiling-negative-step",
+    "family": "ceiling-negative-step",
+    "category": "graphs",
+    "focus": "Check rounding upward on negative inputs",
+    "turns": [
+      {
+        "student": "Graph ceiling of x.",
+        "programs": [
+          "problem.save(graph.scene([\"ceil(x)\"]));"
+        ]
+      },
+      {
+        "student": "Read it at negative one point two.",
+        "programs": [
+          "graph.value(graph.current(1),-1.2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -1"
+          ]
+        }
+      },
+      {
+        "student": "What about exactly negative two?",
+        "programs": [
+          "graph.value(graph.current(1),-2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-parabola-right-translation",
+    "family": "parabola-right-translation",
+    "category": "graphs",
+    "focus": "Translate horizontally while tracking the new vertex",
+    "turns": [
+      {
+        "student": "Start with x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ]
+      },
+      {
+        "student": "Move that curve three to the right.",
+        "programs": [
+          "problem.save(graph.shift(graph.current(1),3,0));"
+        ]
+      },
+      {
+        "student": "Read it where the new bottom is, at three.",
+        "programs": [
+          "graph.value(graph.current(1),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-parabola-up-translation",
+    "family": "parabola-up-translation",
+    "category": "graphs",
+    "focus": "Translate vertically and distinguish height from input",
+    "turns": [
+      {
+        "student": "Graph x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ]
+      },
+      {
+        "student": "Lift it five units.",
+        "programs": [
+          "problem.save(graph.shift(graph.current(1),0,5));"
+        ]
+      },
+      {
+        "student": "What is the height at zero now?",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 5"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-absolute-left-down",
+    "family": "absolute-left-down",
+    "category": "graphs",
+    "focus": "Compose a two-axis translation of a corner",
+    "turns": [
+      {
+        "student": "Plot absolute value of x.",
+        "programs": [
+          "problem.save(graph.scene([\"abs(x)\"]));"
+        ]
+      },
+      {
+        "student": "Move it left two and down one.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(1),\"abs(x+2)-1\"));"
+        ]
+      },
+      {
+        "student": "Read the corner at negative two.",
+        "programs": [
+          "graph.value(graph.current(1),-2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -1"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-reflect-odd-x",
+    "family": "reflect-odd-x",
+    "category": "graphs",
+    "focus": "Reflect an odd curve across the horizontal axis",
+    "turns": [
+      {
+        "student": "Graph x cubed minus one.",
+        "programs": [
+          "problem.save(graph.plot(\"x^3-1\"));"
+        ]
+      },
+      {
+        "student": "Flip it over the x axis.",
+        "programs": [
+          "problem.save(graph.reflect(graph.current(1),\"x\"));"
+        ]
+      },
+      {
+        "student": "What is it at two now?",
+        "programs": [
+          "graph.value(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -7"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-reflect-line-y",
+    "family": "reflect-line-y",
+    "category": "graphs",
+    "focus": "Reflect a line across the vertical axis",
+    "turns": [
+      {
+        "student": "Show two x plus three.",
+        "programs": [
+          "problem.save(graph.plot(\"2*x+3\"));"
+        ]
+      },
+      {
+        "student": "Flip that across the y axis.",
+        "programs": [
+          "problem.save(graph.reflect(graph.current(1),\"y\"));"
+        ]
+      },
+      {
+        "student": "What height is it at one?",
+        "programs": [
+          "graph.value(graph.current(1),1);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 1"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-vertical-stretch-corner",
+    "family": "vertical-stretch-corner",
+    "category": "graphs",
+    "focus": "Stretch distances from the x axis",
+    "turns": [
+      {
+        "student": "Graph absolute value of x.",
+        "programs": [
+          "problem.save(graph.scene([\"abs(x)\"]));"
+        ]
+      },
+      {
+        "student": "Make it three times as tall.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(1),\"3*abs(x)\"));"
+        ]
+      },
+      {
+        "student": "Check negative two.",
+        "programs": [
+          "graph.value(graph.current(1),-2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 6"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-vertical-compression",
+    "family": "vertical-compression",
+    "category": "graphs",
+    "focus": "Compress a parabola without a horizontal shift",
+    "turns": [
+      {
+        "student": "Graph x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ]
+      },
+      {
+        "student": "Make the heights half as big.",
+        "programs": [
+          "problem.save(graph.scaleVertically(graph.current(1),0.5));"
+        ]
+      },
+      {
+        "student": "Check four.",
+        "programs": [
+          "graph.value(graph.current(1),4);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 8"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-negative-scale-both-effects",
+    "family": "negative-scale-both-effects",
+    "category": "graphs",
+    "focus": "Combine reflection and stretch through negative scale",
+    "turns": [
+      {
+        "student": "Show x squared plus one.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2+1\"));"
+        ]
+      },
+      {
+        "student": "Multiply all the heights by negative two.",
+        "programs": [
+          "problem.save(graph.scaleVertically(graph.reflect(graph.current(1),\"x\"),2));"
+        ]
+      },
+      {
+        "student": "What is the new value at zero?",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-translation-order",
+    "family": "translation-order",
+    "category": "graphs",
+    "focus": "Compose independent translations in successive turns",
+    "turns": [
+      {
+        "student": "Graph x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ]
+      },
+      {
+        "student": "Shift it right two.",
+        "programs": [
+          "problem.save(graph.shift(graph.current(1),2,0));"
+        ]
+      },
+      {
+        "student": "Now lift that by three.",
+        "programs": [
+          "problem.save(graph.shift(graph.current(1),0,3));"
+        ]
+      },
+      {
+        "student": "Check where x is two.",
+        "programs": [
+          "graph.value(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 3"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-shift-then-stretch",
+    "family": "shift-then-stretch",
+    "category": "graphs",
+    "focus": "Scale the translated output, including its offset",
+    "turns": [
+      {
+        "student": "Show x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ]
+      },
+      {
+        "student": "Move it up two.",
+        "programs": [
+          "problem.save(graph.shift(graph.current(1),0,2));"
+        ]
+      },
+      {
+        "student": "Now double every height.",
+        "programs": [
+          "problem.save(graph.scaleVertically(graph.current(1),2));"
+        ]
+      },
+      {
+        "student": "What is the value at zero?",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-compare-line-parabola",
+    "family": "compare-line-parabola",
+    "category": "graphs",
+    "focus": "Retain two different function families",
+    "turns": [
+      {
+        "student": "Graph x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ]
+      },
+      {
+        "student": "Put y equals x on there too.",
+        "programs": [
+          "problem.save(graph.add(graph.current(1),\"x\"));"
+        ]
+      },
+      {
+        "student": "Where do those two meet?",
+        "programs": [
+          "graph.intersections(graph.current(1),graph.current(2));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "(0, 0)",
+            "(1, 1)"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-parallel-lines-no-meeting",
+    "family": "parallel-lines-no-meeting",
+    "category": "graphs",
+    "focus": "Keep two parallel lines independently addressable without changing their intercepts",
+    "turns": [
+      {
+        "student": "Graph two x plus one.",
+        "programs": [
+          "problem.save(graph.plot(\"2*x+1\"));"
+        ]
+      },
+      {
+        "student": "Add two x minus three.",
+        "programs": [
+          "problem.save(graph.add(graph.current(1),\"2*x-3\"));"
+        ]
+      },
+      {
+        "student": "Read the second one at zero.",
+        "programs": [
+          "graph.value(graph.current(2),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -3"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-perpendicular-linear-crossing",
+    "family": "perpendicular-linear-crossing",
+    "category": "graphs",
+    "focus": "Compare opposite reciprocal slopes",
+    "turns": [
+      {
+        "student": "Draw y equals two x.",
+        "programs": [
+          "problem.save(graph.plot(\"2*x\"));"
+        ]
+      },
+      {
+        "student": "Add negative one half x plus five.",
+        "programs": [
+          "problem.save(graph.add(graph.current(1),\"-0.5*x+5\"));"
+        ]
+      },
+      {
+        "student": "Where do they cross?",
+        "programs": [
+          "graph.intersections(graph.current(1),graph.current(2));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "(2, 4)"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-two-parabolas-selected-edit",
+    "family": "two-parabolas-selected-edit",
+    "category": "graphs",
+    "focus": "Edit only the second curve in a comparison",
+    "turns": [
+      {
+        "student": "Graph x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ]
+      },
+      {
+        "student": "Add x squared plus four.",
+        "programs": [
+          "problem.save(graph.add(graph.current(1),\"x^2+4\"));"
+        ]
+      },
+      {
+        "student": "Make the second one x squared minus two instead.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(2),\"x^2-2\"));"
+        ],
+        "expect": {
+          "graphSamples": [
+            {
+              "curve": 1,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "curve": 2,
+              "x": 0,
+              "y": -2
+            }
+          ]
+        }
+      },
+      {
+        "student": "The first should still be zero at zero, right?",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-remove-comparison-retain-original",
+    "family": "remove-comparison-retain-original",
+    "category": "graphs",
+    "focus": "Remove a comparison without deleting original",
+    "turns": [
+      {
+        "student": "Show x squared minus one.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2-1\"));"
+        ]
+      },
+      {
+        "student": "Add the line y equals three.",
+        "programs": [
+          "problem.save(graph.add(graph.current(1),\"3\"));"
+        ]
+      },
+      {
+        "student": "Remove just that line.",
+        "programs": [
+          "problem.save(graph.remove(graph.current(2)));"
+        ],
+        "expect": {
+          "graphCount": 1
+        }
+      },
+      {
+        "student": "Check the parabola at two.",
+        "programs": [
+          "graph.value(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 3"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-replace-entire-graph",
+    "family": "replace-entire-graph",
+    "category": "graphs",
+    "focus": "Replace collection when student starts a new graph",
+    "turns": [
+      {
+        "student": "Plot x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ]
+      },
+      {
+        "student": "Add x plus one too.",
+        "programs": [
+          "problem.save(graph.add(graph.current(1),\"x+1\"));"
+        ]
+      },
+      {
+        "student": "Actually start over with absolute value of x.",
+        "programs": [
+          "problem.save(graph.scene([\"abs(x)\"]));"
+        ],
+        "expect": {
+          "graphCount": 1
+        }
+      },
+      {
+        "student": "What does this one give at negative four?",
+        "programs": [],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 4"
+          ]
+        },
+        "previews": [
+          "graph.value(graph.current(1),-4);"
+        ],
+        "status": "explanation",
+        "message": "For absolute value of x at x = -4, y = 4. Absolute value gives the distance from zero."
+      }
+    ]
+  },
+  {
+    "id": "graph-named-curves-select-by-name",
+    "family": "named-curves-select-by-name",
+    "category": "graphs",
+    "focus": "Use semantic names after adding a comparison",
+    "turns": [
+      {
+        "student": "Graph x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ]
+      },
+      {
+        "student": "Call it original.",
+        "programs": [
+          "problem.save(graph.name(graph.current(1),\"original\"));"
+        ]
+      },
+      {
+        "student": "Add x squared plus two, and call that raised.",
+        "programs": [
+          "problem.save(graph.name(graph.add(graph.current(\"original\"),\"x^2+2\"),\"raised\"));"
+        ]
+      },
+      {
+        "student": "Read raised at three.",
+        "programs": [
+          "graph.value(graph.current(\"raised\"),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 11"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-rename-without-changing-values",
+    "family": "rename-without-changing-values",
+    "category": "graphs",
+    "focus": "Resolve a curve after its name changes",
+    "turns": [
+      {
+        "student": "Graph three x minus two.",
+        "programs": [
+          "problem.save(graph.plot(\"3*x-2\"));"
+        ]
+      },
+      {
+        "student": "Name that bus.",
+        "programs": [
+          "problem.save(graph.name(graph.current(1),\"bus\"));"
+        ]
+      },
+      {
+        "student": "Actually call it train.",
+        "programs": [
+          "problem.save(graph.name(graph.current(\"bus\"),\"train\"));"
+        ]
+      },
+      {
+        "student": "What does train give at four?",
+        "programs": [],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 10"
+          ]
+        },
+        "previews": [
+          "graph.value(graph.current(\"train\"),4);"
+        ],
+        "status": "explanation",
+        "message": "For train at x = 4, y = 10, because 3 times 4 minus 2 is 10. Renaming the curve did not change its formula."
+      }
+    ]
+  },
+  {
+    "id": "graph-trace-then-followup-value",
+    "family": "trace-then-followup-value",
+    "category": "graphs",
+    "focus": "Keep mathematical value independent of trace location",
+    "turns": [
+      {
+        "student": "Graph x squared minus four.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2-4\"));"
+        ]
+      },
+      {
+        "student": "Put the tracing point at three.",
+        "programs": [
+          "problem.save(graph.trace(graph.current(1),3));"
+        ]
+      },
+      {
+        "student": "Now read the height at negative two.",
+        "programs": [
+          "graph.value(graph.current(1),-2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-secant-two-points",
+    "family": "secant-two-points",
+    "category": "graphs",
+    "focus": "Draw an average-slope line through two parabola points",
+    "turns": [
+      {
+        "student": "Show x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ]
+      },
+      {
+        "student": "Draw the straight line through its points at one and three.",
+        "programs": [
+          "problem.save(graph.addSecant(graph.current(1),1,3));"
+        ]
+      },
+      {
+        "student": "Where is that new line at two?",
+        "programs": [
+          "graph.value(graph.current(2),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 5"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-linked-slope-parameter",
+    "family": "linked-slope-parameter",
+    "category": "graphs",
+    "focus": "Update a coefficient through its scalar definition",
+    "turns": [
+      {
+        "student": "Let a be two and graph f of x equals a times x.",
+        "programs": [
+          "problem.save(graph.scene([\"a=2\", \"f(x)=a*x\"]));"
+        ]
+      },
+      {
+        "student": "Change a to five.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(1),\"a=5\"));"
+        ]
+      },
+      {
+        "student": "What does f give at three now?",
+        "programs": [],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 15"
+          ]
+        },
+        "previews": [
+          "graph.value(graph.current(2),3);"
+        ],
+        "status": "explanation",
+        "message": "Now a = 5, so f(x) = 5x. At x = 3, y = 15."
+      }
+    ]
+  },
+  {
+    "id": "graph-linked-intercept-parameter",
+    "family": "linked-intercept-parameter",
+    "category": "graphs",
+    "focus": "Change only the intercept of a named line",
+    "turns": [
+      {
+        "student": "Let b equal three and f of x equal two x plus b.",
+        "programs": [
+          "problem.save(graph.scene([\"b=3\", \"f(x)=2*x+b\"]));"
+        ]
+      },
+      {
+        "student": "Set b to negative one.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(1),\"b=-1\"));"
+        ]
+      },
+      {
+        "student": "Read f at zero.",
+        "programs": [
+          "graph.value(graph.current(2),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -1"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-shared-coefficient-two-curves",
+    "family": "shared-coefficient-two-curves",
+    "category": "graphs",
+    "focus": "Propagate one scalar into two curves",
+    "turns": [
+      {
+        "student": "Let a be two. Graph f of x equals a x and g of x equals a x squared.",
+        "programs": [
+          "problem.save(graph.scene([\"a=2\", \"f(x)=a*x\", \"g(x)=a*x^2\"]));"
+        ]
+      },
+      {
+        "student": "Make a three for both.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(1),\"a=3\"));"
+        ]
+      },
+      {
+        "student": "Read g at two.",
+        "programs": [
+          "graph.value(graph.current(3),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 12"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-function-composition",
+    "family": "function-composition",
+    "category": "graphs",
+    "focus": "Use a defined function inside another graph row",
+    "turns": [
+      {
+        "student": "Define f of x as x squared, and graph y equals f of x plus three.",
+        "programs": [
+          "problem.save(graph.scene([\"f(x)=x^2\", \"y=f(x)+3\"]));"
+        ]
+      },
+      {
+        "student": "Read the second curve at two.",
+        "programs": [
+          "graph.value(graph.current(2),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 7"
+          ]
+        }
+      },
+      {
+        "student": "Change f to x cubed.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(1),\"f(x)=x^3\"));"
+        ]
+      },
+      {
+        "student": "Read that second curve at two again.",
+        "programs": [
+          "graph.value(graph.current(2),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 11"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-function-input-shift",
+    "family": "function-input-shift",
+    "category": "graphs",
+    "focus": "Preserve a dependency inside shifted function input",
+    "turns": [
+      {
+        "student": "Let f of x equal x squared. Also graph f of x minus two, with the minus two inside.",
+        "programs": [
+          "problem.save(graph.scene([\"f(x)=x^2\", \"y=f(x-2)\"]));"
+        ]
+      },
+      {
+        "student": "What does the second curve do at two?",
+        "programs": [],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0"
+          ]
+        },
+        "previews": [
+          "graph.value(graph.current(2),2);"
+        ],
+        "status": "explanation",
+        "message": "The second curve uses f(x - 2). At x = 2, its input to f is zero, so y = 0."
+      },
+      {
+        "student": "Change f to absolute value of x.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(1),\"f(x)=abs(x)\"));"
+        ]
+      },
+      {
+        "student": "Read the shifted one at zero.",
+        "programs": [
+          "graph.value(graph.current(2),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-forward-reference-scene",
+    "family": "forward-reference-scene",
+    "category": "graphs",
+    "focus": "Build a complete scene with a later scalar definition",
+    "turns": [
+      {
+        "student": "Graph f of x equals a x squared, where a is three.",
+        "programs": [
+          "problem.save(graph.scene([\"f(x)=a*x^2\", \"a=3\"]));"
+        ]
+      },
+      {
+        "student": "Read f at two.",
+        "programs": [
+          "graph.value(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 12"
+          ]
+        }
+      },
+      {
+        "student": "Actually set a to one half.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(2),\"a=0.5\"));"
+        ]
+      },
+      {
+        "student": "Read f at two again.",
+        "programs": [
+          "graph.value(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-named-function-redefinition",
+    "family": "named-function-redefinition",
+    "category": "graphs",
+    "focus": "Redefine a named function while retaining a dependent curve",
+    "turns": [
+      {
+        "student": "Let f of x equal x plus one, and graph twice f of x.",
+        "programs": [
+          "problem.save(graph.scene([\"f(x)=x+1\", \"y=2*f(x)\"]));"
+        ]
+      },
+      {
+        "student": "Make f equal x minus one instead.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(1),\"f(x)=x-1\"));"
+        ]
+      },
+      {
+        "student": "What is the second curve at three?",
+        "programs": [
+          "graph.value(graph.current(2),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-trig-amplitude-parameter",
+    "family": "trig-amplitude-parameter",
+    "category": "graphs",
+    "focus": "Change a wave amplitude through a scalar",
+    "turns": [
+      {
+        "student": "Let a equal two and graph a times cosine x.",
+        "programs": [
+          "problem.save(graph.scene([\"a=2\", \"y=a*cos(x)\"]));"
+        ]
+      },
+      {
+        "student": "Turn a up to four.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(1),\"a=4\"));"
+        ]
+      },
+      {
+        "student": "Check the height at zero.",
+        "programs": [
+          "graph.value(graph.current(2),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-exponential-base-parameter",
+    "family": "exponential-base-parameter",
+    "category": "graphs",
+    "focus": "Change the base rather than multiply the output",
+    "turns": [
+      {
+        "student": "Let b equal two, and graph b to the x.",
+        "programs": [
+          "problem.save(graph.scene([\"b=2\", \"y=b^x\"]));"
+        ]
+      },
+      {
+        "student": "Check x equals three.",
+        "programs": [
+          "graph.value(graph.current(2),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 8"
+          ]
+        }
+      },
+      {
+        "student": "Try b equal three.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(1),\"b=3\"));"
+        ]
+      },
+      {
+        "student": "What about the same x now?",
+        "programs": [
+          "graph.value(graph.current(2),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 27"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-distance-function-two-inputs",
+    "family": "distance-function-two-inputs",
+    "category": "graphs",
+    "focus": "Define and call a supported two-argument function",
+    "turns": [
+      {
+        "student": "Define h of u and v as u squared plus v squared. Graph h of x and two.",
+        "programs": [
+          "problem.save(graph.scene([\"h(u,v)=u^2+v^2\", \"y=h(x,2)\"]));"
+        ]
+      },
+      {
+        "student": "Read the drawn curve at three.",
+        "programs": [
+          "graph.value(graph.current(2),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 13"
+          ]
+        }
+      },
+      {
+        "student": "Use h of x and one on the drawn curve instead.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(2),\"y=h(x,1)\"));"
+        ]
+      },
+      {
+        "student": "At three again?",
+        "programs": [
+          "graph.value(graph.current(2),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 10"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-nested-function-chain",
+    "family": "nested-function-chain",
+    "category": "graphs",
+    "focus": "Propagate edits through two function dependencies",
+    "turns": [
+      {
+        "student": "Let f of x be x plus one, g of x be twice f of x, and graph g of x plus three.",
+        "programs": [
+          "problem.save(graph.scene([\"f(x)=x+1\", \"g(x)=2*f(x)\", \"y=g(x)+3\"]));"
+        ]
+      },
+      {
+        "student": "Change f to x minus two.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(1),\"f(x)=x-2\"));"
+        ]
+      },
+      {
+        "student": "Read the last curve at five.",
+        "programs": [
+          "graph.value(graph.current(3),5);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 9"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-scalar-dependency-chain",
+    "family": "scalar-dependency-chain",
+    "category": "graphs",
+    "focus": "Recompute a derived scalar before its function",
+    "turns": [
+      {
+        "student": "Let a be two, b be a plus three, and graph b times x.",
+        "programs": [
+          "problem.save(graph.scene([\"a=2\", \"b=a+3\", \"y=b*x\"]));"
+        ]
+      },
+      {
+        "student": "Set a to four.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(1),\"a=4\"));"
+        ]
+      },
+      {
+        "student": "What is the curve at two now?",
+        "programs": [
+          "graph.value(graph.current(3),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 14"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-function-and-independent-curve",
+    "family": "function-and-independent-curve",
+    "category": "graphs",
+    "focus": "Change linked curve while preserving independent comparison",
+    "turns": [
+      {
+        "student": "Let a be two. Graph a x squared and also x plus one.",
+        "programs": [
+          "problem.save(graph.scene([\"a=2\", \"y=a*x^2\", \"y=x+1\"]));"
+        ]
+      },
+      {
+        "student": "Set a to four.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(1),\"a=4\"));"
+        ],
+        "expect": {
+          "graphSamples": [
+            {
+              "curve": 2,
+              "x": 2,
+              "y": 16
+            },
+            {
+              "curve": 3,
+              "x": 2,
+              "y": 3
+            }
+          ]
+        }
+      },
+      {
+        "student": "Read the straight line at two. It should stay the same.",
+        "programs": [
+          "graph.value(graph.current(3),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 3"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-name-preserved-after-edit",
+    "family": "name-preserved-after-edit",
+    "category": "graphs",
+    "focus": "Address a renamed curve after editing its formula",
+    "turns": [
+      {
+        "student": "Graph x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ]
+      },
+      {
+        "student": "Call that bounce.",
+        "programs": [
+          "problem.save(graph.name(graph.current(1),\"bounce\"));"
+        ]
+      },
+      {
+        "student": "Make bounce x squared plus one.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(\"bounce\"),\"x^2+1\"));"
+        ]
+      },
+      {
+        "student": "Read bounce at two.",
+        "programs": [
+          "graph.value(graph.current(\"bounce\"),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 5"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-implicit-circle-boundary",
+    "family": "implicit-circle-boundary",
+    "category": "graphs",
+    "focus": "Separate a circle boundary from its interior",
+    "turns": [
+      {
+        "student": "Draw the circle x squared plus y squared equals twenty five.",
+        "programs": [
+          "problem.save(graph.scene([\"x^2+y^2=25\"]));"
+        ]
+      },
+      {
+        "student": "Is three comma four on it?",
+        "programs": [
+          "graph.testPoint(graph.current(1),3,4);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (3, 4) satisfies"
+          ]
+        }
+      },
+      {
+        "student": "Is the center on the circle too?",
+        "programs": [
+          "graph.testPoint(graph.current(1),0,0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (0, 0) does not satisfy"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-shifted-circle-center",
+    "family": "shifted-circle-center",
+    "category": "graphs",
+    "focus": "Distinguish shifted circle center from circumference",
+    "turns": [
+      {
+        "student": "Draw a circle centered at two, negative one, with radius three.",
+        "programs": [
+          "problem.save(graph.scene([\"(x-2)^2+(y+1)^2=9\"]));"
+        ]
+      },
+      {
+        "student": "Check five comma negative one.",
+        "programs": [
+          "graph.testPoint(graph.current(1),5,-1);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (5, -1) satisfies"
+          ]
+        }
+      },
+      {
+        "student": "How about two comma negative one?",
+        "programs": [
+          "graph.testPoint(graph.current(1),2,-1);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (2, -1) does not satisfy"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-ellipse-axis-endpoints",
+    "family": "ellipse-axis-endpoints",
+    "category": "graphs",
+    "focus": "Check unequal ellipse radii along both axes",
+    "turns": [
+      {
+        "student": "Draw x squared over nine plus y squared over four equals one.",
+        "programs": [
+          "problem.save(graph.scene([\"x^2/9+y^2/4=1\"]));"
+        ]
+      },
+      {
+        "student": "Is three zero on it?",
+        "programs": [
+          "graph.testPoint(graph.current(1),3,0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (3, 0) satisfies"
+          ]
+        }
+      },
+      {
+        "student": "What about zero two?",
+        "programs": [
+          "graph.testPoint(graph.current(1),0,2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (0, 2) satisfies"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-hyperbola-two-branches",
+    "family": "hyperbola-two-branches",
+    "category": "graphs",
+    "focus": "Test points on two branches of a hyperbola",
+    "turns": [
+      {
+        "student": "Graph x squared minus y squared equals one.",
+        "programs": [
+          "problem.save(graph.scene([\"x^2-y^2=1\"]));"
+        ]
+      },
+      {
+        "student": "Check one zero.",
+        "programs": [
+          "graph.testPoint(graph.current(1),1,0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (1, 0) satisfies"
+          ]
+        }
+      },
+      {
+        "student": "And negative one zero?",
+        "programs": [
+          "graph.testPoint(graph.current(1),-1,0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (-1, 0) satisfies"
+          ]
+        }
+      },
+      {
+        "student": "The origin is not on it, right?",
+        "programs": [
+          "graph.testPoint(graph.current(1),0,0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (0, 0) does not satisfy"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-vertical-line-not-horizontal",
+    "family": "vertical-line-not-horizontal",
+    "category": "graphs",
+    "focus": "Retain a vertical relation through a numeric check",
+    "turns": [
+      {
+        "student": "Draw x equals four.",
+        "programs": [
+          "problem.save(graph.scene([\"x=4\"]));"
+        ]
+      },
+      {
+        "student": "Give me its point when y is seven.",
+        "programs": [
+          "graph.point(graph.current(1),7);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (4, 7)"
+          ]
+        }
+      },
+      {
+        "student": "What about when y is negative two?",
+        "programs": [
+          "graph.point(graph.current(1),-2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (4, -2)"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-horizontal-relation-height",
+    "family": "horizontal-relation-height",
+    "category": "graphs",
+    "focus": "Read a constant graph across different inputs",
+    "turns": [
+      {
+        "student": "Graph y equals negative three.",
+        "programs": [
+          "problem.save(graph.plot(\"y=-3\"));"
+        ]
+      },
+      {
+        "student": "Read it at ten.",
+        "programs": [
+          "graph.value(graph.current(1),10);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -3"
+          ]
+        }
+      },
+      {
+        "student": "Now negative ten.",
+        "programs": [
+          "graph.value(graph.current(1),-10);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -3"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-strict-linear-boundary",
+    "family": "strict-linear-boundary",
+    "category": "graphs",
+    "focus": "Exclude equality from a strict inequality",
+    "turns": [
+      {
+        "student": "Shade y less than two x plus one.",
+        "programs": [
+          "problem.save(graph.scene([\"y<2*x+1\"]));"
+        ]
+      },
+      {
+        "student": "Is zero zero in the shaded part?",
+        "programs": [
+          "graph.testPoint(graph.current(1),0,0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (0, 0) satisfies"
+          ]
+        }
+      },
+      {
+        "student": "What about zero one, right on the line?",
+        "programs": [
+          "graph.testPoint(graph.current(1),0,1);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (0, 1) does not satisfy"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-inclusive-linear-boundary",
+    "family": "inclusive-linear-boundary",
+    "category": "graphs",
+    "focus": "Include equality in a closed inequality",
+    "turns": [
+      {
+        "student": "Shade y less than or equal to two x plus one.",
+        "programs": [
+          "problem.save(graph.scene([\"y<=2*x+1\"]));"
+        ]
+      },
+      {
+        "student": "Check zero one.",
+        "programs": [
+          "graph.testPoint(graph.current(1),0,1);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (0, 1) satisfies"
+          ]
+        }
+      },
+      {
+        "student": "And zero two?",
+        "programs": [
+          "graph.testPoint(graph.current(1),0,2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (0, 2) does not satisfy"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-above-parabola-region",
+    "family": "above-parabola-region",
+    "category": "graphs",
+    "focus": "Distinguish above and below a curved boundary",
+    "turns": [
+      {
+        "student": "Shade y greater than x squared.",
+        "programs": [
+          "problem.save(graph.scene([\"y>x^2\"]));"
+        ]
+      },
+      {
+        "student": "Try two five.",
+        "programs": [
+          "graph.testPoint(graph.current(1),2,5);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (2, 5) satisfies"
+          ]
+        }
+      },
+      {
+        "student": "What about two three?",
+        "programs": [
+          "graph.testPoint(graph.current(1),2,3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (2, 3) does not satisfy"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-filled-disk",
+    "family": "filled-disk",
+    "category": "graphs",
+    "focus": "Check inside, boundary and outside of a closed disk",
+    "turns": [
+      {
+        "student": "Shade x squared plus y squared less than or equal to sixteen.",
+        "programs": [
+          "problem.save(graph.scene([\"x^2+y^2<=16\"]));"
+        ]
+      },
+      {
+        "student": "Is the center included?",
+        "programs": [
+          "graph.testPoint(graph.current(1),0,0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (0, 0) satisfies"
+          ]
+        }
+      },
+      {
+        "student": "Is four zero included?",
+        "programs": [
+          "graph.testPoint(graph.current(1),4,0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (4, 0) satisfies"
+          ]
+        }
+      },
+      {
+        "student": "And five zero?",
+        "programs": [
+          "graph.testPoint(graph.current(1),5,0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (5, 0) does not satisfy"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-outside-circle-strict",
+    "family": "outside-circle-strict",
+    "category": "graphs",
+    "focus": "Check exterior shading with a strict circular boundary",
+    "turns": [
+      {
+        "student": "Shade x squared plus y squared greater than nine.",
+        "programs": [
+          "problem.save(graph.scene([\"x^2+y^2>9\"]));"
+        ]
+      },
+      {
+        "student": "Try four zero.",
+        "programs": [
+          "graph.testPoint(graph.current(1),4,0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (4, 0) satisfies"
+          ]
+        }
+      },
+      {
+        "student": "What about three zero?",
+        "programs": [
+          "graph.testPoint(graph.current(1),3,0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (3, 0) does not satisfy"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-vertical-half-plane",
+    "family": "vertical-half-plane",
+    "category": "graphs",
+    "focus": "Use x inequality rather than a y function",
+    "turns": [
+      {
+        "student": "Shade x greater than or equal to negative two.",
+        "programs": [
+          "problem.save(graph.scene([\"x>=-2\"]));"
+        ]
+      },
+      {
+        "student": "Is negative two comma five included?",
+        "programs": [
+          "graph.testPoint(graph.current(1),-2,5);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (-2, 5) satisfies"
+          ]
+        }
+      },
+      {
+        "student": "And negative three comma five?",
+        "programs": [
+          "graph.testPoint(graph.current(1),-3,5);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (-3, 5) does not satisfy"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-sideways-parabola",
+    "family": "sideways-parabola",
+    "category": "graphs",
+    "focus": "Represent a sideways relation without solving away a branch",
+    "turns": [
+      {
+        "student": "Graph x equals y squared.",
+        "programs": [
+          "problem.save(graph.scene([\"x=y^2\"]));"
+        ]
+      },
+      {
+        "student": "Where is it when y is two?",
+        "programs": [
+          "graph.point(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (4, 2)"
+          ]
+        }
+      },
+      {
+        "student": "What about y negative two?",
+        "programs": [
+          "graph.point(graph.current(1),-2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (4, -2)"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-conic-edit-preserves-relation",
+    "family": "conic-edit-preserves-relation",
+    "category": "graphs",
+    "focus": "Edit an implicit relation and query the new radius",
+    "turns": [
+      {
+        "student": "Draw x squared plus y squared equals four.",
+        "programs": [
+          "problem.save(graph.scene([\"x^2+y^2=4\"]));"
+        ]
+      },
+      {
+        "student": "Make the radius five instead.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(1),\"x^2+y^2=25\"));"
+        ]
+      },
+      {
+        "student": "Now check three four.",
+        "programs": [
+          "graph.testPoint(graph.current(1),3,4);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (3, 4) satisfies"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-multiple-regions-independent",
+    "family": "multiple-regions-independent",
+    "category": "graphs",
+    "focus": "Keep two inequality rows and query their memberships separately",
+    "turns": [
+      {
+        "student": "Show y at least x and y at most four on the same axes.",
+        "programs": [
+          "problem.save(graph.scene([\"y>=x\", \"y<=4\"]));"
+        ]
+      },
+      {
+        "student": "Is two three in the first shaded part?",
+        "programs": [
+          "graph.testPoint(graph.current(1),2,3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (2, 3) satisfies"
+          ]
+        }
+      },
+      {
+        "student": "And in the second one?",
+        "programs": [
+          "graph.testPoint(graph.current(2),2,3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (2, 3) satisfies"
+          ]
+        }
+      },
+      {
+        "student": "Check two five in the second part.",
+        "programs": [
+          "graph.testPoint(graph.current(2),2,5);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (2, 5) does not satisfy"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-parametric-ellipse-landmarks",
+    "family": "parametric-ellipse-landmarks",
+    "category": "graphs",
+    "focus": "Read coordinates from a parameterized ellipse",
+    "turns": [
+      {
+        "student": "Draw an ellipse using x equals three cosine t and y equals two sine t.",
+        "programs": [
+          "problem.save(graph.scene([\"(3*cos(t),2*sin(t))\"]));"
+        ]
+      },
+      {
+        "student": "Where does it start at t zero?",
+        "programs": [
+          "graph.point(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (3, 0)"
+          ]
+        }
+      },
+      {
+        "student": "Where is it at pi over two?",
+        "programs": [
+          "graph.point(graph.current(1),1.5707963267948966);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            ", 2)"
+          ],
+          "graphPoints": [
+            {
+              "curve": 1,
+              "parameter": 1.5707963267948966,
+              "x": 0,
+              "y": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-parametric-linear-path",
+    "family": "parametric-linear-path",
+    "category": "graphs",
+    "focus": "Read a moving point with independent x and y speeds",
+    "turns": [
+      {
+        "student": "Draw the path x equals t plus one, y equals two t minus three.",
+        "programs": [
+          "problem.save(graph.scene([\"(t+1,2*t-3)\"]));"
+        ]
+      },
+      {
+        "student": "Where is it at t equals two?",
+        "programs": [
+          "graph.point(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (3, 1)"
+          ]
+        }
+      },
+      {
+        "student": "Only show t from zero to three.",
+        "programs": [
+          "problem.save(graph.domain(graph.current(1),0,3));"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "graph-parametric-projectile",
+    "family": "parametric-projectile",
+    "category": "graphs",
+    "focus": "Track a simple projectile path by time",
+    "turns": [
+      {
+        "student": "Show x equals two t and y equals six t minus t squared.",
+        "programs": [
+          "problem.save(graph.scene([\"(2*t,6*t-t^2)\"]));"
+        ]
+      },
+      {
+        "student": "Only show the trip from t zero to six.",
+        "programs": [
+          "problem.save(graph.domain(graph.current(1),0,6));"
+        ]
+      },
+      {
+        "student": "Where is it halfway through, at t three?",
+        "programs": [
+          "graph.point(graph.current(1),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (6, 9)"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-parametric-parabola-direction",
+    "family": "parametric-parabola-direction",
+    "category": "graphs",
+    "focus": "Use parameter position rather than assuming x equals parameter",
+    "turns": [
+      {
+        "student": "Graph x equals two t, y equals t squared.",
+        "programs": [
+          "problem.save(graph.scene([\"(2*t,t^2)\"]));"
+        ]
+      },
+      {
+        "student": "Where is it at t negative two?",
+        "programs": [
+          "graph.point(graph.current(1),-2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (-4, 4)"
+          ]
+        }
+      },
+      {
+        "student": "And at t two?",
+        "programs": [
+          "graph.point(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (4, 4)"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-polar-constant-circle",
+    "family": "polar-constant-circle",
+    "category": "graphs",
+    "focus": "Read polar radius in Cartesian coordinates",
+    "turns": [
+      {
+        "student": "Plot r equals three.",
+        "programs": [
+          "problem.save(graph.scene([\"r=3\"]));"
+        ]
+      },
+      {
+        "student": "Where is the point at angle zero?",
+        "programs": [
+          "graph.point(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (3, 0)"
+          ]
+        }
+      },
+      {
+        "student": "What about pi?",
+        "programs": [
+          "graph.point(graph.current(1),3.141592653589793);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (-3,"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-polar-cosine-circle",
+    "family": "polar-cosine-circle",
+    "category": "graphs",
+    "focus": "Compare the farthest point of a polar circle with its origin crossing",
+    "turns": [
+      {
+        "student": "Graph r equals four cosine theta.",
+        "programs": [
+          "problem.save(graph.scene([\"r=4*cos(theta)\"]));"
+        ]
+      },
+      {
+        "student": "Read the point at angle zero.",
+        "programs": [
+          "graph.point(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (4, 0)"
+          ]
+        }
+      },
+      {
+        "student": "Where is it at pi over two?",
+        "programs": [
+          "graph.point(graph.current(1),1.5707963267948966);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "graphPoints": [
+            {
+              "curve": 1,
+              "parameter": 1.5707963267948966,
+              "x": 0,
+              "y": 0
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-polar-cardioid-landmarks",
+    "family": "polar-cardioid-landmarks",
+    "category": "graphs",
+    "focus": "Compare a cardioid cusp with its opposite extreme",
+    "turns": [
+      {
+        "student": "Show r equals two plus two cosine theta.",
+        "programs": [
+          "problem.save(graph.scene([\"r=2+2*cos(theta)\"]));"
+        ]
+      },
+      {
+        "student": "What point is at zero?",
+        "programs": [
+          "graph.point(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (4, 0)"
+          ]
+        }
+      },
+      {
+        "student": "And at pi?",
+        "programs": [
+          "graph.point(graph.current(1),3.141592653589793);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (0, 0)"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-polar-half-circle-domain",
+    "family": "polar-half-circle-domain",
+    "category": "graphs",
+    "focus": "Limit a circle to a specified angular interval",
+    "turns": [
+      {
+        "student": "Draw r equals two.",
+        "programs": [
+          "problem.save(graph.scene([\"r=2\"]));"
+        ]
+      },
+      {
+        "student": "Only draw angles from zero to pi.",
+        "programs": [
+          "problem.save(graph.domain(graph.current(1),0,3.141592653589793));"
+        ]
+      },
+      {
+        "student": "Read its endpoint at pi.",
+        "programs": [
+          "graph.point(graph.current(1),3.141592653589793);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (-2,"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-parametric-two-paths",
+    "family": "parametric-two-paths",
+    "category": "graphs",
+    "focus": "Keep parameterized paths independently addressable",
+    "turns": [
+      {
+        "student": "Draw t comma t squared and t comma negative t squared.",
+        "programs": [
+          "problem.save(graph.scene([\"(t,t^2)\", \"(t,-t^2)\"]));"
+        ]
+      },
+      {
+        "student": "Read the second path at t two.",
+        "programs": [
+          "graph.point(graph.current(2),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (2, -4)"
+          ]
+        }
+      },
+      {
+        "student": "Now the first at the same t.",
+        "programs": [
+          "graph.point(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (2, 4)"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-polar-petal-domain",
+    "family": "polar-petal-domain",
+    "category": "graphs",
+    "focus": "Limit a rose curve to a finite angular domain and retain its starting point",
+    "turns": [
+      {
+        "student": "Can you draw that rose curve, r equals two cosine of two theta?",
+        "programs": [
+          "problem.save(graph.scene([\"r=2*cos(2*theta)\"]));"
+        ]
+      },
+      {
+        "student": "Read angle zero.",
+        "programs": [
+          "graph.point(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (2, 0)"
+          ]
+        }
+      },
+      {
+        "student": "Show only angles from zero to pi.",
+        "programs": [
+          "problem.save(graph.domain(graph.current(1),0,3.141592653589793));"
+        ]
+      },
+      {
+        "student": "Read the start again.",
+        "programs": [
+          "graph.point(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Point (2, 0)"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-pan-not-shift",
+    "family": "pan-not-shift",
+    "category": "graphs",
+    "focus": "Move camera while retaining the equation",
+    "turns": [
+      {
+        "student": "Graph x squared plus two.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2+2\"));"
+        ]
+      },
+      {
+        "student": "Move the view to the right. Leave the curve alone.",
+        "programs": [
+          "problem.save(view.pan(graph.current(1),\"right\"));"
+        ]
+      },
+      {
+        "student": "It should still be two at zero. Check that.",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-zoom-not-stretch",
+    "family": "zoom-not-stretch",
+    "category": "graphs",
+    "focus": "Zoom camera without multiplying function values",
+    "turns": [
+      {
+        "student": "Show three x.",
+        "programs": [
+          "problem.save(graph.plot(\"3*x\"));"
+        ]
+      },
+      {
+        "student": "Zoom in so I can see it better.",
+        "programs": [
+          "problem.save(view.zoom(graph.current(1),\"in\"));"
+        ]
+      },
+      {
+        "student": "What is y at two? Same line?",
+        "programs": [
+          "graph.value(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 6"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-large-window-preserves-function",
+    "family": "large-window-preserves-function",
+    "category": "graphs",
+    "focus": "Set a finite large-coordinate window",
+    "turns": [
+      {
+        "student": "Graph x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ]
+      },
+      {
+        "student": "Show x from zero to one hundred and y from zero to ten thousand.",
+        "programs": [
+          "problem.save(view.range(graph.current(1),0,100,0,10000));"
+        ]
+      },
+      {
+        "student": "Read it at fifty.",
+        "programs": [
+          "graph.value(graph.current(1),50);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 2500"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-small-feature-window",
+    "family": "small-feature-window",
+    "category": "graphs",
+    "focus": "Inspect a small vertical offset without changing it",
+    "turns": [
+      {
+        "student": "Show x squared plus one hundredth.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2+0.01\"));"
+        ]
+      },
+      {
+        "student": "Zoom to x negative one to one and y negative one to one.",
+        "programs": [
+          "problem.save(view.range(graph.current(1),-1,1,-1,1));"
+        ]
+      },
+      {
+        "student": "Check the bottom at zero.",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0.01"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-reset-view-not-graph",
+    "family": "reset-view-not-graph",
+    "category": "graphs",
+    "focus": "Reset camera after a pan",
+    "turns": [
+      {
+        "student": "Graph two x minus seven.",
+        "programs": [
+          "problem.save(graph.plot(\"2*x-7\"));"
+        ]
+      },
+      {
+        "student": "Pan down.",
+        "programs": [
+          "problem.save(view.pan(graph.current(1),\"down\"));"
+        ]
+      },
+      {
+        "student": "Reset the view.",
+        "programs": [
+          "problem.save(view.reset(graph.current(1)));"
+        ]
+      },
+      {
+        "student": "What is the line at zero?",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -7"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-fit-high-intercept",
+    "family": "fit-high-intercept",
+    "category": "graphs",
+    "focus": "Fit a graph far from the initial viewport",
+    "turns": [
+      {
+        "student": "Show x squared plus one hundred.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2+100\"));"
+        ]
+      },
+      {
+        "student": "Fit the graph so I can see it.",
+        "programs": [
+          "problem.save(view.fit(graph.current(1)));"
+        ]
+      },
+      {
+        "student": "Read the bottom at zero.",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 100"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-viewport-then-translation",
+    "family": "viewport-then-translation",
+    "category": "graphs",
+    "focus": "Distinguish camera adjustment from subsequent curve shift",
+    "turns": [
+      {
+        "student": "Graph x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ]
+      },
+      {
+        "student": "Pan the view left.",
+        "programs": [
+          "problem.save(view.pan(graph.current(1),\"left\"));"
+        ]
+      },
+      {
+        "student": "Now move the curve itself up four.",
+        "programs": [
+          "problem.save(graph.shift(graph.current(1),0,4));"
+        ]
+      },
+      {
+        "student": "What does it give at zero?",
+        "programs": [],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 4"
+          ]
+        },
+        "previews": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "status": "explanation",
+        "message": "Panning only changed the view. Moving the curve up four made it x squared plus four, so at x = 0, y = 4."
+      }
+    ]
+  },
+  {
+    "id": "graph-comparison-shared-window",
+    "family": "comparison-shared-window",
+    "category": "graphs",
+    "focus": "Change common viewport while preserving both curves",
+    "turns": [
+      {
+        "student": "Graph x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ]
+      },
+      {
+        "student": "Add two x.",
+        "programs": [
+          "problem.save(graph.add(graph.current(1),\"2*x\"));"
+        ]
+      },
+      {
+        "student": "Show x from negative one to four and y from negative two to ten.",
+        "programs": [
+          "problem.save(view.range(graph.current(2),-1,4,-2,10));"
+        ]
+      },
+      {
+        "student": "Read the straight line at three.",
+        "programs": [
+          "graph.value(graph.current(2),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 6"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-zoom-out-then-trace",
+    "family": "zoom-out-then-trace",
+    "category": "graphs",
+    "focus": "Retain a trace operation after a camera zoom",
+    "turns": [
+      {
+        "student": "Graph x cubed.",
+        "programs": [
+          "problem.save(graph.plot(\"x^3\"));"
+        ]
+      },
+      {
+        "student": "Zoom out.",
+        "programs": [
+          "problem.save(view.zoom(graph.current(1),\"out\"));"
+        ]
+      },
+      {
+        "student": "Trace the curve at negative two.",
+        "programs": [
+          "problem.save(graph.trace(graph.current(1),-2));"
+        ]
+      },
+      {
+        "student": "Read the height there.",
+        "programs": [
+          "graph.value(graph.current(1),-2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -8"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-piecewise-sign-branches",
+    "family": "piecewise-sign-branches",
+    "category": "graphs",
+    "focus": "Evaluate both branches of a piecewise curve",
+    "turns": [
+      {
+        "student": "Graph negative x for x below zero, and x squared for x at least zero.",
+        "programs": [
+          "problem.save(graph.scene([\"y={x<0:-x,x>=0:x^2}\"]));"
+        ]
+      },
+      {
+        "student": "Try negative three.",
+        "programs": [
+          "graph.value(graph.current(1),-3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 3"
+          ]
+        }
+      },
+      {
+        "student": "Now positive three.",
+        "programs": [
+          "graph.value(graph.current(1),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 9"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-piecewise-boundary-choice",
+    "family": "piecewise-boundary-choice",
+    "category": "graphs",
+    "focus": "Use the specified branch exactly at the join",
+    "turns": [
+      {
+        "student": "Graph x plus one when x is below two, and five when x is at least two.",
+        "programs": [
+          "problem.save(graph.scene([\"y={x<2:x+1,x>=2:5}\"]));"
+        ]
+      },
+      {
+        "student": "What happens just before, at one?",
+        "programs": [
+          "graph.value(graph.current(1),1);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 2"
+          ]
+        }
+      },
+      {
+        "student": "And exactly at two?",
+        "programs": [
+          "graph.value(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 5"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-restricted-square-root",
+    "family": "restricted-square-root",
+    "category": "graphs",
+    "focus": "Preserve a finite explicit domain restriction",
+    "turns": [
+      {
+        "student": "Graph square root of x, only from zero to nine.",
+        "programs": [
+          "problem.save(graph.scene([\"y=sqrt(x){x>=0 and x<=9}\"]));"
+        ]
+      },
+      {
+        "student": "Read the right endpoint.",
+        "programs": [
+          "graph.value(graph.current(1),9);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 3"
+          ]
+        }
+      },
+      {
+        "student": "And the left endpoint?",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-restricted-line-segment",
+    "family": "restricted-line-segment",
+    "category": "graphs",
+    "focus": "Plot a finite portion of a line",
+    "turns": [
+      {
+        "student": "Graph two x plus one, but only between negative one and three, including both ends.",
+        "programs": [
+          "problem.save(graph.scene([\"y=2*x+1{x>=-1 and x<=3}\"]));"
+        ]
+      },
+      {
+        "student": "Read the left end.",
+        "programs": [
+          "graph.value(graph.current(1),-1);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -1"
+          ]
+        }
+      },
+      {
+        "student": "Now the right end.",
+        "programs": [
+          "graph.value(graph.current(1),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 7"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-max-function-floor",
+    "family": "max-function-floor",
+    "category": "graphs",
+    "focus": "Read a function clamped from below",
+    "turns": [
+      {
+        "student": "Graph the bigger of x and two.",
+        "programs": [
+          "problem.save(graph.plot(\"max(x,2)\"));"
+        ]
+      },
+      {
+        "student": "What does it do at negative three?",
+        "programs": [],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 2"
+          ]
+        },
+        "previews": [
+          "graph.value(graph.current(1),-3);"
+        ],
+        "status": "explanation",
+        "message": "At x = -3, the larger of -3 and 2 is 2, so y = 2."
+      },
+      {
+        "student": "And at five?",
+        "programs": [
+          "graph.value(graph.current(1),5);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 5"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-min-function-cap",
+    "family": "min-function-cap",
+    "category": "graphs",
+    "focus": "Read a function capped from above",
+    "turns": [
+      {
+        "student": "Graph the smaller of x squared and four.",
+        "programs": [
+          "problem.save(graph.plot(\"min(x^2,4)\"));"
+        ]
+      },
+      {
+        "student": "Try one.",
+        "programs": [
+          "graph.value(graph.current(1),1);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 1"
+          ]
+        }
+      },
+      {
+        "student": "Now three.",
+        "programs": [
+          "graph.value(graph.current(1),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-rational-hole-values",
+    "family": "rational-hole-values",
+    "category": "graphs",
+    "focus": "Read a rational curve on either side of an excluded input",
+    "turns": [
+      {
+        "student": "Graph x squared minus one over x minus one, with both parts grouped.",
+        "programs": [
+          "problem.save(graph.plot(\"(x^2-1)/(x-1)\"));"
+        ]
+      },
+      {
+        "student": "Read it at zero.",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 1"
+          ]
+        }
+      },
+      {
+        "student": "Now at two.",
+        "programs": [
+          "graph.value(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 3"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-factored-polynomial-crossings",
+    "family": "factored-polynomial-crossings",
+    "category": "graphs",
+    "focus": "Recognize three different roots of a cubic",
+    "turns": [
+      {
+        "student": "Graph x times the quantity x minus two, times the quantity x plus one.",
+        "programs": [
+          "problem.save(graph.plot(\"x*(x-2)*(x+1)\"));"
+        ]
+      },
+      {
+        "student": "Check negative one.",
+        "programs": [
+          "graph.value(graph.current(1),-1);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0"
+          ]
+        }
+      },
+      {
+        "student": "Now two.",
+        "programs": [
+          "graph.value(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0"
+          ]
+        }
+      },
+      {
+        "student": "And zero too.",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-average-rate-quadratic",
+    "family": "average-rate-quadratic",
+    "category": "graphs",
+    "focus": "Use a finite interval average rate rather than local slope",
+    "turns": [
+      {
+        "student": "Graph x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ]
+      },
+      {
+        "student": "How much does it go up per x on average from one to three?",
+        "programs": [
+          "graph.averageRate(graph.current(1),1,3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      },
+      {
+        "student": "What was the starting height again?",
+        "programs": [
+          "graph.value(graph.current(1),1);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 1"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-table-then-specific-point",
+    "family": "table-then-specific-point",
+    "category": "graphs",
+    "focus": "Follow a table request with a precise value outside its defaults",
+    "turns": [
+      {
+        "student": "Graph two x minus one.",
+        "programs": [
+          "problem.save(graph.plot(\"2*x-1\"));"
+        ]
+      },
+      {
+        "student": "Can you read a table for that?",
+        "programs": [
+          "graph.table(graph.current(1));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "x 0: y -1",
+            "x 5: y 9"
+          ]
+        }
+      },
+      {
+        "student": "What about x equals twelve?",
+        "programs": [
+          "graph.value(graph.current(1),12);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 23"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-turning-point-vs-intercept",
+    "family": "turning-point-vs-intercept",
+    "category": "graphs",
+    "focus": "Separate a parabola vertex from its intercepts",
+    "turns": [
+      {
+        "student": "Show x squared minus four x plus three.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2-4*x+3\"));"
+        ]
+      },
+      {
+        "student": "What is its height at the turning point, x two?",
+        "programs": [
+          "graph.value(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -1"
+          ]
+        }
+      },
+      {
+        "student": "And where does it hit the x axis?",
+        "programs": [
+          "graph.roots(graph.current(1));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "1, 3"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-read-original-after-three-curves",
+    "family": "read-original-after-three-curves",
+    "category": "graphs",
+    "focus": "Resolve ordinal reference after adding two comparisons",
+    "turns": [
+      {
+        "student": "Graph x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ]
+      },
+      {
+        "student": "Add x plus one.",
+        "programs": [
+          "problem.save(graph.add(graph.current(1),\"x+1\"));"
+        ]
+      },
+      {
+        "student": "And add negative x.",
+        "programs": [
+          "problem.save(graph.add(graph.current(2),\"-x\"));"
+        ]
+      },
+      {
+        "student": "Go back to the first graph. What is it at three?",
+        "programs": [
+          "graph.value(graph.current(1),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 9"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-edit-sign-after-misstatement",
+    "family": "edit-sign-after-misstatement",
+    "category": "graphs",
+    "focus": "Handle a spoken correction as an ordinary current-curve edit",
+    "turns": [
+      {
+        "student": "Graph x squared plus four.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2+4\"));"
+        ]
+      },
+      {
+        "student": "Wait, I meant minus four. Fix the curve.",
+        "programs": [
+          "problem.save(graph.edit(graph.current(1),\"x^2-4\"));"
+        ]
+      },
+      {
+        "student": "Check zero to make sure it changed.",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = -4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "graph-two-actions-one-request",
+    "family": "two-actions-one-request",
+    "category": "graphs",
+    "focus": "Apply a requested translation and trace in one turn",
+    "turns": [
+      {
+        "student": "Graph x squared minus one.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2-1\"));"
+        ]
+      },
+      {
+        "student": "Move it right two and put the tracing point at three.",
+        "programs": [
+          "problem.save(graph.trace(graph.shift(graph.current(1),2,0),3));"
+        ]
+      },
+      {
+        "student": "What is the height of that point?",
+        "programs": [
+          "graph.value(graph.current(1),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "y = 0"
+          ]
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,144 @@
+{
+  "split": "test-v8",
+  "mode": "parser",
+  "datasetSHA256": "df4e9391c191efa04150b61f870aa9040b29839f3f51971c0ea336f920efd373",
+  "createdAt": "2026-10-11T04:04:49.572Z",
+  "total": 10,
+  "scored": 10,
+  "passed": 10,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "geometry_edit": {
+      "passed": 6,
+      "scored": 6
+    },
+    "graph_pair": {
+      "passed": 4,
+      "scored": 4
+    }
+  },
+  "results": [
+    {
+      "id": "v8-001",
+      "category": "geometry_edit",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "change a to forty and b to forty and c to forty",
+        "message": ""
+      },
+      "latencyMs": 7
+    },
+    {
+      "id": "v8-002",
+      "category": "geometry_edit",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "set radius to two plus five and height to nine",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v8-003",
+      "category": "geometry_edit",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "Those sides cannot form a triangle. Each pair must sum to more than the third side."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v8-004",
+      "category": "geometry_edit",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "What number should the radius change to?"
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v8-005",
+      "category": "geometry_edit",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "This cone has no width dimension."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v8-006",
+      "category": "graph_pair",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "show intersections of graphs 1 and 3",
+        "message": ""
+      },
+      "latencyMs": 3
+    },
+    {
+      "id": "v8-007",
+      "category": "graph_pair",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "read the intersections between curve 3 and curve 2",
+        "message": ""
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v8-008",
+      "category": "graph_pair",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "Choose two different graph expressions."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v8-009",
+      "category": "graph_pair",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "That graph expression does not exist."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v8-010",
+      "category": "geometry_edit",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "set height to 8",
+        "message": ""
+      },
+      "latencyMs": 0
+    }
+  ]
+}

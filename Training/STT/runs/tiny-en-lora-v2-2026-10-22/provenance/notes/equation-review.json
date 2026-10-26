@@ -1,0 +1,709 @@
+{
+  "scope": "Independent individual text/command/math review; no visual or audio acceptance claim",
+  "reviewer": "student_geometry",
+  "sourceSha256": "45c396a7f21584f475304d5fd97c3df3943d1c34956e609c199cfa2dfcb9a781",
+  "cases": [
+    {
+      "id": "eq2-coefficient-before-balancing",
+      "verdict": "pass",
+      "notes": [
+        "Corrected 2x+4=16 gives x=6; subtract-four follow-up targets the edited equation."
+      ]
+    },
+    {
+      "id": "eq2-right-total-before-dividing",
+      "verdict": "pass",
+      "notes": [
+        "Corrected 4x-2=18 gives x=5 after adding two."
+      ]
+    },
+    {
+      "id": "eq2-constant-sign-before-isolating",
+      "verdict": "pass",
+      "notes": [
+        "Corrected 5x-7=18 gives x=5; sign change and inverse addition are coherent."
+      ]
+    },
+    {
+      "id": "eq2-negative-coefficient-repair",
+      "verdict": "pass",
+      "notes": [
+        "Positive 2x+6=20 gives x=7; negative coefficient is explicitly repaired."
+      ]
+    },
+    {
+      "id": "eq2-fraction-denominator-repair",
+      "verdict": "pass",
+      "notes": [
+        "After denominator repair, x/3+1=4 gives x=9."
+      ]
+    },
+    {
+      "id": "eq2-decimal-point-in-coefficient",
+      "verdict": "pass",
+      "notes": [
+        "Corrected 0.2x+1=3 gives x=10; decimal magnitude remains distinct."
+      ]
+    },
+    {
+      "id": "eq2-replace-term-with-zero",
+      "verdict": "pass",
+      "notes": [
+        "Removing the extra offset gives 6x=18 and x=3."
+      ]
+    },
+    {
+      "id": "eq2-edit-subtracted-variable-term",
+      "verdict": "pass",
+      "notes": [
+        "Keeping subtraction gives 7x-3x=20 and x=5."
+      ]
+    },
+    {
+      "id": "eq2-edit-added-variable-term",
+      "verdict": "pass",
+      "notes": [
+        "Corrected 2x+6x=24 independently gives x=3. Natural twenty-four wording is mathematically correct and intentionally retained."
+      ],
+      "knownRegression": "Actual public replay rejects the hyphenated twenty-four utterance; this is an application parser regression, not an incorrect fixture."
+    },
+    {
+      "id": "eq2-edit-opposite-side-variable",
+      "verdict": "pass",
+      "notes": [
+        "Right coefficient change gives 6x+1=3x+13 and x=4."
+      ]
+    },
+    {
+      "id": "eq2-edit-whole-right-expression",
+      "verdict": "pass",
+      "notes": [
+        "Whole right-side replacement gives 7x+4=3x+16 and x=3."
+      ]
+    },
+    {
+      "id": "eq2-edit-whole-left-expression",
+      "verdict": "pass",
+      "notes": [
+        "Whole left-side replacement gives 4x+1=9 and x=2."
+      ]
+    },
+    {
+      "id": "eq2-group-constant-inside",
+      "verdict": "pass",
+      "notes": [
+        "Corrected bracket x+4 makes 3(x+4)=21 and x=3."
+      ]
+    },
+    {
+      "id": "eq2-group-to-difference",
+      "verdict": "pass",
+      "notes": [
+        "Changing brackets to x-1 makes 2(x-1)=8 and x=5."
+      ]
+    },
+    {
+      "id": "eq2-outside-group-factor",
+      "verdict": "pass",
+      "notes": [
+        "Corrected outside factor makes 3(x-2)=18 and x=8."
+      ]
+    },
+    {
+      "id": "eq2-negative-outside-group",
+      "verdict": "pass",
+      "notes": [
+        "Negative outside factor gives -3(x+1)=12 and x=-5."
+      ]
+    },
+    {
+      "id": "eq2-numerator-sum-correction",
+      "verdict": "pass",
+      "notes": [
+        "Corrected grouped numerator gives (x-2)/3=4 and x=14."
+      ]
+    },
+    {
+      "id": "eq2-whole-quotient-replacement",
+      "verdict": "pass",
+      "notes": [
+        "Replacing the quotient yields x/3+3=9 and x=18."
+      ]
+    },
+    {
+      "id": "eq2-fractional-offset-correction",
+      "verdict": "pass",
+      "notes": [
+        "Offset 3/2 leaves x=2-1.5=0.5."
+      ]
+    },
+    {
+      "id": "eq2-fractional-coefficient-correction",
+      "verdict": "pass",
+      "notes": [
+        "Changing fractional coefficient to 1/3 gives x=18."
+      ]
+    },
+    {
+      "id": "eq2-subtract-negative-correction",
+      "verdict": "pass",
+      "notes": [
+        "Subtracting negative three gives x+3=7 and x=4."
+      ]
+    },
+    {
+      "id": "eq2-negative-numerator-correction",
+      "verdict": "pass",
+      "notes": [
+        "Numerator -2x gives -2x/4=3 and x=-6."
+      ]
+    },
+    {
+      "id": "eq2-switch-coefficient-to-fraction",
+      "verdict": "pass",
+      "notes": [
+        "Replacing 2x with x/2 gives x/2+1=7 and x=12."
+      ]
+    },
+    {
+      "id": "eq2-right-side-signed-group",
+      "verdict": "pass",
+      "notes": [
+        "Right bracket correction gives 3x=2(7-1)=12 and x=4."
+      ]
+    },
+    {
+      "id": "eq2-insert-parentheses-left",
+      "verdict": "pass",
+      "notes": [
+        "Inserted grouping gives 2(x+3)=20 and x=7."
+      ]
+    },
+    {
+      "id": "eq2-remove-unintended-parentheses",
+      "verdict": "pass",
+      "notes": [
+        "Removing unintended grouping gives 3x+4=19 and x=5."
+      ]
+    },
+    {
+      "id": "eq2-coefficient-not-equal-constant",
+      "verdict": "pass",
+      "notes": [
+        "Coefficient-only edit gives 4x+2=10 and x=2; unchanged constant occurrence matters."
+      ]
+    },
+    {
+      "id": "eq2-offset-not-equal-coefficient",
+      "verdict": "pass",
+      "notes": [
+        "Offset-only edit gives 3x+6=15 and x=3; coefficient remains three."
+      ]
+    },
+    {
+      "id": "eq2-right-constant-not-left-copy",
+      "verdict": "pass",
+      "notes": [
+        "Right-only literal edit gives 2x+4=12 and x=4."
+      ]
+    },
+    {
+      "id": "eq2-left-coefficient-not-right-copy",
+      "verdict": "pass",
+      "notes": [
+        "Left coefficient edit gives 6x+1=4x+9 and x=4."
+      ]
+    },
+    {
+      "id": "eq2-right-coefficient-not-left-copy",
+      "verdict": "pass",
+      "notes": [
+        "Right coefficient edit gives 3x+2=x+10 and x=4."
+      ]
+    },
+    {
+      "id": "eq2-first-of-two-added-constants",
+      "verdict": "pass",
+      "notes": [
+        "First-addend edit gives x+4+2=9 and x=3."
+      ]
+    },
+    {
+      "id": "eq2-second-of-two-added-constants",
+      "verdict": "pass",
+      "notes": [
+        "Second-addend edit gives x+3+5=11 and x=3."
+      ]
+    },
+    {
+      "id": "eq2-numerator-variable-not-denominator",
+      "verdict": "pass",
+      "notes": [
+        "Numerator becomes 2x+1 while denominator remains x+2; both read-only part oracles match."
+      ]
+    },
+    {
+      "id": "eq2-denominator-constant-not-numerator",
+      "verdict": "pass",
+      "notes": [
+        "Only denominator changes, giving (x+2)/4=5 and x=18."
+      ]
+    },
+    {
+      "id": "eq2-base-not-exponent",
+      "verdict": "pass",
+      "notes": [
+        "Re-reviewed final wording: two squared, times x explicitly scopes (2^2)*x. Changing only the base gives 3^2*x=18 and x=2."
+      ]
+    },
+    {
+      "id": "eq2-left-side-to-difference",
+      "verdict": "pass",
+      "notes": [
+        "Whole left difference gives 2x-3=9 and x=6."
+      ]
+    },
+    {
+      "id": "eq2-right-side-to-variable-sum",
+      "verdict": "pass",
+      "notes": [
+        "Whole right sum gives 5x=2x+9 and x=3."
+      ]
+    },
+    {
+      "id": "eq2-left-side-to-grouped-quotient",
+      "verdict": "pass",
+      "notes": [
+        "Left quotient gives (x+2)/3=4 and x=10."
+      ]
+    },
+    {
+      "id": "eq2-right-side-to-negative-value",
+      "verdict": "pass",
+      "notes": [
+        "Whole negative right side gives 2x=-6 and x=-3."
+      ]
+    },
+    {
+      "id": "eq2-left-side-retain-right-group",
+      "verdict": "pass",
+      "notes": [
+        "Left-only replacement preserves right 2(3+1)=8, so 2x=8 and x=4."
+      ]
+    },
+    {
+      "id": "eq2-right-side-repeated-whole-group",
+      "verdict": "pass",
+      "notes": [
+        "Right-side-only replacement gives x+2=3x-4 and x=3."
+      ]
+    },
+    {
+      "id": "eq2-left-side-repeated-whole-group",
+      "verdict": "pass",
+      "notes": [
+        "Left-side-only replacement gives 2x+1=x-3 and x=-4."
+      ]
+    },
+    {
+      "id": "eq2-replace-right-zero-with-expression",
+      "verdict": "pass",
+      "notes": [
+        "Replacing right zero gives 3x-4=x+6 and x=5."
+      ]
+    },
+    {
+      "id": "eq2-replace-coefficient-product-with-quotient",
+      "verdict": "pass",
+      "notes": [
+        "Product-to-quotient replacement gives x/4-2=6 and x=32."
+      ]
+    },
+    {
+      "id": "eq2-coefficient-then-offset",
+      "verdict": "pass",
+      "notes": [
+        "Sequential edits give 4x-1=11 and x=3."
+      ]
+    },
+    {
+      "id": "eq2-offset-then-total",
+      "verdict": "pass",
+      "notes": [
+        "Offset and total edits give 3x-5=13 and x=6."
+      ]
+    },
+    {
+      "id": "eq2-group-factor-then-inner-offset",
+      "verdict": "pass",
+      "notes": [
+        "Outer and inner edits give 4(x-1)=20 and x=6."
+      ]
+    },
+    {
+      "id": "eq2-denominator-then-numerator",
+      "verdict": "pass",
+      "notes": [
+        "Denominator then numerator edits give (x-2)/3=5 and x=17; approximate display is an engine presentation detail."
+      ]
+    },
+    {
+      "id": "eq2-two-sides-coefficient-corrections",
+      "verdict": "pass",
+      "notes": [
+        "Opposite-side coefficient edits give 4x+1=2x-5 and x=-3."
+      ]
+    },
+    {
+      "id": "eq2-introduce-then-remove-duplicate",
+      "verdict": "pass",
+      "notes": [
+        "Introduced repeated two is scoped correctly, leaving x+2=9 and x=7."
+      ]
+    },
+    {
+      "id": "eq2-rename-back-before-solve",
+      "verdict": "pass",
+      "notes": [
+        "Reversible variable rename returns to 5x-2=18 and x=4 before the x-only solve."
+      ]
+    },
+    {
+      "id": "eq2-change-sign-twice",
+      "verdict": "pass",
+      "notes": [
+        "Two sign changes give x-4=-9 and x=-5."
+      ]
+    },
+    {
+      "id": "eq2-replace-whole-left-then-inner-term",
+      "verdict": "pass",
+      "notes": [
+        "Whole-side then inner-term edit gives 2(x-1)=16 and x=9."
+      ]
+    },
+    {
+      "id": "eq2-quotient-then-repeated-constant",
+      "verdict": "pass",
+      "notes": [
+        "New quotient then scoped denominator edit gives (x+4)/2=12 and x=20."
+      ]
+    },
+    {
+      "id": "eq2-undo-edited-coefficient-resume",
+      "verdict": "pass",
+      "notes": [
+        "Undo restores 3x+2=11; balancing retains solution x=3."
+      ]
+    },
+    {
+      "id": "eq2-redo-offset-after-query",
+      "verdict": "pass",
+      "notes": [
+        "Read-only solve preserves redo; old offset gives x=4 and redone offset x=3."
+      ]
+    },
+    {
+      "id": "eq2-two-edits-single-request-undo",
+      "verdict": "pass",
+      "notes": [
+        "Two-program request is undone atomically, restoring 2x+3=11 and x=4."
+      ]
+    },
+    {
+      "id": "eq2-ordered-balancing-after-correction",
+      "verdict": "pass",
+      "notes": [
+        "Corrected 3x+2=14, subtract-two then divide-three, simplifies to x=4."
+      ]
+    },
+    {
+      "id": "eq2-edit-after-undo-branches",
+      "verdict": "pass",
+      "notes": [
+        "Edit after undo uses original +2, replacing it with -2; x-2=8 gives x=10."
+      ]
+    },
+    {
+      "id": "eq2-correction-replaces-wrong-addition",
+      "verdict": "pass",
+      "notes": [
+        "Correction rewinds mistaken +3 before applying +4; explicit intermediate and final x=10 match."
+      ]
+    },
+    {
+      "id": "eq2-correction-replaces-wrong-division",
+      "verdict": "pass",
+      "notes": [
+        "Corrected divisor six replaces divisor three, yielding x=3 rather than dividing twice."
+      ]
+    },
+    {
+      "id": "eq2-correction-replaces-wrong-multiplication",
+      "verdict": "pass",
+      "notes": [
+        "Corrected clearing multiplier four gives x=12, preserving original quotient."
+      ]
+    },
+    {
+      "id": "eq2-correct-edit-target-before-solving",
+      "verdict": "pass",
+      "notes": [
+        "Correction changes original five to three, rather than trying to edit the discarded seven; x=5."
+      ]
+    },
+    {
+      "id": "eq2-correct-sign-of-balancing-operand",
+      "verdict": "pass",
+      "notes": [
+        "Corrected subtraction of -2 adds two, giving x=9."
+      ]
+    },
+    {
+      "id": "eq2-suggest-after-coefficient-edit",
+      "verdict": "pass",
+      "notes": [
+        "Suggestion is deferred until acceptance; corrected 4x+4=12 gives x=2."
+      ]
+    },
+    {
+      "id": "eq2-decline-suggested-edit",
+      "verdict": "pass",
+      "notes": [
+        "Declining the suggested literal edit keeps x+3=10; explicit subtraction yields x=7."
+      ]
+    },
+    {
+      "id": "eq2-suggest-two-ordered-steps",
+      "verdict": "pass",
+      "notes": [
+        "Acceptance applies both deferred operations in order; (16-6)/2=5."
+      ]
+    },
+    {
+      "id": "eq2-undo-query-edited-right-side",
+      "verdict": "pass",
+      "notes": [
+        "Read-only side query preserves undo target; undo restores 3x=15 and x=5."
+      ]
+    },
+    {
+      "id": "eq2-undo-two-edits-then-read",
+      "verdict": "pass",
+      "notes": [
+        "Counted undo restores both original literals in 2x+1=9 and x=4."
+      ]
+    },
+    {
+      "id": "eq2-redo-two-edits-then-read",
+      "verdict": "pass",
+      "notes": [
+        "Counted redo restores 4x+5=9 and x=1."
+      ]
+    },
+    {
+      "id": "eq2-read-left-after-right-edit",
+      "verdict": "pass",
+      "notes": [
+        "Right-side edit leaves left 2x+3 unchanged; corrected equation gives x=4."
+      ]
+    },
+    {
+      "id": "eq2-swap-before-scoped-edit",
+      "verdict": "pass",
+      "notes": [
+        "After swap, new left 2x-1 becomes 2x-3; solving against x+4 gives x=7."
+      ]
+    },
+    {
+      "id": "eq2-swap-after-edit-and-resume",
+      "verdict": "pass",
+      "notes": [
+        "Edited coefficient then side swap gives 10=2x+2 and x=4."
+      ]
+    },
+    {
+      "id": "eq2-read-equation-after-two-step-request",
+      "verdict": "pass",
+      "notes": [
+        "Ordered balancing of x/3+2=6 simplifies to x=12; full readback matches."
+      ]
+    },
+    {
+      "id": "eq2-read-only-check-between-two-edits",
+      "verdict": "pass",
+      "notes": [
+        "Read-only query preserves current edit targets; offset three gives x=3, then offset five gives x=2."
+      ]
+    },
+    {
+      "id": "eq2-undo-group-replacement",
+      "verdict": "pass",
+      "notes": [
+        "Undo restores original grouped 2(x+3)=16, giving x=5."
+      ]
+    },
+    {
+      "id": "eq2-redo-fraction-edit",
+      "verdict": "pass",
+      "notes": [
+        "Redoing denominator edit gives x/3=6 and x=18."
+      ]
+    },
+    {
+      "id": "eq2-cancel-extra-negative-term",
+      "verdict": "pass",
+      "notes": [
+        "Removing negative offset and repairing total gives 3x=12 and x=4."
+      ]
+    },
+    {
+      "id": "eq2-clear-undo-after-edit",
+      "verdict": "pass",
+      "notes": [
+        "Undoing clear restores edited x+3=8 and x=5."
+      ]
+    },
+    {
+      "id": "eq2-replace-entire-problem-undo",
+      "verdict": "pass",
+      "notes": [
+        "Undoing new problem restores previously edited 2x+3=7 and x=2."
+      ]
+    },
+    {
+      "id": "eq2-two-balances-one-request-undo",
+      "verdict": "pass",
+      "notes": [
+        "Undoing the two-operation request preserves prior entry repair 4x-2=18, with x=5."
+      ]
+    },
+    {
+      "id": "eq2-coefficient-edit-after-simplifying",
+      "verdict": "pass",
+      "notes": [
+        "Combined coefficient five is edited to three, giving 3x+1=16 and final x=5."
+      ]
+    },
+    {
+      "id": "eq2-denominator-edit-after-side-swap",
+      "verdict": "pass",
+      "notes": [
+        "Side swap moves quotient right; denominator edit gives 4=x/2 and x=8."
+      ]
+    },
+    {
+      "id": "eq2-two-whole-side-edits-then-balance",
+      "verdict": "pass",
+      "notes": [
+        "Two whole-side edits give 3x-4=x+6 and x=5 after balancing."
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-precedence-after-edit",
+      "verdict": "pass",
+      "notes": [
+        "Precedence after factor edit gives 2+5*4=22."
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-grouping-repair",
+      "verdict": "pass",
+      "notes": [
+        "Grouping correction gives (2+3)*4=20."
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-negative-square-scope",
+      "verdict": "pass",
+      "notes": [
+        "Moving negative inside square gives (-3)^2=9; outside-minus initial meaning is explicit."
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-fraction-denominator",
+      "verdict": "pass",
+      "notes": [
+        "Denominator correction yields 3/4+1/4=1."
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-fraction-numerator",
+      "verdict": "pass",
+      "notes": [
+        "Numerator correction yields 1/8+5/8=6/8=0.75."
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-division-grouping",
+      "verdict": "pass",
+      "notes": [
+        "Regrouping division gives 24/(6/2)=8, unlike initial (24/6)/2."
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-decimal-place",
+      "verdict": "pass",
+      "notes": [
+        "Decimal-place correction gives 15+2.5=17.5."
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-exact-eighth",
+      "verdict": "pass",
+      "notes": [
+        "Denominator eight gives exact value 1/8=0.125."
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-power-base",
+      "verdict": "pass",
+      "notes": [
+        "Base edit gives 3^3+1=28."
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-zero-exponent",
+      "verdict": "pass",
+      "notes": [
+        "Zero exponent gives 4*7^0=4."
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-negative-product",
+      "verdict": "pass",
+      "notes": [
+        "Three negative factors give (-2)*(-3)*(-4)=-24."
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-subtract-negative",
+      "verdict": "pass",
+      "notes": [
+        "Subtracting negative five gives 9-(-5)=14."
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-nested-subtraction",
+      "verdict": "pass",
+      "notes": [
+        "Nested subtraction gives 12-(5-2)=9."
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-square-root-radicand",
+      "verdict": "pass",
+      "notes": [
+        "Inner-radicand edit gives sqrt(9+16)=sqrt(25), evaluated read-only as five."
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-undo-redo-group",
+      "verdict": "pass",
+      "notes": [
+        "Redoing grouping preserves (3+5)*2 and read-only value sixteen."
+      ]
+    }
+  ],
+  "referenceReplay": "99 pass; eq2-edit-added-variable-term retains a known hyphenated-number parser failure, separate from fixture correctness."
+}

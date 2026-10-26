@@ -1,0 +1,408 @@
+{
+  "createdAt": "2026-10-14T18:07:29.581Z",
+  "scope": "Fresh live-AI text conversations with adaptive control references, deterministic numeric checks, persistence between turns, and unchanged homework. Not microphone or student usability evidence.",
+  "total": 8,
+  "passed": 8,
+  "results": [
+    {
+      "request": "I know people say keep the equation balanced, but I don’t really get what is being kept. Explain without doing my homework.",
+      "result": {
+        "status": "explanation",
+        "command": "",
+        "message": "An equation says the left side and right side have the same value. “Keeping it balanced” means making the same change to both sides, so they remain equal. Here, 7*x+5 and 26 are equal; no homework steps have been done.",
+        "commands": []
+      },
+      "pass": true,
+      "unchanged": true,
+      "latencyMs": 4419
+    },
+    {
+      "request": "Could I try taking different amounts off each side together, with something adjustable here? Keep my actual equation as it is.",
+      "result": {
+        "status": "explanation",
+        "command": "",
+        "message": "Adjust the two sliders to try different amounts. Taking the same amount from both sides keeps them equal; different amounts change the balance. Your saved equation stays unchanged.",
+        "commands": [],
+        "presentation": {
+          "action": "show",
+          "content": {
+            "title": "Taking amounts off both sides",
+            "description": "Adjust each slider to remove an amount from that side. Compare the results: equal amounts preserve the balance; different amounts change it. This exploration does not change your saved equation.",
+            "controls": [
+              {
+                "name": "a",
+                "label": "Amount off the left side",
+                "min": 0,
+                "max": 10,
+                "step": 0.5,
+                "value": 0
+              },
+              {
+                "name": "b",
+                "label": "Amount off the right side",
+                "min": 0,
+                "max": 10,
+                "step": 0.5,
+                "value": 0
+              }
+            ],
+            "plots": [],
+            "readouts": [
+              {
+                "label": "Left side after subtracting a",
+                "expression": "7 * x + 5 - a"
+              },
+              {
+                "label": "Right side after subtracting b",
+                "expression": "26 - b"
+              },
+              {
+                "label": "Left minus right (using the original equality)",
+                "expression": "b - a"
+              }
+            ],
+            "xRange": {
+              "min": -5,
+              "max": 5
+            },
+            "yRange": {
+              "min": -5,
+              "max": 30
+            }
+          }
+        }
+      },
+      "pass": true,
+      "unchanged": true,
+      "exploration": {
+        "title": "Taking amounts off both sides",
+        "description": "Adjust each slider to remove an amount from that side. Compare the results: equal amounts preserve the balance; different amounts change it. This exploration does not change your saved equation.",
+        "controls": [
+          {
+            "name": "a",
+            "label": "Amount off the left side",
+            "min": 0,
+            "max": 10,
+            "step": 0.5,
+            "value": 0
+          },
+          {
+            "name": "b",
+            "label": "Amount off the right side",
+            "min": 0,
+            "max": 10,
+            "step": 0.5,
+            "value": 0
+          }
+        ],
+        "plots": [],
+        "readouts": [
+          {
+            "label": "Left side after subtracting a",
+            "expression": "7 * x + 5 - a"
+          },
+          {
+            "label": "Right side after subtracting b",
+            "expression": "26 - b"
+          },
+          {
+            "label": "Left minus right (using the original equality)",
+            "expression": "b - a"
+          }
+        ],
+        "xRange": {
+          "min": -5,
+          "max": 5
+        },
+        "yRange": {
+          "min": -5,
+          "max": 30
+        }
+      },
+      "latencyMs": 20912
+    },
+    {
+      "request": "I moved Amount off the left side to 1. What changed, and what stayed the same? Don’t adjust it again.",
+      "result": {
+        "status": "explanation",
+        "command": "",
+        "message": "You took 1 off the left side and 0 off the right. So the left side became 1 less than the right, and the equation is no longer balanced. Your saved equation, 7*x+5=26, stayed the same; only the interactive example changed.",
+        "commands": []
+      },
+      "pass": true,
+      "unchanged": true,
+      "exploration": {
+        "title": "Taking amounts off both sides",
+        "description": "Adjust each slider to remove an amount from that side. Compare the results: equal amounts preserve the balance; different amounts change it. This exploration does not change your saved equation.",
+        "controls": [
+          {
+            "name": "a",
+            "label": "Amount off the left side",
+            "min": 0,
+            "max": 10,
+            "step": 0.5,
+            "value": 1
+          },
+          {
+            "name": "b",
+            "label": "Amount off the right side",
+            "min": 0,
+            "max": 10,
+            "step": 0.5,
+            "value": 0
+          }
+        ],
+        "plots": [],
+        "readouts": [
+          {
+            "label": "Left side after subtracting a",
+            "expression": "7 * x + 5 - a"
+          },
+          {
+            "label": "Right side after subtracting b",
+            "expression": "26 - b"
+          },
+          {
+            "label": "Left minus right (using the original equality)",
+            "expression": "b - a"
+          }
+        ],
+        "xRange": {
+          "min": -5,
+          "max": 5
+        },
+        "yRange": {
+          "min": -5,
+          "max": 30
+        }
+      },
+      "latencyMs": 11587
+    },
+    {
+      "request": "Different example: let me widen a rectangle while its height stays at three. I want to compare its area with the distance around it as I move one control.",
+      "result": {
+        "status": "explanation",
+        "command": "",
+        "message": "Move the width slider to compare the rectangle’s area with its perimeter. The height stays 3, and your equation remains unchanged.",
+        "commands": [],
+        "presentation": {
+          "action": "show",
+          "content": {
+            "title": "Rectangle: area and distance around",
+            "description": "Move the width slider. The height stays 3. Compare the rectangle’s area with its perimeter; the graph shows how each changes with width.",
+            "controls": [
+              {
+                "name": "w",
+                "label": "Width",
+                "min": 1,
+                "max": 12,
+                "step": 0.5,
+                "value": 4
+              }
+            ],
+            "plots": [
+              "y = 3 * x",
+              "y = 2 * x + 6"
+            ],
+            "readouts": [
+              {
+                "label": "Area at this width",
+                "expression": "3 * w"
+              },
+              {
+                "label": "Distance around (perimeter) at this width",
+                "expression": "2 * w + 6"
+              },
+              {
+                "label": "Area minus perimeter",
+                "expression": "3 * w - (2 * w + 6)"
+              }
+            ],
+            "xRange": {
+              "min": 0,
+              "max": 12
+            },
+            "yRange": {
+              "min": 0,
+              "max": 45
+            }
+          }
+        }
+      },
+      "pass": true,
+      "unchanged": true,
+      "exploration": {
+        "title": "Rectangle: area and distance around",
+        "description": "Move the width slider. The height stays 3. Compare the rectangle’s area with its perimeter; the graph shows how each changes with width.",
+        "controls": [
+          {
+            "name": "w",
+            "label": "Width",
+            "min": 1,
+            "max": 12,
+            "step": 0.5,
+            "value": 4
+          }
+        ],
+        "plots": [
+          "y = 3 * x",
+          "y = 2 * x + 6"
+        ],
+        "readouts": [
+          {
+            "label": "Area at this width",
+            "expression": "3 * w"
+          },
+          {
+            "label": "Distance around (perimeter) at this width",
+            "expression": "2 * w + 6"
+          },
+          {
+            "label": "Area minus perimeter",
+            "expression": "3 * w - (2 * w + 6)"
+          }
+        ],
+        "xRange": {
+          "min": 0,
+          "max": 12
+        },
+        "yRange": {
+          "min": 0,
+          "max": 45
+        }
+      },
+      "latencyMs": 14452
+    },
+    {
+      "request": "Put Width at four, please. I’m only changing the little demonstration.",
+      "result": {
+        "status": "reply",
+        "command": "",
+        "message": "Width is already set to 4 in the demonstration, so nothing needed to change. Your equation remains untouched.",
+        "commands": []
+      },
+      "pass": true,
+      "unchanged": true,
+      "exploration": {
+        "title": "Rectangle: area and distance around",
+        "description": "Move the width slider. The height stays 3. Compare the rectangle’s area with its perimeter; the graph shows how each changes with width.",
+        "controls": [
+          {
+            "name": "w",
+            "label": "Width",
+            "min": 1,
+            "max": 12,
+            "step": 0.5,
+            "value": 4
+          }
+        ],
+        "plots": [
+          "y = 3 * x",
+          "y = 2 * x + 6"
+        ],
+        "readouts": [
+          {
+            "label": "Area at this width",
+            "expression": "3 * w"
+          },
+          {
+            "label": "Distance around (perimeter) at this width",
+            "expression": "2 * w + 6"
+          },
+          {
+            "label": "Area minus perimeter",
+            "expression": "3 * w - (2 * w + 6)"
+          }
+        ],
+        "xRange": {
+          "min": 0,
+          "max": 12
+        },
+        "yRange": {
+          "min": 0,
+          "max": 45
+        }
+      },
+      "latencyMs": 5204
+    },
+    {
+      "request": "Say the takeaway in one short sentence; don’t replace the demonstration.",
+      "result": {
+        "status": "explanation",
+        "command": "",
+        "message": "As the width grows, both the rectangle’s area and perimeter change, while its height stays 3 and your equation remains untouched.",
+        "commands": []
+      },
+      "pass": true,
+      "unchanged": true,
+      "exploration": {
+        "title": "Rectangle: area and distance around",
+        "description": "Move the width slider. The height stays 3. Compare the rectangle’s area with its perimeter; the graph shows how each changes with width.",
+        "controls": [
+          {
+            "name": "w",
+            "label": "Width",
+            "min": 1,
+            "max": 12,
+            "step": 0.5,
+            "value": 4
+          }
+        ],
+        "plots": [
+          "y = 3 * x",
+          "y = 2 * x + 6"
+        ],
+        "readouts": [
+          {
+            "label": "Area at this width",
+            "expression": "3 * w"
+          },
+          {
+            "label": "Distance around (perimeter) at this width",
+            "expression": "2 * w + 6"
+          },
+          {
+            "label": "Area minus perimeter",
+            "expression": "3 * w - (2 * w + 6)"
+          }
+        ],
+        "xRange": {
+          "min": 0,
+          "max": 12
+        },
+        "yRange": {
+          "min": 0,
+          "max": 45
+        }
+      },
+      "latencyMs": 7214
+    },
+    {
+      "request": "That was helpful. Put the demonstration away, but leave all of my work here.",
+      "result": {
+        "status": "reply",
+        "command": "",
+        "message": "I’ve put the demonstration away; your equation and other work are untouched.",
+        "commands": [],
+        "presentation": {
+          "action": "hide"
+        }
+      },
+      "pass": true,
+      "unchanged": true,
+      "latencyMs": 6219
+    },
+    {
+      "request": "Thanks, I’m going to think about it myself now.",
+      "result": {
+        "status": "reply",
+        "command": "",
+        "message": "Of course. Take your time—your equation will stay as it is.",
+        "commands": []
+      },
+      "pass": true,
+      "unchanged": true,
+      "latencyMs": 3768
+    }
+  ]
+}

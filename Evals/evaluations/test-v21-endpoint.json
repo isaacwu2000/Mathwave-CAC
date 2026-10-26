@@ -1,0 +1,44 @@
+{
+  "split": "test-v21",
+  "mode": "endpoint",
+  "datasetSHA256": "603694092a84b31982b05c9f47553ef31d2a02d24d929a679ff1dcc54aa1f8fa",
+  "createdAt": "2026-10-14T15:43:30.574Z",
+  "total": 2,
+  "scored": 2,
+  "passed": 2,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "tangent-leg": {
+      "passed": 2,
+      "scored": 2
+    }
+  },
+  "results": [
+    {
+      "id": "fresh-tangent-leg-1",
+      "category": "tangent-leg",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "slope of graph 2 at x -1",
+        "message": ""
+      },
+      "latencyMs": 2653
+    },
+    {
+      "id": "fresh-tangent-leg-2",
+      "category": "tangent-leg",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "right triangle hypotenuse 25 leg 7",
+        "message": ""
+      },
+      "latencyMs": 1975
+    }
+  ]
+}

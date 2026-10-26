@@ -1,0 +1,7 @@
+{
+  "atUnix": 1792783629.443564,
+  "reason": "User authorized moving to Runpod CUDA to avoid multi-day MPS training. No optimizer training had begun.",
+  "partialBaselineRows": 48,
+  "newPodId": "xty5ermh60l271",
+  "comparison": "New complete CUDA baseline and adapted test will share one device; partial MPS output is separate."
+}

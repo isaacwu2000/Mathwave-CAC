@@ -1,0 +1,8 @@
+{
+  "ownedEndpointIds": [],
+  "accountBalanceDeltaUsd": 0.48789546829999964,
+  "accountCurrentSpendPerHr": 0.69,
+  "atUnix": 1792788726.206642,
+  "billingLimit": "Account balance snapshot can lag; not a reconciled invoice.",
+  "visualReview": "Still incomplete; grading and plotting do not inspect pixels."
+}

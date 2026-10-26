@@ -1,0 +1,138 @@
+{
+  "book": {
+    "version": 2,
+    "assignments": [
+      {
+        "id": "e87f31e0-84d8-4354-b5d8-32fa70dfbc90",
+        "title": "My homework",
+        "problems": [
+          {
+            "id": "d1070430-cfa6-4197-9683-358cb2e0170d",
+            "title": "Problem 1",
+            "state": {
+              "mode": "equation",
+              "expression": "y = x^2",
+              "data": [
+                0,
+                0
+              ],
+              "diagram": [
+                "Start",
+                "Finish"
+              ],
+              "selection": 0,
+              "graph": true
+            },
+            "steps": [
+              {
+                "command": "typescript\nproblem.save(graph.plot(\"y=x^2\"));",
+                "displayCommand": "graph y=x^2",
+                "state": {
+                  "mode": "equation",
+                  "expression": "y = x^2",
+                  "data": [
+                    0,
+                    0
+                  ],
+                  "diagram": [
+                    "Start",
+                    "Finish"
+                  ],
+                  "selection": 0,
+                  "graph": true
+                },
+                "at": "2026-10-24T17:49:25.918Z"
+              }
+            ],
+            "initialState": {
+              "mode": "equation",
+              "expression": "0",
+              "data": [
+                0,
+                0
+              ],
+              "diagram": [
+                "Start",
+                "Finish"
+              ],
+              "selection": 0,
+              "graph": false
+            },
+            "undoRevisions": [
+              {
+                "state": {
+                  "mode": "equation",
+                  "expression": "0",
+                  "data": [
+                    0,
+                    0
+                  ],
+                  "diagram": [
+                    "Start",
+                    "Finish"
+                  ],
+                  "selection": 0,
+                  "graph": false
+                },
+                "steps": [],
+                "undoStates": []
+              }
+            ],
+            "redoRevisions": [],
+            "draft": "",
+            "undoStates": [
+              {
+                "mode": "equation",
+                "expression": "0",
+                "data": [
+                  0,
+                  0
+                ],
+                "diagram": [
+                  "Start",
+                  "Finish"
+                ],
+                "selection": 0,
+                "graph": false
+              }
+            ],
+            "conversation": [
+              {
+                "request": "Make a flowchart with Start, Process, and Finish.",
+                "response": "Sequential flowcharts aren’t supported, so I can’t make a flowchart with Start, Process, and Finish.",
+                "status": "unsupported",
+                "stateKey": "111:903881358",
+                "revisable": false,
+                "stepCount": 1
+              },
+              {
+                "request": "Make a flowchart with Start, Process, and Finish.",
+                "response": "Sequential flowcharts aren’t supported, so I can’t make a flowchart with Start, Process, and Finish.",
+                "status": "unsupported",
+                "stateKey": "111:903881358",
+                "revisable": false,
+                "stepCount": 1
+              },
+              {
+                "request": "Make a flowchart with Start, Process, and Finish.",
+                "response": "Sequential flowcharts aren’t supported, so I can’t make a flowchart with Start, Process, and Finish.",
+                "status": "unsupported",
+                "stateKey": "111:903881358",
+                "revisable": false,
+                "stepCount": 1
+              }
+            ],
+            "conversationArchive": []
+          }
+        ]
+      }
+    ],
+    "assignmentId": "e87f31e0-84d8-4354-b5d8-32fa70dfbc90",
+    "problemId": "d1070430-cfa6-4197-9683-358cb2e0170d",
+    "draft": ""
+  },
+  "clarification": null,
+  "status": "unsupported",
+  "message": "Sequential flowcharts aren’t supported, so I can’t make a flowchart with Start, Process, and Finish.",
+  "revision": 3
+}

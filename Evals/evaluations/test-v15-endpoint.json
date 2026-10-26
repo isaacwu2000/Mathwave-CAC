@@ -1,0 +1,68 @@
+{
+  "split": "test-v15",
+  "mode": "endpoint",
+  "datasetSHA256": "8b547a1f8ad1ef31dabbf7aa6899475ddfbbf2ed6b8be5450354abcc236fd3ab",
+  "createdAt": "2026-10-14T15:20:12.943Z",
+  "total": 4,
+  "scored": 4,
+  "passed": 4,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "graph-geometry": {
+      "passed": 4,
+      "scored": 4
+    }
+  },
+  "results": [
+    {
+      "id": "exploration-1",
+      "category": "graph-geometry",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "table graph 1",
+        "message": ""
+      },
+      "latencyMs": 10850
+    },
+    {
+      "id": "exploration-2",
+      "category": "graph-geometry",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "table graph 2",
+        "message": ""
+      },
+      "latencyMs": 12596
+    },
+    {
+      "id": "exploration-3",
+      "category": "graph-geometry",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "double shape",
+        "message": ""
+      },
+      "latencyMs": 3733
+    },
+    {
+      "id": "exploration-4",
+      "category": "graph-geometry",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "halve shape",
+        "message": ""
+      },
+      "latencyMs": 5080
+    }
+  ]
+}

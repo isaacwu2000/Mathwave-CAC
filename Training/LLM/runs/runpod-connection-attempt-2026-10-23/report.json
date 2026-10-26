@@ -1,0 +1,32 @@
+{
+  "status": "blocked-before-upload-and-training",
+  "podId": "xty5ermh60l271",
+  "gpu": "NVIDIA A40",
+  "quotedHourlyComputeUsd": 0.59,
+  "initialBudgetUsd": 3,
+  "userMaximumUsd": 8,
+  "createdUnix": 1792783551.132119,
+  "terminatedUnix": 1792783946.200198,
+  "elapsedSeconds": 395.068078994751,
+  "estimatedComputeCostUsd": 0.06474726850191752,
+  "costLimit": "Estimate excluding storage and billing lag, not an invoice.",
+  "ownedPodAbsent": true,
+  "accountComputeHourlyAfterDeletion": 0.594,
+  "deleteApiStatus": {
+    "status": 204
+  },
+  "reason": "Network blocked direct SSH and HTTPS proxy TLS validation. No data uploaded or GPU benchmark/training started.",
+  "networkEvidence": {
+    "directSsh": "Timed out on original and updated mapped ports.",
+    "httpsProxy": "TLS certificate verification failed; presented issuer is a Fortinet certificate authority. No matching trusted certificate found in System keychain. TLS verification was not disabled."
+  },
+  "dataUploaded": false,
+  "remoteBenchmarkRan": false,
+  "remoteTrainingRan": false,
+  "credentials": "Read from local ignored .env; never uploaded to Pod or committed.",
+  "subsequentAccountCheck": {
+    "ownedPodAbsent": true,
+    "currentSpendPerHr": 0,
+    "balanceDeltaUsd": 0.0
+  }
+}

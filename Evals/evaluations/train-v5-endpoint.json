@@ -1,0 +1,90 @@
+{
+  "split": "train-v5",
+  "mode": "endpoint",
+  "datasetSHA256": "1a94e30449ea122326a825b19f3ca8c3ecff3b5f1df818a439131d65fd6f41cb",
+  "createdAt": "2026-10-12T19:21:35.811Z",
+  "total": 5,
+  "scored": 5,
+  "passed": 5,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "ai_math": {
+      "passed": 5,
+      "scored": 5
+    }
+  },
+  "results": [
+    {
+      "id": "tune-001",
+      "category": "ai_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "subtract 3 from both sides",
+          "simplify",
+          "divide both sides by 2",
+          "simplify"
+        ]
+      },
+      "latencyMs": 2269
+    },
+    {
+      "id": "tune-002",
+      "category": "ai_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "subtract 3 from both sides",
+          "simplify"
+        ]
+      },
+      "latencyMs": 1911
+    },
+    {
+      "id": "tune-003",
+      "category": "ai_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "median",
+        "message": ""
+      },
+      "latencyMs": 1651
+    },
+    {
+      "id": "tune-004",
+      "category": "ai_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "hypotenuse",
+        "message": ""
+      },
+      "latencyMs": 1970
+    },
+    {
+      "id": "tune-005",
+      "category": "ai_math",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which number should I change to 7?"
+      },
+      "latencyMs": 2475
+    }
+  ]
+}

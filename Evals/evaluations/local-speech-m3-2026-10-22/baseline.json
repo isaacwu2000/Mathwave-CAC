@@ -1,0 +1,4565 @@
+{
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "device": "Apple M3 / MPS",
+  "lane": "synthetic recorded speech; no human or iPhone acceptance",
+  "normalization": "case/punctuation/small number words; preserve mathematical symbols",
+  "training": "LoRA backward resource probe only; no weight updates",
+  "versions": {
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "peft": "0.21.2",
+    "soundfile": "0.14.0",
+    "scipy": "1.18.1"
+  },
+  "models": [
+    {
+      "model": "openai/whisper-tiny.en",
+      "revision": "87c7102498dcde7456f24cfd30239ca606ed9063",
+      "load_seconds_including_download": 10.361948292000307,
+      "clips": 79,
+      "normalized_word_error_rate": 0.10135135135135136,
+      "normalized_exact_clips": 55,
+      "total_audio_seconds": 179.43217091836735,
+      "total_inference_seconds": 40.194563163993735,
+      "inference_memory": {
+        "process_peak_rss_mib": 474.15625,
+        "mps_allocated_mib": 145.039794921875,
+        "mps_driver_mib": 1104.25
+      },
+      "lora_backward_probe": {
+        "rank": 8,
+        "trainable_parameters": 147456,
+        "total_parameters": 37907712,
+        "loss": 3.5222578048706055,
+        "forward_backward_seconds": 11.686314874998061,
+        "optimizer_steps": 0,
+        "memory": {
+          "process_peak_rss_mib": 474.15625,
+          "mps_allocated_mib": 146.165283203125,
+          "mps_driver_mib": 1119.65625
+        }
+      },
+      "results": [
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-function.wav",
+          "sha256": "060cd6643a34c325245d38093275782b89defb1d7030df92c44b2f514c55fa57",
+          "reference": "Graph y equals x squared minus four.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Graph y equals x squared minus 4.",
+          "normalized_reference": [
+            "graph",
+            "y",
+            "equals",
+            "x",
+            "squared",
+            "minus",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "graph",
+            "y",
+            "equals",
+            "x",
+            "squared",
+            "minus",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 7,
+          "exact": true,
+          "audio_seconds": 3.0896598639455783,
+          "inference_seconds": 0.4871445409989974
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-range.wav",
+          "sha256": "75c413628d7e8298e121f1a0ae8b55c4dbe273ff5549514726930e479d739792",
+          "reference": "Set graph range from negative five to five.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Set graph range from negative 5 to 5.",
+          "normalized_reference": [
+            "set",
+            "graph",
+            "range",
+            "from",
+            "negative",
+            "5",
+            "to",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "set",
+            "graph",
+            "range",
+            "from",
+            "negative",
+            "5",
+            "to",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 3.1340589569160997,
+          "inference_seconds": 0.3987635829980718
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-intercepts.wav",
+          "sha256": "6073a504076ce43a43a80ff4b4ca4b6c42a63dc66505848d237411e416999571",
+          "reference": "Find the x intercepts.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the X-interset.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "x",
+            "intercepts"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "x",
+            "minus",
+            "interset"
+          ],
+          "word_errors": 2,
+          "reference_words": 4,
+          "exact": false,
+          "audio_seconds": 1.9814512471655328,
+          "inference_seconds": 0.5643357080007263
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-point.wav",
+          "sha256": "b624db93dc9745de3f7a39a8093e4b45117e8489d9a4f45930818f3a0a24abcd",
+          "reference": "Read graph at x equals three.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Read graph at x equals 3.",
+          "normalized_reference": [
+            "read",
+            "graph",
+            "at",
+            "x",
+            "equals",
+            "3"
+          ],
+          "normalized_hypothesis": [
+            "read",
+            "graph",
+            "at",
+            "x",
+            "equals",
+            "3"
+          ],
+          "word_errors": 0,
+          "reference_words": 6,
+          "exact": true,
+          "audio_seconds": 2.4863038548752834,
+          "inference_seconds": 0.28421425000124145
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-right-triangle.wav",
+          "sha256": "1bdca0e34e5d203a9c6e45e1628a46f59bd8d04f2d82ee43fe9989d4efadf0b4",
+          "reference": "Draw a right triangle with legs three and four.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Draw a right triangle with legs 3 and 4.",
+          "normalized_reference": [
+            "draw",
+            "a",
+            "right",
+            "triangle",
+            "with",
+            "legs",
+            "3",
+            "and",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "draw",
+            "a",
+            "right",
+            "triangle",
+            "with",
+            "legs",
+            "3",
+            "and",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 9,
+          "exact": true,
+          "audio_seconds": 3.054784580498866,
+          "inference_seconds": 0.33262987499983865
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-hypotenuse.wav",
+          "sha256": "d4120df100c176f6e00845fc02d34b1e7b588ef8b70c361d3881ae3fa65ebc5b",
+          "reference": "Find the hypotenuse.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the high-potter news.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "hypotenuse"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "high",
+            "minus",
+            "potter",
+            "news"
+          ],
+          "word_errors": 4,
+          "reference_words": 3,
+          "exact": false,
+          "audio_seconds": 1.8537414965986394,
+          "inference_seconds": 0.34740204099944094
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-rectangle.wav",
+          "sha256": "d008597df83935a32809483bc3ca3c61c67ceda3668cd47c4e5466c7816b74b1",
+          "reference": "Create a rectangle with width six and height four.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Create a rectangle with width 6 and height 4.",
+          "normalized_reference": [
+            "create",
+            "a",
+            "rectangle",
+            "with",
+            "width",
+            "6",
+            "and",
+            "height",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "create",
+            "a",
+            "rectangle",
+            "with",
+            "width",
+            "6",
+            "and",
+            "height",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 9,
+          "exact": true,
+          "audio_seconds": 3.1625396825396828,
+          "inference_seconds": 0.3651575000003504
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-dimension-edit.wav",
+          "sha256": "483b50ffbb62a737cf45ca6b83eaf77dde3f2bf5002293800664ebe4ffa9bfa6",
+          "reference": "Change the width to eight.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Change the width date.",
+          "normalized_reference": [
+            "change",
+            "the",
+            "width",
+            "to",
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "change",
+            "the",
+            "width",
+            "date"
+          ],
+          "word_errors": 2,
+          "reference_words": 5,
+          "exact": false,
+          "audio_seconds": 1.5909297052154194,
+          "inference_seconds": 0.2028645829996094
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-triangle-area.wav",
+          "sha256": "7c59b88ef407ce9465adefea98b47868eaf0bc87c103796b09d0b6c658b5956d",
+          "reference": "Find the area of a triangle with base ten and height six.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the area of a triangle with base 10 and height 6.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "area",
+            "of",
+            "a",
+            "triangle",
+            "with",
+            "base",
+            "10",
+            "and",
+            "height",
+            "6"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "area",
+            "of",
+            "a",
+            "triangle",
+            "with",
+            "base",
+            "10",
+            "and",
+            "height",
+            "6"
+          ],
+          "word_errors": 0,
+          "reference_words": 12,
+          "exact": true,
+          "audio_seconds": 3.792562358276644,
+          "inference_seconds": 0.617692583000462
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-circle.wav",
+          "sha256": "23c6e905b095bd1248d0d1632867cba3dc27c19a2d84b6a75acc6029aba7da6e",
+          "reference": "Draw a circle with a radius of five.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Draw a circle with a radius of 5.",
+          "normalized_reference": [
+            "draw",
+            "a",
+            "circle",
+            "with",
+            "a",
+            "radius",
+            "of",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "draw",
+            "a",
+            "circle",
+            "with",
+            "a",
+            "radius",
+            "of",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 2.474331065759637,
+          "inference_seconds": 0.4578761669981759
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-radius-edit.wav",
+          "sha256": "181ffc114fd65723be2f7ecbfc706cc1a5911331eb3b9971633ffafb5ae97e6b",
+          "reference": "Set the radius to seven.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Set the radius to 7.",
+          "normalized_reference": [
+            "set",
+            "the",
+            "radius",
+            "to",
+            "7"
+          ],
+          "normalized_hypothesis": [
+            "set",
+            "the",
+            "radius",
+            "to",
+            "7"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 1.8917913832199547,
+          "inference_seconds": 0.15119083399986266
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-cylinder.wav",
+          "sha256": "dcafcb9733bb19b0fb0da05221d448b0d89a8061d397b2052a14844eef1a9187",
+          "reference": "Create a cylinder with radius two and height five.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Create a cylinder with radius 2 and height 5.",
+          "normalized_reference": [
+            "create",
+            "a",
+            "cylinder",
+            "with",
+            "radius",
+            "2",
+            "and",
+            "height",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "create",
+            "a",
+            "cylinder",
+            "with",
+            "radius",
+            "2",
+            "and",
+            "height",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 9,
+          "exact": true,
+          "audio_seconds": 3.0696598639455783,
+          "inference_seconds": 0.3985257089989318
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-volume.wav",
+          "sha256": "f1214a1b1c4a48565b062f750d5319663d4a8c56b7b09a1d3ebbdb3f9ecf3ddf",
+          "reference": "Find its volume.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find its volume.",
+          "normalized_reference": [
+            "find",
+            "its",
+            "volume"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "its",
+            "volume"
+          ],
+          "word_errors": 0,
+          "reference_words": 3,
+          "exact": true,
+          "audio_seconds": 1.6447619047619049,
+          "inference_seconds": 0.35284662499907427
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-triangle-sides.wav",
+          "sha256": "3a6aed321cf729a5a0155f057cbecbd8bbb62395e564ab622f3766afabeb5f2c",
+          "reference": "Triangle with sides three, four, five.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Try angle with sides 3, 4, 5",
+          "normalized_reference": [
+            "triangle",
+            "with",
+            "sides",
+            "3",
+            "4",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "try",
+            "angle",
+            "with",
+            "sides",
+            "3",
+            "4",
+            "5"
+          ],
+          "word_errors": 2,
+          "reference_words": 6,
+          "exact": false,
+          "audio_seconds": 3.5128344671201814,
+          "inference_seconds": 0.47006970800066483
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-angle.wav",
+          "sha256": "deb77af2d9aae90482b474f7a39332e990769df5d2a32fe6733a45327e53898b",
+          "reference": "Find angle C.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find angle C.",
+          "normalized_reference": [
+            "find",
+            "angle",
+            "c"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "angle",
+            "c"
+          ],
+          "word_errors": 0,
+          "reference_words": 3,
+          "exact": true,
+          "audio_seconds": 1.4938321995464852,
+          "inference_seconds": 0.3756701250022161
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-missing-height.wav",
+          "sha256": "75f0717d74dbf05c6729c03647f2ca87fe607815a5c4d58367416b789b9faf0a",
+          "reference": "Rectangle width six.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Rectangle width 6.",
+          "normalized_reference": [
+            "rectangle",
+            "width",
+            "6"
+          ],
+          "normalized_hypothesis": [
+            "rectangle",
+            "width",
+            "6"
+          ],
+          "word_errors": 0,
+          "reference_words": 3,
+          "exact": true,
+          "audio_seconds": 1.7664852607709751,
+          "inference_seconds": 0.25501120800254284
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-height-reply.wav",
+          "sha256": "45ad4deee2f6fa99cd61d162c8c0543f5a5c3b56e2756392a463154adfd18577",
+          "reference": "Four.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " 4.",
+          "normalized_reference": [
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 1,
+          "exact": true,
+          "audio_seconds": 0.7623582766439909,
+          "inference_seconds": 0.5301194590028899
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-function.wav",
+          "sha256": "5a6b7d1a8dc5e96e39030c3b42ac3f2043100f337ab8ea6aa12dcb4b0049f8a3",
+          "reference": "Graph y equals x squared minus four.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Graph y equals x squared minus 4.",
+          "normalized_reference": [
+            "graph",
+            "y",
+            "equals",
+            "x",
+            "squared",
+            "minus",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "graph",
+            "y",
+            "equals",
+            "x",
+            "squared",
+            "minus",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 7,
+          "exact": true,
+          "audio_seconds": 2.8989569160997735,
+          "inference_seconds": 0.5442082920017128
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-range.wav",
+          "sha256": "afbefdf273efec9758f32290673836bad248a741075d02ac394a30a6ac65f120",
+          "reference": "Set graph range from negative five to five.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Set graph range from negative 5 to 5.",
+          "normalized_reference": [
+            "set",
+            "graph",
+            "range",
+            "from",
+            "negative",
+            "5",
+            "to",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "set",
+            "graph",
+            "range",
+            "from",
+            "negative",
+            "5",
+            "to",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 2.950748299319728,
+          "inference_seconds": 0.4247823330006213
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-intercepts.wav",
+          "sha256": "8bf9532085725175066ba3ce8098e2d9e143bf1147cfe46f487877ab7c487b2c",
+          "reference": "Find the x intercepts.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the X into Zipps.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "x",
+            "intercepts"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "x",
+            "into",
+            "zipps"
+          ],
+          "word_errors": 2,
+          "reference_words": 4,
+          "exact": false,
+          "audio_seconds": 1.9909297052154196,
+          "inference_seconds": 0.3324091670001508
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-point.wav",
+          "sha256": "9df18eb962512e0f90ea4d03e80122ad945b127cc97d5c2336b5a433a4145a27",
+          "reference": "Read graph at x equals three.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Read graph at x equals 3.",
+          "normalized_reference": [
+            "read",
+            "graph",
+            "at",
+            "x",
+            "equals",
+            "3"
+          ],
+          "normalized_hypothesis": [
+            "read",
+            "graph",
+            "at",
+            "x",
+            "equals",
+            "3"
+          ],
+          "word_errors": 0,
+          "reference_words": 6,
+          "exact": true,
+          "audio_seconds": 2.2521995464852607,
+          "inference_seconds": 0.3427614579995861
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-right-triangle.wav",
+          "sha256": "728abeb249c3617134940a5dc943a40850870e4e44e2040745d77cf237bdca56",
+          "reference": "Draw a right triangle with legs three and four.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Draw a right triangle with legs 3 and 4.",
+          "normalized_reference": [
+            "draw",
+            "a",
+            "right",
+            "triangle",
+            "with",
+            "legs",
+            "3",
+            "and",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "draw",
+            "a",
+            "right",
+            "triangle",
+            "with",
+            "legs",
+            "3",
+            "and",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 9,
+          "exact": true,
+          "audio_seconds": 2.935328798185941,
+          "inference_seconds": 0.21086045899937744
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-hypotenuse.wav",
+          "sha256": "d45d16efc9cda8f2be5ba76aaf12a70afe627e91ae1a05600f6e0db1658d6b9c",
+          "reference": "Find the hypotenuse.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the high-potter news",
+          "normalized_reference": [
+            "find",
+            "the",
+            "hypotenuse"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "high",
+            "minus",
+            "potter",
+            "news"
+          ],
+          "word_errors": 4,
+          "reference_words": 3,
+          "exact": false,
+          "audio_seconds": 1.7471201814058956,
+          "inference_seconds": 0.43280466700161924
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-rectangle.wav",
+          "sha256": "c0c9eba3ebd0e01838d523ccb31507ce272e1dc7997c5fceee1852284647e946",
+          "reference": "Create a rectangle with width six and height four.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Create a rectangle with width 6 and height 4.",
+          "normalized_reference": [
+            "create",
+            "a",
+            "rectangle",
+            "with",
+            "width",
+            "6",
+            "and",
+            "height",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "create",
+            "a",
+            "rectangle",
+            "with",
+            "width",
+            "6",
+            "and",
+            "height",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 9,
+          "exact": true,
+          "audio_seconds": 2.9095691609977323,
+          "inference_seconds": 0.8127527500000724
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-dimension-edit.wav",
+          "sha256": "3cce6d987681a6f540f58007bc787e306fc32a90c694896390cee1ff0a2a7dea",
+          "reference": "Change the width to eight.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Change the width to 8.",
+          "normalized_reference": [
+            "change",
+            "the",
+            "width",
+            "to",
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "change",
+            "the",
+            "width",
+            "to",
+            "8"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 1.7249433106575964,
+          "inference_seconds": 0.42760604100112687
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-triangle-area.wav",
+          "sha256": "0bde50384cf0f9cbcdbe6c6d873a1261f04ad0e495bceb2b1b2f1f0aeb11d1db",
+          "reference": "Find the area of a triangle with base ten and height six.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the area of a triangle with base 10 and height 6.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "area",
+            "of",
+            "a",
+            "triangle",
+            "with",
+            "base",
+            "10",
+            "and",
+            "height",
+            "6"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "area",
+            "of",
+            "a",
+            "triangle",
+            "with",
+            "base",
+            "10",
+            "and",
+            "height",
+            "6"
+          ],
+          "word_errors": 0,
+          "reference_words": 12,
+          "exact": true,
+          "audio_seconds": 3.8136961451247164,
+          "inference_seconds": 0.5551379589996941
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-circle.wav",
+          "sha256": "c98faffd5a67c05ed3fbf91f60a1041a5fd8b462587916f6f1c46558f330485b",
+          "reference": "Draw a circle with a radius of five.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Draw a circle with a radius of 5.",
+          "normalized_reference": [
+            "draw",
+            "a",
+            "circle",
+            "with",
+            "a",
+            "radius",
+            "of",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "draw",
+            "a",
+            "circle",
+            "with",
+            "a",
+            "radius",
+            "of",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 2.4360997732426304,
+          "inference_seconds": 0.6102994159991795
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-radius-edit.wav",
+          "sha256": "cd93ee0cfddc1e8c90cd8a030e35c9ad9c200a2cf959c0f6a9b33779d4d4dddb",
+          "reference": "Set the radius to seven.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Sit the radius to 7.",
+          "normalized_reference": [
+            "set",
+            "the",
+            "radius",
+            "to",
+            "7"
+          ],
+          "normalized_hypothesis": [
+            "sit",
+            "the",
+            "radius",
+            "to",
+            "7"
+          ],
+          "word_errors": 1,
+          "reference_words": 5,
+          "exact": false,
+          "audio_seconds": 1.824580498866213,
+          "inference_seconds": 0.5823145829999703
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-cylinder.wav",
+          "sha256": "131c2c99fd9b0ca72fd73cfc1406d3c9eec5a697d80c575f8245933f800cdc3c",
+          "reference": "Create a cylinder with radius two and height five.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Create a cylinder with radius 2 and height 5.",
+          "normalized_reference": [
+            "create",
+            "a",
+            "cylinder",
+            "with",
+            "radius",
+            "2",
+            "and",
+            "height",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "create",
+            "a",
+            "cylinder",
+            "with",
+            "radius",
+            "2",
+            "and",
+            "height",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 9,
+          "exact": true,
+          "audio_seconds": 3.1075736961451246,
+          "inference_seconds": 0.5574324580011307
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-volume.wav",
+          "sha256": "2ad3c1fd3b9327606901df1b04082fadee5abf4eda80598294a5b02f064ecd7a",
+          "reference": "Find its volume.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find its volume.",
+          "normalized_reference": [
+            "find",
+            "its",
+            "volume"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "its",
+            "volume"
+          ],
+          "word_errors": 0,
+          "reference_words": 3,
+          "exact": true,
+          "audio_seconds": 1.4220408163265306,
+          "inference_seconds": 0.41275770799984457
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-triangle-sides.wav",
+          "sha256": "4731448330134e454967366c5c831cc7bd49eb145e1b9f0f56341ae8c41cbd7b",
+          "reference": "Triangle with sides three, four, five.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " triangle with sides 3, 4, 5.",
+          "normalized_reference": [
+            "triangle",
+            "with",
+            "sides",
+            "3",
+            "4",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "triangle",
+            "with",
+            "sides",
+            "3",
+            "4",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 6,
+          "exact": true,
+          "audio_seconds": 3.3811791383219956,
+          "inference_seconds": 0.46495141700142995
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-angle.wav",
+          "sha256": "23b844b10dde6ccf879aead4b6c2e5da9edca2590751c79e8a2638284619d502",
+          "reference": "Find angle C.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find Angle C.",
+          "normalized_reference": [
+            "find",
+            "angle",
+            "c"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "angle",
+            "c"
+          ],
+          "word_errors": 0,
+          "reference_words": 3,
+          "exact": true,
+          "audio_seconds": 1.3872108843537414,
+          "inference_seconds": 0.4461991659991327
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-missing-height.wav",
+          "sha256": "d7c1f91236402cc596fa91d718841a0723d0dad6713138bec3691da20f508854",
+          "reference": "Rectangle width six.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Rectangle width 6",
+          "normalized_reference": [
+            "rectangle",
+            "width",
+            "6"
+          ],
+          "normalized_hypothesis": [
+            "rectangle",
+            "width",
+            "6"
+          ],
+          "word_errors": 0,
+          "reference_words": 3,
+          "exact": true,
+          "audio_seconds": 1.6815873015873015,
+          "inference_seconds": 0.467920041999605
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-height-reply.wav",
+          "sha256": "37b15fae1bfef1a63eaea426322cc3e42fec12a3dbb9a1858246604f38a0f669",
+          "reference": "Four.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " 4.",
+          "normalized_reference": [
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 1,
+          "exact": true,
+          "audio_seconds": 0.7138321995464852,
+          "inference_seconds": 0.32344949999969685
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-function.wav",
+          "sha256": "61fe17451e6ddbf12c977eefb3c7500eb66d7eb2b11bade08a8549b92fac78af",
+          "reference": "Graph y equals x squared minus four.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Graph y equals x squared minus 4.",
+          "normalized_reference": [
+            "graph",
+            "y",
+            "equals",
+            "x",
+            "squared",
+            "minus",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "graph",
+            "y",
+            "equals",
+            "x",
+            "squared",
+            "minus",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 7,
+          "exact": true,
+          "audio_seconds": 3.01437641723356,
+          "inference_seconds": 0.42221662500014645
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-range.wav",
+          "sha256": "d892dd460b8bd2ca7460350fdcf6636d338f0fd3abdb91f745c13aa033b61b88",
+          "reference": "Set graph range from negative five to five.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Set graph range from negative 5 to 5.",
+          "normalized_reference": [
+            "set",
+            "graph",
+            "range",
+            "from",
+            "negative",
+            "5",
+            "to",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "set",
+            "graph",
+            "range",
+            "from",
+            "negative",
+            "5",
+            "to",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 3.2096145124716555,
+          "inference_seconds": 0.5014414580000448
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-intercepts.wav",
+          "sha256": "6bf18bbf61f747fefbaa3c91108cc35662ecccc0ec50373dcdd41b9158cebf78",
+          "reference": "Find the x intercepts.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the X intercepts.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "x",
+            "intercepts"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "x",
+            "intercepts"
+          ],
+          "word_errors": 0,
+          "reference_words": 4,
+          "exact": true,
+          "audio_seconds": 2.082721088435374,
+          "inference_seconds": 0.4700001670025813
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-point.wav",
+          "sha256": "b8223fbc67b7fcaeccd2fb1071a4a236ca1f3301edbde33bb612f1a755dda4bc",
+          "reference": "Read graph at x equals three.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Read graph at x equals 3.",
+          "normalized_reference": [
+            "read",
+            "graph",
+            "at",
+            "x",
+            "equals",
+            "3"
+          ],
+          "normalized_hypothesis": [
+            "read",
+            "graph",
+            "at",
+            "x",
+            "equals",
+            "3"
+          ],
+          "word_errors": 0,
+          "reference_words": 6,
+          "exact": true,
+          "audio_seconds": 2.5496598639455783,
+          "inference_seconds": 0.4578398749981716
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-right-triangle.wav",
+          "sha256": "0c287c7b8fe2b914b426cd3d3faa4dd6af42f5866169c8f6d64cf860b8bed9dd",
+          "reference": "Draw a right triangle with legs three and four.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Draw a right, try angle with legs 3 and 4.",
+          "normalized_reference": [
+            "draw",
+            "a",
+            "right",
+            "triangle",
+            "with",
+            "legs",
+            "3",
+            "and",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "draw",
+            "a",
+            "right",
+            "try",
+            "angle",
+            "with",
+            "legs",
+            "3",
+            "and",
+            "4"
+          ],
+          "word_errors": 2,
+          "reference_words": 9,
+          "exact": false,
+          "audio_seconds": 3.153832199546485,
+          "inference_seconds": 1.392731415999151
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-hypotenuse.wav",
+          "sha256": "9b0390bd001c32a1a74589c5498ec636545d5dc7a250c9bd33f7139e0410a463",
+          "reference": "Find the hypotenuse.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the high-potter news.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "hypotenuse"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "high",
+            "minus",
+            "potter",
+            "news"
+          ],
+          "word_errors": 4,
+          "reference_words": 3,
+          "exact": false,
+          "audio_seconds": 1.8389115646258503,
+          "inference_seconds": 0.5935094170017692
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-rectangle.wav",
+          "sha256": "7c157cf19bbe9a63c1e688f8da01ce4122d5fdbc38ba1db9cdeb1e051b2013ac",
+          "reference": "Create a rectangle with width six and height four.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Create a rectangle with 6 and height 4.",
+          "normalized_reference": [
+            "create",
+            "a",
+            "rectangle",
+            "with",
+            "width",
+            "6",
+            "and",
+            "height",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "create",
+            "a",
+            "rectangle",
+            "with",
+            "6",
+            "and",
+            "height",
+            "4"
+          ],
+          "word_errors": 1,
+          "reference_words": 9,
+          "exact": false,
+          "audio_seconds": 3.335419501133787,
+          "inference_seconds": 1.0112874579972413
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-dimension-edit.wav",
+          "sha256": "e398930b65e97ee56fab7fabc20ff0663ade46089f6733f6331c7f15cc2bae63",
+          "reference": "Change the width to eight.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " change the width to 8.",
+          "normalized_reference": [
+            "change",
+            "the",
+            "width",
+            "to",
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "change",
+            "the",
+            "width",
+            "to",
+            "8"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 1.7023582766439909,
+          "inference_seconds": 0.4692079170017678
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-triangle-area.wav",
+          "sha256": "0360fe15d51d40cc44cf453ecaea6d2bee2999c4c032397917f9f16ab6e984bf",
+          "reference": "Find the area of a triangle with base ten and height six.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the area of a triangle with base 10 and height 6.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "area",
+            "of",
+            "a",
+            "triangle",
+            "with",
+            "base",
+            "10",
+            "and",
+            "height",
+            "6"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "area",
+            "of",
+            "a",
+            "triangle",
+            "with",
+            "base",
+            "10",
+            "and",
+            "height",
+            "6"
+          ],
+          "word_errors": 0,
+          "reference_words": 12,
+          "exact": true,
+          "audio_seconds": 4.288616780045351,
+          "inference_seconds": 0.4104807500007155
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-circle.wav",
+          "sha256": "b2f36ef661af06b241a47690c478d5fd380eaf945e87ba74077f046efe9dd63d",
+          "reference": "Draw a circle with a radius of five.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Draw a circle with a radius of 5.",
+          "normalized_reference": [
+            "draw",
+            "a",
+            "circle",
+            "with",
+            "a",
+            "radius",
+            "of",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "draw",
+            "a",
+            "circle",
+            "with",
+            "a",
+            "radius",
+            "of",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 2.735873015873016,
+          "inference_seconds": 0.41287445800116984
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-radius-edit.wav",
+          "sha256": "15e29d5bbeee1570a5c25b7655fda42e69edf2c22eb30503ae13271fe1c05471",
+          "reference": "Set the radius to seven.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Set the radio as to 7.",
+          "normalized_reference": [
+            "set",
+            "the",
+            "radius",
+            "to",
+            "7"
+          ],
+          "normalized_hypothesis": [
+            "set",
+            "the",
+            "radio",
+            "as",
+            "to",
+            "7"
+          ],
+          "word_errors": 2,
+          "reference_words": 5,
+          "exact": false,
+          "audio_seconds": 1.9905668934240364,
+          "inference_seconds": 0.3644404999977269
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-cylinder.wav",
+          "sha256": "4a9a2ad7b2cd5699b36d9c91ac041b183f9501e3075026d074421acd75669edc",
+          "reference": "Create a cylinder with radius two and height five.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Create a cylinder with radius 2 and height 5.",
+          "normalized_reference": [
+            "create",
+            "a",
+            "cylinder",
+            "with",
+            "radius",
+            "2",
+            "and",
+            "height",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "create",
+            "a",
+            "cylinder",
+            "with",
+            "radius",
+            "2",
+            "and",
+            "height",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 9,
+          "exact": true,
+          "audio_seconds": 3.4747392290249435,
+          "inference_seconds": 0.5170117499983462
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-volume.wav",
+          "sha256": "045d9527c8c4b71e8d1b5748f21c0fe6d4bfc60e36cae0c7fb28179b33307c71",
+          "reference": "Find its volume.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find its volume.",
+          "normalized_reference": [
+            "find",
+            "its",
+            "volume"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "its",
+            "volume"
+          ],
+          "word_errors": 0,
+          "reference_words": 3,
+          "exact": true,
+          "audio_seconds": 1.6531519274376418,
+          "inference_seconds": 0.3551697080001759
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-triangle-sides.wav",
+          "sha256": "bb6e04c5e2b33caf5d0b9ab3f2524c0eea99fb35f006a29a47fae69d4726aa17",
+          "reference": "Triangle with sides three, four, five.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Try angle width sides 3, 4, 5",
+          "normalized_reference": [
+            "triangle",
+            "with",
+            "sides",
+            "3",
+            "4",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "try",
+            "angle",
+            "width",
+            "sides",
+            "3",
+            "4",
+            "5"
+          ],
+          "word_errors": 3,
+          "reference_words": 6,
+          "exact": false,
+          "audio_seconds": 3.402358276643991,
+          "inference_seconds": 0.44324733299799846
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-angle.wav",
+          "sha256": "45d3b7ae9bf09fce7e705125bd65e308ff55eb7c24b68158ddd652acc7eaa821",
+          "reference": "Find angle C.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find Angle C.",
+          "normalized_reference": [
+            "find",
+            "angle",
+            "c"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "angle",
+            "c"
+          ],
+          "word_errors": 0,
+          "reference_words": 3,
+          "exact": true,
+          "audio_seconds": 1.4906122448979593,
+          "inference_seconds": 0.19299204200069653
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-missing-height.wav",
+          "sha256": "769bc99d5c61ef9e40507da18944c3efba0949e125f92f3f268f82af71621883",
+          "reference": "Rectangle width six.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Rectangle width 6.",
+          "normalized_reference": [
+            "rectangle",
+            "width",
+            "6"
+          ],
+          "normalized_hypothesis": [
+            "rectangle",
+            "width",
+            "6"
+          ],
+          "word_errors": 0,
+          "reference_words": 3,
+          "exact": true,
+          "audio_seconds": 1.8298412698412698,
+          "inference_seconds": 0.27327804200103856
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-height-reply.wav",
+          "sha256": "ed31670f0552a77fc73cbd0fbd4f3394bfeaf5e72d73f44519484bfee2e874e8",
+          "reference": "Four.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " 4.",
+          "normalized_reference": [
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 1,
+          "exact": true,
+          "audio_seconds": 0.561814058956916,
+          "inference_seconds": 0.15517733399974531
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-width-reply.wav",
+          "sha256": "1ac58c5c3fa387f09c102279fb7ddcedbe464de5617ffc3cb69da4d77dda0dc7",
+          "reference": "Eight.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Thanks.",
+          "normalized_reference": [
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "thanks"
+          ],
+          "word_errors": 1,
+          "reference_words": 1,
+          "exact": false,
+          "audio_seconds": 0.5710657596371882,
+          "inference_seconds": 0.17242658399845823
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-height-confirm.wav",
+          "sha256": "720cdb969d0d294149ca83d275351db9586f118ff85f2b0e6b672ea91cf97431",
+          "reference": "Height four.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Height 4.",
+          "normalized_reference": [
+            "height",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "height",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 2,
+          "exact": true,
+          "audio_seconds": 1.0254421768707482,
+          "inference_seconds": 0.1467226250024396
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-width-reply.wav",
+          "sha256": "4c9b0fdae10b18c9d57109bf6724e8de261de0a4448859a1d5c5bdf4bfa46121",
+          "reference": "Eight.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " aid.",
+          "normalized_reference": [
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "aid"
+          ],
+          "word_errors": 1,
+          "reference_words": 1,
+          "exact": false,
+          "audio_seconds": 0.6092063492063492,
+          "inference_seconds": 0.19729379099953803
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-height-confirm.wav",
+          "sha256": "93cd3987785530a0036c76db6c8c2f25b3ee69a843e6c7c800eb770856d57407",
+          "reference": "Height four.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Hide for",
+          "normalized_reference": [
+            "height",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "hide",
+            "for"
+          ],
+          "word_errors": 2,
+          "reference_words": 2,
+          "exact": false,
+          "audio_seconds": 0.9706575963718821,
+          "inference_seconds": 0.13105108400122845
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-width-reply.wav",
+          "sha256": "a2ea44d473e70c2779c8c79570e625c15da18e033eff25663281f69c90291cc9",
+          "reference": "Eight.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " It.",
+          "normalized_reference": [
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "it"
+          ],
+          "word_errors": 1,
+          "reference_words": 1,
+          "exact": false,
+          "audio_seconds": 0.6616326530612245,
+          "inference_seconds": 0.23521433399946545
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-height-confirm.wav",
+          "sha256": "faf4366537c8c0335745218bd5dca26f9f5b2c3ba47b5a6562ba38ac0a5d1952",
+          "reference": "Height four.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Hide for",
+          "normalized_reference": [
+            "height",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "hide",
+            "for"
+          ],
+          "word_errors": 2,
+          "reference_words": 2,
+          "exact": false,
+          "audio_seconds": 0.8773696145124716,
+          "inference_seconds": 0.09714666699801455
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-width-clear-reply.wav",
+          "sha256": "0c859a46c8efb7f584d630940a01e4c18780e04414f97864a7f722c3b6bca921",
+          "reference": "The width should be eight.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " The width should be 8.",
+          "normalized_reference": [
+            "the",
+            "width",
+            "should",
+            "be",
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "the",
+            "width",
+            "should",
+            "be",
+            "8"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 1.3804988662131519,
+          "inference_seconds": 0.37872404099834966
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-height-clear-reply.wav",
+          "sha256": "7d023d985ae644dd2404070abeea8194617187a2d4aed6a65cb6617c52bde645",
+          "reference": "The height is four.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " The height is 4.",
+          "normalized_reference": [
+            "the",
+            "height",
+            "is",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "the",
+            "height",
+            "is",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 4,
+          "exact": true,
+          "audio_seconds": 1.3571882086167801,
+          "inference_seconds": 0.3632182080000348
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-width-clear-reply.wav",
+          "sha256": "f45077d7204a86eafec6fa9c45895c2efee06c4ead01e9fa29967605794d72af",
+          "reference": "The width should be eight.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " The width should be 8.",
+          "normalized_reference": [
+            "the",
+            "width",
+            "should",
+            "be",
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "the",
+            "width",
+            "should",
+            "be",
+            "8"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 1.4519274376417233,
+          "inference_seconds": 0.4325690410005336
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-height-clear-reply.wav",
+          "sha256": "a3451d02c346da64dc91fbcf5be0d9d68e1bf683d8d97ec3625c842df73ff5a5",
+          "reference": "The height is four.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " The height is full.",
+          "normalized_reference": [
+            "the",
+            "height",
+            "is",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "the",
+            "height",
+            "is",
+            "full"
+          ],
+          "word_errors": 1,
+          "reference_words": 4,
+          "exact": false,
+          "audio_seconds": 1.1965079365079365,
+          "inference_seconds": 0.3245764999992389
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-width-clear-reply.wav",
+          "sha256": "36f1b08ef4fa4b6c1670c651398a489133321a4453654da5390766332dbe38e6",
+          "reference": "The width should be eight.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " The width should be 8.",
+          "normalized_reference": [
+            "the",
+            "width",
+            "should",
+            "be",
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "the",
+            "width",
+            "should",
+            "be",
+            "8"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 1.5981859410430839,
+          "inference_seconds": 0.34879770900079166
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-height-clear-reply.wav",
+          "sha256": "b9ce60e3d79184582e9a969dbe6270fbe3d7876ace5c38addc685c896ea18285",
+          "reference": "The height is four.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " The height is 4.",
+          "normalized_reference": [
+            "the",
+            "height",
+            "is",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "the",
+            "height",
+            "is",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 4,
+          "exact": true,
+          "audio_seconds": 1.2614965986394557,
+          "inference_seconds": 0.56870033299856
+        },
+        {
+          "audio": "Web/public/demo-voices/daniel-equation.wav",
+          "sha256": "fecf429d7526b2908843a43f200dc1d8a929b17898dfda8d73bff4f78d0bd2d9",
+          "reference": "Write two x plus three equals eleven.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Write 2x plus 3 equals 11.",
+          "normalized_reference": [
+            "write",
+            "2",
+            "x",
+            "plus",
+            "3",
+            "equals",
+            "11"
+          ],
+          "normalized_hypothesis": [
+            "write",
+            "2",
+            "x",
+            "plus",
+            "3",
+            "equals",
+            "11"
+          ],
+          "word_errors": 0,
+          "reference_words": 7,
+          "exact": true,
+          "audio_seconds": 2.7997732426303856,
+          "inference_seconds": 0.6123334170006274
+        },
+        {
+          "audio": "Web/public/demo-voices/daniel-step.wav",
+          "sha256": "8a2189b916dc05c896a537df16af4fdab649319b417afd34adb5020b70d807c1",
+          "reference": "Subtract three from both sides.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Subtract 3 from both sides.",
+          "normalized_reference": [
+            "subtract",
+            "3",
+            "from",
+            "both",
+            "sides"
+          ],
+          "normalized_hypothesis": [
+            "subtract",
+            "3",
+            "from",
+            "both",
+            "sides"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 2.437596371882086,
+          "inference_seconds": 0.5144919579979614
+        },
+        {
+          "audio": "Web/public/demo-voices/daniel-median.wav",
+          "sha256": "aefc6157cdc9ac4289e4f363b1bbc4cd6d1ea0c84faf14e519e522ada3930bb2",
+          "reference": "Find the median of two, four, eight, ten.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the median of 2, 4, 8, 10.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "median",
+            "of",
+            "2",
+            "4",
+            "8",
+            "10"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "median",
+            "of",
+            "2",
+            "4",
+            "8",
+            "10"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 3.908707482993197,
+          "inference_seconds": 0.5334097500017378
+        },
+        {
+          "audio": "Web/public/demo-voices/daniel-outliers.wav",
+          "sha256": "70bd1821a99cb5813fde9a8926ec4bf5344d21beff4265cf1e4db159d3a7946e",
+          "reference": "Find outliers.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find out, Liz.",
+          "normalized_reference": [
+            "find",
+            "outliers"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "out",
+            "liz"
+          ],
+          "word_errors": 2,
+          "reference_words": 2,
+          "exact": false,
+          "audio_seconds": 1.3429024943310657,
+          "inference_seconds": 0.2616596660009236
+        },
+        {
+          "audio": "Web/public/demo-voices/karen-equation.wav",
+          "sha256": "7fd3e8e180f5a929657ad1440d7047494d7f93717580e26234a7c8a871509a4e",
+          "reference": "Write two x plus three equals eleven.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Rut 2x plus 3 equals 11.",
+          "normalized_reference": [
+            "write",
+            "2",
+            "x",
+            "plus",
+            "3",
+            "equals",
+            "11"
+          ],
+          "normalized_hypothesis": [
+            "rut",
+            "2",
+            "x",
+            "plus",
+            "3",
+            "equals",
+            "11"
+          ],
+          "word_errors": 1,
+          "reference_words": 7,
+          "exact": false,
+          "audio_seconds": 2.749705215419501,
+          "inference_seconds": 0.5691724589996738
+        },
+        {
+          "audio": "Web/public/demo-voices/karen-step.wav",
+          "sha256": "fa1c54d3ff4270ececcc3b58dafdbcaa2059071e0d9b09187fc26d66a92382af",
+          "reference": "Subtract three from both sides.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Subtract 3 from both sides",
+          "normalized_reference": [
+            "subtract",
+            "3",
+            "from",
+            "both",
+            "sides"
+          ],
+          "normalized_hypothesis": [
+            "subtract",
+            "3",
+            "from",
+            "both",
+            "sides"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 2.335328798185941,
+          "inference_seconds": 0.35261324999737553
+        },
+        {
+          "audio": "Web/public/demo-voices/karen-median.wav",
+          "sha256": "9117ebfadc5e62a5d1addaab371127d647dd4beca845a7b40997343cbdd6936a",
+          "reference": "Find the median of two, four, eight, ten.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the median of 2, 4, 8, 10.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "median",
+            "of",
+            "2",
+            "4",
+            "8",
+            "10"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "median",
+            "of",
+            "2",
+            "4",
+            "8",
+            "10"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 3.7672562358276642,
+          "inference_seconds": 0.43763100000069244
+        },
+        {
+          "audio": "Web/public/demo-voices/karen-outliers.wav",
+          "sha256": "9078666902ea95181fe5fd806ca86ff725bcb90bec79d6cf7cb1a7cad80cfb15",
+          "reference": "Find outliers.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find Out layers",
+          "normalized_reference": [
+            "find",
+            "outliers"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "out",
+            "layers"
+          ],
+          "word_errors": 2,
+          "reference_words": 2,
+          "exact": false,
+          "audio_seconds": 1.2827210884353741,
+          "inference_seconds": 0.4811630830008653
+        },
+        {
+          "audio": "Web/public/demo-voices/rishi-equation.wav",
+          "sha256": "4872983dde938326c774a803d8e89d3ffe6594831abd06dbfd5d5515e4ea0a8d",
+          "reference": "Write two x plus three equals eleven.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " write to x plus 3 equals 11.",
+          "normalized_reference": [
+            "write",
+            "2",
+            "x",
+            "plus",
+            "3",
+            "equals",
+            "11"
+          ],
+          "normalized_hypothesis": [
+            "write",
+            "to",
+            "x",
+            "plus",
+            "3",
+            "equals",
+            "11"
+          ],
+          "word_errors": 1,
+          "reference_words": 7,
+          "exact": false,
+          "audio_seconds": 2.839909297052154,
+          "inference_seconds": 0.4552407500013942
+        },
+        {
+          "audio": "Web/public/demo-voices/rishi-step.wav",
+          "sha256": "48d3de2374cb4c8f7f8264dbba2eb8c09df720c0d87a55e9d0dcdc8a1546092f",
+          "reference": "Subtract three from both sides.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Subtract 3 from both sides.",
+          "normalized_reference": [
+            "subtract",
+            "3",
+            "from",
+            "both",
+            "sides"
+          ],
+          "normalized_hypothesis": [
+            "subtract",
+            "3",
+            "from",
+            "both",
+            "sides"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 2.489795918367347,
+          "inference_seconds": 1.3222746249994088
+        },
+        {
+          "audio": "Web/public/demo-voices/rishi-median.wav",
+          "sha256": "30d80f23274951d5ff6d3be89b55d27c26a56b3a8c1cdeff765c73e31cea6c28",
+          "reference": "Find the median of two, four, eight, ten.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the median of 2, 4, 8, 10.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "median",
+            "of",
+            "2",
+            "4",
+            "8",
+            "10"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "median",
+            "of",
+            "2",
+            "4",
+            "8",
+            "10"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 3.60453514739229,
+          "inference_seconds": 1.2999166669978877
+        },
+        {
+          "audio": "Web/public/demo-voices/rishi-outliers.wav",
+          "sha256": "31680c3629e794e9de671cbbcd1d57f117cd54b1b44f2d1df63f1f81c185ca12",
+          "reference": "Find outliers.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find Outleas",
+          "normalized_reference": [
+            "find",
+            "outliers"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "outleas"
+          ],
+          "word_errors": 1,
+          "reference_words": 2,
+          "exact": false,
+          "audio_seconds": 1.3629024943310657,
+          "inference_seconds": 2.4354214159975527
+        },
+        {
+          "audio": "Web/public/demo-voices/natural-conversation/natural-equation.wav",
+          "sha256": "6221fb49b1091a182acb09fa7eea4ff85410e745082933b4b9eda3e41b6c6b20",
+          "reference": "I'm working on eight x plus three equals nineteen. Could you write that for me?",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " I'm working on 8X plus 3 equals 19. Could you write that for me?",
+          "normalized_reference": [
+            "i'm",
+            "working",
+            "on",
+            "8",
+            "x",
+            "plus",
+            "3",
+            "equals",
+            "19",
+            "could",
+            "you",
+            "write",
+            "that",
+            "for",
+            "me"
+          ],
+          "normalized_hypothesis": [
+            "i'm",
+            "working",
+            "on",
+            "8",
+            "x",
+            "plus",
+            "3",
+            "equals",
+            "19",
+            "could",
+            "you",
+            "write",
+            "that",
+            "for",
+            "me"
+          ],
+          "word_errors": 0,
+          "reference_words": 15,
+          "exact": true,
+          "audio_seconds": 4.728416666666667,
+          "inference_seconds": 2.0251808329994674
+        },
+        {
+          "audio": "Web/public/demo-voices/natural-conversation/read-only-suggestion.wav",
+          "sha256": "208d709ed5e2d5d8ce164ceadaef4ca78bfa31a983d499a9371e04d7b0472611",
+          "reference": "How would you get rid of that added three? Don't change it yet.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " How would you get rid of that added free? Don't change it yet.",
+          "normalized_reference": [
+            "how",
+            "would",
+            "you",
+            "get",
+            "rid",
+            "of",
+            "that",
+            "added",
+            "3",
+            "don't",
+            "change",
+            "it",
+            "yet"
+          ],
+          "normalized_hypothesis": [
+            "how",
+            "would",
+            "you",
+            "get",
+            "rid",
+            "of",
+            "that",
+            "added",
+            "free",
+            "don't",
+            "change",
+            "it",
+            "yet"
+          ],
+          "word_errors": 1,
+          "reference_words": 13,
+          "exact": false,
+          "audio_seconds": 3.7435416666666668,
+          "inference_seconds": 1.053177957997832
+        },
+        {
+          "audio": "Web/public/demo-voices/natural-conversation/natural-acceptance.wav",
+          "sha256": "b0721e0de13a2d4129694b0bff9b50088e7f6c189e734837f2cf8b3a78924948",
+          "reference": "Yeah, let's do that.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Yeah, let's do that.",
+          "normalized_reference": [
+            "yeah",
+            "let's",
+            "do",
+            "that"
+          ],
+          "normalized_hypothesis": [
+            "yeah",
+            "let's",
+            "do",
+            "that"
+          ],
+          "word_errors": 0,
+          "reference_words": 4,
+          "exact": true,
+          "audio_seconds": 1.7090833333333333,
+          "inference_seconds": 0.8900380829982169
+        },
+        {
+          "audio": "Web/public/demo-voices/natural-conversation/spoken-correction.wav",
+          "sha256": "907a1f6c353889ddad19e869c5434efbea9b464181875cbc825c12249d354491",
+          "reference": "Actually, take away five instead of three.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Actually, take away 5 instead of 3.",
+          "normalized_reference": [
+            "actually",
+            "take",
+            "away",
+            "5",
+            "instead",
+            "of",
+            "3"
+          ],
+          "normalized_hypothesis": [
+            "actually",
+            "take",
+            "away",
+            "5",
+            "instead",
+            "of",
+            "3"
+          ],
+          "word_errors": 0,
+          "reference_words": 7,
+          "exact": true,
+          "audio_seconds": 3.1146666666666665,
+          "inference_seconds": 0.5713291669999307
+        }
+      ]
+    },
+    {
+      "model": "openai/whisper-base.en",
+      "revision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "load_seconds_including_download": 10.074461291998887,
+      "clips": 79,
+      "normalized_word_error_rate": 0.07432432432432433,
+      "normalized_exact_clips": 60,
+      "total_audio_seconds": 179.43217091836735,
+      "total_inference_seconds": 37.491033705995505,
+      "inference_memory": {
+        "process_peak_rss_mib": 545.390625,
+        "mps_allocated_mib": 278.548583984375,
+        "mps_driver_mib": 1189.25
+      },
+      "lora_backward_probe": {
+        "rank": 8,
+        "trainable_parameters": 294912,
+        "total_parameters": 72888320,
+        "loss": 2.786576271057129,
+        "forward_backward_seconds": 2.5602589169975545,
+        "optimizer_steps": 0,
+        "memory": {
+          "process_peak_rss_mib": 545.390625,
+          "mps_allocated_mib": 280.799072265625,
+          "mps_driver_mib": 2231.65625
+        }
+      },
+      "results": [
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-function.wav",
+          "sha256": "060cd6643a34c325245d38093275782b89defb1d7030df92c44b2f514c55fa57",
+          "reference": "Graph y equals x squared minus four.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " graph y equals x squared minus 4.",
+          "normalized_reference": [
+            "graph",
+            "y",
+            "equals",
+            "x",
+            "squared",
+            "minus",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "graph",
+            "y",
+            "equals",
+            "x",
+            "squared",
+            "minus",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 7,
+          "exact": true,
+          "audio_seconds": 3.0896598639455783,
+          "inference_seconds": 0.5670673749991693
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-range.wav",
+          "sha256": "75c413628d7e8298e121f1a0ae8b55c4dbe273ff5549514726930e479d739792",
+          "reference": "Set graph range from negative five to five.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " set graph range from negative 5 to 5.",
+          "normalized_reference": [
+            "set",
+            "graph",
+            "range",
+            "from",
+            "negative",
+            "5",
+            "to",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "set",
+            "graph",
+            "range",
+            "from",
+            "negative",
+            "5",
+            "to",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 3.1340589569160997,
+          "inference_seconds": 1.1527312919970427
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-intercepts.wav",
+          "sha256": "6073a504076ce43a43a80ff4b4ca4b6c42a63dc66505848d237411e416999571",
+          "reference": "Find the x intercepts.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the X-intercepts.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "x",
+            "intercepts"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "x",
+            "minus",
+            "intercepts"
+          ],
+          "word_errors": 1,
+          "reference_words": 4,
+          "exact": false,
+          "audio_seconds": 1.9814512471655328,
+          "inference_seconds": 0.6637195420007629
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-point.wav",
+          "sha256": "b624db93dc9745de3f7a39a8093e4b45117e8489d9a4f45930818f3a0a24abcd",
+          "reference": "Read graph at x equals three.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Read graph at x equals 3.",
+          "normalized_reference": [
+            "read",
+            "graph",
+            "at",
+            "x",
+            "equals",
+            "3"
+          ],
+          "normalized_hypothesis": [
+            "read",
+            "graph",
+            "at",
+            "x",
+            "equals",
+            "3"
+          ],
+          "word_errors": 0,
+          "reference_words": 6,
+          "exact": true,
+          "audio_seconds": 2.4863038548752834,
+          "inference_seconds": 0.47541424999872106
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-right-triangle.wav",
+          "sha256": "1bdca0e34e5d203a9c6e45e1628a46f59bd8d04f2d82ee43fe9989d4efadf0b4",
+          "reference": "Draw a right triangle with legs three and four.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Draw a right triangle with legs 3 and 4.",
+          "normalized_reference": [
+            "draw",
+            "a",
+            "right",
+            "triangle",
+            "with",
+            "legs",
+            "3",
+            "and",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "draw",
+            "a",
+            "right",
+            "triangle",
+            "with",
+            "legs",
+            "3",
+            "and",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 9,
+          "exact": true,
+          "audio_seconds": 3.054784580498866,
+          "inference_seconds": 0.49120304100142675
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-hypotenuse.wav",
+          "sha256": "d4120df100c176f6e00845fc02d34b1e7b588ef8b70c361d3881ae3fa65ebc5b",
+          "reference": "Find the hypotenuse.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the High Potter News.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "hypotenuse"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "high",
+            "potter",
+            "news"
+          ],
+          "word_errors": 3,
+          "reference_words": 3,
+          "exact": false,
+          "audio_seconds": 1.8537414965986394,
+          "inference_seconds": 0.41412533299808274
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-rectangle.wav",
+          "sha256": "d008597df83935a32809483bc3ca3c61c67ceda3668cd47c4e5466c7816b74b1",
+          "reference": "Create a rectangle with width six and height four.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Create a rectangle with width 6 and height 4.",
+          "normalized_reference": [
+            "create",
+            "a",
+            "rectangle",
+            "with",
+            "width",
+            "6",
+            "and",
+            "height",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "create",
+            "a",
+            "rectangle",
+            "with",
+            "width",
+            "6",
+            "and",
+            "height",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 9,
+          "exact": true,
+          "audio_seconds": 3.1625396825396828,
+          "inference_seconds": 0.4653083750017686
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-dimension-edit.wav",
+          "sha256": "483b50ffbb62a737cf45ca6b83eaf77dde3f2bf5002293800664ebe4ffa9bfa6",
+          "reference": "Change the width to eight.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " change the width to 8.",
+          "normalized_reference": [
+            "change",
+            "the",
+            "width",
+            "to",
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "change",
+            "the",
+            "width",
+            "to",
+            "8"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 1.5909297052154194,
+          "inference_seconds": 0.2812097919995722
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-triangle-area.wav",
+          "sha256": "7c59b88ef407ce9465adefea98b47868eaf0bc87c103796b09d0b6c658b5956d",
+          "reference": "Find the area of a triangle with base ten and height six.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the area of a triangle with base 10 and height 6.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "area",
+            "of",
+            "a",
+            "triangle",
+            "with",
+            "base",
+            "10",
+            "and",
+            "height",
+            "6"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "area",
+            "of",
+            "a",
+            "triangle",
+            "with",
+            "base",
+            "10",
+            "and",
+            "height",
+            "6"
+          ],
+          "word_errors": 0,
+          "reference_words": 12,
+          "exact": true,
+          "audio_seconds": 3.792562358276644,
+          "inference_seconds": 0.8039567499981786
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-circle.wav",
+          "sha256": "23c6e905b095bd1248d0d1632867cba3dc27c19a2d84b6a75acc6029aba7da6e",
+          "reference": "Draw a circle with a radius of five.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Draw a circle with a radius of 5.",
+          "normalized_reference": [
+            "draw",
+            "a",
+            "circle",
+            "with",
+            "a",
+            "radius",
+            "of",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "draw",
+            "a",
+            "circle",
+            "with",
+            "a",
+            "radius",
+            "of",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 2.474331065759637,
+          "inference_seconds": 0.5714613330019347
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-radius-edit.wav",
+          "sha256": "181ffc114fd65723be2f7ecbfc706cc1a5911331eb3b9971633ffafb5ae97e6b",
+          "reference": "Set the radius to seven.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Set the radius to 7.",
+          "normalized_reference": [
+            "set",
+            "the",
+            "radius",
+            "to",
+            "7"
+          ],
+          "normalized_hypothesis": [
+            "set",
+            "the",
+            "radius",
+            "to",
+            "7"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 1.8917913832199547,
+          "inference_seconds": 0.4301058330020169
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-cylinder.wav",
+          "sha256": "dcafcb9733bb19b0fb0da05221d448b0d89a8061d397b2052a14844eef1a9187",
+          "reference": "Create a cylinder with radius two and height five.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Create a cylinder with radius 2 and height 5.",
+          "normalized_reference": [
+            "create",
+            "a",
+            "cylinder",
+            "with",
+            "radius",
+            "2",
+            "and",
+            "height",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "create",
+            "a",
+            "cylinder",
+            "with",
+            "radius",
+            "2",
+            "and",
+            "height",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 9,
+          "exact": true,
+          "audio_seconds": 3.0696598639455783,
+          "inference_seconds": 0.4887862909999967
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-volume.wav",
+          "sha256": "f1214a1b1c4a48565b062f750d5319663d4a8c56b7b09a1d3ebbdb3f9ecf3ddf",
+          "reference": "Find its volume.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find its volume.",
+          "normalized_reference": [
+            "find",
+            "its",
+            "volume"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "its",
+            "volume"
+          ],
+          "word_errors": 0,
+          "reference_words": 3,
+          "exact": true,
+          "audio_seconds": 1.6447619047619049,
+          "inference_seconds": 0.3747534579997591
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-triangle-sides.wav",
+          "sha256": "3a6aed321cf729a5a0155f057cbecbd8bbb62395e564ab622f3766afabeb5f2c",
+          "reference": "Triangle with sides three, four, five.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Triangle with sides 3, 4, 5.",
+          "normalized_reference": [
+            "triangle",
+            "with",
+            "sides",
+            "3",
+            "4",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "triangle",
+            "with",
+            "sides",
+            "3",
+            "4",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 6,
+          "exact": true,
+          "audio_seconds": 3.5128344671201814,
+          "inference_seconds": 0.5050488749984652
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-angle.wav",
+          "sha256": "deb77af2d9aae90482b474f7a39332e990769df5d2a32fe6733a45327e53898b",
+          "reference": "Find angle C.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find Angles E",
+          "normalized_reference": [
+            "find",
+            "angle",
+            "c"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "angles",
+            "e"
+          ],
+          "word_errors": 2,
+          "reference_words": 3,
+          "exact": false,
+          "audio_seconds": 1.4938321995464852,
+          "inference_seconds": 0.3195435419984278
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-missing-height.wav",
+          "sha256": "75f0717d74dbf05c6729c03647f2ca87fe607815a5c4d58367416b789b9faf0a",
+          "reference": "Rectangle width six.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " rectangle width 6.",
+          "normalized_reference": [
+            "rectangle",
+            "width",
+            "6"
+          ],
+          "normalized_hypothesis": [
+            "rectangle",
+            "width",
+            "6"
+          ],
+          "word_errors": 0,
+          "reference_words": 3,
+          "exact": true,
+          "audio_seconds": 1.7664852607709751,
+          "inference_seconds": 0.2396212089988694
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-height-reply.wav",
+          "sha256": "45ad4deee2f6fa99cd61d162c8c0543f5a5c3b56e2756392a463154adfd18577",
+          "reference": "Four.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " 4.",
+          "normalized_reference": [
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 1,
+          "exact": true,
+          "audio_seconds": 0.7623582766439909,
+          "inference_seconds": 0.3247616670014395
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-function.wav",
+          "sha256": "5a6b7d1a8dc5e96e39030c3b42ac3f2043100f337ab8ea6aa12dcb4b0049f8a3",
+          "reference": "Graph y equals x squared minus four.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " graph y equals x squared minus 4.",
+          "normalized_reference": [
+            "graph",
+            "y",
+            "equals",
+            "x",
+            "squared",
+            "minus",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "graph",
+            "y",
+            "equals",
+            "x",
+            "squared",
+            "minus",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 7,
+          "exact": true,
+          "audio_seconds": 2.8989569160997735,
+          "inference_seconds": 0.4013804579990392
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-range.wav",
+          "sha256": "afbefdf273efec9758f32290673836bad248a741075d02ac394a30a6ac65f120",
+          "reference": "Set graph range from negative five to five.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Set graph range from negative 5 to 5.",
+          "normalized_reference": [
+            "set",
+            "graph",
+            "range",
+            "from",
+            "negative",
+            "5",
+            "to",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "set",
+            "graph",
+            "range",
+            "from",
+            "negative",
+            "5",
+            "to",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 2.950748299319728,
+          "inference_seconds": 0.5414870000022347
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-intercepts.wav",
+          "sha256": "8bf9532085725175066ba3ce8098e2d9e143bf1147cfe46f487877ab7c487b2c",
+          "reference": "Find the x intercepts.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the X-intercepts.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "x",
+            "intercepts"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "x",
+            "minus",
+            "intercepts"
+          ],
+          "word_errors": 1,
+          "reference_words": 4,
+          "exact": false,
+          "audio_seconds": 1.9909297052154196,
+          "inference_seconds": 0.4750843330002681
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-point.wav",
+          "sha256": "9df18eb962512e0f90ea4d03e80122ad945b127cc97d5c2336b5a433a4145a27",
+          "reference": "Read graph at x equals three.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Read Graph at x equals 3.",
+          "normalized_reference": [
+            "read",
+            "graph",
+            "at",
+            "x",
+            "equals",
+            "3"
+          ],
+          "normalized_hypothesis": [
+            "read",
+            "graph",
+            "at",
+            "x",
+            "equals",
+            "3"
+          ],
+          "word_errors": 0,
+          "reference_words": 6,
+          "exact": true,
+          "audio_seconds": 2.2521995464852607,
+          "inference_seconds": 0.615789166000468
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-right-triangle.wav",
+          "sha256": "728abeb249c3617134940a5dc943a40850870e4e44e2040745d77cf237bdca56",
+          "reference": "Draw a right triangle with legs three and four.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Draw a right triangle with legs 3 and 4",
+          "normalized_reference": [
+            "draw",
+            "a",
+            "right",
+            "triangle",
+            "with",
+            "legs",
+            "3",
+            "and",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "draw",
+            "a",
+            "right",
+            "triangle",
+            "with",
+            "legs",
+            "3",
+            "and",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 9,
+          "exact": true,
+          "audio_seconds": 2.935328798185941,
+          "inference_seconds": 0.5757872920003138
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-hypotenuse.wav",
+          "sha256": "d45d16efc9cda8f2be5ba76aaf12a70afe627e91ae1a05600f6e0db1658d6b9c",
+          "reference": "Find the hypotenuse.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the high pot and use.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "hypotenuse"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "high",
+            "pot",
+            "and",
+            "use"
+          ],
+          "word_errors": 4,
+          "reference_words": 3,
+          "exact": false,
+          "audio_seconds": 1.7471201814058956,
+          "inference_seconds": 0.5503669589998026
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-rectangle.wav",
+          "sha256": "c0c9eba3ebd0e01838d523ccb31507ce272e1dc7997c5fceee1852284647e946",
+          "reference": "Create a rectangle with width six and height four.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Create a rectangle with width 6 and height 4.",
+          "normalized_reference": [
+            "create",
+            "a",
+            "rectangle",
+            "with",
+            "width",
+            "6",
+            "and",
+            "height",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "create",
+            "a",
+            "rectangle",
+            "with",
+            "width",
+            "6",
+            "and",
+            "height",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 9,
+          "exact": true,
+          "audio_seconds": 2.9095691609977323,
+          "inference_seconds": 0.5468637500016484
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-dimension-edit.wav",
+          "sha256": "3cce6d987681a6f540f58007bc787e306fc32a90c694896390cee1ff0a2a7dea",
+          "reference": "Change the width to eight.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " change the width to age.",
+          "normalized_reference": [
+            "change",
+            "the",
+            "width",
+            "to",
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "change",
+            "the",
+            "width",
+            "to",
+            "age"
+          ],
+          "word_errors": 1,
+          "reference_words": 5,
+          "exact": false,
+          "audio_seconds": 1.7249433106575964,
+          "inference_seconds": 0.5124212500013527
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-triangle-area.wav",
+          "sha256": "0bde50384cf0f9cbcdbe6c6d873a1261f04ad0e495bceb2b1b2f1f0aeb11d1db",
+          "reference": "Find the area of a triangle with base ten and height six.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the area of a triangle with base 10 and height 6.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "area",
+            "of",
+            "a",
+            "triangle",
+            "with",
+            "base",
+            "10",
+            "and",
+            "height",
+            "6"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "area",
+            "of",
+            "a",
+            "triangle",
+            "with",
+            "base",
+            "10",
+            "and",
+            "height",
+            "6"
+          ],
+          "word_errors": 0,
+          "reference_words": 12,
+          "exact": true,
+          "audio_seconds": 3.8136961451247164,
+          "inference_seconds": 0.4827729169992381
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-circle.wav",
+          "sha256": "c98faffd5a67c05ed3fbf91f60a1041a5fd8b462587916f6f1c46558f330485b",
+          "reference": "Draw a circle with a radius of five.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Draw a circle with a radius of 5.",
+          "normalized_reference": [
+            "draw",
+            "a",
+            "circle",
+            "with",
+            "a",
+            "radius",
+            "of",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "draw",
+            "a",
+            "circle",
+            "with",
+            "a",
+            "radius",
+            "of",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 2.4360997732426304,
+          "inference_seconds": 0.5487359170001582
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-radius-edit.wav",
+          "sha256": "cd93ee0cfddc1e8c90cd8a030e35c9ad9c200a2cf959c0f6a9b33779d4d4dddb",
+          "reference": "Set the radius to seven.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Set the radius to 7.",
+          "normalized_reference": [
+            "set",
+            "the",
+            "radius",
+            "to",
+            "7"
+          ],
+          "normalized_hypothesis": [
+            "set",
+            "the",
+            "radius",
+            "to",
+            "7"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 1.824580498866213,
+          "inference_seconds": 0.46192824999889126
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-cylinder.wav",
+          "sha256": "131c2c99fd9b0ca72fd73cfc1406d3c9eec5a697d80c575f8245933f800cdc3c",
+          "reference": "Create a cylinder with radius two and height five.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Create a cylinder with radius 2 and height 5.",
+          "normalized_reference": [
+            "create",
+            "a",
+            "cylinder",
+            "with",
+            "radius",
+            "2",
+            "and",
+            "height",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "create",
+            "a",
+            "cylinder",
+            "with",
+            "radius",
+            "2",
+            "and",
+            "height",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 9,
+          "exact": true,
+          "audio_seconds": 3.1075736961451246,
+          "inference_seconds": 0.5307107080006972
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-volume.wav",
+          "sha256": "2ad3c1fd3b9327606901df1b04082fadee5abf4eda80598294a5b02f064ecd7a",
+          "reference": "Find its volume.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find its volume",
+          "normalized_reference": [
+            "find",
+            "its",
+            "volume"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "its",
+            "volume"
+          ],
+          "word_errors": 0,
+          "reference_words": 3,
+          "exact": true,
+          "audio_seconds": 1.4220408163265306,
+          "inference_seconds": 0.23114966699722572
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-triangle-sides.wav",
+          "sha256": "4731448330134e454967366c5c831cc7bd49eb145e1b9f0f56341ae8c41cbd7b",
+          "reference": "Triangle with sides three, four, five.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " triangle with sides 3, 4, 5.",
+          "normalized_reference": [
+            "triangle",
+            "with",
+            "sides",
+            "3",
+            "4",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "triangle",
+            "with",
+            "sides",
+            "3",
+            "4",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 6,
+          "exact": true,
+          "audio_seconds": 3.3811791383219956,
+          "inference_seconds": 0.48812862500199117
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-angle.wav",
+          "sha256": "23b844b10dde6ccf879aead4b6c2e5da9edca2590751c79e8a2638284619d502",
+          "reference": "Find angle C.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find Angles E",
+          "normalized_reference": [
+            "find",
+            "angle",
+            "c"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "angles",
+            "e"
+          ],
+          "word_errors": 2,
+          "reference_words": 3,
+          "exact": false,
+          "audio_seconds": 1.3872108843537414,
+          "inference_seconds": 0.33905916699950467
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-missing-height.wav",
+          "sha256": "d7c1f91236402cc596fa91d718841a0723d0dad6713138bec3691da20f508854",
+          "reference": "Rectangle width six.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Rectangle with Sigs",
+          "normalized_reference": [
+            "rectangle",
+            "width",
+            "6"
+          ],
+          "normalized_hypothesis": [
+            "rectangle",
+            "with",
+            "sigs"
+          ],
+          "word_errors": 2,
+          "reference_words": 3,
+          "exact": false,
+          "audio_seconds": 1.6815873015873015,
+          "inference_seconds": 0.35336800000004587
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-height-reply.wav",
+          "sha256": "37b15fae1bfef1a63eaea426322cc3e42fec12a3dbb9a1858246604f38a0f669",
+          "reference": "Four.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " 4",
+          "normalized_reference": [
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 1,
+          "exact": true,
+          "audio_seconds": 0.7138321995464852,
+          "inference_seconds": 0.357958291999239
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-function.wav",
+          "sha256": "61fe17451e6ddbf12c977eefb3c7500eb66d7eb2b11bade08a8549b92fac78af",
+          "reference": "Graph y equals x squared minus four.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " graph y equals x squared minus 4.",
+          "normalized_reference": [
+            "graph",
+            "y",
+            "equals",
+            "x",
+            "squared",
+            "minus",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "graph",
+            "y",
+            "equals",
+            "x",
+            "squared",
+            "minus",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 7,
+          "exact": true,
+          "audio_seconds": 3.01437641723356,
+          "inference_seconds": 0.2743635830011044
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-range.wav",
+          "sha256": "d892dd460b8bd2ca7460350fdcf6636d338f0fd3abdb91f745c13aa033b61b88",
+          "reference": "Set graph range from negative five to five.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Set graph range from negative 5 to 5.",
+          "normalized_reference": [
+            "set",
+            "graph",
+            "range",
+            "from",
+            "negative",
+            "5",
+            "to",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "set",
+            "graph",
+            "range",
+            "from",
+            "negative",
+            "5",
+            "to",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 3.2096145124716555,
+          "inference_seconds": 0.5363774159995955
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-intercepts.wav",
+          "sha256": "6bf18bbf61f747fefbaa3c91108cc35662ecccc0ec50373dcdd41b9158cebf78",
+          "reference": "Find the x intercepts.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the X-intercepts.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "x",
+            "intercepts"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "x",
+            "minus",
+            "intercepts"
+          ],
+          "word_errors": 1,
+          "reference_words": 4,
+          "exact": false,
+          "audio_seconds": 2.082721088435374,
+          "inference_seconds": 0.4472866670002986
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-point.wav",
+          "sha256": "b8223fbc67b7fcaeccd2fb1071a4a236ca1f3301edbde33bb612f1a755dda4bc",
+          "reference": "Read graph at x equals three.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " read graph at x equals 3.",
+          "normalized_reference": [
+            "read",
+            "graph",
+            "at",
+            "x",
+            "equals",
+            "3"
+          ],
+          "normalized_hypothesis": [
+            "read",
+            "graph",
+            "at",
+            "x",
+            "equals",
+            "3"
+          ],
+          "word_errors": 0,
+          "reference_words": 6,
+          "exact": true,
+          "audio_seconds": 2.5496598639455783,
+          "inference_seconds": 0.4960590000009688
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-right-triangle.wav",
+          "sha256": "0c287c7b8fe2b914b426cd3d3faa4dd6af42f5866169c8f6d64cf860b8bed9dd",
+          "reference": "Draw a right triangle with legs three and four.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " draw a right triangle with legs 3 and 4.",
+          "normalized_reference": [
+            "draw",
+            "a",
+            "right",
+            "triangle",
+            "with",
+            "legs",
+            "3",
+            "and",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "draw",
+            "a",
+            "right",
+            "triangle",
+            "with",
+            "legs",
+            "3",
+            "and",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 9,
+          "exact": true,
+          "audio_seconds": 3.153832199546485,
+          "inference_seconds": 0.4505442920017231
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-hypotenuse.wav",
+          "sha256": "9b0390bd001c32a1a74589c5498ec636545d5dc7a250c9bd33f7139e0410a463",
+          "reference": "Find the hypotenuse.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the hypotenuse.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "hypotenuse"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "hypotenuse"
+          ],
+          "word_errors": 0,
+          "reference_words": 3,
+          "exact": true,
+          "audio_seconds": 1.8389115646258503,
+          "inference_seconds": 0.32971283300139476
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-rectangle.wav",
+          "sha256": "7c157cf19bbe9a63c1e688f8da01ce4122d5fdbc38ba1db9cdeb1e051b2013ac",
+          "reference": "Create a rectangle with width six and height four.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Create a rectangle with width 6 and height 4.",
+          "normalized_reference": [
+            "create",
+            "a",
+            "rectangle",
+            "with",
+            "width",
+            "6",
+            "and",
+            "height",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "create",
+            "a",
+            "rectangle",
+            "with",
+            "width",
+            "6",
+            "and",
+            "height",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 9,
+          "exact": true,
+          "audio_seconds": 3.335419501133787,
+          "inference_seconds": 0.48964074999821605
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-dimension-edit.wav",
+          "sha256": "e398930b65e97ee56fab7fabc20ff0663ade46089f6733f6331c7f15cc2bae63",
+          "reference": "Change the width to eight.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Change the width to 8.",
+          "normalized_reference": [
+            "change",
+            "the",
+            "width",
+            "to",
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "change",
+            "the",
+            "width",
+            "to",
+            "8"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 1.7023582766439909,
+          "inference_seconds": 0.44663629199931165
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-triangle-area.wav",
+          "sha256": "0360fe15d51d40cc44cf453ecaea6d2bee2999c4c032397917f9f16ab6e984bf",
+          "reference": "Find the area of a triangle with base ten and height six.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the area of a triangle with base 10 and height 6.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "area",
+            "of",
+            "a",
+            "triangle",
+            "with",
+            "base",
+            "10",
+            "and",
+            "height",
+            "6"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "area",
+            "of",
+            "a",
+            "triangle",
+            "with",
+            "base",
+            "10",
+            "and",
+            "height",
+            "6"
+          ],
+          "word_errors": 0,
+          "reference_words": 12,
+          "exact": true,
+          "audio_seconds": 4.288616780045351,
+          "inference_seconds": 0.7658302499985439
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-circle.wav",
+          "sha256": "b2f36ef661af06b241a47690c478d5fd380eaf945e87ba74077f046efe9dd63d",
+          "reference": "Draw a circle with a radius of five.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Draw a circle with a radius of 5.",
+          "normalized_reference": [
+            "draw",
+            "a",
+            "circle",
+            "with",
+            "a",
+            "radius",
+            "of",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "draw",
+            "a",
+            "circle",
+            "with",
+            "a",
+            "radius",
+            "of",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 2.735873015873016,
+          "inference_seconds": 0.6810967909987085
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-radius-edit.wav",
+          "sha256": "15e29d5bbeee1570a5c25b7655fda42e69edf2c22eb30503ae13271fe1c05471",
+          "reference": "Set the radius to seven.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Set the radius to 7.",
+          "normalized_reference": [
+            "set",
+            "the",
+            "radius",
+            "to",
+            "7"
+          ],
+          "normalized_hypothesis": [
+            "set",
+            "the",
+            "radius",
+            "to",
+            "7"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 1.9905668934240364,
+          "inference_seconds": 0.6507980829992448
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-cylinder.wav",
+          "sha256": "4a9a2ad7b2cd5699b36d9c91ac041b183f9501e3075026d074421acd75669edc",
+          "reference": "Create a cylinder with radius two and height five.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Create a cylinder with radius 2 and height 5.",
+          "normalized_reference": [
+            "create",
+            "a",
+            "cylinder",
+            "with",
+            "radius",
+            "2",
+            "and",
+            "height",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "create",
+            "a",
+            "cylinder",
+            "with",
+            "radius",
+            "2",
+            "and",
+            "height",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 9,
+          "exact": true,
+          "audio_seconds": 3.4747392290249435,
+          "inference_seconds": 1.2497742919986194
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-volume.wav",
+          "sha256": "045d9527c8c4b71e8d1b5748f21c0fe6d4bfc60e36cae0c7fb28179b33307c71",
+          "reference": "Find its volume.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " find its volume.",
+          "normalized_reference": [
+            "find",
+            "its",
+            "volume"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "its",
+            "volume"
+          ],
+          "word_errors": 0,
+          "reference_words": 3,
+          "exact": true,
+          "audio_seconds": 1.6531519274376418,
+          "inference_seconds": 0.39386704199932865
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-triangle-sides.wav",
+          "sha256": "bb6e04c5e2b33caf5d0b9ab3f2524c0eea99fb35f006a29a47fae69d4726aa17",
+          "reference": "Triangle with sides three, four, five.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " triangle with sides 3, 4, 5",
+          "normalized_reference": [
+            "triangle",
+            "with",
+            "sides",
+            "3",
+            "4",
+            "5"
+          ],
+          "normalized_hypothesis": [
+            "triangle",
+            "with",
+            "sides",
+            "3",
+            "4",
+            "5"
+          ],
+          "word_errors": 0,
+          "reference_words": 6,
+          "exact": true,
+          "audio_seconds": 3.402358276643991,
+          "inference_seconds": 0.5151845830005186
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-angle.wav",
+          "sha256": "45d3b7ae9bf09fce7e705125bd65e308ff55eb7c24b68158ddd652acc7eaa821",
+          "reference": "Find angle C.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find angle C",
+          "normalized_reference": [
+            "find",
+            "angle",
+            "c"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "angle",
+            "c"
+          ],
+          "word_errors": 0,
+          "reference_words": 3,
+          "exact": true,
+          "audio_seconds": 1.4906122448979593,
+          "inference_seconds": 0.3509062500015716
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-missing-height.wav",
+          "sha256": "769bc99d5c61ef9e40507da18944c3efba0949e125f92f3f268f82af71621883",
+          "reference": "Rectangle width six.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " rectangle width 6.",
+          "normalized_reference": [
+            "rectangle",
+            "width",
+            "6"
+          ],
+          "normalized_hypothesis": [
+            "rectangle",
+            "width",
+            "6"
+          ],
+          "word_errors": 0,
+          "reference_words": 3,
+          "exact": true,
+          "audio_seconds": 1.8298412698412698,
+          "inference_seconds": 0.24796679100109031
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-height-reply.wav",
+          "sha256": "ed31670f0552a77fc73cbd0fbd4f3394bfeaf5e72d73f44519484bfee2e874e8",
+          "reference": "Four.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " 4.",
+          "normalized_reference": [
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 1,
+          "exact": true,
+          "audio_seconds": 0.561814058956916,
+          "inference_seconds": 0.32671158400262357
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-width-reply.wav",
+          "sha256": "1ac58c5c3fa387f09c102279fb7ddcedbe464de5617ffc3cb69da4d77dda0dc7",
+          "reference": "Eight.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " 8.",
+          "normalized_reference": [
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "8"
+          ],
+          "word_errors": 0,
+          "reference_words": 1,
+          "exact": true,
+          "audio_seconds": 0.5710657596371882,
+          "inference_seconds": 0.36243945800015354
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-height-confirm.wav",
+          "sha256": "720cdb969d0d294149ca83d275351db9586f118ff85f2b0e6b672ea91cf97431",
+          "reference": "Height four.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Hide for",
+          "normalized_reference": [
+            "height",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "hide",
+            "for"
+          ],
+          "word_errors": 2,
+          "reference_words": 2,
+          "exact": false,
+          "audio_seconds": 1.0254421768707482,
+          "inference_seconds": 0.22613520799859543
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-width-reply.wav",
+          "sha256": "4c9b0fdae10b18c9d57109bf6724e8de261de0a4448859a1d5c5bdf4bfa46121",
+          "reference": "Eight.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " aid.",
+          "normalized_reference": [
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "aid"
+          ],
+          "word_errors": 1,
+          "reference_words": 1,
+          "exact": false,
+          "audio_seconds": 0.6092063492063492,
+          "inference_seconds": 0.28848166699754074
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-height-confirm.wav",
+          "sha256": "93cd3987785530a0036c76db6c8c2f25b3ee69a843e6c7c800eb770856d57407",
+          "reference": "Height four.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Hardfall",
+          "normalized_reference": [
+            "height",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "hardfall"
+          ],
+          "word_errors": 2,
+          "reference_words": 2,
+          "exact": false,
+          "audio_seconds": 0.9706575963718821,
+          "inference_seconds": 0.2523831250000512
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-width-reply.wav",
+          "sha256": "a2ea44d473e70c2779c8c79570e625c15da18e033eff25663281f69c90291cc9",
+          "reference": "Eight.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " it",
+          "normalized_reference": [
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "it"
+          ],
+          "word_errors": 1,
+          "reference_words": 1,
+          "exact": false,
+          "audio_seconds": 0.6616326530612245,
+          "inference_seconds": 0.19083629200031282
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-height-confirm.wav",
+          "sha256": "faf4366537c8c0335745218bd5dca26f9f5b2c3ba47b5a6562ba38ac0a5d1952",
+          "reference": "Height four.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Hide for",
+          "normalized_reference": [
+            "height",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "hide",
+            "for"
+          ],
+          "word_errors": 2,
+          "reference_words": 2,
+          "exact": false,
+          "audio_seconds": 0.8773696145124716,
+          "inference_seconds": 0.3067284999997355
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-width-clear-reply.wav",
+          "sha256": "0c859a46c8efb7f584d630940a01e4c18780e04414f97864a7f722c3b6bca921",
+          "reference": "The width should be eight.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " The width should be 8.",
+          "normalized_reference": [
+            "the",
+            "width",
+            "should",
+            "be",
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "the",
+            "width",
+            "should",
+            "be",
+            "8"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 1.3804988662131519,
+          "inference_seconds": 0.3494447910015879
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/daniel-height-clear-reply.wav",
+          "sha256": "7d023d985ae644dd2404070abeea8194617187a2d4aed6a65cb6617c52bde645",
+          "reference": "The height is four.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " The height is 4.",
+          "normalized_reference": [
+            "the",
+            "height",
+            "is",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "the",
+            "height",
+            "is",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 4,
+          "exact": true,
+          "audio_seconds": 1.3571882086167801,
+          "inference_seconds": 0.3503533749972121
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-width-clear-reply.wav",
+          "sha256": "f45077d7204a86eafec6fa9c45895c2efee06c4ead01e9fa29967605794d72af",
+          "reference": "The width should be eight.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " The width should be aid.",
+          "normalized_reference": [
+            "the",
+            "width",
+            "should",
+            "be",
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "the",
+            "width",
+            "should",
+            "be",
+            "aid"
+          ],
+          "word_errors": 1,
+          "reference_words": 5,
+          "exact": false,
+          "audio_seconds": 1.4519274376417233,
+          "inference_seconds": 0.3994367500017688
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/karen-height-clear-reply.wav",
+          "sha256": "a3451d02c346da64dc91fbcf5be0d9d68e1bf683d8d97ec3625c842df73ff5a5",
+          "reference": "The height is four.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " The heart is full",
+          "normalized_reference": [
+            "the",
+            "height",
+            "is",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "the",
+            "heart",
+            "is",
+            "full"
+          ],
+          "word_errors": 2,
+          "reference_words": 4,
+          "exact": false,
+          "audio_seconds": 1.1965079365079365,
+          "inference_seconds": 0.25960583300184226
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-width-clear-reply.wav",
+          "sha256": "36f1b08ef4fa4b6c1670c651398a489133321a4453654da5390766332dbe38e6",
+          "reference": "The width should be eight.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " The width should be 8.",
+          "normalized_reference": [
+            "the",
+            "width",
+            "should",
+            "be",
+            "8"
+          ],
+          "normalized_hypothesis": [
+            "the",
+            "width",
+            "should",
+            "be",
+            "8"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 1.5981859410430839,
+          "inference_seconds": 0.45605391599747236
+        },
+        {
+          "audio": "Web/public/demo-voices/graph-geometry/rishi-height-clear-reply.wav",
+          "sha256": "b9ce60e3d79184582e9a969dbe6270fbe3d7876ace5c38addc685c896ea18285",
+          "reference": "The height is four.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " The height is 4.",
+          "normalized_reference": [
+            "the",
+            "height",
+            "is",
+            "4"
+          ],
+          "normalized_hypothesis": [
+            "the",
+            "height",
+            "is",
+            "4"
+          ],
+          "word_errors": 0,
+          "reference_words": 4,
+          "exact": true,
+          "audio_seconds": 1.2614965986394557,
+          "inference_seconds": 0.2693972919987573
+        },
+        {
+          "audio": "Web/public/demo-voices/daniel-equation.wav",
+          "sha256": "fecf429d7526b2908843a43f200dc1d8a929b17898dfda8d73bff4f78d0bd2d9",
+          "reference": "Write two x plus three equals eleven.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " write 2 x plus 3 equals 11.",
+          "normalized_reference": [
+            "write",
+            "2",
+            "x",
+            "plus",
+            "3",
+            "equals",
+            "11"
+          ],
+          "normalized_hypothesis": [
+            "write",
+            "2",
+            "x",
+            "plus",
+            "3",
+            "equals",
+            "11"
+          ],
+          "word_errors": 0,
+          "reference_words": 7,
+          "exact": true,
+          "audio_seconds": 2.7997732426303856,
+          "inference_seconds": 0.6632505000015954
+        },
+        {
+          "audio": "Web/public/demo-voices/daniel-step.wav",
+          "sha256": "8a2189b916dc05c896a537df16af4fdab649319b417afd34adb5020b70d807c1",
+          "reference": "Subtract three from both sides.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " subtract 3 from both sides.",
+          "normalized_reference": [
+            "subtract",
+            "3",
+            "from",
+            "both",
+            "sides"
+          ],
+          "normalized_hypothesis": [
+            "subtract",
+            "3",
+            "from",
+            "both",
+            "sides"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 2.437596371882086,
+          "inference_seconds": 0.5353572919993894
+        },
+        {
+          "audio": "Web/public/demo-voices/daniel-median.wav",
+          "sha256": "aefc6157cdc9ac4289e4f363b1bbc4cd6d1ea0c84faf14e519e522ada3930bb2",
+          "reference": "Find the median of two, four, eight, ten.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the median of 2, 4, 8, 10.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "median",
+            "of",
+            "2",
+            "4",
+            "8",
+            "10"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "median",
+            "of",
+            "2",
+            "4",
+            "8",
+            "10"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 3.908707482993197,
+          "inference_seconds": 0.6434824579991982
+        },
+        {
+          "audio": "Web/public/demo-voices/daniel-outliers.wav",
+          "sha256": "70bd1821a99cb5813fde9a8926ec4bf5344d21beff4265cf1e4db159d3a7946e",
+          "reference": "Find outliers.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find out Liz.",
+          "normalized_reference": [
+            "find",
+            "outliers"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "out",
+            "liz"
+          ],
+          "word_errors": 2,
+          "reference_words": 2,
+          "exact": false,
+          "audio_seconds": 1.3429024943310657,
+          "inference_seconds": 0.45439329099826864
+        },
+        {
+          "audio": "Web/public/demo-voices/karen-equation.wav",
+          "sha256": "7fd3e8e180f5a929657ad1440d7047494d7f93717580e26234a7c8a871509a4e",
+          "reference": "Write two x plus three equals eleven.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " write 2x plus 3 equals 11.",
+          "normalized_reference": [
+            "write",
+            "2",
+            "x",
+            "plus",
+            "3",
+            "equals",
+            "11"
+          ],
+          "normalized_hypothesis": [
+            "write",
+            "2",
+            "x",
+            "plus",
+            "3",
+            "equals",
+            "11"
+          ],
+          "word_errors": 0,
+          "reference_words": 7,
+          "exact": true,
+          "audio_seconds": 2.749705215419501,
+          "inference_seconds": 0.47357916699911584
+        },
+        {
+          "audio": "Web/public/demo-voices/karen-step.wav",
+          "sha256": "fa1c54d3ff4270ececcc3b58dafdbcaa2059071e0d9b09187fc26d66a92382af",
+          "reference": "Subtract three from both sides.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Subtract three from both sides.",
+          "normalized_reference": [
+            "subtract",
+            "3",
+            "from",
+            "both",
+            "sides"
+          ],
+          "normalized_hypothesis": [
+            "subtract",
+            "3",
+            "from",
+            "both",
+            "sides"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 2.335328798185941,
+          "inference_seconds": 0.49025900000197
+        },
+        {
+          "audio": "Web/public/demo-voices/karen-median.wav",
+          "sha256": "9117ebfadc5e62a5d1addaab371127d647dd4beca845a7b40997343cbdd6936a",
+          "reference": "Find the median of two, four, eight, ten.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the median of 2, 4, 8, 10.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "median",
+            "of",
+            "2",
+            "4",
+            "8",
+            "10"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "median",
+            "of",
+            "2",
+            "4",
+            "8",
+            "10"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 3.7672562358276642,
+          "inference_seconds": 0.5249808330008818
+        },
+        {
+          "audio": "Web/public/demo-voices/karen-outliers.wav",
+          "sha256": "9078666902ea95181fe5fd806ca86ff725bcb90bec79d6cf7cb1a7cad80cfb15",
+          "reference": "Find outliers.",
+          "voice": "Karen",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find Outleers",
+          "normalized_reference": [
+            "find",
+            "outliers"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "outleers"
+          ],
+          "word_errors": 1,
+          "reference_words": 2,
+          "exact": false,
+          "audio_seconds": 1.2827210884353741,
+          "inference_seconds": 0.3896582080014923
+        },
+        {
+          "audio": "Web/public/demo-voices/rishi-equation.wav",
+          "sha256": "4872983dde938326c774a803d8e89d3ffe6594831abd06dbfd5d5515e4ea0a8d",
+          "reference": "Write two x plus three equals eleven.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " write 2x plus 3 equals 11.",
+          "normalized_reference": [
+            "write",
+            "2",
+            "x",
+            "plus",
+            "3",
+            "equals",
+            "11"
+          ],
+          "normalized_hypothesis": [
+            "write",
+            "2",
+            "x",
+            "plus",
+            "3",
+            "equals",
+            "11"
+          ],
+          "word_errors": 0,
+          "reference_words": 7,
+          "exact": true,
+          "audio_seconds": 2.839909297052154,
+          "inference_seconds": 0.41601654199985205
+        },
+        {
+          "audio": "Web/public/demo-voices/rishi-step.wav",
+          "sha256": "48d3de2374cb4c8f7f8264dbba2eb8c09df720c0d87a55e9d0dcdc8a1546092f",
+          "reference": "Subtract three from both sides.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " subtract 3 from both sides.",
+          "normalized_reference": [
+            "subtract",
+            "3",
+            "from",
+            "both",
+            "sides"
+          ],
+          "normalized_hypothesis": [
+            "subtract",
+            "3",
+            "from",
+            "both",
+            "sides"
+          ],
+          "word_errors": 0,
+          "reference_words": 5,
+          "exact": true,
+          "audio_seconds": 2.489795918367347,
+          "inference_seconds": 0.4259145420001005
+        },
+        {
+          "audio": "Web/public/demo-voices/rishi-median.wav",
+          "sha256": "30d80f23274951d5ff6d3be89b55d27c26a56b3a8c1cdeff765c73e31cea6c28",
+          "reference": "Find the median of two, four, eight, ten.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Find the median of 2, 4, 8, 10.",
+          "normalized_reference": [
+            "find",
+            "the",
+            "median",
+            "of",
+            "2",
+            "4",
+            "8",
+            "10"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "the",
+            "median",
+            "of",
+            "2",
+            "4",
+            "8",
+            "10"
+          ],
+          "word_errors": 0,
+          "reference_words": 8,
+          "exact": true,
+          "audio_seconds": 3.60453514739229,
+          "inference_seconds": 0.538033707998693
+        },
+        {
+          "audio": "Web/public/demo-voices/rishi-outliers.wav",
+          "sha256": "31680c3629e794e9de671cbbcd1d57f117cd54b1b44f2d1df63f1f81c185ca12",
+          "reference": "Find outliers.",
+          "voice": "Rishi",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " find out layers.",
+          "normalized_reference": [
+            "find",
+            "outliers"
+          ],
+          "normalized_hypothesis": [
+            "find",
+            "out",
+            "layers"
+          ],
+          "word_errors": 2,
+          "reference_words": 2,
+          "exact": false,
+          "audio_seconds": 1.3629024943310657,
+          "inference_seconds": 0.5473556249999092
+        },
+        {
+          "audio": "Web/public/demo-voices/natural-conversation/natural-equation.wav",
+          "sha256": "6221fb49b1091a182acb09fa7eea4ff85410e745082933b4b9eda3e41b6c6b20",
+          "reference": "I'm working on eight x plus three equals nineteen. Could you write that for me?",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " I'm working on 8x plus 3 equals 19. Could you write that for me?",
+          "normalized_reference": [
+            "i'm",
+            "working",
+            "on",
+            "8",
+            "x",
+            "plus",
+            "3",
+            "equals",
+            "19",
+            "could",
+            "you",
+            "write",
+            "that",
+            "for",
+            "me"
+          ],
+          "normalized_hypothesis": [
+            "i'm",
+            "working",
+            "on",
+            "8",
+            "x",
+            "plus",
+            "3",
+            "equals",
+            "19",
+            "could",
+            "you",
+            "write",
+            "that",
+            "for",
+            "me"
+          ],
+          "word_errors": 0,
+          "reference_words": 15,
+          "exact": true,
+          "audio_seconds": 4.728416666666667,
+          "inference_seconds": 0.7253413750004256
+        },
+        {
+          "audio": "Web/public/demo-voices/natural-conversation/read-only-suggestion.wav",
+          "sha256": "208d709ed5e2d5d8ce164ceadaef4ca78bfa31a983d499a9371e04d7b0472611",
+          "reference": "How would you get rid of that added three? Don't change it yet.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " How would you get rid of that added 3? Don't change it yet.",
+          "normalized_reference": [
+            "how",
+            "would",
+            "you",
+            "get",
+            "rid",
+            "of",
+            "that",
+            "added",
+            "3",
+            "don't",
+            "change",
+            "it",
+            "yet"
+          ],
+          "normalized_hypothesis": [
+            "how",
+            "would",
+            "you",
+            "get",
+            "rid",
+            "of",
+            "that",
+            "added",
+            "3",
+            "don't",
+            "change",
+            "it",
+            "yet"
+          ],
+          "word_errors": 0,
+          "reference_words": 13,
+          "exact": true,
+          "audio_seconds": 3.7435416666666668,
+          "inference_seconds": 0.7274383330004639
+        },
+        {
+          "audio": "Web/public/demo-voices/natural-conversation/natural-acceptance.wav",
+          "sha256": "b0721e0de13a2d4129694b0bff9b50088e7f6c189e734837f2cf8b3a78924948",
+          "reference": "Yeah, let's do that.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Yeah, let's do that.",
+          "normalized_reference": [
+            "yeah",
+            "let's",
+            "do",
+            "that"
+          ],
+          "normalized_hypothesis": [
+            "yeah",
+            "let's",
+            "do",
+            "that"
+          ],
+          "word_errors": 0,
+          "reference_words": 4,
+          "exact": true,
+          "audio_seconds": 1.7090833333333333,
+          "inference_seconds": 0.5259905419989082
+        },
+        {
+          "audio": "Web/public/demo-voices/natural-conversation/spoken-correction.wav",
+          "sha256": "907a1f6c353889ddad19e869c5434efbea9b464181875cbc825c12249d354491",
+          "reference": "Actually, take away five instead of three.",
+          "voice": "Daniel",
+          "source": "macOS installed speech synthesis",
+          "hypothesis": " Actually, take away 5 instead of 3.",
+          "normalized_reference": [
+            "actually",
+            "take",
+            "away",
+            "5",
+            "instead",
+            "of",
+            "3"
+          ],
+          "normalized_hypothesis": [
+            "actually",
+            "take",
+            "away",
+            "5",
+            "instead",
+            "of",
+            "3"
+          ],
+          "word_errors": 0,
+          "reference_words": 7,
+          "exact": true,
+          "audio_seconds": 3.1146666666666665,
+          "inference_seconds": 0.4641198749995965
+        }
+      ]
+    }
+  ],
+  "benchmark_source_sha256": "27192c7337599405d57c107a9709c40269a63cd6f60f57e3cdb47b1409815f4e",
+  "memory_note": "MPS values are snapshots, not measured GPU peaks. Process peak RSS is cumulative across the sequential run; do not add it to driver memory as independent usage.",
+  "timing_note": "Single warmed generation pass per clip; excludes preprocessing and initial Python imports. LoRA backward timing includes first-use compilation and is not a steady-state training estimate."
+}

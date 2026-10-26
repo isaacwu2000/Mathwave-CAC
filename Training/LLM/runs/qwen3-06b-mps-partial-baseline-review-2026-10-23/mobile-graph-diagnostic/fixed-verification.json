@@ -1,0 +1,651 @@
+{
+  "cssSha256": "ddeaad1e8ae8d9f61dc193f9bf88677c2fe9efcf8ff87c1f4579dc7074742611",
+  "results": [
+    {
+      "id": "graph-exponential-base-parameter:2:final",
+      "lane": "Actual unchanged gold prestate from invalid generation; CSS fix verification, no model output applied",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/mobile-graph-diagnostic/graph-exponential-base-parameter-fixed-390.png",
+      "early": [
+        {
+          "tag": "SECTION",
+          "className": "graph-card learnunlock-controls",
+          "width": 390,
+          "height": 422,
+          "maxHeight": "none",
+          "display": "flex"
+        },
+        {
+          "tag": "DIV",
+          "className": "graph-panel-body",
+          "width": 390,
+          "height": 374,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "graph-expressions",
+          "width": 390,
+          "height": 135.03125,
+          "maxHeight": "135.04px",
+          "display": "grid"
+        },
+        {
+          "tag": "DIV",
+          "className": "chart-wrap",
+          "width": 390,
+          "height": 222.96875,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "learnunlock-canvas",
+          "width": 390,
+          "height": 222.96875,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "CANVAS",
+          "className": "",
+          "width": 390,
+          "height": 223,
+          "maxHeight": "none",
+          "display": "block"
+        }
+      ],
+      "late": [
+        {
+          "tag": "SECTION",
+          "className": "graph-card learnunlock-controls",
+          "width": 390,
+          "height": 422,
+          "maxHeight": "none",
+          "display": "flex"
+        },
+        {
+          "tag": "DIV",
+          "className": "graph-panel-body",
+          "width": 390,
+          "height": 374,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "graph-expressions",
+          "width": 390,
+          "height": 135.03125,
+          "maxHeight": "135.04px",
+          "display": "grid"
+        },
+        {
+          "tag": "DIV",
+          "className": "chart-wrap",
+          "width": 390,
+          "height": 222.96875,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "learnunlock-canvas",
+          "width": 390,
+          "height": 222.96875,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "CANVAS",
+          "className": "",
+          "width": 390,
+          "height": 223,
+          "maxHeight": "none",
+          "display": "block"
+        }
+      ],
+      "collapseRestore": {
+        "collapsed": [
+          {
+            "tag": "SECTION",
+            "className": "graph-card learnunlock-controls",
+            "width": 390,
+            "height": 48,
+            "maxHeight": "none",
+            "display": "flex"
+          },
+          {
+            "tag": "DIV",
+            "className": "graph-panel-body",
+            "width": 0,
+            "height": 0,
+            "maxHeight": "none",
+            "display": "none"
+          },
+          {
+            "tag": "DIV",
+            "className": "graph-expressions",
+            "width": 0,
+            "height": 0,
+            "maxHeight": "135.04px",
+            "display": "grid"
+          },
+          {
+            "tag": "DIV",
+            "className": "chart-wrap",
+            "width": 0,
+            "height": 0,
+            "maxHeight": "none",
+            "display": "block"
+          },
+          {
+            "tag": "DIV",
+            "className": "learnunlock-canvas",
+            "width": 0,
+            "height": 0,
+            "maxHeight": "none",
+            "display": "block"
+          },
+          {
+            "tag": "CANVAS",
+            "className": "",
+            "width": 0,
+            "height": 0,
+            "maxHeight": "none",
+            "display": "block"
+          }
+        ],
+        "restored": [
+          {
+            "tag": "SECTION",
+            "className": "graph-card learnunlock-controls",
+            "width": 390,
+            "height": 422,
+            "maxHeight": "none",
+            "display": "flex"
+          },
+          {
+            "tag": "DIV",
+            "className": "graph-panel-body",
+            "width": 390,
+            "height": 374,
+            "maxHeight": "none",
+            "display": "block"
+          },
+          {
+            "tag": "DIV",
+            "className": "graph-expressions",
+            "width": 390,
+            "height": 135.03125,
+            "maxHeight": "135.04px",
+            "display": "grid"
+          },
+          {
+            "tag": "DIV",
+            "className": "chart-wrap",
+            "width": 390,
+            "height": 222.96875,
+            "maxHeight": "none",
+            "display": "block"
+          },
+          {
+            "tag": "DIV",
+            "className": "learnunlock-canvas",
+            "width": 390,
+            "height": 222.96875,
+            "maxHeight": "none",
+            "display": "block"
+          },
+          {
+            "tag": "CANVAS",
+            "className": "",
+            "width": 390,
+            "height": 223,
+            "maxHeight": "none",
+            "display": "block"
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "id": "graph-exponential-base-parameter:2:final",
+      "lane": "Actual unchanged gold prestate from invalid generation; CSS fix verification, no model output applied",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/mobile-graph-diagnostic/graph-exponential-base-parameter-fixed-1280.png",
+      "early": [
+        {
+          "tag": "SECTION",
+          "className": "graph-card learnunlock-controls",
+          "width": 640,
+          "height": 900,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "graph-panel-body",
+          "width": 640,
+          "height": 900,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "graph-expressions",
+          "width": 592,
+          "height": 239.171875,
+          "maxHeight": "288px",
+          "display": "grid"
+        },
+        {
+          "tag": "DIV",
+          "className": "chart-wrap",
+          "width": 640,
+          "height": 900,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "learnunlock-canvas",
+          "width": 640,
+          "height": 900,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "CANVAS",
+          "className": "",
+          "width": 640,
+          "height": 756,
+          "maxHeight": "none",
+          "display": "block"
+        }
+      ],
+      "late": [
+        {
+          "tag": "SECTION",
+          "className": "graph-card learnunlock-controls",
+          "width": 640,
+          "height": 900,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "graph-panel-body",
+          "width": 640,
+          "height": 900,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "graph-expressions",
+          "width": 592,
+          "height": 239.171875,
+          "maxHeight": "288px",
+          "display": "grid"
+        },
+        {
+          "tag": "DIV",
+          "className": "chart-wrap",
+          "width": 640,
+          "height": 900,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "learnunlock-canvas",
+          "width": 640,
+          "height": 900,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "CANVAS",
+          "className": "",
+          "width": 640,
+          "height": 756,
+          "maxHeight": "none",
+          "display": "block"
+        }
+      ],
+      "collapseRestore": null,
+      "errors": []
+    },
+    {
+      "id": "graph-named-function-redefinition:2:final",
+      "lane": "Actual unchanged gold prestate from invalid generation; CSS fix verification, no model output applied",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/mobile-graph-diagnostic/graph-named-function-redefinition-fixed-390.png",
+      "early": [
+        {
+          "tag": "SECTION",
+          "className": "graph-card learnunlock-controls",
+          "width": 390,
+          "height": 422,
+          "maxHeight": "none",
+          "display": "flex"
+        },
+        {
+          "tag": "DIV",
+          "className": "graph-panel-body",
+          "width": 390,
+          "height": 374,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "graph-expressions",
+          "width": 390,
+          "height": 135.03125,
+          "maxHeight": "135.04px",
+          "display": "grid"
+        },
+        {
+          "tag": "DIV",
+          "className": "chart-wrap",
+          "width": 390,
+          "height": 222.96875,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "learnunlock-canvas",
+          "width": 390,
+          "height": 222.96875,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "CANVAS",
+          "className": "",
+          "width": 390,
+          "height": 223,
+          "maxHeight": "none",
+          "display": "block"
+        }
+      ],
+      "late": [
+        {
+          "tag": "SECTION",
+          "className": "graph-card learnunlock-controls",
+          "width": 390,
+          "height": 422,
+          "maxHeight": "none",
+          "display": "flex"
+        },
+        {
+          "tag": "DIV",
+          "className": "graph-panel-body",
+          "width": 390,
+          "height": 374,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "graph-expressions",
+          "width": 390,
+          "height": 135.03125,
+          "maxHeight": "135.04px",
+          "display": "grid"
+        },
+        {
+          "tag": "DIV",
+          "className": "chart-wrap",
+          "width": 390,
+          "height": 222.96875,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "learnunlock-canvas",
+          "width": 390,
+          "height": 222.96875,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "CANVAS",
+          "className": "",
+          "width": 390,
+          "height": 223,
+          "maxHeight": "none",
+          "display": "block"
+        }
+      ],
+      "collapseRestore": {
+        "collapsed": [
+          {
+            "tag": "SECTION",
+            "className": "graph-card learnunlock-controls",
+            "width": 390,
+            "height": 48,
+            "maxHeight": "none",
+            "display": "flex"
+          },
+          {
+            "tag": "DIV",
+            "className": "graph-panel-body",
+            "width": 0,
+            "height": 0,
+            "maxHeight": "none",
+            "display": "none"
+          },
+          {
+            "tag": "DIV",
+            "className": "graph-expressions",
+            "width": 0,
+            "height": 0,
+            "maxHeight": "135.04px",
+            "display": "grid"
+          },
+          {
+            "tag": "DIV",
+            "className": "chart-wrap",
+            "width": 0,
+            "height": 0,
+            "maxHeight": "none",
+            "display": "block"
+          },
+          {
+            "tag": "DIV",
+            "className": "learnunlock-canvas",
+            "width": 0,
+            "height": 0,
+            "maxHeight": "none",
+            "display": "block"
+          },
+          {
+            "tag": "CANVAS",
+            "className": "",
+            "width": 0,
+            "height": 0,
+            "maxHeight": "none",
+            "display": "block"
+          }
+        ],
+        "restored": [
+          {
+            "tag": "SECTION",
+            "className": "graph-card learnunlock-controls",
+            "width": 390,
+            "height": 422,
+            "maxHeight": "none",
+            "display": "flex"
+          },
+          {
+            "tag": "DIV",
+            "className": "graph-panel-body",
+            "width": 390,
+            "height": 374,
+            "maxHeight": "none",
+            "display": "block"
+          },
+          {
+            "tag": "DIV",
+            "className": "graph-expressions",
+            "width": 390,
+            "height": 135.03125,
+            "maxHeight": "135.04px",
+            "display": "grid"
+          },
+          {
+            "tag": "DIV",
+            "className": "chart-wrap",
+            "width": 390,
+            "height": 222.96875,
+            "maxHeight": "none",
+            "display": "block"
+          },
+          {
+            "tag": "DIV",
+            "className": "learnunlock-canvas",
+            "width": 390,
+            "height": 222.96875,
+            "maxHeight": "none",
+            "display": "block"
+          },
+          {
+            "tag": "CANVAS",
+            "className": "",
+            "width": 390,
+            "height": 223,
+            "maxHeight": "none",
+            "display": "block"
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "id": "graph-named-function-redefinition:2:final",
+      "lane": "Actual unchanged gold prestate from invalid generation; CSS fix verification, no model output applied",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/mobile-graph-diagnostic/graph-named-function-redefinition-fixed-1280.png",
+      "early": [
+        {
+          "tag": "SECTION",
+          "className": "graph-card learnunlock-controls",
+          "width": 640,
+          "height": 900,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "graph-panel-body",
+          "width": 640,
+          "height": 900,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "graph-expressions",
+          "width": 592,
+          "height": 239.171875,
+          "maxHeight": "288px",
+          "display": "grid"
+        },
+        {
+          "tag": "DIV",
+          "className": "chart-wrap",
+          "width": 640,
+          "height": 900,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "learnunlock-canvas",
+          "width": 640,
+          "height": 900,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "CANVAS",
+          "className": "",
+          "width": 640,
+          "height": 756,
+          "maxHeight": "none",
+          "display": "block"
+        }
+      ],
+      "late": [
+        {
+          "tag": "SECTION",
+          "className": "graph-card learnunlock-controls",
+          "width": 640,
+          "height": 900,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "graph-panel-body",
+          "width": 640,
+          "height": 900,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "graph-expressions",
+          "width": 592,
+          "height": 239.171875,
+          "maxHeight": "288px",
+          "display": "grid"
+        },
+        {
+          "tag": "DIV",
+          "className": "chart-wrap",
+          "width": 640,
+          "height": 900,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "DIV",
+          "className": "learnunlock-canvas",
+          "width": 640,
+          "height": 900,
+          "maxHeight": "none",
+          "display": "block"
+        },
+        {
+          "tag": "CANVAS",
+          "className": "",
+          "width": 640,
+          "height": 756,
+          "maxHeight": "none",
+          "display": "block"
+        }
+      ],
+      "collapseRestore": null,
+      "errors": []
+    }
+  ]
+}

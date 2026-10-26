@@ -1,0 +1,56 @@
+{
+  "split": "test-v30",
+  "mode": "endpoint",
+  "datasetSHA256": "01faad9498955ca2bf401c3626f62b98c05de4604afcff0db6e2a8de609c3ceb",
+  "createdAt": "2026-10-14T16:53:16.754Z",
+  "total": 3,
+  "scored": 3,
+  "passed": 2,
+  "unavailable": 0,
+  "accuracy": 0.6666666666666666,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "normals-chords": {
+      "passed": 2,
+      "scored": 3
+    }
+  },
+  "results": [
+    {
+      "id": "normals-chords-1",
+      "category": "normals-chords",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "add normal to graph 1 at x 2",
+        "message": ""
+      },
+      "latencyMs": 3480
+    },
+    {
+      "id": "normals-chords-2",
+      "category": "normals-chords",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "normal of graph 1 at x 2",
+        "message": ""
+      },
+      "latencyMs": 3020
+    },
+    {
+      "id": "normals-chords-3",
+      "category": "normals-chords",
+      "pass": false,
+      "reason": "Expected command, received unsupported",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "Chord length is not currently supported; arc length or sector perimeter is available instead."
+      },
+      "latencyMs": 3278
+    }
+  ]
+}

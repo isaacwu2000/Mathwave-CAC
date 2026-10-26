@@ -1,0 +1,58 @@
+export type VoiceObservation = {
+  at: number;
+  audible: boolean;
+  speaking: boolean;
+  source: string;
+  text: string;
+  expected: string;
+  settled: boolean;
+  microphoneActive?: boolean;
+  microphoneText?: string;
+};
+
+/** Checks independently metered playback against the panel, allowing 500ms for rendering and meter decay.
+ * Requires observed sound and matching provider transcript; missing evidence fails the journey.
+ */
+export function assessVoiceParity(samples: VoiceObservation[]) {
+  const failures: string[] = [];
+  // Display may add a sentence separator; words and streamed tokens must still match.
+  const captionText = (text: string) =>
+    text.replace(/([.!?]["'”’)]?)\s+(?=["'“‘(]?\p{L})/gu, '$1');
+  const transcriptMismatch = (s: VoiceObservation) =>
+    s.source !== 'pico' || captionText(s.text) !== captionText(s.expected);
+  if (
+    samples.some(
+      (s) => s.microphoneActive === false && s.microphoneText?.trim(),
+    )
+  )
+    failures.push('Microphone text remained visible after recording stopped.');
+  const spoken = samples.filter(
+    (s) => s.expected && s.settled && (s.audible || s.source === 'pico'),
+  );
+  if (!spoken.length) failures.push('No spoken transcript was visible.');
+  if (spoken.some(transcriptMismatch))
+    failures.push('Visible transcript differed from spoken transcript.');
+  if (!samples.some((s) => s.audible && s.speaking))
+    failures.push('No playback matched the speaking indicator.');
+  const mismatches: VoiceObservation[] = [];
+  let disagreementAt: number | null = null;
+  for (const sample of samples) {
+    if (sample.audible === sample.speaking) disagreementAt = null;
+    else {
+      disagreementAt ??= sample.at;
+      if (sample.at - disagreementAt > 500) mismatches.push(sample);
+    }
+  }
+  if (mismatches.length)
+    failures.push('Speaking indicator disagreed with playback for over 500ms.');
+  if (samples.at(-1)?.speaking)
+    failures.push('Speaking indicator did not return to idle.');
+  return {
+    passed: failures.length === 0,
+    failures,
+    transcriptChecks: spoken.length,
+    transcriptMismatches: spoken.filter(transcriptMismatch).slice(0, 5),
+    mismatches: mismatches.slice(0, 5),
+    observations: samples.length,
+  };
+}

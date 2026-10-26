@@ -1,0 +1,501 @@
+{
+  "scope": "Diagnostic warm interleaved validation timing, base adapters disabled vs selected adapter in the same loaded model. Includes adapter-toggle overhead. No training, test selection or app/iPhone timing. One Mac session; thermal/system conditions not controlled.",
+  "summary": {
+    "base": {
+      "generations": 24,
+      "meanSeconds": 0.7435768177914118,
+      "medianSeconds": 0.5109978960026638,
+      "meanOutputTokens": 7.833333333333333
+    },
+    "adapter": {
+      "generations": 24,
+      "meanSeconds": 0.8204606406249392,
+      "medianSeconds": 0.6133837915040203,
+      "meanOutputTokens": 8.166666666666666
+    }
+  },
+  "cases": 12,
+  "results": [
+    {
+      "condition": "base",
+      "case": "alg-constant-on-both-sides",
+      "turn": 1,
+      "category": "algebra",
+      "seconds": 0.17176800000015646,
+      "outputTokens": 10,
+      "transcript": " write 3x plus 8 equals x minus 2.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "alg-constant-on-both-sides",
+      "turn": 1,
+      "category": "algebra",
+      "seconds": 0.22433016700233566,
+      "outputTokens": 10,
+      "transcript": "Write three x plus eight equals x minus two.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "alg-constant-on-both-sides",
+      "turn": 1,
+      "category": "algebra",
+      "seconds": 0.45635337499697926,
+      "outputTokens": 10,
+      "transcript": "Write three x plus eight equals x minus two.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "alg-constant-on-both-sides",
+      "turn": 1,
+      "category": "algebra",
+      "seconds": 0.23549854200246045,
+      "outputTokens": 10,
+      "transcript": " write 3x plus 8 equals x minus 2.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "alg-constant-on-both-sides",
+      "turn": 2,
+      "category": "algebra",
+      "seconds": 0.45257937499991385,
+      "outputTokens": 8,
+      "transcript": " Subtract decks on each side.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "alg-constant-on-both-sides",
+      "turn": 2,
+      "category": "algebra",
+      "seconds": 0.19587570799922105,
+      "outputTokens": 8,
+      "transcript": "Subtract x on each side.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "alg-constant-on-both-sides",
+      "turn": 2,
+      "category": "algebra",
+      "seconds": 0.18148283300251933,
+      "outputTokens": 8,
+      "transcript": "Subtract x on each side.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "alg-constant-on-both-sides",
+      "turn": 2,
+      "category": "algebra",
+      "seconds": 0.21524679099820787,
+      "outputTokens": 8,
+      "transcript": " Subtract decks on each side.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "geo-centroid-overlay",
+      "turn": 2,
+      "category": "geometry",
+      "seconds": 0.3920021669982816,
+      "outputTokens": 7,
+      "transcript": " show where the media is made.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "geo-centroid-overlay",
+      "turn": 2,
+      "category": "geometry",
+      "seconds": 0.2723738749991753,
+      "outputTokens": 7,
+      "transcript": "Show where the median's meet.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "geo-centroid-overlay",
+      "turn": 2,
+      "category": "geometry",
+      "seconds": 0.49599237499933224,
+      "outputTokens": 7,
+      "transcript": "Show where the median's meet.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "geo-centroid-overlay",
+      "turn": 2,
+      "category": "geometry",
+      "seconds": 0.21993833300075494,
+      "outputTokens": 7,
+      "transcript": " show where the media is made.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "geo-centroid-overlay",
+      "turn": 3,
+      "category": "geometry",
+      "seconds": 0.43090841700177407,
+      "outputTokens": 9,
+      "transcript": " What is the area with those lines showing?",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "geo-centroid-overlay",
+      "turn": 3,
+      "category": "geometry",
+      "seconds": 0.511404416996811,
+      "outputTokens": 9,
+      "transcript": "What is the area with those lines showing?",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "geo-centroid-overlay",
+      "turn": 3,
+      "category": "geometry",
+      "seconds": 1.7881020419954439,
+      "outputTokens": 9,
+      "transcript": "What is the area with those lines showing?",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "geo-centroid-overlay",
+      "turn": 3,
+      "category": "geometry",
+      "seconds": 0.5015574580029352,
+      "outputTokens": 9,
+      "transcript": " What is the area with those lines showing?",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "graph-floor-step-boundary",
+      "turn": 1,
+      "category": "graphs",
+      "seconds": 0.32591962500009686,
+      "outputTokens": 4,
+      "transcript": " Show floor of X",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "graph-floor-step-boundary",
+      "turn": 1,
+      "category": "graphs",
+      "seconds": 1.985480874995119,
+      "outputTokens": 5,
+      "transcript": "Show floor of x.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "graph-floor-step-boundary",
+      "turn": 1,
+      "category": "graphs",
+      "seconds": 0.22569779100012966,
+      "outputTokens": 5,
+      "transcript": "Show floor of x.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "graph-floor-step-boundary",
+      "turn": 1,
+      "category": "graphs",
+      "seconds": 0.5350401249961578,
+      "outputTokens": 4,
+      "transcript": " Show floor of X",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "graph-floor-step-boundary",
+      "turn": 2,
+      "category": "graphs",
+      "seconds": 0.41683979200024623,
+      "outputTokens": 5,
+      "transcript": " Try 1.9.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "graph-floor-step-boundary",
+      "turn": 2,
+      "category": "graphs",
+      "seconds": 0.44548262500029523,
+      "outputTokens": 5,
+      "transcript": "Try one point nine.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "graph-floor-step-boundary",
+      "turn": 2,
+      "category": "graphs",
+      "seconds": 0.359369666002749,
+      "outputTokens": 5,
+      "transcript": "Try one point nine.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "graph-floor-step-boundary",
+      "turn": 2,
+      "category": "graphs",
+      "seconds": 0.5114614170015557,
+      "outputTokens": 5,
+      "transcript": " Try 1.9.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "student-data-temporary-expression",
+      "turn": 1,
+      "category": "cross-topic",
+      "seconds": 0.889743333995284,
+      "outputTokens": 9,
+      "transcript": " My numbers are 3, 6, 9.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "student-data-temporary-expression",
+      "turn": 1,
+      "category": "cross-topic",
+      "seconds": 1.087951792003878,
+      "outputTokens": 9,
+      "transcript": "My numbers are three, six, nine.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "student-data-temporary-expression",
+      "turn": 1,
+      "category": "cross-topic",
+      "seconds": 0.9492422090042965,
+      "outputTokens": 9,
+      "transcript": "My numbers are three, six, nine.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "student-data-temporary-expression",
+      "turn": 1,
+      "category": "cross-topic",
+      "seconds": 1.6009919169955538,
+      "outputTokens": 9,
+      "transcript": " My numbers are 3, 6, 9.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "student-data-temporary-expression",
+      "turn": 2,
+      "category": "cross-topic",
+      "seconds": 1.1369905000028666,
+      "outputTokens": 6,
+      "transcript": " What is 7 times 8?",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "student-data-temporary-expression",
+      "turn": 2,
+      "category": "cross-topic",
+      "seconds": 1.228166417000466,
+      "outputTokens": 6,
+      "transcript": "What is seven times eight?",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "student-data-temporary-expression",
+      "turn": 2,
+      "category": "cross-topic",
+      "seconds": 1.3027270829988993,
+      "outputTokens": 6,
+      "transcript": "What is seven times eight?",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "student-data-temporary-expression",
+      "turn": 2,
+      "category": "cross-topic",
+      "seconds": 1.6324312920041848,
+      "outputTokens": 6,
+      "transcript": " What is 7 times 8?",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "student-diagram-multi-edit",
+      "turn": 1,
+      "category": "history-and-diagrams",
+      "seconds": 1.2567269169958308,
+      "outputTokens": 11,
+      "transcript": " In code add 2, divide by 3, output.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "student-diagram-multi-edit",
+      "turn": 1,
+      "category": "history-and-diagrams",
+      "seconds": 1.3285842090044753,
+      "outputTokens": 13,
+      "transcript": "Incote, add two, divide by three, output.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "student-diagram-multi-edit",
+      "turn": 1,
+      "category": "history-and-diagrams",
+      "seconds": 0.6535455410048598,
+      "outputTokens": 13,
+      "transcript": "Incote, add two, divide by three, output.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "student-diagram-multi-edit",
+      "turn": 1,
+      "category": "history-and-diagrams",
+      "seconds": 2.162695375001931,
+      "outputTokens": 11,
+      "transcript": " In code add 2, divide by 3, output.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "student-diagram-multi-edit",
+      "turn": 2,
+      "category": "history-and-diagrams",
+      "seconds": 1.5385446660002344,
+      "outputTokens": 7,
+      "transcript": " Change Add 2 to Add 4.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "student-diagram-multi-edit",
+      "turn": 2,
+      "category": "history-and-diagrams",
+      "seconds": 0.9994315000003553,
+      "outputTokens": 7,
+      "transcript": "Change add two to add four.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "student-diagram-multi-edit",
+      "turn": 2,
+      "category": "history-and-diagrams",
+      "seconds": 1.0265391249995446,
+      "outputTokens": 7,
+      "transcript": "Change add two to add four.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "student-diagram-multi-edit",
+      "turn": 2,
+      "category": "history-and-diagrams",
+      "seconds": 0.7270624999946449,
+      "outputTokens": 7,
+      "transcript": " Change Add 2 to Add 4.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "student-duplicates-count",
+      "turn": 1,
+      "category": "statistics",
+      "seconds": 1.0728372920057154,
+      "outputTokens": 9,
+      "transcript": " R2, 2, 2 and 9.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "student-duplicates-count",
+      "turn": 1,
+      "category": "statistics",
+      "seconds": 0.9502766669975244,
+      "outputTokens": 10,
+      "transcript": "Write two, two, two, and nine.",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "student-duplicates-count",
+      "turn": 1,
+      "category": "statistics",
+      "seconds": 2.1438321659952635,
+      "outputTokens": 10,
+      "transcript": "Write two, two, two, and nine.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "student-duplicates-count",
+      "turn": 1,
+      "category": "statistics",
+      "seconds": 0.5392690419976134,
+      "outputTokens": 9,
+      "transcript": " R2, 2, 2 and 9.",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "student-duplicates-count",
+      "turn": 2,
+      "category": "statistics",
+      "seconds": 0.3692563749937108,
+      "outputTokens": 9,
+      "transcript": " How many results is that, including repeats?",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "student-duplicates-count",
+      "turn": 2,
+      "category": "statistics",
+      "seconds": 0.5732220420031808,
+      "outputTokens": 9,
+      "transcript": "How many results is that, including repeats?",
+      "repeat": 0
+    },
+    {
+      "condition": "adapter",
+      "case": "student-duplicates-count",
+      "turn": 2,
+      "category": "statistics",
+      "seconds": 0.30559087499568705,
+      "outputTokens": 9,
+      "transcript": "How many results is that, including repeats?",
+      "repeat": 1
+    },
+    {
+      "condition": "base",
+      "case": "student-duplicates-count",
+      "turn": 2,
+      "category": "statistics",
+      "seconds": 0.5105343750037719,
+      "outputTokens": 9,
+      "transcript": " How many results is that, including repeats?",
+      "repeat": 1
+    }
+  ],
+  "codeSha256": "795c8a8559119d67980048eec57802ce94ba1be703d60c5bb499218886e7123d"
+}

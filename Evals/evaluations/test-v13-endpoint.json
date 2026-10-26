@@ -1,0 +1,92 @@
+{
+  "split": "test-v13",
+  "mode": "endpoint",
+  "datasetSHA256": "747451b23fd010cc05855aa54a4d0dfa4a5117f2492392ae6a94b229192c35f1",
+  "createdAt": "2026-10-12T19:36:13.925Z",
+  "total": 6,
+  "scored": 6,
+  "passed": 6,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "ai_context": {
+      "passed": 6,
+      "scored": 6
+    }
+  },
+  "results": [
+    {
+      "id": "fresh-context-001",
+      "category": "ai_context",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "replace part 9 with 16",
+        "message": ""
+      },
+      "latencyMs": 3004
+    },
+    {
+      "id": "fresh-context-002",
+      "category": "ai_context",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "replace part 7 with 3",
+        "message": ""
+      },
+      "latencyMs": 1970
+    },
+    {
+      "id": "fresh-context-003",
+      "category": "ai_context",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "replace part 4 with 6",
+        "message": ""
+      },
+      "latencyMs": 1870
+    },
+    {
+      "id": "fresh-context-004",
+      "category": "ai_context",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "replace part 8 with 9",
+        "message": ""
+      },
+      "latencyMs": 2474
+    },
+    {
+      "id": "fresh-context-005",
+      "category": "ai_context",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "read right side",
+        "message": ""
+      },
+      "latencyMs": 2729
+    },
+    {
+      "id": "fresh-context-006",
+      "category": "ai_context",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which 4 should I change to 9: the coefficient of x², the left-side constant, or the right-side value?"
+      },
+      "latencyMs": 2627
+    }
+  ]
+}

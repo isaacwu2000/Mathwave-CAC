@@ -1,0 +1,14 @@
+{
+  "reportSha256": "4d3e214076f3c625c06a51de2c1512a03e42e69e28c5821f0edd7458cc8b0a10",
+  "method": "Offline authored-curve/endpoint audit of preserved live outputs; no provider calls. Visual review remains separate.",
+  "results": [
+    {
+      "scenario": "two-curves",
+      "passed": true
+    },
+    {
+      "scenario": "segment-length",
+      "passed": true
+    }
+  ]
+}

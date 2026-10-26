@@ -1,0 +1,99 @@
+{
+  "run": "2bc6e0c2-029d-43f9-b73b-5bfe027532c4",
+  "revision": "93a614ffb52616ddd6a8b9cd22b042de423c2c39",
+  "environment": "Local Vinext app; actual applyCloudOperation and exact completion service; synthetic voice transport and isolated in-memory storage. No live provider or student data.",
+  "passed": false,
+  "checks": [
+    "desktop: idle, listening, simultaneous playback, immediate interruption, and mute verified.",
+    "desktop: clarification, recovery, and incorrect-answer suppression verified through the real math service.",
+    "desktop: genuine verified-completion event paints a bounded burst, preserves focus, ignores clicks, and cleans up.",
+    "desktop: repeated solve, reload, and revisiting completed work do not replay celebrations.",
+    "desktop: history replay emits no completion even without a local receipt.",
+    "desktop: reduced motion keeps readable status while suppressing both Pico and confetti motion.",
+    "desktop: disabled preference persists across reload, and no ordinary command or unsupported work celebrates.",
+    "desktop: nonlinear/incomplete solution sets cannot trigger a verified celebration.",
+    "desktop: navigation invalidates an in-flight celebration without losing the confirmed mathematical result.",
+    "desktop: failed save produces no burst; confirming its retained request does not replay a recovered celebration.",
+    "desktop: hidden-page cancellation and return do not replay confetti.",
+    "desktop: no horizontal overflow at 1280×900."
+  ],
+  "failure": "desktop: hidden page: rename is not defined",
+  "captures": [
+    {
+      "file": "desktop-01-ready.png",
+      "caption": "1280×900: approved Soft peak, matching eyes, no idle animation."
+    },
+    {
+      "file": "desktop-02-listening.png",
+      "caption": "Listening lean and input arrow; no speaking waves."
+    },
+    {
+      "file": "desktop-03-speaking.png",
+      "caption": "Listening and audible playback overlap; outward waves are separate from the input waveform."
+    },
+    {
+      "file": "desktop-03b-muted.png",
+      "caption": "Muted replies never animate speaking waves, even when a playback event arrives."
+    },
+    {
+      "file": "desktop-04-overlap.png",
+      "caption": "Backend working, microphone listening, and speaking remain independent."
+    },
+    {
+      "file": "desktop-05-clarification.png",
+      "caption": "A calm clarification tilt while the student chooses what they meant."
+    },
+    {
+      "file": "desktop-06-wrong-answer.png",
+      "caption": "Wrong answer x=5 stays saved and editable, without false celebration."
+    },
+    {
+      "file": "desktop-06b-recovery.png",
+      "caption": "Unsupported division by zero keeps work intact and Pico calm."
+    },
+    {
+      "file": "desktop-07-launch.png",
+      "caption": "Verified x=4: the burst starts at Pico; controls and focus remain usable."
+    },
+    {
+      "file": "desktop-08-confetti.png",
+      "caption": "Screen-wide red, peach, and gold particles; silent and non-interactive."
+    },
+    {
+      "file": "desktop-09-complete.png",
+      "caption": "Particles clear after 2.2 seconds; verified text and saved mathematics remain."
+    },
+    {
+      "file": "desktop-09b-history.png",
+      "caption": "Redo in a browser without a celebration receipt stays quiet: restored work is not a fresh completion."
+    },
+    {
+      "file": "desktop-10-reduced-motion.png",
+      "caption": "Exact fraction verified with a still, accessible confirmation and no moving particles."
+    },
+    {
+      "file": "desktop-11-settings.png",
+      "caption": "Celebrations can be disabled separately from spoken responses."
+    },
+    {
+      "file": "desktop-12-disabled.png",
+      "caption": "Disabled celebrations retain the verified result without a burst."
+    },
+    {
+      "file": "desktop-12b-unsupported.png",
+      "caption": "A single root of a quadratic is incomplete; unsupported objectives do not celebrate."
+    },
+    {
+      "file": "desktop-13-stale.png",
+      "caption": "A result arriving after navigation does not launch delayed confetti when returning."
+    },
+    {
+      "file": "desktop-13b-save-failure.png",
+      "caption": "An unconfirmed save cannot trigger a celebration; work and retry remain available."
+    },
+    {
+      "file": "desktop-14-hidden-return.png",
+      "caption": "Hiding the page cancels the burst; returning does not replay it."
+    }
+  ]
+}

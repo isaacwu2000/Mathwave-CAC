@@ -1,0 +1,127 @@
+{
+  "split": "train-v7",
+  "mode": "endpoint",
+  "datasetSHA256": "a407ed3693ea90137b1734dbe7610da3eebe00aae5f1b7963a220fdddbab8fec",
+  "createdAt": "2026-10-13T16:58:15.389Z",
+  "total": 8,
+  "scored": 8,
+  "passed": 6,
+  "unavailable": 0,
+  "accuracy": 0.75,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "ai_algebra": {
+      "passed": 6,
+      "scored": 8
+    }
+  },
+  "results": [
+    {
+      "id": "natural-001",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "multiply both sides by 5",
+          "simplify"
+        ]
+      },
+      "latencyMs": 3137
+    },
+    {
+      "id": "natural-002",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "add 6 to both sides",
+          "simplify"
+        ]
+      },
+      "latencyMs": 2336
+    },
+    {
+      "id": "natural-003",
+      "category": "ai_algebra",
+      "pass": false,
+      "reason": "Wrong state, action, answer, or numeric expectation",
+      "prediction": {
+        "status": "command",
+        "command": "divide both sides by 2",
+        "message": ""
+      },
+      "latencyMs": 7164
+    },
+    {
+      "id": "natural-004",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "subtract 3 from both sides",
+          "simplify"
+        ]
+      },
+      "latencyMs": 2759
+    },
+    {
+      "id": "natural-005",
+      "category": "ai_algebra",
+      "pass": false,
+      "reason": "Endpoint rejected context or interpretation (HTTP 422)",
+      "latencyMs": 1993
+    },
+    {
+      "id": "natural-006",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Do you want to subtract 3 from both sides?"
+      },
+      "latencyMs": 2381
+    },
+    {
+      "id": "natural-007",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "subtract 3 from both sides",
+          "simplify"
+        ]
+      },
+      "latencyMs": 1765
+    },
+    {
+      "id": "natural-008",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "divide both sides by 2",
+        "message": ""
+      },
+      "latencyMs": 2229
+    }
+  ]
+}

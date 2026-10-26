@@ -1,0 +1,214 @@
+{
+  "scope": "Actual browser rendering of every captured provider outcome. Saved synthetic report data is replayed through a mocked problem API; no provider calls or student data. Capture alone is not visual review.",
+  "reportSha256": "5043355ff0f3e6971bc55751a70ee22b595a0faff97c376e27f7ee1ef79f9963",
+  "reviews": [
+    {
+      "scenario": "cancel-division",
+      "variant": "short",
+      "text": "Remove the division by seven.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-247adcf2-dc98-492b-9e02-dd86708c7281/visual/00-short-cancel-division.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed rendered equation or curve against the authored expected outcome; correct mathematics visible."
+    },
+    {
+      "scenario": "cancel-product",
+      "variant": "short",
+      "text": "Cancel the multiplication by six.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-247adcf2-dc98-492b-9e02-dd86708c7281/visual/01-short-cancel-product.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed rendered equation or curve against the authored expected outcome; correct mathematics visible."
+    },
+    {
+      "scenario": "halve",
+      "variant": "short",
+      "text": "Halve the equation.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-247adcf2-dc98-492b-9e02-dd86708c7281/visual/02-short-halve.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed rendered equation or curve against the authored expected outcome; correct mathematics visible."
+    },
+    {
+      "scenario": "no-over-solving",
+      "variant": "short",
+      "text": "Let us solve the problem x plus five equals seven.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-247adcf2-dc98-492b-9e02-dd86708c7281/visual/03-short-no-over-solving.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed rendered equation or curve against the authored expected outcome; correct mathematics visible."
+    },
+    {
+      "scenario": "vague-circle",
+      "variant": "short",
+      "text": "Draw a circle.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-247adcf2-dc98-492b-9e02-dd86708c7281/visual/04-short-vague-circle.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed rendered equation or curve against the authored expected outcome; correct mathematics visible."
+    },
+    {
+      "scenario": "vague-edit",
+      "variant": "short",
+      "text": "Change that number to five.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-247adcf2-dc98-492b-9e02-dd86708c7281/visual/05-short-vague-edit.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed rendered equation or curve against the authored expected outcome; correct mathematics visible."
+    },
+    {
+      "scenario": "vague-edit",
+      "variant": "short",
+      "text": "Undo that.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-247adcf2-dc98-492b-9e02-dd86708c7281/visual/06-short-vague-edit.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed rendered equation or curve against the authored expected outcome; correct mathematics visible."
+    },
+    {
+      "scenario": "missing-divisor",
+      "variant": "short",
+      "text": "Divide both sides.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-247adcf2-dc98-492b-9e02-dd86708c7281/visual/07-short-missing-divisor.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed rendered equation or curve against the authored expected outcome; correct mathematics visible."
+    },
+    {
+      "scenario": "viewport",
+      "variant": "short",
+      "text": "Pan graph down.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-247adcf2-dc98-492b-9e02-dd86708c7281/visual/08-short-viewport.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed rendered equation or curve against the authored expected outcome; correct mathematics visible."
+    },
+    {
+      "scenario": "polar",
+      "variant": "short",
+      "text": "Plot r equals two times cosine theta for theta from zero to pi over two.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-247adcf2-dc98-492b-9e02-dd86708c7281/visual/09-short-polar.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed rendered equation or curve against the authored expected outcome; correct mathematics visible."
+    },
+    {
+      "scenario": "segment-length",
+      "variant": "short",
+      "text": "Draw segment AB from A at zero, zero to B at three, four and show its length.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-247adcf2-dc98-492b-9e02-dd86708c7281/visual/10-short-segment-length.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed visible AB endpoints and length: 5 for (0,0)-(3,4), 6 after moving B to (0,6)."
+    },
+    {
+      "scenario": "segment-length",
+      "variant": "short",
+      "text": "Move B to zero, six.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-247adcf2-dc98-492b-9e02-dd86708c7281/visual/11-short-segment-length.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed visible AB endpoints and length: 5 for (0,0)-(3,4), 6 after moving B to (0,6)."
+    },
+    {
+      "scenario": "dsl-batch",
+      "variant": "short",
+      "text": "Subtract three from both sides, then simplify.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-247adcf2-dc98-492b-9e02-dd86708c7281/visual/12-short-dsl-batch.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Original equation, subtraction on both sides, and x=4 visible as three distinct steps."
+    },
+    {
+      "scenario": "dsl-query",
+      "variant": "short",
+      "text": "What is the value of graph one at x equals two?",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-247adcf2-dc98-492b-9e02-dd86708c7281/visual/13-short-dsl-query.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed rendered equation or curve against the authored expected outcome; correct mathematics visible."
+    },
+    {
+      "scenario": "dsl-suggestion",
+      "variant": "short",
+      "text": "Explain subtracting three from both sides and propose that operation for me to apply next. Do not change the equation yet.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-247adcf2-dc98-492b-9e02-dd86708c7281/visual/14-short-dsl-suggestion.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Equation x+3=7 stays unchanged during explanation; acceptance applies subtraction to both sides as the next saved step."
+    },
+    {
+      "scenario": "dsl-suggestion",
+      "variant": "short",
+      "text": "Go ahead.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-247adcf2-dc98-492b-9e02-dd86708c7281/visual/15-short-dsl-suggestion.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Equation x+3=7 stays unchanged during explanation; acceptance applies subtraction to both sides as the next saved step."
+    }
+  ]
+}

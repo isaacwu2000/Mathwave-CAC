@@ -1,0 +1,126 @@
+{
+  "runId": "8b2624b9-513e-4faf-a716-e58fa17bc752",
+  "startedAt": "2026-10-16T15:28:34.475Z",
+  "finishedAt": "2026-10-16T15:28:41.692Z",
+  "lane": "voice",
+  "revision": "a944ea5df4c1b04f8f1fc0b40293290d70f954ee",
+  "dirty": true,
+  "sourceSHA256": "a385b1cc131a7effe2468fd085d80e1b12caaf609f377c4e76c8823eda673025",
+  "runnerSHA256": "e4425fc694b44638026c27aa4852bc6baa8183e434b4391e7e2534b9dc0a2fc1",
+  "models": {
+    "live": "gpt-live-1",
+    "command": "gpt-6-luna"
+  },
+  "latencyDefinition": "Last detected input signal through React display commit; harnessElapsedMs includes fixture playback, polling and deliberate idle waits.",
+  "scope": "Synthetic recorded speech through browser, GPT Live, backend, persistence and React commit; excludes physical microphone and student usability.",
+  "repetitions": 1,
+  "planned": 3,
+  "unattempted": 0,
+  "groups": {
+    "cold-equation": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0,
+        "upper": 0.6215524967746471
+      },
+      "attempted": 1,
+      "passed": 0,
+      "failed": 1,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": 2729.9757499999996,
+        "p95": 2729.9757499999996
+      },
+      "stages": {}
+    },
+    "warm-step": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0,
+        "upper": 0.6215524967746471
+      },
+      "attempted": 1,
+      "passed": 0,
+      "failed": 1,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": 2729.9879579999997,
+        "p95": 2729.9879579999997
+      },
+      "stages": {}
+    },
+    "reconnected-equation": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0,
+        "upper": 0.6215524967746471
+      },
+      "attempted": 1,
+      "passed": 0,
+      "failed": 1,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": 2729.9892499999996,
+        "p95": 2729.9892499999996
+      },
+      "stages": {}
+    }
+  },
+  "summary": {
+    "successInterval80": null,
+    "attempted": 3,
+    "passed": 0,
+    "failed": 3,
+    "successMs": {
+      "p50": null,
+      "p95": null
+    },
+    "failureMs": {
+      "p50": 2729.9879579999997,
+      "p95": 2729.9892499999996
+    },
+    "stages": {}
+  },
+  "intervalMethod": "Two-sided 80% Wilson score; per scenario only. Pooled confidence omitted because scenarios share trials.",
+  "samples": [
+    {
+      "trial": 1,
+      "voice": "Daniel",
+      "scenario": "cold-equation",
+      "passed": false,
+      "responseLatencyMs": null,
+      "elapsedMs": 2729.9757499999996,
+      "timings": [],
+      "failure": "Trial setup or capture failed before this scenario completed."
+    },
+    {
+      "trial": 1,
+      "voice": "Daniel",
+      "scenario": "warm-step",
+      "passed": false,
+      "responseLatencyMs": null,
+      "elapsedMs": 2729.9879579999997,
+      "timings": [],
+      "failure": "Trial setup or capture failed before this scenario completed."
+    },
+    {
+      "trial": 1,
+      "voice": "Daniel",
+      "scenario": "reconnected-equation",
+      "passed": false,
+      "responseLatencyMs": null,
+      "elapsedMs": 2729.9892499999996,
+      "timings": [],
+      "failure": "Trial setup or capture failed before this scenario completed."
+    }
+  ]
+}

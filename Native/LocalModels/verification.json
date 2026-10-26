@@ -1,0 +1,107 @@
+{
+  "recordedAtUnix": 1792807560.498498,
+  "runtime": "in-process C ABI linked static llama.cpp/whisper.cpp with shared ggml and embedded Metal source",
+  "builds": {
+    "macos": {
+      "status": "passed",
+      "bytes": 14849424,
+      "sha256": "9477dbbd0c126622bfe0f1d33ef7f84320b2ddf228d140018697e25ad3a27015"
+    },
+    "simulator": {
+      "status": "passed",
+      "bytes": 14847360,
+      "sha256": "986c1a67b5c7f9e9e926be2cba075bc74054e4f3d2582f54e616abaf71346255"
+    },
+    "device": {
+      "status": "passed",
+      "bytes": 14713104,
+      "sha256": "41fea41f0f1bf4b48884d68ea2a9933255c4e17867a5fd3ecca8753c5a3d3b27"
+    }
+  },
+  "models": {
+    "speech": {
+      "file": "speech.bin",
+      "sha256": "dfb698bb080ee1d8e44cfeb03a80fb2b8d19201a269904bccb732cb13b00e903",
+      "base": "openai/whisper-tiny.en",
+      "adapter": "Training/STT/runs/tiny-en-lora-v2-2026-10-22/adapter",
+      "quantization": "f16"
+    },
+    "language": {
+      "file": "language.gguf",
+      "sha256": "7669dede9f5b8e73c7bcf18e8dd772b7b0ff49495f3b8f2c4f6d7942d1815a4d",
+      "base": "Qwen/Qwen3-0.6B",
+      "adapter": "Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/run/adapter",
+      "quantization": "q8_0"
+    }
+  },
+  "sourceHashes": {
+    "CMakeLists.txt": "adac7985d6f7de3b14d05cf7a86e5eb11945ab56364e05b4936c4e8033c2c049",
+    "mathwave_models.h": "ad3fbdfc0821f1fb709337f5b85e81f04454617d267fb07f615f0ee109fc91e3",
+    "bridge-test.cpp": "346345cad77fc903681d71d62bb5fa144b2cc6af657544fabd00fa43c7d4e604",
+    "export-models.py": "cdcfc73838408a75f31d31425f67f7880af89611c5017bd33cfc3bdb830691cd",
+    "mathwave_models.cpp": "6b9ec8dd40b258394d3c715b36b2e357251b5e468f4e3262db7788c6603e8d39",
+    "build-runtime.sh": "2c5cde5202b22d8191fc1513f51ec48721501ac10f6b34764efbcaa41ca8c5c2",
+    "metal-probe.m": "079962abdcf76e740ccfcd109f8c62daa2533e1c78dc3877183efb8ade7b76d5",
+    "model-load-probe.cpp": "99dfda2643af7ec613f1c11264fe3867f4a272fcbb5f68f22a10aea74804c6ec"
+  },
+  "publicInvalidInputChecks": "passed",
+  "promptTokens": 4337,
+  "huggingFaceReferencePromptTokens": 4337,
+  "languageOutput": "{\"status\":\"command\",\"programs\":[\"problem.save(math.equation(\\\"2*x+3*x-4=11\\\"));\"],\"message\":\"\",\"presentation\":null}",
+  "languageElapsedSeconds": 3.37927,
+  "languageCancellation": "passed: returned error with no partial text",
+  "speechOutput": "Write two x plus one equals nine.",
+  "speechElapsedSeconds": 0.0531238,
+  "limits": [
+    "One prerecorded synthetic speech clip and one language prompt; not a native accuracy benchmark.",
+    "Elapsed times include inference/prompt evaluation but exclude model creation; previous process warmed shader caches.",
+    "macOS actual model inference passed; simulator and device archives compiled, no iPhone runtime acceptance claimed.",
+    "App integration, audio permissions, microphone interaction, rendering and screen recording are verified separately by parent task."
+  ],
+  "simulatorMetalProbe": {
+    "runtime": "iOS26.2 iPhone17Pro simulator",
+    "execution": "simctl spawn, arm64 iOS-simulator executable",
+    "metalAvailable": true,
+    "device": "Apple iOS simulator GPU",
+    "shaderCompiled": true,
+    "gpuBufferBefore": 4,
+    "gpuBufferAfter": 5,
+    "commandStatus": "completed",
+    "exitCode": 0,
+    "limit": "Proves simulator Metal shader execution; model inference must be checked separately."
+  },
+  "simulatorModelLoadProbes": {
+    "languageGPU": {
+      "status": "passed",
+      "artifactSha256": "7669dede9f5b8e73c7bcf18e8dd772b7b0ff49495f3b8f2c4f6d7942d1815a4d",
+      "device": "MTL0 (Apple iOS simulator GPU)",
+      "limit": "Actual model create/destroy passed; full inference and app deadline not established by load probe.",
+      "subsequentInference": "Model loading passed, but inference exceeded40seconds or trapped after attention changes; not used in simulator."
+    },
+    "speechGPU": {
+      "status": "failed",
+      "failure": "Simulator XPC shared-memory API misuse in ggml_metal_buffer_set_tensor / MTLSimDevice while loading Whisper.",
+      "officialSharedBufferOverride": "Retested; still traps. Not applied to app.",
+      "workaroundToVerify": "Enforced CPU path in simulator. CPU speech actual app inference independently passed before this policy change."
+    }
+  },
+  "modelLicenseFile": "MODEL-LICENSES.txt",
+  "simulatorInference": {
+    "status": "passed",
+    "runtime": "iOS26.2 iPhone17Pro simulator",
+    "backend": "CPU; Accelerate",
+    "promptTokens": 4337,
+    "huggingFaceReferencePromptTokens": 4337,
+    "physicalBatchTokens": 512,
+    "flashAttention": "disabled",
+    "generationElapsedSeconds": 12.5897,
+    "output": "{\"status\":\"command\",\"programs\":[\"problem.save(math.equation(\\\"2*x+3*x-4=11\\\"));\"],\"message\":\"\",\"presentation\":null}",
+    "cancellation": "passed; partial output discarded",
+    "limits": [
+      "Standalone inference and prompt evaluation exclude model loading.",
+      "Actual app recording still verifies the shared40second deadline and rendering.",
+      "The tested CPU path is now enforced for every iOS Simulator caller; Mac/physicaliPhone retain Metal."
+    ]
+  },
+  "appVerification": "Passed recorded-audio journey in Native/verification/2026-10-23/custom-models-audio-v5/report.json; actual rendered equation reviewed. Mac journey also passed. Physical microphone/device not verified."
+}

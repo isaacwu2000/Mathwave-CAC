@@ -1,0 +1,811 @@
+{
+  "lane": "Actual local-app saved-state replay of 48 interrupted MPS baseline predictions, not the complete CUDA baseline.",
+  "reviewer": "Codex primary agent: actual pixels inspected in five contact sheets plus individual parameter/translation images.",
+  "reviewedAtUnix": 1792787751.950298,
+  "appRevision": "4c6281c6468d58e0bbcd4628bb595370d7568b09",
+  "origin": "http://localhost:5186",
+  "coverage": {
+    "reviewedRows": 48,
+    "totalHeldOutRows": 166,
+    "uniqueImagesInspected": 38,
+    "mobileImages": 27,
+    "desktopImages": 11,
+    "categories": {
+      "algebra": 26,
+      "graphs": 22
+    },
+    "coverageCompleteForThisPartialSubset": true,
+    "completeExperimentReview": false
+  },
+  "acceptancePassed": false,
+  "baselineStructuredCommands": {
+    "validJson": 0,
+    "total": 48,
+    "meaning": "Prose outputs fail the tool-call contract. No requested state update can execute; screenshots show authored prior state, never generated successful math."
+  },
+  "findings": [
+    {
+      "id": "model-format",
+      "severity": "blocking",
+      "rows": "all48",
+      "finding": "No valid structured response; requested changes do not execute. This does not assert that all prose math is incorrect."
+    },
+    {
+      "id": "mobile-scene-blank",
+      "severity": "major",
+      "cases": [
+        "graph-named-function-redefinition:2:final",
+        "graph-named-function-redefinition:3:final",
+        "graph-exponential-base-parameter:2:final",
+        "graph-exponential-base-parameter:3:final",
+        "graph-exponential-base-parameter:4:final"
+      ],
+      "finding": "Mobile captures of named-function/parameter graph scenes contain expression editors but no grid or plotted curve; desktop captures show plots. Timing versus layout cause under investigation.",
+      "status": "Resolved after initial review; original failure captures retained.",
+      "cause": "Mobile scene-expression style consumed the complete panel height; plot container height was zero even after5.3seconds."
+    },
+    {
+      "id": "mobile-equation-width",
+      "severity": "minor",
+      "cases": [
+        "alg-negative-variable-on-right:4:final",
+        "alg-negative-variable-on-right:5:final"
+      ],
+      "finding": "Long unsimplified prior equations extend beyond the mobile card/right screenshot edge. Review does not establish horizontal recovery affordance."
+    },
+    {
+      "id": "scene-assertions",
+      "severity": "review-limitation",
+      "finding": "Some saved-work text checks are false even where desktop curves are visible. Assertions are retained, not converted into visual passes."
+    }
+  ],
+  "mathObserved": "Simple saved parabolas, right/up translations, square-root domain endpoint and absolute-value V shapes visibly render. Named-function/parameter desktop curves are present. All are prior state because outputs are invalid. Mobile graph scenes above fail visual acceptance.",
+  "progressiveDrawing": "No executable generated operation or newly saved model step exists in these48; no progressive-generation acceptance can be claimed.",
+  "limits": [
+    "Interrupted partial MPS outputs are never substituted into the CUDA before/after comparison.",
+    "No geometry/statistics cases in this partial subset. Complete GPU review remains pending.",
+    "Saved-state replay does not test live streaming, STT, spoken replies, native iPhone integration or student usability."
+  ],
+  "images": [
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/03435d82281af028f494.png",
+      "sha256": "4a72c84952d712119786d00bd63e5a3657219ebdb76c1a137e584f6cff6b6b1d",
+      "rowIds": [
+        "graph-replace-entire-graph:3:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/0392aa96cbf33466c418.png",
+      "sha256": "7338498dd0276a03f60a3c91eb90549e38ec7fdc340f8f9c4cf8ee716b32265f",
+      "rowIds": [
+        "alg-negative-variable-on-right:5:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/129a6a13e8176ccb758d.png",
+      "sha256": "cb64fad2abe998e01498034bafe39573a9fc1a44c87820e6beaa3dca1fcb0305",
+      "rowIds": [
+        "alg-expand-before-substitute:2:final",
+        "alg-expand-before-substitute:3:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/14a675f5e3b86a7911be.png",
+      "sha256": "1298850e28ffc78593f1699732aaa5a9999623336e96b3272a37a0e83a5b7e29",
+      "rowIds": [
+        "graph-translation-order:4:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/1bffd9ab9327f59c03cb.png",
+      "sha256": "57c3ef60a795a6cc193052dd8e2dd9e3bfc7c422d27b76cd7ffc587231db2996",
+      "rowIds": [
+        "graph-exponential-base-parameter:4:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/2229955a915dfe1b946d.png",
+      "sha256": "d710dd3f2ab73cefaf49d03de96e443c5daaa82f47ba4209d4259eda9557cab4",
+      "rowIds": [
+        "graph-exponential-base-parameter:2:final",
+        "graph-exponential-base-parameter:3:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/38136e3c161b9b417591.png",
+      "sha256": "e7ff4339d58e3729f2e72af79491f805802a0da561a64100130202d4927dd4e2",
+      "rowIds": [
+        "alg-combine-repeated-variable:3:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3b1eaccb45a1ffb1a6f2.png",
+      "sha256": "8ff562b3ab7ac75127367dacafcb008c142b8b614dfdea05fa12212da99e2a19",
+      "rowIds": [
+        "alg-negative-variable-on-right:2:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3ebc404d852a6d05c1fc.png",
+      "sha256": "32efe89fc81df6a646d786a5bcf991fe438c9424d132126e30fad6b4be800cd0",
+      "rowIds": [
+        "graph-translation-order:2:final",
+        "graph-replace-entire-graph:2:final",
+        "graph-name-preserved-after-edit:2:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3f2dd9ac329107920f9d.png",
+      "sha256": "f2a1776a07c04a2a2e51299ff23c07992b7f2dfb832653c98ad837748e4c569d",
+      "rowIds": [
+        "graph-square-root-endpoint:2:final",
+        "graph-square-root-endpoint:3:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/429a81d6614ee2b217a9.png",
+      "sha256": "9dd4233ece32dc4edabfef7846706a51078f746b629f77df888f451c8335c3f1",
+      "rowIds": [
+        "graph-named-function-redefinition:3:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/448ddbb91f3eeaa1f158.png",
+      "sha256": "f79bb048ae72094a6dbb55ba9799666e64af37d4a6ab070ed55a985887453e89",
+      "rowIds": [
+        "graph-exponential-base-parameter:2:final",
+        "graph-exponential-base-parameter:3:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/515d0ee36fed2ea71de7.png",
+      "sha256": "d3748a15f0031f735542bb6dc1f3b3ab6e6495202ec328aaa87bb77d9619db4f",
+      "rowIds": [
+        "graph-name-preserved-after-edit:3:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/61cde0fc1e50f7d928c8.png",
+      "sha256": "0dad63c19e4c5379a9b3d2794aa4dc1843202830d3f9088d217d8c2b605738b1",
+      "rowIds": [
+        "alg-solve-denominator-constant:2:preview",
+        "alg-solve-denominator-constant:2:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png",
+      "sha256": "3d5812dcaec9c0227c08ce0a0d0b89b913410de560193a07227365246a09f094",
+      "rowIds": [
+        "alg-combine-repeated-variable:1:final",
+        "alg-negative-variable-on-right:1:final",
+        "alg-negative-outside-square:1:final",
+        "alg-difference-of-squares-value:1:final",
+        "alg-solve-denominator-constant:1:final",
+        "alg-expand-before-substitute:1:final",
+        "alg-expression-to-equation:1:final",
+        "alg-accept-unapplied-suggestion:1:final",
+        "graph-square-root-endpoint:1:final",
+        "graph-translation-order:1:final",
+        "graph-replace-entire-graph:1:final",
+        "graph-named-function-redefinition:1:final",
+        "graph-exponential-base-parameter:1:final",
+        "graph-name-preserved-after-edit:1:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62f3335d35be084b2ce6.png",
+      "sha256": "d65be5c00f0cff483f1783ca9a2ed7d8086760a7d7a177f7b1acabe37fdf70ef",
+      "rowIds": [
+        "alg-negative-variable-on-right:4:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/633fbac01571922ecfeb.png",
+      "sha256": "950523678ad98e6e5ca0c4dcbd8e2de87daab0e09696df5da4ddfc0bb33c3ef9",
+      "rowIds": [
+        "graph-replace-entire-graph:4:preview",
+        "graph-replace-entire-graph:4:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/667026bf6a0db8dc8b68.png",
+      "sha256": "951bcc740b8d7e504c7955d77c3a06d06dfa23268d4a11e50f8de87ee08a989b",
+      "rowIds": [
+        "alg-difference-of-squares-value:2:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/697fff14b277bb8325e3.png",
+      "sha256": "ddac8fc5cbfc47159b037357f548ee29e1363965853601d1f7af08cf6a46461e",
+      "rowIds": [
+        "alg-negative-variable-on-right:3:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/69d6334a2630d9dddd4c.png",
+      "sha256": "d25b9b954bb1fe957ac003593a0fa930acde92098f2be5c53e8109ba6e836b0d",
+      "rowIds": [
+        "alg-combine-repeated-variable:4:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/6b9b889f1f5190cb2481.png",
+      "sha256": "d1ad2b8a2ee8e4fa61a03eea8039083bafae4a690fa95a880eee68f5b261c0fb",
+      "rowIds": [
+        "alg-combine-repeated-variable:2:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/754a92037da32fac2d9a.png",
+      "sha256": "c51d713e03c76ff742b4860a9f5c7f85b5a8fd6942bfc27a2cfaf3d9681f20ef",
+      "rowIds": [
+        "graph-replace-entire-graph:4:preview",
+        "graph-replace-entire-graph:4:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/83f5b3611abb76633eed.png",
+      "sha256": "1366b9c9db84acbed6adcae1d6f2d9a931f1966d06ea2025f108a058971cbb95",
+      "rowIds": [
+        "alg-expression-to-equation:2:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/89397d47343227cc7f12.png",
+      "sha256": "6c535e979f0aaddab6b4705483c0ab1c1acd877168e4eb31832893bc95707168",
+      "rowIds": [
+        "alg-expression-to-equation:3:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/8eaa02c8e2a7568a5e60.png",
+      "sha256": "17ce600349a527241a213918a6004fb637da5412bd19cc06041b029ac6b0d597",
+      "rowIds": [
+        "graph-translation-order:3:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/9cfb1bfdee89590d91fe.png",
+      "sha256": "d0a46ff9f8034b6943051b7937289b0c8d8f8c068b231fa5e5610d156c9dd04e",
+      "rowIds": [
+        "graph-named-function-redefinition:2:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/9fa2ddf1c7676a974f3c.png",
+      "sha256": "5d72f16585f324b438b5589eaee3e556d63047a6f756918c06b2d309d9a4bf1b",
+      "rowIds": [
+        "alg-negative-outside-square:2:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/ac39d21982313ad4b4a9.png",
+      "sha256": "c5e755a7582e0cdf1a3efa2988e6dd1c5339054b94d1cdf5b6e573b4b7026707",
+      "rowIds": [
+        "graph-translation-order:4:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/b6c781dabead1caf1d4e.png",
+      "sha256": "ef4d8f307961be117e74fed69f560f196431f227b8b8989f69307be9e8378127",
+      "rowIds": [
+        "graph-named-function-redefinition:2:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/d00310a7c75df3d8f07a.png",
+      "sha256": "0976c1e427391f16c54a5896de2caa61baf2e0fd96c1172d8678d3a6ce633999",
+      "rowIds": [
+        "alg-combine-repeated-variable:5:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/d49afd3b72b05389f5eb.png",
+      "sha256": "414b71afb2e8e9275350ae1bf1e6aaf44719fc77aa1138fc461c02993b6ef938",
+      "rowIds": [
+        "graph-named-function-redefinition:3:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e08cc935325e24e22bc0.png",
+      "sha256": "c2835727713777c92741e2c7eba46583edb02fc0bbec506d8c8bffa542c631f7",
+      "rowIds": [
+        "alg-accept-unapplied-suggestion:2:final",
+        "alg-accept-unapplied-suggestion:3:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e76c2a138734e061d1a1.png",
+      "sha256": "257ebd8721227c8fe7959073af66a98e37a0ddf008fde8a6df5a8a032fcf430e",
+      "rowIds": [
+        "graph-translation-order:3:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e8a5a7ab17195b5ecff9.png",
+      "sha256": "4fe86833f7a3d591784649de01f8ccda220064e70571f634e79d49b4b55d9957",
+      "rowIds": [
+        "graph-name-preserved-after-edit:3:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e97a9dd553e8e3bdceeb.png",
+      "sha256": "1c740e236c03e9c6e9e65a296f218b3e768661d8cc362b34bf24e8944b02d130",
+      "rowIds": [
+        "graph-replace-entire-graph:3:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/f7f953e33eb29686e704.png",
+      "sha256": "a5daeca95a40d818879f2848bc4b5b95753254d92d34351070e33c757e83485d",
+      "rowIds": [
+        "graph-translation-order:2:final",
+        "graph-replace-entire-graph:2:final",
+        "graph-name-preserved-after-edit:2:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/f9fb4ab7e82d7289b37e.png",
+      "sha256": "99b9080727fe017f8234e54cba0a009dbddc066ae80f20ad80442dd7f1ad3b43",
+      "rowIds": [
+        "graph-exponential-base-parameter:4:final"
+      ],
+      "reviewed": true
+    },
+    {
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/fd8ec22a279523a6bf23.png",
+      "sha256": "21406e478d9bb2734119fc33792dcb95b02497bee48d5fd1c2e0f3bffeffc78f",
+      "rowIds": [
+        "graph-square-root-endpoint:2:final",
+        "graph-square-root-endpoint:3:final"
+      ],
+      "reviewed": true
+    }
+  ],
+  "rows": [
+    {
+      "id": "alg-combine-repeated-variable:1:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png"
+      ]
+    },
+    {
+      "id": "alg-combine-repeated-variable:2:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/6b9b889f1f5190cb2481.png"
+      ]
+    },
+    {
+      "id": "alg-combine-repeated-variable:3:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/38136e3c161b9b417591.png"
+      ]
+    },
+    {
+      "id": "alg-combine-repeated-variable:4:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/69d6334a2630d9dddd4c.png"
+      ]
+    },
+    {
+      "id": "alg-combine-repeated-variable:5:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/d00310a7c75df3d8f07a.png"
+      ]
+    },
+    {
+      "id": "alg-negative-variable-on-right:1:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png"
+      ]
+    },
+    {
+      "id": "alg-negative-variable-on-right:2:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3b1eaccb45a1ffb1a6f2.png"
+      ]
+    },
+    {
+      "id": "alg-negative-variable-on-right:3:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/697fff14b277bb8325e3.png"
+      ]
+    },
+    {
+      "id": "alg-negative-variable-on-right:4:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62f3335d35be084b2ce6.png"
+      ]
+    },
+    {
+      "id": "alg-negative-variable-on-right:5:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/0392aa96cbf33466c418.png"
+      ]
+    },
+    {
+      "id": "alg-negative-outside-square:1:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png"
+      ]
+    },
+    {
+      "id": "alg-negative-outside-square:2:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/9fa2ddf1c7676a974f3c.png"
+      ]
+    },
+    {
+      "id": "alg-difference-of-squares-value:1:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png"
+      ]
+    },
+    {
+      "id": "alg-difference-of-squares-value:2:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/667026bf6a0db8dc8b68.png"
+      ]
+    },
+    {
+      "id": "alg-solve-denominator-constant:1:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png"
+      ]
+    },
+    {
+      "id": "alg-solve-denominator-constant:2:preview",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/61cde0fc1e50f7d928c8.png"
+      ]
+    },
+    {
+      "id": "alg-solve-denominator-constant:2:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/61cde0fc1e50f7d928c8.png"
+      ]
+    },
+    {
+      "id": "alg-expand-before-substitute:1:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png"
+      ]
+    },
+    {
+      "id": "alg-expand-before-substitute:2:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/129a6a13e8176ccb758d.png"
+      ]
+    },
+    {
+      "id": "alg-expand-before-substitute:3:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/129a6a13e8176ccb758d.png"
+      ]
+    },
+    {
+      "id": "alg-expression-to-equation:1:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png"
+      ]
+    },
+    {
+      "id": "alg-expression-to-equation:2:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/83f5b3611abb76633eed.png"
+      ]
+    },
+    {
+      "id": "alg-expression-to-equation:3:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/89397d47343227cc7f12.png"
+      ]
+    },
+    {
+      "id": "alg-accept-unapplied-suggestion:1:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png"
+      ]
+    },
+    {
+      "id": "alg-accept-unapplied-suggestion:2:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e08cc935325e24e22bc0.png"
+      ]
+    },
+    {
+      "id": "alg-accept-unapplied-suggestion:3:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e08cc935325e24e22bc0.png"
+      ]
+    },
+    {
+      "id": "graph-square-root-endpoint:1:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png"
+      ]
+    },
+    {
+      "id": "graph-square-root-endpoint:2:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/fd8ec22a279523a6bf23.png",
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3f2dd9ac329107920f9d.png"
+      ]
+    },
+    {
+      "id": "graph-square-root-endpoint:3:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/fd8ec22a279523a6bf23.png",
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3f2dd9ac329107920f9d.png"
+      ]
+    },
+    {
+      "id": "graph-translation-order:1:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png"
+      ]
+    },
+    {
+      "id": "graph-translation-order:2:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/f7f953e33eb29686e704.png",
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3ebc404d852a6d05c1fc.png"
+      ]
+    },
+    {
+      "id": "graph-translation-order:3:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/8eaa02c8e2a7568a5e60.png",
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e76c2a138734e061d1a1.png"
+      ]
+    },
+    {
+      "id": "graph-translation-order:4:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/ac39d21982313ad4b4a9.png",
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/14a675f5e3b86a7911be.png"
+      ]
+    },
+    {
+      "id": "graph-replace-entire-graph:1:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png"
+      ]
+    },
+    {
+      "id": "graph-replace-entire-graph:2:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/f7f953e33eb29686e704.png",
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3ebc404d852a6d05c1fc.png"
+      ]
+    },
+    {
+      "id": "graph-replace-entire-graph:3:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/03435d82281af028f494.png",
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e97a9dd553e8e3bdceeb.png"
+      ]
+    },
+    {
+      "id": "graph-replace-entire-graph:4:preview",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/633fbac01571922ecfeb.png",
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/754a92037da32fac2d9a.png"
+      ]
+    },
+    {
+      "id": "graph-replace-entire-graph:4:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/633fbac01571922ecfeb.png",
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/754a92037da32fac2d9a.png"
+      ]
+    },
+    {
+      "id": "graph-named-function-redefinition:1:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png"
+      ]
+    },
+    {
+      "id": "graph-named-function-redefinition:2:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/9cfb1bfdee89590d91fe.png",
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/b6c781dabead1caf1d4e.png"
+      ]
+    },
+    {
+      "id": "graph-named-function-redefinition:3:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/429a81d6614ee2b217a9.png",
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/d49afd3b72b05389f5eb.png"
+      ]
+    },
+    {
+      "id": "graph-exponential-base-parameter:1:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png"
+      ]
+    },
+    {
+      "id": "graph-exponential-base-parameter:2:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/448ddbb91f3eeaa1f158.png",
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/2229955a915dfe1b946d.png"
+      ]
+    },
+    {
+      "id": "graph-exponential-base-parameter:3:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/448ddbb91f3eeaa1f158.png",
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/2229955a915dfe1b946d.png"
+      ]
+    },
+    {
+      "id": "graph-exponential-base-parameter:4:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/f9fb4ab7e82d7289b37e.png",
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/1bffd9ab9327f59c03cb.png"
+      ]
+    },
+    {
+      "id": "graph-name-preserved-after-edit:1:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png"
+      ]
+    },
+    {
+      "id": "graph-name-preserved-after-edit:2:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/f7f953e33eb29686e704.png",
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3ebc404d852a6d05c1fc.png"
+      ]
+    },
+    {
+      "id": "graph-name-preserved-after-edit:3:final",
+      "reviewed": true,
+      "result": "failure: invalid model output; prior-state fallback inspected",
+      "screenshots": [
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/515d0ee36fed2ea71de7.png",
+        "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e8a5a7ab17195b5ecff9.png"
+      ]
+    }
+  ],
+  "postFixRecheck": {
+    "scope": "Two representative named-function/parameter prestates, each mobile390x844 anddesktop1280x900; four fresh-page screenshots inspected by primary and independent reviewer. Not a rerun of model inference.",
+    "evidence": "mobile-graph-diagnostic/fixed-verification.json",
+    "inspection": "mobile-graph-diagnostic/visual-review.json",
+    "result": "Mobile curves restored; chart height222.97px. Desktop curves preserved. Hide/Show restores mobile drawing. No JavaScript errors.",
+    "productionChange": "Web/src/modules/visuals/ui/graph-controls.css",
+    "limits": "Complete166-row CUDA baseline/adapted review remains pending; model-format failures unchanged."
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "scope": "Actual browser rendering of every captured provider outcome. Saved synthetic report data is replayed through a mocked problem API; no provider calls or student data. Capture alone is not visual review.",
+  "reportSha256": "62b25fd69ed23ea77183951e8adefc3d81b497131bfcf0ebb16eeedad5122aaf",
+  "reviews": [
+    {
+      "scenario": "cancel-division",
+      "variant": "short",
+      "text": "Remove the division by seven.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-513a72d8-762a-4064-ac37-8e9615c926d1/visual/00-short-cancel-division.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "x=21 with multiplication and simplification saved"
+    },
+    {
+      "scenario": "cancel-product",
+      "variant": "short",
+      "text": "Cancel the multiplication by six.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-513a72d8-762a-4064-ac37-8e9615c926d1/visual/01-short-cancel-product.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "x=3 with division and simplification saved"
+    },
+    {
+      "scenario": "halve",
+      "variant": "short",
+      "text": "Halve the equation.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-513a72d8-762a-4064-ac37-8e9615c926d1/visual/02-short-halve.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "x=4 with division and simplification saved"
+    },
+    {
+      "scenario": "no-over-solving",
+      "variant": "short",
+      "text": "Let us solve the problem x plus five equals seven.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-513a72d8-762a-4064-ac37-8e9615c926d1/visual/03-short-no-over-solving.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Introduced x+5=7 remains unsolved"
+    },
+    {
+      "scenario": "vague-circle",
+      "variant": "short",
+      "text": "Draw a circle.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-513a72d8-762a-4064-ac37-8e9615c926d1/visual/04-short-vague-circle.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Circle radius 1 centered at O visible"
+    },
+    {
+      "scenario": "vague-edit",
+      "variant": "short",
+      "text": "Change that number to five.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-513a72d8-762a-4064-ac37-8e9615c926d1/visual/05-short-vague-edit.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Coefficient changed to 5"
+    },
+    {
+      "scenario": "vague-edit",
+      "variant": "short",
+      "text": "Undo that.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-513a72d8-762a-4064-ac37-8e9615c926d1/visual/06-short-vague-edit.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Undo restores 2x+3=9"
+    },
+    {
+      "scenario": "missing-divisor",
+      "variant": "short",
+      "text": "Divide both sides.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-513a72d8-762a-4064-ac37-8e9615c926d1/visual/07-short-missing-divisor.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Both sides divided by 2"
+    },
+    {
+      "scenario": "viewport",
+      "variant": "short",
+      "text": "Pan graph down.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-513a72d8-762a-4064-ac37-8e9615c926d1/visual/08-short-viewport.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Both curves visible after viewport movement"
+    },
+    {
+      "scenario": "polar",
+      "variant": "short",
+      "text": "Plot r equals two times cosine theta for theta from zero to pi over two.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-513a72d8-762a-4064-ac37-8e9615c926d1/visual/09-short-polar.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Upper polar arc from (2,0) to (0,0)"
+    },
+    {
+      "scenario": "segment-length",
+      "variant": "short",
+      "text": "Draw segment AB from A at zero, zero to B at three, four and show its length.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-513a72d8-762a-4064-ac37-8e9615c926d1/visual/10-short-segment-length.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "AB length 5 from (0,0) to (3,4)"
+    },
+    {
+      "scenario": "segment-length",
+      "variant": "short",
+      "text": "Move B to zero, six.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-513a72d8-762a-4064-ac37-8e9615c926d1/visual/11-short-segment-length.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "AB vertical length 6 from (0,0) to (0,6)"
+    },
+    {
+      "scenario": "dsl-batch",
+      "variant": "short",
+      "text": "Subtract three from both sides, then simplify.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-513a72d8-762a-4064-ac37-8e9615c926d1/visual/12-short-dsl-batch.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Subtraction intermediate and x=4 visible as separate saved steps"
+    },
+    {
+      "scenario": "dsl-query",
+      "variant": "short",
+      "text": "What is the value of graph one at x equals two?",
+      "passed": true,
+      "screenshot": "Evals/evaluations/dsl-envelope-513a72d8-762a-4064-ac37-8e9615c926d1/visual/13-short-dsl-query.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "y=x\u00b2 remains unchanged after query"
+    },
+    {
+      "scenario": "dsl-suggestion",
+      "variant": "short",
+      "text": "Explain what would happen if I subtracted three from both sides, but do not change the equation.",
+      "passed": false,
+      "screenshot": "Evals/evaluations/dsl-envelope-513a72d8-762a-4064-ac37-8e9615c926d1/visual/14-short-dsl-suggestion.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Unchanged x+3=7; explanation correctly has no explicitly requested proposal. Fixture expectation was too strict, acceptance turn blocked."
+    }
+  ]
+}

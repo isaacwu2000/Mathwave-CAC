@@ -1,0 +1,16 @@
+{
+  "run": "a2a036cd-f657-439e-b368-5c9bcfe8713a",
+  "scope": "One mocked browser lifecycle case; no provider or saved-user-data access.",
+  "checks": [
+    "Pico has two matching circular eyes; listening and playback overlap, and interruption immediately removes waves.",
+    "Student captions render incrementally before delegation and remain visible during execution.",
+    "Checking status visible before save; revision stays zero.",
+    "Request progress animates Pico independently of audible playback.",
+    "Keyboard mic stop releases listening while the delegated save remains pending.",
+    "Reduced motion removes animation while preserving status; a simulated hidden-page event pauses and resumes motion.",
+    "Fixing status visible at 390px with no save or horizontal overflow.",
+    "Final result replaces preview and increments revision once.",
+    "The delegated save and AI reply complete with the microphone off."
+  ],
+  "passed": true
+}

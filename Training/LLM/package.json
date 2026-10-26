@@ -1,0 +1,10 @@
+{
+  "name": "mathwave-llm-training",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "22.19.19",
+    "vitest": "^5.0.4",
+    "playwright": "1.64.1"
+  }
+}

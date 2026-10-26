@@ -1,0 +1,199 @@
+/* Mathwave: approved Instrument Sans, peach highlights and soft elevation. */
+@font-face {
+  font-display: swap;
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  src: url('/fonts/instrument-sans.ttf') format('truetype');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'STIX Two Math';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/stix-two-math.ttf') format('truetype');
+}
+:root {
+  --font-ui: 'Instrument Sans';
+  /* Compatibility alias for the existing grapher and shared controls. */
+  --font-lexend: var(--font-ui);
+  --font-graph-math: 'STIX Two Math', 'Cambria Math', math, serif;
+  --peach: #fef2ec;
+  --graph-background: #ffffff;
+  --accent-100: var(--peach);
+  --accent-200: #faddca;
+  --accent-300: #f4bd9c;
+  --accent-400: #eb956f;
+  --accent-500: #e16a45;
+  --accent-600: #da422b;
+  --accent-700: #d32419;
+  --accent-800: #b51d15;
+  --accent-900: #8f1b14;
+  --neutral-light-100: #ffffff;
+  --neutral-light-200: #ffffff;
+  --neutral-light-300: #fff9f5;
+  --neutral-light-400: #ffffff;
+  --neutral-light-500: #faf8f7;
+  --neutral-light-600: #f6f3f1;
+  --neutral-light-700: #f0ebe8;
+  --neutral-light-800: #e4dedc;
+  --neutral-dark-150: #252323;
+  --neutral-dark-180: #252323;
+  --neutral-dark-200: #252323;
+  --neutral-dark-220: #302c2a;
+  --neutral-dark-250: #383331;
+  --neutral-dark-300: #413b38;
+  --neutral-dark-400: #5e5754;
+  --neutral-dark-500: #706967;
+  --error-600: #b51d15;
+  /* Shared soft shadows: prompt and menus (md), math surfaces (mdlg),
+     dialogs (xl), and recessed fields (inner). */
+  --shadow-sm:
+    -1px 1px 1px color-mix(in oklch, var(--neutral-dark-150) 7.5%, transparent),
+    -1px 1px 3px color-mix(in oklch, var(--neutral-dark-150) 4%, transparent),
+    -1px 2px 6px color-mix(in oklch, var(--neutral-dark-150) 2%, transparent);
+  --shadow-md:
+    -0.5px 0.5px 2px
+      color-mix(in oklch, var(--neutral-dark-150) 7.5%, transparent),
+    -0.5px 0.5px 5px
+      color-mix(in oklch, var(--neutral-dark-150) 2%, transparent),
+    -0.5px 1.5px 10px
+      color-mix(in oklch, var(--neutral-dark-150) 2%, transparent);
+  --shadow-mdlg:
+    -1px 1px 2px color-mix(in oklch, var(--neutral-dark-150) 7.5%, transparent),
+    -1px 2px 8px color-mix(in oklch, var(--neutral-dark-150) 4%, transparent),
+    -1px 4px 16px color-mix(in oklch, var(--neutral-dark-150) 2%, transparent);
+  --shadow-lg:
+    -1px 1.5px 3px color-mix(in oklch, var(--neutral-dark-150) 5%, transparent),
+    -1px 3px 10px color-mix(in oklch, var(--neutral-dark-150) 4%, transparent),
+    -1px 6px 20px color-mix(in oklch, var(--neutral-dark-150) 2%, transparent);
+  --shadow-xl: 0 20px 48px
+    color-mix(in oklch, var(--neutral-dark-150) 13.5%, transparent);
+  --shadow-inner:
+    inset -1px 1px 1px
+      color-mix(in oklch, var(--neutral-dark-150) 2.5%, transparent),
+    inset -1px 1px 4px
+      color-mix(in oklch, var(--neutral-dark-150) 2.5%, transparent),
+    inset -1px 2px 8px
+      color-mix(in oklch, var(--neutral-dark-150) 2%, transparent);
+  /* Three-layer bottom-left lift used for an actively edited concept row. */
+  --shadow-concept-selection:
+    -1px 2px 4px oklch(0% 0 0 / 2%), 0 0 4px oklch(0% 0 0 / 4%),
+    -0.5px 1px 2px oklch(0% 0 0 / 2%);
+  --shadow-accent-button: var(--shadow-sm);
+
+  /* Material Design easing (MD1 web curves).
+       https://m1.material.io/motion/duration-easing.html */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1); /* begin and end on screen */
+  --ease-decelerate: cubic-bezier(
+    0,
+    0,
+    0.2,
+    1
+  ); /* enter — peak speed to rest */
+  --ease-accelerate: cubic-bezier(0.4, 0, 1, 1); /* exit — rest to peak speed */
+}
+
+:root {
+  --background: #fff9f5;
+  --foreground: var(--neutral-dark-200);
+  --card: var(--neutral-light-100);
+  --primary: var(--neutral-dark-300);
+  --primary-foreground: var(--neutral-light-100);
+  --muted: var(--neutral-light-600);
+  --muted-foreground: var(--neutral-dark-400);
+  --border: var(--neutral-light-800);
+  --input: var(--neutral-light-800);
+  --ring: var(--accent-700);
+  --radius: 0.75rem;
+}
+* {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-lexend), sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-kerning: normal;
+  font-optical-sizing: auto;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+button,
+a,
+input,
+textarea,
+select {
+  touch-action: manipulation;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button,
+a {
+  transition:
+    background 150ms var(--ease-standard),
+    color 150ms var(--ease-standard),
+    opacity 150ms var(--ease-standard);
+}
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+h1,
+h2 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+}
+p {
+  margin: 8px 0 16px;
+}
+:where(input:not([type='range']):not([type='file']), select, textarea) {
+  min-height: 44px;
+  max-width: 100%;
+  min-width: 0;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: var(--neutral-light-100);
+  color: var(--foreground);
+  box-shadow: var(--shadow-inner);
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--neutral-dark-500);
+  opacity: 1;
+}
+input[type='range'] {
+  accent-color: var(--accent-700);
+  min-height: 44px;
+  width: 100%;
+}

@@ -1,0 +1,222 @@
+{
+  "config": {
+    "model": "openai/whisper-tiny.en",
+    "revision": "87c7102498dcde7456f24cfd30239ca606ed9063",
+    "seed": 20261022,
+    "epochs": 2,
+    "learningRate": 0.0005,
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "batchSize": 2,
+    "gradientAccumulation": 4,
+    "maxNewTokens": 128,
+    "selection": "lowest validation token-weighted cross entropy, trained checkpoints only",
+    "precision": "float32",
+    "device": "mps",
+    "paidComputeUsd": 0
+  },
+  "splitSha256": "530ecee7b4b03f15f56c997de5b360e255df50ac3d0e1abb7a874bfb08f4e78b",
+  "splitSummary": {
+    "test": {
+      "conversations": 40,
+      "retainedClips": 116,
+      "uniqueTranscripts": 110,
+      "voices": [
+        "Daniel",
+        "Eddy (English (US))",
+        "Flo (English (US))",
+        "Karen",
+        "Reed (English (US))",
+        "Samantha"
+      ]
+    },
+    "val": {
+      "conversations": 40,
+      "retainedClips": 115,
+      "uniqueTranscripts": 112,
+      "voices": [
+        "Daniel",
+        "Eddy (English (US))",
+        "Flo (English (US))",
+        "Karen",
+        "Reed (English (US))",
+        "Samantha"
+      ]
+    },
+    "train": {
+      "conversations": 320,
+      "retainedClips": 922,
+      "uniqueTranscripts": 880,
+      "voices": [
+        "Daniel",
+        "Eddy (English (US))",
+        "Flo (English (US))",
+        "Karen",
+        "Reed (English (US))",
+        "Samantha"
+      ]
+    }
+  },
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "versions": {
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "peft": "0.21.2",
+    "numpy": "2.5.4",
+    "soundfile": "0.14.0"
+  },
+  "codeSha256": {
+    "train_student_speech.py": "35935c59e83f9264e74a357521be698ec1c5462525fc04f0fa345a815d65663c",
+    "split_student_speech.py": "71f657b070f241d7ecbfa2d34671cca373528e488cc7ddb9533f980ed59cfc78",
+    "benchmark_local_speech.py": "27192c7337599405d57c107a9709c40269a63cd6f60f57e3cdb47b1409815f4e"
+  },
+  "checklist": {
+    "splitFrozen": true,
+    "baseline": true,
+    "trained": true,
+    "validationSelection": true,
+    "heldoutRetest": true,
+    "baseWeightsUnchanged": true
+  },
+  "limits": [
+    "Synthetic macOS voices only; all voices recur across partitions.",
+    "Filtered STT clips, not multi-turn LLM training.",
+    "Validation is geometry-heavy because related parallel/transversal cases stay together.",
+    "No actual-app result rendering, human-speech or iPhone acceptance is established by transcription scores."
+  ],
+  "visualReview": "Not an app-command evaluation: no mathematical output is rendered. App visual acceptance remains incomplete (2/400 conversations in prior evidence).",
+  "modelLoadSeconds": 0.9756794579989219,
+  "baselineValidation": {
+    "uniqueTranscript": {
+      "clips": 112,
+      "referenceWords": 1045,
+      "wordErrors": 140,
+      "normalizedWER": 0.1339712918660287,
+      "normalizedExact": 58,
+      "rawWER": 0.3515850144092219,
+      "mathTokenErrorRate": 0.1444043321299639,
+      "generationSeconds": 23.720876537005097,
+      "audioSeconds": 381.786625
+    },
+    "allClips": {
+      "clips": 115,
+      "referenceWords": 1083,
+      "wordErrors": 141,
+      "normalizedWER": 0.13019390581717452,
+      "normalizedExact": 60,
+      "rawWER": 0.35125115848007415,
+      "mathTokenErrorRate": 0.1384083044982699,
+      "generationSeconds": 24.520319538005424,
+      "audioSeconds": 395.907375
+    }
+  },
+  "frozenBaseBeforeSha256": "f4ccb2dc00cf520dab0d11a25a46efd5c889d9d23e9a2c01dfc4c05fbb233644",
+  "trainableParameters": 147456,
+  "totalParameters": 37907712,
+  "baselineValidationLoss": 1.0198011598752246,
+  "epochs": [
+    {
+      "epoch": 1,
+      "meanBatchTrainLoss": 0.328309359224897,
+      "validationTokenLoss": 0.11508852807278543,
+      "optimizerSteps": 116
+    },
+    {
+      "epoch": 2,
+      "meanBatchTrainLoss": 0.06737282075121223,
+      "validationTokenLoss": 0.10356138285778402,
+      "optimizerSteps": 232
+    }
+  ],
+  "selectedEpoch": 2,
+  "selectedValidationLoss": 0.10356138285778402,
+  "trainingSeconds": 633.5034031249997,
+  "optimizerSteps": 232,
+  "frozenBaseAfterSha256": "f4ccb2dc00cf520dab0d11a25a46efd5c889d9d23e9a2c01dfc4c05fbb233644",
+  "adapterChanged": true,
+  "selectionLockedBeforeTest": true,
+  "adaptedValidation": {
+    "uniqueTranscript": {
+      "clips": 112,
+      "referenceWords": 1045,
+      "wordErrors": 38,
+      "normalizedWER": 0.03636363636363636,
+      "normalizedExact": 88,
+      "rawWER": 0.056676272814601344,
+      "mathTokenErrorRate": 0.018050541516245487,
+      "generationSeconds": 33.65429737200975,
+      "audioSeconds": 381.786625
+    },
+    "allClips": {
+      "clips": 115,
+      "referenceWords": 1083,
+      "wordErrors": 38,
+      "normalizedWER": 0.03508771929824561,
+      "normalizedExact": 91,
+      "rawWER": 0.05468025949953661,
+      "mathTokenErrorRate": 0.01730103806228374,
+      "generationSeconds": 34.58640720500989,
+      "audioSeconds": 395.907375
+    }
+  },
+  "adaptedTest": {
+    "uniqueTranscript": {
+      "clips": 110,
+      "referenceWords": 740,
+      "wordErrors": 34,
+      "normalizedWER": 0.04594594594594595,
+      "normalizedExact": 88,
+      "rawWER": 0.06891891891891892,
+      "mathTokenErrorRate": 0.02,
+      "generationSeconds": 26.42327758202373,
+      "audioSeconds": 268.371
+    },
+    "allClips": {
+      "clips": 116,
+      "referenceWords": 788,
+      "wordErrors": 34,
+      "normalizedWER": 0.04314720812182741,
+      "normalizedExact": 94,
+      "rawWER": 0.06472081218274112,
+      "mathTokenErrorRate": 0.018433179723502304,
+      "generationSeconds": 28.03159733202483,
+      "audioSeconds": 289.5425625
+    }
+  },
+  "baselineTest": {
+    "uniqueTranscript": {
+      "clips": 110,
+      "referenceWords": 740,
+      "wordErrors": 132,
+      "normalizedWER": 0.1783783783783784,
+      "normalizedExact": 53,
+      "rawWER": 0.35,
+      "mathTokenErrorRate": 0.145,
+      "generationSeconds": 20.76634925002145,
+      "audioSeconds": 268.371
+    },
+    "allClips": {
+      "clips": 116,
+      "referenceWords": 788,
+      "wordErrors": 143,
+      "normalizedWER": 0.1814720812182741,
+      "normalizedExact": 55,
+      "rawWER": 0.3616751269035533,
+      "mathTokenErrorRate": 0.1382488479262673,
+      "generationSeconds": 21.99136979301329,
+      "audioSeconds": 289.5425625
+    }
+  },
+  "elapsedSeconds": 764.5027621249974,
+  "memory": {
+    "mpsAllocatedMiB": 147.81201171875,
+    "mpsDriverMiB": 2397.4375
+  },
+  "adapterFiles": {
+    "README.md": "9137b4da73e75bcbcb93e925df25ba57385330c8e86aac0a23c7ad9bf12b4e1d",
+    "adapter_config.json": "38faf356a73142793679640a2c7e601325ac6805eccee94d47b23461ebb69754",
+    "adapter_model.safetensors": "334fd86ce1bf12be5b5bbafe6c3b814e6d1bf0dc4e28f7689eb337675074b07c"
+  },
+  "metricNotes": "Primary unique-transcript score; full retained-clip score secondary. Normalized WER uses frozen existing benchmark tokens (small number-word normalization only); raw WER uses unnormalized whitespace words. Math-token error rate is diagnostic, not equation accuracy. Generation timing excludes imports/model load/preprocessing; per-clip processing+generation and full run times are also recorded. Both rounds use one warm eager MPS pass with the same deterministic decoder."
+}

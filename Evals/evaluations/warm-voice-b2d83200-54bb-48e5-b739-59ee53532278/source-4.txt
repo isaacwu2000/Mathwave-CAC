@@ -1,0 +1,1024 @@
+import type { ToolDefinition, ToolArea } from '../types/tool.ts';
+
+/** Executable operation contracts; the runner and prompt generators consume this same catalog. */
+const definitions = {
+  'problem.currentEquation': {
+    kind: 'query',
+    area: 'equation',
+    parameters: [],
+    returns: 'MathValue',
+    description: 'Capture the current equation.',
+  },
+  'math.expression': {
+    kind: 'transform',
+    area: 'equation',
+    parameters: [{ name: 'notation', type: 'string' }],
+    returns: 'MathValue',
+    description: 'Create unsaved math from notation.',
+    constraints: 'equation requires an equals sign.',
+  },
+  'math.equation': {
+    kind: 'transform',
+    area: 'equation',
+    parameters: [{ name: 'notation', type: 'string' }],
+    returns: 'MathValue',
+    description: 'Create unsaved math from notation.',
+    constraints: 'equation requires an equals sign.',
+  },
+  'math.addBothSides': {
+    kind: 'transform',
+    area: 'equation',
+    parameters: [
+      { name: 'value', type: 'math' },
+      { name: 'operand', type: 'operand' },
+    ],
+    returns: 'MathValue',
+    description: 'Apply the named operation to both sides.',
+  },
+  'math.subtractBothSides': {
+    kind: 'transform',
+    area: 'equation',
+    parameters: [
+      { name: 'value', type: 'math' },
+      { name: 'operand', type: 'operand' },
+    ],
+    returns: 'MathValue',
+    description: 'Apply the named operation to both sides.',
+  },
+  'math.multiplyBothSides': {
+    kind: 'transform',
+    area: 'equation',
+    parameters: [
+      { name: 'value', type: 'math' },
+      { name: 'operand', type: 'operand' },
+    ],
+    returns: 'MathValue',
+    description: 'Apply the named operation to both sides.',
+    constraints: 'Use nonzero finite constant operands.',
+  },
+  'math.divideBothSides': {
+    kind: 'transform',
+    area: 'equation',
+    parameters: [
+      { name: 'value', type: 'math' },
+      { name: 'operand', type: 'operand' },
+    ],
+    returns: 'MathValue',
+    description: 'Apply the named operation to both sides.',
+    constraints: 'Use nonzero finite constant operands.',
+  },
+  'math.simplify': {
+    kind: 'transform',
+    area: 'equation',
+    parameters: [{ name: 'value', type: 'math' }],
+    returns: 'MathValue',
+    description: 'Simplify the supplied value.',
+  },
+  'math.swapSides': {
+    kind: 'transform',
+    area: 'equation',
+    parameters: [{ name: 'value', type: 'math' }],
+    returns: 'MathValue',
+    description: 'Swap equation sides.',
+  },
+  'math.replace': {
+    kind: 'transform',
+    area: 'equation',
+    parameters: [
+      { name: 'value', type: 'math' },
+      { name: 'old', type: 'operand' },
+      { name: 'replacement', type: 'operand' },
+    ],
+    returns: 'MathValue',
+    description: 'Replace one uniquely matching expression.',
+  },
+  'math.part': {
+    kind: 'query',
+    area: 'equation',
+    parameters: [
+      { name: 'value', type: 'math' },
+      { name: 'number', type: 'number' },
+    ],
+    returns: 'PartReference',
+    description:
+      'Select a one-based part belonging to this exact immutable value.',
+  },
+  'math.replacePart': {
+    kind: 'transform',
+    area: 'equation',
+    parameters: [
+      { name: 'value', type: 'math' },
+      { name: 'part', type: 'part' },
+      { name: 'replacement', type: 'operand' },
+    ],
+    returns: 'MathValue',
+    description: 'Replace exactly the selected occurrence.',
+    constraints: 'Reselect parts after a transform.',
+  },
+  'math.leftSide': {
+    kind: 'query',
+    area: 'equation',
+    parameters: [{ name: 'value', type: 'math' }],
+    returns: 'MathValue',
+    description: 'Read the named equation side as a value.',
+  },
+  'math.rightSide': {
+    kind: 'query',
+    area: 'equation',
+    parameters: [{ name: 'value', type: 'math' }],
+    returns: 'MathValue',
+    description: 'Read the named equation side as a value.',
+  },
+  'math.read': {
+    kind: 'query',
+    area: 'equation',
+    parameters: [{ name: 'value', type: 'mathOrPart' }],
+    returns: 'readback',
+    description: 'Read math or one selected part.',
+  },
+  'math.solve': {
+    kind: 'query',
+    area: 'equation',
+    parameters: [{ name: 'value', type: 'math' }],
+    returns: 'readback',
+    description: 'Read the solution without changing work.',
+  },
+  'math.evaluate': {
+    kind: 'query',
+    area: 'equation',
+    parameters: [
+      { name: 'value', type: 'math' },
+      { name: 'variables', type: 'dimensions', optional: true },
+    ],
+    returns: 'number or {left,right,difference}',
+    description: 'Evaluate numerically and return an engine readback.',
+  },
+  'problem.save': {
+    kind: 'save',
+    area: 'shared',
+    parameters: [{ name: 'value', type: 'work' }],
+    returns: 'void',
+    description: 'Stage one final work value for saving.',
+    constraints:
+      'One save per program; persistence happens only after full validation.',
+  },
+  'problem.read': {
+    kind: 'query',
+    area: 'shared',
+    parameters: [{ name: 'value', type: 'work' }],
+    returns: 'readback',
+    description: 'Read a complete work value.',
+  },
+  'problem.readPart': {
+    kind: 'query',
+    area: 'shared',
+    parameters: [
+      { name: 'value', type: 'work' },
+      { name: 'number', type: 'number' },
+    ],
+    returns: 'readback',
+    description: 'Read one one-based work part.',
+  },
+  'graph.current': {
+    kind: 'query',
+    area: 'graph',
+    parameters: [{ name: 'numberOrName', type: 'graphSelector' }],
+    returns: 'GraphValue',
+    description: 'Capture a numbered or named curve in the current collection.',
+  },
+  'graph.plot': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [{ name: 'expression', type: 'string' }],
+    returns: 'GraphValue',
+    description: 'Create a graph, replacing the curve collection.',
+    examples: ['problem.save(graph.plot("x^2"));'],
+  },
+  'graph.select': {
+    kind: 'query',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'numberOrName', type: 'graphSelector' },
+    ],
+    returns: 'GraphValue',
+    description: 'Select another curve in this same collection.',
+  },
+  'graph.add': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'expression', type: 'string' },
+    ],
+    returns: 'GraphValue',
+    description: 'Add a curve and select it, preserving existing curves.',
+  },
+  'graph.edit': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'expression', type: 'string' },
+    ],
+    returns: 'GraphValue',
+    description: 'Edit the selected curve, preserving the collection.',
+  },
+  'graph.remove': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [{ name: 'value', type: 'graph' }],
+    returns: 'GraphValue',
+    description: 'Remove the selected curve; select curve one afterward.',
+  },
+  'graph.trace': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'x', type: 'number' },
+    ],
+    returns: 'GraphValue',
+    description: 'Place a trace at x.',
+  },
+  'graph.shift': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'right', type: 'number' },
+      { name: 'up', type: 'number' },
+    ],
+    returns: 'GraphValue',
+    description: 'Translate the selected curve.',
+  },
+  'graph.reflect': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'axis', type: 'string' },
+    ],
+    returns: 'GraphValue',
+    description: 'Reflect the curve.',
+    constraints: 'axis is x or y.',
+  },
+  'graph.scaleVertically': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'factor', type: 'number' },
+    ],
+    returns: 'GraphValue',
+    description: 'Scale curve heights.',
+  },
+  'graph.addTangent': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'x', type: 'number' },
+    ],
+    returns: 'GraphValue',
+    description: 'Add the named line at x.',
+    constraints:
+      'Analytic linear/quadratic curves only; vertical normals cannot be added as function curves.',
+  },
+  'graph.addNormal': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'x', type: 'number' },
+    ],
+    returns: 'GraphValue',
+    description: 'Add the named line at x.',
+    constraints:
+      'Analytic linear/quadratic curves only; vertical normals cannot be added as function curves.',
+  },
+  'graph.addDerivative': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [{ name: 'value', type: 'graph' }],
+    returns: 'GraphValue',
+    description: 'Add the derivative curve.',
+    constraints: 'Analytic linear/quadratic curves only.',
+  },
+  'graph.addSecant': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'firstX', type: 'number' },
+      { name: 'secondX', type: 'number' },
+    ],
+    returns: 'GraphValue',
+    description: 'Add the line through two curve points.',
+  },
+  'graph.value': {
+    kind: 'query',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'x', type: 'number' },
+    ],
+    returns: 'readback',
+    description: 'Read the named curve quantity at x.',
+  },
+  'graph.slope': {
+    kind: 'query',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'x', type: 'number' },
+    ],
+    returns: 'readback',
+    description: 'Read the named curve quantity at x.',
+  },
+  'graph.normal': {
+    kind: 'query',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'x', type: 'number' },
+    ],
+    returns: 'readback',
+    description: 'Read the named curve quantity at x.',
+  },
+  'graph.derivative': {
+    kind: 'query',
+    area: 'graph',
+    parameters: [{ name: 'value', type: 'graph' }],
+    returns: 'readback',
+    description: 'Read the named curve quantity or table.',
+  },
+  'graph.roots': {
+    kind: 'query',
+    area: 'graph',
+    parameters: [{ name: 'value', type: 'graph' }],
+    returns: 'readback',
+    description: 'Read the named curve quantity or table.',
+  },
+  'graph.keyPoints': {
+    kind: 'query',
+    area: 'graph',
+    parameters: [{ name: 'value', type: 'graph' }],
+    returns: 'readback',
+    description: 'Read the named curve quantity or table.',
+  },
+  'graph.table': {
+    kind: 'query',
+    area: 'graph',
+    parameters: [{ name: 'value', type: 'graph' }],
+    returns: 'readback',
+    description: 'Read the named curve quantity or table.',
+  },
+  'graph.integral': {
+    kind: 'query',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'first', type: 'number' },
+      { name: 'second', type: 'number' },
+    ],
+    returns: 'readback',
+    description: 'Read the named bounded curve quantity.',
+  },
+  'graph.totalArea': {
+    kind: 'query',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'first', type: 'number' },
+      { name: 'second', type: 'number' },
+    ],
+    returns: 'readback',
+    description: 'Read the named bounded curve quantity.',
+  },
+  'graph.averageRate': {
+    kind: 'query',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'first', type: 'number' },
+      { name: 'second', type: 'number' },
+    ],
+    returns: 'readback',
+    description: 'Read the named bounded curve quantity.',
+  },
+  'graph.intersections': {
+    kind: 'query',
+    area: 'graph',
+    parameters: [
+      { name: 'first', type: 'graph' },
+      { name: 'second', type: 'graph' },
+    ],
+    returns: 'readback',
+    description: 'Read curve intersections.',
+    constraints: 'Both handles must come from the same collection.',
+  },
+  'graph.areaBetween': {
+    kind: 'query',
+    area: 'graph',
+    parameters: [
+      { name: 'first', type: 'graph' },
+      { name: 'second', type: 'graph' },
+      { name: 'lower', type: 'number' },
+      { name: 'upper', type: 'number' },
+    ],
+    returns: 'readback',
+    description: 'Read area between curves.',
+    constraints: 'Both handles must come from the same collection.',
+  },
+  'graph.scene': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [{ name: 'rows', type: 'strings' }],
+    returns: 'GraphValue',
+    description:
+      'Create a checked collection with scalar/function definitions.',
+    context: 'graph-scene',
+  },
+  'graph.name': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'label', type: 'string' },
+    ],
+    returns: 'GraphValue',
+    description: 'Set a unique curve name; empty label removes the name.',
+    context: 'graph-scene',
+  },
+  'graph.domain': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'min', type: 'number' },
+      { name: 'max', type: 'number' },
+    ],
+    returns: 'GraphValue',
+    description: 'Set finite polar/parametric parameter bounds.',
+    constraints: 'Default is 0..2*pi in radians.',
+    context: 'graph-scene',
+  },
+  'graph.point': {
+    kind: 'query',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'parameter', type: 'number' },
+    ],
+    returns: 'readback',
+    description:
+      'Read a point on an explicit, horizontal, polar or parametric curve.',
+    context: 'graph-scene',
+  },
+  'graph.testPoint': {
+    kind: 'query',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'x', type: 'number' },
+      { name: 'y', type: 'number' },
+    ],
+    returns: 'readback',
+    description:
+      'Numerically check membership in an implicit relation or inequality.',
+    context: 'graph-scene',
+  },
+  'geometry.current': {
+    kind: 'query',
+    area: 'geometry',
+    parameters: [],
+    returns: 'ShapeValue',
+    description: 'Capture the current shape or named construction.',
+  },
+  'geometry.create': {
+    kind: 'transform',
+    area: 'geometry',
+    parameters: [
+      { name: 'shapeName', type: 'string' },
+      { name: 'dimensions', type: 'dimensions' },
+    ],
+    returns: 'ShapeValue',
+    description: 'Create a dimension-based shape.',
+    constraints:
+      'Use existing shape vocabulary, e.g. right triangle {a:3,b:4}.',
+  },
+  'geometry.scale': {
+    kind: 'transform',
+    area: 'geometry',
+    parameters: [
+      { name: 'value', type: 'geometry' },
+      { name: 'factor', type: 'number' },
+    ],
+    returns: 'ShapeValue',
+    description: 'Scale the dimension-based shape.',
+  },
+  'geometry.setDimensions': {
+    kind: 'transform',
+    area: 'geometry',
+    parameters: [
+      { name: 'value', type: 'geometry' },
+      { name: 'dimensions', type: 'dimensions' },
+    ],
+    returns: 'ShapeValue',
+    description: 'Update dimensions together in one object.',
+  },
+  'geometry.measure': {
+    kind: 'query',
+    area: 'geometry',
+    parameters: [
+      { name: 'value', type: 'geometry' },
+      { name: 'metricName', type: 'string' },
+    ],
+    returns: 'readback',
+    description: 'Read a computed shape measurement.',
+  },
+  'geometry.classify': {
+    kind: 'query',
+    area: 'geometry',
+    parameters: [{ name: 'value', type: 'geometry' }],
+    returns: 'readback',
+    description: 'Classify a triangle.',
+  },
+  'geometry.construction': {
+    kind: 'transform',
+    area: 'geometry',
+    parameters: [
+      { name: 'value', type: 'geometry' },
+      { name: 'overlay', type: 'string' },
+    ],
+    returns: 'ShapeValue',
+    description: 'Show or hide a triangle overlay.',
+    constraints:
+      'overlay: show centroid, median a/b/c, altitude a/b/c, inradius, circumradius, hide construction.',
+  },
+  'geometry.construct': {
+    kind: 'transform',
+    area: 'geometry',
+    parameters: [{ name: 'source', type: 'string' }],
+    returns: 'ShapeValue',
+    description: 'Create a checked named 2D construction.',
+    context: 'construction',
+  },
+  'geometry.extend': {
+    kind: 'transform',
+    area: 'geometry',
+    parameters: [
+      { name: 'value', type: 'geometry' },
+      { name: 'additionalSource', type: 'string' },
+    ],
+    returns: 'ShapeValue',
+    description:
+      'Extend a construction with complete dependency-valid statements.',
+    context: 'construction',
+  },
+  'geometry.editObject': {
+    kind: 'transform',
+    area: 'geometry',
+    parameters: [
+      { name: 'value', type: 'geometry' },
+      { name: 'name', type: 'string' },
+      { name: 'replacementExpression', type: 'string' },
+    ],
+    returns: 'ShapeValue',
+    description: 'Edit one existing named object, preserving dependencies.',
+    context: 'construction',
+  },
+  'geometry.inspect': {
+    kind: 'query',
+    area: 'geometry',
+    parameters: [
+      { name: 'value', type: 'geometry' },
+      { name: 'name', type: 'string' },
+    ],
+    returns: 'readback',
+    description: 'Read a computed named object.',
+    context: 'construction',
+  },
+  'statistics.current': {
+    kind: 'query',
+    area: 'statistics',
+    parameters: [],
+    returns: 'DataValue',
+    description: 'Capture current data.',
+  },
+  'statistics.data': {
+    kind: 'transform',
+    area: 'statistics',
+    parameters: [{ name: 'values', type: 'numbers' }],
+    returns: 'DataValue',
+    description: 'Create unsaved data.',
+    constraints: 'Queries on temporary data do not require saving it.',
+  },
+  'statistics.mean': {
+    kind: 'query',
+    area: 'statistics',
+    parameters: [{ name: 'value', type: 'statistics' }],
+    returns: 'readback',
+    description: 'Read the named statistic using the local engine.',
+  },
+  'statistics.median': {
+    kind: 'query',
+    area: 'statistics',
+    parameters: [{ name: 'value', type: 'statistics' }],
+    returns: 'readback',
+    description: 'Read the named statistic using the local engine.',
+  },
+  'statistics.mode': {
+    kind: 'query',
+    area: 'statistics',
+    parameters: [{ name: 'value', type: 'statistics' }],
+    returns: 'readback',
+    description: 'Read the named statistic using the local engine.',
+  },
+  'statistics.range': {
+    kind: 'query',
+    area: 'statistics',
+    parameters: [{ name: 'value', type: 'statistics' }],
+    returns: 'readback',
+    description: 'Read the named statistic using the local engine.',
+  },
+  'statistics.sum': {
+    kind: 'query',
+    area: 'statistics',
+    parameters: [{ name: 'value', type: 'statistics' }],
+    returns: 'readback',
+    description: 'Read the named statistic using the local engine.',
+  },
+  'statistics.count': {
+    kind: 'query',
+    area: 'statistics',
+    parameters: [{ name: 'value', type: 'statistics' }],
+    returns: 'readback',
+    description: 'Read the named statistic using the local engine.',
+  },
+  'statistics.minimum': {
+    kind: 'query',
+    area: 'statistics',
+    parameters: [{ name: 'value', type: 'statistics' }],
+    returns: 'readback',
+    description: 'Read the named statistic using the local engine.',
+  },
+  'statistics.maximum': {
+    kind: 'query',
+    area: 'statistics',
+    parameters: [{ name: 'value', type: 'statistics' }],
+    returns: 'readback',
+    description: 'Read the named statistic using the local engine.',
+  },
+  'statistics.outliers': {
+    kind: 'query',
+    area: 'statistics',
+    parameters: [{ name: 'value', type: 'statistics' }],
+    returns: 'readback',
+    description: 'Read the named statistic using the local engine.',
+  },
+  'statistics.sampleVariance': {
+    kind: 'query',
+    area: 'statistics',
+    parameters: [{ name: 'value', type: 'statistics' }],
+    returns: 'readback',
+    description: 'Read the named statistic using the local engine.',
+  },
+  'statistics.populationVariance': {
+    kind: 'query',
+    area: 'statistics',
+    parameters: [{ name: 'value', type: 'statistics' }],
+    returns: 'readback',
+    description: 'Read the named statistic using the local engine.',
+  },
+  'statistics.sampleStandardDeviation': {
+    kind: 'query',
+    area: 'statistics',
+    parameters: [{ name: 'value', type: 'statistics' }],
+    returns: 'readback',
+    description: 'Read the named statistic using the local engine.',
+  },
+  'statistics.populationStandardDeviation': {
+    kind: 'query',
+    area: 'statistics',
+    parameters: [{ name: 'value', type: 'statistics' }],
+    returns: 'readback',
+    description: 'Read the named statistic using the local engine.',
+  },
+  'diagram.current': {
+    kind: 'query',
+    area: 'diagram',
+    parameters: [],
+    returns: 'DiagramValue',
+    description: 'Capture the current flow diagram.',
+  },
+  'diagram.create': {
+    kind: 'transform',
+    area: 'diagram',
+    parameters: [{ name: 'steps', type: 'strings' }],
+    returns: 'DiagramValue',
+    description: 'Create a flow diagram.',
+    constraints: 'Use 2-12 steps, each 1-120 characters.',
+  },
+  'view.selectPart': {
+    kind: 'transform',
+    area: 'navigation',
+    parameters: [
+      { name: 'value', type: 'work' },
+      { name: 'number', type: 'number' },
+    ],
+    returns: 'WorkValue',
+    description:
+      'Select a one-based work part; save to apply selection without a math step.',
+  },
+  'view.nextPart': {
+    kind: 'transform',
+    area: 'navigation',
+    parameters: [{ name: 'value', type: 'work' }],
+    returns: 'WorkValue',
+    description:
+      'Move work selection; save to apply selection without a math step.',
+  },
+  'view.previousPart': {
+    kind: 'transform',
+    area: 'navigation',
+    parameters: [{ name: 'value', type: 'work' }],
+    returns: 'WorkValue',
+    description:
+      'Move work selection; save to apply selection without a math step.',
+  },
+  'view.range': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'xMin', type: 'number' },
+      { name: 'xMax', type: 'number' },
+      { name: 'yMin', type: 'number' },
+      { name: 'yMax', type: 'number' },
+    ],
+    returns: 'GraphValue',
+    description: 'Set the shared viewport; save to apply.',
+  },
+  'view.pan': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'direction', type: 'string' },
+    ],
+    returns: 'GraphValue',
+    description: 'Pan the shared viewport.',
+    constraints: 'direction: left, right, up, down.',
+  },
+  'view.zoom': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [
+      { name: 'value', type: 'graph' },
+      { name: 'direction', type: 'string' },
+    ],
+    returns: 'GraphValue',
+    description: 'Zoom the shared viewport.',
+    constraints: 'direction: in, out.',
+  },
+  'view.fit': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [{ name: 'value', type: 'graph' }],
+    returns: 'GraphValue',
+    description: 'Apply the named view operation; save to apply.',
+  },
+  'view.reset': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [{ name: 'value', type: 'graph' }],
+    returns: 'GraphValue',
+    description: 'Apply the named view operation; save to apply.',
+  },
+  'view.hideComparison': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [{ name: 'value', type: 'graph' }],
+    returns: 'GraphValue',
+    description: 'Apply the named view operation; save to apply.',
+  },
+  'view.fitComparison': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [{ name: 'value', type: 'graph' }],
+    returns: 'GraphValue',
+    description: 'Apply the named view operation; save to apply.',
+  },
+  'view.hideGraph': {
+    kind: 'transform',
+    area: 'graph',
+    parameters: [{ name: 'value', type: 'graph' }],
+    returns: 'GraphValue',
+    description: 'Apply the named view operation; save to apply.',
+  },
+  'history.undo': {
+    kind: 'control',
+    area: 'history',
+    parameters: [{ name: 'count', type: 'number' }],
+    returns: 'void',
+    description: 'Undo or redo complete recoverable requests.',
+    constraints: 'Use a positive whole-number count.',
+  },
+  'history.redo': {
+    kind: 'control',
+    area: 'history',
+    parameters: [{ name: 'count', type: 'number' }],
+    returns: 'void',
+    description: 'Undo or redo complete recoverable requests.',
+    constraints: 'Use a positive whole-number count.',
+  },
+  'history.restoreStep': {
+    kind: 'control',
+    area: 'history',
+    parameters: [{ name: 'number', type: 'number' }],
+    returns: 'void',
+    description: 'Apply the named action to a saved step.',
+    constraints: 'Use supplied one-based history numbers.',
+  },
+  'history.cancelStep': {
+    kind: 'control',
+    area: 'history',
+    parameters: [{ name: 'number', type: 'number' }],
+    returns: 'void',
+    description: 'Apply the named action to a saved step.',
+    constraints: 'Use supplied one-based history numbers.',
+  },
+  'history.readStep': {
+    kind: 'control',
+    area: 'history',
+    parameters: [{ name: 'number', type: 'number' }],
+    returns: 'void',
+    description: 'Apply the named action to a saved step.',
+    constraints: 'Use supplied one-based history numbers.',
+  },
+  'history.reviseStep': {
+    kind: 'control',
+    area: 'history',
+    parameters: [
+      { name: 'number', type: 'number' },
+      { name: 'equation', type: 'string' },
+    ],
+    returns: 'void',
+    description:
+      'Revise a named saved equation step; recovery retains later work.',
+  },
+  'view.open': {
+    kind: 'control',
+    area: 'navigation',
+    parameters: [{ name: 'panel', type: 'string' }],
+    returns: 'void',
+    description: 'Open or close a panel.',
+    constraints:
+      'panel: steps, voice settings, saved problems, more calculations, help.',
+  },
+  'view.close': {
+    kind: 'control',
+    area: 'navigation',
+    parameters: [{ name: 'panel', type: 'string' }],
+    returns: 'void',
+    description: 'Open or close a panel.',
+    constraints:
+      'panel: steps, voice settings, saved problems, more calculations, help.',
+  },
+  'audio.playGraph': {
+    kind: 'control',
+    area: 'audio',
+    parameters: [{ name: 'number', type: 'number' }],
+    returns: 'void',
+    description: 'Play a numbered curve as sound.',
+  },
+  'audio.playData': {
+    kind: 'control',
+    area: 'audio',
+    parameters: [],
+    returns: 'void',
+    description: 'Play data as sound.',
+  },
+  'audio.stopListening': {
+    kind: 'control',
+    area: 'audio',
+    parameters: [],
+    returns: 'void',
+    description: 'Stop microphone input while existing AI work continues.',
+  },
+} satisfies Record<string, ToolDefinition>;
+
+export type ToolName = keyof typeof definitions;
+export const toolCatalog: Readonly<Record<ToolName, ToolDefinition>> =
+  definitions;
+export type ToolScope =
+  | 'interpreter'
+  | 'graph'
+  | 'graph-scene'
+  | 'construction';
+
+/** Resolves only registered calls, including the historical notebook alias; unknown names fail closed. */
+export function programTool(requestedName: string) {
+  const name = requestedName.replace(/^notebook\./, 'problem.');
+  if (!Object.hasOwn(toolCatalog, name))
+    throw new Error(`Unknown function ${name}.`);
+  return {
+    name: name as ToolName,
+    definition: toolCatalog[name as ToolName] as ToolDefinition,
+  };
+}
+
+/** Uses execution categories to restrict graph builds; saved results receive an additional state check. */
+export function isVisualTool(name: string) {
+  const { definition: tool } = programTool(name);
+  return (
+    tool.kind !== 'control' &&
+    (tool.kind === 'save' || tool.area === 'graph' || tool.area === 'geometry')
+  );
+}
+
+const parameterTypes = {
+  number: 'number',
+  string: 'string',
+  numbers: 'number[]',
+  strings: 'string[]',
+  dimensions: 'numericObject',
+  operand: 'number|string|MathValue',
+  math: 'MathValue',
+  part: 'PartReference',
+  mathOrPart: 'MathValue|PartReference',
+  graph: 'GraphValue',
+  geometry: 'ShapeValue',
+  statistics: 'DataValue',
+  diagram: 'DiagramValue',
+  work: 'WorkValue',
+  graphSelector: 'number|string',
+} as const;
+
+/** Renders signatures from executable contracts, grouping identical descriptions without duplicating APIs. */
+export function toolInstructions(scope: ToolScope = 'interpreter') {
+  const groups = new Map<string, { names: string[]; tool: ToolDefinition }>();
+  for (const [name, definition] of Object.entries(toolCatalog)) {
+    const tool: ToolDefinition = definition;
+    if (
+      scope === 'graph'
+        ? !isVisualTool(name)
+        : scope === 'interpreter'
+          ? !!tool.context
+          : tool.context !== scope
+    )
+      continue;
+    const key = JSON.stringify(tool);
+    const group = groups.get(key);
+    if (group) group.names.push(name);
+    else groups.set(key, { names: [name], tool });
+  }
+  return [...groups.values()]
+    .map(({ names, tool }) => {
+      const parameters = tool.parameters
+        .map(
+          (p) => `${p.name}${p.optional ? '?' : ''}:${parameterTypes[p.type]}`,
+        )
+        .join(',');
+      return `${names.join('|')}(${parameters}) -> ${tool.returns}. ${tool.description}${tool.constraints ? ' ' + tool.constraints : ''}${tool.examples ? ' Example: ' + tool.examples.join(' ') : ''}`;
+    })
+    .join('\n');
+}
+
+const capabilityDescriptions: Record<ToolArea, string> = {
+  equation:
+    'Equations: record, edit, transform, calculate and solve requested math.',
+  graph:
+    'Graphs: create and edit curves, inspect points, intersections and measurements, adjust the view.',
+  geometry:
+    'Geometry: draw and edit shapes and named constructions, display segment lengths and read measurements.',
+  statistics: 'Statistics: manage data and calculate requested statistics.',
+  diagram: 'Diagrams: create and read flow diagrams.',
+  history:
+    'Undo and saved steps: undo, redo, restore, revise, cancel or read saved work.',
+  navigation:
+    'Navigation: select work parts and open or close supported panels.',
+  audio: 'Audio: play curves or data and stop microphone input.',
+  shared: 'Read saved work and save validated results.',
+};
+
+/** Gives Live concise summaries of registered backend capabilities rather than low-level call syntax. */
+export function voiceCapabilities() {
+  const areas = new Set<ToolArea>(
+    Object.values(toolCatalog).map((tool) => tool.area),
+  );
+  return [...areas].map((area) => capabilityDescriptions[area]).join('\n');
+}
+
+/** Existing language budgets shared by parser validation and generated documentation. */
+export const PROGRAM_LIMITS = {
+  characters: 1800,
+  statements: 32,
+  calls: 24,
+} as const;
+export const programNamespaces = new Set([
+  'notebook',
+  ...Object.keys(toolCatalog).map((name) => name.split('.')[0]),
+]);

@@ -1,0 +1,241 @@
+{
+  "reportSha256": "8d0f4e8ea85889273a3dd833f81319a8d27517def7a450f73ebab252ba73a95d",
+  "automated": {
+    "before": {
+      "attempted": 24,
+      "passed": 20,
+      "timed": 20,
+      "p50Ms": 2231.85000000149,
+      "p95Ms": 4958
+    },
+    "after": {
+      "attempted": 24,
+      "passed": 20,
+      "timed": 20,
+      "p50Ms": 2494.1500000003725,
+      "p95Ms": 4098.39999999851
+    },
+    "paired": {
+      "count": 20,
+      "faster": 9,
+      "slower": 11,
+      "medianSavedMs": -422.05000000074506,
+      "medianPercentFaster": -16.248917765946224
+    }
+  },
+  "adjudicated": {
+    "before": {
+      "attempted": 24,
+      "passed": 24,
+      "timed": 24,
+      "p50Ms": 2434.699999999255,
+      "p95Ms": 5825
+    },
+    "after": {
+      "attempted": 24,
+      "passed": 24,
+      "timed": 24,
+      "p50Ms": 2910.89999999851,
+      "p95Ms": 4690.79999999702
+    },
+    "paired": {
+      "count": 24,
+      "faster": 10,
+      "slower": 14,
+      "medianSavedMs": -441.55000000074506,
+      "medianPercentFaster": -16.726351177998424
+    }
+  },
+  "scenarios": [
+    {
+      "scenario": "equation",
+      "before": {
+        "attempted": 4,
+        "passed": 4,
+        "timed": 4,
+        "p50Ms": 1793.300000000745,
+        "p95Ms": 2361.900000002235
+      },
+      "after": {
+        "attempted": 4,
+        "passed": 4,
+        "timed": 4,
+        "p50Ms": 2236.050000000745,
+        "p95Ms": 2993.199999999255
+      },
+      "paired": {
+        "count": 4,
+        "faster": 1,
+        "slower": 3,
+        "medianSavedMs": -535.7000000011176,
+        "medianPercentFaster": -31.399723914577514
+      }
+    },
+    {
+      "scenario": "both-sides",
+      "before": {
+        "attempted": 4,
+        "passed": 4,
+        "timed": 4,
+        "p50Ms": 1791.75,
+        "p95Ms": 2023
+      },
+      "after": {
+        "attempted": 4,
+        "passed": 4,
+        "timed": 4,
+        "p50Ms": 2073,
+        "p95Ms": 2427.800000000745
+      },
+      "paired": {
+        "count": 4,
+        "faster": 2,
+        "slower": 2,
+        "medianSavedMs": -245.94999999925494,
+        "medianPercentFaster": -14.924733906666669
+      }
+    },
+    {
+      "scenario": "two-steps",
+      "before": {
+        "attempted": 4,
+        "passed": 4,
+        "timed": 4,
+        "p50Ms": 2434.699999999255,
+        "p95Ms": 2578.199999999255
+      },
+      "after": {
+        "attempted": 4,
+        "passed": 4,
+        "timed": 4,
+        "p50Ms": 2984.5499999988824,
+        "p95Ms": 3210.900000002235
+      },
+      "paired": {
+        "count": 4,
+        "faster": 1,
+        "slower": 3,
+        "medianSavedMs": -585.0500000007451,
+        "medianPercentFaster": -23.96037820161558
+      }
+    },
+    {
+      "scenario": "explanation",
+      "before": {
+        "attempted": 4,
+        "passed": 4,
+        "timed": 4,
+        "p50Ms": 4517.1500000003725,
+        "p95Ms": 5825
+      },
+      "after": {
+        "attempted": 4,
+        "passed": 4,
+        "timed": 4,
+        "p50Ms": 4037.64999999851,
+        "p95Ms": 4690.79999999702
+      },
+      "paired": {
+        "count": 4,
+        "faster": 3,
+        "slower": 1,
+        "medianSavedMs": 650.7000000029802,
+        "medianPercentFaster": 14.429373004461237
+      }
+    },
+    {
+      "scenario": "parabola",
+      "before": {
+        "attempted": 4,
+        "passed": 4,
+        "timed": 4,
+        "p50Ms": 2543.800000000745,
+        "p95Ms": 4242.199999999255
+      },
+      "after": {
+        "attempted": 4,
+        "passed": 4,
+        "timed": 4,
+        "p50Ms": 2470.949999999255,
+        "p95Ms": 3105.60000000149
+      },
+      "paired": {
+        "count": 4,
+        "faster": 2,
+        "slower": 2,
+        "medianSavedMs": 129.60000000149012,
+        "medianPercentFaster": 1.1098283134886753
+      }
+    },
+    {
+      "scenario": "rectangle",
+      "before": {
+        "attempted": 4,
+        "passed": 4,
+        "timed": 4,
+        "p50Ms": 3229.1500000003725,
+        "p95Ms": 7335.5
+      },
+      "after": {
+        "attempted": 4,
+        "passed": 4,
+        "timed": 4,
+        "p50Ms": 4225.949999999255,
+        "p95Ms": 4878.5
+      },
+      "paired": {
+        "count": 4,
+        "faster": 1,
+        "slower": 3,
+        "medianSavedMs": -1037.4999999981374,
+        "medianPercentFaster": -34.25434664072986
+      }
+    }
+  ],
+  "previewCommit": {
+    "before": {
+      "attempted": 24,
+      "passed": 24,
+      "timed": 20,
+      "p50Ms": 1965.4500000011176,
+      "p95Ms": 2588.199999999255
+    },
+    "after": {
+      "attempted": 24,
+      "passed": 24,
+      "timed": 20,
+      "p50Ms": 2280.1500000003725,
+      "p95Ms": 3275.5
+    },
+    "paired": {
+      "count": 20,
+      "faster": 6,
+      "slower": 14,
+      "medianSavedMs": -480.15000000037253,
+      "medianPercentFaster": -24.613145216630926
+    }
+  },
+  "model": {
+    "before": {
+      "attempted": 24,
+      "passed": 24,
+      "timed": 24,
+      "p50Ms": 1813.5,
+      "p95Ms": 5212
+    },
+    "after": {
+      "attempted": 24,
+      "passed": 24,
+      "timed": 24,
+      "p50Ms": 2189,
+      "p95Ms": 3660
+    },
+    "paired": {
+      "count": 24,
+      "faster": 8,
+      "slower": 16,
+      "medianSavedMs": -457,
+      "medianPercentFaster": -24.987796628366503
+    }
+  }
+}

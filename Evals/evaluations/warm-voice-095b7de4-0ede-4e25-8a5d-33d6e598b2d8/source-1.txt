@@ -1,0 +1,239 @@
+import { waitForSpokenResult } from './spoken-result.ts';
+import { inputToDisplayLatency } from './campaign-summary.ts';
+import { chromium } from 'playwright';
+import { createHash, randomUUID } from 'node:crypto';
+import { readFile } from 'node:fs/promises';
+import {
+  currentProblem,
+  type CloudOperation,
+  type CloudSnapshot,
+} from '../../Web/src/modules/problems/index.ts';
+import {
+  recordedScenarios,
+  type selectVoiceCampaign,
+} from './voice-catalog.ts';
+import { assessRecordedTurn, type RecordedScenario } from './recorded-turn.ts';
+import { installVoiceFixture, type FixtureWindow } from './voice-fixture.ts';
+import { assessVoiceParity } from './voice-parity.ts';
+import { captureScreenEvidence } from './screen-evidence.ts';
+import { captureVoiceConversation } from './browser-conversation.ts';
+import { naturalVoiceCases } from './natural-voice-conversation.ts';
+import type { JourneySample, JourneyTiming } from './journey-evaluation.ts';
+
+/** Replays selected families on isolated problems with actual providers and screen evidence.
+ * Expected commands are used only after capture by the local grader, never sent to a provider.
+ * Each standalone case owns a new browser; a conversation retains all its dependent turns.
+ */
+export async function captureRecordedSuite(
+  origin: string,
+  read: () => Promise<CloudSnapshot>,
+  campaign: ReturnType<typeof selectVoiceCampaign>,
+  directory: string,
+  record: (sample: JourneySample & Record<string, unknown>) => void,
+  cookies: { name: string; value: string; url: string }[] = [],
+) {
+  const post = async (operation: CloudOperation) => {
+    const snapshot = await read();
+    const response = await fetch(`${origin}/api/problems`, {
+      method: 'POST',
+      headers: {
+        Origin: origin,
+        Cookie: cookies.map(({ name, value }) => `${name}=${value}`).join('; '),
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        id: randomUUID(),
+        revision: snapshot.revision,
+        operation,
+      }),
+      signal: AbortSignal.timeout(20000),
+    });
+    if (!response.ok)
+      throw new Error(`Case setup failed (${response.status}).`);
+    return (await response.json()) as CloudSnapshot;
+  };
+  for (const family of campaign) {
+    if (!family.variant) {
+      const turns: (JourneySample & Record<string, unknown>)[] = [];
+      const started = performance.now();
+      try {
+        await post({ kind: 'new', title: `Voice evaluation: ${family.id}` });
+        await captureVoiceConversation(
+          origin,
+          read,
+          (sample) => turns.push(sample),
+          'Daniel',
+          directory,
+          cookies,
+        );
+      } catch (error) {
+        const last = turns.at(-1);
+        if (last) {
+          last.passed = false;
+          last.failure = `Conversation capture or cleanup failed: ${String(error)}`;
+        } else
+          turns.push({
+            scenario: naturalVoiceCases[0].id,
+            passed: false,
+            elapsedMs: performance.now() - started,
+            timings: [],
+            failure: String(error),
+          });
+      }
+      for (const sample of turns)
+        record({ ...sample, family: family.id, category: family.category });
+      continue;
+    }
+    const start = performance.now();
+    let completed = false;
+    let failure: string | undefined;
+    let details: Record<string, unknown> = {};
+    let rows: JourneyTiming[] = [];
+    let responseLatencyMs: number | null = null;
+    let browser: Awaited<ReturnType<typeof chromium.launch>> | undefined;
+    try {
+      await post({ kind: 'new', title: `Voice evaluation: ${family.id}` });
+      const clip = family.variant;
+      const scenario = recordedScenarios.find(
+        (c) => c.id === clip.case,
+      ) as RecordedScenario;
+      const bytes = await readFile(
+        new URL(`../../Web/public${clip.audio}`, import.meta.url),
+      );
+      if (createHash('sha256').update(bytes).digest('hex') !== clip.sha256)
+        throw new Error('Audio checksum mismatch.');
+      for (const text of scenario.setup)
+        await post({ kind: 'command', text, interpret: false });
+      if (scenario.clarification)
+        await post({
+          kind: 'command',
+          text: scenario.clarification.request,
+          interpret: false,
+        });
+      const before = await read();
+      browser = await chromium.launch({
+        headless: true,
+        args: ['--autoplay-policy=no-user-gesture-required'],
+      });
+      const context = await browser.newContext({
+        viewport: { width: 1280, height: 900 },
+      });
+      await context.addCookies(cookies);
+      await context.addInitScript(installVoiceFixture, clip.audio);
+      const page = await context.newPage();
+      const errors: string[] = [];
+      page.on('pageerror', (error) => errors.push(error.message));
+      await page.goto(origin);
+      await page
+        .locator('.app-shell[data-ready="true"]')
+        .waitFor({ timeout: 30000 });
+      const beforeScreen = await captureScreenEvidence(
+        page,
+        directory,
+        `${family.id}-before`,
+        currentProblem(before.book).state,
+        currentProblem(before.book).steps.length,
+      );
+      const offset = await page.evaluate(() => performance.now());
+      let captureFailure: string | undefined;
+      try {
+        await page
+          .getByRole('button', { name: 'Start listening', exact: true })
+          .click();
+        await page.waitForFunction(
+          () =>
+            (
+              performance.getEntriesByType('measure') as PerformanceMeasure[]
+            ).some((e) => e.detail?.stage === 'display-commit'),
+          undefined,
+          { timeout: 45000 },
+        );
+        await waitForSpokenResult(page, []);
+        completed = true;
+      } catch (error) {
+        captureFailure = error instanceof Error ? error.message : String(error);
+      }
+      // Keep rendered evidence and saved outcomes even when audio or display times out.
+      const measured = await page.evaluate(() =>
+        (performance.getEntriesByType('measure') as PerformanceMeasure[])
+          .filter((e) => e.name.startsWith('math-audio:journey:'))
+          .map((e) => ({
+            stage: e.detail.stage,
+            id: e.detail.id,
+            kind: e.detail.kind,
+            duration: e.duration,
+          })),
+      );
+      const id = measured.find((e) => e.stage === 'display-commit')?.id;
+      rows = measured.filter((e) => !id || e.id === id);
+      responseLatencyMs = inputToDisplayLatency(rows);
+      const after = await read();
+      const screen = await captureScreenEvidence(
+        page,
+        directory,
+        `${family.id}-after`,
+        currentProblem(after.book).state,
+        currentProblem(after.book).steps.length,
+      );
+      const assessment = await assessRecordedTurn(before, after, scenario);
+      const observations = await page.evaluate(
+        (at) =>
+          (window as FixtureWindow).voiceObservations?.filter(
+            (o) => o.at >= at,
+          ) ?? [],
+        offset,
+      );
+      const parity = assessVoiceParity(observations);
+      const correctness = {
+        ...assessment,
+        screenMatches: screen.matchesSavedWork,
+        saved: after.revision > before.revision,
+        parity,
+        browserErrors: errors,
+      };
+      details = {
+        correctness,
+        beforeScreen,
+        screen,
+        observations,
+        providerEvents: await page.evaluate(
+          () => (window as FixtureWindow).liveEvaluationEvents ?? [],
+        ),
+        revision: after.revision,
+      };
+      if (
+        !completed ||
+        !assessment.passed ||
+        !screen.matchesSavedWork ||
+        !correctness.saved ||
+        !parity.passed ||
+        errors.length
+      )
+        failure =
+          captureFailure ??
+          'Math, history, screen, save, audio or browser check failed.';
+    } catch (error) {
+      failure = error instanceof Error ? error.message : String(error);
+    } finally {
+      try {
+        await browser?.close();
+      } catch (error) {
+        failure = `Browser cleanup failed: ${String(error)}`;
+      }
+    }
+    record({
+      scenario: family.id,
+      family: family.id,
+      category: family.category,
+      voice: family.variant?.voice,
+      audio: family.variant?.audio,
+      sha256: family.variant?.sha256,
+      ...details,
+      passed: completed && !failure,
+      failure,
+      elapsedMs: performance.now() - start,
+      responseLatencyMs,
+      timings: rows,
+    });
+  }
+}

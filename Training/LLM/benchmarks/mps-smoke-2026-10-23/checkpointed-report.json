@@ -1,0 +1,108 @@
+{
+  "config": {
+    "model": "Qwen/Qwen3-0.6B",
+    "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "seed": 20261023,
+    "epochs": 2,
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "learningRate": 0.0002,
+    "batchSize": 1,
+    "gradientAccumulation": 8,
+    "maxContext": 16384,
+    "maxNewTokens": 512,
+    "warmupUpdates": 10,
+    "precision": "float16 base, float32 adapters",
+    "device": "mps",
+    "selection": "lowest full validation assistant-token cross entropy at epoch ends",
+    "paidComputeUsd": 0,
+    "enableThinking": false,
+    "decoding": "greedy; stop at complete JSON",
+    "gradientCheckpointing": true,
+    "targets": [
+      "q_proj",
+      "v_proj"
+    ],
+    "smokeOnly": true
+  },
+  "startedUnix": 1792782190.491324,
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "dataHashes": {
+    "train.jsonl": "737cd797d649d473379547f43f52a875b3cdbd8e055caa95f660787d074bcdcc",
+    "test.jsonl": "e0efccb0cfa2f5272271d825484d4b1a78e493e5f00257aae7a7f0dbe669dbbc",
+    "val.jsonl": "00bb98daec8dcbf447c3636ffe320d17c7e147eb92cf0c93b875c0ed15eb280c"
+  },
+  "sourceHashes": {
+    "test_train_lora.py": "0bc02f5ce42af284fe2fd0024096ca1d164cc05581388429f731eda5724c1c34",
+    "train_lora.py": "a0c47db08bd4cfcefb7ab8660cae41bfa36c2e628df38a7815735dd2c7f964d2"
+  },
+  "versions": {
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "peft": "0.21.2",
+    "safetensors": "0.8.0",
+    "numpy": "2.5.4"
+  },
+  "counts": {
+    "train": 1,
+    "val": 1,
+    "test": 1
+  },
+  "progress": {
+    "stage": "smoke-complete",
+    "warmBackwardSeconds": [
+      46.570562124999924,
+      46.02250662499955
+    ],
+    "elapsedSeconds": 143.63297675000013
+  },
+  "checklist": {
+    "splitChecked": true,
+    "baseline": false,
+    "trained": false,
+    "reloaded": false,
+    "retest": false,
+    "frozenBaseUnchanged": false
+  },
+  "limits": [
+    "Previously examined synthetic corpus; not an unseen external benchmark.",
+    "Conditional per-turn evaluation uses authored prior state; not autonomous conversation rollout.",
+    "No microphone, STT, iPhone integration, quantization or speed acceptance.",
+    "Assistant predictions are graded separately by the shared engine; exact text match is diagnostic only."
+  ],
+  "visualReview": "Pending actual-app rendering and inspection of graded predictions.",
+  "tokenCounts": {
+    "train": {
+      "total": 2723,
+      "supervised": 47,
+      "maximum": 2723
+    },
+    "val": {
+      "total": 2723,
+      "supervised": 47,
+      "maximum": 2723
+    },
+    "test": {
+      "total": 2723,
+      "supervised": 47,
+      "maximum": 2723
+    }
+  },
+  "parameters": {
+    "trainable": 1146880,
+    "total": 597196800
+  },
+  "firstBackward": {
+    "seconds": 46.79700737500025,
+    "loss": 2.5124611854553223,
+    "tokens": 2723,
+    "supervisedTokens": 47,
+    "allocatedGiB": 1.1363532543182373,
+    "driverGiB": 4.2765350341796875
+  },
+  "warmBackwardSeconds": [
+    46.570562124999924,
+    46.02250662499955
+  ]
+}

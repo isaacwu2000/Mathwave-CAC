@@ -1,0 +1,15 @@
+{
+  "run": "02c1549a-3cb0-4deb-8c32-1a4a90397bfa",
+  "scope": "One mocked browser lifecycle case; no provider or saved-user-data access.",
+  "checks": [
+    "Pico has two matching circular eyes; listening and playback overlap, and interruption immediately removes waves.",
+    "Student captions render incrementally before delegation and remain visible during execution.",
+    "Checking status visible before save; revision stays zero.",
+    "Request progress animates Pico independently of audible playback.",
+    "Reduced motion removes animation while preserving status; a simulated hidden-page event pauses and resumes motion.",
+    "Fixing status visible at 390px with no save or horizontal overflow.",
+    "Final result replaces preview and increments revision once.",
+    "Keyboard stop settles Pico and clears playback after request completion."
+  ],
+  "passed": true
+}

@@ -1,0 +1,68 @@
+{
+  "split": "test-v25",
+  "mode": "endpoint",
+  "datasetSHA256": "b2854cc2b1d520461422c899e73cee593797bef7b82d8654496b387e26f4b53f",
+  "createdAt": "2026-10-14T16:06:43.249Z",
+  "total": 4,
+  "scored": 4,
+  "passed": 4,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "between-solid": {
+      "passed": 4,
+      "scored": 4
+    }
+  },
+  "results": [
+    {
+      "id": "between-solid-1",
+      "category": "between-solid",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "area between graphs 1 and 2 from 0 to 2",
+        "message": ""
+      },
+      "latencyMs": 2482
+    },
+    {
+      "id": "between-solid-2",
+      "category": "between-solid",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "rectangular prism length 4 width 3 height 12",
+        "message": ""
+      },
+      "latencyMs": 2401
+    },
+    {
+      "id": "between-solid-3",
+      "category": "between-solid",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "space diagonal",
+        "message": ""
+      },
+      "latencyMs": 2151
+    },
+    {
+      "id": "between-solid-4",
+      "category": "between-solid",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "cube side 3",
+        "message": ""
+      },
+      "latencyMs": 2034
+    }
+  ]
+}

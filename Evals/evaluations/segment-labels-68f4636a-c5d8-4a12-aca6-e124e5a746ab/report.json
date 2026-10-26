@@ -1,0 +1,8 @@
+{
+  "scope": "Mocked synthetic problem; actual geometry engine and browser renderer. No paid provider.",
+  "checks": [
+    "1280x900: finite triangle edges show 3, 4 and 5 with no page overflow",
+    "390x844: finite triangle edges show 3, 4 and 5 with no page overflow"
+  ],
+  "passed": true
+}

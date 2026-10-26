@@ -1,0 +1,571 @@
+{
+  "config": {
+    "model": "openai/whisper-tiny.en",
+    "revision": "87c7102498dcde7456f24cfd30239ca606ed9063",
+    "seed": 20261022,
+    "epochs": 2,
+    "learningRate": 0.0005,
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "batchSize": 2,
+    "gradientAccumulation": 4,
+    "maxNewTokens": 128,
+    "selection": "lowest validation token-weighted cross entropy over fixed 25-update and epoch-end checkpoints; trained checkpoints only",
+    "precision": "float32",
+    "device": "mps",
+    "paidComputeUsd": 0,
+    "validationInterval": 25
+  },
+  "splitSha256": "3cd8d74c2dc7642bd0259b8bc292e2f93aaa8a629e31eaf5e6f9172d0c7f29fd",
+  "splitSummary": {
+    "test": {
+      "conversations": 50,
+      "retainedClips": 155,
+      "uniqueTranscripts": 144,
+      "voices": [
+        "Daniel",
+        "Eddy (English (US))",
+        "Flo (English (US))",
+        "Karen",
+        "Reed (English (US))",
+        "Samantha"
+      ],
+      "byCategory": {
+        "algebra": {
+          "conversations": 20,
+          "retainedClips": 67,
+          "primaryUniqueTranscripts": 58
+        },
+        "cross-topic": {
+          "conversations": 3,
+          "retainedClips": 9,
+          "primaryUniqueTranscripts": 8
+        },
+        "geometry": {
+          "conversations": 10,
+          "retainedClips": 28,
+          "primaryUniqueTranscripts": 28
+        },
+        "graphs": {
+          "conversations": 10,
+          "retainedClips": 34,
+          "primaryUniqueTranscripts": 33
+        },
+        "history-and-diagrams": {
+          "conversations": 2,
+          "retainedClips": 7,
+          "primaryUniqueTranscripts": 7
+        },
+        "statistics": {
+          "conversations": 5,
+          "retainedClips": 10,
+          "primaryUniqueTranscripts": 10
+        }
+      }
+    },
+    "val": {
+      "conversations": 50,
+      "retainedClips": 149,
+      "uniqueTranscripts": 147,
+      "voices": [
+        "Daniel",
+        "Eddy (English (US))",
+        "Flo (English (US))",
+        "Karen",
+        "Reed (English (US))",
+        "Samantha"
+      ],
+      "byCategory": {
+        "algebra": {
+          "conversations": 20,
+          "retainedClips": 64,
+          "primaryUniqueTranscripts": 62
+        },
+        "cross-topic": {
+          "conversations": 2,
+          "retainedClips": 6,
+          "primaryUniqueTranscripts": 6
+        },
+        "geometry": {
+          "conversations": 10,
+          "retainedClips": 26,
+          "primaryUniqueTranscripts": 26
+        },
+        "graphs": {
+          "conversations": 10,
+          "retainedClips": 30,
+          "primaryUniqueTranscripts": 30
+        },
+        "history-and-diagrams": {
+          "conversations": 3,
+          "retainedClips": 11,
+          "primaryUniqueTranscripts": 11
+        },
+        "statistics": {
+          "conversations": 5,
+          "retainedClips": 12,
+          "primaryUniqueTranscripts": 12
+        }
+      }
+    },
+    "train": {
+      "conversations": 400,
+      "retainedClips": 1154,
+      "uniqueTranscripts": 1098,
+      "voices": [
+        "Daniel",
+        "Eddy (English (US))",
+        "Flo (English (US))",
+        "Karen",
+        "Reed (English (US))",
+        "Samantha"
+      ],
+      "byCategory": {
+        "algebra": {
+          "conversations": 160,
+          "retainedClips": 455,
+          "primaryUniqueTranscripts": 423
+        },
+        "cross-topic": {
+          "conversations": 20,
+          "retainedClips": 60,
+          "primaryUniqueTranscripts": 58
+        },
+        "geometry": {
+          "conversations": 80,
+          "retainedClips": 225,
+          "primaryUniqueTranscripts": 219
+        },
+        "graphs": {
+          "conversations": 80,
+          "retainedClips": 246,
+          "primaryUniqueTranscripts": 242
+        },
+        "history-and-diagrams": {
+          "conversations": 20,
+          "retainedClips": 66,
+          "primaryUniqueTranscripts": 58
+        },
+        "statistics": {
+          "conversations": 40,
+          "retainedClips": 102,
+          "primaryUniqueTranscripts": 98
+        }
+      }
+    }
+  },
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "versions": {
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "peft": "0.21.2",
+    "numpy": "2.5.4",
+    "soundfile": "0.14.0"
+  },
+  "codeSha256": {
+    "train_student_speech_v2.py": "759a81081a42b8aebdb8566c46cc647e8adf974b787263fd03f62bb1baf93ad2",
+    "student_speech_v2.py": "96a4c1426941c847a2b341a50f8299e29f57c3e4ca54247061199a944db80a4d",
+    "speech_normalization.py": "1f8739b3fff4b66b6a2de86b07780b31b792b8983c395a7a5fbd38f8230b4c07"
+  },
+  "checklist": {
+    "splitFrozen": true,
+    "baseline": true,
+    "trained": false,
+    "validationSelection": false,
+    "heldoutRetest": false,
+    "baseWeightsUnchanged": false
+  },
+  "limits": [
+    "Synthetic macOS voices only; all voices recur across partitions.",
+    "Filtered STT clips, not multi-turn LLM training.",
+    "Fresh grouped, stratified split of a previously examined synthetic corpus; not a new unseen benchmark.",
+    "No actual-app result rendering, human-speech or iPhone acceptance is established by transcription scores."
+  ],
+  "visualReview": "Not an app-command evaluation: no mathematical output is rendered. App visual acceptance remains incomplete (2/400 conversations in prior evidence).",
+  "modelLoadSeconds": 0.8393376659987553,
+  "baselineValidation": {
+    "uniqueTranscript": {
+      "clips": 147,
+      "referenceWords": 1073,
+      "wordErrors": 130,
+      "normalizedWER": 0.1211556383970177,
+      "normalizedExact": 85,
+      "rawWER": 0.34953271028037386,
+      "mathTokenErrorRate": 0.13647642679900746,
+      "generationSeconds": 44.84736278897617,
+      "audioSeconds": 397.3270625,
+      "byCategory": {
+        "algebra": {
+          "clips": 62,
+          "referenceWords": 413,
+          "wordErrors": 34,
+          "normalizedWER": 0.08232445520581114,
+          "normalizedExact": 41,
+          "rawWER": 0.3786407766990291,
+          "mathTokenErrorRate": 0.058823529411764705,
+          "generationSeconds": 18.387730203987303,
+          "audioSeconds": 151.31725
+        },
+        "cross-topic": {
+          "clips": 6,
+          "referenceWords": 44,
+          "wordErrors": 4,
+          "normalizedWER": 0.09090909090909091,
+          "normalizedExact": 4,
+          "rawWER": 0.3953488372093023,
+          "mathTokenErrorRate": 0.07142857142857142,
+          "generationSeconds": 1.996835916004784,
+          "audioSeconds": 15.3265
+        },
+        "geometry": {
+          "clips": 26,
+          "referenceWords": 260,
+          "wordErrors": 44,
+          "normalizedWER": 0.16923076923076924,
+          "normalizedExact": 12,
+          "rawWER": 0.3346153846153846,
+          "mathTokenErrorRate": 0.2602739726027397,
+          "generationSeconds": 9.162453127988556,
+          "audioSeconds": 91.4474375
+        },
+        "graphs": {
+          "clips": 30,
+          "referenceWords": 218,
+          "wordErrors": 32,
+          "normalizedWER": 0.14678899082568808,
+          "normalizedExact": 14,
+          "rawWER": 0.319634703196347,
+          "mathTokenErrorRate": 0.20618556701030927,
+          "generationSeconds": 8.98871608299305,
+          "audioSeconds": 78.0786875
+        },
+        "history-and-diagrams": {
+          "clips": 11,
+          "referenceWords": 61,
+          "wordErrors": 11,
+          "normalizedWER": 0.18032786885245902,
+          "normalizedExact": 6,
+          "rawWER": 0.4,
+          "mathTokenErrorRate": 0.09090909090909091,
+          "generationSeconds": 2.910882791005861,
+          "audioSeconds": 25.0786875
+        },
+        "statistics": {
+          "clips": 12,
+          "referenceWords": 77,
+          "wordErrors": 5,
+          "normalizedWER": 0.06493506493506493,
+          "normalizedExact": 8,
+          "rawWER": 0.2631578947368421,
+          "mathTokenErrorRate": 0.14285714285714285,
+          "generationSeconds": 3.4007446669966157,
+          "audioSeconds": 36.0785
+        }
+      }
+    },
+    "allClips": {
+      "clips": 149,
+      "referenceWords": 1083,
+      "wordErrors": 131,
+      "normalizedWER": 0.12096029547553093,
+      "normalizedExact": 86,
+      "rawWER": 0.3472222222222222,
+      "mathTokenErrorRate": 0.1382716049382716,
+      "generationSeconds": 45.49589687197658,
+      "audioSeconds": 401.1555,
+      "byCategory": {
+        "algebra": {
+          "clips": 64,
+          "referenceWords": 423,
+          "wordErrors": 35,
+          "normalizedWER": 0.08274231678486997,
+          "normalizedExact": 42,
+          "rawWER": 0.37203791469194314,
+          "mathTokenErrorRate": 0.06349206349206349,
+          "generationSeconds": 19.036264286987716,
+          "audioSeconds": 155.1456875
+        },
+        "cross-topic": {
+          "clips": 6,
+          "referenceWords": 44,
+          "wordErrors": 4,
+          "normalizedWER": 0.09090909090909091,
+          "normalizedExact": 4,
+          "rawWER": 0.3953488372093023,
+          "mathTokenErrorRate": 0.07142857142857142,
+          "generationSeconds": 1.996835916004784,
+          "audioSeconds": 15.3265
+        },
+        "geometry": {
+          "clips": 26,
+          "referenceWords": 260,
+          "wordErrors": 44,
+          "normalizedWER": 0.16923076923076924,
+          "normalizedExact": 12,
+          "rawWER": 0.3346153846153846,
+          "mathTokenErrorRate": 0.2602739726027397,
+          "generationSeconds": 9.162453127988556,
+          "audioSeconds": 91.4474375
+        },
+        "graphs": {
+          "clips": 30,
+          "referenceWords": 218,
+          "wordErrors": 32,
+          "normalizedWER": 0.14678899082568808,
+          "normalizedExact": 14,
+          "rawWER": 0.319634703196347,
+          "mathTokenErrorRate": 0.20618556701030927,
+          "generationSeconds": 8.98871608299305,
+          "audioSeconds": 78.0786875
+        },
+        "history-and-diagrams": {
+          "clips": 11,
+          "referenceWords": 61,
+          "wordErrors": 11,
+          "normalizedWER": 0.18032786885245902,
+          "normalizedExact": 6,
+          "rawWER": 0.4,
+          "mathTokenErrorRate": 0.09090909090909091,
+          "generationSeconds": 2.910882791005861,
+          "audioSeconds": 25.0786875
+        },
+        "statistics": {
+          "clips": 12,
+          "referenceWords": 77,
+          "wordErrors": 5,
+          "normalizedWER": 0.06493506493506493,
+          "normalizedExact": 8,
+          "rawWER": 0.2631578947368421,
+          "mathTokenErrorRate": 0.14285714285714285,
+          "generationSeconds": 3.4007446669966157,
+          "audioSeconds": 36.0785
+        }
+      }
+    }
+  },
+  "frozenBaseBeforeSha256": "f4ccb2dc00cf520dab0d11a25a46efd5c889d9d23e9a2c01dfc4c05fbb233644",
+  "trainableParameters": 147456,
+  "totalParameters": 37907712,
+  "baselineValidationLoss": 1.2814862495868877,
+  "trainingCurve": [
+    {
+      "optimizerStep": 1,
+      "epoch": 0.006932409012131715,
+      "tokenLoss": 1.100540087200128,
+      "tokens": 104,
+      "learningRate": 5e-05,
+      "elapsedSeconds": 2.892737207999744
+    },
+    {
+      "optimizerStep": 2,
+      "epoch": 0.01386481802426343,
+      "tokenLoss": 1.4133681569780623,
+      "tokens": 77,
+      "learningRate": 0.0001,
+      "elapsedSeconds": 5.726679499999591
+    },
+    {
+      "optimizerStep": 3,
+      "epoch": 0.02079722703639515,
+      "tokenLoss": 1.0891605143499847,
+      "tokens": 101,
+      "learningRate": 0.00015,
+      "elapsedSeconds": 8.462580916999286
+    },
+    {
+      "optimizerStep": 4,
+      "epoch": 0.02772963604852686,
+      "tokenLoss": 1.2024570716464,
+      "tokens": 92,
+      "learningRate": 0.0002,
+      "elapsedSeconds": 11.25928679199933
+    },
+    {
+      "optimizerStep": 5,
+      "epoch": 0.03466204506065858,
+      "tokenLoss": 1.463025435224756,
+      "tokens": 77,
+      "learningRate": 0.00025,
+      "elapsedSeconds": 14.098250833001657
+    },
+    {
+      "optimizerStep": 6,
+      "epoch": 0.0415944540727903,
+      "tokenLoss": 1.2549400176550891,
+      "tokens": 74,
+      "learningRate": 0.0003,
+      "elapsedSeconds": 16.825079833000927
+    },
+    {
+      "optimizerStep": 7,
+      "epoch": 0.04852686308492201,
+      "tokenLoss": 1.1674681491749261,
+      "tokens": 93,
+      "learningRate": 0.00035,
+      "elapsedSeconds": 19.67304475000128
+    },
+    {
+      "optimizerStep": 8,
+      "epoch": 0.05545927209705372,
+      "tokenLoss": 1.1675135850906373,
+      "tokens": 100,
+      "learningRate": 0.0004,
+      "elapsedSeconds": 22.508242625001003
+    },
+    {
+      "optimizerStep": 9,
+      "epoch": 0.06239168110918544,
+      "tokenLoss": 1.1714991243874155,
+      "tokens": 82,
+      "learningRate": 0.00045000000000000004,
+      "elapsedSeconds": 25.41776554199896
+    },
+    {
+      "optimizerStep": 10,
+      "epoch": 0.06932409012131716,
+      "tokenLoss": 1.1705609484722739,
+      "tokens": 95,
+      "learningRate": 0.0005,
+      "elapsedSeconds": 28.135621207999066
+    },
+    {
+      "optimizerStep": 11,
+      "epoch": 0.07625649913344887,
+      "tokenLoss": 1.193649300387208,
+      "tokens": 71,
+      "learningRate": 0.0005,
+      "elapsedSeconds": 30.963166000001365
+    },
+    {
+      "optimizerStep": 12,
+      "epoch": 0.0831889081455806,
+      "tokenLoss": 1.0270542276316676,
+      "tokens": 87,
+      "learningRate": 0.0004982142857142858,
+      "elapsedSeconds": 33.81143066699951
+    },
+    {
+      "optimizerStep": 13,
+      "epoch": 0.09012131715771231,
+      "tokenLoss": 1.0495520274290877,
+      "tokens": 89,
+      "learningRate": 0.0004964285714285715,
+      "elapsedSeconds": 36.698184166998544
+    },
+    {
+      "optimizerStep": 14,
+      "epoch": 0.09705372616984402,
+      "tokenLoss": 0.9244072976566496,
+      "tokens": 84,
+      "learningRate": 0.0004946428571428571,
+      "elapsedSeconds": 39.465535416999046
+    },
+    {
+      "optimizerStep": 15,
+      "epoch": 0.10398613518197573,
+      "tokenLoss": 0.8439387562798291,
+      "tokens": 82,
+      "learningRate": 0.0004928571428571429,
+      "elapsedSeconds": 42.316419082999346
+    },
+    {
+      "optimizerStep": 16,
+      "epoch": 0.11091854419410745,
+      "tokenLoss": 0.8625017465689243,
+      "tokens": 78,
+      "learningRate": 0.0004910714285714286,
+      "elapsedSeconds": 45.238933291999274
+    },
+    {
+      "optimizerStep": 17,
+      "epoch": 0.11785095320623917,
+      "tokenLoss": 0.9569832164990274,
+      "tokens": 76,
+      "learningRate": 0.0004892857142857142,
+      "elapsedSeconds": 48.08217924999917
+    },
+    {
+      "optimizerStep": 18,
+      "epoch": 0.12478336221837089,
+      "tokenLoss": 0.8739205583930015,
+      "tokens": 80,
+      "learningRate": 0.0004875,
+      "elapsedSeconds": 50.99835937500029
+    },
+    {
+      "optimizerStep": 19,
+      "epoch": 0.1317157712305026,
+      "tokenLoss": 0.8038914915803191,
+      "tokens": 77,
+      "learningRate": 0.0004857142857142857,
+      "elapsedSeconds": 53.91473224999936
+    },
+    {
+      "optimizerStep": 20,
+      "epoch": 0.1386481802426343,
+      "tokenLoss": 0.6380263548344374,
+      "tokens": 112,
+      "learningRate": 0.00048392857142857146,
+      "elapsedSeconds": 57.25636949999898
+    },
+    {
+      "optimizerStep": 21,
+      "epoch": 0.14558058925476602,
+      "tokenLoss": 0.5650175866626558,
+      "tokens": 84,
+      "learningRate": 0.00048214285714285715,
+      "elapsedSeconds": 60.23970479199852
+    },
+    {
+      "optimizerStep": 22,
+      "epoch": 0.15251299826689774,
+      "tokenLoss": 0.5062741547822952,
+      "tokens": 80,
+      "learningRate": 0.0004803571428571429,
+      "elapsedSeconds": 63.115205875001266
+    },
+    {
+      "optimizerStep": 23,
+      "epoch": 0.15944540727902945,
+      "tokenLoss": 0.5210144766131226,
+      "tokens": 98,
+      "learningRate": 0.0004785714285714286,
+      "elapsedSeconds": 65.95519541700196
+    },
+    {
+      "optimizerStep": 24,
+      "epoch": 0.1663778162911612,
+      "tokenLoss": 0.6195244628649491,
+      "tokens": 91,
+      "learningRate": 0.0004767857142857143,
+      "elapsedSeconds": 68.7780233750018
+    },
+    {
+      "optimizerStep": 25,
+      "epoch": 0.1733102253032929,
+      "tokenLoss": 0.5834359623491764,
+      "tokens": 80,
+      "learningRate": 0.000475,
+      "elapsedSeconds": 71.70885520799857
+    }
+  ],
+  "validationCurve": [
+    {
+      "optimizerStep": 0,
+      "epoch": 0,
+      "tokenLoss": 1.2814862495868877,
+      "elapsedSeconds": 0
+    },
+    {
+      "optimizerStep": 25,
+      "epoch": 0.1733102253032929,
+      "tokenLoss": 0.41319792148218193,
+      "elapsedSeconds": 95.27343233300053
+    }
+  ],
+  "epochs": [],
+  "selectedEpoch": 0.1733102253032929,
+  "selectedStep": 25,
+  "selectedValidationLoss": 0.41319792148218193
+}

@@ -1,0 +1,15 @@
+{
+  "createdAt": "2026-10-14T17:46:04.989Z",
+  "scope": "Live AI text dialogue and persisted notebook state; no microphone claims.",
+  "total": 6,
+  "passed": 0,
+  "results": [
+    {
+      "request": "Put down three x plus four equals nineteen.",
+      "status": "command",
+      "equation": "3 * x + 4 = 19",
+      "pass": false,
+      "error": "Unable to connect. Is the computer able to access the url?"
+    }
+  ]
+}

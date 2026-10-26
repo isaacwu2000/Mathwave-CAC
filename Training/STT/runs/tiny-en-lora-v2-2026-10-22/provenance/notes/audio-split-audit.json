@@ -1,0 +1,285 @@
+{
+  "conversations": 500,
+  "clips": 1615,
+  "waveformsVerified": true,
+  "partitionAudit": true,
+  "generationCostUsd": 0,
+  "limits": "Synthetic speech and known v1 cases; not unseen students or real-world generalization.",
+  "normalizerSha256": "1f8739b3fff4b66b6a2de86b07780b31b792b8983c395a7a5fbd38f8230b4c07",
+  "splitterSha256": "300fc7c13b83f6593e1e08a87952b44358e9552bd36486ef0b85b712ec54085f",
+  "splitSha256": "b239f6ebf3897de00a1f268697acc8fff326bf2829bd77a71372cd6148699530",
+  "audioManifestSha256": "8aebb75c8053b5e2cb876b9a3abd9fa2a989df636b777d371ff1abf808d9f256",
+  "corpusSha256": {
+    "Evals/inputs/student-conversations-v1/algebra.json": "fd1e33652bbafbd791c9df58e67f73f595ab8797cb72be619220d1890f729e1b",
+    "Evals/inputs/student-conversations-v1/graphs.json": "f5666d66c19622c7c1e7791285a432ac3b296ab367df76b802cdd15268492ecb",
+    "Evals/inputs/student-conversations-v1/geometry.json": "7979962e64b306fadb6d351ce70ba52918f0d035a3efa93f781166c9f190a07c",
+    "Evals/inputs/student-conversations-v1/statistics-and-context.json": "b96d495d79b024487be34dd1ab80124d6108c92a274ab2aa40638cf6a30884c4",
+    "Evals/inputs/student-conversations-v2/equation-extension.json": "45c396a7f21584f475304d5fd97c3df3943d1c34956e609c199cfa2dfcb9a781"
+  },
+  "summary": {
+    "test": {
+      "conversations": 50,
+      "retainedClips": 163,
+      "uniqueTranscripts": 156,
+      "voices": [
+        "Daniel",
+        "Eddy (English (US))",
+        "Flo (English (US))",
+        "Karen",
+        "Reed (English (US))",
+        "Samantha"
+      ],
+      "byCategory": {
+        "algebra": {
+          "conversations": 20,
+          "retainedClips": 77,
+          "primaryUniqueTranscripts": 72
+        },
+        "cross-topic": {
+          "conversations": 3,
+          "retainedClips": 9,
+          "primaryUniqueTranscripts": 8
+        },
+        "geometry": {
+          "conversations": 10,
+          "retainedClips": 26,
+          "primaryUniqueTranscripts": 26
+        },
+        "graphs": {
+          "conversations": 10,
+          "retainedClips": 34,
+          "primaryUniqueTranscripts": 33
+        },
+        "history-and-diagrams": {
+          "conversations": 2,
+          "retainedClips": 7,
+          "primaryUniqueTranscripts": 7
+        },
+        "statistics": {
+          "conversations": 5,
+          "retainedClips": 10,
+          "primaryUniqueTranscripts": 10
+        }
+      },
+      "byOriginalCategory": {
+        "algebra": {
+          "conversations": 18,
+          "retainedClips": 68,
+          "primaryUniqueTranscripts": 63
+        },
+        "arithmetic": {
+          "conversations": 2,
+          "retainedClips": 9,
+          "primaryUniqueTranscripts": 9
+        },
+        "cross-topic": {
+          "conversations": 3,
+          "retainedClips": 9,
+          "primaryUniqueTranscripts": 8
+        },
+        "geometry": {
+          "conversations": 10,
+          "retainedClips": 26,
+          "primaryUniqueTranscripts": 26
+        },
+        "graphs": {
+          "conversations": 10,
+          "retainedClips": 34,
+          "primaryUniqueTranscripts": 33
+        },
+        "history-and-diagrams": {
+          "conversations": 2,
+          "retainedClips": 7,
+          "primaryUniqueTranscripts": 7
+        },
+        "statistics": {
+          "conversations": 5,
+          "retainedClips": 10,
+          "primaryUniqueTranscripts": 10
+        }
+      }
+    },
+    "val": {
+      "conversations": 50,
+      "retainedClips": 150,
+      "uniqueTranscripts": 148,
+      "voices": [
+        "Daniel",
+        "Eddy (English (US))",
+        "Flo (English (US))",
+        "Karen",
+        "Reed (English (US))",
+        "Samantha"
+      ],
+      "byCategory": {
+        "algebra": {
+          "conversations": 20,
+          "retainedClips": 63,
+          "primaryUniqueTranscripts": 61
+        },
+        "cross-topic": {
+          "conversations": 2,
+          "retainedClips": 6,
+          "primaryUniqueTranscripts": 6
+        },
+        "geometry": {
+          "conversations": 10,
+          "retainedClips": 28,
+          "primaryUniqueTranscripts": 28
+        },
+        "graphs": {
+          "conversations": 10,
+          "retainedClips": 30,
+          "primaryUniqueTranscripts": 30
+        },
+        "history-and-diagrams": {
+          "conversations": 3,
+          "retainedClips": 11,
+          "primaryUniqueTranscripts": 11
+        },
+        "statistics": {
+          "conversations": 5,
+          "retainedClips": 12,
+          "primaryUniqueTranscripts": 12
+        }
+      },
+      "byOriginalCategory": {
+        "algebra": {
+          "conversations": 19,
+          "retainedClips": 61,
+          "primaryUniqueTranscripts": 59
+        },
+        "arithmetic": {
+          "conversations": 1,
+          "retainedClips": 2,
+          "primaryUniqueTranscripts": 2
+        },
+        "cross-topic": {
+          "conversations": 2,
+          "retainedClips": 6,
+          "primaryUniqueTranscripts": 6
+        },
+        "geometry": {
+          "conversations": 10,
+          "retainedClips": 28,
+          "primaryUniqueTranscripts": 28
+        },
+        "graphs": {
+          "conversations": 10,
+          "retainedClips": 30,
+          "primaryUniqueTranscripts": 30
+        },
+        "history-and-diagrams": {
+          "conversations": 3,
+          "retainedClips": 11,
+          "primaryUniqueTranscripts": 11
+        },
+        "statistics": {
+          "conversations": 5,
+          "retainedClips": 12,
+          "primaryUniqueTranscripts": 12
+        }
+      }
+    },
+    "train": {
+      "conversations": 400,
+      "retainedClips": 1140,
+      "uniqueTranscripts": 1085,
+      "voices": [
+        "Daniel",
+        "Eddy (English (US))",
+        "Flo (English (US))",
+        "Karen",
+        "Reed (English (US))",
+        "Samantha"
+      ],
+      "byCategory": {
+        "algebra": {
+          "conversations": 160,
+          "retainedClips": 441,
+          "primaryUniqueTranscripts": 410
+        },
+        "cross-topic": {
+          "conversations": 20,
+          "retainedClips": 61,
+          "primaryUniqueTranscripts": 58
+        },
+        "geometry": {
+          "conversations": 80,
+          "retainedClips": 225,
+          "primaryUniqueTranscripts": 219
+        },
+        "graphs": {
+          "conversations": 80,
+          "retainedClips": 246,
+          "primaryUniqueTranscripts": 242
+        },
+        "history-and-diagrams": {
+          "conversations": 20,
+          "retainedClips": 65,
+          "primaryUniqueTranscripts": 58
+        },
+        "statistics": {
+          "conversations": 40,
+          "retainedClips": 102,
+          "primaryUniqueTranscripts": 98
+        }
+      },
+      "byOriginalCategory": {
+        "algebra": {
+          "conversations": 148,
+          "retainedClips": 416,
+          "primaryUniqueTranscripts": 386
+        },
+        "arithmetic": {
+          "conversations": 12,
+          "retainedClips": 25,
+          "primaryUniqueTranscripts": 24
+        },
+        "cross-topic": {
+          "conversations": 20,
+          "retainedClips": 61,
+          "primaryUniqueTranscripts": 58
+        },
+        "geometry": {
+          "conversations": 80,
+          "retainedClips": 225,
+          "primaryUniqueTranscripts": 219
+        },
+        "graphs": {
+          "conversations": 80,
+          "retainedClips": 246,
+          "primaryUniqueTranscripts": 242
+        },
+        "history-and-diagrams": {
+          "conversations": 20,
+          "retainedClips": 65,
+          "primaryUniqueTranscripts": 58
+        },
+        "statistics": {
+          "conversations": 40,
+          "retainedClips": 102,
+          "primaryUniqueTranscripts": 98
+        }
+      }
+    }
+  },
+  "groups": 458,
+  "largestGroup": 24,
+  "excludedDuplicateClips": 162,
+  "reusedV1Clips": 1197,
+  "generatedV2Clips": 418,
+  "sixVoices": [
+    "Daniel",
+    "Eddy (English (US))",
+    "Flo (English (US))",
+    "Karen",
+    "Reed (English (US))",
+    "Samantha"
+  ],
+  "preparationManifestRemoved": true,
+  "temporaryAudioFilesRemaining": [],
+  "scope": "Audio integrity and pre-inference grouped-stratified split audit only; no model predictions or scores inspected.",
+  "tests": "10 focused v2 CLI tests pass, including actual-corpus arithmetic holdouts (12train/1val/2test), complete program grouping and no first-setup grouping. All1615waveforms verified, deterministic split reproduced; retained normalized transcript/waveform overlap absent across partitions.",
+  "replacementReason": "Earlier incomplete run stopped without reading held-out scores after finding arithmetic underrepresentation. Superseded run and split preserved separately; this split adds nested original-category balancing."
+}

@@ -1,0 +1,45 @@
+{
+  "viewport": {
+    "width": 1000,
+    "height": 760
+  },
+  "method": "Actual browser screenshots inspected individually on labeled contact sheets. Final atomic command states, not progressive drawing. No responsive UI change; mobile not measured.",
+  "collectorFailure": true,
+  "cases": [
+    {
+      "screenshot": "00-before-0-equation.png",
+      "visuallyReviewed": true,
+      "notes": "Rendered 2x+3=11."
+    },
+    {
+      "screenshot": "01-after-0-equation.png",
+      "visuallyReviewed": true,
+      "notes": "Rendered 2x+3=11."
+    },
+    {
+      "screenshot": "02-before-1-equation.png",
+      "visuallyReviewed": true,
+      "notes": "Rendered 2x+3=11."
+    },
+    {
+      "screenshot": "03-after-1-equation.png",
+      "visuallyReviewed": true,
+      "notes": "Rendered 2x+3=11."
+    },
+    {
+      "screenshot": "04-after-1-both-sides.png",
+      "visuallyReviewed": true,
+      "notes": "Both sides subtract 3; original step retained."
+    },
+    {
+      "screenshot": "05-before-1-both-sides.png",
+      "visuallyReviewed": true,
+      "notes": "Both sides subtract 3; original step retained."
+    },
+    {
+      "screenshot": "06-before-1-two-steps.png",
+      "visuallyReviewed": true,
+      "notes": "Subtraction intermediate and division final visible; all three steps retained."
+    }
+  ]
+}

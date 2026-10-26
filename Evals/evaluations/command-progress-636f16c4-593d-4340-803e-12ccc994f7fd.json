@@ -1,0 +1,9 @@
+{
+  "run": "636f16c4-593d-4340-803e-12ccc994f7fd",
+  "scope": "One mocked browser lifecycle case; no provider or saved-user-data access.",
+  "checks": [
+    "Pico has two matching circular eyes; listening and playback overlap, and interruption immediately removes waves."
+  ],
+  "passed": false,
+  "failure": "checking preview: waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-command-phase=\"checking\"] math') to be visible\u001b[22m\n"
+}

@@ -1,0 +1,140 @@
+{
+  "split": "test-v7",
+  "mode": "parser",
+  "datasetSHA256": "f6cff2bded8fe22915a10c820617d853679c29506eed243701d72183ea7424de",
+  "createdAt": "2026-10-11T01:35:27.626Z",
+  "total": 10,
+  "scored": 10,
+  "passed": 10,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "graph_exploration": {
+      "passed": 10,
+      "scored": 10
+    }
+  },
+  "results": [
+    {
+      "id": "v7-001",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "show the intersections",
+        "message": ""
+      },
+      "latencyMs": 20
+    },
+    {
+      "id": "v7-002",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "read the intercepts of graph 2",
+        "message": ""
+      },
+      "latencyMs": 4
+    },
+    {
+      "id": "v7-003",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "play graph 2",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v7-004",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "Could you please fit all curves?",
+        "message": ""
+      },
+      "latencyMs": 3
+    },
+    {
+      "id": "v7-005",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "zoom to fit",
+        "message": ""
+      },
+      "latencyMs": 2
+    },
+    {
+      "id": "v7-006",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "find roots",
+        "message": ""
+      },
+      "latencyMs": 4
+    },
+    {
+      "id": "v7-007",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "find roots",
+        "message": ""
+      },
+      "latencyMs": 2
+    },
+    {
+      "id": "v7-008",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "That graph expression does not exist."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v7-009",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "That graph expression does not exist."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v7-010",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "No finite graph samples in this x range."
+      },
+      "latencyMs": 4
+    }
+  ]
+}

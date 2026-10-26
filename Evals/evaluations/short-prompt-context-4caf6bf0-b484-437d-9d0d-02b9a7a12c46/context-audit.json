@@ -1,0 +1,361 @@
+{
+  "providerCalls": 0,
+  "scope": "Offline correction of one faulty graph oracle; original scores unchanged. All other context judgments retained.",
+  "oracleSHA256": "fc87c92de9aef6e830b227477b9ad4fd28dd54b6638d0fcb3a9e6128bec66f75",
+  "summary": {
+    "baseline": {
+      "planned": 21,
+      "attempted": 21,
+      "passed": 19,
+      "failed": 2,
+      "blocked": 0
+    },
+    "short": {
+      "planned": 21,
+      "attempted": 21,
+      "passed": 20,
+      "failed": 1,
+      "blocked": 0
+    }
+  },
+  "rows": [
+    {
+      "scenario": "natural-conversation",
+      "variant": "baseline",
+      "text": "I'm working on eight x plus three equals nineteen. Could you write that for me?",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "natural-conversation",
+      "variant": "baseline",
+      "text": "How would you get rid of that added three? Don't change it yet.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "natural-conversation",
+      "variant": "baseline",
+      "text": "Yeah, let's do that.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "natural-conversation",
+      "variant": "baseline",
+      "text": "Actually, take away five instead of three.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "natural-conversation",
+      "variant": "short",
+      "text": "I'm working on eight x plus three equals nineteen. Could you write that for me?",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "natural-conversation",
+      "variant": "short",
+      "text": "How would you get rid of that added three? Don't change it yet.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "natural-conversation",
+      "variant": "short",
+      "text": "Yeah, let's do that.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "natural-conversation",
+      "variant": "short",
+      "text": "Actually, take away five instead of three.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "delayed-correction",
+      "variant": "short",
+      "text": "Subtract five from both sides and simplify.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "delayed-correction",
+      "variant": "short",
+      "text": "Actually, take away seven instead of five.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "delayed-correction",
+      "variant": "short",
+      "text": "Change that number to nine.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "delayed-correction",
+      "variant": "baseline",
+      "text": "Subtract five from both sides and simplify.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "delayed-correction",
+      "variant": "baseline",
+      "text": "Actually, take away seven instead of five.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "delayed-correction",
+      "variant": "baseline",
+      "text": "Change that number to nine.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "missing-number",
+      "variant": "baseline",
+      "text": "Divide both sides by a number.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "missing-number",
+      "variant": "baseline",
+      "text": "Two.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "missing-number",
+      "variant": "short",
+      "text": "Divide both sides by a number.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "missing-number",
+      "variant": "short",
+      "text": "Two.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "linked-graph",
+      "variant": "short",
+      "text": "Define a equals two and f of x equals a times x squared. Plot f, keeping its definition linked to a.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "linked-graph",
+      "variant": "short",
+      "text": "Change a to three.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "linked-graph",
+      "variant": "short",
+      "text": "Read f at x equals two without changing the graph.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "linked-graph",
+      "variant": "baseline",
+      "text": "Define a equals two and f of x equals a times x squared. Plot f, keeping its definition linked to a.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "linked-graph",
+      "variant": "baseline",
+      "text": "Change a to three.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "linked-graph",
+      "variant": "baseline",
+      "text": "Read f at x equals two without changing the graph.",
+      "attempted": true,
+      "originalPassed": false,
+      "auditedPassed": false
+    },
+    {
+      "scenario": "implicit-graph",
+      "variant": "baseline",
+      "text": "Graph x squared plus y squared equals four.",
+      "attempted": true,
+      "originalPassed": false,
+      "auditedPassed": true,
+      "oracleCorrection": "Original scorer searched readback for true/false; engine readback uses satisfies/does not satisfy. Rechecked saved implicit relation through computed membership, with positive and negative authored points."
+    },
+    {
+      "scenario": "implicit-graph",
+      "variant": "short",
+      "text": "Graph x squared plus y squared equals four.",
+      "attempted": true,
+      "originalPassed": false,
+      "auditedPassed": true,
+      "oracleCorrection": "Original scorer searched readback for true/false; engine readback uses satisfies/does not satisfy. Rechecked saved implicit relation through computed membership, with positive and negative authored points."
+    },
+    {
+      "scenario": "polar-graph",
+      "variant": "short",
+      "text": "Plot r equals two times cosine theta for theta from zero to pi over two.",
+      "attempted": true,
+      "originalPassed": false,
+      "auditedPassed": false
+    },
+    {
+      "scenario": "polar-graph",
+      "variant": "baseline",
+      "text": "Plot r equals two times cosine theta for theta from zero to pi over two.",
+      "attempted": true,
+      "originalPassed": false,
+      "auditedPassed": false
+    },
+    {
+      "scenario": "construction-edit-correction",
+      "variant": "baseline",
+      "text": "Add the midpoint M of segment A B.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "construction-edit-correction",
+      "variant": "baseline",
+      "text": "Move B to eight zero.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "construction-edit-correction",
+      "variant": "baseline",
+      "text": "Actually, I meant six zero.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "construction-edit-correction",
+      "variant": "baseline",
+      "text": "Read M.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "construction-edit-correction",
+      "variant": "short",
+      "text": "Add the midpoint M of segment A B.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "construction-edit-correction",
+      "variant": "short",
+      "text": "Move B to eight zero.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "construction-edit-correction",
+      "variant": "short",
+      "text": "Actually, I meant six zero.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "construction-edit-correction",
+      "variant": "short",
+      "text": "Read M.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "construction-intersection",
+      "variant": "short",
+      "text": "Mark the intersection of the circle and line as P.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "construction-intersection",
+      "variant": "short",
+      "text": "Use the left one.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "construction-intersection",
+      "variant": "baseline",
+      "text": "Mark the intersection of the circle and line as P.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "construction-intersection",
+      "variant": "baseline",
+      "text": "Use the left one.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "false-geometry-assertion",
+      "variant": "baseline",
+      "text": "Mark angle A B C as a right angle.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    },
+    {
+      "scenario": "false-geometry-assertion",
+      "variant": "short",
+      "text": "Mark angle A B C as a right angle.",
+      "attempted": true,
+      "originalPassed": true,
+      "auditedPassed": true
+    }
+  ]
+}

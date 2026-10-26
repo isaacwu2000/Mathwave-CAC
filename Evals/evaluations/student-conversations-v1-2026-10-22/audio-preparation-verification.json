@@ -1,0 +1,28 @@
+{
+  "lane": "Complete corpus recording integrity, not STT/model or listening acceptance.",
+  "conversations": 400,
+  "individuallyReviewed": 400,
+  "clips": 1197,
+  "voices": {
+    "Eddy (English (US))": 207,
+    "Daniel": 187,
+    "Karen": 179,
+    "Samantha": 230,
+    "Reed (English (US))": 189,
+    "Flo (English (US))": 205
+  },
+  "totalBytes": 103057066,
+  "totalDurationSeconds": 3067.3173125,
+  "minDurationSeconds": 0.6946875,
+  "maxDurationSeconds": 9.288375,
+  "checks": [
+    "every ordered student turn covered exactly once",
+    "exact transcript/family bindings",
+    "six-voice manifest with consistent voice per conversation",
+    "all source and individual review hashes",
+    "all audio SHA256, sample formats, frame counts, durations and sizes",
+    "all waveforms nonempty and not digital silence"
+  ],
+  "generationApiCostUsd": 0,
+  "limits": "Synthetic macOS voices; not real student speech. Recordings were not all listened to or transcribed. Full app visual acceptance is incomplete."
+}

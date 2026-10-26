@@ -1,0 +1,9 @@
+{
+  "status": 200,
+  "providerRedirectStatus": 302,
+  "authorizationHost": "accounts.google.com",
+  "clientId": "516360943379-hreeur75roq0o90k7u59odsa836frb13.apps.googleusercontent.com",
+  "providerCallback": "https://ep-crimson-cake-b809thhx.neonauth.c-14.us-east-1.aws.neon.tech/neondb/auth/callback/google",
+  "appCallbackAccepted": true,
+  "fullGoogleLogin": "Not performed; requires owner account"
+}

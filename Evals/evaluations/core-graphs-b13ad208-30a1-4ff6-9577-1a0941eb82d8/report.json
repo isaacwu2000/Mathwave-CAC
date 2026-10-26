@@ -1,0 +1,55 @@
+{
+  "lane": "real browser + deterministic API with in-memory synthetic store; no provider calls",
+  "revision": "599dbaa plus current task changes",
+  "origin": "http://localhost:3115",
+  "viewports": [
+    [
+      1440,
+      1000
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "checks": [
+    "implicit, inequality, polar, parametric, named function and piecewise canvas plus structured history",
+    "direct scalar edit updates dependent function",
+    "same request retry is idempotent",
+    "invalid draft retains saved graph; reload retains names and definitions",
+    "direct parameter range saves",
+    "desktop and mobile layout without page overflow",
+    "stale revision is rejected without changing the graph"
+  ],
+  "errors": [],
+  "finalScene": {
+    "rows": [
+      {
+        "expression": "a=3"
+      },
+      {
+        "expression": "f(x)=a*x^2"
+      },
+      {
+        "expression": "x^2+y^2=4"
+      },
+      {
+        "expression": "y<=x+1"
+      },
+      {
+        "expression": "r=2*cos(theta)"
+      },
+      {
+        "expression": "(cos(t),sin(t))",
+        "name": "Orbit",
+        "domain": {
+          "min": 0,
+          "max": 1.5707963267948966
+        }
+      },
+      {
+        "expression": "y={x<0:-x,x>=0:x^2}"
+      }
+    ]
+  }
+}

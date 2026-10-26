@@ -1,0 +1,2 @@
+Native/Models/*.gguf filter=lfs diff=lfs merge=lfs -text
+Native/Models/*.bin filter=lfs diff=lfs merge=lfs -text

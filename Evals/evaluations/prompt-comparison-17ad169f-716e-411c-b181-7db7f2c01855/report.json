@@ -1,0 +1,2045 @@
+{
+  "startedAt": "2026-10-22T17:56:35.236Z",
+  "revision": "34db7e704131d53ebebdd2197b7d81e328f10f8d",
+  "workingChanges": true,
+  "fingerprints": {
+    "Web/src/modules/ai/runtime/interpret.ts": "8a3e1cbef0eb691583d6778cc2754deddad64e764e883da4a984726973af30e4",
+    "Web/src/modules/ai/config/interpretation.ts": "04353817828cf62385d92ac84a77cc3672d5e7ecd8c8072a8c71b272d580702f",
+    "Web/src/modules/commands/config/interpreter.ts": "b21213bfa4e53b640ca493d991049a624ac183122ecf85a371cb07b6a01a13fd",
+    "Web/src/modules/commands/config/program-instructions.ts": "1ab10c7d7571de9c18623518fbed0b697a9d77da621fe34982bd3960ad08fe23",
+    "Evals/experiments/short-interpreter-prompt.ts": "c8a09d4f7845aa36a3ed218eff7018f24a3b249181eca7753347a7b51c19c5b1",
+    "Evals/src/prompt-comparison.ts": "ff5b645c2131d39bc0248cfb32ff56f3c767d08cc3463942024d5743b40b284e",
+    "Evals/scripts/compare-prompts.ts": "04c672896227f5ac264cba1b15ff0ba6ce32809b9917399ebc8dd51ed0fb4152"
+  },
+  "model": "gpt-6-luna",
+  "profile": "luna-default",
+  "reasoning": "provider default",
+  "repetitions": 2,
+  "plannedTurns": 40,
+  "maximumProviderCalls": 120,
+  "providerCalls": 42,
+  "scope": "Real provider responses through deterministic validation/execution on synthetic work. Excludes voice, browser, network to app, persistence and student usability. Explanation grade checks response type/non-mutation, not pedagogical quality.",
+  "methodology": "Sequential matched cases, alternating prompt order by case/repetition; identical schema, tools, model, context and three-call/40s budget. Default provider caching retained; usage records expose cached input tokens. Failures retained, missing attempts explicit. Small exploratory sample, not a production latency guarantee.",
+  "basePromptCharacters": {
+    "baseline": 31079,
+    "short": 10781
+  },
+  "summary": {
+    "baseline": {
+      "attempted": 20,
+      "passed": 15,
+      "failed": 5,
+      "latencyMs": {
+        "allP50": 2795.366666999995,
+        "successfulP50": 2795.366666999995,
+        "successfulP95": 5094.885750000001
+      },
+      "modelCalls": 22,
+      "turnsWithRepair": 1,
+      "turnsWithPreview": 1
+    },
+    "short": {
+      "attempted": 20,
+      "passed": 20,
+      "failed": 0,
+      "latencyMs": {
+        "allP50": 2144.893542,
+        "successfulP50": 2144.893542,
+        "successfulP95": 3401.6471249999995
+      },
+      "modelCalls": 20,
+      "turnsWithRepair": 0,
+      "turnsWithPreview": 0
+    }
+  },
+  "samples": [
+    {
+      "variant": "baseline",
+      "repetition": 0,
+      "case": "equation",
+      "request": "Please set up the equation: twice x plus three equals eleven.",
+      "instructionsCharacters": 31433,
+      "contextCharacters": 1221,
+      "elapsedMs": 3496.221334,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": false,
+      "answer": {
+        "status": "reply",
+        "command": "",
+        "program": "",
+        "programs": [],
+        "commands": [],
+        "message": "The equation is already set up: 2x + 3 = 11.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": false,
+        "status": "reply",
+        "expression": "2 * x + 3 = 11",
+        "intermediateExpressions": []
+      },
+      "rounds": [
+        {
+          "elapsedMs": 3494.3639160000002,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7078,
+            "input_tokens_details": {
+              "cache_write_tokens": 7075,
+              "cached_tokens": 0
+            },
+            "output_tokens": 139,
+            "output_tokens_details": {
+              "reasoning_tokens": 85
+            },
+            "total_tokens": 7217
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 0,
+      "case": "equation",
+      "request": "Please set up the equation: twice x plus three equals eleven.",
+      "instructionsCharacters": 11135,
+      "contextCharacters": 1221,
+      "elapsedMs": 3475.7986250000004,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "problem.save(math.equation(\"2*x+3=11\"));",
+        "programs": [],
+        "commands": [],
+        "message": "",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "2 * x + 3 = 11",
+        "intermediateExpressions": [
+          "2 * x + 3 = 11"
+        ]
+      },
+      "rounds": [
+        {
+          "elapsedMs": 3467.4735419999997,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 2935,
+            "input_tokens_details": {
+              "cache_write_tokens": 2932,
+              "cached_tokens": 0
+            },
+            "output_tokens": 212,
+            "output_tokens_details": {
+              "reasoning_tokens": 159
+            },
+            "total_tokens": 3147
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 0,
+      "case": "both-sides",
+      "request": "Take three away from each side of my equation.",
+      "instructionsCharacters": 11135,
+      "contextCharacters": 1206,
+      "elapsedMs": 2070.6958749999994,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "const e = problem.currentEquation(); problem.save(math.subtractBothSides(e, 3));",
+        "programs": [],
+        "commands": [],
+        "message": "",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "2 * x + 3 - 3 = 11 - 3",
+        "intermediateExpressions": [
+          "2 * x + 3 - 3 = 11 - 3"
+        ]
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2063.809958,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 2932,
+            "input_tokens_details": {
+              "cache_write_tokens": 350,
+              "cached_tokens": 2579
+            },
+            "output_tokens": 86,
+            "output_tokens_details": {
+              "reasoning_tokens": 30
+            },
+            "total_tokens": 3018
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 0,
+      "case": "both-sides",
+      "request": "Take three away from each side of my equation.",
+      "instructionsCharacters": 31433,
+      "contextCharacters": 1206,
+      "elapsedMs": 2891.456915999999,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "const e = problem.currentEquation(); problem.save(math.subtractBothSides(e, 3));",
+        "programs": [],
+        "commands": [],
+        "message": "I subtracted 3 from both sides.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "2 * x + 3 - 3 = 11 - 3",
+        "intermediateExpressions": [
+          "2 * x + 3 - 3 = 11 - 3"
+        ]
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2887.269624999999,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7075,
+            "input_tokens_details": {
+              "cache_write_tokens": 350,
+              "cached_tokens": 6722
+            },
+            "output_tokens": 175,
+            "output_tokens_details": {
+              "reasoning_tokens": 110
+            },
+            "total_tokens": 7250
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 0,
+      "case": "two-steps",
+      "request": "Subtract three from both sides, then divide both sides by two. Keep both steps.",
+      "instructionsCharacters": 31433,
+      "contextCharacters": 1239,
+      "elapsedMs": 3484.8336249999993,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "",
+        "programs": [
+          "const e = problem.currentEquation(); problem.save(math.subtractBothSides(e, 3));",
+          "const e = problem.currentEquation(); problem.save(math.divideBothSides(e, 2));"
+        ],
+        "commands": [],
+        "message": "I’ll keep the subtraction and division as two separate steps.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "(2 * x + 3 - 3) / 2 = (11 - 3) / 2",
+        "intermediateExpressions": [
+          "2 * x + 3 - 3 = 11 - 3",
+          "(2 * x + 3 - 3) / 2 = (11 - 3) / 2"
+        ]
+      },
+      "rounds": [
+        {
+          "elapsedMs": 3471.771625000001,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7082,
+            "input_tokens_details": {
+              "cache_write_tokens": 357,
+              "cached_tokens": 6722
+            },
+            "output_tokens": 257,
+            "output_tokens_details": {
+              "reasoning_tokens": 170
+            },
+            "total_tokens": 7339
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 0,
+      "case": "two-steps",
+      "request": "Subtract three from both sides, then divide both sides by two. Keep both steps.",
+      "instructionsCharacters": 11135,
+      "contextCharacters": 1239,
+      "elapsedMs": 2144.893542,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "",
+        "programs": [
+          "const e = problem.currentEquation(); problem.save(math.subtractBothSides(e, 3));",
+          "const e = problem.currentEquation(); problem.save(math.divideBothSides(e, 2));"
+        ],
+        "commands": [],
+        "message": "",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "(2 * x + 3 - 3) / 2 = (11 - 3) / 2",
+        "intermediateExpressions": [
+          "2 * x + 3 - 3 = 11 - 3",
+          "(2 * x + 3 - 3) / 2 = (11 - 3) / 2"
+        ]
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2124.474915999999,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 2939,
+            "input_tokens_details": {
+              "cache_write_tokens": 357,
+              "cached_tokens": 2579
+            },
+            "output_tokens": 122,
+            "output_tokens_details": {
+              "reasoning_tokens": 47
+            },
+            "total_tokens": 3061
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 0,
+      "case": "clarification",
+      "request": "Make it better.",
+      "instructionsCharacters": 11135,
+      "contextCharacters": 1175,
+      "elapsedMs": 2246.7636669999993,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "clarification",
+        "command": "",
+        "program": "",
+        "programs": [],
+        "commands": [],
+        "message": "What would you like me to do with the equation—solve it, simplify it, or something else?",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "clarification",
+        "expression": "2 * x + 3 = 11",
+        "intermediateExpressions": []
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2246.5670000000027,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 2926,
+            "input_tokens_details": {
+              "cache_write_tokens": 344,
+              "cached_tokens": 2579
+            },
+            "output_tokens": 85,
+            "output_tokens_details": {
+              "reasoning_tokens": 25
+            },
+            "total_tokens": 3011
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 0,
+      "case": "clarification",
+      "request": "Make it better.",
+      "instructionsCharacters": 31433,
+      "contextCharacters": 1175,
+      "elapsedMs": 1913.2580000000016,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "clarification",
+        "command": "",
+        "program": "",
+        "programs": [],
+        "commands": [],
+        "message": "What would you like me to do with the equation—solve it, or make a specific change?",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "clarification",
+        "expression": "2 * x + 3 = 11",
+        "intermediateExpressions": []
+      },
+      "rounds": [
+        {
+          "elapsedMs": 1913.0270840000012,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7069,
+            "input_tokens_details": {
+              "cache_write_tokens": 344,
+              "cached_tokens": 6722
+            },
+            "output_tokens": 93,
+            "output_tokens_details": {
+              "reasoning_tokens": 34
+            },
+            "total_tokens": 7162
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 0,
+      "case": "explanation",
+      "request": "Explain why subtracting three from both sides keeps this equation balanced without changing my work.",
+      "instructionsCharacters": 31433,
+      "contextCharacters": 1260,
+      "elapsedMs": 3057.3627500000002,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "explanation",
+        "command": "",
+        "program": "",
+        "programs": [],
+        "commands": [],
+        "message": "An equation says both sides have the same value. Subtracting 3 from each side changes them equally, so they remain equal. Your equation stays unchanged: 2x + 3 = 11.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "explanation",
+        "expression": "2 * x + 3 = 11",
+        "intermediateExpressions": []
+      },
+      "rounds": [
+        {
+          "elapsedMs": 3057.2604169999977,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7362,
+            "input_tokens_details": {
+              "cache_write_tokens": 7359,
+              "cached_tokens": 0
+            },
+            "output_tokens": 130,
+            "output_tokens_details": {
+              "reasoning_tokens": 50
+            },
+            "total_tokens": 7492
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 0,
+      "case": "explanation",
+      "request": "Explain why subtracting three from both sides keeps this equation balanced without changing my work.",
+      "instructionsCharacters": 11135,
+      "contextCharacters": 1260,
+      "elapsedMs": 3401.6471249999995,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "explanation",
+        "command": "",
+        "program": "",
+        "programs": [],
+        "commands": [],
+        "message": "An equation is balanced when both sides have the same value. Subtracting 3 from each side lowers both by the same amount, so they remain equal. I haven’t changed your work.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "explanation",
+        "expression": "2 * x + 3 = 11",
+        "intermediateExpressions": []
+      },
+      "rounds": [
+        {
+          "elapsedMs": 3401.571749999999,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 3219,
+            "input_tokens_details": {
+              "cache_write_tokens": 3216,
+              "cached_tokens": 0
+            },
+            "output_tokens": 197,
+            "output_tokens_details": {
+              "reasoning_tokens": 120
+            },
+            "total_tokens": 3416
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 0,
+      "case": "coefficient",
+      "request": "Change the coefficient of x from two to four; leave the other numbers alone.",
+      "instructionsCharacters": 11135,
+      "contextCharacters": 1236,
+      "elapsedMs": 2443.3244159999995,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "const e = problem.currentEquation(); problem.save(math.replacePart(e, math.part(e, 4), \"4\"));",
+        "programs": [],
+        "commands": [],
+        "message": "",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "4 * x + 3 = 11",
+        "readback": " 4 times x plus 3 equals 11"
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2434.5180419999997,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 2938,
+            "input_tokens_details": {
+              "cache_write_tokens": 356,
+              "cached_tokens": 2579
+            },
+            "output_tokens": 114,
+            "output_tokens_details": {
+              "reasoning_tokens": 51
+            },
+            "total_tokens": 3052
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 0,
+      "case": "coefficient",
+      "request": "Change the coefficient of x from two to four; leave the other numbers alone.",
+      "instructionsCharacters": 31433,
+      "contextCharacters": 1236,
+      "elapsedMs": 2751.0503750000025,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "const e = problem.currentEquation(); const p = math.part(e, 4); problem.save(math.replacePart(e, p, \"4\"));",
+        "programs": [],
+        "commands": [],
+        "message": "I’ll change only the coefficient of x to 4.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "4 * x + 3 = 11",
+        "readback": "I’ll change only the coefficient of x to 4. 4 times x plus 3 equals 11"
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2744.044208000003,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7081,
+            "input_tokens_details": {
+              "cache_write_tokens": 356,
+              "cached_tokens": 6722
+            },
+            "output_tokens": 153,
+            "output_tokens_details": {
+              "reasoning_tokens": 73
+            },
+            "total_tokens": 7234
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 0,
+      "case": "revise-step",
+      "request": "Change saved step two to 2x equals ten, keeping the old work recoverable.",
+      "instructionsCharacters": 31433,
+      "contextCharacters": 1121,
+      "elapsedMs": 1959.110415999996,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "history.reviseStep(2, \"2*x=10\");",
+        "programs": [],
+        "commands": [],
+        "message": "Saved step two is revised; the previous work remains recoverable.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "2 * x = 10",
+        "readback": "Saved step two is revised; the previous work remains recoverable. Revised step 2. Your previous work is saved in history."
+      },
+      "rounds": [
+        {
+          "elapsedMs": 1954.9802909999999,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7042,
+            "input_tokens_details": {
+              "cache_write_tokens": 317,
+              "cached_tokens": 6722
+            },
+            "output_tokens": 63,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 7105
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 0,
+      "case": "revise-step",
+      "request": "Change saved step two to 2x equals ten, keeping the old work recoverable.",
+      "instructionsCharacters": 11135,
+      "contextCharacters": 1121,
+      "elapsedMs": 1967.994375000002,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "history.reviseStep(2, \"2*x=10\");",
+        "programs": [],
+        "commands": [],
+        "message": "",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "2 * x = 10",
+        "readback": " Revised step 2. Your previous work is saved in history."
+      },
+      "rounds": [
+        {
+          "elapsedMs": 1965.6522919999989,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 2899,
+            "input_tokens_details": {
+              "cache_write_tokens": 317,
+              "cached_tokens": 2579
+            },
+            "output_tokens": 93,
+            "output_tokens_details": {
+              "reasoning_tokens": 41
+            },
+            "total_tokens": 2992
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 0,
+      "case": "geometry",
+      "request": "What is the area of this circle? Read the result without changing my work.",
+      "instructionsCharacters": 13425,
+      "contextCharacters": 454,
+      "elapsedMs": 2070.007166999996,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "const s = geometry.current();\ngeometry.measure(s, \"area\");",
+        "programs": [],
+        "commands": [],
+        "message": "",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "0",
+        "readback": " area: 28.2743 square units. Formula: π × radius²."
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2065.161957999997,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 3218,
+            "input_tokens_details": {
+              "cache_write_tokens": 3215,
+              "cached_tokens": 0
+            },
+            "output_tokens": 103,
+            "output_tokens_details": {
+              "reasoning_tokens": 49
+            },
+            "total_tokens": 3321
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 0,
+      "case": "geometry",
+      "request": "What is the area of this circle? Read the result without changing my work.",
+      "instructionsCharacters": 33723,
+      "contextCharacters": 454,
+      "elapsedMs": 2586.337541999994,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": false,
+      "answer": {
+        "status": "reply",
+        "command": "",
+        "program": "geometry.measure(geometry.current(), \"area\");",
+        "programs": [],
+        "commands": [],
+        "message": "I’ll read the circle’s area without changing your work.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": false,
+        "status": "reply",
+        "expression": "0",
+        "readback": "I’ll read the circle’s area without changing your work."
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2582.7346659999967,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7361,
+            "input_tokens_details": {
+              "cache_write_tokens": 7358,
+              "cached_tokens": 0
+            },
+            "output_tokens": 132,
+            "output_tokens_details": {
+              "reasoning_tokens": 72
+            },
+            "total_tokens": 7493
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 0,
+      "case": "statistics",
+      "request": "What is the mean of this data? Leave the data unchanged.",
+      "instructionsCharacters": 31433,
+      "contextCharacters": 379,
+      "elapsedMs": 4565.896667000001,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "statistics.mean(statistics.current())",
+        "programs": [],
+        "commands": [],
+        "message": "I’ll find the mean without changing the data.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "0",
+        "readback": "I’ll find the mean without changing the data. Mean: 5."
+      },
+      "rounds": [
+        {
+          "elapsedMs": 4563.151458,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 6830,
+            "input_tokens_details": {
+              "cache_write_tokens": 105,
+              "cached_tokens": 6722
+            },
+            "output_tokens": 186,
+            "output_tokens_details": {
+              "reasoning_tokens": 132
+            },
+            "total_tokens": 7016
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 0,
+      "case": "statistics",
+      "request": "What is the mean of this data? Leave the data unchanged.",
+      "instructionsCharacters": 11135,
+      "contextCharacters": 379,
+      "elapsedMs": 1688.9753750000018,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "statistics.mean(statistics.current());",
+        "programs": [],
+        "commands": [],
+        "message": "",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "0",
+        "readback": " Mean: 5."
+      },
+      "rounds": [
+        {
+          "elapsedMs": 1686.2265419999967,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 2687,
+            "input_tokens_details": {
+              "cache_write_tokens": 105,
+              "cached_tokens": 2579
+            },
+            "output_tokens": 84,
+            "output_tokens_details": {
+              "reasoning_tokens": 40
+            },
+            "total_tokens": 2771
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 0,
+      "case": "linked-graph",
+      "request": "Change a to five and keep f linked to a.",
+      "instructionsCharacters": 13673,
+      "contextCharacters": 565,
+      "elapsedMs": 2388.3369999999995,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "const g = graph.current(1); problem.save(graph.edit(g, \"a=5\"));",
+        "programs": [],
+        "commands": [],
+        "message": "",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "0",
+        "readback": " Graph row 1: a=5 (5). Graph row 2: f(x)=a*x^2.",
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "a=5"
+            },
+            {
+              "expression": "f(x)=a*x^2"
+            }
+          ]
+        }
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2381.7532090000022,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 3343,
+            "input_tokens_details": {
+              "cache_write_tokens": 3340,
+              "cached_tokens": 0
+            },
+            "output_tokens": 145,
+            "output_tokens_details": {
+              "reasoning_tokens": 87
+            },
+            "total_tokens": 3488
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 0,
+      "case": "linked-graph",
+      "request": "Change a to five and keep f linked to a.",
+      "instructionsCharacters": 33971,
+      "contextCharacters": 565,
+      "elapsedMs": 2795.366666999995,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "const g = graph.current(1); problem.save(graph.edit(g, \"a=5\"));",
+        "programs": [],
+        "commands": [],
+        "message": "Changed the definition of a to 5; f remains linked to a.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "0",
+        "readback": "Changed the definition of a to 5; f remains linked to a. Graph row 1: a=5 (5). Graph row 2: f(x)=a*x^2.",
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "a=5"
+            },
+            {
+              "expression": "f(x)=a*x^2"
+            }
+          ]
+        }
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2791.4639590000006,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7486,
+            "input_tokens_details": {
+              "cache_write_tokens": 7483,
+              "cached_tokens": 0
+            },
+            "output_tokens": 183,
+            "output_tokens_details": {
+              "reasoning_tokens": 110
+            },
+            "total_tokens": 7669
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 1,
+      "case": "equation",
+      "request": "Please set up the equation: twice x plus three equals eleven.",
+      "instructionsCharacters": 11135,
+      "contextCharacters": 1221,
+      "elapsedMs": 1857.9910420000015,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "problem.save(math.equation(\"2*x+3=11\"));",
+        "programs": [],
+        "commands": [],
+        "message": "",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "2 * x + 3 = 11",
+        "intermediateExpressions": [
+          "2 * x + 3 = 11"
+        ]
+      },
+      "rounds": [
+        {
+          "elapsedMs": 1854.6228330000013,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 2935,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 2932
+            },
+            "output_tokens": 102,
+            "output_tokens_details": {
+              "reasoning_tokens": 49
+            },
+            "total_tokens": 3037
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 1,
+      "case": "equation",
+      "request": "Please set up the equation: twice x plus three equals eleven.",
+      "instructionsCharacters": 31433,
+      "contextCharacters": 1221,
+      "elapsedMs": 1986.8875419999968,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": false,
+      "answer": {
+        "status": "reply",
+        "command": "",
+        "program": "",
+        "programs": [],
+        "commands": [],
+        "message": "The equation is set up as 2x + 3 = 11.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": false,
+        "status": "reply",
+        "expression": "2 * x + 3 = 11",
+        "intermediateExpressions": []
+      },
+      "rounds": [
+        {
+          "elapsedMs": 1986.7104160000017,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7078,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 7075
+            },
+            "output_tokens": 110,
+            "output_tokens_details": {
+              "reasoning_tokens": 57
+            },
+            "total_tokens": 7188
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 1,
+      "case": "both-sides",
+      "request": "Take three away from each side of my equation.",
+      "instructionsCharacters": 31433,
+      "contextCharacters": 1206,
+      "elapsedMs": 2143.992624999999,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "const e = problem.currentEquation(); problem.save(math.subtractBothSides(e, 3));",
+        "programs": [],
+        "commands": [],
+        "message": "Subtracting 3 from both sides.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "2 * x + 3 - 3 = 11 - 3",
+        "intermediateExpressions": [
+          "2 * x + 3 - 3 = 11 - 3"
+        ]
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2139.9105840000047,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7075,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 7072
+            },
+            "output_tokens": 105,
+            "output_tokens_details": {
+              "reasoning_tokens": 41
+            },
+            "total_tokens": 7180
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 1,
+      "case": "both-sides",
+      "request": "Take three away from each side of my equation.",
+      "instructionsCharacters": 11135,
+      "contextCharacters": 1206,
+      "elapsedMs": 1562.0200419999965,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "const e = problem.currentEquation(); problem.save(math.subtractBothSides(e, 3));",
+        "programs": [],
+        "commands": [],
+        "message": "",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "2 * x + 3 - 3 = 11 - 3",
+        "intermediateExpressions": [
+          "2 * x + 3 - 3 = 11 - 3"
+        ]
+      },
+      "rounds": [
+        {
+          "elapsedMs": 1560.731749999999,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 2932,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 2929
+            },
+            "output_tokens": 92,
+            "output_tokens_details": {
+              "reasoning_tokens": 36
+            },
+            "total_tokens": 3024
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 1,
+      "case": "two-steps",
+      "request": "Subtract three from both sides, then divide both sides by two. Keep both steps.",
+      "instructionsCharacters": 11135,
+      "contextCharacters": 1239,
+      "elapsedMs": 2291.943207999997,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "",
+        "programs": [
+          "const e = problem.currentEquation(); problem.save(math.subtractBothSides(e, 3));",
+          "const e = problem.currentEquation(); problem.save(math.divideBothSides(e, 2));"
+        ],
+        "commands": [],
+        "message": "",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "(2 * x + 3 - 3) / 2 = (11 - 3) / 2",
+        "intermediateExpressions": [
+          "2 * x + 3 - 3 = 11 - 3",
+          "(2 * x + 3 - 3) / 2 = (11 - 3) / 2"
+        ]
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2275.0817499999976,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 2939,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 2936
+            },
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "reasoning_tokens": 53
+            },
+            "total_tokens": 3067
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 1,
+      "case": "two-steps",
+      "request": "Subtract three from both sides, then divide both sides by two. Keep both steps.",
+      "instructionsCharacters": 31433,
+      "contextCharacters": 1239,
+      "elapsedMs": 5094.885750000001,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "",
+        "programs": [
+          "const e = problem.currentEquation(); problem.save(math.subtractBothSides(e, 3));",
+          "const e = problem.currentEquation(); problem.save(math.divideBothSides(e, 2));"
+        ],
+        "commands": [],
+        "message": "I’ll apply each operation as a separate step.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "(2 * x + 3 - 3) / 2 = (11 - 3) / 2",
+        "intermediateExpressions": [
+          "2 * x + 3 - 3 = 11 - 3",
+          "(2 * x + 3 - 3) / 2 = (11 - 3) / 2"
+        ]
+      },
+      "rounds": [
+        {
+          "elapsedMs": 5079.297165999997,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7082,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 7079
+            },
+            "output_tokens": 383,
+            "output_tokens_details": {
+              "reasoning_tokens": 298
+            },
+            "total_tokens": 7465
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 1,
+      "case": "clarification",
+      "request": "Make it better.",
+      "instructionsCharacters": 31433,
+      "contextCharacters": 1175,
+      "elapsedMs": 2425.750125000006,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "clarification",
+        "command": "",
+        "program": "",
+        "programs": [],
+        "commands": [],
+        "message": "What would you like me to do with the equation—solve it, or make a specific change?",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "clarification",
+        "expression": "2 * x + 3 = 11",
+        "intermediateExpressions": []
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2425.511999999988,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7069,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 7066
+            },
+            "output_tokens": 116,
+            "output_tokens_details": {
+              "reasoning_tokens": 57
+            },
+            "total_tokens": 7185
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 1,
+      "case": "clarification",
+      "request": "Make it better.",
+      "instructionsCharacters": 11135,
+      "contextCharacters": 1175,
+      "elapsedMs": 2322.930250000005,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "clarification",
+        "command": "",
+        "program": "",
+        "programs": [],
+        "commands": [],
+        "message": "What would you like me to do—solve the equation, simplify it, or something else?",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "clarification",
+        "expression": "2 * x + 3 = 11",
+        "intermediateExpressions": []
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2322.8142919999955,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 2926,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 2923
+            },
+            "output_tokens": 98,
+            "output_tokens_details": {
+              "reasoning_tokens": 40
+            },
+            "total_tokens": 3024
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 1,
+      "case": "explanation",
+      "request": "Explain why subtracting three from both sides keeps this equation balanced without changing my work.",
+      "instructionsCharacters": 11135,
+      "contextCharacters": 1260,
+      "elapsedMs": 2554.685500000007,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "explanation",
+        "command": "",
+        "program": "",
+        "programs": [],
+        "commands": [],
+        "message": "An equation is like a balanced scale. Subtracting 3 from both sides removes the same amount from each side, so the balance stays the same. I haven’t changed your work.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "explanation",
+        "expression": "2 * x + 3 = 11",
+        "intermediateExpressions": []
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2554.370207999993,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 3219,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 3216
+            },
+            "output_tokens": 169,
+            "output_tokens_details": {
+              "reasoning_tokens": 93
+            },
+            "total_tokens": 3388
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 1,
+      "case": "explanation",
+      "request": "Explain why subtracting three from both sides keeps this equation balanced without changing my work.",
+      "instructionsCharacters": 31433,
+      "contextCharacters": 1260,
+      "elapsedMs": 3544.8181669999904,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "explanation",
+        "command": "",
+        "program": "",
+        "programs": [],
+        "commands": [],
+        "message": "An equation is like a balance: subtracting the same amount from both sides keeps the difference between them unchanged, so equality is preserved. Here, subtracting 3 would cancel the +3 on the left and subtract 3 from 11 on the right, but I haven’t changed your work.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "explanation",
+        "expression": "2 * x + 3 = 11",
+        "intermediateExpressions": []
+      },
+      "rounds": [
+        {
+          "elapsedMs": 3544.7442089999968,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7362,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 7359
+            },
+            "output_tokens": 217,
+            "output_tokens_details": {
+              "reasoning_tokens": 119
+            },
+            "total_tokens": 7579
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 1,
+      "case": "coefficient",
+      "request": "Change the coefficient of x from two to four; leave the other numbers alone.",
+      "instructionsCharacters": 31433,
+      "contextCharacters": 1236,
+      "elapsedMs": 2774.0734999999986,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "const e = problem.currentEquation(); problem.save(math.replacePart(e, math.part(e, 4), \"4\"));",
+        "programs": [],
+        "commands": [],
+        "message": "Changed the coefficient of x to 4; the other numbers are unchanged.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "4 * x + 3 = 11",
+        "readback": "Changed the coefficient of x to 4; the other numbers are unchanged. 4 times x plus 3 equals 11"
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2771.613750000004,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7081,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 7078
+            },
+            "output_tokens": 132,
+            "output_tokens_details": {
+              "reasoning_tokens": 54
+            },
+            "total_tokens": 7213
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 1,
+      "case": "coefficient",
+      "request": "Change the coefficient of x from two to four; leave the other numbers alone.",
+      "instructionsCharacters": 11135,
+      "contextCharacters": 1236,
+      "elapsedMs": 1596.1936669999996,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "const e = problem.currentEquation(); problem.save(math.replacePart(e, math.part(e, 4), \"4\"));",
+        "programs": [],
+        "commands": [],
+        "message": "",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "4 * x + 3 = 11",
+        "readback": " 4 times x plus 3 equals 11"
+      },
+      "rounds": [
+        {
+          "elapsedMs": 1594.8956659999967,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 2938,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 2935
+            },
+            "output_tokens": 87,
+            "output_tokens_details": {
+              "reasoning_tokens": 24
+            },
+            "total_tokens": 3025
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 1,
+      "case": "revise-step",
+      "request": "Change saved step two to 2x equals ten, keeping the old work recoverable.",
+      "instructionsCharacters": 11135,
+      "contextCharacters": 1121,
+      "elapsedMs": 2157.6412500000006,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "history.reviseStep(2, \"2*x=10\");",
+        "programs": [],
+        "commands": [],
+        "message": "",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "2 * x = 10",
+        "readback": " Revised step 2. Your previous work is saved in history."
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2155.885374999998,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 2899,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 2896
+            },
+            "output_tokens": 129,
+            "output_tokens_details": {
+              "reasoning_tokens": 77
+            },
+            "total_tokens": 3028
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 1,
+      "case": "revise-step",
+      "request": "Change saved step two to 2x equals ten, keeping the old work recoverable.",
+      "instructionsCharacters": 31433,
+      "contextCharacters": 1121,
+      "elapsedMs": 2607.282167000012,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "history.reviseStep(2, \"2*x=10\");",
+        "programs": [],
+        "commands": [],
+        "message": "I’ll replace saved step two with 2*x=10; the previous work will remain recoverable.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "2 * x = 10",
+        "readback": "I’ll replace saved step two with 2*x=10; the previous work will remain recoverable. Revised step 2. Your previous work is saved in history."
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2606.1769579999964,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7042,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 7039
+            },
+            "output_tokens": 145,
+            "output_tokens_details": {
+              "reasoning_tokens": 72
+            },
+            "total_tokens": 7187
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 1,
+      "case": "geometry",
+      "request": "What is the area of this circle? Read the result without changing my work.",
+      "instructionsCharacters": 33723,
+      "contextCharacters": 454,
+      "elapsedMs": 6291.644291999997,
+      "calls": 3,
+      "repairs": 1,
+      "previews": 1,
+      "passed": false,
+      "answer": {
+        "status": "reply",
+        "command": "",
+        "program": "",
+        "programs": [],
+        "commands": [],
+        "message": "The circle’s area is approximately 28.2743 square units.",
+        "revision": "",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": false,
+        "status": "reply",
+        "expression": "0",
+        "readback": "The circle’s area is approximately 28.2743 square units."
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2069.7078750000073,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7361,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 7358
+            },
+            "output_tokens": 121,
+            "output_tokens_details": {
+              "reasoning_tokens": 77
+            },
+            "total_tokens": 7482
+          }
+        },
+        {
+          "elapsedMs": 2005.3833339999983,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7802,
+            "input_tokens_details": {
+              "cache_write_tokens": 7799,
+              "cached_tokens": 0
+            },
+            "output_tokens": 100,
+            "output_tokens_details": {
+              "reasoning_tokens": 68
+            },
+            "total_tokens": 7902
+          }
+        },
+        {
+          "elapsedMs": 2212.463499999998,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7983,
+            "input_tokens_details": {
+              "cache_write_tokens": 181,
+              "cached_tokens": 7799
+            },
+            "output_tokens": 122,
+            "output_tokens_details": {
+              "reasoning_tokens": 74
+            },
+            "total_tokens": 8105
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 1,
+      "case": "geometry",
+      "request": "What is the area of this circle? Read the result without changing my work.",
+      "instructionsCharacters": 13425,
+      "contextCharacters": 454,
+      "elapsedMs": 1759.4263749999955,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "geometry.measure(geometry.current(), \"area\");",
+        "programs": [],
+        "commands": [],
+        "message": "",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "0",
+        "readback": " area: 28.2743 square units. Formula: π × radius²."
+      },
+      "rounds": [
+        {
+          "elapsedMs": 1758.6491249999963,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 3218,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 3215
+            },
+            "output_tokens": 90,
+            "output_tokens_details": {
+              "reasoning_tokens": 42
+            },
+            "total_tokens": 3308
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 1,
+      "case": "statistics",
+      "request": "What is the mean of this data? Leave the data unchanged.",
+      "instructionsCharacters": 11135,
+      "contextCharacters": 379,
+      "elapsedMs": 1353.981083999999,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "statistics.mean(statistics.current());",
+        "programs": [],
+        "commands": [],
+        "message": "",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "0",
+        "readback": " Mean: 5."
+      },
+      "rounds": [
+        {
+          "elapsedMs": 1352.933917000002,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 2687,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 2684
+            },
+            "output_tokens": 66,
+            "output_tokens_details": {
+              "reasoning_tokens": 22
+            },
+            "total_tokens": 2753
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 1,
+      "case": "statistics",
+      "request": "What is the mean of this data? Leave the data unchanged.",
+      "instructionsCharacters": 31433,
+      "contextCharacters": 379,
+      "elapsedMs": 3020.3056249999936,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": false,
+      "answer": {
+        "status": "reply",
+        "command": "",
+        "program": "const d = statistics.current(); statistics.mean(d);",
+        "programs": [],
+        "commands": [],
+        "message": "I’ll calculate the mean without changing the data.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": false,
+        "status": "reply",
+        "expression": "0",
+        "readback": "I’ll calculate the mean without changing the data."
+      },
+      "rounds": [
+        {
+          "elapsedMs": 3019.1313339999906,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 6830,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 6827
+            },
+            "output_tokens": 178,
+            "output_tokens_details": {
+              "reasoning_tokens": 120
+            },
+            "total_tokens": 7008
+          }
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "repetition": 1,
+      "case": "linked-graph",
+      "request": "Change a to five and keep f linked to a.",
+      "instructionsCharacters": 33971,
+      "contextCharacters": 565,
+      "elapsedMs": 2958.8233749999927,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "const g = graph.current(1); problem.save(graph.edit(g, \"a=5\"));",
+        "programs": [],
+        "commands": [],
+        "message": "I’ll change the definition of a to 5 and keep f linked to it.",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "0",
+        "readback": "I’ll change the definition of a to 5 and keep f linked to it. Graph row 1: a=5 (5). Graph row 2: f(x)=a*x^2.",
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "a=5"
+            },
+            {
+              "expression": "f(x)=a*x^2"
+            }
+          ]
+        }
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2957.2820419999916,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 7486,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 7483
+            },
+            "output_tokens": 212,
+            "output_tokens_details": {
+              "reasoning_tokens": 137
+            },
+            "total_tokens": 7698
+          }
+        }
+      ]
+    },
+    {
+      "variant": "short",
+      "repetition": 1,
+      "case": "linked-graph",
+      "request": "Change a to five and keep f linked to a.",
+      "instructionsCharacters": 13673,
+      "contextCharacters": 565,
+      "elapsedMs": 2738.948875000002,
+      "calls": 1,
+      "repairs": 0,
+      "previews": 0,
+      "passed": true,
+      "answer": {
+        "status": "command",
+        "command": "",
+        "program": "const g = graph.current(1); problem.save(graph.edit(g, \"a=5\"));",
+        "programs": [],
+        "commands": [],
+        "message": "",
+        "revision": "text-request",
+        "presentation": null
+      },
+      "assessment": {
+        "passed": true,
+        "status": "command",
+        "expression": "0",
+        "readback": " Graph row 1: a=5 (5). Graph row 2: f(x)=a*x^2.",
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "a=5"
+            },
+            {
+              "expression": "f(x)=a*x^2"
+            }
+          ]
+        }
+      },
+      "rounds": [
+        {
+          "elapsedMs": 2737.7282910000067,
+          "model": "gpt-6-luna",
+          "usage": {
+            "input_tokens": 3343,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 3340
+            },
+            "output_tokens": 194,
+            "output_tokens_details": {
+              "reasoning_tokens": 136
+            },
+            "total_tokens": 3537
+          }
+        }
+      ]
+    }
+  ]
+}

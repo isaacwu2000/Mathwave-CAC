@@ -1,0 +1,4283 @@
+[
+  {
+    "id": "student-average-homework",
+    "family": "average-homework",
+    "category": "statistics",
+    "focus": "Ordinary saved-data mean",
+    "turns": [
+      {
+        "student": "My homework scores were six, eight, and ten.",
+        "programs": [
+          "problem.save(statistics.data([6, 8, 10]));"
+        ],
+        "expect": {
+          "data": [
+            6,
+            8,
+            10
+          ]
+        }
+      },
+      {
+        "student": "What did I average?",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "8"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-middle-unsorted",
+    "family": "middle-unsorted",
+    "category": "statistics",
+    "focus": "Sort an odd list for the median",
+    "turns": [
+      {
+        "student": "Put down nine, two, seven, one, and four.",
+        "programs": [
+          "problem.save(statistics.data([9, 2, 7, 1, 4]));"
+        ],
+        "expect": {
+          "data": [
+            9,
+            2,
+            7,
+            1,
+            4
+          ]
+        }
+      },
+      {
+        "student": "Which number is in the middle once they are sorted?",
+        "programs": [
+          "statistics.median(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-middle-even",
+    "family": "middle-even",
+    "category": "statistics",
+    "focus": "Average the middle pair",
+    "turns": [
+      {
+        "student": "My times were two, four, eight, and ten.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 8, 10]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            8,
+            10
+          ]
+        }
+      },
+      {
+        "student": "What is the median of those?",
+        "programs": [
+          "statistics.median(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "6"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-repeat-frequency",
+    "family": "repeat-frequency",
+    "category": "statistics",
+    "focus": "Repeated value as mode",
+    "turns": [
+      {
+        "student": "I got three, five, three, seven, and three.",
+        "programs": [
+          "problem.save(statistics.data([3, 5, 3, 7, 3]));"
+        ],
+        "expect": {
+          "data": [
+            3,
+            5,
+            3,
+            7,
+            3
+          ]
+        }
+      },
+      {
+        "student": "Which one came up most?",
+        "programs": [
+          "statistics.mode(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "3"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-temperature-spread",
+    "family": "temperature-spread",
+    "category": "statistics",
+    "focus": "Range crossing zero",
+    "turns": [
+      {
+        "student": "The temperatures were negative four, two, and seven.",
+        "programs": [
+          "problem.save(statistics.data([-4, 2, 7]));"
+        ],
+        "expect": {
+          "data": [
+            -4,
+            2,
+            7
+          ]
+        }
+      },
+      {
+        "student": "How far apart are the highest and lowest?",
+        "programs": [
+          "statistics.range(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "11"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-savings-total",
+    "family": "savings-total",
+    "category": "statistics",
+    "focus": "Sum rather than mean",
+    "turns": [
+      {
+        "student": "I saved five dollars, twelve dollars, and three dollars.",
+        "programs": [
+          "problem.save(statistics.data([5, 12, 3]));"
+        ],
+        "expect": {
+          "data": [
+            5,
+            12,
+            3
+          ]
+        }
+      },
+      {
+        "student": "How much altogether?",
+        "programs": [
+          "statistics.sum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "20"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-duplicates-count",
+    "family": "duplicates-count",
+    "category": "statistics",
+    "focus": "Count observations including duplicates",
+    "turns": [
+      {
+        "student": "Write two, two, two, and nine.",
+        "programs": [
+          "problem.save(statistics.data([2, 2, 2, 9]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            2,
+            2,
+            9
+          ]
+        }
+      },
+      {
+        "student": "How many results is that, including repeats?",
+        "programs": [
+          "statistics.count(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-coldest-negative",
+    "family": "coldest-negative",
+    "category": "statistics",
+    "focus": "Minimum with all negative data",
+    "turns": [
+      {
+        "student": "Use negative eight, negative two, and negative five.",
+        "programs": [
+          "problem.save(statistics.data([-8, -2, -5]));"
+        ],
+        "expect": {
+          "data": [
+            -8,
+            -2,
+            -5
+          ]
+        }
+      },
+      {
+        "student": "Which is the lowest?",
+        "programs": [
+          "statistics.minimum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "-8"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-largest-negative",
+    "family": "largest-negative",
+    "category": "statistics",
+    "focus": "Maximum is the least negative",
+    "turns": [
+      {
+        "student": "My changes were negative nine, negative one, and negative four.",
+        "programs": [
+          "problem.save(statistics.data([-9, -1, -4]));"
+        ],
+        "expect": {
+          "data": [
+            -9,
+            -1,
+            -4
+          ]
+        }
+      },
+      {
+        "student": "Which change was biggest?",
+        "programs": [
+          "statistics.maximum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "-1"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-population-variance",
+    "family": "population-variance",
+    "category": "statistics",
+    "focus": "Population divisor is n",
+    "turns": [
+      {
+        "student": "The whole class has values two, four, and six.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 6]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            6
+          ]
+        }
+      },
+      {
+        "student": "What is the population variance?",
+        "programs": [
+          "statistics.populationVariance(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "2.66667"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-sample-variance",
+    "family": "sample-variance",
+    "category": "statistics",
+    "focus": "Sample divisor is n minus one",
+    "turns": [
+      {
+        "student": "This sample is two, four, and six.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 6]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            6
+          ]
+        }
+      },
+      {
+        "student": "What is the sample variance?",
+        "programs": [
+          "statistics.sampleVariance(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-population-sd",
+    "family": "population-sd",
+    "category": "statistics",
+    "focus": "Population standard deviation of symmetric data",
+    "turns": [
+      {
+        "student": "The entire group is one, three, one, three.",
+        "programs": [
+          "problem.save(statistics.data([1, 3, 1, 3]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            3,
+            1,
+            3
+          ]
+        }
+      },
+      {
+        "student": "What is the population standard deviation?",
+        "programs": [
+          "statistics.populationStandardDeviation(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "1"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-sample-sd",
+    "family": "sample-sd",
+    "category": "statistics",
+    "focus": "Sample standard deviation with exact square root",
+    "turns": [
+      {
+        "student": "My sample is two, four, and six.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 6]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            6
+          ]
+        }
+      },
+      {
+        "student": "What is the sample standard deviation?",
+        "programs": [
+          "statistics.sampleStandardDeviation(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-one-large-outlier",
+    "family": "one-large-outlier",
+    "category": "statistics",
+    "focus": "Upper outlier identification",
+    "turns": [
+      {
+        "student": "Use four, five, five, six, seven, eight, and twenty two.",
+        "programs": [
+          "problem.save(statistics.data([4, 5, 5, 6, 7, 8, 22]));"
+        ],
+        "expect": {
+          "data": [
+            4,
+            5,
+            5,
+            6,
+            7,
+            8,
+            22
+          ]
+        }
+      },
+      {
+        "student": "Is anything an outlier?",
+        "programs": [
+          "statistics.outliers(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "22"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-zero-spread",
+    "family": "zero-spread",
+    "category": "statistics",
+    "focus": "All equal values have zero range",
+    "turns": [
+      {
+        "student": "Every result was seven: seven, seven, seven.",
+        "programs": [
+          "problem.save(statistics.data([7, 7, 7]));"
+        ],
+        "expect": {
+          "data": [
+            7,
+            7,
+            7
+          ]
+        }
+      },
+      {
+        "student": "What is the range if they are all equal?",
+        "programs": [
+          "statistics.range(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "0"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-signed-average",
+    "family": "signed-average",
+    "category": "statistics",
+    "focus": "Signed observations cancel",
+    "turns": [
+      {
+        "student": "My scores changed by negative six, zero, and six.",
+        "programs": [
+          "problem.save(statistics.data([-6, 0, 6]));"
+        ],
+        "expect": {
+          "data": [
+            -6,
+            0,
+            6
+          ]
+        }
+      },
+      {
+        "student": "What is the average change?",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "0"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-decimal-middle",
+    "family": "decimal-middle",
+    "category": "statistics",
+    "focus": "Decimal values survive transcription",
+    "turns": [
+      {
+        "student": "Put down one point five, two point five, and nine point five.",
+        "programs": [
+          "problem.save(statistics.data([1.5, 2.5, 9.5]));"
+        ],
+        "expect": {
+          "data": [
+            1.5,
+            2.5,
+            9.5
+          ]
+        }
+      },
+      {
+        "student": "What is the median?",
+        "programs": [
+          "statistics.median(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "2.5"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-zero-is-observation",
+    "family": "zero-is-observation",
+    "category": "statistics",
+    "focus": "Zeros count as actual observations",
+    "turns": [
+      {
+        "student": "My results are zero, zero, four, and eight.",
+        "programs": [
+          "problem.save(statistics.data([0, 0, 4, 8]));"
+        ],
+        "expect": {
+          "data": [
+            0,
+            0,
+            4,
+            8
+          ]
+        }
+      },
+      {
+        "student": "Count all of them, even the zeros.",
+        "programs": [
+          "statistics.count(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-negative-mode",
+    "family": "negative-mode",
+    "category": "statistics",
+    "focus": "Negative repeated value",
+    "turns": [
+      {
+        "student": "Use negative two, three, negative two, and five.",
+        "programs": [
+          "problem.save(statistics.data([-2, 3, -2, 5]));"
+        ],
+        "expect": {
+          "data": [
+            -2,
+            3,
+            -2,
+            5
+          ]
+        }
+      },
+      {
+        "student": "What is the mode?",
+        "programs": [
+          "statistics.mode(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "-2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-symmetric-median",
+    "family": "symmetric-median",
+    "category": "statistics",
+    "focus": "Median survives extreme tails",
+    "turns": [
+      {
+        "student": "Write negative one hundred, three, four, five, and one hundred.",
+        "programs": [
+          "problem.save(statistics.data([-100, 3, 4, 5, 100]));"
+        ],
+        "expect": {
+          "data": [
+            -100,
+            3,
+            4,
+            5,
+            100
+          ]
+        }
+      },
+      {
+        "student": "What is the median of that list?",
+        "programs": [
+          "statistics.median(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-decimal-sum",
+    "family": "decimal-sum",
+    "category": "statistics",
+    "focus": "Decimal sum rather than concatenation",
+    "turns": [
+      {
+        "student": "I walked one point two, two point three, and three point five miles.",
+        "programs": [
+          "problem.save(statistics.data([1.2, 2.3, 3.5]));"
+        ],
+        "expect": {
+          "data": [
+            1.2,
+            2.3,
+            3.5
+          ]
+        }
+      },
+      {
+        "student": "How many miles in total?",
+        "programs": [
+          "statistics.sum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "7"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-smallest-zero",
+    "family": "smallest-zero",
+    "category": "statistics",
+    "focus": "Zero is the minimum in nonnegative data",
+    "turns": [
+      {
+        "student": "Write zero, five, and ten.",
+        "programs": [
+          "problem.save(statistics.data([0, 5, 10]));"
+        ],
+        "expect": {
+          "data": [
+            0,
+            5,
+            10
+          ]
+        }
+      },
+      {
+        "student": "What is the smallest value?",
+        "programs": [
+          "statistics.minimum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "0"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-median-tied-center",
+    "family": "median-tied-center",
+    "category": "statistics",
+    "focus": "Middle pair consists of duplicates",
+    "turns": [
+      {
+        "student": "Use one, four, four, and twelve.",
+        "programs": [
+          "problem.save(statistics.data([1, 4, 4, 12]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            4,
+            4,
+            12
+          ]
+        }
+      },
+      {
+        "student": "What is the median with those two fours?",
+        "programs": [
+          "statistics.median(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-negative-sum",
+    "family": "negative-sum",
+    "category": "statistics",
+    "focus": "Sum is negative",
+    "turns": [
+      {
+        "student": "My changes were negative three, negative four, and two.",
+        "programs": [
+          "problem.save(statistics.data([-3, -4, 2]));"
+        ],
+        "expect": {
+          "data": [
+            -3,
+            -4,
+            2
+          ]
+        }
+      },
+      {
+        "student": "What is the total change?",
+        "programs": [
+          "statistics.sum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "-5"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-same-data-two-centers",
+    "family": "same-data-two-centers",
+    "category": "statistics",
+    "focus": "Mean and median differ on skewed data",
+    "turns": [
+      {
+        "student": "My results were one, two, and twelve.",
+        "programs": [
+          "problem.save(statistics.data([1, 2, 12]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            2,
+            12
+          ]
+        }
+      },
+      {
+        "student": "First tell me the average.",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "5"
+          ]
+        }
+      },
+      {
+        "student": "And the median, for the same list?",
+        "programs": [
+          "statistics.median(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-correct-last-score",
+    "family": "correct-last-score",
+    "category": "statistics",
+    "focus": "Replace a misheard final observation",
+    "turns": [
+      {
+        "student": "Those are six, eight, and ninety.",
+        "programs": [
+          "problem.save(statistics.data([6, 8, 90]));"
+        ],
+        "expect": {
+          "data": [
+            6,
+            8,
+            90
+          ]
+        }
+      },
+      {
+        "student": "Wait, the last one was nine, not ninety.",
+        "programs": [
+          "problem.save(statistics.data([6, 8, 9]));"
+        ],
+        "expect": {
+          "data": [
+            6,
+            8,
+            9
+          ]
+        }
+      },
+      {
+        "student": "What is the total now?",
+        "programs": [
+          "statistics.sum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "23"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-append-missing-score",
+    "family": "append-missing-score",
+    "category": "statistics",
+    "focus": "Append an omitted observation",
+    "turns": [
+      {
+        "student": "My results were two and four.",
+        "programs": [
+          "problem.save(statistics.data([2, 4]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4
+          ]
+        }
+      },
+      {
+        "student": "I forgot six. Add that to the list.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 6]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            6
+          ]
+        }
+      },
+      {
+        "student": "What is the average now?",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-remove-extra-score",
+    "family": "remove-extra-score",
+    "category": "statistics",
+    "focus": "Remove one erroneous observation",
+    "turns": [
+      {
+        "student": "Write one, three, three, and nine.",
+        "programs": [
+          "problem.save(statistics.data([1, 3, 3, 9]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            3,
+            3,
+            9
+          ]
+        }
+      },
+      {
+        "student": "There should only be one three. Use one, three, and nine.",
+        "programs": [
+          "problem.save(statistics.data([1, 3, 9]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            3,
+            9
+          ]
+        }
+      },
+      {
+        "student": "How many results now?",
+        "programs": [
+          "statistics.count(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "3"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-replace-entire-data",
+    "family": "replace-entire-data",
+    "category": "statistics",
+    "focus": "A new list replaces the old list",
+    "turns": [
+      {
+        "student": "Use one, two, three.",
+        "programs": [
+          "problem.save(statistics.data([1, 2, 3]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "student": "New question. My list is ten, twenty, thirty.",
+        "programs": [
+          "problem.save(statistics.data([10, 20, 30]));"
+        ],
+        "expect": {
+          "data": [
+            10,
+            20,
+            30
+          ]
+        }
+      },
+      {
+        "student": "What is the median of the new one?",
+        "programs": [
+          "statistics.median(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "20"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-sign-correction-data",
+    "family": "sign-correction-data",
+    "category": "statistics",
+    "focus": "Correct sign without changing other observations",
+    "turns": [
+      {
+        "student": "Use two, four, and six.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 6]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            6
+          ]
+        }
+      },
+      {
+        "student": "The first one should be negative two. Keep the others.",
+        "programs": [
+          "problem.save(statistics.data([-2, 4, 6]));"
+        ],
+        "expect": {
+          "data": [
+            -2,
+            4,
+            6
+          ]
+        }
+      },
+      {
+        "student": "What is the sum after that fix?",
+        "programs": [
+          "statistics.sum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "8"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-decimal-correction-data",
+    "family": "decimal-correction-data",
+    "category": "statistics",
+    "focus": "Correct a decimal place",
+    "turns": [
+      {
+        "student": "Put down fifteen, two point five, and four.",
+        "programs": [
+          "problem.save(statistics.data([15, 2.5, 4]));"
+        ],
+        "expect": {
+          "data": [
+            15,
+            2.5,
+            4
+          ]
+        }
+      },
+      {
+        "student": "I said one point five for the first one.",
+        "programs": [
+          "problem.save(statistics.data([1.5, 2.5, 4]));"
+        ],
+        "expect": {
+          "data": [
+            1.5,
+            2.5,
+            4
+          ]
+        }
+      },
+      {
+        "student": "What is the total of the corrected list?",
+        "programs": [
+          "statistics.sum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "8"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-sort-keeps-repeats",
+    "family": "sort-keeps-repeats",
+    "category": "statistics",
+    "focus": "Explicit reordering retains duplicate observations",
+    "turns": [
+      {
+        "student": "Write five, one, five, three.",
+        "programs": [
+          "problem.save(statistics.data([5, 1, 5, 3]));"
+        ],
+        "expect": {
+          "data": [
+            5,
+            1,
+            5,
+            3
+          ]
+        }
+      },
+      {
+        "student": "Put them in order: one, three, five, five.",
+        "programs": [
+          "problem.save(statistics.data([1, 3, 5, 5]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            3,
+            5,
+            5
+          ]
+        }
+      },
+      {
+        "student": "How many values did we keep?",
+        "programs": [
+          "statistics.count(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-clear-dataset-outlier",
+    "family": "clear-dataset-outlier",
+    "category": "statistics",
+    "focus": "Explicitly remove the outlier rather than auto-filter",
+    "turns": [
+      {
+        "student": "Use two, three, three, four, four, five, forty.",
+        "programs": [
+          "problem.save(statistics.data([2, 3, 3, 4, 4, 5, 40]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            3,
+            3,
+            4,
+            4,
+            5,
+            40
+          ]
+        }
+      },
+      {
+        "student": "Use the list without forty now.",
+        "programs": [
+          "problem.save(statistics.data([2, 3, 3, 4, 4, 5]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            3,
+            3,
+            4,
+            4,
+            5
+          ]
+        }
+      },
+      {
+        "student": "What is the range now?",
+        "programs": [
+          "statistics.range(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "3"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-scale-all-observations",
+    "family": "scale-all-observations",
+    "category": "statistics",
+    "focus": "Scale the list rather than multiply the mean alone",
+    "turns": [
+      {
+        "student": "My list is one, two, three.",
+        "programs": [
+          "problem.save(statistics.data([1, 2, 3]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "student": "Double every result, so use two, four, six.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 6]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            6
+          ]
+        }
+      },
+      {
+        "student": "What is the sum after doubling?",
+        "programs": [
+          "statistics.sum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "12"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-add-to-all-observations",
+    "family": "add-to-all-observations",
+    "category": "statistics",
+    "focus": "Translate all observations",
+    "turns": [
+      {
+        "student": "Put down one, two, three.",
+        "programs": [
+          "problem.save(statistics.data([1, 2, 3]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "student": "Add five to each of those: six, seven, eight.",
+        "programs": [
+          "problem.save(statistics.data([6, 7, 8]));"
+        ],
+        "expect": {
+          "data": [
+            6,
+            7,
+            8
+          ]
+        }
+      },
+      {
+        "student": "What is the range after that?",
+        "programs": [
+          "statistics.range(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-sample-to-population",
+    "family": "sample-to-population",
+    "category": "statistics",
+    "focus": "Switch statistical formula without replacing data",
+    "turns": [
+      {
+        "student": "This is a sample: two, four, six.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 6]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            6
+          ]
+        }
+      },
+      {
+        "student": "What is the sample variance?",
+        "programs": [
+          "statistics.sampleVariance(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      },
+      {
+        "student": "Now treat those as the whole population. What is the population variance?",
+        "programs": [
+          "statistics.populationVariance(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "2.66667"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-sd-versus-variance",
+    "family": "sd-versus-variance",
+    "category": "statistics",
+    "focus": "Distinguish variance from its square root",
+    "turns": [
+      {
+        "student": "Use two, four, six.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 6]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            6
+          ]
+        }
+      },
+      {
+        "student": "What is the sample variance first?",
+        "programs": [
+          "statistics.sampleVariance(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      },
+      {
+        "student": "And the sample standard deviation?",
+        "programs": [
+          "statistics.sampleStandardDeviation(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-mean-not-total",
+    "family": "mean-not-total",
+    "category": "statistics",
+    "focus": "Follow total with average on unchanged list",
+    "turns": [
+      {
+        "student": "I read four, six, and eight pages.",
+        "programs": [
+          "problem.save(statistics.data([4, 6, 8]));"
+        ],
+        "expect": {
+          "data": [
+            4,
+            6,
+            8
+          ]
+        }
+      },
+      {
+        "student": "How many pages total?",
+        "programs": [
+          "statistics.sum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "18"
+          ]
+        }
+      },
+      {
+        "student": "How many pages per day on average?",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "6"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-range-not-maximum",
+    "family": "range-not-maximum",
+    "category": "statistics",
+    "focus": "Follow upper endpoint with spread",
+    "turns": [
+      {
+        "student": "My measurements are three, eight, eleven.",
+        "programs": [
+          "problem.save(statistics.data([3, 8, 11]));"
+        ],
+        "expect": {
+          "data": [
+            3,
+            8,
+            11
+          ]
+        }
+      },
+      {
+        "student": "What is the maximum?",
+        "programs": [
+          "statistics.maximum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "11"
+          ]
+        }
+      },
+      {
+        "student": "And the range, not just the highest?",
+        "programs": [
+          "statistics.range(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "8"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-minimum-after-mode",
+    "family": "minimum-after-mode",
+    "category": "statistics",
+    "focus": "Switch from frequency to order",
+    "turns": [
+      {
+        "student": "Use two, five, five, eight.",
+        "programs": [
+          "problem.save(statistics.data([2, 5, 5, 8]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            5,
+            5,
+            8
+          ]
+        }
+      },
+      {
+        "student": "What is the most common value?",
+        "programs": [
+          "statistics.mode(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "5"
+          ]
+        }
+      },
+      {
+        "student": "Now which one is the smallest?",
+        "programs": [
+          "statistics.minimum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-count-after-sum",
+    "family": "count-after-sum",
+    "category": "statistics",
+    "focus": "Distinguish number of results from their total",
+    "turns": [
+      {
+        "student": "Put down three, three, six.",
+        "programs": [
+          "problem.save(statistics.data([3, 3, 6]));"
+        ],
+        "expect": {
+          "data": [
+            3,
+            3,
+            6
+          ]
+        }
+      },
+      {
+        "student": "What is the sum?",
+        "programs": [
+          "statistics.sum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "12"
+          ]
+        }
+      },
+      {
+        "student": "How many numbers did I give you?",
+        "programs": [
+          "statistics.count(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "3"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-tied-modes",
+    "family": "tied-modes",
+    "category": "statistics",
+    "focus": "Report all equally frequent modes instead of choosing one",
+    "turns": [
+      {
+        "student": "My results were two, two, seven, seven, and nine.",
+        "programs": [
+          "problem.save(statistics.data([2,2,7,7,9]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            2,
+            7,
+            7,
+            9
+          ]
+        }
+      },
+      {
+        "student": "Which number came up most? If they tie, tell me both.",
+        "programs": [
+          "statistics.mode(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Mode: 2, 7."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-negative-extremes",
+    "family": "negative-extremes",
+    "category": "statistics",
+    "focus": "Retain signs across two extrema queries",
+    "turns": [
+      {
+        "student": "Use negative ten, negative four, negative two.",
+        "programs": [
+          "problem.save(statistics.data([-10, -4, -2]));"
+        ],
+        "expect": {
+          "data": [
+            -10,
+            -4,
+            -2
+          ]
+        }
+      },
+      {
+        "student": "Which value is lowest?",
+        "programs": [
+          "statistics.minimum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "-10"
+          ]
+        }
+      },
+      {
+        "student": "And the highest?",
+        "programs": [
+          "statistics.maximum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "-2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-zero-variance-then-sd",
+    "family": "zero-variance-then-sd",
+    "category": "statistics",
+    "focus": "Equal data under two spread formulas",
+    "turns": [
+      {
+        "student": "Everything was five: five, five, five.",
+        "programs": [
+          "problem.save(statistics.data([5, 5, 5]));"
+        ],
+        "expect": {
+          "data": [
+            5,
+            5,
+            5
+          ]
+        }
+      },
+      {
+        "student": "What is the population variance?",
+        "programs": [
+          "statistics.populationVariance(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "0"
+          ]
+        }
+      },
+      {
+        "student": "What about the population standard deviation?",
+        "programs": [
+          "statistics.populationStandardDeviation(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "0"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-smallest-supported-list",
+    "family": "smallest-supported-list",
+    "category": "statistics",
+    "focus": "Mean and count for a two-observation list",
+    "turns": [
+      {
+        "student": "My two results were ten and fourteen.",
+        "programs": [
+          "problem.save(statistics.data([10,14]));"
+        ],
+        "expect": {
+          "data": [
+            10,
+            14
+          ]
+        }
+      },
+      {
+        "student": "What is the average of those two?",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "12"
+          ]
+        }
+      },
+      {
+        "student": "How many observations are there?",
+        "programs": [
+          "statistics.count(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-reorder-even-median",
+    "family": "reorder-even-median",
+    "category": "statistics",
+    "focus": "Reordering does not change the even median",
+    "turns": [
+      {
+        "student": "Use ten, two, eight, four.",
+        "programs": [
+          "problem.save(statistics.data([10, 2, 8, 4]));"
+        ],
+        "expect": {
+          "data": [
+            10,
+            2,
+            8,
+            4
+          ]
+        }
+      },
+      {
+        "student": "Reorder those as two, four, eight, ten.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 8, 10]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            8,
+            10
+          ]
+        }
+      },
+      {
+        "student": "What is the median?",
+        "programs": [
+          "statistics.median(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "6"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-restore-duplicate",
+    "family": "restore-duplicate",
+    "category": "statistics",
+    "focus": "Repeats are not accidental deduplication",
+    "turns": [
+      {
+        "student": "Put down two, four, eight.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 8]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            8
+          ]
+        }
+      },
+      {
+        "student": "Actually four happened twice. Use two, four, four, eight.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 4, 8]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            4,
+            8
+          ]
+        }
+      },
+      {
+        "student": "What is the mode now?",
+        "programs": [
+          "statistics.mode(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-negative-to-zero",
+    "family": "negative-to-zero",
+    "category": "statistics",
+    "focus": "Replace a negative value with zero",
+    "turns": [
+      {
+        "student": "Use negative two, four, six.",
+        "programs": [
+          "problem.save(statistics.data([-2, 4, 6]));"
+        ],
+        "expect": {
+          "data": [
+            -2,
+            4,
+            6
+          ]
+        }
+      },
+      {
+        "student": "Change the negative two to zero.",
+        "programs": [
+          "problem.save(statistics.data([0, 4, 6]));"
+        ],
+        "expect": {
+          "data": [
+            0,
+            4,
+            6
+          ]
+        }
+      },
+      {
+        "student": "What is the minimum now?",
+        "programs": [
+          "statistics.minimum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "0"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-drop-missing-observation",
+    "family": "drop-missing-observation",
+    "category": "statistics",
+    "focus": "Use only observed values after a mistaken placeholder",
+    "turns": [
+      {
+        "student": "Use zero, four, eight.",
+        "programs": [
+          "problem.save(statistics.data([0, 4, 8]));"
+        ],
+        "expect": {
+          "data": [
+            0,
+            4,
+            8
+          ]
+        }
+      },
+      {
+        "student": "The zero was missing, not a real result. Use four and eight.",
+        "programs": [
+          "problem.save(statistics.data([4, 8]));"
+        ],
+        "expect": {
+          "data": [
+            4,
+            8
+          ]
+        }
+      },
+      {
+        "student": "What is the average of the actual results?",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "6"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-retain-order-then-median",
+    "family": "retain-order-then-median",
+    "category": "statistics",
+    "focus": "Query does not sort the saved input list",
+    "turns": [
+      {
+        "student": "Write eight, one, five in that order.",
+        "programs": [
+          "problem.save(statistics.data([8, 1, 5]));"
+        ],
+        "expect": {
+          "data": [
+            8,
+            1,
+            5
+          ]
+        }
+      },
+      {
+        "student": "Tell me the median, but leave my list alone.",
+        "programs": [
+          "statistics.median(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "5"
+          ]
+        }
+      },
+      {
+        "student": "Give me a summary of that list, but keep my order.",
+        "programs": [
+          "problem.read(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "data": [
+            8,
+            1,
+            5
+          ],
+          "messageIncludes": [
+            "3 observations"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-equation-temporary-mean",
+    "family": "equation-temporary-mean",
+    "category": "cross-topic",
+    "focus": "Temporary statistics must not replace an equation",
+    "turns": [
+      {
+        "student": "Write x plus three equals eight.",
+        "programs": [
+          "problem.save(math.equation(\"x+3=8\"));"
+        ],
+        "expect": {
+          "mode": "equation"
+        }
+      },
+      {
+        "student": "Quick side question: what is the average of two, four, and nine?",
+        "programs": [
+          "statistics.mean(statistics.data([2,4,9]));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Mean: 5."
+          ]
+        }
+      },
+      {
+        "student": "Now subtract three on both sides of my equation.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "mode": "equation",
+          "expression": "x + 3 - 3 = 8 - 3"
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-graph-temporary-median",
+    "family": "graph-temporary-median",
+    "category": "cross-topic",
+    "focus": "A temporary list query preserves graph",
+    "turns": [
+      {
+        "student": "Graph x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ],
+        "expect": {
+          "graph": true
+        }
+      },
+      {
+        "student": "What is the median of two, four, eight, and ten?",
+        "programs": [
+          "statistics.median(statistics.data([2,4,8,10]));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Median: 6."
+          ]
+        }
+      },
+      {
+        "student": "Back to the graph. What is y when x is three?",
+        "programs": [
+          "graph.value(graph.current(1),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "9"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-shape-temporary-sum",
+    "family": "shape-temporary-sum",
+    "category": "cross-topic",
+    "focus": "Temporary total preserves dimensions",
+    "turns": [
+      {
+        "student": "Draw a rectangle four wide and three high.",
+        "programs": [
+          "problem.save(geometry.create(\"rectangle\",{\"width\": 4, \"height\": 3}));"
+        ],
+        "expect": {
+          "mode": "geometry"
+        }
+      },
+      {
+        "student": "What do two, five, and eight add up to?",
+        "programs": [
+          "statistics.sum(statistics.data([2,5,8]));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "15"
+          ]
+        }
+      },
+      {
+        "student": "What is the area of my rectangle?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "12"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-data-temporary-equation",
+    "family": "data-temporary-equation",
+    "category": "cross-topic",
+    "focus": "Solving an unrelated equation leaves saved list",
+    "turns": [
+      {
+        "student": "Keep these results: two, four, six.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 6]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            6
+          ]
+        }
+      },
+      {
+        "student": "Can you solve x plus five equals nine without replacing this?",
+        "programs": [
+          "math.solve(math.equation(\"x+5=9\"));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "x = 4"
+          ]
+        }
+      },
+      {
+        "student": "What is the average of my results?",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-data-temporary-expression",
+    "family": "data-temporary-expression",
+    "category": "cross-topic",
+    "focus": "Calculation does not replace dataset",
+    "turns": [
+      {
+        "student": "My numbers are three, six, nine.",
+        "programs": [
+          "problem.save(statistics.data([3, 6, 9]));"
+        ],
+        "expect": {
+          "data": [
+            3,
+            6,
+            9
+          ]
+        }
+      },
+      {
+        "student": "What is seven times eight?",
+        "programs": [
+          "math.evaluate(math.expression(\"7*8\"));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "56"
+          ]
+        }
+      },
+      {
+        "student": "And what was the median of my numbers?",
+        "programs": [
+          "statistics.median(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "6"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-equation-to-data",
+    "family": "equation-to-data",
+    "category": "cross-topic",
+    "focus": "Explicitly switch from equation to statistics",
+    "turns": [
+      {
+        "student": "Write two x equals twelve.",
+        "programs": [
+          "problem.save(math.equation(\"2*x=12\"));"
+        ],
+        "expect": {
+          "mode": "equation"
+        }
+      },
+      {
+        "student": "New problem. Record four, six, eight.",
+        "programs": [
+          "problem.save(statistics.data([4, 6, 8]));"
+        ],
+        "expect": {
+          "data": [
+            4,
+            6,
+            8
+          ]
+        }
+      },
+      {
+        "student": "What is the mean of these?",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "6"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-data-to-equation",
+    "family": "data-to-equation",
+    "category": "cross-topic",
+    "focus": "Equation replaces visible statistics",
+    "turns": [
+      {
+        "student": "Use two, five, eight.",
+        "programs": [
+          "problem.save(statistics.data([2, 5, 8]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            5,
+            8
+          ]
+        }
+      },
+      {
+        "student": "Now write x minus two equals seven.",
+        "programs": [
+          "problem.save(math.equation(\"x-2=7\"));"
+        ],
+        "expect": {
+          "mode": "equation"
+        }
+      },
+      {
+        "student": "Solve that equation.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "x = 9"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-graph-to-data",
+    "family": "graph-to-data",
+    "category": "cross-topic",
+    "focus": "The latest dataset wins over a graph reference",
+    "turns": [
+      {
+        "student": "Graph x plus one.",
+        "programs": [
+          "problem.save(graph.plot(\"x+1\"));"
+        ],
+        "expect": {
+          "graph": true
+        }
+      },
+      {
+        "student": "Switch to these measurements: five, seven, nine.",
+        "programs": [
+          "problem.save(statistics.data([5, 7, 9]));"
+        ],
+        "expect": {
+          "data": [
+            5,
+            7,
+            9
+          ]
+        }
+      },
+      {
+        "student": "How many measurements?",
+        "programs": [
+          "statistics.count(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "3"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-data-to-graph",
+    "family": "data-to-graph",
+    "category": "cross-topic",
+    "focus": "Plot an explicit relation after statistics",
+    "turns": [
+      {
+        "student": "Put down one, four, nine.",
+        "programs": [
+          "problem.save(statistics.data([1, 4, 9]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            4,
+            9
+          ]
+        }
+      },
+      {
+        "student": "Now graph y equals x squared.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2\"));"
+        ],
+        "expect": {
+          "graph": true
+        }
+      },
+      {
+        "student": "Read the graph at x equals two.",
+        "programs": [
+          "graph.value(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-rectangle-to-data",
+    "family": "rectangle-to-data",
+    "category": "cross-topic",
+    "focus": "Shape work followed by numeric observations",
+    "turns": [
+      {
+        "student": "Draw a rectangle five by two.",
+        "programs": [
+          "problem.save(geometry.create(\"rectangle\",{\"width\": 5, \"height\": 2}));"
+        ],
+        "expect": {
+          "mode": "geometry"
+        }
+      },
+      {
+        "student": "Now my data is two, three, ten.",
+        "programs": [
+          "problem.save(statistics.data([2, 3, 10]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            3,
+            10
+          ]
+        }
+      },
+      {
+        "student": "What is its median?",
+        "programs": [
+          "statistics.median(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "3"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-data-to-circle",
+    "family": "data-to-circle",
+    "category": "cross-topic",
+    "focus": "Switch to geometry and measure the new object",
+    "turns": [
+      {
+        "student": "Record two, four, six.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 6]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            6
+          ]
+        }
+      },
+      {
+        "student": "Draw a circle with radius three.",
+        "programs": [
+          "problem.save(geometry.create(\"circle\",{\"radius\": 3}));"
+        ],
+        "expect": {
+          "mode": "geometry"
+        }
+      },
+      {
+        "student": "What is the diameter?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"diameter\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "6"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-equation-to-rectangle",
+    "family": "equation-to-rectangle",
+    "category": "cross-topic",
+    "focus": "New geometry does not edit equation coefficients",
+    "turns": [
+      {
+        "student": "Write three x equals fifteen.",
+        "programs": [
+          "problem.save(math.equation(\"3*x=15\"));"
+        ],
+        "expect": {
+          "mode": "equation"
+        }
+      },
+      {
+        "student": "Different question: draw a rectangle six by two.",
+        "programs": [
+          "problem.save(geometry.create(\"rectangle\",{\"width\": 6, \"height\": 2}));"
+        ],
+        "expect": {
+          "mode": "geometry"
+        }
+      },
+      {
+        "student": "What is its perimeter?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"perimeter\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "16"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-shape-to-equation",
+    "family": "shape-to-equation",
+    "category": "cross-topic",
+    "focus": "Equation after a shape uses the equation context",
+    "turns": [
+      {
+        "student": "Draw a square with side four.",
+        "programs": [
+          "problem.save(geometry.create(\"square\",{\"side\": 4}));"
+        ],
+        "expect": {
+          "mode": "geometry"
+        }
+      },
+      {
+        "student": "Write x plus four equals ten.",
+        "programs": [
+          "problem.save(math.equation(\"x+4=10\"));"
+        ],
+        "expect": {
+          "mode": "equation"
+        }
+      },
+      {
+        "student": "Solve this one.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "x = 6"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-circle-to-line-graph",
+    "family": "circle-to-line-graph",
+    "category": "cross-topic",
+    "focus": "Draw means different representations by context",
+    "turns": [
+      {
+        "student": "Draw a circle with radius two.",
+        "programs": [
+          "problem.save(geometry.create(\"circle\",{\"radius\": 2}));"
+        ],
+        "expect": {
+          "mode": "geometry"
+        }
+      },
+      {
+        "student": "Now draw the graph of y equals two x.",
+        "programs": [
+          "problem.save(graph.plot(\"2*x\"));"
+        ],
+        "expect": {
+          "graph": true
+        }
+      },
+      {
+        "student": "What is the graph value at three?",
+        "programs": [
+          "graph.value(graph.current(1),3);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "6"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-graph-to-triangle",
+    "family": "graph-to-triangle",
+    "category": "cross-topic",
+    "focus": "Geometry becomes current after graphing",
+    "turns": [
+      {
+        "student": "Show y equals x.",
+        "programs": [
+          "problem.save(graph.plot(\"x\"));"
+        ],
+        "expect": {
+          "graph": true
+        }
+      },
+      {
+        "student": "Now draw a right triangle with legs three and four.",
+        "programs": [
+          "problem.save(geometry.create(\"right triangle\",{\"a\": 3, \"b\": 4}));"
+        ],
+        "expect": {
+          "mode": "geometry"
+        }
+      },
+      {
+        "student": "How long is the hypotenuse?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"hypotenuse\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "5"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-temporary-count-on-shape",
+    "family": "temporary-count-on-shape",
+    "category": "cross-topic",
+    "focus": "Count inline observations without saving",
+    "turns": [
+      {
+        "student": "Draw a rectangle eight by three.",
+        "programs": [
+          "problem.save(geometry.create(\"rectangle\",{\"width\": 8, \"height\": 3}));"
+        ],
+        "expect": {
+          "mode": "geometry"
+        }
+      },
+      {
+        "student": "How many numbers are in two, two, five, nine?",
+        "programs": [
+          "statistics.count(statistics.data([2,2,5,9]));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      },
+      {
+        "student": "Read the area of the rectangle again.",
+        "programs": [
+          "geometry.measure(geometry.current(),\"area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "24"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-temporary-range-on-equation",
+    "family": "temporary-range-on-equation",
+    "category": "cross-topic",
+    "focus": "Signed range side question",
+    "turns": [
+      {
+        "student": "Write x minus four equals one.",
+        "programs": [
+          "problem.save(math.equation(\"x-4=1\"));"
+        ],
+        "expect": {
+          "mode": "equation"
+        }
+      },
+      {
+        "student": "What is the range of negative three, zero, and five?",
+        "programs": [
+          "statistics.range(statistics.data([-3,0,5]));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "8"
+          ]
+        }
+      },
+      {
+        "student": "Now solve the equation I kept.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "x = 5"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-temporary-max-on-graph",
+    "family": "temporary-max-on-graph",
+    "category": "cross-topic",
+    "focus": "Numeric maximum is not graph maximum",
+    "turns": [
+      {
+        "student": "Graph x squared minus four.",
+        "programs": [
+          "problem.save(graph.plot(\"x^2-4\"));"
+        ],
+        "expect": {
+          "graph": true
+        }
+      },
+      {
+        "student": "Which number is biggest: negative two, three, or one?",
+        "programs": [
+          "statistics.maximum(statistics.data([-2,3,1]));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "3"
+          ]
+        }
+      },
+      {
+        "student": "Where is my graph at zero?",
+        "programs": [
+          "graph.value(graph.current(1),0);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "-4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-temporary-math-on-circle",
+    "family": "temporary-math-on-circle",
+    "category": "cross-topic",
+    "focus": "Arithmetic before returning to a shape",
+    "turns": [
+      {
+        "student": "Circle, radius five.",
+        "programs": [
+          "problem.save(geometry.create(\"circle\",{\"radius\": 5}));"
+        ],
+        "expect": {
+          "mode": "geometry"
+        }
+      },
+      {
+        "student": "What is twenty divided by four?",
+        "programs": [
+          "math.evaluate(math.expression(\"20/4\"));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "5"
+          ]
+        }
+      },
+      {
+        "student": "And the diameter of that circle?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"diameter\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "10"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-temporary-solve-on-graph",
+    "family": "temporary-solve-on-graph",
+    "category": "cross-topic",
+    "focus": "An equation answer must not overwrite a graph",
+    "turns": [
+      {
+        "student": "Graph y equals three x.",
+        "programs": [
+          "problem.save(graph.plot(\"3*x\"));"
+        ],
+        "expect": {
+          "graph": true
+        }
+      },
+      {
+        "student": "Solve x minus seven equals two as a side question.",
+        "programs": [
+          "math.solve(math.equation(\"x-7=2\"));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "x = 9"
+          ]
+        }
+      },
+      {
+        "student": "And read the graph at two.",
+        "programs": [
+          "graph.value(graph.current(1),2);"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "6"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-temporary-median-on-data",
+    "family": "temporary-median-on-data",
+    "category": "cross-topic",
+    "focus": "Inline list and saved list are separate",
+    "turns": [
+      {
+        "student": "My actual list is ten, twenty, thirty.",
+        "programs": [
+          "problem.save(statistics.data([10, 20, 30]));"
+        ],
+        "expect": {
+          "data": [
+            10,
+            20,
+            30
+          ]
+        }
+      },
+      {
+        "student": "What is the median of just one, two, and nine?",
+        "programs": [
+          "statistics.median(statistics.data([1,2,9]));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Median: 2."
+          ]
+        }
+      },
+      {
+        "student": "Now the median of my saved list?",
+        "programs": [
+          "statistics.median(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "20"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-temporary-sample-on-data",
+    "family": "temporary-sample-on-data",
+    "category": "cross-topic",
+    "focus": "Temporary sample leaves population observations",
+    "turns": [
+      {
+        "student": "Keep five, five, five.",
+        "programs": [
+          "problem.save(statistics.data([5, 5, 5]));"
+        ],
+        "expect": {
+          "data": [
+            5,
+            5,
+            5
+          ]
+        }
+      },
+      {
+        "student": "What is the sample variance of two, four, six?",
+        "programs": [
+          "statistics.sampleVariance(statistics.data([2,4,6]));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      },
+      {
+        "student": "And the population variance of my saved values?",
+        "programs": [
+          "statistics.populationVariance(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "0"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-two-temporary-queries",
+    "family": "two-temporary-queries",
+    "category": "cross-topic",
+    "focus": "Repeated inline queries do not leak state",
+    "turns": [
+      {
+        "student": "Write x equals three.",
+        "programs": [
+          "problem.save(math.equation(\"x=3\"));"
+        ],
+        "expect": {
+          "mode": "equation"
+        }
+      },
+      {
+        "student": "What is the sum of two and eight?",
+        "programs": [
+          "statistics.sum(statistics.data([2,8]));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "10"
+          ]
+        }
+      },
+      {
+        "student": "And the median of four, six, eight?",
+        "programs": [
+          "statistics.median(statistics.data([4,6,8]));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Median: 6."
+          ]
+        }
+      },
+      {
+        "student": "Read my equation again.",
+        "programs": [
+          "problem.read(problem.currentEquation());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "x"
+          ],
+          "expression": "x = 3"
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-units-stay-numeric",
+    "family": "units-stay-numeric",
+    "category": "cross-topic",
+    "focus": "Spoken units do not enter statistic expressions",
+    "turns": [
+      {
+        "student": "I ran three minutes, five minutes, and seven minutes.",
+        "programs": [
+          "problem.save(statistics.data([3, 5, 7]));"
+        ],
+        "expect": {
+          "data": [
+            3,
+            5,
+            7
+          ]
+        }
+      },
+      {
+        "student": "What is my average time?",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "5"
+          ]
+        }
+      },
+      {
+        "student": "And my total time?",
+        "programs": [
+          "statistics.sum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "15"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-population-after-edit",
+    "family": "population-after-edit",
+    "category": "cross-topic",
+    "focus": "Recalculate population variance after replacing data",
+    "turns": [
+      {
+        "student": "Use one, three, one, three.",
+        "programs": [
+          "problem.save(statistics.data([1, 3, 1, 3]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            3,
+            1,
+            3
+          ]
+        }
+      },
+      {
+        "student": "What is the population variance?",
+        "programs": [
+          "statistics.populationVariance(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "1"
+          ]
+        }
+      },
+      {
+        "student": "Now every result is two. Use two, two, two, two.",
+        "programs": [
+          "problem.save(statistics.data([2, 2, 2, 2]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      },
+      {
+        "student": "What is the population variance now?",
+        "programs": [
+          "statistics.populationVariance(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "0"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-undo-data-replacement",
+    "family": "undo-data-replacement",
+    "category": "history-and-diagrams",
+    "focus": "Undo restores the earlier dataset",
+    "turns": [
+      {
+        "student": "Use two, four, six.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 6]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            6
+          ]
+        }
+      },
+      {
+        "student": "Replace those with ten, twenty, thirty.",
+        "programs": [
+          "problem.save(statistics.data([10, 20, 30]));"
+        ],
+        "expect": {
+          "data": [
+            10,
+            20,
+            30
+          ]
+        }
+      },
+      {
+        "student": "Undo that last change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is the mean of the restored list?",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-redo-data-replacement",
+    "family": "redo-data-replacement",
+    "category": "history-and-diagrams",
+    "focus": "Redo restores the newer dataset",
+    "turns": [
+      {
+        "student": "Use two, four, six.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 6]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            6
+          ]
+        }
+      },
+      {
+        "student": "Use ten, twenty, thirty instead.",
+        "programs": [
+          "problem.save(statistics.data([10, 20, 30]));"
+        ],
+        "expect": {
+          "data": [
+            10,
+            20,
+            30
+          ]
+        }
+      },
+      {
+        "student": "Undo that last change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Put that change back.",
+        "programs": [
+          "history.redo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is the mean now?",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "20"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-query-not-undo-step",
+    "family": "query-not-undo-step",
+    "category": "history-and-diagrams",
+    "focus": "A read-only statistic does not consume undo",
+    "turns": [
+      {
+        "student": "Use one, two, three.",
+        "programs": [
+          "problem.save(statistics.data([1, 2, 3]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "student": "Change them to four, five, six.",
+        "programs": [
+          "problem.save(statistics.data([4, 5, 6]));"
+        ],
+        "expect": {
+          "data": [
+            4,
+            5,
+            6
+          ]
+        }
+      },
+      {
+        "student": "What is the mean?",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "5"
+          ]
+        }
+      },
+      {
+        "student": "Undo that last change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Read the mean now.",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-undo-mode-change",
+    "family": "undo-mode-change",
+    "category": "history-and-diagrams",
+    "focus": "Undo returns from geometry to dataset",
+    "turns": [
+      {
+        "student": "Use two, four, six.",
+        "programs": [
+          "problem.save(statistics.data([2, 4, 6]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            4,
+            6
+          ]
+        }
+      },
+      {
+        "student": "Draw a rectangle three by four.",
+        "programs": [
+          "problem.save(geometry.create(\"rectangle\",{\"width\": 3, \"height\": 4}));"
+        ],
+        "expect": {
+          "mode": "geometry"
+        }
+      },
+      {
+        "student": "Undo that last change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is the median of my list again?",
+        "programs": [
+          "statistics.median(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-redo-mode-change",
+    "family": "redo-mode-change",
+    "category": "history-and-diagrams",
+    "focus": "Redo restores a shape after switching modes",
+    "turns": [
+      {
+        "student": "Put down one, two, three.",
+        "programs": [
+          "problem.save(statistics.data([1, 2, 3]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "student": "Draw a square with side five.",
+        "programs": [
+          "problem.save(geometry.create(\"square\",{\"side\": 5}));"
+        ],
+        "expect": {
+          "mode": "geometry"
+        }
+      },
+      {
+        "student": "Undo that last change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Put that change back.",
+        "programs": [
+          "history.redo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is the area of the square?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "25"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-clear-and-recover-data",
+    "family": "clear-and-recover-data",
+    "category": "history-and-diagrams",
+    "focus": "Clearing is recoverable",
+    "turns": [
+      {
+        "student": "Save three, six, nine.",
+        "programs": [
+          "problem.save(statistics.data([3, 6, 9]));"
+        ],
+        "expect": {
+          "data": [
+            3,
+            6,
+            9
+          ]
+        }
+      },
+      {
+        "student": "Clear this problem.",
+        "programs": [
+          "problem.save(problem.blank());"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Undo that last change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is the sum now that it is back?",
+        "programs": [
+          "statistics.sum(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "18"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-undo-two-lists",
+    "family": "undo-two-lists",
+    "category": "history-and-diagrams",
+    "focus": "Undo count applies whole requests",
+    "turns": [
+      {
+        "student": "Start with one, two, three.",
+        "programs": [
+          "problem.save(statistics.data([1, 2, 3]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "student": "Change to four, five, six.",
+        "programs": [
+          "problem.save(statistics.data([4, 5, 6]));"
+        ],
+        "expect": {
+          "data": [
+            4,
+            5,
+            6
+          ]
+        }
+      },
+      {
+        "student": "Now seven, eight, nine.",
+        "programs": [
+          "problem.save(statistics.data([7, 8, 9]));"
+        ],
+        "expect": {
+          "data": [
+            7,
+            8,
+            9
+          ]
+        }
+      },
+      {
+        "student": "Undo those last two changes.",
+        "programs": [
+          "history.undo(2);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Which average are we back to?",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-redo-two-lists",
+    "family": "redo-two-lists",
+    "category": "history-and-diagrams",
+    "focus": "Redo multiple complete requests",
+    "turns": [
+      {
+        "student": "Use one, two, three.",
+        "programs": [
+          "problem.save(statistics.data([1, 2, 3]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "student": "Now four, five, six.",
+        "programs": [
+          "problem.save(statistics.data([4, 5, 6]));"
+        ],
+        "expect": {
+          "data": [
+            4,
+            5,
+            6
+          ]
+        }
+      },
+      {
+        "student": "Then seven, eight, nine.",
+        "programs": [
+          "problem.save(statistics.data([7, 8, 9]));"
+        ],
+        "expect": {
+          "data": [
+            7,
+            8,
+            9
+          ]
+        }
+      },
+      {
+        "student": "Undo twice.",
+        "programs": [
+          "history.undo(2);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Redo both changes.",
+        "programs": [
+          "history.redo(2);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is the average again?",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "8"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-edit-after-undo-data",
+    "family": "edit-after-undo-data",
+    "category": "history-and-diagrams",
+    "focus": "New edit after undo branches from restored data",
+    "turns": [
+      {
+        "student": "Use one, two, three.",
+        "programs": [
+          "problem.save(statistics.data([1, 2, 3]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "student": "Change to four, five, six.",
+        "programs": [
+          "problem.save(statistics.data([4, 5, 6]));"
+        ],
+        "expect": {
+          "data": [
+            4,
+            5,
+            6
+          ]
+        }
+      },
+      {
+        "student": "Undo that last change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Use one, two, three, four instead.",
+        "programs": [
+          "problem.save(statistics.data([1, 2, 3, 4]));"
+        ],
+        "expect": {
+          "data": [
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "student": "How many observations on this version?",
+        "programs": [
+          "statistics.count(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-clear-equation-recovery",
+    "family": "clear-equation-recovery",
+    "category": "history-and-diagrams",
+    "focus": "Clear then undo restores an equation",
+    "turns": [
+      {
+        "student": "Write x plus two equals seven.",
+        "programs": [
+          "problem.save(math.equation(\"x+2=7\"));"
+        ],
+        "expect": {
+          "mode": "equation"
+        }
+      },
+      {
+        "student": "Clear it.",
+        "programs": [
+          "problem.save(problem.blank());"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Undo that last change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Solve the one we restored.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "x = 5"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-diagram-sequence",
+    "family": "diagram-sequence",
+    "category": "history-and-diagrams",
+    "focus": "Record a student procedure in order",
+    "turns": [
+      {
+        "student": "Make a flow: start, add three, divide by two, finish.",
+        "programs": [
+          "problem.save(diagram.create([\"Start\", \"Add three\", \"Divide by two\", \"Finish\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "Read the steps back.",
+        "programs": [
+          "problem.read(diagram.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Add three"
+          ],
+          "diagram": [
+            "Start",
+            "Add three",
+            "Divide by two",
+            "Finish"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-diagram-replace-operation",
+    "family": "diagram-replace-operation",
+    "category": "history-and-diagrams",
+    "focus": "Change one named operation",
+    "turns": [
+      {
+        "student": "My flow is start, multiply by two, stop.",
+        "programs": [
+          "problem.save(diagram.create([\"Start\", \"Multiply by two\", \"Stop\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "Change multiply by two to multiply by three.",
+        "programs": [
+          "problem.save(diagram.replace(diagram.current(),\"Multiply by two\",\"Multiply by three\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Read it now.",
+        "programs": [
+          "problem.read(diagram.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Multiply by three"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-diagram-undo-label",
+    "family": "diagram-undo-label",
+    "category": "history-and-diagrams",
+    "focus": "Undo restores the former operation label",
+    "turns": [
+      {
+        "student": "Make start, add two, finish.",
+        "programs": [
+          "problem.save(diagram.create([\"Start\", \"Add two\", \"Finish\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "Replace add two with subtract two.",
+        "programs": [
+          "problem.save(diagram.replace(diagram.current(),\"Add two\",\"Subtract two\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Undo that last change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Read the flow after undo.",
+        "programs": [
+          "problem.read(diagram.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Add two"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-diagram-redo-label",
+    "family": "diagram-redo-label",
+    "category": "history-and-diagrams",
+    "focus": "Redo reapplies a text edit",
+    "turns": [
+      {
+        "student": "Show input, square it, output.",
+        "programs": [
+          "problem.save(diagram.create([\"Input\", \"Square it\", \"Output\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "Change square it to cube it.",
+        "programs": [
+          "problem.save(diagram.replace(diagram.current(),\"Square it\",\"Cube it\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Undo that last change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Put that change back.",
+        "programs": [
+          "history.redo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What are the steps now?",
+        "programs": [
+          "problem.read(diagram.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Cube it"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-diagram-case-insensitive",
+    "family": "diagram-checklist-label-edit",
+    "category": "history-and-diagrams",
+    "focus": "Rename a checklist step using a natural spoken label",
+    "turns": [
+      {
+        "student": "Make start, check answer, finish.",
+        "programs": [
+          "problem.save(diagram.create([\"Start\", \"Check answer\", \"Finish\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "Change check answer to check my units.",
+        "programs": [
+          "problem.save(diagram.replace(diagram.current(),\"CHECK ANSWER\",\"Check my units\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Read that back.",
+        "programs": [
+          "problem.read(diagram.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Check my units"
+          ],
+          "diagram": [
+            "Start",
+            "Check my units",
+            "Finish"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-diagram-new-procedure",
+    "family": "diagram-new-procedure",
+    "category": "history-and-diagrams",
+    "focus": "A new procedure replaces old steps",
+    "turns": [
+      {
+        "student": "Make input, double, output.",
+        "programs": [
+          "problem.save(diagram.create([\"Input\", \"Double\", \"Output\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "New flow: input, subtract one, square, output.",
+        "programs": [
+          "problem.save(diagram.create([\"Input\", \"Subtract one\", \"Square\", \"Output\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "Read the new one.",
+        "programs": [
+          "problem.read(diagram.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Subtract one"
+          ],
+          "diagram": [
+            "Input",
+            "Subtract one",
+            "Square",
+            "Output"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-diagram-temporary-arithmetic",
+    "family": "diagram-temporary-arithmetic",
+    "category": "history-and-diagrams",
+    "focus": "A calculation leaves diagram unchanged",
+    "turns": [
+      {
+        "student": "Show start, add seven, finish.",
+        "programs": [
+          "problem.save(diagram.create([\"Start\", \"Add seven\", \"Finish\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "What is seven plus eight?",
+        "programs": [
+          "math.evaluate(math.expression(\"7+8\"));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "15"
+          ]
+        }
+      },
+      {
+        "student": "Read my flow again.",
+        "programs": [
+          "problem.read(diagram.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Add seven"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-diagram-to-equation",
+    "family": "diagram-to-equation",
+    "category": "history-and-diagrams",
+    "focus": "A new equation becomes current after a flow",
+    "turns": [
+      {
+        "student": "Make start, double, finish.",
+        "programs": [
+          "problem.save(diagram.create([\"Start\", \"Double\", \"Finish\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "Now write two x equals eighteen.",
+        "programs": [
+          "problem.save(math.equation(\"2*x=18\"));"
+        ],
+        "expect": {
+          "mode": "equation"
+        }
+      },
+      {
+        "student": "Solve this.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "x = 9"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-equation-to-diagram",
+    "family": "equation-to-diagram",
+    "category": "history-and-diagrams",
+    "focus": "Represent the next problem as a procedure",
+    "turns": [
+      {
+        "student": "Write x equals four.",
+        "programs": [
+          "problem.save(math.equation(\"x=4\"));"
+        ],
+        "expect": {
+          "mode": "equation"
+        }
+      },
+      {
+        "student": "Now show a flow: input, add four, output.",
+        "programs": [
+          "problem.save(diagram.create([\"Input\", \"Add four\", \"Output\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "Read that procedure.",
+        "programs": [
+          "problem.read(diagram.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Add four"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-diagram-undo-new-flow",
+    "family": "diagram-undo-new-flow",
+    "category": "history-and-diagrams",
+    "focus": "Undo restores the entire old procedure",
+    "turns": [
+      {
+        "student": "Start, add five, finish.",
+        "programs": [
+          "problem.save(diagram.create([\"Start\", \"Add five\", \"Finish\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "Use start, subtract five, finish instead.",
+        "programs": [
+          "problem.save(diagram.create([\"Start\", \"Subtract five\", \"Finish\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "Undo that last change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Which flow is back?",
+        "programs": [
+          "problem.read(diagram.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Add five"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-diagram-multi-edit",
+    "family": "diagram-multi-edit",
+    "category": "history-and-diagrams",
+    "focus": "Two consecutive edits refer to the latest labels",
+    "turns": [
+      {
+        "student": "Input, add two, divide by three, output.",
+        "programs": [
+          "problem.save(diagram.create([\"Input\", \"Add two\", \"Divide by three\", \"Output\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "Change add two to add four.",
+        "programs": [
+          "problem.save(diagram.replace(diagram.current(),\"Add two\",\"Add four\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "And change divide by three to divide by two.",
+        "programs": [
+          "problem.save(diagram.replace(diagram.current(),\"Divide by three\",\"Divide by two\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Read both changes.",
+        "programs": [
+          "problem.read(diagram.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Divide by two"
+          ],
+          "diagram": [
+            "Input",
+            "Add four",
+            "Divide by two",
+            "Output"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-diagram-preserve-neighbors",
+    "family": "diagram-preserve-neighbors",
+    "category": "history-and-diagrams",
+    "focus": "Replace middle step without losing adjacent steps",
+    "turns": [
+      {
+        "student": "Start, add two, check units, finish.",
+        "programs": [
+          "problem.save(diagram.create([\"Start\", \"Add two\", \"Check units\", \"Finish\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "Change check units to check the sign.",
+        "programs": [
+          "problem.save(diagram.replace(diagram.current(),\"Check units\",\"Check the sign\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Read all the steps.",
+        "programs": [
+          "problem.read(diagram.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Add two"
+          ],
+          "diagram": [
+            "Start",
+            "Add two",
+            "Check the sign",
+            "Finish"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-diagram-clear-recovery",
+    "family": "diagram-clear-recovery",
+    "category": "history-and-diagrams",
+    "focus": "Clear recoverably retains procedural work",
+    "turns": [
+      {
+        "student": "Make input, halve, output.",
+        "programs": [
+          "problem.save(diagram.create([\"Input\", \"Halve\", \"Output\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "Clear that.",
+        "programs": [
+          "problem.save(problem.blank());"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Undo that last change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Read the restored procedure.",
+        "programs": [
+          "problem.read(diagram.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Halve"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-diagram-temporary-statistics",
+    "family": "diagram-temporary-statistics",
+    "category": "history-and-diagrams",
+    "focus": "Temporary mean cannot overwrite flow steps",
+    "turns": [
+      {
+        "student": "Make start, collect results, finish.",
+        "programs": [
+          "problem.save(diagram.create([\"Start\", \"Collect results\", \"Finish\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "What is the average of three, six, and nine?",
+        "programs": [
+          "statistics.mean(statistics.data([3,6,9]));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Mean: 6."
+          ]
+        }
+      },
+      {
+        "student": "Back to the flow. Read it.",
+        "programs": [
+          "problem.read(diagram.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Collect results"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "student-data-to-diagram-to-data",
+    "family": "data-to-diagram-to-data",
+    "category": "history-and-diagrams",
+    "focus": "Undo a representation change returns to observations",
+    "turns": [
+      {
+        "student": "Keep two, five, eight.",
+        "programs": [
+          "problem.save(statistics.data([2, 5, 8]));"
+        ],
+        "expect": {
+          "data": [
+            2,
+            5,
+            8
+          ]
+        }
+      },
+      {
+        "student": "Show collect data, find mean, report.",
+        "programs": [
+          "problem.save(diagram.create([\"Collect data\", \"Find mean\", \"Report\"]));"
+        ],
+        "expect": {
+          "mode": "diagram"
+        }
+      },
+      {
+        "student": "Undo that last change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is the mean of my data?",
+        "programs": [
+          "statistics.mean(statistics.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "5"
+          ]
+        }
+      }
+    ]
+  }
+]

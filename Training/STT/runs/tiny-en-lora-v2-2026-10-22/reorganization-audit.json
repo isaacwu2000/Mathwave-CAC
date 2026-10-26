@@ -1,0 +1,23 @@
+{
+  "originalSplitSha256": "b239f6ebf3897de00a1f268697acc8fff326bf2829bd77a71372cd6148699530",
+  "relocatedRerunSplitSha256": "d158cd495aab580edd2b4e123e8c569c5c53d798fde759b6f5a4775bf5242436",
+  "identicalMembershipAndScoringFields": [
+    "seed",
+    "caseAssignments",
+    "groups",
+    "clips",
+    "primaryRepresentatives",
+    "summary",
+    "exclusions",
+    "corpusSha256",
+    "audioManifestSha256",
+    "normalizerSha256"
+  ],
+  "originalCodeHashesVerified": true,
+  "trainingUpdatesLogged": 286,
+  "validationObservationsIncludingBaseline": 14,
+  "selectedStepMatchesMinimumValidationLoss": true,
+  "originalRunReportUnchanged": true,
+  "frozenBaseUnchanged": true,
+  "productionWeightsChanged": false
+}

@@ -1,0 +1,715 @@
+{
+  "scope": "Individual text/contract review, not visual/audio validation",
+  "reviewer": "student_geometry",
+  "cases": [
+    {
+      "id": "student-average-homework",
+      "verdict": "pass",
+      "notes": [
+        "Saved scores mean is (6+8+10)/3=8; average follow-up is natural."
+      ]
+    },
+    {
+      "id": "student-middle-unsorted",
+      "verdict": "pass",
+      "notes": [
+        "Sorting gives 1,2,4,7,9, so median four; query is read-only."
+      ]
+    },
+    {
+      "id": "student-middle-even",
+      "verdict": "pass",
+      "notes": [
+        "Even middle pair four and eight averages to six."
+      ]
+    },
+    {
+      "id": "student-repeat-frequency",
+      "verdict": "pass",
+      "notes": [
+        "Three appears three times, making it the unique mode."
+      ]
+    },
+    {
+      "id": "student-temperature-spread",
+      "verdict": "pass",
+      "notes": [
+        "Range across zero is 7-(-4)=11."
+      ]
+    },
+    {
+      "id": "student-savings-total",
+      "verdict": "pass",
+      "notes": [
+        "Savings total is 20; wording asks sum rather than mean."
+      ]
+    },
+    {
+      "id": "student-duplicates-count",
+      "verdict": "pass",
+      "notes": [
+        "All four observations count, including repeated twos."
+      ]
+    },
+    {
+      "id": "student-coldest-negative",
+      "verdict": "pass",
+      "notes": [
+        "Lowest negative number is -8, not the least-negative value."
+      ]
+    },
+    {
+      "id": "student-largest-negative",
+      "verdict": "pass",
+      "notes": [
+        "Largest signed change is -1. Wording could mean magnitude colloquially, but numerical maximum is reasonable in the ordered-data context."
+      ]
+    },
+    {
+      "id": "student-population-variance",
+      "verdict": "pass",
+      "notes": [
+        "Population variance of 2,4,6 is 8/3, rounded 2.66667."
+      ]
+    },
+    {
+      "id": "student-sample-variance",
+      "verdict": "pass",
+      "notes": [
+        "Sample variance uses 8/(3-1)=4, independently correct."
+      ]
+    },
+    {
+      "id": "student-population-sd",
+      "verdict": "pass",
+      "notes": [
+        "Population standard deviation of 1,3,1,3 is 1."
+      ]
+    },
+    {
+      "id": "student-sample-sd",
+      "verdict": "pass",
+      "notes": [
+        "Sample standard deviation of 2,4,6 is sqrt(4)=2."
+      ]
+    },
+    {
+      "id": "student-one-large-outlier",
+      "verdict": "pass",
+      "notes": [
+        "Using median-excluded quartiles, Q1=5 and Q3=8; 22 exceeds upper fence 12.5."
+      ]
+    },
+    {
+      "id": "student-zero-spread",
+      "verdict": "pass",
+      "notes": [
+        "All equal observations have range zero; case is about spread rather than frequency."
+      ]
+    },
+    {
+      "id": "student-signed-average",
+      "verdict": "pass",
+      "notes": [
+        "Signed observations cancel, giving mean zero."
+      ]
+    },
+    {
+      "id": "student-decimal-middle",
+      "verdict": "pass",
+      "notes": [
+        "Median of 1.5,2.5,9.5 is 2.5; decimal speech matches stored numbers."
+      ]
+    },
+    {
+      "id": "student-zero-is-observation",
+      "verdict": "pass",
+      "notes": [
+        "Both zeros remain real observations, giving count four."
+      ]
+    },
+    {
+      "id": "student-negative-mode",
+      "verdict": "pass",
+      "notes": [
+        "Repeated -2 is mode; sign is retained."
+      ]
+    },
+    {
+      "id": "student-symmetric-median",
+      "verdict": "pass",
+      "notes": [
+        "Symmetric extreme tails leave median four; this tests robustness of middle selection."
+      ]
+    },
+    {
+      "id": "student-decimal-sum",
+      "verdict": "pass",
+      "notes": [
+        "Decimal distances sum to seven, not a concatenation or mean."
+      ]
+    },
+    {
+      "id": "student-smallest-zero",
+      "verdict": "pass",
+      "notes": [
+        "Zero is the minimum of the nonnegative list."
+      ]
+    },
+    {
+      "id": "student-median-tied-center",
+      "verdict": "pass",
+      "notes": [
+        "Even tied center yields (4+4)/2=4."
+      ]
+    },
+    {
+      "id": "student-negative-sum",
+      "verdict": "pass",
+      "notes": [
+        "Negative signed sum is -3-4+2=-5."
+      ]
+    },
+    {
+      "id": "student-same-data-two-centers",
+      "verdict": "pass",
+      "notes": [
+        "Mean five differs from median two on this skewed list; same-list reference is clear."
+      ]
+    },
+    {
+      "id": "student-correct-last-score",
+      "verdict": "pass",
+      "notes": [
+        "Last-value correction changes 90 to nine while preserving six and eight; total 23."
+      ]
+    },
+    {
+      "id": "student-append-missing-score",
+      "verdict": "pass",
+      "notes": [
+        "Appending omitted six gives 2,4,6 and mean four."
+      ]
+    },
+    {
+      "id": "student-remove-extra-score",
+      "verdict": "pass",
+      "notes": [
+        "Explicit replacement removes one extra three; count becomes three."
+      ]
+    },
+    {
+      "id": "student-replace-entire-data",
+      "verdict": "pass",
+      "notes": [
+        "New list replaces previous data; median twenty is correct."
+      ]
+    },
+    {
+      "id": "student-sign-correction-data",
+      "verdict": "pass",
+      "notes": [
+        "Sign correction changes only first value; -2+4+6=8."
+      ]
+    },
+    {
+      "id": "student-decimal-correction-data",
+      "verdict": "pass",
+      "notes": [
+        "Decimal correction yields 1.5+2.5+4=8."
+      ]
+    },
+    {
+      "id": "student-sort-keeps-repeats",
+      "verdict": "pass",
+      "notes": [
+        "Explicit sorted replacement preserves both fives, giving count four."
+      ]
+    },
+    {
+      "id": "student-clear-dataset-outlier",
+      "verdict": "pass",
+      "notes": [
+        "Student explicitly removes forty; remaining range is 5-2=3."
+      ]
+    },
+    {
+      "id": "student-scale-all-observations",
+      "verdict": "pass",
+      "notes": [
+        "Doubling every observation gives 2,4,6 and sum twelve."
+      ]
+    },
+    {
+      "id": "student-add-to-all-observations",
+      "verdict": "pass",
+      "notes": [
+        "Adding five to every observation preserves range two."
+      ]
+    },
+    {
+      "id": "student-sample-to-population",
+      "verdict": "pass",
+      "notes": [
+        "Same data under sample and population formulas gives four and 8/3; context resolves those."
+      ]
+    },
+    {
+      "id": "student-sd-versus-variance",
+      "verdict": "pass",
+      "notes": [
+        "Sample variance four and standard deviation two are correctly distinguished."
+      ]
+    },
+    {
+      "id": "student-mean-not-total",
+      "verdict": "pass",
+      "notes": [
+        "Page total eighteen and average six are correct. First turn could mention three days to make per-day context explicit."
+      ]
+    },
+    {
+      "id": "student-range-not-maximum",
+      "verdict": "pass",
+      "notes": [
+        "Maximum eleven differs from range eight; spoken distinction is clear."
+      ]
+    },
+    {
+      "id": "student-minimum-after-mode",
+      "verdict": "pass",
+      "notes": [
+        "Mode five followed by minimum two is a distinct change of statistical question."
+      ]
+    },
+    {
+      "id": "student-count-after-sum",
+      "verdict": "pass",
+      "notes": [
+        "Sum twelve differs from observation count three."
+      ]
+    },
+    {
+      "id": "student-tied-modes",
+      "verdict": "pass",
+      "notes": [
+        "Updated tied-mode case correctly reports both two and seven, avoiding duplicate mean/median-family coverage."
+      ]
+    },
+    {
+      "id": "student-negative-extremes",
+      "verdict": "pass",
+      "notes": [
+        "Negative extrema remain -10 and -2; signs are not magnitudes."
+      ]
+    },
+    {
+      "id": "student-zero-variance-then-sd",
+      "verdict": "pass",
+      "notes": [
+        "Equal data gives zero population variance and standard deviation."
+      ]
+    },
+    {
+      "id": "student-smallest-supported-list",
+      "verdict": "pass",
+      "notes": [
+        "Two observations are the supported list minimum; mean twelve and count two are correct."
+      ]
+    },
+    {
+      "id": "student-reorder-even-median",
+      "verdict": "pass",
+      "notes": [
+        "Explicit reorder preserves even median six."
+      ]
+    },
+    {
+      "id": "student-restore-duplicate",
+      "verdict": "pass",
+      "notes": [
+        "Restoring a repeated four makes four the mode; duplicate is intentional."
+      ]
+    },
+    {
+      "id": "student-negative-to-zero",
+      "verdict": "pass",
+      "notes": [
+        "Zero replaces -2; minimum changes to zero."
+      ]
+    },
+    {
+      "id": "student-drop-missing-observation",
+      "verdict": "pass",
+      "notes": [
+        "Explicit missing placeholder removal gives observed 4,8 and mean six; no missing-data imputation is invented."
+      ]
+    },
+    {
+      "id": "student-retain-order-then-median",
+      "verdict": "pass",
+      "notes": [
+        "Median five is read-only, and saved order 8,1,5 is explicitly asserted afterward."
+      ]
+    },
+    {
+      "id": "student-equation-temporary-mean",
+      "verdict": "pass",
+      "notes": [
+        "Temporary mean five preserves equation, but final subtraction only asserts mode equation; add expected equation x=5 to catch an unapplied or wrong follow-up.",
+        "Resolved: final subtraction asserts x + 3 - 3 = 8 - 3, preserving the explicitly requested unsimplified step rather than performing unrequested cleanup."
+      ]
+    },
+    {
+      "id": "student-graph-temporary-median",
+      "verdict": "pass",
+      "notes": [
+        "Temporary median six cannot replace graph; original x^2 at three remains nine."
+      ]
+    },
+    {
+      "id": "student-shape-temporary-sum",
+      "verdict": "pass",
+      "notes": [
+        "Temporary sum fifteen preserves rectangle dimensions; area twelve confirms the return to shape."
+      ]
+    },
+    {
+      "id": "student-data-temporary-equation",
+      "verdict": "pass",
+      "notes": [
+        "Temporary equation solution x=4 leaves the saved data mean four."
+      ]
+    },
+    {
+      "id": "student-data-temporary-expression",
+      "verdict": "pass",
+      "notes": [
+        "Unrelated arithmetic gives 56; saved-list median remains six."
+      ]
+    },
+    {
+      "id": "student-equation-to-data",
+      "verdict": "pass",
+      "notes": [
+        "Explicit switch replaces equation with 4,6,8; mean six is correct."
+      ]
+    },
+    {
+      "id": "student-data-to-equation",
+      "verdict": "pass",
+      "notes": [
+        "Latest equation replaces visible statistics; x-2=7 solves to nine."
+      ]
+    },
+    {
+      "id": "student-graph-to-data",
+      "verdict": "pass",
+      "notes": [
+        "Graph-to-data change records 5,7,9; count three confirms the new context."
+      ]
+    },
+    {
+      "id": "student-data-to-graph",
+      "verdict": "pass",
+      "notes": [
+        "Data-to-graph request makes x^2 current; height four at two is correct."
+      ]
+    },
+    {
+      "id": "student-rectangle-to-data",
+      "verdict": "pass",
+      "notes": [
+        "Explicit rectangle-to-list transition gives median three for 2,3,10."
+      ]
+    },
+    {
+      "id": "student-data-to-circle",
+      "verdict": "pass",
+      "notes": [
+        "New circle radius three has diameter six; prior data is irrelevant."
+      ]
+    },
+    {
+      "id": "student-equation-to-rectangle",
+      "verdict": "pass",
+      "notes": [
+        "New six-by-two rectangle has perimeter sixteen, not the earlier equation solution."
+      ]
+    },
+    {
+      "id": "student-shape-to-equation",
+      "verdict": "pass",
+      "notes": [
+        "Square-to-equation transition gives x+4=10 and solution six."
+      ]
+    },
+    {
+      "id": "student-circle-to-line-graph",
+      "verdict": "pass",
+      "notes": [
+        "Graph wording disambiguates line from prior circle; 2x at three gives six."
+      ]
+    },
+    {
+      "id": "student-graph-to-triangle",
+      "verdict": "pass",
+      "notes": [
+        "Right triangle legs three and four give hypotenuse five after graph context."
+      ]
+    },
+    {
+      "id": "student-temporary-count-on-shape",
+      "verdict": "pass",
+      "notes": [
+        "Inline duplicate count four leaves rectangle eight-by-three and area 24."
+      ]
+    },
+    {
+      "id": "student-temporary-range-on-equation",
+      "verdict": "pass",
+      "notes": [
+        "Temporary signed range eight preserves x-4=1; saved equation solves to five."
+      ]
+    },
+    {
+      "id": "student-temporary-max-on-graph",
+      "verdict": "pass",
+      "notes": [
+        "Inline list maximum three differs from parabola properties; graph still gives -4 at zero."
+      ]
+    },
+    {
+      "id": "student-temporary-math-on-circle",
+      "verdict": "pass",
+      "notes": [
+        "Temporary arithmetic gives five while saved circle radius five retains diameter ten."
+      ]
+    },
+    {
+      "id": "student-temporary-solve-on-graph",
+      "verdict": "pass",
+      "notes": [
+        "Temporary equation gives x=9; saved graph 3x at two remains six."
+      ]
+    },
+    {
+      "id": "student-temporary-median-on-data",
+      "verdict": "pass",
+      "notes": [
+        "Inline median two is distinct from saved-list median twenty."
+      ]
+    },
+    {
+      "id": "student-temporary-sample-on-data",
+      "verdict": "pass",
+      "notes": [
+        "Temporary sample variance four leaves equal saved observations with zero population variance."
+      ]
+    },
+    {
+      "id": "student-two-temporary-queries",
+      "verdict": "pass",
+      "notes": [
+        "Repeated temporary questions leave the equation, but final oracle only checks letter x; assert the original equation or numeric value as well.",
+        "Resolved: final turn independently asserts unchanged saved equation x = 3."
+      ]
+    },
+    {
+      "id": "student-units-stay-numeric",
+      "verdict": "pass",
+      "notes": [
+        "Spoken minute units become numeric observations; average five and total fifteen are correct."
+      ]
+    },
+    {
+      "id": "student-population-after-edit",
+      "verdict": "pass",
+      "notes": [
+        "Population variance changes from one to zero after replacing all values with two."
+      ]
+    },
+    {
+      "id": "student-undo-data-replacement",
+      "verdict": "pass",
+      "notes": [
+        "Undo restores old 2,4,6 list with mean four."
+      ]
+    },
+    {
+      "id": "student-redo-data-replacement",
+      "verdict": "pass",
+      "notes": [
+        "Redo restores newer 10,20,30 list with mean twenty."
+      ]
+    },
+    {
+      "id": "student-query-not-undo-step",
+      "verdict": "pass",
+      "notes": [
+        "Read-only mean does not consume undo; restored mean is two."
+      ]
+    },
+    {
+      "id": "student-undo-mode-change",
+      "verdict": "pass",
+      "notes": [
+        "Undoing geometry restores dataset median four."
+      ]
+    },
+    {
+      "id": "student-redo-mode-change",
+      "verdict": "pass",
+      "notes": [
+        "Redoing shape restores side-five square and area 25."
+      ]
+    },
+    {
+      "id": "student-clear-and-recover-data",
+      "verdict": "pass",
+      "notes": [
+        "Clear then undo recovers sum eighteen; requests are sequential and unambiguous."
+      ]
+    },
+    {
+      "id": "student-undo-two-lists",
+      "verdict": "pass",
+      "notes": [
+        "Undo last two replacements returns to original mean two."
+      ]
+    },
+    {
+      "id": "student-redo-two-lists",
+      "verdict": "pass",
+      "notes": [
+        "Redoing two replacements returns to latest list mean eight."
+      ]
+    },
+    {
+      "id": "student-edit-after-undo-data",
+      "verdict": "pass",
+      "notes": [
+        "New edit after undo creates 1,2,3,4 with count four; no impossible redo claim."
+      ]
+    },
+    {
+      "id": "student-clear-equation-recovery",
+      "verdict": "pass",
+      "notes": [
+        "Clear and undo restores x+2=7, which solves to five."
+      ]
+    },
+    {
+      "id": "student-diagram-sequence",
+      "verdict": "pass",
+      "notes": [
+        "Flow order is stated, but oracle checks only Add three; add all step labels/order if claiming full sequence preservation.",
+        "Resolved: ordered diagram expectation now checks all four procedure steps."
+      ]
+    },
+    {
+      "id": "student-diagram-replace-operation",
+      "verdict": "pass",
+      "notes": [
+        "Replacement of multiply-by-two with multiply-by-three is correct; readback checks changed operation."
+      ]
+    },
+    {
+      "id": "student-diagram-undo-label",
+      "verdict": "pass",
+      "notes": [
+        "Undo restores Add two label; history target is the previous edit."
+      ]
+    },
+    {
+      "id": "student-diagram-redo-label",
+      "verdict": "pass",
+      "notes": [
+        "Redo reapplies Cube it; commands refer to complete edits."
+      ]
+    },
+    {
+      "id": "student-diagram-case-insensitive",
+      "verdict": "pass",
+      "notes": [
+        "Uppercase CHECK ANSWER cannot be distinguished in audio. Label this as text-only casing coverage or replace with a genuinely spoken distinction.",
+        "Resolved: natural spoken replacement removes the inaudible casing cue; family/focus now describe checklist-label editing, and complete diagram is asserted."
+      ]
+    },
+    {
+      "id": "student-diagram-new-procedure",
+      "verdict": "pass",
+      "notes": [
+        "New procedure replaces old flow, but oracle only checks Subtract one; it does not confirm Square or old Double removal.",
+        "Resolved: complete expected diagram checks every new step and rules out retained old operations."
+      ]
+    },
+    {
+      "id": "student-diagram-temporary-arithmetic",
+      "verdict": "pass",
+      "notes": [
+        "Temporary 7+8=15 preserves flow label Add seven."
+      ]
+    },
+    {
+      "id": "student-diagram-to-equation",
+      "verdict": "pass",
+      "notes": [
+        "New equation 2x=18 becomes current and solves to nine."
+      ]
+    },
+    {
+      "id": "student-equation-to-diagram",
+      "verdict": "pass",
+      "notes": [
+        "Equation-to-diagram transition records requested Add four operation."
+      ]
+    },
+    {
+      "id": "student-diagram-undo-new-flow",
+      "verdict": "pass",
+      "notes": [
+        "Undo of full flow replacement restores Add five."
+      ]
+    },
+    {
+      "id": "student-diagram-multi-edit",
+      "verdict": "pass",
+      "notes": [
+        "Two requested edits are applied, but only Divide by two is asserted; add Add four oracle so omission of first edit cannot pass.",
+        "Resolved: complete ordered diagram checks both requested edits."
+      ]
+    },
+    {
+      "id": "student-diagram-preserve-neighbors",
+      "verdict": "pass",
+      "notes": [
+        "Oracle checks only unchanged Add two, not requested Check the sign or Finish; strengthen it to verify the edit and both adjacent steps.",
+        "Resolved: complete ordered diagram checks changed middle label and all preserved neighbors."
+      ]
+    },
+    {
+      "id": "student-diagram-clear-recovery",
+      "verdict": "pass",
+      "notes": [
+        "Clear and undo restores Halve flow; history reference is clear."
+      ]
+    },
+    {
+      "id": "student-diagram-temporary-statistics",
+      "verdict": "pass",
+      "notes": [
+        "Temporary mean six preserves original Collect results flow."
+      ]
+    },
+    {
+      "id": "student-data-to-diagram-to-data",
+      "verdict": "pass",
+      "notes": [
+        "Undo of representation change returns to 2,5,8 with mean five."
+      ]
+    }
+  ],
+  "sourceSha256": "b96d495d79b024487be34dd1ab80124d6108c92a274ab2aa40638cf6a30884c4",
+  "authorAgent": "root"
+}

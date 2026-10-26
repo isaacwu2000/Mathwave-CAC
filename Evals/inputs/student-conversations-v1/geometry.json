@@ -1,0 +1,3333 @@
+[
+  {
+    "id": "geo-poster-area",
+    "family": "poster-area",
+    "category": "geometry",
+    "focus": "rectangle area after changing only width",
+    "turns": [
+      {
+        "student": "Draw a rectangle eight wide and five tall.",
+        "programs": [
+          "problem.save(geometry.create(\"rectangle\",{\"width\":8,\"height\":5}));"
+        ]
+      },
+      {
+        "student": "How much space is inside it?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "area: 40 "
+          ]
+        }
+      },
+      {
+        "student": "Make it ten wide instead.",
+        "programs": [
+          "problem.save(geometry.setDimensions(geometry.current(),{\"width\":10}));"
+        ]
+      },
+      {
+        "student": "What is the area now?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "area: 50 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-frame-border",
+    "family": "frame-border",
+    "category": "geometry",
+    "focus": "rectangle perimeter distinguished from area",
+    "turns": [
+      {
+        "student": "Make a rectangle six wide and four tall.",
+        "programs": [
+          "problem.save(geometry.create(\"rectangle\",{\"width\":6,\"height\":4}));"
+        ]
+      },
+      {
+        "student": "How much border would go around that?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"perimeter\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "perimeter: 20 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-screen-diagonal",
+    "family": "screen-diagonal",
+    "category": "geometry",
+    "focus": "diagonal from perpendicular rectangle sides",
+    "turns": [
+      {
+        "student": "Draw a rectangle three wide and four tall.",
+        "programs": [
+          "problem.save(geometry.create(\"rectangle\",{\"width\":3,\"height\":4}));"
+        ]
+      },
+      {
+        "student": "How long is the corner-to-corner line?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"diagonal\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "diagonal: 5 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-square-fence",
+    "family": "square-fence",
+    "category": "geometry",
+    "focus": "square perimeter and side correction",
+    "turns": [
+      {
+        "student": "Draw a square with side seven.",
+        "programs": [
+          "problem.save(geometry.create(\"square\",{\"side\":7}));"
+        ]
+      },
+      {
+        "student": "What is the distance all the way around?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"perimeter\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "perimeter: 28 "
+          ]
+        }
+      },
+      {
+        "student": "Actually the side is five.",
+        "programs": [
+          "problem.save(geometry.setDimensions(geometry.current(),{\"side\":5}));"
+        ]
+      },
+      {
+        "student": "And the perimeter?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"perimeter\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "perimeter: 20 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-square-tiles",
+    "family": "square-tiles",
+    "category": "geometry",
+    "focus": "area depends on side squared",
+    "turns": [
+      {
+        "student": "Make a square with side six.",
+        "programs": [
+          "problem.save(geometry.create(\"square\",{\"side\":6}));"
+        ]
+      },
+      {
+        "student": "How many square units is that?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "area: 36 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-ladder-length",
+    "family": "ladder-length",
+    "category": "geometry",
+    "focus": "right triangle hypotenuse",
+    "turns": [
+      {
+        "student": "Draw a right triangle with legs five and twelve.",
+        "programs": [
+          "problem.save(geometry.create(\"right triangle\",{\"a\":5,\"b\":12}));"
+        ]
+      },
+      {
+        "student": "How long is the sloping side?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"hypotenuse\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "hypotenuse: 13 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-ramp-area",
+    "family": "ramp-area",
+    "category": "geometry",
+    "focus": "area from legs not hypotenuse",
+    "turns": [
+      {
+        "student": "Make a right triangle with legs six and eight.",
+        "programs": [
+          "problem.save(geometry.create(\"right triangle\",{\"a\":6,\"b\":8}));"
+        ]
+      },
+      {
+        "student": "What is its area?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "area: 24 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-right-angle-label",
+    "family": "right-angle-label",
+    "category": "geometry",
+    "focus": "right angle uses hypotenuse label c",
+    "turns": [
+      {
+        "student": "Draw a right triangle with legs three and four.",
+        "programs": [
+          "problem.save(geometry.create(\"right triangle\",{\"a\":3,\"b\":4}));"
+        ]
+      },
+      {
+        "student": "Read the angle opposite the longest side.",
+        "programs": [
+          "geometry.measure(geometry.current(),\"angle c\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "angle c: 90 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-triangle-rope",
+    "family": "triangle-rope",
+    "category": "geometry",
+    "focus": "three-side perimeter",
+    "turns": [
+      {
+        "student": "Draw a triangle with sides five, five, and six.",
+        "programs": [
+          "problem.save(geometry.create(\"triangle\",{\"a\":5,\"b\":5,\"c\":6}));"
+        ]
+      },
+      {
+        "student": "How much string would go around that?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"perimeter\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "perimeter: 16 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-triangle-heron",
+    "family": "triangle-heron",
+    "category": "geometry",
+    "focus": "area from three supplied sides",
+    "turns": [
+      {
+        "student": "Draw a triangle with sides thirteen, fourteen, and fifteen.",
+        "programs": [
+          "problem.save(geometry.create(\"triangle\",{\"a\":13,\"b\":14,\"c\":15}));"
+        ]
+      },
+      {
+        "student": "Can you get its area from those sides?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "area: 84 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-triangle-height",
+    "family": "triangle-height",
+    "category": "geometry",
+    "focus": "base-height area with unrelated slanted sides absent",
+    "turns": [
+      {
+        "student": "Draw a triangle with base ten and height six.",
+        "programs": [
+          "problem.save(geometry.create(\"triangle\",{\"base\":10,\"height\":6}));"
+        ]
+      },
+      {
+        "student": "What is the area?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "area: 30 "
+          ]
+        }
+      },
+      {
+        "student": "Keep the base but change the height to four.",
+        "programs": [
+          "problem.save(geometry.setDimensions(geometry.current(),{\"height\":4}));"
+        ]
+      },
+      {
+        "student": "Read the new area.",
+        "programs": [
+          "geometry.measure(geometry.current(),\"area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "area: 20 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-slanted-parallelogram",
+    "family": "slanted-parallelogram",
+    "category": "geometry",
+    "focus": "perpendicular height for parallelogram area",
+    "turns": [
+      {
+        "student": "Draw a parallelogram with base nine and height four.",
+        "programs": [
+          "problem.save(geometry.create(\"parallelogram\",{\"base\":9,\"height\":4}));"
+        ]
+      },
+      {
+        "student": "How much area does it cover?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "area: 36 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-trapezoid-average",
+    "family": "trapezoid-average",
+    "category": "geometry",
+    "focus": "two parallel bases and height",
+    "turns": [
+      {
+        "student": "Draw a trapezoid with parallel bases six and ten and height five.",
+        "programs": [
+          "problem.save(geometry.create(\"trapezoid\",{\"a\":6,\"b\":10,\"height\":5}));"
+        ]
+      },
+      {
+        "student": "What is the area of that?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "area: 40 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-trapezoid-base-edit",
+    "family": "trapezoid-base-edit",
+    "category": "geometry",
+    "focus": "change one base preserving other base and altitude",
+    "turns": [
+      {
+        "student": "Make a trapezoid with bases four and eight and height three.",
+        "programs": [
+          "problem.save(geometry.create(\"trapezoid\",{\"a\":4,\"b\":8,\"height\":3}));"
+        ]
+      },
+      {
+        "student": "Find the area.",
+        "programs": [
+          "geometry.measure(geometry.current(),\"area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "area: 18 "
+          ]
+        }
+      },
+      {
+        "student": "Make the shorter base six.",
+        "programs": [
+          "problem.save(geometry.setDimensions(geometry.current(),{\"a\":6}));"
+        ]
+      },
+      {
+        "student": "What about now?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "area: 21 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-circle-diameter",
+    "family": "circle-diameter",
+    "category": "geometry",
+    "focus": "radius versus diameter",
+    "turns": [
+      {
+        "student": "Draw a circle with radius four.",
+        "programs": [
+          "problem.save(geometry.create(\"circle\",{\"radius\":4}));"
+        ]
+      },
+      {
+        "student": "How wide is it through the middle?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"diameter\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "diameter: 8 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-circle-resize",
+    "family": "circle-resize",
+    "category": "geometry",
+    "focus": "edit radius without treating it as diameter",
+    "turns": [
+      {
+        "student": "Make a circle of radius three.",
+        "programs": [
+          "problem.save(geometry.create(\"circle\",{\"radius\":3}));"
+        ]
+      },
+      {
+        "student": "What is the diameter?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"diameter\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "diameter: 6 "
+          ]
+        }
+      },
+      {
+        "student": "Wait, use radius five instead.",
+        "programs": [
+          "problem.save(geometry.setDimensions(geometry.current(),{\"radius\":5}));"
+        ]
+      },
+      {
+        "student": "And the diameter now?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"diameter\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "diameter: 10 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-ring-width",
+    "family": "ring-width",
+    "category": "geometry",
+    "focus": "annulus radial thickness",
+    "turns": [
+      {
+        "student": "Draw a ring with outer radius seven and inner radius four.",
+        "programs": [
+          "problem.save(geometry.create(\"annulus\",{\"outer\":7,\"inner\":4}));"
+        ]
+      },
+      {
+        "student": "How thick is the ring?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"thickness\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "thickness: 3 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-ring-hole-edit",
+    "family": "ring-hole-edit",
+    "category": "geometry",
+    "focus": "inner radius affects thickness",
+    "turns": [
+      {
+        "student": "Draw a ring with outer radius eight and inner radius two.",
+        "programs": [
+          "problem.save(geometry.create(\"annulus\",{\"outer\":8,\"inner\":2}));"
+        ]
+      },
+      {
+        "student": "Read its thickness.",
+        "programs": [
+          "geometry.measure(geometry.current(),\"thickness\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "thickness: 6 "
+          ]
+        }
+      },
+      {
+        "student": "Make the hole radius five.",
+        "programs": [
+          "problem.save(geometry.setDimensions(geometry.current(),{\"inner\":5}));"
+        ]
+      },
+      {
+        "student": "How thick is it now?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"thickness\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "thickness: 3 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-hexagon-turn",
+    "family": "hexagon-turn",
+    "category": "geometry",
+    "focus": "regular polygon exterior angle",
+    "turns": [
+      {
+        "student": "Draw a regular hexagon with side four.",
+        "programs": [
+          "problem.save(geometry.create(\"regular polygon\",{\"sides\":6,\"side\":4}));"
+        ]
+      },
+      {
+        "student": "How far do I turn at each corner walking around it?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"exterior angle\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "exterior angle: 60 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-pentagon-corner",
+    "family": "pentagon-corner",
+    "category": "geometry",
+    "focus": "regular polygon interior angle",
+    "turns": [
+      {
+        "student": "Make a regular pentagon with side three.",
+        "programs": [
+          "problem.save(geometry.create(\"regular polygon\",{\"sides\":5,\"side\":3}));"
+        ]
+      },
+      {
+        "student": "What is one inside angle?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"interior angle\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "interior angle: 108 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-octagon-border",
+    "family": "octagon-border",
+    "category": "geometry",
+    "focus": "regular polygon perimeter uses side count",
+    "turns": [
+      {
+        "student": "Draw a regular octagon with side two.",
+        "programs": [
+          "problem.save(geometry.create(\"regular polygon\",{\"sides\":8,\"side\":2}));"
+        ]
+      },
+      {
+        "student": "How long is its whole outline?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"perimeter\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "perimeter: 16 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-polygon-side-count",
+    "family": "polygon-side-count",
+    "category": "geometry",
+    "focus": "changing number of sides updates angles",
+    "turns": [
+      {
+        "student": "Make a regular hexagon with side two.",
+        "programs": [
+          "problem.save(geometry.create(\"regular polygon\",{\"sides\":6,\"side\":2}));"
+        ]
+      },
+      {
+        "student": "What is an inside angle?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"interior angle\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "interior angle: 120 "
+          ]
+        }
+      },
+      {
+        "student": "Try eight sides instead.",
+        "programs": [
+          "problem.save(geometry.setDimensions(geometry.current(),{\"sides\":8}));"
+        ]
+      },
+      {
+        "student": "Now what is an inside angle?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"interior angle\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "interior angle: 135 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-box-capacity",
+    "family": "box-capacity",
+    "category": "geometry",
+    "focus": "rectangular prism volume",
+    "turns": [
+      {
+        "student": "Make a box ten long, four wide, and three high.",
+        "programs": [
+          "problem.save(geometry.create(\"rectangular prism\",{\"length\":10,\"width\":4,\"height\":3}));"
+        ]
+      },
+      {
+        "student": "How much does it hold in cubic units?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"volume\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "volume: 120 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-box-wrapping",
+    "family": "box-wrapping",
+    "category": "geometry",
+    "focus": "surface area versus volume",
+    "turns": [
+      {
+        "student": "Draw a rectangular prism five long, four wide, and two high.",
+        "programs": [
+          "problem.save(geometry.create(\"rectangular prism\",{\"length\":5,\"width\":4,\"height\":2}));"
+        ]
+      },
+      {
+        "student": "How much paper covers all the faces?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"surface area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "surface area: 76 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-box-diagonal",
+    "family": "box-diagonal",
+    "category": "geometry",
+    "focus": "space diagonal across three dimensions",
+    "turns": [
+      {
+        "student": "Make a box two long, three wide, and six tall.",
+        "programs": [
+          "problem.save(geometry.create(\"rectangular prism\",{\"length\":2,\"width\":3,\"height\":6}));"
+        ]
+      },
+      {
+        "student": "What is the diagonal through the inside?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"space diagonal\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "space diagonal: 7 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-cube-volume",
+    "family": "cube-volume",
+    "category": "geometry",
+    "focus": "cube volume distinguished from surface area",
+    "turns": [
+      {
+        "student": "Draw a cube with side three.",
+        "programs": [
+          "problem.save(geometry.create(\"cube\",{\"side\":3}));"
+        ]
+      },
+      {
+        "student": "What is its volume?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"volume\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "volume: 27 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-cube-faces",
+    "family": "cube-faces",
+    "category": "geometry",
+    "focus": "all six square faces",
+    "turns": [
+      {
+        "student": "Make a cube with side four.",
+        "programs": [
+          "problem.save(geometry.create(\"cube\",{\"side\":4}));"
+        ]
+      },
+      {
+        "student": "What is the total area of its faces?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"surface area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "surface area: 96 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-cone-slant",
+    "family": "cone-slant",
+    "category": "geometry",
+    "focus": "slant height not vertical height",
+    "turns": [
+      {
+        "student": "Draw a cone with radius three and height four.",
+        "programs": [
+          "problem.save(geometry.create(\"cone\",{\"radius\":3,\"height\":4}));"
+        ]
+      },
+      {
+        "student": "How long is the slanted edge?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"slant height\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "slant height: 5 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-triangle-inradius",
+    "family": "triangle-inradius",
+    "category": "geometry",
+    "focus": "inscribed circle radius from triangle sides",
+    "turns": [
+      {
+        "student": "Make a triangle with sides three, four, and five.",
+        "programs": [
+          "problem.save(geometry.create(\"triangle\",{\"a\":3,\"b\":4,\"c\":5}));"
+        ]
+      },
+      {
+        "student": "What is the radius of the circle that fits inside?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"inradius\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "inradius: 1 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-triangle-circumradius",
+    "family": "triangle-circumradius",
+    "category": "geometry",
+    "focus": "circumscribed radius of right triangle",
+    "turns": [
+      {
+        "student": "Draw a triangle with sides six, eight, and ten.",
+        "programs": [
+          "problem.save(geometry.create(\"triangle\",{\"a\":6,\"b\":8,\"c\":10}));"
+        ]
+      },
+      {
+        "student": "What is the radius of the circle through its corners?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"circumradius\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "circumradius: 5 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-similar-area",
+    "family": "similar-area",
+    "category": "geometry",
+    "focus": "area grows quadratically with similar scale",
+    "turns": [
+      {
+        "student": "Draw a rectangle four wide and three tall.",
+        "programs": [
+          "problem.save(geometry.create(\"rectangle\",{\"width\":4,\"height\":3}));"
+        ]
+      },
+      {
+        "student": "Make it twice as big in every direction.",
+        "programs": [
+          "problem.save(geometry.scale(geometry.current(),2));"
+        ]
+      },
+      {
+        "student": "What is its area now?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "area: 48 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-similar-perimeter",
+    "family": "similar-perimeter",
+    "category": "geometry",
+    "focus": "perimeter grows linearly with similar scale",
+    "turns": [
+      {
+        "student": "Make a triangle with sides three, four, and five.",
+        "programs": [
+          "problem.save(geometry.create(\"triangle\",{\"a\":3,\"b\":4,\"c\":5}));"
+        ]
+      },
+      {
+        "student": "Scale all its sides by three.",
+        "programs": [
+          "problem.save(geometry.scale(geometry.current(),3));"
+        ]
+      },
+      {
+        "student": "How far around is the larger one?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"perimeter\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "perimeter: 36 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-model-half-volume",
+    "family": "model-half-volume",
+    "category": "geometry",
+    "focus": "volume changes cubically under scaling",
+    "turns": [
+      {
+        "student": "Draw a cube with side four.",
+        "programs": [
+          "problem.save(geometry.create(\"cube\",{\"side\":4}));"
+        ]
+      },
+      {
+        "student": "Shrink it to half the side length.",
+        "programs": [
+          "problem.save(geometry.scale(geometry.current(),0.5));"
+        ]
+      },
+      {
+        "student": "What volume is left?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"volume\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "volume: 8 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-centroid-overlay",
+    "family": "centroid-overlay",
+    "category": "geometry",
+    "focus": "triangle show centroid keeps shape dimensions",
+    "turns": [
+      {
+        "student": "Draw a triangle with sides three, four, and five.",
+        "programs": [
+          "problem.save(geometry.create(\"triangle\",{\"a\":3,\"b\":4,\"c\":5}));"
+        ]
+      },
+      {
+        "student": "Show where the medians meet.",
+        "programs": [
+          "problem.save(geometry.construction(geometry.current(),\"show centroid\"));"
+        ],
+        "expect": {
+          "geometryOverlay": "centroid"
+        }
+      },
+      {
+        "student": "What is the area with those lines showing?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"area\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "area: 6 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-median-overlay",
+    "family": "median-overlay",
+    "category": "geometry",
+    "focus": "triangle median a keeps shape dimensions",
+    "turns": [
+      {
+        "student": "Draw a triangle with sides three, four, and five.",
+        "programs": [
+          "problem.save(geometry.create(\"triangle\",{\"a\":3,\"b\":4,\"c\":5}));"
+        ]
+      },
+      {
+        "student": "Draw the median to side a.",
+        "programs": [
+          "problem.save(geometry.construction(geometry.current(),\"median a\"));"
+        ],
+        "expect": {
+          "geometryOverlay": "median a"
+        }
+      },
+      {
+        "student": "How far around is the triangle?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"perimeter\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "perimeter: 12 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-altitude-overlay",
+    "family": "altitude-overlay",
+    "category": "geometry",
+    "focus": "triangle altitude c keeps shape dimensions",
+    "turns": [
+      {
+        "student": "Draw a triangle with sides three, four, and five.",
+        "programs": [
+          "problem.save(geometry.create(\"triangle\",{\"a\":3,\"b\":4,\"c\":5}));"
+        ]
+      },
+      {
+        "student": "Drop the altitude to side c.",
+        "programs": [
+          "problem.save(geometry.construction(geometry.current(),\"altitude c\"));"
+        ],
+        "expect": {
+          "geometryOverlay": "altitude c"
+        }
+      },
+      {
+        "student": "How long is that altitude?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"altitude c\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "altitude c: 2.4 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-incircle-overlay",
+    "family": "incircle-overlay",
+    "category": "geometry",
+    "focus": "triangle inradius keeps shape dimensions",
+    "turns": [
+      {
+        "student": "Draw a triangle with sides three, four, and five.",
+        "programs": [
+          "problem.save(geometry.create(\"triangle\",{\"a\":3,\"b\":4,\"c\":5}));"
+        ]
+      },
+      {
+        "student": "Show the circle tucked inside it.",
+        "programs": [
+          "problem.save(geometry.construction(geometry.current(),\"inradius\"));"
+        ],
+        "expect": {
+          "geometryOverlay": "inradius"
+        }
+      },
+      {
+        "student": "How big is the radius of that inside circle?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"inradius\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "inradius: 1 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-circumcircle-overlay",
+    "family": "circumcircle-overlay",
+    "category": "geometry",
+    "focus": "triangle circumradius keeps shape dimensions",
+    "turns": [
+      {
+        "student": "Draw a triangle with sides three, four, and five.",
+        "programs": [
+          "problem.save(geometry.create(\"triangle\",{\"a\":3,\"b\":4,\"c\":5}));"
+        ]
+      },
+      {
+        "student": "Show the circle through all three corners.",
+        "programs": [
+          "problem.save(geometry.construction(geometry.current(),\"circumradius\"));"
+        ],
+        "expect": {
+          "geometryOverlay": "circumradius"
+        }
+      },
+      {
+        "student": "What is the radius of the outside circle?",
+        "programs": [
+          "geometry.measure(geometry.current(),\"circumradius\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "circumradius: 2.5 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-clear-overlay",
+    "family": "clear-overlay",
+    "category": "geometry",
+    "focus": "hide helper geometry without deleting triangle",
+    "turns": [
+      {
+        "student": "Draw a three four five triangle and its centroid.",
+        "programs": [
+          "problem.save(geometry.construction(geometry.create(\"triangle\",{a:3,b:4,c:5}),\"show centroid\"));"
+        ]
+      },
+      {
+        "student": "Hide the extra construction lines.",
+        "programs": [
+          "problem.save(geometry.construction(geometry.current(),\"hide construction\"));"
+        ],
+        "expect": {
+          "geometryOverlay": null
+        }
+      },
+      {
+        "student": "The triangle is still there, right? Read its perimeter.",
+        "programs": [
+          "geometry.measure(geometry.current(),\"perimeter\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "perimeter: 12 "
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-classify-equilateral",
+    "family": "classify-equilateral",
+    "category": "geometry",
+    "focus": "triangle classification from equal side lengths",
+    "turns": [
+      {
+        "student": "Draw a triangle with all sides six.",
+        "programs": [
+          "problem.save(geometry.create(\"triangle\",{\"a\":6,\"b\":6,\"c\":6}));"
+        ]
+      },
+      {
+        "student": "What kind of triangle is that?",
+        "programs": [
+          "geometry.classify(geometry.current());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Equilateral acute triangle."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-parallel-intersection",
+    "family": "parallel-intersection",
+    "category": "geometry",
+    "focus": "intersection location on a transversal",
+    "turns": [
+      {
+        "student": "Draw horizontal lines through A at zero zero and C at zero four. Put B at four zero. Make them parallel, then draw a line from A to D at four eight.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,4)\\nl=line(A,B)\\nm=parallel(C,l)\\nD=point(4,8)\\nt=line(A,D)\\nE=intersection(m,t)\\ndraw l,m,t\\nassert parallel(l,m)\"));"
+        ]
+      },
+      {
+        "student": "Mark where the slanted line hits the upper one.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"draw E\"));"
+        ]
+      },
+      {
+        "student": "Where is that intersection?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"E\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "E: point (2, 4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-corresponding-angle-marks",
+    "family": "corresponding-angle-marks",
+    "category": "geometry",
+    "focus": "corresponding angle pair at two intersections",
+    "turns": [
+      {
+        "student": "Draw two horizontal parallel lines four units apart, with a transversal from zero zero through four eight.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,4)\\nl=line(A,B)\\nm=parallel(C,l)\\nD=point(4,8)\\nt=line(A,D)\\nE=intersection(m,t)\\ndraw l,m,t\\nassert parallel(l,m)\"));"
+        ]
+      },
+      {
+        "student": "Mark the matching upper-right angles at the crossings.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"F=point(6,4)\\nangle B,A,E\\nangle F,E,D\"));"
+        ],
+        "expect": {
+          "angles": [
+            {
+              "points": [
+                "B",
+                "A",
+                "E"
+              ],
+              "degrees": 63.43494882292201
+            },
+            {
+              "points": [
+                "F",
+                "E",
+                "D"
+              ],
+              "degrees": 63.43494882292201
+            }
+          ]
+        }
+      },
+      {
+        "student": "Where is the upper crossing?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"E\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "E: point (2, 4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-alternate-interior-marks",
+    "family": "alternate-interior-marks",
+    "category": "geometry",
+    "focus": "alternate interior angle pair opposite transversal",
+    "turns": [
+      {
+        "student": "Draw parallel horizontal lines through zero zero and zero four, crossed by the line through zero zero and four eight.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,4)\\nl=line(A,B)\\nm=parallel(C,l)\\nD=point(4,8)\\nt=line(A,D)\\nE=intersection(m,t)\\ndraw l,m,t\\nassert parallel(l,m)\"));"
+        ]
+      },
+      {
+        "student": "Mark the alternate interior angles inside the strip.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"angle B,A,E\\nangle C,E,A\"));"
+        ],
+        "expect": {
+          "angles": [
+            {
+              "points": [
+                "B",
+                "A",
+                "E"
+              ],
+              "degrees": 63.43494882292201
+            },
+            {
+              "points": [
+                "C",
+                "E",
+                "A"
+              ],
+              "degrees": 63.43494882292201
+            }
+          ]
+        }
+      },
+      {
+        "student": "Where is the upper intersection again?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"E\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "E: point (2, 4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-same-side-interior-marks",
+    "family": "same-side-interior-marks",
+    "category": "geometry",
+    "focus": "same side interior supplementary arrangement",
+    "turns": [
+      {
+        "student": "Draw parallel horizontal lines through zero zero and zero four, with B at four zero and a transversal toward four eight.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,4)\\nl=line(A,B)\\nm=parallel(C,l)\\nD=point(4,8)\\nt=line(A,D)\\nE=intersection(m,t)\\ndraw l,m,t\\nassert parallel(l,m)\"));"
+        ]
+      },
+      {
+        "student": "Mark the two inside angles on the right of the slanted line.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"F=point(6,4)\\nangle B,A,E\\nangle A,E,F\"));"
+        ],
+        "expect": {
+          "angles": [
+            {
+              "points": [
+                "B",
+                "A",
+                "E"
+              ],
+              "degrees": 63.43494882292201
+            },
+            {
+              "points": [
+                "A",
+                "E",
+                "F"
+              ],
+              "degrees": 116.56505117707799
+            }
+          ]
+        }
+      },
+      {
+        "student": "Where does the transversal meet the upper line?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"E\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "E: point (2, 4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-alternate-exterior-marks",
+    "family": "alternate-exterior-marks",
+    "category": "geometry",
+    "focus": "alternate exterior pair with extended transversal",
+    "turns": [
+      {
+        "student": "Draw two horizontal parallel lines through zero zero and zero four, crossed by a line toward four eight.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,4)\\nl=line(A,B)\\nm=parallel(C,l)\\nD=point(4,8)\\nt=line(A,D)\\nE=intersection(m,t)\\ndraw l,m,t\\nassert parallel(l,m)\"));"
+        ]
+      },
+      {
+        "student": "Extend it below the lower line and mark the alternate exterior angles.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"P=point(-2,-4)\\nF=point(6,4)\\ndraw ray(A,P)\\nangle B,A,P\\nangle C,E,D\"));"
+        ],
+        "expect": {
+          "angles": [
+            {
+              "points": [
+                "B",
+                "A",
+                "P"
+              ],
+              "degrees": 116.56505117707799
+            },
+            {
+              "points": [
+                "C",
+                "E",
+                "D"
+              ],
+              "degrees": 116.56505117707799
+            }
+          ]
+        }
+      },
+      {
+        "student": "Where is the upper crossing again?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"E\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "E: point (2, 4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-vertical-angles-at-crossing",
+    "family": "vertical-angles-at-crossing",
+    "category": "geometry",
+    "focus": "vertical angle relationship at transversal crossing",
+    "turns": [
+      {
+        "student": "Draw two horizontal parallel lines through zero zero and zero four, crossed by the line from zero zero toward four eight.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,4)\\nl=line(A,B)\\nm=parallel(C,l)\\nD=point(4,8)\\nt=line(A,D)\\nE=intersection(m,t)\\ndraw l,m,t\\nassert parallel(l,m)\"));"
+        ]
+      },
+      {
+        "student": "Mark the opposite angles at the lower crossing.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"L=point(-4,0)\\nP=point(-2,-4)\\nangle B,A,E\\nangle L,A,P\"));"
+        ],
+        "expect": {
+          "angles": [
+            {
+              "points": [
+                "B",
+                "A",
+                "E"
+              ],
+              "degrees": 63.43494882292201
+            },
+            {
+              "points": [
+                "L",
+                "A",
+                "P"
+              ],
+              "degrees": 63.43494882292201
+            }
+          ]
+        }
+      },
+      {
+        "student": "Where is the lower crossing?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"A\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "A: point (0, 0)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-linear-pair-at-crossing",
+    "family": "linear-pair-at-crossing",
+    "category": "geometry",
+    "focus": "adjacent angles on a straight base line",
+    "turns": [
+      {
+        "student": "Draw horizontal parallel lines through zero zero and zero four, crossed by the line toward four eight.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,4)\\nl=line(A,B)\\nm=parallel(C,l)\\nD=point(4,8)\\nt=line(A,D)\\nE=intersection(m,t)\\ndraw l,m,t\\nassert parallel(l,m)\"));"
+        ]
+      },
+      {
+        "student": "Show the two angles next to each other above the lower line.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"L=point(-4,0)\\nangle B,A,E\\nangle E,A,L\"));"
+        ],
+        "expect": {
+          "angles": [
+            {
+              "points": [
+                "B",
+                "A",
+                "E"
+              ],
+              "degrees": 63.43494882292201
+            },
+            {
+              "points": [
+                "E",
+                "A",
+                "L"
+              ],
+              "degrees": 116.56505117707799
+            }
+          ]
+        }
+      },
+      {
+        "student": "Where is B so I know which side is which?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"B\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "B: point (4, 0)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-perpendicular-transversal",
+    "family": "perpendicular-transversal",
+    "category": "geometry",
+    "focus": "perpendicular crossing of two parallel lines",
+    "turns": [
+      {
+        "student": "Draw a horizontal line through A at zero zero and B at six zero. Draw its parallel through C at two three.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(6,0)\\nC=point(2,3)\\nl=line(A,B)\\nm=parallel(C,l)\\ndraw l,m\\nassert parallel(l,m)\"));"
+        ]
+      },
+      {
+        "student": "Draw the perpendicular through C down to the first line.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"t=perpendicular(C,l)\\nF=intersection(t,l)\\ndraw t,F\\nrightangle B,F,C\\nassert perpendicular(t,l)\"));"
+        ]
+      },
+      {
+        "student": "Where is its foot?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"F\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "F: point (2, 0)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-slanted-parallels",
+    "family": "slanted-parallels",
+    "category": "geometry",
+    "focus": "parallel lines need not be horizontal",
+    "turns": [
+      {
+        "student": "Draw a line through zero zero and four four, and a parallel through zero two.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,4)\\nC=point(0,2)\\nl=line(A,B)\\nm=parallel(C,l)\\ndraw l,m\\nassert parallel(l,m)\"));"
+        ]
+      },
+      {
+        "student": "Cross both with the vertical line through A.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"D=point(0,6)\\nt=line(A,D)\\nE=intersection(m,t)\\ndraw t,E\"));"
+        ]
+      },
+      {
+        "student": "Where does it cross the second line?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"E\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "E: point (0, 2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-vertical-parallels",
+    "family": "vertical-parallels",
+    "category": "geometry",
+    "focus": "vertical parallel lines and horizontal transversal",
+    "turns": [
+      {
+        "student": "Draw vertical lines through zero zero and four zero.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(0,5)\\nC=point(4,0)\\nl=line(A,B)\\nm=parallel(C,l)\\ndraw l,m\\nassert parallel(l,m)\"));"
+        ]
+      },
+      {
+        "student": "Cross them with a horizontal line through zero three.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"P=point(0,3)\\nQ=point(6,3)\\nt=line(P,Q)\\nE=intersection(m,t)\\ndraw t,E\"));"
+        ]
+      },
+      {
+        "student": "Where is the crossing on the right?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"E\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "E: point (4, 3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-two-transversals",
+    "family": "two-transversals",
+    "category": "geometry",
+    "focus": "two different transversals across same parallel pair",
+    "turns": [
+      {
+        "student": "Draw horizontal parallel lines through zero zero and zero four, crossed by the line toward four eight.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,4)\\nl=line(A,B)\\nm=parallel(C,l)\\nD=point(4,8)\\nt=line(A,D)\\nE=intersection(m,t)\\ndraw l,m,t\\nassert parallel(l,m)\"));"
+        ]
+      },
+      {
+        "student": "Add a vertical transversal through B.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"P=point(4,6)\\nu=line(B,P)\\nF=intersection(u,m)\\ndraw u,F\"));"
+        ]
+      },
+      {
+        "student": "Where does the new one meet the upper line?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"F\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "F: point (4, 4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-parallel-strip-width",
+    "family": "parallel-strip-width",
+    "category": "geometry",
+    "focus": "perpendicular strip width versus slanted crossing distance",
+    "turns": [
+      {
+        "student": "Draw horizontal parallel lines four units apart, through zero zero and zero four, crossed by a line toward four eight.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,4)\\nl=line(A,B)\\nm=parallel(C,l)\\nD=point(4,8)\\nt=line(A,D)\\nE=intersection(m,t)\\ndraw l,m,t\\nassert parallel(l,m)\"));"
+        ]
+      },
+      {
+        "student": "Show the shortest distance between the parallels through C.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"F=foot(C,l)\\nw=distance(C,F)\\ndraw segment(C,F)\\nmeasure segment(C,F)\"));"
+        ]
+      },
+      {
+        "student": "What is that distance?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"w\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "w: 4."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-parallel-midline",
+    "family": "parallel-midline",
+    "category": "geometry",
+    "focus": "midpoint line within a parallel strip",
+    "turns": [
+      {
+        "student": "Draw horizontal parallel lines through zero zero and zero four, crossed by a line toward four eight.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,4)\\nl=line(A,B)\\nm=parallel(C,l)\\nD=point(4,8)\\nt=line(A,D)\\nE=intersection(m,t)\\ndraw l,m,t\\nassert parallel(l,m)\"));"
+        ]
+      },
+      {
+        "student": "Draw the line halfway between them.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"M=midpoint(A,C)\\nh=parallel(M,l)\\ndraw h\\nassert parallel(h,m)\"));"
+        ]
+      },
+      {
+        "student": "Where is that halfway point?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"M\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "M: point (0, 2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-parallel-through-corner",
+    "family": "parallel-through-corner",
+    "category": "geometry",
+    "focus": "parallel through third triangle vertex",
+    "turns": [
+      {
+        "student": "Draw triangle A zero zero, B six zero, C two four.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(6,0)\\nC=point(2,4)\\nl=line(A,B)\\ndraw triangle(A,B,C)\"));"
+        ]
+      },
+      {
+        "student": "Draw a line through C parallel to the base.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"p=parallel(C,l)\\ndraw p\\nassert parallel(p,l)\"));"
+        ],
+        "expect": {
+          "constructionIncludes": [
+            "p=parallel(C,l)",
+            "draw p"
+          ]
+        }
+      },
+      {
+        "student": "Where is C again?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"C\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "C: point (2, 4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-rectangle-parallel-sides",
+    "family": "rectangle-parallel-sides",
+    "category": "geometry",
+    "focus": "verify both opposite side pairs numerically",
+    "turns": [
+      {
+        "student": "Draw a rectangle with corners A zero zero, B six zero, C six four, D zero four.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(6,0)\\nC=point(6,4)\\nD=point(0,4)\\ndraw polygon(A,B,C,D)\"));"
+        ]
+      },
+      {
+        "student": "Show the diagonals and their crossing.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"u=line(A,C)\\nv=line(B,D)\\nM=intersection(u,v)\\nassert parallel(line(A,B),line(D,C))\\nassert parallel(line(A,D),line(B,C))\\ndraw segment(A,C),segment(B,D)\"));"
+        ]
+      },
+      {
+        "student": "Where do the diagonals meet?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"M\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "M: point (3, 2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-parallelogram-completion",
+    "family": "parallelogram-completion",
+    "category": "geometry",
+    "focus": "construct fourth vertex using two parallel lines",
+    "turns": [
+      {
+        "student": "Put A at zero zero, B at five zero, and C at two three.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(5,0)\\nC=point(2,3)\\ndraw segment(A,B),segment(A,C)\"));"
+        ]
+      },
+      {
+        "student": "Complete the parallelogram using parallels through B and C.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"l=parallel(B,line(A,C))\\nm=parallel(C,line(A,B))\\nD=intersection(l,m)\\ndraw polygon(A,B,D,C)\\nassert parallel(line(A,B),line(C,D))\"));"
+        ]
+      },
+      {
+        "student": "Where is the missing corner?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"D\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "D: point (7, 3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-midsegment-parallel",
+    "family": "midsegment-parallel",
+    "category": "geometry",
+    "focus": "triangle midsegment parallel to base",
+    "turns": [
+      {
+        "student": "Draw triangle A zero zero, B eight zero, C two six.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(8,0)\\nC=point(2,6)\\ndraw triangle(A,B,C)\"));"
+        ]
+      },
+      {
+        "student": "Join the midpoints of the two sides that meet at C.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"M=midpoint(A,C)\\nN=midpoint(B,C)\\ndraw segment(M,N)\\nassert parallel(line(M,N),line(A,B))\\nd=distance(M,N)\"));"
+        ]
+      },
+      {
+        "student": "How long is that middle segment?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"d\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "d: 4."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-transversal-angle-bisector",
+    "family": "transversal-angle-bisector",
+    "category": "geometry",
+    "focus": "bisect angle formed by transversal and lower parallel",
+    "turns": [
+      {
+        "student": "Draw horizontal parallel lines through zero zero and zero four with a diagonal from zero zero to four four.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,4)\\nD=point(4,4)\\nl=line(A,B)\\nm=parallel(C,l)\\nt=line(A,D)\\ndraw l,m,t\"));"
+        ]
+      },
+      {
+        "student": "Bisect the angle between AB and AD.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"b=bisector(B,A,D)\\nangle B,A,D\\ndraw b\"));"
+        ],
+        "expect": {
+          "constructionIncludes": [
+            "b=bisector(B,A,D)",
+            "draw b"
+          ]
+        }
+      },
+      {
+        "student": "Where is D again?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"D\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "D: point (4, 4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-parallel-ray-start",
+    "family": "parallel-ray-start",
+    "category": "geometry",
+    "focus": "ray versus full transversal line",
+    "turns": [
+      {
+        "student": "Draw horizontal parallel lines through zero zero and zero four with a slanted line toward four eight.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,4)\\nl=line(A,B)\\nm=parallel(C,l)\\nD=point(4,8)\\nt=line(A,D)\\nE=intersection(m,t)\\ndraw l,m,t\\nassert parallel(l,m)\"));"
+        ]
+      },
+      {
+        "student": "Add an upward ray starting at the lower crossing.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"r=ray(A,D)\\ndraw r\"));"
+        ],
+        "expect": {
+          "constructionIncludes": [
+            "r=ray(A,D)",
+            "draw r"
+          ]
+        }
+      },
+      {
+        "student": "Where does that ray start?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"A\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "A: point (0, 0)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-parallel-finite-strip",
+    "family": "parallel-finite-strip",
+    "category": "geometry",
+    "focus": "finite connector between parallel crossings",
+    "turns": [
+      {
+        "student": "Draw horizontal parallel lines through zero zero and zero four, crossed by a line toward four eight.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,4)\\nl=line(A,B)\\nm=parallel(C,l)\\nD=point(4,8)\\nt=line(A,D)\\nE=intersection(m,t)\\ndraw l,m,t\\nassert parallel(l,m)\"));"
+        ]
+      },
+      {
+        "student": "Highlight just the piece between the crossings.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"s=segment(A,E)\\ndraw s\\nM=midpoint(A,E)\\ndraw M\"));"
+        ]
+      },
+      {
+        "student": "Where is its midpoint?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"M\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "M: point (1, 2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-segment-midpoint",
+    "family": "segment-midpoint",
+    "category": "geometry",
+    "focus": "midpoint of oblique segment",
+    "turns": [
+      {
+        "student": "Put A at negative two one and B at six five, and join them.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(-2,1)\\nB=point(6,5)\\ndraw segment(A,B)\"));"
+        ]
+      },
+      {
+        "student": "Mark its midpoint.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"M=midpoint(A,B)\\ndraw M\"));"
+        ]
+      },
+      {
+        "student": "Where is that point?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"M\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "M: point (2, 3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-distance-diagonal",
+    "family": "distance-diagonal",
+    "category": "geometry",
+    "focus": "coordinate distance rather than coordinate sum",
+    "turns": [
+      {
+        "student": "Draw A at one two and B at four six.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(1,2)\\nB=point(4,6)\\ndraw segment(A,B)\"));"
+        ]
+      },
+      {
+        "student": "Label the length of that segment.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"d=distance(A,B)\\nmeasure segment(A,B)\"));"
+        ]
+      },
+      {
+        "student": "How long is it?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"d\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "d: 5."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-reflect-x-axis",
+    "family": "reflect-x-axis",
+    "category": "geometry",
+    "focus": "reflection across horizontal axis",
+    "turns": [
+      {
+        "student": "Put P at three negative four and draw the x axis.",
+        "programs": [
+          "problem.save(geometry.construct(\"P=point(3,-4)\\nA=point(0,0)\\nB=point(5,0)\\nl=line(A,B)\\ndraw P,l\"));"
+        ]
+      },
+      {
+        "student": "Reflect P over that axis.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"Q=reflection(P,l)\\ndraw Q\"));"
+        ]
+      },
+      {
+        "student": "Where did it land?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"Q\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Q: point (3, 4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-reflect-y-axis",
+    "family": "reflect-y-axis",
+    "category": "geometry",
+    "focus": "reflection across vertical axis",
+    "turns": [
+      {
+        "student": "Put P at negative three two and draw the y axis.",
+        "programs": [
+          "problem.save(geometry.construct(\"P=point(-3,2)\\nA=point(0,0)\\nB=point(0,5)\\nl=line(A,B)\\ndraw P,l\"));"
+        ]
+      },
+      {
+        "student": "Reflect it across that axis.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"Q=reflection(P,l)\\ndraw Q\"));"
+        ]
+      },
+      {
+        "student": "Where is the reflected point?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"Q\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Q: point (3, 2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-reflect-diagonal",
+    "family": "reflect-diagonal",
+    "category": "geometry",
+    "focus": "reflection across y equals x",
+    "turns": [
+      {
+        "student": "Draw the line through zero zero and four four, with P at two five.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,4)\\nP=point(2,5)\\nl=line(A,B)\\ndraw l,P\"));"
+        ]
+      },
+      {
+        "student": "Reflect P across the diagonal.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"Q=reflection(P,l)\\ndraw Q\"));"
+        ]
+      },
+      {
+        "student": "Where is the image?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"Q\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Q: point (5, 2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-project-oblique",
+    "family": "project-oblique",
+    "category": "geometry",
+    "focus": "perpendicular projection onto oblique line",
+    "turns": [
+      {
+        "student": "Draw a line through zero zero and four four, and P at four zero.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,4)\\nP=point(4,0)\\nl=line(A,B)\\ndraw l,P\"));"
+        ]
+      },
+      {
+        "student": "Drop P straight onto the line at a right angle.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"F=foot(P,l)\\ndraw segment(P,F)\\nrightangle P,F,B\"));"
+        ]
+      },
+      {
+        "student": "Where is the foot?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"F\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "F: point (2, 2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-perpendicular-bisector",
+    "family": "perpendicular-bisector",
+    "category": "geometry",
+    "focus": "midpoint perpendicular has equidistant points",
+    "turns": [
+      {
+        "student": "Draw A at zero zero and B at six zero.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(6,0)\\nl=line(A,B)\\ndraw segment(A,B)\"));"
+        ]
+      },
+      {
+        "student": "Draw the perpendicular bisector and mark a point at three four.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"M=midpoint(A,B)\\np=perpendicular(M,l)\\nP=point(3,4)\\ndraw p,P\\nassert on(P,p)\\nassert equal(distance(P,A),distance(P,B))\\nd=distance(P,A)\"));"
+        ]
+      },
+      {
+        "student": "How far is that point from A?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"d\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "d: 5."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-right-angle-bisector",
+    "family": "right-angle-bisector",
+    "category": "geometry",
+    "focus": "bisector of coordinate right angle",
+    "turns": [
+      {
+        "student": "Draw A at four zero, B at zero zero, and C at zero four.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(4,0)\\nB=point(0,0)\\nC=point(0,4)\\ndraw ray(B,A),ray(B,C)\"));"
+        ]
+      },
+      {
+        "student": "Bisect the angle at B and cross it with the line through A and C.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"l=bisector(A,B,C)\\nM=intersection(l,line(A,C))\\ndraw l,M\"));"
+        ]
+      },
+      {
+        "student": "Where does it hit AC?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"M\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "M: point (2, 2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-triangle-centroid",
+    "family": "triangle-centroid",
+    "category": "geometry",
+    "focus": "centroid from all three coordinates",
+    "turns": [
+      {
+        "student": "Draw a triangle at zero zero, six zero, and zero six.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(6,0)\\nC=point(0,6)\\ndraw triangle(A,B,C)\"));"
+        ]
+      },
+      {
+        "student": "Mark the centroid and the medians.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"G=centroid(A,B,C)\\nM=midpoint(B,C)\\nN=midpoint(A,C)\\nK=midpoint(A,B)\\ndraw G,segment(A,M),segment(B,N),segment(C,K)\"));"
+        ],
+        "expect": {
+          "constructionIncludes": [
+            "M=midpoint(B,C)",
+            "N=midpoint(A,C)",
+            "K=midpoint(A,B)",
+            "draw G,segment(A,M),segment(B,N),segment(C,K)"
+          ]
+        }
+      },
+      {
+        "student": "Where is the balance point?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"G\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "G: point (2, 2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-right-circumcenter",
+    "family": "right-circumcenter",
+    "category": "geometry",
+    "focus": "circumcenter at hypotenuse midpoint",
+    "turns": [
+      {
+        "student": "Draw a right triangle at zero zero, six zero, and zero eight.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(6,0)\\nC=point(0,8)\\ndraw triangle(A,B,C)\"));"
+        ]
+      },
+      {
+        "student": "Mark the circumcenter and draw its circle.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"O=circumcenter(A,B,C)\\nc=circumcircle(A,B,C)\\ndraw O,c\"));"
+        ]
+      },
+      {
+        "student": "Where is the center?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"O\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "O: point (3, 4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-right-orthocenter",
+    "family": "right-orthocenter",
+    "category": "geometry",
+    "focus": "right triangle orthocenter is right vertex",
+    "turns": [
+      {
+        "student": "Draw a triangle at zero zero, five zero, and zero twelve.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(5,0)\\nC=point(0,12)\\ndraw triangle(A,B,C)\"));"
+        ]
+      },
+      {
+        "student": "Mark where its altitudes meet.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"H=orthocenter(A,B,C)\\ndraw H\"));"
+        ]
+      },
+      {
+        "student": "Where is that?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"H\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "H: point (0, 0)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-triangle-incenter",
+    "family": "triangle-incenter",
+    "category": "geometry",
+    "focus": "incenter differs from centroid",
+    "turns": [
+      {
+        "student": "Draw a triangle at zero zero, four zero, and zero three.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,3)\\ndraw triangle(A,B,C)\"));"
+        ]
+      },
+      {
+        "student": "Draw the inscribed circle and its center.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"I=incenter(A,B,C)\\nc=incircle(A,B,C)\\ndraw I,c\"));"
+        ]
+      },
+      {
+        "student": "Where is its center?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"I\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "I: point (1, 1)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-circle-chord-midpoint",
+    "family": "circle-chord-midpoint",
+    "category": "geometry",
+    "focus": "diameter chord midpoint equals center",
+    "turns": [
+      {
+        "student": "Draw a circle centered at zero zero with radius five, and its diameter from negative five zero to five zero.",
+        "programs": [
+          "problem.save(geometry.construct(\"O=point(0,0)\\nc=circle(O,5)\\nA=point(-5,0)\\nB=point(5,0)\\ndraw c,segment(A,B)\"));"
+        ]
+      },
+      {
+        "student": "Mark the midpoint of that chord.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"M=midpoint(A,B)\\ndraw M\"));"
+        ]
+      },
+      {
+        "student": "Where exactly is that midpoint?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"M\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "M: point (0, 0)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-circle-horizontal-intersections",
+    "family": "circle-horizontal-intersections",
+    "category": "geometry",
+    "focus": "explicit two branch circle intersections",
+    "turns": [
+      {
+        "student": "Draw a circle at zero zero with radius five and the horizontal line through y equals three.",
+        "programs": [
+          "problem.save(geometry.construct(\"O=point(0,0)\\nc=circle(O,5)\\nA=point(-6,3)\\nB=point(6,3)\\nl=line(A,B)\\ndraw c,l\"));"
+        ]
+      },
+      {
+        "student": "Mark the left-hand intersection.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"P=intersection(c,l,1)\\ndraw P\"));"
+        ]
+      },
+      {
+        "student": "Where is it?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"P\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "P: point (-4, 3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-circle-second-branch",
+    "family": "circle-second-branch",
+    "category": "geometry",
+    "focus": "choose right intersection rather than ambiguous default",
+    "turns": [
+      {
+        "student": "Draw a circle of radius five at the origin and a horizontal line through height three.",
+        "programs": [
+          "problem.save(geometry.construct(\"O=point(0,0)\\nc=circle(O,5)\\nA=point(-6,3)\\nB=point(6,3)\\nl=line(A,B)\\ndraw c,l\"));"
+        ]
+      },
+      {
+        "student": "Mark the right crossing this time.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"Q=intersection(c,l,2)\\ndraw Q\"));"
+        ]
+      },
+      {
+        "student": "Where is the point on the right?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"Q\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Q: point (4, 3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-tangent-foot",
+    "family": "tangent-foot",
+    "category": "geometry",
+    "focus": "perpendicular radius at tangent point",
+    "turns": [
+      {
+        "student": "Draw a circle at zero zero with radius three and a point T at three zero.",
+        "programs": [
+          "problem.save(geometry.construct(\"O=point(0,0)\\nT=point(3,0)\\nc=circle(O,T)\\ndraw c,O,T\"));"
+        ]
+      },
+      {
+        "student": "Draw the tangent at T using a perpendicular to the radius.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"r=line(O,T)\\nt=perpendicular(T,r)\\ndraw t\\nassert perpendicular(r,t)\"));"
+        ],
+        "expect": {
+          "constructionIncludes": [
+            "t=perpendicular(T,r)",
+            "draw t",
+            "assert perpendicular(r,t)"
+          ]
+        }
+      },
+      {
+        "student": "Where does the tangent touch?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"T\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "T: point (3, 0)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-two-circle-upper",
+    "family": "two-circle-upper",
+    "category": "geometry",
+    "focus": "upper intersection of overlapping equal circles",
+    "turns": [
+      {
+        "student": "Draw circles centered at zero zero and six zero, both radius five.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(6,0)\\nc=circle(A,5)\\nd=circle(B,5)\\ndraw c,d\"));"
+        ]
+      },
+      {
+        "student": "Mark their upper crossing.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"P=intersection(c,d,2)\\ndraw P\"));"
+        ]
+      },
+      {
+        "student": "Where is that?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"P\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "P: point (3, 4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-two-circle-lower",
+    "family": "two-circle-lower",
+    "category": "geometry",
+    "focus": "lower intersection branch ordering",
+    "turns": [
+      {
+        "student": "Draw circles at zero zero and six zero with radius five each.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(6,0)\\nc=circle(A,5)\\nd=circle(B,5)\\ndraw c,d\"));"
+        ]
+      },
+      {
+        "student": "Show the lower crossing and join it to both centers.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"P=intersection(c,d,1)\\ndraw P,segment(A,P),segment(B,P)\"));"
+        ]
+      },
+      {
+        "student": "Where is that lower point?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"P\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "P: point (3, -4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-square-diagonal-center",
+    "family": "square-diagonal-center",
+    "category": "geometry",
+    "focus": "intersection of diagonals of coordinate square",
+    "turns": [
+      {
+        "student": "Draw a square with corners zero zero, four zero, four four, and zero four.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(4,4)\\nD=point(0,4)\\ndraw polygon(A,B,C,D)\"));"
+        ]
+      },
+      {
+        "student": "Cross the diagonals and mark their meeting point.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"M=intersection(line(A,C),line(B,D))\\ndraw segment(A,C),segment(B,D),M\"));"
+        ]
+      },
+      {
+        "student": "Where is the center?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"M\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "M: point (2, 2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-kite-perpendicular-diagonals",
+    "family": "kite-perpendicular-diagonals",
+    "category": "geometry",
+    "focus": "kite diagonal intersection right angle",
+    "turns": [
+      {
+        "student": "Draw a kite at zero four, three zero, zero negative two, and negative three zero.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,4)\\nB=point(3,0)\\nC=point(0,-2)\\nD=point(-3,0)\\ndraw polygon(A,B,C,D)\"));"
+        ]
+      },
+      {
+        "student": "Add its diagonals and mark their right angle.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"M=intersection(line(A,C),line(B,D))\\ndraw segment(A,C),segment(B,D)\\nrightangle A,M,B\\nassert perpendicular(line(A,C),line(B,D))\"));"
+        ]
+      },
+      {
+        "student": "Where do they cross?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"M\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "M: point (0, 0)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-midpoint-follows-endpoint",
+    "family": "midpoint-follows-endpoint",
+    "category": "geometry",
+    "focus": "derived midpoint recomputes after endpoint edit",
+    "turns": [
+      {
+        "student": "Draw A at zero zero and B at four zero, and show their midpoint.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nM=midpoint(A,B)\\ndraw segment(A,B),M\"));"
+        ]
+      },
+      {
+        "student": "Move B up to four six.",
+        "programs": [
+          "problem.save(geometry.editObject(geometry.current(),\"B\",\"point(4,6)\"));"
+        ]
+      },
+      {
+        "student": "Where is the midpoint now?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"M\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "M: point (2, 3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-reflected-point-follows-original",
+    "family": "reflected-point-follows-original",
+    "category": "geometry",
+    "focus": "reflection dependency preserves axis",
+    "turns": [
+      {
+        "student": "Put P at two three and its reflection across the x axis.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nl=line(A,B)\\nP=point(2,3)\\nQ=reflection(P,l)\\ndraw l,P,Q\"));"
+        ]
+      },
+      {
+        "student": "Move the original to negative one five.",
+        "programs": [
+          "problem.save(geometry.editObject(geometry.current(),\"P\",\"point(-1,5)\"));"
+        ]
+      },
+      {
+        "student": "Where is the reflection now?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"Q\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "Q: point (-1, -5)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-parallel-follows-base",
+    "family": "parallel-follows-base",
+    "category": "geometry",
+    "focus": "parallel derived line changes when base rotates",
+    "turns": [
+      {
+        "student": "Draw a line from A at zero zero to B at four zero, its parallel through zero three, and a vertical line at x equals two.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,3)\\nl=line(A,B)\\np=parallel(C,l)\\nD=point(2,-5)\\nE=point(2,8)\\nt=line(D,E)\\nP=intersection(p,t)\\ndraw l,p,t\"));"
+        ]
+      },
+      {
+        "student": "Move B to four four.",
+        "programs": [
+          "problem.save(geometry.editObject(geometry.current(),\"B\",\"point(4,4)\"));"
+        ]
+      },
+      {
+        "student": "Where does the parallel hit the vertical line now?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"P\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "P: point (2, 5)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-circle-point-radius-update",
+    "family": "circle-point-radius-update",
+    "category": "geometry",
+    "focus": "circle radius linked to circumference point",
+    "turns": [
+      {
+        "student": "Draw a circle centered at zero zero through P at three zero.",
+        "programs": [
+          "problem.save(geometry.construct(\"O=point(0,0)\\nP=point(3,0)\\nc=circle(O,P)\\ndraw c,O,P\"));"
+        ]
+      },
+      {
+        "student": "Move P to zero five.",
+        "programs": [
+          "problem.save(geometry.editObject(geometry.current(),\"P\",\"point(0,5)\"));"
+        ]
+      },
+      {
+        "student": "Read the circle now.",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"c\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "radius 5."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-centroid-follows-vertex",
+    "family": "centroid-follows-vertex",
+    "category": "geometry",
+    "focus": "triangle center recomputes with moved vertex",
+    "turns": [
+      {
+        "student": "Draw a triangle at zero zero, six zero, zero six, and mark its centroid.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(6,0)\\nC=point(0,6)\\nG=centroid(A,B,C)\\ndraw triangle(A,B,C),G\"));"
+        ]
+      },
+      {
+        "student": "Move C to zero nine.",
+        "programs": [
+          "problem.save(geometry.editObject(geometry.current(),\"C\",\"point(0,9)\"));"
+        ]
+      },
+      {
+        "student": "Where is the centroid now?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"G\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "G: point (2, 3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-foot-follows-height",
+    "family": "foot-follows-height",
+    "category": "geometry",
+    "focus": "projection remains on baseline after moving external point",
+    "turns": [
+      {
+        "student": "Draw the horizontal line through zero zero and six zero with P at two four and its foot.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(6,0)\\nl=line(A,B)\\nP=point(2,4)\\nF=foot(P,l)\\ndraw l,P,segment(P,F)\"));"
+        ]
+      },
+      {
+        "student": "Move P to five seven.",
+        "programs": [
+          "problem.save(geometry.editObject(geometry.current(),\"P\",\"point(5,7)\"));"
+        ]
+      },
+      {
+        "student": "Where is the foot now?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"F\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "F: point (5, 0)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-circle-center-translation",
+    "family": "circle-center-translation",
+    "category": "geometry",
+    "focus": "circle through a fixed circumference point recomputes its radius when the center moves",
+    "turns": [
+      {
+        "student": "Draw a circle centered at zero zero through four zero.",
+        "programs": [
+          "problem.save(geometry.construct(\"O=point(0,0)\\nP=point(4,0)\\nc=circle(O,P)\\ndraw c,O,P\"));"
+        ]
+      },
+      {
+        "student": "Move its center to one zero but keep P fixed.",
+        "programs": [
+          "problem.save(geometry.editObject(geometry.current(),\"O\",\"point(1,0)\"));"
+        ]
+      },
+      {
+        "student": "What does the circle say now?",
+        "programs": [],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "radius 3"
+          ]
+        },
+        "previews": [
+          "geometry.inspect(geometry.current(),\"c\");"
+        ],
+        "status": "explanation",
+        "message": "The circle is now centered at (1, 0), with radius 3."
+      }
+    ]
+  },
+  {
+    "id": "geo-intersection-follows-transversal",
+    "family": "intersection-follows-transversal",
+    "category": "geometry",
+    "focus": "crossing updates when transversal direction changes",
+    "turns": [
+      {
+        "student": "Draw two horizontal parallel lines through zero zero and zero four, with a transversal toward four eight.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,4)\\nl=line(A,B)\\nm=parallel(C,l)\\nD=point(4,8)\\nt=line(A,D)\\nE=intersection(m,t)\\ndraw l,m,t\\nassert parallel(l,m)\"));"
+        ]
+      },
+      {
+        "student": "Move D to eight eight.",
+        "programs": [
+          "problem.save(geometry.editObject(geometry.current(),\"D\",\"point(8,8)\"));"
+        ]
+      },
+      {
+        "student": "Where is the upper crossing now?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"E\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "E: point (4, 4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-midsegment-follows-triangle",
+    "family": "midsegment-follows-triangle",
+    "category": "geometry",
+    "focus": "midsegment remains parallel under vertex movement",
+    "turns": [
+      {
+        "student": "Draw A zero zero, B eight zero, C zero four, and join the midpoints of AC and BC.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(8,0)\\nC=point(0,4)\\nM=midpoint(A,C)\\nN=midpoint(B,C)\\nd=distance(M,N)\\ndraw triangle(A,B,C),segment(M,N)\\nassert parallel(line(M,N),line(A,B))\"));"
+        ]
+      },
+      {
+        "student": "Move C to two six.",
+        "programs": [
+          "problem.save(geometry.editObject(geometry.current(),\"C\",\"point(2,6)\"));"
+        ]
+      },
+      {
+        "student": "How long is that midpoint segment now?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"d\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "d: 4."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-coordinate-correction",
+    "family": "coordinate-correction",
+    "category": "geometry",
+    "focus": "natural correction resolves negative coordinate not wrong object",
+    "turns": [
+      {
+        "student": "Draw A at two three and B at six three, and mark the midpoint.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(2,3)\\nB=point(6,3)\\nM=midpoint(A,B)\\ndraw segment(A,B),M\"));"
+        ]
+      },
+      {
+        "student": "Wait, I meant A at negative two three.",
+        "programs": [
+          "problem.save(geometry.editObject(geometry.current(),\"A\",\"point(-2,3)\"));"
+        ]
+      },
+      {
+        "student": "Where does the midpoint end up?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"M\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "M: point (2, 3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-median-two-to-one",
+    "family": "median-two-to-one",
+    "category": "geometry",
+    "focus": "centroid partitions a median in two to one ratio",
+    "turns": [
+      {
+        "student": "Draw triangle A zero six, B negative three zero, C three zero.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,6)\\nB=point(-3,0)\\nC=point(3,0)\\ndraw triangle(A,B,C)\"));"
+        ]
+      },
+      {
+        "student": "Add the median from A and the centroid.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"M=midpoint(B,C)\\nG=centroid(A,B,C)\\nr=distance(A,G)/distance(G,M)\\ndraw segment(A,M),G\"));"
+        ]
+      },
+      {
+        "student": "What is the ratio of the two pieces, longer over shorter?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"r\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "r: 2."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-circumcircle-equal-radii",
+    "family": "circumcircle-equal-radii",
+    "category": "geometry",
+    "focus": "three circumradii checked with named scalar",
+    "turns": [
+      {
+        "student": "Draw triangle A zero zero, B six zero, C zero eight.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(6,0)\\nC=point(0,8)\\ndraw triangle(A,B,C)\"));"
+        ]
+      },
+      {
+        "student": "Draw its circumcircle and connect the center to A.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"O=circumcenter(A,B,C)\\nc=circumcircle(A,B,C)\\nr=distance(O,A)\\nassert equal(distance(O,A),distance(O,B))\\nassert equal(distance(O,B),distance(O,C))\\ndraw c,segment(O,A)\"));"
+        ]
+      },
+      {
+        "student": "What is that radius?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"r\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "r: 5."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-altitude-outside",
+    "family": "altitude-outside",
+    "category": "geometry",
+    "focus": "obtuse triangle altitude can land outside side",
+    "turns": [
+      {
+        "student": "Draw A zero zero, B four zero, C negative two three.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(-2,3)\\ndraw triangle(A,B,C)\"));"
+        ]
+      },
+      {
+        "student": "Extend AB and drop the altitude from C.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"l=line(A,B)\\nF=foot(C,l)\\ndraw l,segment(C,F)\\nrightangle A,F,C\"));"
+        ]
+      },
+      {
+        "student": "Where does the altitude land?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"F\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "F: point (-2, 0)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-isosceles-altitude-midpoint",
+    "family": "isosceles-altitude-midpoint",
+    "category": "geometry",
+    "focus": "altitude also bisects base in symmetric triangle",
+    "turns": [
+      {
+        "student": "Draw A negative four zero, B four zero, C zero three.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(-4,0)\\nB=point(4,0)\\nC=point(0,3)\\ndraw triangle(A,B,C)\"));"
+        ]
+      },
+      {
+        "student": "Drop the altitude from the top and compare its foot with the midpoint.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"F=foot(C,line(A,B))\\nM=midpoint(A,B)\\nd=distance(F,M)\\ndraw segment(C,F),M\"));"
+        ]
+      },
+      {
+        "student": "How far apart are those two points?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"d\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "d: 0."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-rectangle-outside-extension",
+    "family": "rectangle-outside-extension",
+    "category": "geometry",
+    "focus": "intersect full extended side lines beyond segment",
+    "turns": [
+      {
+        "student": "Draw a rectangle from zero zero to four zero to four three to zero three.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(4,3)\\nD=point(0,3)\\ndraw polygon(A,B,C,D)\"));"
+        ]
+      },
+      {
+        "student": "Extend the top edge and cross it with a vertical line at x six.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"P=point(6,0)\\nQ=point(6,5)\\nE=intersection(line(D,C),line(P,Q))\\ndraw line(D,C),line(P,Q),E\"));"
+        ]
+      },
+      {
+        "student": "Where do the extensions meet?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"E\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "E: point (6, 3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-circle-diameter-right-angle",
+    "family": "circle-diameter-right-angle",
+    "category": "geometry",
+    "focus": "angle in semicircle represented by exact points",
+    "turns": [
+      {
+        "student": "Draw a circle at zero zero with radius five and diameter endpoints negative five zero and five zero.",
+        "programs": [
+          "problem.save(geometry.construct(\"O=point(0,0)\\nA=point(-5,0)\\nB=point(5,0)\\nc=circle(O,5)\\ndraw c,segment(A,B)\"));"
+        ]
+      },
+      {
+        "student": "Put C at zero five and join it to both endpoints. Mark the angle at C as a right angle.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"C=point(0,5)\\ndraw triangle(A,B,C)\\nassert on(C,c)\\nassert perpendicular(line(C,A),line(C,B))\\nrightangle A,C,B\"));"
+        ],
+        "expect": {
+          "angles": [
+            {
+              "points": [
+                "A",
+                "C",
+                "B"
+              ],
+              "degrees": 90
+            }
+          ]
+        }
+      },
+      {
+        "student": "Where is C again?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"C\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "C: point (0, 5)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-rhombus-diagonal-halves",
+    "family": "rhombus-diagonal-halves",
+    "category": "geometry",
+    "focus": "rhombus diagonal halves produce right triangle",
+    "turns": [
+      {
+        "student": "Draw a diamond with corners zero three, four zero, zero negative three, negative four zero.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,3)\\nB=point(4,0)\\nC=point(0,-3)\\nD=point(-4,0)\\ndraw polygon(A,B,C,D)\"));"
+        ]
+      },
+      {
+        "student": "Add both diagonals and label one side length.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"M=intersection(line(A,C),line(B,D))\\ns=distance(A,B)\\ndraw segment(A,C),segment(B,D)\\nrightangle A,M,B\\nmeasure segment(A,B)\"));"
+        ],
+        "expect": {
+          "constructionIncludes": [
+            "measure segment(A,B)"
+          ]
+        }
+      },
+      {
+        "student": "How long is a side?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"s\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "s: 5."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-parallel-equal-intercepts",
+    "family": "parallel-equal-intercepts",
+    "category": "geometry",
+    "focus": "equal spacing of parallel lines along one transversal",
+    "turns": [
+      {
+        "student": "Draw three horizontal lines at heights zero, two, and four, crossed by y equals x.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,0)\\nB=point(4,0)\\nC=point(0,2)\\nD=point(0,4)\\nE=point(6,6)\\nl=line(A,B)\\nm=parallel(C,l)\\nn=parallel(D,l)\\nt=line(A,E)\\nP=intersection(m,t)\\nQ=intersection(n,t)\\ndraw l,m,n,t\"));"
+        ]
+      },
+      {
+        "student": "Mark the crossings and compare the two successive pieces.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"r=distance(A,P)/distance(P,Q)\\nassert equal(distance(A,P),distance(P,Q))\\ndraw P,Q\"));"
+        ]
+      },
+      {
+        "student": "What is the ratio of those lengths?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"r\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "r: 1."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-triangle-angle-bisector-base",
+    "family": "triangle-angle-bisector-base",
+    "category": "geometry",
+    "focus": "angle bisector meets symmetric base midpoint",
+    "turns": [
+      {
+        "student": "Draw an isosceles triangle with top A zero four and base corners B negative three zero and C three zero.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(0,4)\\nB=point(-3,0)\\nC=point(3,0)\\ndraw triangle(A,B,C)\"));"
+        ]
+      },
+      {
+        "student": "Bisect the top angle and mark where it hits the base.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"l=bisector(B,A,C)\\nP=intersection(l,line(B,C))\\nd=distance(A,P)\\ndraw l,P\"));"
+        ]
+      },
+      {
+        "student": "How far from A does it reach the base?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"d\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "d: 4."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "geo-translated-midpoint",
+    "family": "translated-midpoint",
+    "category": "geometry",
+    "focus": "negative coordinates on both endpoints",
+    "turns": [
+      {
+        "student": "Draw a segment from A negative six negative four to B negative two two.",
+        "programs": [
+          "problem.save(geometry.construct(\"A=point(-6,-4)\\nB=point(-2,2)\\ndraw segment(A,B)\"));"
+        ]
+      },
+      {
+        "student": "Mark the point halfway along it.",
+        "programs": [
+          "problem.save(geometry.extend(geometry.current(),\"M=midpoint(A,B)\\ndraw M\"));"
+        ]
+      },
+      {
+        "student": "What are the midpoint coordinates?",
+        "programs": [
+          "geometry.inspect(geometry.current(),\"M\");"
+        ],
+        "expect": {
+          "readOnly": true,
+          "messageIncludes": [
+            "M: point (-4, -1)."
+          ]
+        }
+      }
+    ]
+  }
+]

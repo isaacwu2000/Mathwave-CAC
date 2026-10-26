@@ -1,0 +1,3263 @@
+[
+  {
+    "id": "alg-isolate-added-constant",
+    "family": "isolate-added-constant",
+    "category": "algebra",
+    "focus": "Remove an added constant before dividing",
+    "turns": [
+      {
+        "student": "I have two x plus three equals eleven.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+3=11\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Take three off both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Now divide both sides by two.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 4"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-restore-subtracted-constant",
+    "family": "restore-subtracted-constant",
+    "category": "algebra",
+    "focus": "Undo subtraction before coefficient division",
+    "turns": [
+      {
+        "student": "Put down five x minus seven equals eighteen.",
+        "programs": [
+          "problem.save(math.equation(\"5*x-7=18\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Add seven to both sides first.",
+        "programs": [
+          "problem.save(math.addBothSides(problem.currentEquation(),7));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Then divide everything by five.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),5));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 5"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-negative-leading-coefficient",
+    "family": "negative-leading-coefficient",
+    "category": "algebra",
+    "focus": "Divide by a negative coefficient",
+    "turns": [
+      {
+        "student": "My equation is negative three x plus six equals twenty-one.",
+        "programs": [
+          "problem.save(math.equation(\"-3*x+6=21\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract six on each side.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),6));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Divide both sides by negative three.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),-3));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "-(3 * x) / -3 = -5"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-negative-right-side",
+    "family": "negative-right-side",
+    "category": "algebra",
+    "focus": "Keep a negative answer when isolating x",
+    "turns": [
+      {
+        "student": "Can you write four x plus nine equals one?",
+        "programs": [
+          "problem.save(math.equation(\"4*x+9=1\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Take away nine on both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),9));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Divide by four on each side.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = -2"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-fraction-coefficient",
+    "family": "fraction-coefficient",
+    "category": "algebra",
+    "focus": "Clear a fractional coefficient with its denominator",
+    "turns": [
+      {
+        "student": "Start with x over three plus two equals seven.",
+        "programs": [
+          "problem.save(math.equation(\"x/3+2=7\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract two on both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Multiply both sides by three.",
+        "programs": [
+          "problem.save(math.multiplyBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 15"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-decimal-coefficient",
+    "family": "decimal-coefficient",
+    "category": "algebra",
+    "focus": "Use a decimal coefficient without rounding the solution",
+    "turns": [
+      {
+        "student": "Write zero point five x minus one equals three.",
+        "programs": [
+          "problem.save(math.equation(\"0.5*x-1=3\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Add one to both sides.",
+        "programs": [
+          "problem.save(math.addBothSides(problem.currentEquation(),1));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Divide both sides by zero point five.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),0.5));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 8"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-grouped-quotient",
+    "family": "grouped-quotient",
+    "category": "algebra",
+    "focus": "Clear a denominator around a whole sum",
+    "turns": [
+      {
+        "student": "My problem is the quantity x plus four over two equals six.",
+        "programs": [
+          "problem.save(math.equation(\"(x+4)/2=6\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Multiply both sides by two.",
+        "programs": [
+          "problem.save(math.multiplyBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Then subtract four from each side.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 8"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-variables-both-sides",
+    "family": "variables-both-sides",
+    "category": "algebra",
+    "focus": "Collect variable terms before constants",
+    "turns": [
+      {
+        "student": "Write seven x minus two equals three x plus ten.",
+        "programs": [
+          "problem.save(math.equation(\"7*x-2=3*x+10\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract three x from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),\"3*x\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Add two on both sides.",
+        "programs": [
+          "problem.save(math.addBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Then divide by four.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 3"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-constant-first-order",
+    "family": "constant-first-order",
+    "category": "algebra",
+    "focus": "Handle a constant before the variable term",
+    "turns": [
+      {
+        "student": "Can you put up twelve equals three x plus six?",
+        "programs": [
+          "problem.save(math.equation(\"12=3*x+6\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Swap the two sides so x is on the left.",
+        "programs": [
+          "problem.save(math.swapSides(problem.currentEquation()));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract six from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),6));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Divide each side by three.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 2"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-fraction-answer-retained",
+    "family": "fraction-answer-retained",
+    "category": "algebra",
+    "focus": "Keep a noninteger solution without rounding it to a whole number",
+    "turns": [
+      {
+        "student": "I got three x plus one equals six.",
+        "programs": [
+          "problem.save(math.equation(\"3*x+1=6\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Take away one from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),1));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Divide both sides by three.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 1.6666666666666667"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-double-negative-operand",
+    "family": "double-negative-operand",
+    "category": "algebra",
+    "focus": "Subtract a negative number on both sides",
+    "turns": [
+      {
+        "student": "Put up x minus four equals negative nine.",
+        "programs": [
+          "problem.save(math.equation(\"x-4=-9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract negative four from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),-4));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = -5"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-negative-denominator",
+    "family": "negative-denominator",
+    "category": "algebra",
+    "focus": "Multiply by a negative denominator",
+    "turns": [
+      {
+        "student": "Write x divided by negative two equals five.",
+        "programs": [
+          "problem.save(math.equation(\"x/(-2)=5\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Multiply both sides by negative two.",
+        "programs": [
+          "problem.save(math.multiplyBothSides(problem.currentEquation(),-2));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = -10"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-distribute-positive-factor",
+    "family": "distribute-positive-factor",
+    "category": "algebra",
+    "focus": "Simplify a product before a linear step",
+    "turns": [
+      {
+        "student": "Start with three times the quantity x plus two equals fifteen.",
+        "programs": [
+          "problem.save(math.equation(\"3*(x+2)=15\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Divide both sides by three first.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Take two off each side.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 3"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-distribute-negative-factor",
+    "family": "distribute-negative-factor",
+    "category": "algebra",
+    "focus": "Carry the negative outside a parenthesized difference",
+    "turns": [
+      {
+        "student": "Write negative two times x minus three in brackets equals eight.",
+        "programs": [
+          "problem.save(math.equation(\"-2*(x-3)=8\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Divide by negative two on both sides.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),-2));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Add three to both sides.",
+        "programs": [
+          "problem.save(math.addBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = -1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-combine-repeated-variable",
+    "family": "combine-repeated-variable",
+    "category": "algebra",
+    "focus": "Combine variable terms before isolation",
+    "turns": [
+      {
+        "student": "Put down two x plus three x minus four equals eleven.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+3*x-4=11\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Combine what you can first.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Add four to both sides.",
+        "programs": [
+          "problem.save(math.addBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Then divide by five.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),5));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 3"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-zero-solution",
+    "family": "zero-solution",
+    "category": "algebra",
+    "focus": "Preserve a valid zero solution",
+    "turns": [
+      {
+        "student": "Can you write eight x plus five equals five?",
+        "programs": [
+          "problem.save(math.equation(\"8*x+5=5\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract five from each side.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),5));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Divide by eight.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),8));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 0"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-negative-variable-on-right",
+    "family": "negative-variable-on-right",
+    "category": "algebra",
+    "focus": "Swap sides before dealing with a negative variable",
+    "turns": [
+      {
+        "student": "I have six equals negative y plus ten.",
+        "programs": [
+          "problem.save(math.equation(\"6=-y+10\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Put the side with y on the left.",
+        "programs": [
+          "problem.save(math.swapSides(problem.currentEquation()));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract ten from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),10));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Multiply both sides by negative one.",
+        "programs": [
+          "problem.save(math.multiplyBothSides(problem.currentEquation(),-1));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "-y * -1 = 4"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-different-letter-a",
+    "family": "different-letter-a",
+    "category": "algebra",
+    "focus": "Keep a as the variable throughout",
+    "turns": [
+      {
+        "student": "The formula is four a minus twelve equals zero.",
+        "programs": [
+          "problem.save(math.equation(\"4*a-12=0\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Add twelve on both sides.",
+        "programs": [
+          "problem.save(math.addBothSides(problem.currentEquation(),12));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Divide both sides by four.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "a = 3"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-different-letter-t",
+    "family": "different-letter-t",
+    "category": "algebra",
+    "focus": "Do not substitute x for a time variable",
+    "turns": [
+      {
+        "student": "Write two t plus one equals nine.",
+        "programs": [
+          "problem.save(math.equation(\"2*t+1=9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Take one away on each side.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),1));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Divide by two.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "t = 4"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-fraction-offset",
+    "family": "fraction-offset",
+    "category": "algebra",
+    "focus": "Remove an exact fractional constant",
+    "turns": [
+      {
+        "student": "Put down x plus one half equals three halves.",
+        "programs": [
+          "problem.save(math.equation(\"x+1/2=3/2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract one half from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),\"1/2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-fractional-right-side",
+    "family": "fractional-right-side",
+    "category": "algebra",
+    "focus": "Clear denominators before solving",
+    "turns": [
+      {
+        "student": "Write x over four equals three halves.",
+        "programs": [
+          "problem.save(math.equation(\"x/4=3/2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Multiply both sides by four.",
+        "programs": [
+          "problem.save(math.multiplyBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 6"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-decimal-offset",
+    "family": "decimal-offset",
+    "category": "algebra",
+    "focus": "Maintain decimal value through subtraction",
+    "turns": [
+      {
+        "student": "Can you write x plus zero point seven five equals two point two five?",
+        "programs": [
+          "problem.save(math.equation(\"x+0.75=2.25\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Take zero point seven five off both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),0.75));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 1.5"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-move-negative-variable",
+    "family": "move-negative-variable",
+    "category": "algebra",
+    "focus": "Collect a negative variable term by addition",
+    "turns": [
+      {
+        "student": "Start with two x plus four equals negative x plus thirteen.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+4=-x+13\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Add x on both sides.",
+        "programs": [
+          "problem.save(math.addBothSides(problem.currentEquation(),\"x\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract four from each side.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Divide by three.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 3"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-balance-variable-only",
+    "family": "balance-variable-only",
+    "category": "algebra",
+    "focus": "Undo scaling when there is no added constant",
+    "turns": [
+      {
+        "student": "My equation is negative seven x equals twenty-eight.",
+        "programs": [
+          "problem.save(math.equation(\"-7*x=28\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Divide by negative seven on both sides.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),-7));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = -4"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-swap-final-orientation",
+    "family": "swap-final-orientation",
+    "category": "algebra",
+    "focus": "Respect the requested final equation orientation",
+    "turns": [
+      {
+        "student": "Write x plus two equals eight.",
+        "programs": [
+          "problem.save(math.equation(\"x+2=8\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract two on both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Actually put the number on the left.",
+        "programs": [
+          "problem.save(math.swapSides(problem.currentEquation()));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "6 = x"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-clear-parenthesized-negative",
+    "family": "clear-parenthesized-negative",
+    "category": "algebra",
+    "focus": "A negative grouped numerator keeps its sign",
+    "turns": [
+      {
+        "student": "Write the quantity x minus five over negative three equals two.",
+        "programs": [
+          "problem.save(math.equation(\"(x-5)/(-3)=2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Multiply both sides by negative three.",
+        "programs": [
+          "problem.save(math.multiplyBothSides(problem.currentEquation(),-3));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Add five to both sides.",
+        "programs": [
+          "problem.save(math.addBothSides(problem.currentEquation(),5));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = -1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-coefficient-one-after-cancel",
+    "family": "coefficient-one-after-cancel",
+    "category": "algebra",
+    "focus": "Reduce a difference of coefficients to one",
+    "turns": [
+      {
+        "student": "Put up six x minus five x plus two equals nine.",
+        "programs": [
+          "problem.save(math.equation(\"6*x-5*x+2=9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Combine the x terms.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Take two off both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 7"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-constant-on-both-sides",
+    "family": "constant-on-both-sides",
+    "category": "algebra",
+    "focus": "Track constants while moving a variable",
+    "turns": [
+      {
+        "student": "Write three x plus eight equals x minus two.",
+        "programs": [
+          "problem.save(math.equation(\"3*x+8=x-2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract x on each side.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),\"x\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract eight too.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),8));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Divide by two.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = -10 / 2"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-negative-fraction-coefficient",
+    "family": "negative-fraction-coefficient",
+    "category": "algebra",
+    "focus": "Invert a negative fractional coefficient",
+    "turns": [
+      {
+        "student": "Can you write negative x over five equals three?",
+        "programs": [
+          "problem.save(math.equation(\"-x/5=3\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Multiply both sides by negative five.",
+        "programs": [
+          "problem.save(math.multiplyBothSides(problem.currentEquation(),-5));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "-(-x) = -15"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-formula-simple-rearrange",
+    "family": "formula-simple-rearrange",
+    "category": "algebra",
+    "focus": "Rearrange a two-letter relation symbolically",
+    "turns": [
+      {
+        "student": "Write y equals three x plus six.",
+        "programs": [
+          "problem.save(math.equation(\"y=3*x+6\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract six on both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),6));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tidy that up now?",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "y - 6 = 3 * x"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-square-negative-input",
+    "family": "square-negative-input",
+    "category": "algebra",
+    "focus": "Squaring a substituted negative value",
+    "turns": [
+      {
+        "student": "Put up x squared plus one.",
+        "programs": [
+          "problem.save(math.expression(\"x^2+1\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is it when x is negative three?",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\":-3});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 10."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-negative-outside-square",
+    "family": "negative-outside-square",
+    "category": "algebra",
+    "focus": "Distinguish a leading negative from a squared base",
+    "turns": [
+      {
+        "student": "Write negative x squared.",
+        "programs": [
+          "problem.save(math.expression(\"-x^2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Use x equals negative four. What do I get?",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\":-4});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: -16."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-parenthesized-negative-square",
+    "family": "parenthesized-negative-square",
+    "category": "algebra",
+    "focus": "Parentheses change which sign gets squared",
+    "turns": [
+      {
+        "student": "Write negative x in brackets, all squared.",
+        "programs": [
+          "problem.save(math.expression(\"(-x)^2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Check that with x equal to four.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\":4});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 16."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-two-variable-substitution",
+    "family": "two-variable-substitution",
+    "category": "algebra",
+    "focus": "Bind two named variables in the same query",
+    "turns": [
+      {
+        "student": "My expression is two a plus three b.",
+        "programs": [
+          "problem.save(math.expression(\"2*a+3*b\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Try a equals four and b equals negative two.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"a\":4,\"b\":-2});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 2."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-rectangle-perimeter-expression",
+    "family": "rectangle-perimeter-expression",
+    "category": "algebra",
+    "focus": "Evaluate a familiar formula without switching geometry mode",
+    "turns": [
+      {
+        "student": "Write two times the quantity l plus w.",
+        "programs": [
+          "problem.save(math.expression(\"2*(l+w)\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What if l is seven and w is three?",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"l\":7,\"w\":3});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 20."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-triangle-area-expression",
+    "family": "triangle-area-expression",
+    "category": "algebra",
+    "focus": "Keep multiplication and division order in a formula",
+    "turns": [
+      {
+        "student": "Write b times h divided by two.",
+        "programs": [
+          "problem.save(math.expression(\"b*h/2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Use a base of eight and height of five.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"b\":8,\"h\":5});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 20."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-quadratic-three-terms",
+    "family": "quadratic-three-terms",
+    "category": "algebra",
+    "focus": "Evaluate a polynomial with positive and negative terms",
+    "turns": [
+      {
+        "student": "Put up x squared minus five x plus six.",
+        "programs": [
+          "problem.save(math.expression(\"x^2-5*x+6\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Check it at x equals two.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\":2});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 0."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-fraction-input",
+    "family": "fraction-input",
+    "category": "algebra",
+    "focus": "Substitute an exact half into a linear expression",
+    "turns": [
+      {
+        "student": "Write six x minus one.",
+        "programs": [
+          "problem.save(math.expression(\"6*x-1\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is that at x equals one half?",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\":0.5});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 2."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-negative-exponent",
+    "family": "negative-exponent",
+    "category": "algebra",
+    "focus": "Evaluate a reciprocal from negative exponent notation",
+    "turns": [
+      {
+        "student": "Can you write x to the negative two?",
+        "programs": [
+          "problem.save(math.expression(\"x^(-2)\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Let x be two and work it out.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\":2});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 0.25."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-cube-negative",
+    "family": "cube-negative",
+    "category": "algebra",
+    "focus": "Odd powers preserve a negative input sign",
+    "turns": [
+      {
+        "student": "Write t cubed plus two.",
+        "programs": [
+          "problem.save(math.expression(\"t^3+2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What if t is negative two?",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"t\":-2});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: -6."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-difference-of-squares-value",
+    "family": "difference-of-squares-value",
+    "category": "algebra",
+    "focus": "Evaluate the square of a difference",
+    "turns": [
+      {
+        "student": "Put up x minus y, all squared.",
+        "programs": [
+          "problem.save(math.expression(\"(x-y)^2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Use x equals two and y equals five.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\":2,\"y\":5});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 9."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-rational-nonzero-input",
+    "family": "rational-nonzero-input",
+    "category": "algebra",
+    "focus": "Evaluate a rational expression away from a pole",
+    "turns": [
+      {
+        "student": "Write x plus one over x minus one, with brackets on both.",
+        "programs": [
+          "problem.save(math.expression(\"(x+1)/(x-1)\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you check it at three?",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\":3});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 2."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-natural-log-input",
+    "family": "natural-log-input",
+    "category": "algebra",
+    "focus": "Evaluate a logarithm at a positive input",
+    "turns": [
+      {
+        "student": "Write natural log of x.",
+        "programs": [
+          "problem.save(math.expression(\"ln(x)\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Try x equals one.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\":1});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 0."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-square-root-input",
+    "family": "square-root-input",
+    "category": "algebra",
+    "focus": "Evaluate the nonnegative square root",
+    "turns": [
+      {
+        "student": "Put up square root of x plus nine, with the whole sum inside.",
+        "programs": [
+          "problem.save(math.expression(\"sqrt(x+9)\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What does that give when x is seven?",
+        "programs": [],
+        "expect": {
+          "messageIncludes": [
+            "Value: 4."
+          ],
+          "readOnly": true
+        },
+        "status": "explanation",
+        "previews": [
+          "math.evaluate(problem.currentEquation(),{\"x\":7});"
+        ],
+        "message": "Value: 4. Seven plus nine is sixteen, and its square root is four."
+      }
+    ]
+  },
+  {
+    "id": "alg-powers-before-products",
+    "family": "powers-before-products",
+    "category": "algebra",
+    "focus": "Apply exponent precedence before multiplication",
+    "turns": [
+      {
+        "student": "Write two plus three times four squared.",
+        "programs": [
+          "problem.save(math.expression(\"2+3*4^2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is the value of all that?",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 50."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-nested-groups-value",
+    "family": "nested-groups-value",
+    "category": "algebra",
+    "focus": "Evaluate nested subtraction in the stated grouping",
+    "turns": [
+      {
+        "student": "Write ten minus the quantity two times three minus one.",
+        "programs": [
+          "problem.save(math.expression(\"10-(2*3-1)\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you work that out?",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 5."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-fraction-sum-value",
+    "family": "fraction-sum-value",
+    "category": "algebra",
+    "focus": "Add fractions numerically without rewriting the displayed work",
+    "turns": [
+      {
+        "student": "Write one half plus one quarter.",
+        "programs": [
+          "problem.save(math.expression(\"1/2+1/4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "How much is that?",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 0.75."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-zero-exponent-value",
+    "family": "zero-exponent-value",
+    "category": "algebra",
+    "focus": "A nonzero base raised to zero has value one",
+    "turns": [
+      {
+        "student": "Write seven to the power zero plus four.",
+        "programs": [
+          "problem.save(math.expression(\"7^0+4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you check the answer?",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 5."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-mixed-sign-product-value",
+    "family": "mixed-sign-product-value",
+    "category": "algebra",
+    "focus": "Track signs across more than two factors",
+    "turns": [
+      {
+        "student": "Put up negative two times negative three times negative four.",
+        "programs": [
+          "problem.save(math.expression(\"(-2)*(-3)*(-4)\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What sign and number does that give?",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: -24."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-correct-coefficient",
+    "family": "correct-coefficient",
+    "category": "algebra",
+    "focus": "Correct a misheard coefficient without replacing the whole expression",
+    "turns": [
+      {
+        "student": "Write two x plus five.",
+        "programs": [
+          "problem.save(math.expression(\"2*x+5\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Wait, that two should be a three.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),2,3));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is it at x equals four?",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\": 4});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 17."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-correct-negative-constant",
+    "family": "correct-negative-constant",
+    "category": "algebra",
+    "focus": "Correct a positive constant into a negative one",
+    "turns": [
+      {
+        "student": "Put up x plus eight.",
+        "programs": [
+          "problem.save(math.expression(\"x+8\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "The eight was supposed to be negative eight.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),8,-8));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Try x equals ten.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\": 10});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 2."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-correct-exponent",
+    "family": "correct-exponent",
+    "category": "algebra",
+    "focus": "Edit the power rather than the coefficient",
+    "turns": [
+      {
+        "student": "Write x squared plus four.",
+        "programs": [
+          "problem.save(math.expression(\"x^2+4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the power three instead of two.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),2,3));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is it at x equals two now?",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\": 2});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 12."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-rename-variable",
+    "family": "rename-variable",
+    "category": "algebra",
+    "focus": "Rename a variable while preserving its structure",
+    "turns": [
+      {
+        "student": "Put up four x minus one.",
+        "programs": [
+          "problem.save(math.expression(\"4*x-1\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can we use t instead of x?",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"x\",\"t\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Check it for t equals three.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"t\": 3});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 11."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-replace-group",
+    "family": "replace-group",
+    "category": "algebra",
+    "focus": "Replace a whole bracketed group as one target",
+    "turns": [
+      {
+        "student": "Write two times x plus one in brackets.",
+        "programs": [
+          "problem.save(math.expression(\"2*(x+1)\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the x plus one bit to x minus three.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"x+1\",\"x-3\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is it at x equals five?",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\": 5});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 4."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-change-denominator",
+    "family": "change-denominator",
+    "category": "algebra",
+    "focus": "Correct a denominator while retaining the numerator",
+    "turns": [
+      {
+        "student": "Write x divided by four plus one.",
+        "programs": [
+          "problem.save(math.expression(\"x/4+1\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Actually divide by two, not four.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),4,2));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What does that give at x equals six?",
+        "programs": [],
+        "expect": {
+          "messageIncludes": [
+            "Value: 4."
+          ],
+          "readOnly": true
+        },
+        "status": "explanation",
+        "previews": [
+          "math.evaluate(problem.currentEquation(),{\"x\": 6});"
+        ],
+        "message": "Value: 4. Six divided by two plus one is four."
+      }
+    ]
+  },
+  {
+    "id": "alg-change-root-radicand",
+    "family": "change-root-radicand",
+    "category": "algebra",
+    "focus": "Replace the expression inside a square root",
+    "turns": [
+      {
+        "student": "Write the square root of the whole quantity x plus five.",
+        "programs": [
+          "problem.save(math.expression(\"sqrt(x+5)\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the x plus five inside to x plus one.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"x+5\",\"x+1\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Check x equals eight.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\": 8});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 3."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-replace-linear-term",
+    "family": "replace-linear-term",
+    "category": "algebra",
+    "focus": "Replace a whole term rather than just its variable",
+    "turns": [
+      {
+        "student": "Write three x plus two.",
+        "programs": [
+          "problem.save(math.expression(\"3*x+2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change three x to five x.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"3*x\",\"5*x\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Use x equals two now.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\": 2});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 12."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-constant-to-variable",
+    "family": "constant-to-variable",
+    "category": "algebra",
+    "focus": "Turn a fixed value into a second variable",
+    "turns": [
+      {
+        "student": "Write two x plus seven.",
+        "programs": [
+          "problem.save(math.expression(\"2*x+7\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Replace the seven with y.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),7,\"y\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Check x is three and y is four.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\": 3, \"y\": 4});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 10."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-remove-extra-term",
+    "family": "remove-extra-term",
+    "category": "algebra",
+    "focus": "Remove an accidentally added term by replacing it with zero",
+    "turns": [
+      {
+        "student": "Write x squared plus three x plus two.",
+        "programs": [
+          "problem.save(math.expression(\"x^2+3*x+2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "That three x term should be zero.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"3*x\",0));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What happens at x equals four?",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\": 4});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 18."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-negative-to-positive",
+    "family": "negative-to-positive",
+    "category": "algebra",
+    "focus": "Correct a negative literal without changing the variable",
+    "turns": [
+      {
+        "student": "Put up negative five times x plus two.",
+        "programs": [
+          "problem.save(math.expression(\"(-5)*x+2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the negative five a positive five.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),-5,5));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Try x equals three.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\": 3});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 17."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-decimal-correction",
+    "family": "decimal-correction",
+    "category": "algebra",
+    "focus": "Correct a decimal point in a coefficient",
+    "turns": [
+      {
+        "student": "Write zero point two x plus one.",
+        "programs": [
+          "problem.save(math.expression(\"0.2*x+1\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "I meant two, not zero point two.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),0.2,2));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is it at x equals four?",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\": 4});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 9."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-reciprocal-structure-edit",
+    "family": "reciprocal-structure-edit",
+    "category": "algebra",
+    "focus": "Replace a denominator expression as a group",
+    "turns": [
+      {
+        "student": "Write one over x plus two, with x plus two on the bottom.",
+        "programs": [
+          "problem.save(math.expression(\"1/(x+2)\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the bottom x minus two.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"x+2\",\"x-2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Check x equals four.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\": 4});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 0.5."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-cube-to-square",
+    "family": "cube-to-square",
+    "category": "algebra",
+    "focus": "Correct a cube to a square while retaining a negative input",
+    "turns": [
+      {
+        "student": "Write x cubed minus one.",
+        "programs": [
+          "problem.save(math.expression(\"x^3-1\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Sorry, squared instead of cubed.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),3,2));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Use x equals negative two.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\": -2});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 3."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-replace-product-with-sum",
+    "family": "replace-product-with-sum",
+    "category": "algebra",
+    "focus": "Replace a whole product with a sum without broad simplification",
+    "turns": [
+      {
+        "student": "Write x times y plus six.",
+        "programs": [
+          "problem.save(math.expression(\"x*y+6\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change x times y to x plus y.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"x*y\",\"x+y\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Check x equals two and y equals three.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{\"x\": 2, \"y\": 3});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 11."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-solve-readonly-positive",
+    "family": "solve-readonly-positive",
+    "category": "algebra",
+    "focus": "Ask for a solution while preserving the entered equation",
+    "turns": [
+      {
+        "student": "Write nine x minus six equals thirty.",
+        "programs": [
+          "problem.save(math.equation(\"9*x-6=30\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is x? Keep my equation there.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 4"
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-solve-readonly-negative",
+    "family": "solve-readonly-negative",
+    "category": "algebra",
+    "focus": "Read a negative solution without applying algebra steps",
+    "turns": [
+      {
+        "student": "Put up two x plus ten equals four.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+10=4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you tell me x without changing the working?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = -3"
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-solve-denominator-constant",
+    "family": "solve-denominator-constant",
+    "category": "algebra",
+    "focus": "Solve a linear equation with division by a constant",
+    "turns": [
+      {
+        "student": "My equation is x divided by five equals four.",
+        "programs": [
+          "problem.save(math.equation(\"x/5=4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What does x have to be?",
+        "programs": [],
+        "expect": {
+          "messageIncludes": [
+            "x = 20"
+          ],
+          "readOnly": true
+        },
+        "status": "explanation",
+        "previews": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "message": "x = 20. Twenty divided by five is four."
+      }
+    ]
+  },
+  {
+    "id": "alg-solve-zero-root",
+    "family": "solve-zero-root",
+    "category": "algebra",
+    "focus": "Identify zero as a genuine root",
+    "turns": [
+      {
+        "student": "Write four x equals zero.",
+        "programs": [
+          "problem.save(math.equation(\"4*x=0\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Is the answer zero? Check it for me.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 0"
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-solve-variable-both-sides",
+    "family": "solve-variable-both-sides",
+    "category": "algebra",
+    "focus": "Read a solution with unknowns on both sides",
+    "turns": [
+      {
+        "student": "Put up six x plus one equals two x plus thirteen.",
+        "programs": [
+          "problem.save(math.equation(\"6*x+1=2*x+13\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you find x but leave that up?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 3"
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-solve-grouped-linear",
+    "family": "solve-grouped-linear",
+    "category": "algebra",
+    "focus": "Solve a parenthesized linear relation",
+    "turns": [
+      {
+        "student": "Write two times x minus four in brackets equals ten.",
+        "programs": [
+          "problem.save(math.equation(\"2*(x-4)=10\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What number makes that work?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 9"
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-solve-noninteger",
+    "family": "solve-noninteger",
+    "category": "algebra",
+    "focus": "Return a noninteger linear solution",
+    "turns": [
+      {
+        "student": "Write two x equals three.",
+        "programs": [
+          "problem.save(math.equation(\"2*x=3\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is x in that one?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 1.5"
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-solve-square-two-roots",
+    "family": "solve-square-two-roots",
+    "category": "algebra",
+    "focus": "Do not lose the negative root of a squared equation",
+    "turns": [
+      {
+        "student": "Put up x squared equals nine.",
+        "programs": [
+          "problem.save(math.equation(\"x^2=9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What are all the answers for x?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = -3 or x = 3."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-solve-zero-product",
+    "family": "solve-zero-product",
+    "category": "algebra",
+    "focus": "Solve a factored quadratic with a zero factor",
+    "turns": [
+      {
+        "student": "Write x times x minus five in brackets equals zero.",
+        "programs": [
+          "problem.save(math.equation(\"x*(x-5)=0\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you find both values of x?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 0 or x = 5."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-solve-quadratic-two-positive",
+    "family": "solve-quadratic-two-positive",
+    "category": "algebra",
+    "focus": "Find both roots of a quadratic with positive roots",
+    "turns": [
+      {
+        "student": "Write x squared minus five x plus six equals zero.",
+        "programs": [
+          "problem.save(math.equation(\"x^2-5*x+6=0\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Which x values work?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x \u2248 2 or x \u2248 3."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-solve-repeated-root",
+    "family": "solve-repeated-root",
+    "category": "algebra",
+    "focus": "Handle a quadratic with one repeated real root",
+    "turns": [
+      {
+        "student": "Write x squared minus six x plus nine equals zero.",
+        "programs": [
+          "problem.save(math.equation(\"x^2-6*x+9=0\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "How many different answers are there?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 3 (a repeated root)."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-solve-opposite-roots",
+    "family": "solve-opposite-roots",
+    "category": "algebra",
+    "focus": "Recognize roots with opposite signs",
+    "turns": [
+      {
+        "student": "Put up x squared minus sixteen equals zero.",
+        "programs": [
+          "problem.save(math.equation(\"x^2-16=0\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What values make that zero?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = -4 or x = 4."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-solve-negative-linear-divisor",
+    "family": "solve-negative-linear-divisor",
+    "category": "algebra",
+    "focus": "Keep the sign when solving a negative-coefficient equation",
+    "turns": [
+      {
+        "student": "Write negative four x plus three equals nineteen.",
+        "programs": [
+          "problem.save(math.equation(\"-4*x+3=19\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is x? Just tell me for now.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = -4"
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-solve-sides-reversed",
+    "family": "solve-sides-reversed",
+    "category": "algebra",
+    "focus": "A constant on the left still gives the correct unknown",
+    "turns": [
+      {
+        "student": "Write twenty-three equals five x minus two.",
+        "programs": [
+          "problem.save(math.equation(\"23=5*x-2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What should x be?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 5"
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-read-left-only",
+    "family": "read-left-only",
+    "category": "algebra",
+    "focus": "Read only the left side when both sides contain different terms",
+    "turns": [
+      {
+        "student": "Put up three x plus seven equals two x minus four.",
+        "programs": [
+          "problem.save(math.equation(\"3*x+7=2*x-4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Can you read just the left side?",
+        "programs": [
+          "math.read(math.leftSide(problem.currentEquation()));"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "3 times x plus 7"
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-read-right-only",
+    "family": "read-right-only",
+    "category": "algebra",
+    "focus": "Read only the right side rather than the full equality",
+    "turns": [
+      {
+        "student": "Write x minus two equals four x plus one.",
+        "programs": [
+          "problem.save(math.equation(\"x-2=4*x+1\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What does the right side say?",
+        "programs": [],
+        "expect": {
+          "messageIncludes": [
+            "4 times x plus 1"
+          ],
+          "readOnly": true
+        },
+        "status": "explanation",
+        "previews": [
+          "math.read(math.rightSide(problem.currentEquation()));"
+        ],
+        "message": "The right side is 4 times x plus 1."
+      }
+    ]
+  },
+  {
+    "id": "alg-read-negative-fraction",
+    "family": "read-negative-fraction",
+    "category": "algebra",
+    "focus": "Read a fraction and its negative sign aloud",
+    "turns": [
+      {
+        "student": "Write negative three x over four plus two.",
+        "programs": [
+          "problem.save(math.expression(\"-3*x/4+2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Read that back slowly.",
+        "programs": [
+          "math.read(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "the quantity negative 3 times x divided by 4 end quantity plus 2"
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-read-bracket-scope",
+    "family": "read-bracket-scope",
+    "category": "algebra",
+    "focus": "Read grouping out loud instead of flattening it",
+    "turns": [
+      {
+        "student": "Put up two times the quantity x plus five.",
+        "programs": [
+          "problem.save(math.expression(\"2*(x+5)\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Read back the brackets too.",
+        "programs": [
+          "math.read(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "2 times the quantity x plus 5 end quantity"
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-evaluate-left-side-only",
+    "family": "evaluate-left-side-only",
+    "category": "algebra",
+    "focus": "Evaluate one side of an equation as an expression",
+    "turns": [
+      {
+        "student": "Write two x plus three equals eleven.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+3=11\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is just the left side at x equals four?",
+        "programs": [
+          "math.evaluate(math.leftSide(problem.currentEquation()),{x:4});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 11."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-evaluate-right-side-only",
+    "family": "evaluate-right-side-only",
+    "category": "algebra",
+    "focus": "Evaluate a variable expression only on the right",
+    "turns": [
+      {
+        "student": "Put up ten equals three y minus two.",
+        "programs": [
+          "problem.save(math.equation(\"10=3*y-2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Try y equals four on the right side.",
+        "programs": [
+          "math.evaluate(math.rightSide(problem.currentEquation()),{y:4});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 10."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-query-unsaved-transform",
+    "family": "query-unsaved-transform",
+    "category": "algebra",
+    "focus": "Preview a transformed value without replacing the saved equation",
+    "turns": [
+      {
+        "student": "Write x plus three equals eight.",
+        "programs": [
+          "problem.save(math.equation(\"x+3=8\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What would it look like if I subtracted three? Don't change it yet.",
+        "programs": [
+          "math.read(math.subtractBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x plus 3 minus 3 equals 8 minus 3"
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-query-temporary-simplification",
+    "family": "query-temporary-simplification",
+    "category": "algebra",
+    "focus": "Read a simplified form without applying it",
+    "turns": [
+      {
+        "student": "Write two x plus three x plus one.",
+        "programs": [
+          "problem.save(math.expression(\"2*x+3*x+1\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Tell me the simpler version, but keep this version.",
+        "programs": [
+          "math.read(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "5 times x plus 1"
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-read-right-constant-sign",
+    "family": "read-right-constant-sign",
+    "category": "algebra",
+    "focus": "Read a negative right side with its sign intact",
+    "turns": [
+      {
+        "student": "Put up two x plus four equals negative eight.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+4=-8\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Read just the number on the right.",
+        "programs": [
+          "math.read(math.rightSide(problem.currentEquation()));"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "negative 8"
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-simplify-then-recheck",
+    "family": "simplify-then-recheck",
+    "category": "algebra",
+    "focus": "Simplify like terms then substitute into the retained result",
+    "turns": [
+      {
+        "student": "Write two x plus x plus four.",
+        "programs": [
+          "problem.save(math.expression(\"2*x+x+4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Combine the x terms.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "3 * x + 4"
+        }
+      },
+      {
+        "student": "Try x equals two.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{x:2});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 10."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-nested-parenthesis-simplify",
+    "family": "nested-parenthesis-simplify",
+    "category": "algebra",
+    "focus": "Simplify nested arithmetic before a numeric query",
+    "turns": [
+      {
+        "student": "Put up two times three plus four in brackets.",
+        "programs": [
+          "problem.save(math.expression(\"2*(3+4)\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Simplify that.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "14"
+        }
+      },
+      {
+        "student": "What number do I get?",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 14."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-expand-before-substitute",
+    "family": "expand-before-substitute",
+    "category": "algebra",
+    "focus": "Preserve a grouped product while querying its value",
+    "turns": [
+      {
+        "student": "Write three times x minus two in brackets plus four.",
+        "programs": [
+          "problem.save(math.expression(\"3*(x-2)+4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Simplify what you can.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Now check x equals five.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{x:5});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 13."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-replace-whole-problem",
+    "family": "replace-whole-problem",
+    "category": "algebra",
+    "focus": "A request for a new equation replaces rather than appends work",
+    "turns": [
+      {
+        "student": "Write x plus three equals nine.",
+        "programs": [
+          "problem.save(math.equation(\"x+3=9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Actually, let's do two x minus four equals ten instead.",
+        "programs": [
+          "problem.save(math.equation(\"2*x-4=10\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What does x equal?",
+        "programs": [],
+        "expect": {
+          "messageIncludes": [
+            "x = 7"
+          ],
+          "readOnly": true
+        },
+        "status": "explanation",
+        "previews": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "message": "x = 7. Two times seven minus four equals ten."
+      }
+    ]
+  },
+  {
+    "id": "alg-expression-to-equation",
+    "family": "expression-to-equation",
+    "category": "algebra",
+    "focus": "Turn a scratch expression into an equation using its current expression",
+    "turns": [
+      {
+        "student": "Put up four x plus one.",
+        "programs": [
+          "problem.save(math.expression(\"4*x+1\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Set that equal to thirteen.",
+        "programs": [
+          "problem.save(math.equation(\"4*x+1=13\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Tell me the value of x.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 3"
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-separate-requested-steps",
+    "family": "separate-requested-steps",
+    "category": "algebra",
+    "focus": "Keep multiply and subtract as separate requested work steps",
+    "turns": [
+      {
+        "student": "Write x over two plus three equals eight.",
+        "programs": [
+          "problem.save(math.equation(\"x/2+3=8\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract three, then multiply by two. Keep them as separate steps.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),3));",
+          "problem.save(math.multiplyBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {
+          "stepDelta": 2
+        }
+      },
+      {
+        "student": "Simplify the result.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 10"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-correct-equation-constant",
+    "family": "correct-equation-constant",
+    "category": "algebra",
+    "focus": "Correct one entered constant then solve the corrected equation",
+    "turns": [
+      {
+        "student": "Write four x plus one equals thirteen.",
+        "programs": [
+          "problem.save(math.equation(\"4*x+1=13\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "I read it wrong. The thirteen is seventeen.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),13,17));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is x for this one?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 4"
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-simplify-cancelled-variable",
+    "family": "simplify-cancelled-variable",
+    "category": "algebra",
+    "focus": "Cancel equal variable terms from an expression",
+    "turns": [
+      {
+        "student": "Put up five x minus five x plus nine.",
+        "programs": [
+          "problem.save(math.expression(\"5*x-5*x+9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Simplify that.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "9"
+        }
+      },
+      {
+        "student": "Does it still depend on x? Check it at three.",
+        "programs": [
+          "math.evaluate(problem.currentEquation(),{x:3});"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 9."
+          ],
+          "readOnly": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-undo-redo-balancing",
+    "family": "undo-redo-balancing",
+    "category": "algebra",
+    "focus": "Undo and redo a complete balancing request",
+    "turns": [
+      {
+        "student": "Put up x plus four equals ten.",
+        "programs": [
+          "problem.save(math.equation(\"x+4=10\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Take four off both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Undo that.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {
+          "expression": "x + 4 = 10"
+        }
+      },
+      {
+        "student": "Actually redo it.",
+        "programs": [
+          "history.redo(1);"
+        ],
+        "expect": {
+          "expression": "x + 4 - 4 = 10 - 4"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-undo-two-separate-steps",
+    "family": "undo-two-separate-steps",
+    "category": "algebra",
+    "focus": "Undo two separate requests without losing the original equation",
+    "turns": [
+      {
+        "student": "Write three x plus six equals twenty-one.",
+        "programs": [
+          "problem.save(math.equation(\"3*x+6=21\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract six from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),6));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Divide both sides by three.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Go back two steps.",
+        "programs": [
+          "history.undo(2);"
+        ],
+        "expect": {
+          "expression": "3 * x + 6 = 21"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-correct-previous-operation",
+    "family": "correct-previous-operation",
+    "category": "algebra",
+    "focus": "A correction replaces the last request instead of adding to it",
+    "turns": [
+      {
+        "student": "Write x plus three equals eight.",
+        "programs": [
+          "problem.save(math.equation(\"x+3=8\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract two from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Wait, I meant subtract three instead.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "expression": "x + 3 - 3 = 8 - 3"
+        },
+        "status": "correction"
+      }
+    ]
+  },
+  {
+    "id": "alg-accept-unapplied-suggestion",
+    "family": "accept-unapplied-suggestion",
+    "category": "algebra",
+    "focus": "A proposed step stays unchanged until the student accepts",
+    "turns": [
+      {
+        "student": "Write x plus five equals twelve.",
+        "programs": [
+          "problem.save(math.equation(\"x+5=12\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What should I do next? Suggest it first.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),5));"
+        ],
+        "expect": {
+          "expression": "x + 5 = 12",
+          "readOnly": true
+        },
+        "status": "explanation",
+        "message": "Try subtracting five from both sides."
+      },
+      {
+        "student": "Yeah, do that.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),5));"
+        ],
+        "expect": {
+          "expression": "x + 5 - 5 = 12 - 5"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alg-query-between-undo-and-redo",
+    "family": "query-between-undo-and-redo",
+    "category": "algebra",
+    "focus": "A read-only question must not erase redo history",
+    "turns": [
+      {
+        "student": "Write x minus two equals seven.",
+        "programs": [
+          "problem.save(math.equation(\"x-2=7\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Add two to each side.",
+        "programs": [
+          "problem.save(math.addBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Undo that for a second.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {
+          "expression": "x - 2 = 7"
+        }
+      },
+      {
+        "student": "What is x without changing anything?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 9"
+          ],
+          "readOnly": true
+        }
+      },
+      {
+        "student": "Now redo that addition.",
+        "programs": [
+          "history.redo(1);"
+        ],
+        "expect": {
+          "expression": "x - 2 + 2 = 7 + 2"
+        }
+      }
+    ]
+  }
+]

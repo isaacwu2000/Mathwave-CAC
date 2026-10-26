@@ -1,0 +1,2774 @@
+{
+  "reviewer": "/root/llm_standards_audit",
+  "shard": "b",
+  "completedAt": "2026-10-23T23:01:25.938249+00:00",
+  "coverage": {
+    "uniqueImagesAssigned": 71,
+    "uniqueImagesInspected": 71,
+    "contactSheetsInspected": 9,
+    "originalImagesOpened": 27,
+    "mappedReferences": 145,
+    "unreadableImages": []
+  },
+  "limits": [
+    "Static actual-app saved-state replay only; not microphone, iPhone binary, interactive editing, model rollout or live progressive rendering.",
+    "All 71 images personally inspected through nine contact sheets; 27 originals opened where desktop math, labels or failure details needed closer inspection.",
+    "Queries/previews often leave saved work unchanged; screenshot review cannot establish their spoken or text answer correctness.",
+    "Automated grades are retained unchanged; visual equivalence is noted separately from strict saved-state contract failures.",
+    "Viewport scale/aspect and mobile y tick alignment can confuse coordinate reading; curve shape was compared with saved expressions and reference state."
+  ],
+  "findings": [
+    {
+      "kind": "model-outcome",
+      "indices": [
+        "b16",
+        "b17",
+        "b18",
+        "b20",
+        "b28",
+        "b30",
+        "b34",
+        "b36",
+        "b40",
+        "b41",
+        "b42",
+        "b43",
+        "b48",
+        "b49",
+        "b50",
+        "b51",
+        "b56",
+        "b57"
+      ],
+      "note": "Wrong name/edit, viewport, domain/mode, translation, or diagram outcome visible; see per-image observations."
+    },
+    {
+      "kind": "grading-discrepancy",
+      "indices": [
+        "b8",
+        "b9",
+        "b12",
+        "b13",
+        "b23",
+        "b24",
+        "b54",
+        "b55"
+      ],
+      "note": "Visual math/flow appears equivalent despite strict representation/history grading failure; do not silently change reported grades."
+    },
+    {
+      "kind": "renderer-review-concern",
+      "indices": [
+        "b13",
+        "b17",
+        "b29",
+        "b35",
+        "b38",
+        "b41",
+        "b43",
+        "b47"
+      ],
+      "note": "Mobile y-axis tick text sits noticeably below associated gridlines; dense two-unit tick spacing can make correct plotted values appear one tick higher. Polar circle/arc is visually stretched by unequal plot scales. Existing renderer behavior, not evidence of model math error."
+    },
+    {
+      "kind": "capture-or-editor-concern",
+      "indices": [
+        "b18",
+        "b21"
+      ],
+      "note": "Desktop original graph editor appears to show only 1 while history and curve represent x^2+1. Needs separate renderer/capture diagnosis; no claim of cause."
+    }
+  ],
+  "entries": [
+    {
+      "reviewIndex": "b1",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/411adf85bef870aa316e.png",
+      "sha256": "9a6ec8ecb62fbbe641dd6a6fab3a657c1c8ff5745783bf508ae80b0d9f3b372a",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-1"
+      ],
+      "observedMathAndResult": "P and Q lie symmetrically left/right of the vertical line AB; reflected point visible. Coordinates are not printed, so exact coordinate readback is outside screenshot evidence.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "geo-reflect-y-axis:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "geo-reflect-y-axis:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b2",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/b8ccb27947691d7a3908.png",
+      "sha256": "39e2c1db0cd2c5633dc702ab404566eb0ebea9268f15b9ba75d875be3dd12566",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-1",
+        "original-image"
+      ],
+      "observedMathAndResult": "Triangle ABC visibly labels sides 13, 14 and 15. Entire triangle and all vertex labels fit. Area reply is not visible and cannot be judged from this image.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "geo-triangle-heron:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "geo-triangle-heron:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "geo-triangle-heron:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b3",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/8efa35682c7ba401b524.png",
+      "sha256": "beae21752bec5b57aa792c80877fd38e21b29fc226b586e64d9b4b72b37b18b7",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-1"
+      ],
+      "observedMathAndResult": "Triangle ABC visibly labels sides 13, 14 and 15. Entire triangle and all vertex labels fit. Area reply is not visible and cannot be judged from this image.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "geo-triangle-heron:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "geo-triangle-heron:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "geo-triangle-heron:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b4",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/e2c70c20d13f570b7ca1.png",
+      "sha256": "a09f3789a43b4d35284b648a44eb3745ff06810bf351540fe08e471ebd6cdc76",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-1"
+      ],
+      "observedMathAndResult": "Two equal overlapping circles with centers A/B are visible; lower crossing is not marked and connecting segments are absent. This is unchanged prestate fallback, not a successful lower-crossing action.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "geo-two-circle-lower:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "geo-two-circle-lower:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b5",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/af3de0076520e1557e2d.png",
+      "sha256": "f16b1a0806ca96c05a614b2ddb9f7071aeb8f16a1a4b0bc10e62cdd5e07fb20c",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-1"
+      ],
+      "observedMathAndResult": "Two equal overlapping circles with centers A/B are visible; lower crossing is not marked and connecting segments are absent. This is unchanged prestate fallback, not a successful lower-crossing action.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "geo-two-circle-lower:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "geo-two-circle-lower:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b6",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/8c35ad53de9ccba70ab5.png",
+      "sha256": "3ad49830c337cf6e2632373dd8d2df18a1e0f109d623867b9cd68103f745c3b6",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-1",
+        "original-image"
+      ],
+      "observedMathAndResult": "Two overlapping equal circles show lower crossing P, with AP and BP segments each labeled 5. Lower intersection geometry is visible; coordinate reply is not shown.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "geo-two-circle-lower:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "geo-two-circle-lower:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b7",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/09e9eccc4a5bafe84303.png",
+      "sha256": "b547096977bcf5390f6ac4bde131de7fb7a3d1053e29e8d16b8e0c149b95e3d0",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-1"
+      ],
+      "observedMathAndResult": "Two overlapping equal circles show lower crossing P, with AP and BP segments each labeled 5. Lower intersection geometry is visible; coordinate reply is not shown.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "geo-two-circle-lower:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "geo-two-circle-lower:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b8",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/e916bc741ca94dbd9862.png",
+      "sha256": "1bac91fc7ef0aa12a34ab49e3cf73850c055bdec230142f51b5cb5c492b98882",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-1",
+        "original-image"
+      ],
+      "observedMathAndResult": "b=2 and exponential b^x are shown; blue curve increases through the expected exponential shape. Visually equivalent to y=b^x; saved-work grade still fails the exact representation/history contract.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "graph-exponential-base-parameter:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b9",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/e64e006065bd98c04d83.png",
+      "sha256": "ac29d55e8f93d4c4f23c9094d6a6eea254f113af3df9c4f82443645d4c2acb13",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-2"
+      ],
+      "observedMathAndResult": "b=2 and exponential b^x are shown; blue curve increases through the expected exponential shape. Visually equivalent to y=b^x; saved-work grade still fails the exact representation/history contract.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "graph-exponential-base-parameter:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b10",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/448ddbb91f3eeaa1f158.png",
+      "sha256": "ac29d55e8f93d4c4f23c9094d6a6eea254f113af3df9c4f82443645d4c2acb13",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-2"
+      ],
+      "observedMathAndResult": "b=2 and y=b^x remain visible, with increasing blue exponential. This cannot establish evaluation-at-three or parameter update success; several mapped rows are fallback or failed generation.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-exponential-base-parameter:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "baseline",
+          "id": "graph-exponential-base-parameter:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-exponential-base-parameter:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-exponential-base-parameter:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b11",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/f9fb4ab7e82d7289b37e.png",
+      "sha256": "7d83c2460c34115451d61a55f7c3b9b6b38091c4e5bbcd0d9d76789bcd591f92",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-2"
+      ],
+      "observedMathAndResult": "Latest equation block shows b=3, y=b^x; earlier b=2 remains in history. Steeper blue exponential is visible. Numeric spoken reply is not visible.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-exponential-base-parameter:4:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-exponential-base-parameter:4:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b12",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/9d14c5b0a9c794e68c31.png",
+      "sha256": "c8b8cd27aa335876b9793a50638828c1711e20648865d3637e923cd486ccc1d6",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-2"
+      ],
+      "observedMathAndResult": "Red max(x,2) curve has a horizontal left branch at height 2 and rising right branch, joining at x=2. Math matches the requested maximum despite strict saved-state grading failure over representation. Mobile y tick labels are vertically displaced relative to gridlines.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "graph-max-function-floor:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b13",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/079cfdf3774147aa735a.png",
+      "sha256": "6d88d9d6ce707456c6b6f43e2cef80be067baf945e9ee797f7ee484d3ffb30c0",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-2",
+        "original-image"
+      ],
+      "observedMathAndResult": "Red max(x,2) curve has a horizontal left branch at height 2 and rising right branch, joining at x=2. Math matches the requested maximum despite strict saved-state grading failure over representation. Mobile y tick labels are vertically displaced relative to gridlines.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "graph-max-function-floor:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b14",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/cd6fadf84bc5e90f698a.png",
+      "sha256": "c8b8cd27aa335876b9793a50638828c1711e20648865d3637e923cd486ccc1d6",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-2"
+      ],
+      "observedMathAndResult": "Red max(x,2) floor/rising branch remains visible. Preview or spoken evaluation answers are not visible, so this is only the saved graph review.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-max-function-floor:2:preview",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "baseline",
+          "id": "graph-max-function-floor:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "baseline",
+          "id": "graph-max-function-floor:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-max-function-floor:2:preview",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-max-function-floor:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-max-function-floor:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b15",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/e25d72204abac43e90fe.png",
+      "sha256": "6d88d9d6ce707456c6b6f43e2cef80be067baf945e9ee797f7ee484d3ffb30c0",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-2"
+      ],
+      "observedMathAndResult": "Red max(x,2) floor/rising branch remains visible. Preview or spoken evaluation answers are not visible, so this is only the saved graph review.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-max-function-floor:2:preview",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "baseline",
+          "id": "graph-max-function-floor:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "baseline",
+          "id": "graph-max-function-floor:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-max-function-floor:2:preview",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-max-function-floor:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-max-function-floor:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b16",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/36fcdd222a5a1b8a0baf.png",
+      "sha256": "255df17d02fcac434502c742e734a48d707f1e821553291e65e822fb03b8c985",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-2",
+        "original-image"
+      ],
+      "observedMathAndResult": "Rendered red parabola and latest equation are x^2+3, not a name assignment. Request was to call the existing curve bounce; this visually changes the curve instead. Earlier x^2 remains in history.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "graph-name-preserved-after-edit:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b17",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/adbb1457a9e151265b6e.png",
+      "sha256": "4e22cc52bafcb46367fdca57828b7943897bf3665b31ed68afe5ae807b06df79",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-3"
+      ],
+      "observedMathAndResult": "Rendered red parabola and latest equation are x^2+3, not a name assignment. Request was to call the existing curve bounce; this visually changes the curve instead. Earlier x^2 remains in history.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "graph-name-preserved-after-edit:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b18",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/992ce15d91ac89ef0828.png",
+      "sha256": "3420b57b2ec9220c94c54e373c2d71b6b29778b0aaf7af849e230364b16d5ecc",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-3",
+        "original-image"
+      ],
+      "observedMathAndResult": "Latest red parabola and equation are x^2+1, but its optional name is blank; prior history has bounce:y=x^2. Requested named edit loses the name. Desktop original also shows graph-row editor text only 1 while history/canvas represent x^2+1; possible capture/editor rendering discrepancy.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "graph-name-preserved-after-edit:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b19",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/515d0ee36fed2ea71de7.png",
+      "sha256": "108adafd42b2e24f0c5bf03abcd6d0bed0c5210b10f31ea529d122b289f2e077",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-3"
+      ],
+      "observedMathAndResult": "Fallback shows named bounce:y=x^2, red vertex at origin, prior x^2 history. Does not demonstrate requested x^2+1 edit.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-name-preserved-after-edit:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b20",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/d3f71189b0d846e763ff.png",
+      "sha256": "efe70f2139bf46caa8b76348a06226d0d48fbdb83cac68532c84d0b5a51dc7f8",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-3"
+      ],
+      "observedMathAndResult": "Latest red parabola and equation are x^2+1, but its optional name is blank; prior history has bounce:y=x^2. Requested named edit loses the name. Desktop original also shows graph-row editor text only 1 while history/canvas represent x^2+1; possible capture/editor rendering discrepancy.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "graph-name-preserved-after-edit:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b21",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/930f100fc4058458949a.png",
+      "sha256": "874b8eac7e5dcaefb820c914983a46541be380d65fd4416f8a9910fa6d4afd81",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-3",
+        "original-image"
+      ],
+      "observedMathAndResult": "Latest history shows bounce:y=x^2+1; red parabola shifted up one; earlier bounce:y=x^2 remains. Name field displays bounce. Readback at two is not visible. Desktop original graph-row editor appears as 1 rather than full formula; history/canvas are intact.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-name-preserved-after-edit:4:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-name-preserved-after-edit:4:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b22",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/46d018bc8a8ea72d816e.png",
+      "sha256": "31385b2b5f23467093f8a51992f9695f6bb187a6704bf8cd9ec989308481237c",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-3"
+      ],
+      "observedMathAndResult": "Latest history shows bounce:y=x^2+1; red parabola shifted up one; earlier bounce:y=x^2 remains. Name field displays bounce. Readback at two is not visible. Desktop original graph-row editor appears as 1 rather than full formula; history/canvas are intact.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-name-preserved-after-edit:4:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-name-preserved-after-edit:4:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b23",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/650e3624cfebcd5e8266.png",
+      "sha256": "af17efab0e1b29c414bf5720fd15e0cc8abc41d7655adcee3e6f0122bbe7b953",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-3",
+        "original-image"
+      ],
+      "observedMathAndResult": "f(x)=x+1 and twice f(x) are shown, with red slope-one and blue slope-two lines crossing at x=-1. Visual math is equivalent to reference explicit y=2*f(x), while exact state grade is failed.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "graph-named-function-redefinition:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b24",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/97cef66c1e72b5959613.png",
+      "sha256": "c53f43989fccc9622949ee82a95596f7accfb6e7c321fe33cbd7b7ff7675361b",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-3"
+      ],
+      "observedMathAndResult": "f(x)=x+1 and twice f(x) are shown, with red slope-one and blue slope-two lines crossing at x=-1. Visual math is equivalent to reference explicit y=2*f(x), while exact state grade is failed.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "graph-named-function-redefinition:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b25",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/9cfb1bfdee89590d91fe.png",
+      "sha256": "c53f43989fccc9622949ee82a95596f7accfb6e7c321fe33cbd7b7ff7675361b",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-4"
+      ],
+      "observedMathAndResult": "Fallback retains f(x)=x+1 and y=2*f(x), the two lines crossing at x=-1. Does not show requested replacement f=x-1.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-named-function-redefinition:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b26",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/429a81d6614ee2b217a9.png",
+      "sha256": "e32d2b31a46923c4de2b53253e22463311893741eb91245b8f98f934288d68b7",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-4"
+      ],
+      "observedMathAndResult": "Latest f(x)=x-1 and y=2*f(x) are shown; red/blue lines cross at x=1 and have expected relative slopes. Earlier +1 definition is visible in history.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-named-function-redefinition:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-named-function-redefinition:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-named-function-redefinition:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b27",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/e2ed83dd344239cc95e4.png",
+      "sha256": "3b7f4053e30c4d9de6725a42b57a4f3e36003e8066ac6e8400651b41845c2945",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-4"
+      ],
+      "observedMathAndResult": "Red x^2+2 parabola visible with vertex on vertical axis, two units above horizontal axis. This is pre-pan fallback for some references and valid initial graph for another; not a completed viewport move.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-pan-not-shift:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-pan-not-shift:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b28",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/4e3bd00d914092fae3dd.png",
+      "sha256": "20dd56e295f158d5e5c8c9366ea9272847bacc2cfb71e5384a144f0211f27d72",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-4",
+        "original-image"
+      ],
+      "observedMathAndResult": "Grid is entirely blank while x^2+2 stays visible in equation/editor. Generated viewport x=5..7, y=3..5 excludes the curve; expected broad right-panned viewport would retain it. This is a model viewport error, not proof of a missing graph renderer.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "graph-pan-not-shift:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b29",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/0b72c920cc9c621a0782.png",
+      "sha256": "0ec29f42943e4d0f1a0d62ab6dba298c1710ca090c54c684990acf80a79b3811",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-4"
+      ],
+      "observedMathAndResult": "Red x^2+2 parabola visible with vertex on vertical axis, two units above horizontal axis. This is pre-pan fallback for some references and valid initial graph for another; not a completed viewport move.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-pan-not-shift:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-pan-not-shift:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b30",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/f8f11631038063297de1.png",
+      "sha256": "57d787ae00cb597f2e1750e228c907a9a5d4466f149901585870799301b5459a",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-4",
+        "original-image"
+      ],
+      "observedMathAndResult": "Grid is entirely blank while x^2+2 stays visible in equation/editor. Generated viewport x=5..7, y=3..5 excludes the curve; expected broad right-panned viewport would retain it. This is a model viewport error, not proof of a missing graph renderer.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "graph-pan-not-shift:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b31",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/f73fc6d32ae50fd67689.png",
+      "sha256": "323849c99a7b0ed556bdbf939a529c532c8ec09685e1f54e7f960f59eabb1180",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-4"
+      ],
+      "observedMathAndResult": "Red x^2+2 parabola is visible in a right-panned broad view; equation unchanged, vertex remains at x=0. Numeric height reply is not visible.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-pan-not-shift:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-pan-not-shift:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b32",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/bb4d82d688240aa3a3ba.png",
+      "sha256": "1542c0a5707a8c381b1f801157cb0ee962a473a8e21533a1a770a20276a98a3e",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-4"
+      ],
+      "observedMathAndResult": "Red x^2+2 parabola is visible in a right-panned broad view; equation unchanged, vertex remains at x=0. Numeric height reply is not visible.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-pan-not-shift:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-pan-not-shift:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b33",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/96789e0770450fa7b117.png",
+      "sha256": "2aadbb3e7ce27222c293d520ab2fcc74bbe5d11a5f230f38fea59a5b8d0728e7",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-5"
+      ],
+      "observedMathAndResult": "Full radius-two red polar circle is visible with r=2 equation. For domain-limit request mapped to fallback, full circle does not satisfy the upper-half restriction. Mobile circle appears horizontally stretched because plot axes use different pixel scales.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-polar-half-circle-domain:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-polar-half-circle-domain:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b34",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted-recovery/visual/8e7ca31cfac3d9b6b107.png",
+      "sha256": "af013acca0fb13d869db3ac954c81151cc1847916503659f44517cb24625c5f4",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-5",
+        "original-image"
+      ],
+      "observedMathAndResult": "Recovery output visibly draws a right triangle ABC with unit legs, hypotenuse 1.414 and marked 45 degrees. This is unrelated to requested polar half-circle; expected polar graph has been replaced by geometry.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted-recovery",
+          "id": "graph-polar-half-circle-domain:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b35",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/be291b84b62228207441.png",
+      "sha256": "0a0acca80ec13e66ef23451444b7a5797c4bfe668890987435fbb9c6a3c826f2",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-5"
+      ],
+      "observedMathAndResult": "Full radius-two red polar circle is visible with r=2 equation. For domain-limit request mapped to fallback, full circle does not satisfy the upper-half restriction. Mobile circle appears horizontally stretched because plot axes use different pixel scales.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-polar-half-circle-domain:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-polar-half-circle-domain:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b36",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted-recovery/visual/3b3abcdd016db4eb572d.png",
+      "sha256": "69decf19f2ec68417cb589d981706de39c35cce66845b664328cd4c0d073c38f",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-5"
+      ],
+      "observedMathAndResult": "Recovery output visibly draws a right triangle ABC with unit legs, hypotenuse 1.414 and marked 45 degrees. This is unrelated to requested polar half-circle; expected polar graph has been replaced by geometry.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted-recovery",
+          "id": "graph-polar-half-circle-domain:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b37",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/28eb40963c9a5abd3bf9.png",
+      "sha256": "0bfb02cd0881a7beb055814be91aa0e0e6c47125c5a872d25764ae9601617993",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-5",
+        "original-image"
+      ],
+      "observedMathAndResult": "Upper red semicircle for r=2 is visible between x=-2 and x=2, with no lower arc. Correct saved half-circle domain; endpoint spoken readback is not visible. Mobile aspect ratio stretches the arc.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-polar-half-circle-domain:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-polar-half-circle-domain:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b38",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/aeef6cc97a4a48504829.png",
+      "sha256": "960b908748edbb355ce2b1818d792340fc4e6b8eb7082ed2cf6392d478c6232a",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-5"
+      ],
+      "observedMathAndResult": "Upper red semicircle for r=2 is visible between x=-2 and x=2, with no lower arc. Correct saved half-circle domain; endpoint spoken readback is not visible. Mobile aspect ratio stretches the arc.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-polar-half-circle-domain:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-polar-half-circle-domain:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b39",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/633fbac01571922ecfeb.png",
+      "sha256": "451637bf999da65ace9a1107daceb64f8714674d3736ff2eb3a95d7bbb45d2b9",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-5"
+      ],
+      "observedMathAndResult": "Red absolute-value V is visible with vertex at origin and latest y=abs(x), earlier x^2 in history. Negative-four result is not visible; mapped preview/final outputs are fallback.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-replace-entire-graph:4:preview",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "baseline",
+          "id": "graph-replace-entire-graph:4:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-replace-entire-graph:4:preview",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-replace-entire-graph:4:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b40",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/5ad7b8d28c42972e6571.png",
+      "sha256": "779ca898ef10eef657bafdc28e2e0edf2362c3425c323ce209730416acdd60f9",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-5",
+        "original-image"
+      ],
+      "observedMathAndResult": "Latest formula sqrt(x-4)+-4 and red curve endpoint at (4,-4) are visible. Reference keeps sqrt(x-4) with endpoint (4,0); model incorrectly changes work and shifts down four. Math notation + -4 is readable but awkward.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "graph-square-root-endpoint:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b41",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/ef6994f6b46d92f76984.png",
+      "sha256": "4fe50e2f78525a542d06b701200f171f03322f657e0dda1c132112033c71e0b1",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-6"
+      ],
+      "observedMathAndResult": "Latest formula sqrt(x-4)+-4 and red curve endpoint at (4,-4) are visible. Reference keeps sqrt(x-4) with endpoint (4,0); model incorrectly changes work and shifts down four. Math notation + -4 is readable but awkward.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "graph-square-root-endpoint:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b42",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/2695c24a9e6396425d75.png",
+      "sha256": "7e973cbec414c11e1215773443be542a38052ac57668e145d78b037e30678ee7",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-6",
+        "original-image"
+      ],
+      "observedMathAndResult": "Latest formula (x-3-2)^2 and red vertex at (5,0) are visible; earlier (x-2)^2 remains. Requested lift by three should produce vertex (2,3); generated horizontal shift is incorrect.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "graph-translation-order:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b43",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/a448a9de393ec5205214.png",
+      "sha256": "bc623180b78e6111eaed4d440ef82b686e604ccac5c3a7db4fdcdc0bf51e5f03",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-6"
+      ],
+      "observedMathAndResult": "Latest formula (x-3-2)^2 and red vertex at (5,0) are visible; earlier (x-2)^2 remains. Requested lift by three should produce vertex (2,3); generated horizontal shift is incorrect.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "graph-translation-order:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b44",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/37c4d10a5696c1c4dc99.png",
+      "sha256": "8adec350c4e83e9e01554d508764c68fd417ca3e54a2c2d9e190ddbeec7bd92a",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-6"
+      ],
+      "observedMathAndResult": "Red x^2-1 parabola remains at vertex (0,-1); requested right-two shift and trace-at-three are absent in fallback. Also maps to valid initial graph, which must not be confused with the failed follow-up.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-two-actions-one-request:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-two-actions-one-request:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-two-actions-one-request:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b45",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/b93413c2fc24360d3f65.png",
+      "sha256": "7f2bc62bf574aaf09276a70445747f75cebce50b31bd16dafbdd57b4a65467a4",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-6"
+      ],
+      "observedMathAndResult": "Red x^2-1 parabola remains at vertex (0,-1); requested right-two shift and trace-at-three are absent in fallback. Also maps to valid initial graph, which must not be confused with the failed follow-up.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-two-actions-one-request:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-two-actions-one-request:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-two-actions-one-request:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b46",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/62b170da92e15e9d055e.png",
+      "sha256": "b1091f712397fb8b89cfea531c8945c59d4319e9cdbf8e6e74cb844febbd1440",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-6",
+        "original-image"
+      ],
+      "observedMathAndResult": "Red (x-2)^2-1 parabola has vertex (2,-1) and tracing dot at (3,0); prior x^2-1 remains. Correct saved trace state, but spoken height is not visible.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-two-actions-one-request:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-two-actions-one-request:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b47",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/e8be73a4c8170b15d464.png",
+      "sha256": "0c52395f77d543cc54d1c4e4c01f5a134eba5455077d71506ba7a3cc5a6cb336",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-6"
+      ],
+      "observedMathAndResult": "Red (x-2)^2-1 parabola has vertex (2,-1) and tracing dot at (3,0); prior x^2-1 remains. Correct saved trace state, but spoken height is not visible.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "graph-two-actions-one-request:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "graph-two-actions-one-request:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b48",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/357a9f6ba904eb32ac74.png",
+      "sha256": "c49c572f4918403f14a76758e384148d7bbd1ed4ef4c0183a43aacb73ec1eded",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-6",
+        "original-image"
+      ],
+      "observedMathAndResult": "Statistics screen for data 1,2,3,4 shows mean/median 2.5, zero outliers and ascending line. Request was a flow Input/Double/Output; generated statistics are the wrong mode/content.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "student-diagram-new-procedure:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b49",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/4698e643025619340a2d.png",
+      "sha256": "cea4cca60bbe64b2e7b7b4843a8c93cdd09f7a219e43314e46e477aaa4b528b1",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-7"
+      ],
+      "observedMathAndResult": "Statistics screen for data 1,2,3,4 shows mean/median 2.5, zero outliers and ascending line. Request was a flow Input/Double/Output; generated statistics are the wrong mode/content.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "student-diagram-new-procedure:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b50",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/976f925f83fcbcc923f1.png",
+      "sha256": "0cad415758a4296a3f43073e2d3c336325dc1baa16597114a07b366fb1fb4db2",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-7",
+        "original-image"
+      ],
+      "observedMathAndResult": "Flow displays Input -> Double -> Output with Input selected. New requested Input -> Subtract one -> Square -> Output is absent; fallback and failed generated rows share unchanged work.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-diagram-new-procedure:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-diagram-new-procedure:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b51",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/4602882157e096629f49.png",
+      "sha256": "976635abfcf77af0d6e45026b9b701cca5ea1dfa1f2c1315ec0176f6f23223a3",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-7"
+      ],
+      "observedMathAndResult": "Flow displays Input -> Double -> Output with Input selected. New requested Input -> Subtract one -> Square -> Output is absent; fallback and failed generated rows share unchanged work.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-diagram-new-procedure:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-diagram-new-procedure:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b52",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/3f4bd6fcb61c49847a28.png",
+      "sha256": "b5538dd1647b9485eacf871485a5b8e463df6be797d21c0585a398c094a31b48",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-7",
+        "original-image"
+      ],
+      "observedMathAndResult": "Flow displays Input -> Subtract one -> Square -> Output in order, all rows/arrow connectors fit. Spoken readback is not visible; baseline mapping is fallback.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-diagram-new-procedure:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-diagram-new-procedure:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b53",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/3a8f71ec6ad0974068bb.png",
+      "sha256": "82ce3bf91238031e6127301f98a46fd1026d9a1a45ec129af8dd414829125c59",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-7"
+      ],
+      "observedMathAndResult": "Flow displays Input -> Subtract one -> Square -> Output in order, all rows/arrow connectors fit. Spoken readback is not visible; baseline mapping is fallback.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-diagram-new-procedure:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-diagram-new-procedure:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b54",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/5b092544be5009ccd28a.png",
+      "sha256": "4b4ecc7e0457a894e0d2aae4ec84fe0748e908433309ebed9333f788457e6b00",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-7",
+        "original-image"
+      ],
+      "observedMathAndResult": "Flow shows Start -> Add 5 -> Finish. Visually and numerically equivalent to spoken add-five request, though exact authored label Add five leads to failed contract grading.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "student-diagram-undo-new-flow:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b55",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/36cbffe3ed73be315249.png",
+      "sha256": "f33f1a969bc49ded60b709721ede9cd5505f22694f0de5f1e5ea8dc31e0d5374",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-7"
+      ],
+      "observedMathAndResult": "Flow shows Start -> Add 5 -> Finish. Visually and numerically equivalent to spoken add-five request, though exact authored label Add five leads to failed contract grading.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "adapted",
+          "id": "student-diagram-undo-new-flow:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b56",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/931bfe2734e6e2a316be.png",
+      "sha256": "6785967ffc706498c924d99e45035067a4587eadc5d55d57a7b2cb2c6df0c65c",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-7",
+        "original-image"
+      ],
+      "observedMathAndResult": "Flow remains Start -> Add five -> Finish; requested replacement Subtract five is absent. Image is fallback/failed outcome, not successful replacement.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-diagram-undo-new-flow:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-diagram-undo-new-flow:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b57",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/ddabf5cd4bd15147826e.png",
+      "sha256": "aa211c895b229d14d489648bab4bde927a218e70313c1031501735b707325ac4",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-8"
+      ],
+      "observedMathAndResult": "Flow remains Start -> Add five -> Finish; requested replacement Subtract five is absent. Image is fallback/failed outcome, not successful replacement.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-diagram-undo-new-flow:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-diagram-undo-new-flow:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b58",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/ba04e3b87429127f9879.png",
+      "sha256": "679618f39426e93c2264a37133aa3d9e33e631e253350eb1926fc5e8cb140d31",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-8",
+        "original-image"
+      ],
+      "observedMathAndResult": "Fallback flow is Start -> Subtract five -> Finish. Requested undo should restore Add five; screenshot does not show that undo.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-diagram-undo-new-flow:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b59",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/48988e9c499c0ca31bcb.png",
+      "sha256": "3bf9332fa9d9f33d8e0c9a580a6218a83d1d5e2c2c665f5d738a218e1a98e5fa",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-8"
+      ],
+      "observedMathAndResult": "Fallback flow is Start -> Subtract five -> Finish. Requested undo should restore Add five; screenshot does not show that undo.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-diagram-undo-new-flow:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b60",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/51fd2120579ff40023d7.png",
+      "sha256": "6785967ffc706498c924d99e45035067a4587eadc5d55d57a7b2cb2c6df0c65c",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-8",
+        "original-image"
+      ],
+      "observedMathAndResult": "Flow is Start -> Add five -> Finish, consistent with restored saved state after undo. Readback of which flow is back is not visible and cannot establish answer correctness.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-diagram-undo-new-flow:4:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-diagram-undo-new-flow:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-diagram-undo-new-flow:4:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b61",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/34a4497f98a72816648b.png",
+      "sha256": "aa211c895b229d14d489648bab4bde927a218e70313c1031501735b707325ac4",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-8"
+      ],
+      "observedMathAndResult": "Flow is Start -> Add five -> Finish, consistent with restored saved state after undo. Readback of which flow is back is not visible and cannot establish answer correctness.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-diagram-undo-new-flow:4:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-diagram-undo-new-flow:3:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-diagram-undo-new-flow:4:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b62",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/33b92cc86f5d9ab8f3dd.png",
+      "sha256": "39137b53933b9749a23602093cd4e3f05881e338b0f24bd44fd3c38e1ece544c",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-8",
+        "original-image"
+      ],
+      "observedMathAndResult": "Statistics data 1.2,2.3,3.5 visible; increasing line, mean 2.33333, median 2.3 and zero outliers match data. Total-seven spoken reply is not shown.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-decimal-sum:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-decimal-sum:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-decimal-sum:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b63",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/ec1d6c61d45c8ee2f9da.png",
+      "sha256": "f61e3a2b63fca478c68db6b5b0d93361760d2ddd97677146b569c9f11f476740",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-8"
+      ],
+      "observedMathAndResult": "Statistics data 1.2,2.3,3.5 visible; increasing line, mean 2.33333, median 2.3 and zero outliers match data. Total-seven spoken reply is not shown.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-decimal-sum:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-decimal-sum:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-decimal-sum:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b64",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/21e6d39223092e08045e.png",
+      "sha256": "22a9413ea53118900b9aa3575010fcc1d36f1dd07e73f4eb4c015acb8ea699c7",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-8",
+        "original-image"
+      ],
+      "observedMathAndResult": "Data 4,5,5,6,7,8,22 visible; line flat at repeated fives then rises sharply to 22; mean 8.14286, median 6 and one potential outlier match data. Mobile observation buttons wrap without clipping.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-one-large-outlier:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-one-large-outlier:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-one-large-outlier:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b65",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/5bb0c62f54fad6388904.png",
+      "sha256": "35212ecc6529bc5ddc2867352b9c1887a456196d813b895297efc10b1544f861",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-9"
+      ],
+      "observedMathAndResult": "Data 4,5,5,6,7,8,22 visible; line flat at repeated fives then rises sharply to 22; mean 8.14286, median 6 and one potential outlier match data. Mobile observation buttons wrap without clipping.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-one-large-outlier:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-one-large-outlier:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-one-large-outlier:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b66",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/91ae3f14e7d2d4b5ac3d.png",
+      "sha256": "35bddbd5235da8602c0573165c8f16f6ffb78ba5213e05ef06c2588c952172a1",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-9",
+        "original-image"
+      ],
+      "observedMathAndResult": "Data 5,12,3 visible; line peaks at 12 then falls to 3; mean 6.66667, median 5, zero outliers. Sum-twenty spoken reply is not shown.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-savings-total:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-savings-total:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-savings-total:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b67",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/fd0943a9f5900f92446d.png",
+      "sha256": "7f6552705414f047f714d3ed797571c61afaf6c3b106d81694ae333a0d2d5f1c",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-9"
+      ],
+      "observedMathAndResult": "Data 5,12,3 visible; line peaks at 12 then falls to 3; mean 6.66667, median 5, zero outliers. Sum-twenty spoken reply is not shown.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-savings-total:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-savings-total:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-savings-total:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b68",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/cfb66a6f8e497815a7cc.png",
+      "sha256": "80d1f19ff45ee52bcad04d5eede8f8e81120532df7c65924d624d7aa044d3274",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-9",
+        "original-image"
+      ],
+      "observedMathAndResult": "Data 0,5,10 visible with rising line, mean/median 5 and zero outliers. Minimum-zero spoken reply is not shown.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-smallest-zero:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-smallest-zero:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-smallest-zero:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b69",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/66fc42cd9f679f9f495f.png",
+      "sha256": "024e1d65d21a3b0c0522bf5f27f801a57a11e70b96a43a78299961b642be1395",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-9"
+      ],
+      "observedMathAndResult": "Data 0,5,10 visible with rising line, mean/median 5 and zero outliers. Minimum-zero spoken reply is not shown.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-smallest-zero:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-smallest-zero:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-smallest-zero:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b70",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/f3e24cca6aa4dcff730d.png",
+      "sha256": "9eb81894c05c625cfb6964dc1b2da4de7638046b9d1c1d3f16dcb2a3a957a896",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-9",
+        "original-image"
+      ],
+      "observedMathAndResult": "Data 7,7,7 visible with flat line, mean/median 7 and zero outliers. Range-zero spoken reply is not shown.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-zero-spread:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-zero-spread:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-zero-spread:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    },
+    {
+      "reviewIndex": "b71",
+      "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/39e1b9c0364420c704bd.png",
+      "sha256": "c97156d64ec816f7870d415dd37daabd3f1d5b86eb5792acf48b9cbf3cf36d7e",
+      "reviewStatus": "pixels-inspected",
+      "method": [
+        "contact-sheet-9"
+      ],
+      "observedMathAndResult": "Data 7,7,7 visible with flat line, mean/median 7 and zero outliers. Range-zero spoken reply is not shown.",
+      "layout": "No essential shape/flow/data clipping observed; graph editor may extend beyond fixed mobile viewport. Full-page capture remains static evidence.",
+      "refs": [
+        {
+          "phase": "baseline",
+          "id": "student-zero-spread:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "unchanged-prestate-no-executable-outcome",
+          "automatedPassUnchanged": false,
+          "interpretation": "Fallback is unchanged authored prestate, never model success."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-zero-spread:1:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        },
+        {
+          "phase": "adapted",
+          "id": "student-zero-spread:2:final",
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "source": "generated-outcome",
+          "automatedPassUnchanged": true,
+          "interpretation": "Generated saved state inspected; spoken reply and autonomous prior-turn success not inferred."
+        }
+      ]
+    }
+  ]
+}

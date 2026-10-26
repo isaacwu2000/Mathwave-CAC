@@ -1,0 +1,18 @@
+{
+  "origin": "https://mathwave.app",
+  "checkedAt": "2026-10-22T23:46:46.480Z",
+  "checks": [
+    "HTTPS responds",
+    "Synthetic email sign-in",
+    "New isolated problem",
+    "Deterministic graph command saved",
+    "Problem persists across separate reads"
+  ],
+  "previous": {
+    "assignmentId": "c1bcc8db-e540-49aa-9db1-ad5368a81ac8",
+    "problemId": "8f55e44f-044a-4e31-ba31-cc6e0c5ad315"
+  },
+  "problemId": "e54bb8b6-8eb3-42e2-bcf2-5db7895d9970",
+  "revision": 18,
+  "previousSelectionRestored": true
+}

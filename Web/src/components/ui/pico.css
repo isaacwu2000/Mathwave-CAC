@@ -1,0 +1,113 @@
+.pico {
+  overflow: visible;
+}
+.pico-pose,
+.pico-body {
+  transform-origin: 60px 116px;
+}
+.pico-pose,
+.pico-eyes {
+  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pico[data-listening='true'] .pico-pose {
+  transform: rotate(-4deg);
+}
+.pico[data-listening='true'] .pico-eyes {
+  transform: translateX(-3px);
+}
+.pico[data-working='true'] .pico-eye-left {
+  animation: pico-consider-left 900ms ease-in-out 1;
+}
+.pico[data-working='true'] .pico-eye-right {
+  animation: pico-consider-right 900ms ease-in-out 1;
+}
+.pico[data-attention='clarifying'] .pico-pose {
+  transform: rotate(5deg);
+}
+.pico[data-attention='clarifying'] .pico-eye-left {
+  transform: translate(-2px, -2px);
+}
+.pico[data-attention='clarifying'] .pico-eye-right {
+  transform: translate(2px, -2px);
+}
+.pico[data-attention='unavailable'] .pico-eyes {
+  transform: translateY(3px);
+}
+.pico-waves {
+  display: none;
+}
+.pico[data-speaking='true'] .pico-waves {
+  display: block;
+}
+.pico[data-speaking='true'] .pico-waves path {
+  animation: pico-speak 900ms ease-out infinite;
+}
+.pico .pico-waves path:nth-child(2) {
+  animation-delay: 120ms;
+}
+.pico .pico-waves path:nth-child(3) {
+  animation-delay: 240ms;
+}
+.pico[data-speaking='true'] .pico-body {
+  animation: pico-emphasis 800ms ease-in-out infinite alternate;
+}
+/* Pause current motion while hidden without restarting its timeline. */
+.pico[data-hidden='true'] *,
+.audio-group:has(.pico[data-hidden='true']) .moving-dashes {
+  animation-play-state: paused !important;
+}
+@keyframes pico-consider-left {
+  40% {
+    transform: translate(1px, -3px);
+  }
+  70% {
+    transform: translate(2px, 0);
+  }
+}
+@keyframes pico-consider-right {
+  40% {
+    transform: translate(3px, 1px);
+  }
+  70% {
+    transform: translate(0, 3px);
+  }
+}
+@keyframes pico-speak {
+  0% {
+    opacity: 0.15;
+    transform: translateX(-2px);
+  }
+  45% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(2px);
+  }
+}
+@keyframes pico-emphasis {
+  to {
+    transform: scale(1.015, 1.02);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pico * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .pico[data-speaking='true'] .pico-waves {
+    opacity: 0.7;
+  }
+}
+@media (forced-colors: active) {
+  .pico-body > path {
+    fill: Canvas;
+    stroke: CanvasText;
+  }
+  .pico-eyes {
+    fill: CanvasText;
+  }
+  .pico-waves {
+    stroke: CanvasText;
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "lane": "local deterministic warm operations, alternating order, 2000 trials per existing command; no provider/network/browser timing claim",
+  "baseline": "0b3a3f4",
+  "results": {
+    "subtract 3 from both sides": {
+      "baseline": {
+        "medianMs": 0.014416999999994573,
+        "p95Ms": 0.056457999999992126
+      },
+      "changed": {
+        "medianMs": 0.014457999999990534,
+        "p95Ms": 0.06383399999999995
+      }
+    },
+    "graph y=x^2": {
+      "baseline": {
+        "medianMs": 0.021665999999981977,
+        "p95Ms": 0.09391700000003311
+      },
+      "changed": {
+        "medianMs": 0.02154200000001083,
+        "p95Ms": 0.1007919999999558
+      }
+    },
+    "circle radius 5": {
+      "baseline": {
+        "medianMs": 0.0038329999999859865,
+        "p95Ms": 0.0067499999999540705
+      },
+      "changed": {
+        "medianMs": 0.003916000000003805,
+        "p95Ms": 0.0067919999999617175
+      }
+    },
+    "mean": {
+      "baseline": {
+        "medianMs": 0.003417000000013104,
+        "p95Ms": 0.006333000000040556
+      },
+      "changed": {
+        "medianMs": 0.003458000000023276,
+        "p95Ms": 0.005374999999958163
+      }
+    }
+  },
+  "constructionValidationAndRender": {
+    "medianMs": 0.023666999999989002,
+    "p95Ms": 0.04008299999998144
+  },
+  "contextSelection": {
+    "medianMs": 0.00008300000001781882,
+    "p95Ms": 0.00012500000002546585,
+    "extraAlgebraPromptCharacters": 0,
+    "extraProviderCalls": 0
+  }
+}

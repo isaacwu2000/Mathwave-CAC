@@ -1,0 +1,205 @@
+{
+  "scope": "Recheck the same saved browser transcripts with the tuned parser. Not fresh speech recognition.",
+  "results": [
+    {
+      "voice": "Daniel",
+      "case": "equation",
+      "audio": "/demo-voices/daniel-equation.wav",
+      "sha256": "fecf429d7526b2908843a43f200dc1d8a929b17898dfda8d73bff4f78d0bd2d9",
+      "transcript": "right 2x + 3 = 11",
+      "passed": true,
+      "status": "command",
+      "message": "I understood: the quantity 2 times x end quantity plus 3 equals 11 Say replace to edit a part, or undo to restore the previous equation."
+    },
+    {
+      "voice": "Daniel",
+      "case": "step",
+      "audio": "/demo-voices/daniel-step.wav",
+      "sha256": "8a2189b916dc05c896a537df16af4fdab649319b417afd34adb5020b70d807c1",
+      "transcript": "subtract 3 from both sides",
+      "passed": true,
+      "status": "command",
+      "message": "Added step: 2 * x + 3 - 3 = 11 - 3"
+    },
+    {
+      "voice": "Daniel",
+      "case": "median",
+      "audio": "/demo-voices/daniel-median.wav",
+      "sha256": "aefc6157cdc9ac4289e4f363b1bbc4cd6d1ea0c84faf14e519e522ada3930bb2",
+      "transcript": "find the median of two for 8:10",
+      "passed": false,
+      "status": "unsupported",
+      "message": "Enter 2 to 100 values, separated by commas. For example: data 4, 5, 5, 6, 7, 8, 22."
+    },
+    {
+      "voice": "Daniel",
+      "case": "outliers",
+      "audio": "/demo-voices/daniel-outliers.wav",
+      "sha256": "70bd1821a99cb5813fde9a8926ec4bf5344d21beff4265cf1e4db159d3a7946e",
+      "transcript": "find out please",
+      "passed": false,
+      "status": "unsupported",
+      "message": "I don't recognize “find”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+    },
+    {
+      "voice": "Daniel",
+      "case": "function",
+      "audio": "/demo-voices/graph-geometry/daniel-function.wav",
+      "sha256": "060cd6643a34c325245d38093275782b89defb1d7030df92c44b2f514c55fa57",
+      "transcript": "graph y = x - 4",
+      "passed": false,
+      "status": "command",
+      "message": "Sampled graph of y, x from -10 to 10. Lowest sampled value -14 at x -10; highest 6 at x 10. 0 unplotted samples (undefined or outside the plotting limit). Sampling may miss extrema, roots, or discontinuities; this is not a proof of global extrema."
+    },
+    {
+      "voice": "Daniel",
+      "case": "range",
+      "audio": "/demo-voices/graph-geometry/daniel-range.wav",
+      "sha256": "75c413628d7e8298e121f1a0ae8b55c4dbe273ff5549514726930e479d739792",
+      "transcript": "said Groff range from negative 5 to 5",
+      "passed": false,
+      "status": "unsupported",
+      "message": "I don't recognize “said”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+    },
+    {
+      "voice": "Daniel",
+      "case": "intercepts",
+      "audio": "/demo-voices/graph-geometry/daniel-intercepts.wav",
+      "sha256": "6073a504076ce43a43a80ff4b4ca4b6c42a63dc66505848d237411e416999571",
+      "transcript": "find the X intercepts",
+      "passed": true,
+      "status": "command",
+      "message": "Approximate x intercepts in this view: -2, 2. Sampling may miss roots."
+    },
+    {
+      "voice": "Daniel",
+      "case": "point",
+      "audio": "/demo-voices/graph-geometry/daniel-point.wav",
+      "sha256": "b624db93dc9745de3f7a39a8093e4b45117e8489d9a4f45930818f3a0a24abcd",
+      "transcript": "regrowth at x equals 3",
+      "passed": false,
+      "status": "unsupported",
+      "message": "I don't recognize “regrowth”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+    },
+    {
+      "voice": "Daniel",
+      "case": "right-triangle",
+      "audio": "/demo-voices/graph-geometry/daniel-right-triangle.wav",
+      "sha256": "1bdca0e34e5d203a9c6e45e1628a46f59bd8d04f2d82ee43fe9989d4efadf0b4",
+      "transcript": "drove it right triangle with legs 3 and 4",
+      "passed": false,
+      "status": "unsupported",
+      "message": "I don't recognize “drove”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+    },
+    {
+      "voice": "Daniel",
+      "case": "hypotenuse",
+      "audio": "/demo-voices/graph-geometry/daniel-hypotenuse.wav",
+      "sha256": "d4120df100c176f6e00845fc02d34b1e7b588ef8b70c361d3881ae3fa65ebc5b",
+      "transcript": "find the hypotenuse",
+      "passed": true,
+      "status": "command",
+      "message": "hypotenuse: 5 units. Formula: √(a² + b²)."
+    },
+    {
+      "voice": "Daniel",
+      "case": "rectangle",
+      "audio": "/demo-voices/graph-geometry/daniel-rectangle.wav",
+      "sha256": "d008597df83935a32809483bc3ca3c61c67ceda3668cd47c4e5466c7816b74b1",
+      "transcript": "create a rectangle with with 6 and height 4",
+      "passed": true,
+      "status": "command",
+      "message": "Rectangle. width 6, height 4. All dimensions use the same unit."
+    },
+    {
+      "voice": "Daniel",
+      "case": "dimension-edit",
+      "audio": "/demo-voices/graph-geometry/daniel-dimension-edit.wav",
+      "sha256": "483b50ffbb62a737cf45ca6b83eaf77dde3f2bf5002293800664ebe4ffa9bfa6",
+      "transcript": "change the weather today",
+      "passed": false,
+      "status": "clarification",
+      "message": "Which term should change, and what is its new value? Say replace, the exact term, and its new value."
+    },
+    {
+      "voice": "Daniel",
+      "case": "triangle-area",
+      "audio": "/demo-voices/graph-geometry/daniel-triangle-area.wav",
+      "sha256": "7c59b88ef407ce9465adefea98b47868eaf0bc87c103796b09d0b6c658b5956d",
+      "transcript": "find the area of a triangle with base 10 and height 6",
+      "passed": true,
+      "status": "command",
+      "message": "area: 30 square units. Formula: base × perpendicular height / 2."
+    },
+    {
+      "voice": "Daniel",
+      "case": "circle",
+      "audio": "/demo-voices/graph-geometry/daniel-circle.wav",
+      "sha256": "23c6e905b095bd1248d0d1632867cba3dc27c19a2d84b6a75acc6029aba7da6e",
+      "transcript": "draw a circle with a radius of 5",
+      "passed": true,
+      "status": "command",
+      "message": "Circle. radius 5. All dimensions use the same unit."
+    },
+    {
+      "voice": "Daniel",
+      "case": "radius-edit",
+      "audio": "/demo-voices/graph-geometry/daniel-radius-edit.wav",
+      "sha256": "181ffc114fd65723be2f7ecbfc706cc1a5911331eb3b9971633ffafb5ae97e6b",
+      "transcript": "said the Raiders to seven",
+      "passed": false,
+      "status": "unsupported",
+      "message": "I don't recognize “said”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+    },
+    {
+      "voice": "Daniel",
+      "case": "cylinder",
+      "audio": "/demo-voices/graph-geometry/daniel-cylinder.wav",
+      "sha256": "dcafcb9733bb19b0fb0da05221d448b0d89a8061d397b2052a14844eef1a9187",
+      "transcript": "create a cylinder with radius 2 and height 5",
+      "passed": true,
+      "status": "command",
+      "message": "Cylinder. radius 2, height 5. All dimensions use the same unit."
+    },
+    {
+      "voice": "Daniel",
+      "case": "volume",
+      "audio": "/demo-voices/graph-geometry/daniel-volume.wav",
+      "sha256": "f1214a1b1c4a48565b062f750d5319663d4a8c56b7b09a1d3ebbdb3f9ecf3ddf",
+      "transcript": "find its volume",
+      "passed": true,
+      "status": "command",
+      "message": "volume: 62.8319 cubic units. Formula: π × radius² × height."
+    },
+    {
+      "voice": "Daniel",
+      "case": "triangle-sides",
+      "audio": "/demo-voices/graph-geometry/daniel-triangle-sides.wav",
+      "sha256": "3a6aed321cf729a5a0155f057cbecbd8bbb62395e564ab622f3766afabeb5f2c",
+      "transcript": "triangle with sides 3 4 5",
+      "passed": true,
+      "status": "command",
+      "message": "Triangle. a 3, b 4, c 5. All dimensions use the same unit."
+    },
+    {
+      "voice": "Daniel",
+      "case": "angle",
+      "audio": "/demo-voices/graph-geometry/daniel-angle.wav",
+      "sha256": "deb77af2d9aae90482b474f7a39332e990769df5d2a32fe6733a45327e53898b",
+      "transcript": "find angle C",
+      "passed": true,
+      "status": "command",
+      "message": "angle c: 90 degrees. Formula: cosine rule, opposite side c."
+    },
+    {
+      "voice": "Daniel",
+      "case": "missing-height",
+      "audio": "/demo-voices/graph-geometry/daniel-missing-height.wav",
+      "sha256": "75f0717d74dbf05c6729c03647f2ca87fe607815a5c4d58367416b789b9faf0a",
+      "transcript": "rectangle with six",
+      "passed": true,
+      "status": "clarification",
+      "message": "Describe dimensions by name, for example circle radius five."
+    }
+  ]
+}

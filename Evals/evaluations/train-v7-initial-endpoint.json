@@ -1,0 +1,136 @@
+{
+  "split": "train-v7",
+  "mode": "endpoint",
+  "datasetSHA256": "a407ed3693ea90137b1734dbe7610da3eebe00aae5f1b7963a220fdddbab8fec",
+  "createdAt": "2026-10-13T16:56:23.461Z",
+  "total": 8,
+  "scored": 8,
+  "passed": 5,
+  "unavailable": 0,
+  "accuracy": 0.625,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "ai_algebra": {
+      "passed": 5,
+      "scored": 8
+    }
+  },
+  "results": [
+    {
+      "id": "natural-001",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "multiply both sides by 5",
+          "simplify"
+        ]
+      },
+      "latencyMs": 4697
+    },
+    {
+      "id": "natural-002",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "add 6 to both sides",
+          "simplify"
+        ]
+      },
+      "latencyMs": 2964
+    },
+    {
+      "id": "natural-003",
+      "category": "ai_algebra",
+      "pass": false,
+      "reason": "Wrong state, action, answer, or numeric expectation",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "divide both sides by 2",
+          "simplify"
+        ]
+      },
+      "latencyMs": 3927
+    },
+    {
+      "id": "natural-004",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "subtract 3 from both sides",
+          "simplify"
+        ]
+      },
+      "latencyMs": 2601
+    },
+    {
+      "id": "natural-005",
+      "category": "ai_algebra",
+      "pass": false,
+      "reason": "Expected command, received unsupported",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "Switching the two sides of an equation isn’t a supported operation. You can rewrite the equation with the sides reversed."
+      },
+      "latencyMs": 8502
+    },
+    {
+      "id": "natural-006",
+      "category": "ai_algebra",
+      "pass": false,
+      "reason": "Expected clarification, received command",
+      "prediction": {
+        "status": "command",
+        "command": "subtract 3 from both sides",
+        "message": ""
+      },
+      "latencyMs": 4671
+    },
+    {
+      "id": "natural-007",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "subtract 3 from both sides",
+          "simplify"
+        ]
+      },
+      "latencyMs": 2359
+    },
+    {
+      "id": "natural-008",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "divide both sides by 2",
+        "message": ""
+      },
+      "latencyMs": 4474
+    }
+  ]
+}

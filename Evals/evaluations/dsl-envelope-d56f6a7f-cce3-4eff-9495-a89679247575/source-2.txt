@@ -1,0 +1,55 @@
+/** Parameter contracts describe both generated guidance and runtime argument checks. */
+export type ToolParameter = {
+  name: string;
+  type:
+    | 'number'
+    | 'string'
+    | 'numbers'
+    | 'strings'
+    | 'dimensions'
+    | 'operand'
+    | 'math'
+    | 'part'
+    | 'mathOrPart'
+    | 'graph'
+    | 'geometry'
+    | 'statistics'
+    | 'diagram'
+    | 'work'
+    | 'graphSelector';
+  optional?: boolean;
+};
+export type ToolArea =
+  | 'equation'
+  | 'graph'
+  | 'geometry'
+  | 'statistics'
+  | 'diagram'
+  | 'navigation'
+  | 'history'
+  | 'audio'
+  | 'shared';
+type ToolDescription = {
+  area: ToolArea;
+  parameters: readonly ToolParameter[];
+  description: string;
+  constraints?: string;
+  examples?: readonly string[];
+  context?: 'graph-scene' | 'construction';
+};
+export type QueryTool = ToolDescription & { kind: 'query'; returns: string };
+export type TransformTool = ToolDescription & {
+  kind: 'transform';
+  returns: string;
+};
+export type SaveTool = ToolDescription & {
+  kind: 'save';
+  area: 'shared';
+  returns: 'void';
+};
+export type ControlTool = ToolDescription & {
+  kind: 'control';
+  returns: 'void';
+};
+/** Kinds distinguish read-only results, immutable transforms, staged saves and standalone controls. */
+export type ToolDefinition = QueryTool | TransformTool | SaveTool | ControlTool;

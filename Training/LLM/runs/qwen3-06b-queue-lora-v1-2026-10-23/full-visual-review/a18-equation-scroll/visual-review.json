@@ -1,0 +1,22 @@
+{
+  "id": "eq2-read-equation-after-two-step-request:3:final",
+  "reviewIndex": "a18",
+  "classification": "Supported horizontal equation pan; not inaccessible clipping.",
+  "reviewed": [
+    "before.png",
+    "after-touch-swipe.png"
+  ],
+  "measurements": {
+    "clientWidth": 282,
+    "scrollWidth": 363,
+    "maximumScroll": 81,
+    "keyboardArrowRightScroll": 40,
+    "emulatedTouchSwipeScroll": 81,
+    "rightmostMathEdge": 328.140625,
+    "viewportContainerRight": 336
+  },
+  "finding": "Actual app span overflow-x:auto. Once focused, ArrowRight moves40px; emulated touch drag reaches81px maximum. Full right-hand side (6\u22122)\u00b73 is visible after swipe; speech aria-label retains full equation.",
+  "affordanceLimit": "Scrollbars intentionally hidden; no persistent swipe hint is visible. Programmatic focus plus keyboard interaction tested, not full Tab sequence or physical iPhone.",
+  "lane": "Actual app replay of unchanged gold prestate from invalid baseline generation; no model call or output applied.",
+  "productionChanges": false
+}

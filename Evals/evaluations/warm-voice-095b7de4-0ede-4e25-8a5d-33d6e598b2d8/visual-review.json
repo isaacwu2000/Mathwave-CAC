@@ -1,0 +1,14 @@
+{
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "reviewed": [
+    "function-before.png",
+    "function-after.png",
+    "rectangle-before.png",
+    "rectangle-after.png"
+  ],
+  "findings": "Both initial and final screenshots remain on empty work with listening active. The temporary readiness-gated fixture deadlocked because the product waits for audio before connecting. This fixture change was rejected and reverted; this failed diagnostic run is preserved.",
+  "passed": false
+}

@@ -1,0 +1,225 @@
+{
+  "lane": "Small recorded synthetic speech transcription sample; no context, no math answers, no training.",
+  "scorer": "benchmark_local_speech.py tokens/errors: case, punctuation and small number words normalized; math signs retained.",
+  "limits": "Eight paired clips from three conversations, two macOS TTS voices. Not human speech, streaming latency, iPhone or broad model quality. Fourth prepared conversation not tested after rate limit.",
+  "completed": 16,
+  "budget": {
+    "capUsd": 8,
+    "reportedSpendUsd": 0.00124458,
+    "unknownChargeReservationUsd": 2,
+    "note": "Request 17 returned HTTP429 without cost. Stopped without retry/fallback. Reserve is not asserted spent."
+  },
+  "models": {
+    "google/gemini-2.5-flash-lite": {
+      "clips": 8,
+      "wordErrors": 12,
+      "referenceWords": 67,
+      "normalizedExact": 3,
+      "costUsd": 0.00027360000000000004,
+      "wordErrorRate": 0.1791044776119403
+    },
+    "qwen/qwen3.8-omni-flash": {
+      "clips": 8,
+      "wordErrors": 4,
+      "referenceWords": 67,
+      "normalizedExact": 6,
+      "costUsd": 0.0009709800000000001,
+      "wordErrorRate": 0.05970149253731343
+    }
+  },
+  "turns": [
+    {
+      "case": "alg-solve-sides-reversed",
+      "turn": 1,
+      "model": "google/gemini-2.5-flash-lite",
+      "reference": "Write twenty-three equals five x minus two.",
+      "transcript": "Right 23 = 5x - 2",
+      "costUsd": 3.28e-05,
+      "elapsedMs": 1504.982833999995,
+      "wordErrors": 4,
+      "referenceWords": 9,
+      "normalizedExact": false
+    },
+    {
+      "case": "alg-solve-sides-reversed",
+      "turn": 1,
+      "model": "qwen/qwen3.8-omni-flash",
+      "reference": "Write twenty-three equals five x minus two.",
+      "transcript": "Write 23 = 5x - 2.",
+      "costUsd": 0.0001557,
+      "elapsedMs": 5980.138542000001,
+      "wordErrors": 3,
+      "referenceWords": 9,
+      "normalizedExact": false
+    },
+    {
+      "case": "alg-solve-sides-reversed",
+      "turn": 2,
+      "model": "google/gemini-2.5-flash-lite",
+      "reference": "What should x be?",
+      "transcript": "What should X",
+      "costUsd": 1.53e-05,
+      "elapsedMs": 1245.3864580000009,
+      "wordErrors": 1,
+      "referenceWords": 4,
+      "normalizedExact": false
+    },
+    {
+      "case": "alg-solve-sides-reversed",
+      "turn": 2,
+      "model": "qwen/qwen3.8-omni-flash",
+      "reference": "What should x be?",
+      "transcript": "What should x be?",
+      "costUsd": 4.185e-05,
+      "elapsedMs": 2161.962124999998,
+      "wordErrors": 0,
+      "referenceWords": 4,
+      "normalizedExact": true
+    },
+    {
+      "case": "student-sign-correction-data",
+      "turn": 1,
+      "model": "google/gemini-2.5-flash-lite",
+      "reference": "Use two, four, and six.",
+      "transcript": "use 2 4 and 6",
+      "costUsd": 3.01e-05,
+      "elapsedMs": 1651.5231670000067,
+      "wordErrors": 0,
+      "referenceWords": 5,
+      "normalizedExact": true
+    },
+    {
+      "case": "student-sign-correction-data",
+      "turn": 1,
+      "model": "qwen/qwen3.8-omni-flash",
+      "reference": "Use two, four, and six.",
+      "transcript": "Use 2, 4, and 6.",
+      "costUsd": 0.0004988,
+      "elapsedMs": 13796.574374999997,
+      "wordErrors": 0,
+      "referenceWords": 5,
+      "normalizedExact": true
+    },
+    {
+      "case": "student-sign-correction-data",
+      "turn": 2,
+      "model": "google/gemini-2.5-flash-lite",
+      "reference": "The first one should be negative two. Keep the others.",
+      "transcript": "The first one should be negative two. Keep the others.",
+      "costUsd": 4.14e-05,
+      "elapsedMs": 1600.9648749999978,
+      "wordErrors": 0,
+      "referenceWords": 10,
+      "normalizedExact": true
+    },
+    {
+      "case": "student-sign-correction-data",
+      "turn": 2,
+      "model": "qwen/qwen3.8-omni-flash",
+      "reference": "The first one should be negative two. Keep the others.",
+      "transcript": "The first one should be negative two. Keep the others.",
+      "costUsd": 4.865e-05,
+      "elapsedMs": 3341.024750000004,
+      "wordErrors": 0,
+      "referenceWords": 10,
+      "normalizedExact": true
+    },
+    {
+      "case": "student-sign-correction-data",
+      "turn": 3,
+      "model": "google/gemini-2.5-flash-lite",
+      "reference": "What is the sum after that fix?",
+      "transcript": "What is the sum of that fix?",
+      "costUsd": 2.6e-05,
+      "elapsedMs": 1518.723417000001,
+      "wordErrors": 1,
+      "referenceWords": 7,
+      "normalizedExact": false
+    },
+    {
+      "case": "student-sign-correction-data",
+      "turn": 3,
+      "model": "qwen/qwen3.8-omni-flash",
+      "reference": "What is the sum after that fix?",
+      "transcript": "What is the sum after that fix?",
+      "costUsd": 4.713e-05,
+      "elapsedMs": 2304.3420410000035,
+      "wordErrors": 0,
+      "referenceWords": 7,
+      "normalizedExact": true
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 1,
+      "model": "google/gemini-2.5-flash-lite",
+      "reference": "Draw two horizontal parallel lines four units apart, with a transversal from zero zero through four eight.",
+      "transcript": "draw two horizontal parallel lines 4 units apart with a transversal from 00 through 48",
+      "costUsd": 7.22e-05,
+      "elapsedMs": 1566.6826250000013,
+      "wordErrors": 4,
+      "referenceWords": 17,
+      "normalizedExact": false
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 1,
+      "model": "qwen/qwen3.8-omni-flash",
+      "reference": "Draw two horizontal parallel lines four units apart, with a transversal from zero zero through four eight.",
+      "transcript": "Draw two horizontal parallel lines 4 units apart, with a transversal from (0,0) through (4,8).",
+      "costUsd": 6.402e-05,
+      "elapsedMs": 2799.073457999999,
+      "wordErrors": 0,
+      "referenceWords": 17,
+      "normalizedExact": true
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 2,
+      "model": "google/gemini-2.5-flash-lite",
+      "reference": "Mark the matching upper-right angles at the crossings.",
+      "transcript": "Mark the matching up the right angles at the crossings",
+      "costUsd": 3.52e-05,
+      "elapsedMs": 1295.2404999999999,
+      "wordErrors": 2,
+      "referenceWords": 10,
+      "normalizedExact": false
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 2,
+      "model": "qwen/qwen3.8-omni-flash",
+      "reference": "Mark the matching upper-right angles at the crossings.",
+      "transcript": "Mark the matching upper right angles at the crossings.",
+      "costUsd": 7.251e-05,
+      "elapsedMs": 2885.8517909999937,
+      "wordErrors": 1,
+      "referenceWords": 10,
+      "normalizedExact": false
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 3,
+      "model": "google/gemini-2.5-flash-lite",
+      "reference": "Where is the upper crossing?",
+      "transcript": "Where is the upper crossing",
+      "costUsd": 2.06e-05,
+      "elapsedMs": 1369.2739160000056,
+      "wordErrors": 0,
+      "referenceWords": 5,
+      "normalizedExact": true
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 3,
+      "model": "qwen/qwen3.8-omni-flash",
+      "reference": "Where is the upper crossing?",
+      "transcript": "Where is the upper crossing?",
+      "costUsd": 4.232e-05,
+      "elapsedMs": 2032.5559999999969,
+      "wordErrors": 0,
+      "referenceWords": 5,
+      "normalizedExact": true
+    }
+  ],
+  "visualReview": "Audio-only lane. Full 400-case actual-app visual acceptance remains incomplete."
+}

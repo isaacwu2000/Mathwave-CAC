@@ -1,0 +1,156 @@
+{
+  "runId": "7ff4f59d-50af-406c-b6be-1bda146b1906",
+  "startedAt": "2026-10-19T19:13:09.108Z",
+  "finishedAt": "2026-10-19T19:14:00.842Z",
+  "lane": "suite",
+  "revision": "a23c292ec498d84cb1fba55895da929312128ea5",
+  "dirty": true,
+  "sourceSHA256": "4bee1ce9d390e3da349c27f99a0486d0b4af2a058f5a00669c18b06031cbc6ef",
+  "runnerSHA256": "7d8b4feab7e96e5c35d97451fb6c366cd7a9d7c5ac93da5cab571005d1ef051e",
+  "models": {
+    "live": "gpt-live-1",
+    "command": "gpt-6-luna"
+  },
+  "commandProfile": "luna-default",
+  "reasoning": null,
+  "latencyDefinition": "Harness duration includes setup, fixture, saved outcome, finished reply and evidence capture; responseLatencyMs separately measures last input to display.",
+  "scope": "Synthetic recorded speech through browser, GPT Live, backend, persistence and React commit; excludes physical microphone and student usability.",
+  "failure": "The operation timed out.",
+  "repetitions": 1,
+  "selection": {
+    "seed": "voice-2026-10-19",
+    "cases": [
+      "median"
+    ],
+    "selected": [
+      {
+        "id": "median",
+        "category": "statistics",
+        "turns": 1,
+        "variants": [
+          {
+            "voice": "Daniel",
+            "case": "median",
+            "transcript": "Find the median of two, four, eight, ten.",
+            "expectedCommand": "median of 2, 4, 8, 10",
+            "audio": "/demo-voices/daniel-median.wav",
+            "sha256": "aefc6157cdc9ac4289e4f363b1bbc4cd6d1ea0c84faf14e519e522ada3930bb2",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 3.909,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Karen",
+            "case": "median",
+            "transcript": "Find the median of two, four, eight, ten.",
+            "expectedCommand": "median of 2, 4, 8, 10",
+            "audio": "/demo-voices/karen-median.wav",
+            "sha256": "9117ebfadc5e62a5d1addaab371127d647dd4beca845a7b40997343cbdd6936a",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 3.767,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Rishi",
+            "case": "median",
+            "transcript": "Find the median of two, four, eight, ten.",
+            "expectedCommand": "median of 2, 4, 8, 10",
+            "audio": "/demo-voices/rishi-median.wav",
+            "sha256": "30d80f23274951d5ff6d3be89b55d27c26a56b3a8c1cdeff765c73e31cea6c28",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 3.605,
+            "recognitionStatus": "not-tested"
+          }
+        ],
+        "variant": {
+          "voice": "Daniel",
+          "case": "median",
+          "transcript": "Find the median of two, four, eight, ten.",
+          "expectedCommand": "median of 2, 4, 8, 10",
+          "audio": "/demo-voices/daniel-median.wav",
+          "sha256": "aefc6157cdc9ac4289e4f363b1bbc4cd6d1ea0c84faf14e519e522ada3930bb2",
+          "source": "macOS installed speech synthesis",
+          "durationSeconds": 3.909,
+          "recognitionStatus": "not-tested"
+        }
+      }
+    ],
+    "catalogSHA256": "291053f2b07d593123ed27b67dadc454e75c51550eb3acae525d5ddd8bacbdfd"
+  },
+  "campaignSummary": {
+    "correctness": {
+      "planned": 1,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "unattempted": 1
+    },
+    "latency": {
+      "measured": 0,
+      "missing": 0,
+      "p50": null,
+      "p95": null
+    },
+    "latencyDefinition": "Last input signal to saved display commit; milliseconds. Correctness has no speed budget. Harness durations include setup, playback and evidence capture.",
+    "byCategory": {
+      "statistics": {
+        "correctness": {
+          "planned": 1,
+          "attempted": 0,
+          "passed": 0,
+          "failed": 0,
+          "unattempted": 1
+        },
+        "latency": {
+          "measured": 0,
+          "missing": 0,
+          "p50": null,
+          "p95": null
+        }
+      }
+    },
+    "unattemptedCases": [
+      {
+        "trial": 1,
+        "family": "median",
+        "scenario": "median"
+      }
+    ]
+  },
+  "planned": 1,
+  "unattempted": 1,
+  "groups": {
+    "median": {
+      "correctness": {
+        "planned": 1,
+        "attempted": 0,
+        "passed": 0,
+        "failed": 0,
+        "unattempted": 1
+      },
+      "latency": {
+        "measured": 0,
+        "missing": 0,
+        "p50": null,
+        "p95": null
+      }
+    }
+  },
+  "summary": {
+    "correctness": {
+      "planned": 1,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "unattempted": 1
+    },
+    "latency": {
+      "measured": 0,
+      "missing": 0,
+      "p50": null,
+      "p95": null
+    }
+  },
+  "intervalMethod": "No pooled interval: cases are stratified families and conversation turns share state.",
+  "samples": []
+}

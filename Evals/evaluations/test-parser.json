@@ -1,0 +1,284 @@
+{
+  "split": "test",
+  "mode": "parser",
+  "datasetSHA256": "1c565ff2e142d4f64436a44d472129b8df149eb1876f0e82defc56ebae4d6564",
+  "createdAt": "2026-10-10T01:34:17.292Z",
+  "total": 20,
+  "scored": 20,
+  "passed": 16,
+  "unavailable": 0,
+  "accuracy": 0.8,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "statistics": {
+      "passed": 6,
+      "scored": 7
+    },
+    "algebra": {
+      "passed": 3,
+      "scored": 3
+    },
+    "navigation": {
+      "passed": 2,
+      "scored": 2
+    },
+    "reading": {
+      "passed": 1,
+      "scored": 1
+    },
+    "clarification": {
+      "passed": 0,
+      "scored": 3
+    },
+    "safety": {
+      "passed": 3,
+      "scored": 3
+    },
+    "unsupported": {
+      "passed": 1,
+      "scored": 1
+    }
+  },
+  "results": [
+    {
+      "id": "test-001",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "median of 2, 4, 8, 10",
+        "message": ""
+      },
+      "latencyMs": 4
+    },
+    {
+      "id": "test-002",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "mean of -4, 2, 8",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "test-003",
+      "category": "statistics",
+      "pass": false,
+      "reason": "Expected command, received unsupported",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “which”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "test-004",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "find the range",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "test-005",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "find the mode",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "test-006",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "data 1.5, -2.5, 0, 9",
+        "message": ""
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "test-007",
+      "category": "algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "add negative four to both sides",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "test-008",
+      "category": "algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "multiply both sides by negative three",
+        "message": ""
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "test-009",
+      "category": "navigation",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "hide graph",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "test-010",
+      "category": "reading",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "read right side",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "test-011",
+      "category": "navigation",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "previous part",
+        "message": ""
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "test-012",
+      "category": "algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "replace two x with five x",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "test-013",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "population standard deviation",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "test-014",
+      "category": "clarification",
+      "pass": false,
+      "reason": "Expected clarification, received unsupported",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “standard”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "test-015",
+      "category": "clarification",
+      "pass": false,
+      "reason": "Expected clarification, received unsupported",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “that”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "test-016",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “calculate”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "test-017",
+      "category": "clarification",
+      "pass": false,
+      "reason": "Expected clarification, received unsupported",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “fix”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "test-018",
+      "category": "unsupported",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “differentiate”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "test-019",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “print”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "test-020",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “erase”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    }
+  ]
+}

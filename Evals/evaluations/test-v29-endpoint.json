@@ -1,0 +1,56 @@
+{
+  "split": "test-v29",
+  "mode": "endpoint",
+  "datasetSHA256": "b8832bc4ede955dd8b005bc32ec645317035a20c60c64597d11e2a89d5ac5bc3",
+  "createdAt": "2026-10-14T16:49:53.027Z",
+  "total": 3,
+  "scored": 3,
+  "passed": 3,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "view-controls": {
+      "passed": 3,
+      "scored": 3
+    }
+  },
+  "results": [
+    {
+      "id": "construction-controls-1",
+      "category": "view-controls",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "fit comparison",
+        "message": ""
+      },
+      "latencyMs": 2944
+    },
+    {
+      "id": "construction-controls-2",
+      "category": "view-controls",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "hide comparison",
+        "message": ""
+      },
+      "latencyMs": 3635
+    },
+    {
+      "id": "construction-controls-3",
+      "category": "view-controls",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "hide construction",
+        "message": ""
+      },
+      "latencyMs": 2380
+    }
+  ]
+}

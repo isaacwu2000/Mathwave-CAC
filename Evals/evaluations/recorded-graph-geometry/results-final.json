@@ -1,0 +1,2370 @@
+{
+  "recognizer": "OpenAI Whisper local base.en",
+  "scope": "Synthetic recordings through local ASR, not browser microphone or GPT Live.",
+  "total": 63,
+  "passed": 55,
+  "expectedClarifications": 3,
+  "unresolvedClarifications": 8,
+  "incorrectActions": 0,
+  "results": [
+    {
+      "voice": "Daniel",
+      "case": "function",
+      "audio": "/demo-voices/graph-geometry/daniel-function.wav",
+      "sha256": "060cd6643a34c325245d38093275782b89defb1d7030df92c44b2f514c55fa57",
+      "transcript": "graph y equals x squared minus 4.",
+      "durationSeconds": 3.09,
+      "latencySeconds": 0.422,
+      "status": "command",
+      "command": "graph y equals x squared minus 4.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Sampled graph of y, x from -10 to 10. Lowest sampled value -4 at x 0; highest 96 at x 10. 0 unplotted samples (undefined or outside the plotting limit). Sampling may miss extrema, roots, or discontinuities; this is not a proof of global extrema.",
+      "state": {
+        "mode": "equation",
+        "expression": "y = x^2 - 4",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "range",
+      "audio": "/demo-voices/graph-geometry/daniel-range.wav",
+      "sha256": "75c413628d7e8298e121f1a0ae8b55c4dbe273ff5549514726930e479d739792",
+      "transcript": "Set graph range from negative 5 to 5.",
+      "durationSeconds": 3.134,
+      "latencySeconds": 0.246,
+      "status": "command",
+      "command": "Set graph range from negative 5 to 5.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Sampled graph of y, x from -5 to 5. Lowest sampled value -4 at x 0; highest 21 at x 5. 0 unplotted samples (undefined or outside the plotting limit). Sampling may miss extrema, roots, or discontinuities; this is not a proof of global extrema.",
+      "state": {
+        "mode": "equation",
+        "expression": "y = x^2 - 4",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphRange": {
+          "min": -5,
+          "max": 5
+        }
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "intercepts",
+      "audio": "/demo-voices/graph-geometry/daniel-intercepts.wav",
+      "sha256": "6073a504076ce43a43a80ff4b4ca4b6c42a63dc66505848d237411e416999571",
+      "transcript": "Find the X-intercepts.",
+      "durationSeconds": 1.981,
+      "latencySeconds": 0.238,
+      "status": "command",
+      "command": "Find the X-intercepts.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Approximate x intercepts in this view: -2, 2. Sampling may miss roots.",
+      "state": {
+        "mode": "equation",
+        "expression": "y = x^2 - 4",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "point",
+      "audio": "/demo-voices/graph-geometry/daniel-point.wav",
+      "sha256": "b624db93dc9745de3f7a39a8093e4b45117e8489d9a4f45930818f3a0a24abcd",
+      "transcript": "read graph at x equals 3.",
+      "durationSeconds": 2.486,
+      "latencySeconds": 0.239,
+      "status": "command",
+      "command": "read graph at x equals 3.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "At x = 3, y = 5.",
+      "state": {
+        "mode": "equation",
+        "expression": "y = x^2 - 4",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "right-triangle",
+      "audio": "/demo-voices/graph-geometry/daniel-right-triangle.wav",
+      "sha256": "1bdca0e34e5d203a9c6e45e1628a46f59bd8d04f2d82ee43fe9989d4efadf0b4",
+      "transcript": "Draw a right triangle with legs 3 and 4.",
+      "durationSeconds": 3.055,
+      "latencySeconds": 0.269,
+      "status": "command",
+      "command": "Draw a right triangle with legs 3 and 4.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Right triangle. leg a 3, leg b 4. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "right triangle",
+          "dimensions": {
+            "a": 3,
+            "b": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "hypotenuse",
+      "audio": "/demo-voices/graph-geometry/daniel-hypotenuse.wav",
+      "sha256": "d4120df100c176f6e00845fc02d34b1e7b588ef8b70c361d3881ae3fa65ebc5b",
+      "transcript": "Find the High Potter News.",
+      "durationSeconds": 1.854,
+      "latencySeconds": 0.262,
+      "status": "command",
+      "command": "Find the High Potter News.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "hypotenuse: 5 units. Formula: √(a² + b²).",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "right triangle",
+          "dimensions": {
+            "a": 3,
+            "b": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "rectangle",
+      "audio": "/demo-voices/graph-geometry/daniel-rectangle.wav",
+      "sha256": "d008597df83935a32809483bc3ca3c61c67ceda3668cd47c4e5466c7816b74b1",
+      "transcript": "Create a rectangle with width 6 and height 4.",
+      "durationSeconds": 3.163,
+      "latencySeconds": 0.256,
+      "status": "command",
+      "command": "Create a rectangle with width 6 and height 4.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Rectangle. width 6, height 4. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "rectangle",
+          "dimensions": {
+            "width": 6,
+            "height": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "dimension-edit",
+      "audio": "/demo-voices/graph-geometry/daniel-dimension-edit.wav",
+      "sha256": "483b50ffbb62a737cf45ca6b83eaf77dde3f2bf5002293800664ebe4ffa9bfa6",
+      "transcript": "change the width to 8.",
+      "durationSeconds": 1.591,
+      "latencySeconds": 0.232,
+      "status": "command",
+      "command": "change the width to 8.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Rectangle. width 8, height 4. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "rectangle",
+          "dimensions": {
+            "width": 8,
+            "height": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "triangle-area",
+      "audio": "/demo-voices/graph-geometry/daniel-triangle-area.wav",
+      "sha256": "7c59b88ef407ce9465adefea98b47868eaf0bc87c103796b09d0b6c658b5956d",
+      "transcript": "Find the area of a triangle with base 10 and height 6.",
+      "durationSeconds": 3.793,
+      "latencySeconds": 0.272,
+      "status": "command",
+      "command": "Find the area of a triangle with base 10 and height 6.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "area: 30 square units. Formula: base × perpendicular height / 2.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "triangle",
+          "dimensions": {
+            "base": 10,
+            "height": 6
+          }
+        }
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "circle",
+      "audio": "/demo-voices/graph-geometry/daniel-circle.wav",
+      "sha256": "23c6e905b095bd1248d0d1632867cba3dc27c19a2d84b6a75acc6029aba7da6e",
+      "transcript": "Draw a circle with a radius of 5.",
+      "durationSeconds": 2.474,
+      "latencySeconds": 0.262,
+      "status": "command",
+      "command": "Draw a circle with a radius of 5.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Circle. radius 5. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "circle",
+          "dimensions": {
+            "radius": 5
+          }
+        }
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "radius-edit",
+      "audio": "/demo-voices/graph-geometry/daniel-radius-edit.wav",
+      "sha256": "181ffc114fd65723be2f7ecbfc706cc1a5911331eb3b9971633ffafb5ae97e6b",
+      "transcript": "Set the radius to 7.",
+      "durationSeconds": 1.892,
+      "latencySeconds": 0.247,
+      "status": "command",
+      "command": "Set the radius to 7.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Circle. radius 7. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "circle",
+          "dimensions": {
+            "radius": 7
+          }
+        }
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "cylinder",
+      "audio": "/demo-voices/graph-geometry/daniel-cylinder.wav",
+      "sha256": "dcafcb9733bb19b0fb0da05221d448b0d89a8061d397b2052a14844eef1a9187",
+      "transcript": "Create a cylinder with radius 2 and height 5.",
+      "durationSeconds": 3.07,
+      "latencySeconds": 0.252,
+      "status": "command",
+      "command": "Create a cylinder with radius 2 and height 5.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Cylinder. radius 2, height 5. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "cylinder",
+          "dimensions": {
+            "radius": 2,
+            "height": 5
+          }
+        }
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "volume",
+      "audio": "/demo-voices/graph-geometry/daniel-volume.wav",
+      "sha256": "f1214a1b1c4a48565b062f750d5319663d4a8c56b7b09a1d3ebbdb3f9ecf3ddf",
+      "transcript": "Find its volume.",
+      "durationSeconds": 1.645,
+      "latencySeconds": 0.215,
+      "status": "command",
+      "command": "Find its volume.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "volume: 62.8319 cubic units. Formula: π × radius² × height.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "cylinder",
+          "dimensions": {
+            "radius": 2,
+            "height": 5
+          }
+        }
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "triangle-sides",
+      "audio": "/demo-voices/graph-geometry/daniel-triangle-sides.wav",
+      "sha256": "3a6aed321cf729a5a0155f057cbecbd8bbb62395e564ab622f3766afabeb5f2c",
+      "transcript": "triangle with sides 3, 4, 5",
+      "durationSeconds": 3.513,
+      "latencySeconds": 0.239,
+      "status": "command",
+      "command": "triangle with sides 3, 4, 5",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Triangle. a 3, b 4, c 5. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "triangle",
+          "dimensions": {
+            "a": 3,
+            "b": 4,
+            "c": 5
+          }
+        }
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "angle",
+      "audio": "/demo-voices/graph-geometry/daniel-angle.wav",
+      "sha256": "deb77af2d9aae90482b474f7a39332e990769df5d2a32fe6733a45327e53898b",
+      "transcript": "Find Angles See",
+      "durationSeconds": 1.494,
+      "latencySeconds": 0.227,
+      "status": "command",
+      "command": "Find Angles See",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "angle c: 90 degrees. Formula: cosine rule, opposite side c.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "triangle",
+          "dimensions": {
+            "a": 3,
+            "b": 4,
+            "c": 5
+          }
+        }
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "missing-height",
+      "audio": "/demo-voices/graph-geometry/daniel-missing-height.wav",
+      "sha256": "75f0717d74dbf05c6729c03647f2ca87fe607815a5c4d58367416b789b9faf0a",
+      "transcript": "Rectangle width 6.",
+      "durationSeconds": 1.766,
+      "latencySeconds": 0.247,
+      "status": "clarification",
+      "command": "Rectangle width 6.",
+      "passed": true,
+      "message": "What is the rectangle height?"
+    },
+    {
+      "voice": "Daniel",
+      "case": "height-reply",
+      "audio": "/demo-voices/graph-geometry/daniel-height-reply.wav",
+      "sha256": "45ad4deee2f6fa99cd61d162c8c0543f5a5c3b56e2756392a463154adfd18577",
+      "transcript": "four",
+      "durationSeconds": 0.762,
+      "latencySeconds": 0.202,
+      "status": "command",
+      "command": "Rectangle width six height four",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Rectangle. width 6, height 4. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "rectangle",
+          "dimensions": {
+            "width": 6,
+            "height": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "function",
+      "audio": "/demo-voices/graph-geometry/karen-function.wav",
+      "sha256": "5a6b7d1a8dc5e96e39030c3b42ac3f2043100f337ab8ea6aa12dcb4b0049f8a3",
+      "transcript": "graph y equals x squared minus 4.",
+      "durationSeconds": 2.899,
+      "latencySeconds": 0.238,
+      "status": "command",
+      "command": "graph y equals x squared minus 4.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Sampled graph of y, x from -10 to 10. Lowest sampled value -4 at x 0; highest 96 at x 10. 0 unplotted samples (undefined or outside the plotting limit). Sampling may miss extrema, roots, or discontinuities; this is not a proof of global extrema.",
+      "state": {
+        "mode": "equation",
+        "expression": "y = x^2 - 4",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "range",
+      "audio": "/demo-voices/graph-geometry/karen-range.wav",
+      "sha256": "afbefdf273efec9758f32290673836bad248a741075d02ac394a30a6ac65f120",
+      "transcript": "Set graph range from negative 5 to 5.",
+      "durationSeconds": 2.951,
+      "latencySeconds": 0.245,
+      "status": "command",
+      "command": "Set graph range from negative 5 to 5.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Sampled graph of y, x from -5 to 5. Lowest sampled value -4 at x 0; highest 21 at x 5. 0 unplotted samples (undefined or outside the plotting limit). Sampling may miss extrema, roots, or discontinuities; this is not a proof of global extrema.",
+      "state": {
+        "mode": "equation",
+        "expression": "y = x^2 - 4",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphRange": {
+          "min": -5,
+          "max": 5
+        }
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "intercepts",
+      "audio": "/demo-voices/graph-geometry/karen-intercepts.wav",
+      "sha256": "8bf9532085725175066ba3ce8098e2d9e143bf1147cfe46f487877ab7c487b2c",
+      "transcript": "Find the X-intercepts.",
+      "durationSeconds": 1.991,
+      "latencySeconds": 0.251,
+      "status": "command",
+      "command": "Find the X-intercepts.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Approximate x intercepts in this view: -2, 2. Sampling may miss roots.",
+      "state": {
+        "mode": "equation",
+        "expression": "y = x^2 - 4",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "point",
+      "audio": "/demo-voices/graph-geometry/karen-point.wav",
+      "sha256": "9df18eb962512e0f90ea4d03e80122ad945b127cc97d5c2336b5a433a4145a27",
+      "transcript": "Read graph at x equals 3.",
+      "durationSeconds": 2.252,
+      "latencySeconds": 0.238,
+      "status": "command",
+      "command": "Read graph at x equals 3.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "At x = 3, y = 5.",
+      "state": {
+        "mode": "equation",
+        "expression": "y = x^2 - 4",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "right-triangle",
+      "audio": "/demo-voices/graph-geometry/karen-right-triangle.wav",
+      "sha256": "728abeb249c3617134940a5dc943a40850870e4e44e2040745d77cf237bdca56",
+      "transcript": "Draw a right triangle with legs 3 and 4.",
+      "durationSeconds": 2.935,
+      "latencySeconds": 0.273,
+      "status": "command",
+      "command": "Draw a right triangle with legs 3 and 4.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Right triangle. leg a 3, leg b 4. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "right triangle",
+          "dimensions": {
+            "a": 3,
+            "b": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "hypotenuse",
+      "audio": "/demo-voices/graph-geometry/karen-hypotenuse.wav",
+      "sha256": "d45d16efc9cda8f2be5ba76aaf12a70afe627e91ae1a05600f6e0db1658d6b9c",
+      "transcript": "Find the hypotenuse.",
+      "durationSeconds": 1.747,
+      "latencySeconds": 0.241,
+      "status": "command",
+      "command": "Find the hypotenuse.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "hypotenuse: 5 units. Formula: √(a² + b²).",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "right triangle",
+          "dimensions": {
+            "a": 3,
+            "b": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "rectangle",
+      "audio": "/demo-voices/graph-geometry/karen-rectangle.wav",
+      "sha256": "c0c9eba3ebd0e01838d523ccb31507ce272e1dc7997c5fceee1852284647e946",
+      "transcript": "Create a rectangle with width 6 and height 4.",
+      "durationSeconds": 2.91,
+      "latencySeconds": 0.256,
+      "status": "command",
+      "command": "Create a rectangle with width 6 and height 4.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Rectangle. width 6, height 4. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "rectangle",
+          "dimensions": {
+            "width": 6,
+            "height": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "dimension-edit",
+      "audio": "/demo-voices/graph-geometry/karen-dimension-edit.wav",
+      "sha256": "3cce6d987681a6f540f58007bc787e306fc32a90c694896390cee1ff0a2a7dea",
+      "transcript": "Change the width to age.",
+      "durationSeconds": 1.725,
+      "latencySeconds": 0.246,
+      "status": "clarification",
+      "command": "Change the width to age.",
+      "passed": false,
+      "message": "What number should the width change to?"
+    },
+    {
+      "voice": "Karen",
+      "case": "triangle-area",
+      "audio": "/demo-voices/graph-geometry/karen-triangle-area.wav",
+      "sha256": "0bde50384cf0f9cbcdbe6c6d873a1261f04ad0e495bceb2b1b2f1f0aeb11d1db",
+      "transcript": "Find the area of a triangle with base 10 and height 6.",
+      "durationSeconds": 3.814,
+      "latencySeconds": 0.27,
+      "status": "command",
+      "command": "Find the area of a triangle with base 10 and height 6.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "area: 30 square units. Formula: base × perpendicular height / 2.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "triangle",
+          "dimensions": {
+            "base": 10,
+            "height": 6
+          }
+        }
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "circle",
+      "audio": "/demo-voices/graph-geometry/karen-circle.wav",
+      "sha256": "c98faffd5a67c05ed3fbf91f60a1041a5fd8b462587916f6f1c46558f330485b",
+      "transcript": "Draw a circle with a radius of 5.",
+      "durationSeconds": 2.436,
+      "latencySeconds": 0.247,
+      "status": "command",
+      "command": "Draw a circle with a radius of 5.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Circle. radius 5. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "circle",
+          "dimensions": {
+            "radius": 5
+          }
+        }
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "radius-edit",
+      "audio": "/demo-voices/graph-geometry/karen-radius-edit.wav",
+      "sha256": "cd93ee0cfddc1e8c90cd8a030e35c9ad9c200a2cf959c0f6a9b33779d4d4dddb",
+      "transcript": "Set the radius to 7.",
+      "durationSeconds": 1.825,
+      "latencySeconds": 0.231,
+      "status": "command",
+      "command": "Set the radius to 7.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Circle. radius 7. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "circle",
+          "dimensions": {
+            "radius": 7
+          }
+        }
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "cylinder",
+      "audio": "/demo-voices/graph-geometry/karen-cylinder.wav",
+      "sha256": "131c2c99fd9b0ca72fd73cfc1406d3c9eec5a697d80c575f8245933f800cdc3c",
+      "transcript": "Create a cylinder with radius 2 and height 5.",
+      "durationSeconds": 3.108,
+      "latencySeconds": 0.262,
+      "status": "command",
+      "command": "Create a cylinder with radius 2 and height 5.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Cylinder. radius 2, height 5. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "cylinder",
+          "dimensions": {
+            "radius": 2,
+            "height": 5
+          }
+        }
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "volume",
+      "audio": "/demo-voices/graph-geometry/karen-volume.wav",
+      "sha256": "2ad3c1fd3b9327606901df1b04082fadee5abf4eda80598294a5b02f064ecd7a",
+      "transcript": "Find its volume.",
+      "durationSeconds": 1.422,
+      "latencySeconds": 0.215,
+      "status": "command",
+      "command": "Find its volume.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "volume: 62.8319 cubic units. Formula: π × radius² × height.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "cylinder",
+          "dimensions": {
+            "radius": 2,
+            "height": 5
+          }
+        }
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "triangle-sides",
+      "audio": "/demo-voices/graph-geometry/karen-triangle-sides.wav",
+      "sha256": "4731448330134e454967366c5c831cc7bd49eb145e1b9f0f56341ae8c41cbd7b",
+      "transcript": "triangle with sides 3, 4, 5",
+      "durationSeconds": 3.381,
+      "latencySeconds": 0.24,
+      "status": "command",
+      "command": "triangle with sides 3, 4, 5",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Triangle. a 3, b 4, c 5. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "triangle",
+          "dimensions": {
+            "a": 3,
+            "b": 4,
+            "c": 5
+          }
+        }
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "angle",
+      "audio": "/demo-voices/graph-geometry/karen-angle.wav",
+      "sha256": "23b844b10dde6ccf879aead4b6c2e5da9edca2590751c79e8a2638284619d502",
+      "transcript": "Find Angles See",
+      "durationSeconds": 1.387,
+      "latencySeconds": 0.216,
+      "status": "command",
+      "command": "Find Angles See",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "angle c: 90 degrees. Formula: cosine rule, opposite side c.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "triangle",
+          "dimensions": {
+            "a": 3,
+            "b": 4,
+            "c": 5
+          }
+        }
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "missing-height",
+      "audio": "/demo-voices/graph-geometry/karen-missing-height.wav",
+      "sha256": "d7c1f91236402cc596fa91d718841a0723d0dad6713138bec3691da20f508854",
+      "transcript": "Rectangle with 6.",
+      "durationSeconds": 1.682,
+      "latencySeconds": 0.222,
+      "status": "clarification",
+      "command": "Rectangle with 6.",
+      "passed": true,
+      "message": "Describe dimensions by name, for example circle radius five."
+    },
+    {
+      "voice": "Karen",
+      "case": "height-reply",
+      "audio": "/demo-voices/graph-geometry/karen-height-reply.wav",
+      "sha256": "37b15fae1bfef1a63eaea426322cc3e42fec12a3dbb9a1858246604f38a0f669",
+      "transcript": "full",
+      "durationSeconds": 0.714,
+      "latencySeconds": 0.201,
+      "status": "clarification",
+      "command": "Rectangle width six",
+      "passed": false,
+      "message": "What is the rectangle height?"
+    },
+    {
+      "voice": "Rishi",
+      "case": "function",
+      "audio": "/demo-voices/graph-geometry/rishi-function.wav",
+      "sha256": "61fe17451e6ddbf12c977eefb3c7500eb66d7eb2b11bade08a8549b92fac78af",
+      "transcript": "graph y equals x squared minus 4.",
+      "durationSeconds": 3.014,
+      "latencySeconds": 0.253,
+      "status": "command",
+      "command": "graph y equals x squared minus 4.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Sampled graph of y, x from -10 to 10. Lowest sampled value -4 at x 0; highest 96 at x 10. 0 unplotted samples (undefined or outside the plotting limit). Sampling may miss extrema, roots, or discontinuities; this is not a proof of global extrema.",
+      "state": {
+        "mode": "equation",
+        "expression": "y = x^2 - 4",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "range",
+      "audio": "/demo-voices/graph-geometry/rishi-range.wav",
+      "sha256": "d892dd460b8bd2ca7460350fdcf6636d338f0fd3abdb91f745c13aa033b61b88",
+      "transcript": "Set graph range from negative 5 to 5.",
+      "durationSeconds": 3.21,
+      "latencySeconds": 0.246,
+      "status": "command",
+      "command": "Set graph range from negative 5 to 5.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Sampled graph of y, x from -5 to 5. Lowest sampled value -4 at x 0; highest 21 at x 5. 0 unplotted samples (undefined or outside the plotting limit). Sampling may miss extrema, roots, or discontinuities; this is not a proof of global extrema.",
+      "state": {
+        "mode": "equation",
+        "expression": "y = x^2 - 4",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphRange": {
+          "min": -5,
+          "max": 5
+        }
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "intercepts",
+      "audio": "/demo-voices/graph-geometry/rishi-intercepts.wav",
+      "sha256": "6bf18bbf61f747fefbaa3c91108cc35662ecccc0ec50373dcdd41b9158cebf78",
+      "transcript": "Find the X-Intercepts.",
+      "durationSeconds": 2.083,
+      "latencySeconds": 0.238,
+      "status": "command",
+      "command": "Find the X-Intercepts.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Approximate x intercepts in this view: -2, 2. Sampling may miss roots.",
+      "state": {
+        "mode": "equation",
+        "expression": "y = x^2 - 4",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "point",
+      "audio": "/demo-voices/graph-geometry/rishi-point.wav",
+      "sha256": "b8223fbc67b7fcaeccd2fb1071a4a236ca1f3301edbde33bb612f1a755dda4bc",
+      "transcript": "read graph at x equals 3.",
+      "durationSeconds": 2.55,
+      "latencySeconds": 0.246,
+      "status": "command",
+      "command": "read graph at x equals 3.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "At x = 3, y = 5.",
+      "state": {
+        "mode": "equation",
+        "expression": "y = x^2 - 4",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "right-triangle",
+      "audio": "/demo-voices/graph-geometry/rishi-right-triangle.wav",
+      "sha256": "0c287c7b8fe2b914b426cd3d3faa4dd6af42f5866169c8f6d64cf860b8bed9dd",
+      "transcript": "draw a right triangle with legs 3 and 4.",
+      "durationSeconds": 3.154,
+      "latencySeconds": 0.285,
+      "status": "command",
+      "command": "draw a right triangle with legs 3 and 4.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Right triangle. leg a 3, leg b 4. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "right triangle",
+          "dimensions": {
+            "a": 3,
+            "b": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "hypotenuse",
+      "audio": "/demo-voices/graph-geometry/rishi-hypotenuse.wav",
+      "sha256": "9b0390bd001c32a1a74589c5498ec636545d5dc7a250c9bd33f7139e0410a463",
+      "transcript": "Find the high potter news.",
+      "durationSeconds": 1.839,
+      "latencySeconds": 0.239,
+      "status": "command",
+      "command": "Find the high potter news.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "hypotenuse: 5 units. Formula: √(a² + b²).",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "right triangle",
+          "dimensions": {
+            "a": 3,
+            "b": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "rectangle",
+      "audio": "/demo-voices/graph-geometry/rishi-rectangle.wav",
+      "sha256": "7c157cf19bbe9a63c1e688f8da01ce4122d5fdbc38ba1db9cdeb1e051b2013ac",
+      "transcript": "Create a rectangle with width 6 and height 4.",
+      "durationSeconds": 3.335,
+      "latencySeconds": 0.254,
+      "status": "command",
+      "command": "Create a rectangle with width 6 and height 4.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Rectangle. width 6, height 4. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "rectangle",
+          "dimensions": {
+            "width": 6,
+            "height": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "dimension-edit",
+      "audio": "/demo-voices/graph-geometry/rishi-dimension-edit.wav",
+      "sha256": "e398930b65e97ee56fab7fabc20ff0663ade46089f6733f6331c7f15cc2bae63",
+      "transcript": "Change the width to 8.",
+      "durationSeconds": 1.702,
+      "latencySeconds": 0.234,
+      "status": "command",
+      "command": "Change the width to 8.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Rectangle. width 8, height 4. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "rectangle",
+          "dimensions": {
+            "width": 8,
+            "height": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "triangle-area",
+      "audio": "/demo-voices/graph-geometry/rishi-triangle-area.wav",
+      "sha256": "0360fe15d51d40cc44cf453ecaea6d2bee2999c4c032397917f9f16ab6e984bf",
+      "transcript": "find the area of a triangle with base 10 and height 6.",
+      "durationSeconds": 4.289,
+      "latencySeconds": 0.269,
+      "status": "command",
+      "command": "find the area of a triangle with base 10 and height 6.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "area: 30 square units. Formula: base × perpendicular height / 2.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "triangle",
+          "dimensions": {
+            "base": 10,
+            "height": 6
+          }
+        }
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "circle",
+      "audio": "/demo-voices/graph-geometry/rishi-circle.wav",
+      "sha256": "b2f36ef661af06b241a47690c478d5fd380eaf945e87ba74077f046efe9dd63d",
+      "transcript": "draw a circle with a radius of 5.",
+      "durationSeconds": 2.736,
+      "latencySeconds": 0.259,
+      "status": "command",
+      "command": "draw a circle with a radius of 5.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Circle. radius 5. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "circle",
+          "dimensions": {
+            "radius": 5
+          }
+        }
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "radius-edit",
+      "audio": "/demo-voices/graph-geometry/rishi-radius-edit.wav",
+      "sha256": "15e29d5bbeee1570a5c25b7655fda42e69edf2c22eb30503ae13271fe1c05471",
+      "transcript": "Set the radius to 7.",
+      "durationSeconds": 1.991,
+      "latencySeconds": 0.228,
+      "status": "command",
+      "command": "Set the radius to 7.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Circle. radius 7. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "circle",
+          "dimensions": {
+            "radius": 7
+          }
+        }
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "cylinder",
+      "audio": "/demo-voices/graph-geometry/rishi-cylinder.wav",
+      "sha256": "4a9a2ad7b2cd5699b36d9c91ac041b183f9501e3075026d074421acd75669edc",
+      "transcript": "Create a cylinder with radius 2 and height 5.",
+      "durationSeconds": 3.475,
+      "latencySeconds": 0.249,
+      "status": "command",
+      "command": "Create a cylinder with radius 2 and height 5.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Cylinder. radius 2, height 5. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "cylinder",
+          "dimensions": {
+            "radius": 2,
+            "height": 5
+          }
+        }
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "volume",
+      "audio": "/demo-voices/graph-geometry/rishi-volume.wav",
+      "sha256": "045d9527c8c4b71e8d1b5748f21c0fe6d4bfc60e36cae0c7fb28179b33307c71",
+      "transcript": "Find its volume.",
+      "durationSeconds": 1.653,
+      "latencySeconds": 0.217,
+      "status": "command",
+      "command": "Find its volume.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "volume: 62.8319 cubic units. Formula: π × radius² × height.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "cylinder",
+          "dimensions": {
+            "radius": 2,
+            "height": 5
+          }
+        }
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "triangle-sides",
+      "audio": "/demo-voices/graph-geometry/rishi-triangle-sides.wav",
+      "sha256": "bb6e04c5e2b33caf5d0b9ab3f2524c0eea99fb35f006a29a47fae69d4726aa17",
+      "transcript": "triangle with sides 3, 4, 5",
+      "durationSeconds": 3.402,
+      "latencySeconds": 0.249,
+      "status": "command",
+      "command": "triangle with sides 3, 4, 5",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Triangle. a 3, b 4, c 5. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "triangle",
+          "dimensions": {
+            "a": 3,
+            "b": 4,
+            "c": 5
+          }
+        }
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "angle",
+      "audio": "/demo-voices/graph-geometry/rishi-angle.wav",
+      "sha256": "45d3b7ae9bf09fce7e705125bd65e308ff55eb7c24b68158ddd652acc7eaa821",
+      "transcript": "Find angle C.",
+      "durationSeconds": 1.491,
+      "latencySeconds": 0.221,
+      "status": "command",
+      "command": "Find angle C.",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "angle c: 90 degrees. Formula: cosine rule, opposite side c.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "triangle",
+          "dimensions": {
+            "a": 3,
+            "b": 4,
+            "c": 5
+          }
+        }
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "missing-height",
+      "audio": "/demo-voices/graph-geometry/rishi-missing-height.wav",
+      "sha256": "769bc99d5c61ef9e40507da18944c3efba0949e125f92f3f268f82af71621883",
+      "transcript": "rectangle width 6.",
+      "durationSeconds": 1.83,
+      "latencySeconds": 0.218,
+      "status": "clarification",
+      "command": "rectangle width 6.",
+      "passed": true,
+      "message": "What is the rectangle height?"
+    },
+    {
+      "voice": "Rishi",
+      "case": "height-reply",
+      "audio": "/demo-voices/graph-geometry/rishi-height-reply.wav",
+      "sha256": "ed31670f0552a77fc73cbd0fbd4f3394bfeaf5e72d73f44519484bfee2e874e8",
+      "transcript": "4",
+      "durationSeconds": 0.562,
+      "latencySeconds": 0.196,
+      "status": "command",
+      "command": "Rectangle width six height 4",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Rectangle. width 6, height 4. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "rectangle",
+          "dimensions": {
+            "width": 6,
+            "height": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "width-reply",
+      "audio": "/demo-voices/graph-geometry/daniel-width-reply.wav",
+      "sha256": "1ac58c5c3fa387f09c102279fb7ddcedbe464de5617ffc3cb69da4d77dda0dc7",
+      "transcript": "8.",
+      "durationSeconds": 0.571,
+      "latencySeconds": 0.202,
+      "status": "command",
+      "command": "set width to 8",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Rectangle. width 8, height 4. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "rectangle",
+          "dimensions": {
+            "width": 8,
+            "height": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Daniel",
+      "case": "height-confirm",
+      "audio": "/demo-voices/graph-geometry/daniel-height-confirm.wav",
+      "sha256": "720cdb969d0d294149ca83d275351db9586f118ff85f2b0e6b672ea91cf97431",
+      "transcript": "Hide for.",
+      "durationSeconds": 1.025,
+      "latencySeconds": 0.214,
+      "status": "clarification",
+      "command": "Rectangle width six",
+      "passed": false,
+      "message": "What is the rectangle height?"
+    },
+    {
+      "voice": "Karen",
+      "case": "width-reply",
+      "audio": "/demo-voices/graph-geometry/karen-width-reply.wav",
+      "sha256": "4c9b0fdae10b18c9d57109bf6724e8de261de0a4448859a1d5c5bdf4bfa46121",
+      "transcript": "aid.",
+      "durationSeconds": 0.609,
+      "latencySeconds": 0.221,
+      "status": "clarification",
+      "command": "Change the width to age",
+      "passed": false,
+      "message": "What number should the width change to?"
+    },
+    {
+      "voice": "Karen",
+      "case": "height-confirm",
+      "audio": "/demo-voices/graph-geometry/karen-height-confirm.wav",
+      "sha256": "93cd3987785530a0036c76db6c8c2f25b3ee69a843e6c7c800eb770856d57407",
+      "transcript": "Hardful.",
+      "durationSeconds": 0.971,
+      "latencySeconds": 0.224,
+      "status": "clarification",
+      "command": "Rectangle width six",
+      "passed": false,
+      "message": "What is the rectangle height?"
+    },
+    {
+      "voice": "Rishi",
+      "case": "width-reply",
+      "audio": "/demo-voices/graph-geometry/rishi-width-reply.wav",
+      "sha256": "a2ea44d473e70c2779c8c79570e625c15da18e033eff25663281f69c90291cc9",
+      "transcript": "8.",
+      "durationSeconds": 0.662,
+      "latencySeconds": 0.225,
+      "status": "command",
+      "command": "set width to 8",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Rectangle. width 8, height 4. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "rectangle",
+          "dimensions": {
+            "width": 8,
+            "height": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "height-confirm",
+      "audio": "/demo-voices/graph-geometry/rishi-height-confirm.wav",
+      "sha256": "faf4366537c8c0335745218bd5dca26f9f5b2c3ba47b5a6562ba38ac0a5d1952",
+      "transcript": "Hide for.",
+      "durationSeconds": 0.877,
+      "latencySeconds": 0.221,
+      "status": "clarification",
+      "command": "Rectangle width six",
+      "passed": false,
+      "message": "What is the rectangle height?"
+    },
+    {
+      "voice": "Daniel",
+      "case": "width-clear-reply",
+      "audio": "/demo-voices/graph-geometry/daniel-width-clear-reply.wav",
+      "sha256": "0c859a46c8efb7f584d630940a01e4c18780e04414f97864a7f722c3b6bca921",
+      "transcript": "The width should be 8. // // // // // // // // // // // // // // // // // // // // // // // // // // // //",
+      "durationSeconds": 1.38,
+      "latencySeconds": 0.868,
+      "status": "clarification",
+      "command": "Change the width to age",
+      "passed": false,
+      "message": "What number should the width change to?"
+    },
+    {
+      "voice": "Daniel",
+      "case": "height-clear-reply",
+      "audio": "/demo-voices/graph-geometry/daniel-height-clear-reply.wav",
+      "sha256": "7d023d985ae644dd2404070abeea8194617187a2d4aed6a65cb6617c52bde645",
+      "transcript": "The height is 4.",
+      "durationSeconds": 1.357,
+      "latencySeconds": 0.224,
+      "status": "command",
+      "command": "Rectangle width six height 4",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Rectangle. width 6, height 4. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "rectangle",
+          "dimensions": {
+            "width": 6,
+            "height": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "width-clear-reply",
+      "audio": "/demo-voices/graph-geometry/karen-width-clear-reply.wav",
+      "sha256": "f45077d7204a86eafec6fa9c45895c2efee06c4ead01e9fa29967605794d72af",
+      "transcript": "The width should be 8.",
+      "durationSeconds": 1.452,
+      "latencySeconds": 0.229,
+      "status": "command",
+      "command": "set width to 8",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Rectangle. width 8, height 4. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "rectangle",
+          "dimensions": {
+            "width": 8,
+            "height": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Karen",
+      "case": "height-clear-reply",
+      "audio": "/demo-voices/graph-geometry/karen-height-clear-reply.wav",
+      "sha256": "a3451d02c346da64dc91fbcf5be0d9d68e1bf683d8d97ec3625c842df73ff5a5",
+      "transcript": "The heart is full.",
+      "durationSeconds": 1.197,
+      "latencySeconds": 0.221,
+      "status": "clarification",
+      "command": "Rectangle width six",
+      "passed": false,
+      "message": "What is the rectangle height?"
+    },
+    {
+      "voice": "Rishi",
+      "case": "width-clear-reply",
+      "audio": "/demo-voices/graph-geometry/rishi-width-clear-reply.wav",
+      "sha256": "36f1b08ef4fa4b6c1670c651398a489133321a4453654da5390766332dbe38e6",
+      "transcript": "The width should be 8.",
+      "durationSeconds": 1.598,
+      "latencySeconds": 0.228,
+      "status": "command",
+      "command": "set width to 8",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Rectangle. width 8, height 4. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "rectangle",
+          "dimensions": {
+            "width": 8,
+            "height": 4
+          }
+        }
+      }
+    },
+    {
+      "voice": "Rishi",
+      "case": "height-clear-reply",
+      "audio": "/demo-voices/graph-geometry/rishi-height-clear-reply.wav",
+      "sha256": "b9ce60e3d79184582e9a969dbe6270fbe3d7876ace5c38addc685c896ea18285",
+      "transcript": "The height is 4.",
+      "durationSeconds": 1.261,
+      "latencySeconds": 0.228,
+      "status": "command",
+      "command": "Rectangle width six height 4",
+      "passed": true,
+      "stateMatches": true,
+      "messageMatches": true,
+      "message": "Rectangle. width 6, height 4. All dimensions use the same unit.",
+      "state": {
+        "mode": "geometry",
+        "expression": "x^2 + 2*x - 3 = 0",
+        "data": [
+          4,
+          5,
+          5,
+          6,
+          7,
+          8,
+          22
+        ],
+        "diagram": [
+          "Start",
+          "Read the sensor",
+          "Compare to threshold",
+          "Send an alert",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false,
+        "geometry": {
+          "shape": "rectangle",
+          "dimensions": {
+            "width": 6,
+            "height": 4
+          }
+        }
+      }
+    }
+  ]
+}

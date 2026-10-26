@@ -1,0 +1,25 @@
+{
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "reviewed": [
+    "function-before.png",
+    "function-after.png",
+    "rectangle-before.png",
+    "rectangle-after.png"
+  ],
+  "method": "Primary agent inspected all four full-size actual browser screenshots.",
+  "findings": {
+    "function": "Empty initial work, then visible y=x^2-4 parabola with vertex (0,-4) and roots \u00b12. Opening Graph is present in the provider transcript.",
+    "rectangle": "Empty initial work, then visible rectangle with width 6, height 4 and matching dimension labels. Opening Create a rectangle is present in the provider transcript."
+  },
+  "passed": true,
+  "launchSettings": {
+    "commandProfile": "luna-default",
+    "verification": "Calling task launched the caller-owned app explicitly with MATH_AUDIO_COMMAND_PROFILE=luna-default.",
+    "pid": 38085,
+    "owner": "test:dev:catalog-final-voice-20261022"
+  },
+  "scope": "Already-running application, fresh browser and guest; original immediate-input fixture retains cold provider-connection coverage."
+}

@@ -1,0 +1,78 @@
+{
+  "revision": "c7bfa28a8b36d907416f5c1fadf492a42f4f08bf plus uncommitted student-conversations task changes",
+  "reviewer": "Codex student_graphs agent; each final screenshot opened with view_image and visually inspected",
+  "coverage": {
+    "familiesReviewed": 2,
+    "familiesTotal": 400,
+    "turnStatesReviewed": 7,
+    "screenshotsReviewed": 14,
+    "remainingFamiliesNotVisuallyReviewed": 398,
+    "completeSuiteVisualReview": false
+  },
+  "lane": "Actual Web application; authored reference states; intercepted problem API with in-memory synthetic store; no model or audio provider calls.",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "checks": [
+    {
+      "case": "graph-viewport-then-translation",
+      "turns": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observations": [
+        "Turn 1: upward parabola with vertex at origin and x squared equation visible.",
+        "Turn 2: origin and parabola move right within the frame when the camera pans left; mathematical vertex remains (0,0). No additional math-history step appears.",
+        "Turn 3: displayed formula becomes y=x squared+4; vertex sits four grid units above x axis, with previous x squared retained in history.",
+        "Turn 4: read-only explanation leaves the plotted curve and history unchanged. The answer message itself is not surfaced by this state-seeded screenshot workflow.",
+        "Desktop and mobile both show the graph; mobile stacks it beneath the active math row and retains its editor. Axis labels sit below their respective gridlines."
+      ]
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turns": [
+        1,
+        2,
+        3
+      ],
+      "observations": [
+        "Turn 1: two horizontal parallel blue lines cut by one ascending transversal; no angle arcs yet.",
+        "Turn 2: matching upper-right angles appear at both crossings, each labeled 63.43 degrees, consistent with arctan(2).",
+        "Turn 3: read-only point inspection leaves the construction and both angle marks unchanged. E=(2,4) is present in the construction description. The transient query reply itself is not displayed in this capture workflow.",
+        "All construction states remain visible and legible on desktop and mobile; no page-width overflow."
+      ]
+    }
+  ],
+  "limitations": [
+    "Only 2/400 families visually reviewed; full-corpus visual verification remains incomplete.",
+    "Synthetic authored answers and intercepted in-memory problem API transport; this does not measure model interpretation, STT, microphone interaction, or production authentication.",
+    "Screenshots verify progressive saved turn states, not live token-by-token streaming.",
+    "No real-student accessibility or usability claims; no full WCAG audit."
+  ],
+  "evidence": [
+    "graph-viewport-then-translation-turn-1-desktop.png",
+    "graph-viewport-then-translation-turn-1-mobile.png",
+    "graph-viewport-then-translation-turn-2-desktop.png",
+    "graph-viewport-then-translation-turn-2-mobile.png",
+    "graph-viewport-then-translation-turn-3-desktop.png",
+    "graph-viewport-then-translation-turn-3-mobile.png",
+    "graph-viewport-then-translation-turn-4-desktop.png",
+    "graph-viewport-then-translation-turn-4-mobile.png",
+    "geo-corresponding-angle-marks-turn-1-desktop.png",
+    "geo-corresponding-angle-marks-turn-1-mobile.png",
+    "geo-corresponding-angle-marks-turn-2-desktop.png",
+    "geo-corresponding-angle-marks-turn-2-mobile.png",
+    "geo-corresponding-angle-marks-turn-3-desktop.png",
+    "geo-corresponding-angle-marks-turn-3-mobile.png"
+  ],
+  "horizontalOverflow": false
+}

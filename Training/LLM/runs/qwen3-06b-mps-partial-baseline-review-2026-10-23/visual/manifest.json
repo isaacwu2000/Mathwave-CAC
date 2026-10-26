@@ -1,0 +1,2796 @@
+{
+  "lane": "Actual local-app saved-state replay of conditional per-turn model outcomes.",
+  "visualReview": "incomplete: every image and graph must be inspected by a human or agent",
+  "limitations": [
+    "No live microphone, STT, iPhone binary, streaming or latency acceptance.",
+    "Normal spoken-only replies are retained as text in this index; this does not claim they appeared on screen.",
+    "Invalid generations have no executable outcome; their unchanged prestate is labeled separately.",
+    "Repeated identical saved work may share one image, with all row mappings retained."
+  ],
+  "sources": {
+    "dataPath": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/test-subset.jsonl",
+    "gradesPath": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/grades.json",
+    "dataSha256": "1c8c993cab90d8a6083388b8e7e593dc13a7ebef215ac82934d19fa1fbd6c89c",
+    "gradesSha256": "c52c6559c82b00e078d852b6e44e167c8c62400349150733dedf5193bd2794f4",
+    "origin": "http://localhost:5186",
+    "captureSourceSha256": "6df0f9d4aed99395c3bd8e94b9a5a9b93ad945f19343b1f6f027e8ae9dac63d3",
+    "screenEvidenceSourceSha256": "c2ddec8d79df013c7758ee472ceaee8291418f43e6279b66fb80625ba0496c97"
+  },
+  "rows": [
+    {
+      "id": "alg-combine-repeated-variable:1:final",
+      "caseId": "alg-combine-repeated-variable",
+      "turn": 1,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Put down two x plus three x minus four equals eleven.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "2 times x plus 3 times x minus 4 equals 11",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "2 * x + 3 * x - 4 = 11",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {},
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png",
+          "text": "What math shall we play with today?\nVoice is not configured yet.\n“Draw a triangle with sides 3, 4, and 5.”\n“Graph y equals x squared.”\n“Write 2x plus 3 equals 11.”",
+          "mathLabels": [],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-combine-repeated-variable:2:final",
+      "caseId": "alg-combine-repeated-variable",
+      "turn": 2,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Combine what you can first.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "5 times x minus 4 equals 11",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "5 * x - 4 = 11",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {},
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/6b9b889f1f5190cb2481.png",
+          "text": "1\n2\n𝑥\n+\n3\n𝑥\n−\n4\n=\n11",
+          "mathLabels": [
+            "2 times x plus 3 times x minus 4 equals 11"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-combine-repeated-variable:3:final",
+      "caseId": "alg-combine-repeated-variable",
+      "turn": 3,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Add four to both sides.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ],
+      "expectedMessage": "5 times x minus 4 plus 4 equals 11 plus 4",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "5 * x - 4 + 4 = 11 + 4",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {},
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/38136e3c161b9b417591.png",
+          "text": "2\n5\n𝑥\n−\n4\n=\n11\n1\n2\n𝑥\n+\n3\n𝑥\n−\n4\n=\n11",
+          "mathLabels": [
+            "5 times x minus 4 equals 11",
+            "2 times x plus 3 times x minus 4 equals 11"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-combine-repeated-variable:4:final",
+      "caseId": "alg-combine-repeated-variable",
+      "turn": 4,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Then divide by five.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "5 times x minus 4 plus 4, all divided by 5 equals 11 plus 4, all divided by 5",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "(5 * x - 4 + 4) / 5 = (11 + 4) / 5",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {},
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/69d6334a2630d9dddd4c.png",
+          "text": "3\n5\n𝑥\n−\n4\n+\n4\n=\n11\n+\n4\n2\n5\n𝑥\n−\n4\n=\n11\n1\n2\n𝑥\n+\n3\n𝑥\n−\n4\n=\n11",
+          "mathLabels": [
+            "5 times x minus 4 plus 4 equals 11 plus 4",
+            "5 times x minus 4 equals 11",
+            "2 times x plus 3 times x minus 4 equals 11"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-combine-repeated-variable:5:final",
+      "caseId": "alg-combine-repeated-variable",
+      "turn": 5,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Can you tidy that up now?",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "x equals 3",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "x = 3",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {
+        "expression": "x = 3"
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/d00310a7c75df3d8f07a.png",
+          "text": "4\n5\n𝑥\n−\n4\n+\n4\n5\n=\n11\n+\n4\n5\n3\n5\n𝑥\n−\n4\n+\n4\n=\n11\n+\n4\n2\n5\n𝑥\n−\n4\n=\n11\n1\n2\n𝑥\n+\n3\n𝑥\n−\n4\n=\n11",
+          "mathLabels": [
+            "5 times x minus 4 plus 4, all divided by 5 equals 11 plus 4, all divided by 5",
+            "5 times x minus 4 plus 4 equals 11 plus 4",
+            "5 times x minus 4 equals 11",
+            "2 times x plus 3 times x minus 4 equals 11"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-negative-variable-on-right:1:final",
+      "caseId": "alg-negative-variable-on-right",
+      "turn": 1,
+      "stage": "final",
+      "category": "algebra",
+      "request": "I have six equals negative y plus ten.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "6 equals negative y plus 10",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "6 = -y + 10",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {},
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png",
+          "text": "What math shall we play with today?\nVoice is not configured yet.\n“Draw a triangle with sides 3, 4, and 5.”\n“Graph y equals x squared.”\n“Write 2x plus 3 equals 11.”",
+          "mathLabels": [],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-negative-variable-on-right:2:final",
+      "caseId": "alg-negative-variable-on-right",
+      "turn": 2,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Put the side with y on the left.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "negative y plus 10 equals 6",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "-y + 10 = 6",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {},
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3b1eaccb45a1ffb1a6f2.png",
+          "text": "1\n6\n=\n−\n𝑦\n+\n10",
+          "mathLabels": [
+            "6 equals negative y plus 10"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-negative-variable-on-right:3:final",
+      "caseId": "alg-negative-variable-on-right",
+      "turn": 3,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Subtract ten from both sides.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "negative y plus 10 minus 10 equals 6 minus 10",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "-y + 10 - 10 = 6 - 10",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {},
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/697fff14b277bb8325e3.png",
+          "text": "2\n−\n𝑦\n+\n10\n=\n6\n1\n6\n=\n−\n𝑦\n+\n10",
+          "mathLabels": [
+            "negative y plus 10 equals 6",
+            "6 equals negative y plus 10"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-negative-variable-on-right:4:final",
+      "caseId": "alg-negative-variable-on-right",
+      "turn": 4,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Multiply both sides by negative one.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ],
+      "expectedMessage": "the quantity negative y plus 10 minus 10 end quantity times negative 1 equals the quantity 6 minus 10 end quantity times negative 1",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "(-y + 10 - 10) * -1 = (6 - 10) * -1",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {},
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62f3335d35be084b2ce6.png",
+          "text": "3\n−\n𝑦\n+\n10\n−\n10\n=\n6\n−\n10\n2\n−\n𝑦\n+\n10\n=\n6\n1\n6\n=\n−\n𝑦\n+\n10",
+          "mathLabels": [
+            "negative y plus 10 minus 10 equals 6 minus 10",
+            "negative y plus 10 equals 6",
+            "6 equals negative y plus 10"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-negative-variable-on-right:5:final",
+      "caseId": "alg-negative-variable-on-right",
+      "turn": 5,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Can you tidy that up now?",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "negative y times negative 1 equals 4",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "-y * -1 = 4",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {
+        "expression": "-y * -1 = 4"
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/0392aa96cbf33466c418.png",
+          "text": "4\n(\n−\n𝑦\n+\n10\n−\n10\n)\n·\n−\n1\n=\n(\n6\n−\n10\n)\n·\n−\n1\n3\n−\n𝑦\n+\n10\n−\n10\n=\n6\n−\n10\n2\n−\n𝑦\n+\n10\n=\n6\n1\n6\n=\n−\n𝑦\n+\n10",
+          "mathLabels": [
+            "the quantity negative y plus 10 minus 10 end quantity times negative 1 equals the quantity 6 minus 10 end quantity times negative 1",
+            "negative y plus 10 minus 10 equals 6 minus 10",
+            "negative y plus 10 equals 6",
+            "6 equals negative y plus 10"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-negative-outside-square:1:final",
+      "caseId": "alg-negative-outside-square",
+      "turn": 1,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Write negative x squared.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ],
+      "expectedMessage": "negative the quantity x squared end quantity",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "-x^2",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {},
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png",
+          "text": "What math shall we play with today?\nVoice is not configured yet.\n“Draw a triangle with sides 3, 4, and 5.”\n“Graph y equals x squared.”\n“Write 2x plus 3 equals 11.”",
+          "mathLabels": [],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-negative-outside-square:2:final",
+      "caseId": "alg-negative-outside-square",
+      "turn": 2,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Use x equals negative four. What do I get?",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ],
+      "expectedMessage": "Value: -16.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "-x^2",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {
+        "messageIncludes": [
+          "Value: -16."
+        ],
+        "readOnly": true
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/9fa2ddf1c7676a974f3c.png",
+          "text": "1\n−\n(\n𝑥\n2\n)",
+          "mathLabels": [
+            "negative the quantity x squared end quantity"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-difference-of-squares-value:1:final",
+      "caseId": "alg-difference-of-squares-value",
+      "turn": 1,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Put up x minus y, all squared.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "the quantity x minus y end quantity squared",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "(x - y)^2",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {},
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png",
+          "text": "What math shall we play with today?\nVoice is not configured yet.\n“Draw a triangle with sides 3, 4, and 5.”\n“Graph y equals x squared.”\n“Write 2x plus 3 equals 11.”",
+          "mathLabels": [],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-difference-of-squares-value:2:final",
+      "caseId": "alg-difference-of-squares-value",
+      "turn": 2,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Use x equals two and y equals five.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "Value: 9.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "(x - y)^2",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {
+        "messageIncludes": [
+          "Value: 9."
+        ],
+        "readOnly": true
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/667026bf6a0db8dc8b68.png",
+          "text": "1\n(\n𝑥\n−\n𝑦\n)\n2",
+          "mathLabels": [
+            "the quantity x minus y end quantity squared"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-solve-denominator-constant:1:final",
+      "caseId": "alg-solve-denominator-constant",
+      "turn": 1,
+      "stage": "final",
+      "category": "algebra",
+      "request": "My equation is x divided by five equals four.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "x divided by 5 equals 4",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "x / 5 = 4",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {},
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png",
+          "text": "What math shall we play with today?\nVoice is not configured yet.\n“Draw a triangle with sides 3, 4, and 5.”\n“Graph y equals x squared.”\n“Write 2x plus 3 equals 11.”",
+          "mathLabels": [],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-solve-denominator-constant:2:preview",
+      "caseId": "alg-solve-denominator-constant",
+      "turn": 2,
+      "stage": "preview",
+      "category": "algebra",
+      "request": "What does x have to be?",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"x\""
+      ],
+      "expectedMessage": "x = 20. Twenty divided by five is four.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "x / 5 = 4",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {
+        "messageIncludes": [
+          "x = 20"
+        ],
+        "readOnly": true
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/61cde0fc1e50f7d928c8.png",
+          "text": "1\n𝑥\n5\n=\n4",
+          "mathLabels": [
+            "x divided by 5 equals 4"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-solve-denominator-constant:2:final",
+      "caseId": "alg-solve-denominator-constant",
+      "turn": 2,
+      "stage": "final",
+      "category": "algebra",
+      "request": "What does x have to be?",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"x\""
+      ],
+      "expectedMessage": "x = 20. Twenty divided by five is four.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "x / 5 = 4",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {
+        "messageIncludes": [
+          "x = 20"
+        ],
+        "readOnly": true
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/61cde0fc1e50f7d928c8.png",
+          "text": "1\n𝑥\n5\n=\n4",
+          "mathLabels": [
+            "x divided by 5 equals 4"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-expand-before-substitute:1:final",
+      "caseId": "alg-expand-before-substitute",
+      "turn": 1,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Write three times x minus two in brackets plus four.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "3 times the quantity x minus 2 end quantity plus 4",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "3 * (x - 2) + 4",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {},
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png",
+          "text": "What math shall we play with today?\nVoice is not configured yet.\n“Draw a triangle with sides 3, 4, and 5.”\n“Graph y equals x squared.”\n“Write 2x plus 3 equals 11.”",
+          "mathLabels": [],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-expand-before-substitute:2:final",
+      "caseId": "alg-expand-before-substitute",
+      "turn": 2,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Simplify what you can.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unrecognized token '*'"
+      ],
+      "expectedMessage": "3 times the quantity x minus 2 end quantity plus 4",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "3 * (x - 2) + 4",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {},
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/129a6a13e8176ccb758d.png",
+          "text": "1\n3\n·\n(\n𝑥\n−\n2\n)\n+\n4",
+          "mathLabels": [
+            "3 times the quantity x minus 2 end quantity plus 4"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-expand-before-substitute:3:final",
+      "caseId": "alg-expand-before-substitute",
+      "turn": 3,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Now check x equals five.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "Value: 13.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "3 * (x - 2) + 4",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {
+        "messageIncludes": [
+          "Value: 13."
+        ],
+        "readOnly": true
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/129a6a13e8176ccb758d.png",
+          "text": "1\n3\n·\n(\n𝑥\n−\n2\n)\n+\n4",
+          "mathLabels": [
+            "3 times the quantity x minus 2 end quantity plus 4"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-expression-to-equation:1:final",
+      "caseId": "alg-expression-to-equation",
+      "turn": 1,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Put up four x plus one.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "4 times x plus 1",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "4 * x + 1",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {},
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png",
+          "text": "What math shall we play with today?\nVoice is not configured yet.\n“Draw a triangle with sides 3, 4, and 5.”\n“Graph y equals x squared.”\n“Write 2x plus 3 equals 11.”",
+          "mathLabels": [],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-expression-to-equation:2:final",
+      "caseId": "alg-expression-to-equation",
+      "turn": 2,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Set that equal to thirteen.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "4 times x plus 1 equals 13",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "4 * x + 1 = 13",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {},
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/83f5b3611abb76633eed.png",
+          "text": "1\n4\n𝑥\n+\n1",
+          "mathLabels": [
+            "4 times x plus 1"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-expression-to-equation:3:final",
+      "caseId": "alg-expression-to-equation",
+      "turn": 3,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Tell me the value of x.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "x = 3.\n1. Subtract the right side from both sides: (4 * x + 1) - (13) = 0.\n2. Collect like terms: 4*x - 12 = 0.\n3. This is linear: the coefficient of x is 4, and the constant is -12.\n4. Subtract the constant from both sides: 4*x = 12.\n5. Divide both sides by 4: x = (12) / (4). Therefore, x = 3.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "4 * x + 1 = 13",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {
+        "messageIncludes": [
+          "x = 3"
+        ],
+        "readOnly": true
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/89397d47343227cc7f12.png",
+          "text": "2\n4\n𝑥\n+\n1\n=\n13\n1\n4\n𝑥\n+\n1",
+          "mathLabels": [
+            "4 times x plus 1 equals 13",
+            "4 times x plus 1"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-accept-unapplied-suggestion:1:final",
+      "caseId": "alg-accept-unapplied-suggestion",
+      "turn": 1,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Write x plus five equals twelve.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "x plus 5 equals 12",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "x + 5 = 12",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {},
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png",
+          "text": "What math shall we play with today?\nVoice is not configured yet.\n“Draw a triangle with sides 3, 4, and 5.”\n“Graph y equals x squared.”\n“Write 2x plus 3 equals 11.”",
+          "mathLabels": [],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-accept-unapplied-suggestion:2:final",
+      "caseId": "alg-accept-unapplied-suggestion",
+      "turn": 2,
+      "stage": "final",
+      "category": "algebra",
+      "request": "What should I do next? Suggest it first.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "Try subtracting five from both sides.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "x + 5 = 12",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {
+        "expression": "x + 5 = 12",
+        "readOnly": true
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e08cc935325e24e22bc0.png",
+          "text": "1\n𝑥\n+\n5\n=\n12",
+          "mathLabels": [
+            "x plus 5 equals 12"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "alg-accept-unapplied-suggestion:3:final",
+      "caseId": "alg-accept-unapplied-suggestion",
+      "turn": 3,
+      "stage": "final",
+      "category": "algebra",
+      "request": "Yeah, do that.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"x\""
+      ],
+      "expectedMessage": "x plus 5 minus 5 equals 12 minus 5",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "x + 5 - 5 = 12 - 5",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      },
+      "expectedAssertions": {
+        "expression": "x + 5 - 5 = 12 - 5"
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e08cc935325e24e22bc0.png",
+          "text": "1\n𝑥\n+\n5\n=\n12",
+          "mathLabels": [
+            "x plus 5 equals 12"
+          ],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "graph-square-root-endpoint:1:final",
+      "caseId": "graph-square-root-endpoint",
+      "turn": 1,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Graph square root of x minus four, with the minus four inside the root.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "square root of x minus 4, end square root",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "sqrt(x - 4)",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png",
+          "text": "What math shall we play with today?\nVoice is not configured yet.\n“Draw a triangle with sides 3, 4, and 5.”\n“Graph y equals x squared.”\n“Write 2x plus 3 equals 11.”",
+          "mathLabels": [],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "graph-square-root-endpoint:2:final",
+      "caseId": "graph-square-root-endpoint",
+      "turn": 2,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Start where x is four.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "Graph 1, x = 4, y = 0.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "sqrt(x - 4)",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true
+      },
+      "expectedAssertions": {
+        "readOnly": true,
+        "messageIncludes": [
+          "y = 0"
+        ]
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/fd8ec22a279523a6bf23.png",
+          "text": "1\n𝑥\n−\n4\n⌄\nHide graph\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-6\n-4\n-2\n2\n4\n6\n8\n10\ny",
+          "mathLabels": [
+            "square root of x minus 4, end square root"
+          ],
+          "graphExpressions": [
+            "\\sqrt{x-4}"
+          ],
+          "matchesSavedWork": true
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3f2dd9ac329107920f9d.png",
+          "text": "1\n𝑥\n−\n4\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nx\ny",
+          "mathLabels": [
+            "square root of x minus 4, end square root"
+          ],
+          "graphExpressions": [
+            "\\sqrt{x-4}"
+          ],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "graph-square-root-endpoint:3:final",
+      "caseId": "graph-square-root-endpoint",
+      "turn": 3,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Try thirteen too.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "Graph 1, x = 13, y = 3.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "sqrt(x - 4)",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true
+      },
+      "expectedAssertions": {
+        "readOnly": true,
+        "messageIncludes": [
+          "y = 3"
+        ]
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/fd8ec22a279523a6bf23.png",
+          "text": "1\n𝑥\n−\n4\n⌄\nHide graph\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-6\n-4\n-2\n2\n4\n6\n8\n10\ny",
+          "mathLabels": [
+            "square root of x minus 4, end square root"
+          ],
+          "graphExpressions": [
+            "\\sqrt{x-4}"
+          ],
+          "matchesSavedWork": true
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3f2dd9ac329107920f9d.png",
+          "text": "1\n𝑥\n−\n4\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nx\ny",
+          "mathLabels": [
+            "square root of x minus 4, end square root"
+          ],
+          "graphExpressions": [
+            "\\sqrt{x-4}"
+          ],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "graph-translation-order:1:final",
+      "caseId": "graph-translation-order",
+      "turn": 1,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Graph x squared.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "x squared",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "x^2",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png",
+          "text": "What math shall we play with today?\nVoice is not configured yet.\n“Draw a triangle with sides 3, 4, and 5.”\n“Graph y equals x squared.”\n“Write 2x plus 3 equals 11.”",
+          "mathLabels": [],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "graph-translation-order:2:final",
+      "caseId": "graph-translation-order",
+      "turn": 2,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Shift it right two.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "y equals the quantity x minus 2 end quantity squared",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "y = (x - 2)^2",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphExpressions": []
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/f7f953e33eb29686e704.png",
+          "text": "1\n𝑥\n2\n⌄\nHide graph\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-6\n-4\n-2\n2\n4\n6\n8\n10\ny",
+          "mathLabels": [
+            "x squared"
+          ],
+          "graphExpressions": [
+            "x^{2}"
+          ],
+          "matchesSavedWork": true
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3ebc404d852a6d05c1fc.png",
+          "text": "1\n𝑥\n2\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nx\ny",
+          "mathLabels": [
+            "x squared"
+          ],
+          "graphExpressions": [
+            "x^{2}"
+          ],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "graph-translation-order:3:final",
+      "caseId": "graph-translation-order",
+      "turn": 3,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Now lift that by three.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "y equals the quantity x minus 2 end quantity squared plus 3",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "y = (x - 2)^2 + 3",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphExpressions": []
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/8eaa02c8e2a7568a5e60.png",
+          "text": "2\n𝑦\n=\n(\n𝑥\n−\n2\n)\n2\n1\n𝑥\n2\n⌄\nHide graph\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-6\n-4\n-2\n2\n4\n6\n8\n10\ny",
+          "mathLabels": [
+            "y equals the quantity x minus 2 end quantity squared",
+            "x squared"
+          ],
+          "graphExpressions": [
+            "y=\\left(x-2\\right)^{2}"
+          ],
+          "matchesSavedWork": true
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e76c2a138734e061d1a1.png",
+          "text": "2\n𝑦\n=\n(\n𝑥\n−\n2\n)\n2\n1\n𝑥\n2\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nx\ny",
+          "mathLabels": [
+            "y equals the quantity x minus 2 end quantity squared",
+            "x squared"
+          ],
+          "graphExpressions": [
+            "y=\\left(x-2\\right)^{2}"
+          ],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "graph-translation-order:4:final",
+      "caseId": "graph-translation-order",
+      "turn": 4,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Check where x is two.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "Graph 1, x = 2, y = 3.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "y = (x - 2)^2 + 3",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphExpressions": []
+      },
+      "expectedAssertions": {
+        "readOnly": true,
+        "messageIncludes": [
+          "y = 3"
+        ]
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/ac39d21982313ad4b4a9.png",
+          "text": "3\n𝑦\n=\n(\n𝑥\n−\n2\n)\n2\n+\n3\n2\n𝑦\n=\n(\n𝑥\n−\n2\n)\n2\n1\n𝑥\n2\n⌄\nHide graph\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-6\n-4\n-2\n2\n4\n6\n8\n10\ny",
+          "mathLabels": [
+            "y equals the quantity x minus 2 end quantity squared plus 3",
+            "y equals the quantity x minus 2 end quantity squared",
+            "x squared"
+          ],
+          "graphExpressions": [
+            "y=\\left(x-2\\right)^{2}+3"
+          ],
+          "matchesSavedWork": true
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/14a675f5e3b86a7911be.png",
+          "text": "3\n𝑦\n=\n(\n𝑥\n−\n2\n)\n2\n+\n3\n2\n𝑦\n=\n(\n𝑥\n−\n2\n)\n2\n1\n𝑥\n2\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nx\ny",
+          "mathLabels": [
+            "y equals the quantity x minus 2 end quantity squared plus 3",
+            "y equals the quantity x minus 2 end quantity squared",
+            "x squared"
+          ],
+          "graphExpressions": [
+            "y=\\left(x-2\\right)^{2}+3"
+          ],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "graph-replace-entire-graph:1:final",
+      "caseId": "graph-replace-entire-graph",
+      "turn": 1,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Plot x squared.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "x squared",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "x^2",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png",
+          "text": "What math shall we play with today?\nVoice is not configured yet.\n“Draw a triangle with sides 3, 4, and 5.”\n“Graph y equals x squared.”\n“Write 2x plus 3 equals 11.”",
+          "mathLabels": [],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "graph-replace-entire-graph:2:final",
+      "caseId": "graph-replace-entire-graph",
+      "turn": 2,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Add x plus one too.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ],
+      "expectedMessage": "Graph 1: x squared. Graph 2: x plus 1",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "x^2",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphExpressions": [
+          "x + 1"
+        ]
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/f7f953e33eb29686e704.png",
+          "text": "1\n𝑥\n2\n⌄\nHide graph\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-6\n-4\n-2\n2\n4\n6\n8\n10\ny",
+          "mathLabels": [
+            "x squared"
+          ],
+          "graphExpressions": [
+            "x^{2}"
+          ],
+          "matchesSavedWork": true
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3ebc404d852a6d05c1fc.png",
+          "text": "1\n𝑥\n2\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nx\ny",
+          "mathLabels": [
+            "x squared"
+          ],
+          "graphExpressions": [
+            "x^{2}"
+          ],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "graph-replace-entire-graph:3:final",
+      "caseId": "graph-replace-entire-graph",
+      "turn": 3,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Actually start over with absolute value of x.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "Graph row 1: abs(x).",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "0",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "abs(x)"
+            }
+          ]
+        }
+      },
+      "expectedAssertions": {
+        "graphCount": 1
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/03435d82281af028f494.png",
+          "text": "2\n𝑥\n2\n1\n𝑥\n2\n⌄\nHide graph\n1\n×\n2\n×\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-6\n-4\n-2\n2\n4\n6\n8\n10\ny",
+          "mathLabels": [
+            "x squared",
+            "x squared"
+          ],
+          "graphExpressions": [
+            "x^{2}",
+            "x+1"
+          ],
+          "matchesSavedWork": true
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e97a9dd553e8e3bdceeb.png",
+          "text": "2\n𝑥\n2\n1\n𝑥\n2\n1\n×\n2\n×\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nx\ny",
+          "mathLabels": [
+            "x squared",
+            "x squared"
+          ],
+          "graphExpressions": [
+            "x^{2}",
+            "x+1"
+          ],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "graph-replace-entire-graph:4:preview",
+      "caseId": "graph-replace-entire-graph",
+      "turn": 4,
+      "stage": "preview",
+      "category": "graphs",
+      "request": "What does this one give at negative four?",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "For absolute value of x at x = -4, y = 4. Absolute value gives the distance from zero.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "0",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "abs(x)"
+            }
+          ]
+        }
+      },
+      "expectedAssertions": {
+        "readOnly": true,
+        "messageIncludes": [
+          "y = 4"
+        ]
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/633fbac01571922ecfeb.png",
+          "text": "3\n𝑦\n=\nabs\n(\n𝑥\n)\n2\n𝑥\n2\n1\n𝑥\n2\n⌄\nHide graph\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-4\n-2\n2\n4\n6\n8\n10\ny",
+          "mathLabels": [
+            "abs(x)",
+            "x squared",
+            "x squared"
+          ],
+          "graphExpressions": [
+            "\\left|x\\right|"
+          ],
+          "matchesSavedWork": false
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/754a92037da32fac2d9a.png",
+          "text": "3\n𝑦\n=\nabs\n(\n𝑥\n)\n2\n𝑥\n2\n1\n𝑥\n2\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nx\ny",
+          "mathLabels": [
+            "abs(x)",
+            "x squared",
+            "x squared"
+          ],
+          "graphExpressions": [
+            "\\left|x\\right|"
+          ],
+          "matchesSavedWork": false
+        }
+      ]
+    },
+    {
+      "id": "graph-replace-entire-graph:4:final",
+      "caseId": "graph-replace-entire-graph",
+      "turn": 4,
+      "stage": "final",
+      "category": "graphs",
+      "request": "What does this one give at negative four?",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "For absolute value of x at x = -4, y = 4. Absolute value gives the distance from zero.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "0",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "abs(x)"
+            }
+          ]
+        }
+      },
+      "expectedAssertions": {
+        "readOnly": true,
+        "messageIncludes": [
+          "y = 4"
+        ]
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/633fbac01571922ecfeb.png",
+          "text": "3\n𝑦\n=\nabs\n(\n𝑥\n)\n2\n𝑥\n2\n1\n𝑥\n2\n⌄\nHide graph\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-4\n-2\n2\n4\n6\n8\n10\ny",
+          "mathLabels": [
+            "abs(x)",
+            "x squared",
+            "x squared"
+          ],
+          "graphExpressions": [
+            "\\left|x\\right|"
+          ],
+          "matchesSavedWork": false
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/754a92037da32fac2d9a.png",
+          "text": "3\n𝑦\n=\nabs\n(\n𝑥\n)\n2\n𝑥\n2\n1\n𝑥\n2\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nx\ny",
+          "mathLabels": [
+            "abs(x)",
+            "x squared",
+            "x squared"
+          ],
+          "graphExpressions": [
+            "\\left|x\\right|"
+          ],
+          "matchesSavedWork": false
+        }
+      ]
+    },
+    {
+      "id": "graph-named-function-redefinition:1:final",
+      "caseId": "graph-named-function-redefinition",
+      "turn": 1,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Let f of x equal x plus one, and graph twice f of x.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "Graph row 1: f(x)=x+1. Graph row 2: y=2*f(x).",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "0",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "f(x)=x+1"
+            },
+            {
+              "expression": "y=2*f(x)"
+            }
+          ]
+        }
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png",
+          "text": "What math shall we play with today?\nVoice is not configured yet.\n“Draw a triangle with sides 3, 4, and 5.”\n“Graph y equals x squared.”\n“Write 2x plus 3 equals 11.”",
+          "mathLabels": [],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "graph-named-function-redefinition:2:final",
+      "caseId": "graph-named-function-redefinition",
+      "turn": 2,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Make f equal x minus one instead.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ],
+      "expectedMessage": "Graph row 1: f(x)=x-1. Graph row 2: y=2*f(x).",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "0",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "f(x)=x-1"
+            },
+            {
+              "expression": "y=2*f(x)"
+            }
+          ]
+        }
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/9cfb1bfdee89590d91fe.png",
+          "text": "1\n𝑓\n(\n𝑥\n)\n=\n𝑥\n+\n1\n𝑦\n=\n2\n·\n𝑓\n(\n𝑥\n)\n⌄\nHide graph\n1\n×\n2\n×\n10",
+          "mathLabels": [
+            "f(x)=x+1",
+            "y=2*f(x)"
+          ],
+          "graphExpressions": [
+            "f\\left(x\\right)=x+1",
+            "y=2\\cdot f\\left(x\\right)"
+          ],
+          "matchesSavedWork": false
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/b6c781dabead1caf1d4e.png",
+          "text": "1\n𝑓\n(\n𝑥\n)\n=\n𝑥\n+\n1\n𝑦\n=\n2\n·\n𝑓\n(\n𝑥\n)\n1\n×\n2\n×\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nx\ny",
+          "mathLabels": [
+            "f(x)=x+1",
+            "y=2*f(x)"
+          ],
+          "graphExpressions": [
+            "f\\left(x\\right)=x+1",
+            "y=2\\cdot f\\left(x\\right)"
+          ],
+          "matchesSavedWork": false
+        }
+      ]
+    },
+    {
+      "id": "graph-named-function-redefinition:3:final",
+      "caseId": "graph-named-function-redefinition",
+      "turn": 3,
+      "stage": "final",
+      "category": "graphs",
+      "request": "What is the second curve at three?",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "Graph row 2, x = 3, y = 4.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "0",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "f(x)=x-1"
+            },
+            {
+              "expression": "y=2*f(x)"
+            }
+          ]
+        }
+      },
+      "expectedAssertions": {
+        "readOnly": true,
+        "messageIncludes": [
+          "y = 4"
+        ]
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/429a81d6614ee2b217a9.png",
+          "text": "2\n𝑓\n(\n𝑥\n)\n=\n𝑥\n-\n1\n𝑦\n=\n2\n·\n𝑓\n(\n𝑥\n)\n1\n𝑓\n(\n𝑥\n)\n=\n𝑥\n+\n1\n𝑦\n=\n2\n·\n𝑓\n(\n𝑥\n)\n⌄\nHide graph\n1\n×\n2\n×\n10",
+          "mathLabels": [
+            "f(x)=x-1",
+            "y=2*f(x)",
+            "f(x)=x+1",
+            "y=2*f(x)"
+          ],
+          "graphExpressions": [
+            "f\\left(x\\right)=x-1",
+            "y=2\\cdot f\\left(x\\right)"
+          ],
+          "matchesSavedWork": false
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/d49afd3b72b05389f5eb.png",
+          "text": "2\n𝑓\n(\n𝑥\n)\n=\n𝑥\n-\n1\n𝑦\n=\n2\n·\n𝑓\n(\n𝑥\n)\n1\n𝑓\n(\n𝑥\n)\n=\n𝑥\n+\n1\n𝑦\n=\n2\n·\n𝑓\n(\n𝑥\n)\n1\n×\n2\n×\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nx\ny",
+          "mathLabels": [
+            "f(x)=x-1",
+            "y=2*f(x)",
+            "f(x)=x+1",
+            "y=2*f(x)"
+          ],
+          "graphExpressions": [
+            "f\\left(x\\right)=x-1",
+            "y=2\\cdot f\\left(x\\right)"
+          ],
+          "matchesSavedWork": false
+        }
+      ]
+    },
+    {
+      "id": "graph-exponential-base-parameter:1:final",
+      "caseId": "graph-exponential-base-parameter",
+      "turn": 1,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Let b equal two, and graph b to the x.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "Graph row 1: b=2 (2). Graph row 2: y=b^x.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "0",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "b=2"
+            },
+            {
+              "expression": "y=b^x"
+            }
+          ]
+        }
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png",
+          "text": "What math shall we play with today?\nVoice is not configured yet.\n“Draw a triangle with sides 3, 4, and 5.”\n“Graph y equals x squared.”\n“Write 2x plus 3 equals 11.”",
+          "mathLabels": [],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "graph-exponential-base-parameter:2:final",
+      "caseId": "graph-exponential-base-parameter",
+      "turn": 2,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Check x equals three.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "Graph row 2, x = 3, y = 8.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "0",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "b=2"
+            },
+            {
+              "expression": "y=b^x"
+            }
+          ]
+        }
+      },
+      "expectedAssertions": {
+        "readOnly": true,
+        "messageIncludes": [
+          "y = 8"
+        ]
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/448ddbb91f3eeaa1f158.png",
+          "text": "1\n𝑏\n=\n2\n𝑦\n=\n𝑏\n𝑥\n⌄\nHide graph\n1\n×\n2\n×\n10",
+          "mathLabels": [
+            "b=2",
+            "y=b^x"
+          ],
+          "graphExpressions": [
+            "b=2",
+            "y=b^{x}"
+          ],
+          "matchesSavedWork": false
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/2229955a915dfe1b946d.png",
+          "text": "1\n𝑏\n=\n2\n𝑦\n=\n𝑏\n𝑥\n1\n×\n2\n×\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nx\ny",
+          "mathLabels": [
+            "b=2",
+            "y=b^x"
+          ],
+          "graphExpressions": [
+            "b=2",
+            "y=b^{x}"
+          ],
+          "matchesSavedWork": false
+        }
+      ]
+    },
+    {
+      "id": "graph-exponential-base-parameter:3:final",
+      "caseId": "graph-exponential-base-parameter",
+      "turn": 3,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Try b equal three.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ],
+      "expectedMessage": "Graph row 1: b=3 (3). Graph row 2: y=b^x.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "0",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "b=3"
+            },
+            {
+              "expression": "y=b^x"
+            }
+          ]
+        }
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/448ddbb91f3eeaa1f158.png",
+          "text": "1\n𝑏\n=\n2\n𝑦\n=\n𝑏\n𝑥\n⌄\nHide graph\n1\n×\n2\n×\n10",
+          "mathLabels": [
+            "b=2",
+            "y=b^x"
+          ],
+          "graphExpressions": [
+            "b=2",
+            "y=b^{x}"
+          ],
+          "matchesSavedWork": false
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/2229955a915dfe1b946d.png",
+          "text": "1\n𝑏\n=\n2\n𝑦\n=\n𝑏\n𝑥\n1\n×\n2\n×\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nx\ny",
+          "mathLabels": [
+            "b=2",
+            "y=b^x"
+          ],
+          "graphExpressions": [
+            "b=2",
+            "y=b^{x}"
+          ],
+          "matchesSavedWork": false
+        }
+      ]
+    },
+    {
+      "id": "graph-exponential-base-parameter:4:final",
+      "caseId": "graph-exponential-base-parameter",
+      "turn": 4,
+      "stage": "final",
+      "category": "graphs",
+      "request": "What about the same x now?",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "Graph row 2, x = 3, y = 27.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "0",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "b=3"
+            },
+            {
+              "expression": "y=b^x"
+            }
+          ]
+        }
+      },
+      "expectedAssertions": {
+        "readOnly": true,
+        "messageIncludes": [
+          "y = 27"
+        ]
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/f9fb4ab7e82d7289b37e.png",
+          "text": "2\n𝑏\n=\n3\n𝑦\n=\n𝑏\n𝑥\n1\n𝑏\n=\n2\n𝑦\n=\n𝑏\n𝑥\n⌄\nHide graph\n1\n×\n2\n×\n10",
+          "mathLabels": [
+            "b=3",
+            "y=b^x",
+            "b=2",
+            "y=b^x"
+          ],
+          "graphExpressions": [
+            "b=3",
+            "y=b^{x}"
+          ],
+          "matchesSavedWork": false
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/1bffd9ab9327f59c03cb.png",
+          "text": "2\n𝑏\n=\n3\n𝑦\n=\n𝑏\n𝑥\n1\n𝑏\n=\n2\n𝑦\n=\n𝑏\n𝑥\n1\n×\n2\n×\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nx\ny",
+          "mathLabels": [
+            "b=3",
+            "y=b^x",
+            "b=2",
+            "y=b^x"
+          ],
+          "graphExpressions": [
+            "b=3",
+            "y=b^{x}"
+          ],
+          "matchesSavedWork": false
+        }
+      ]
+    },
+    {
+      "id": "graph-name-preserved-after-edit:1:final",
+      "caseId": "graph-name-preserved-after-edit",
+      "turn": 1,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Graph x squared.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "x squared",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "x^2",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png",
+          "text": "What math shall we play with today?\nVoice is not configured yet.\n“Draw a triangle with sides 3, 4, and 5.”\n“Graph y equals x squared.”\n“Write 2x plus 3 equals 11.”",
+          "mathLabels": [],
+          "graphExpressions": [],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "graph-name-preserved-after-edit:2:final",
+      "caseId": "graph-name-preserved-after-edit",
+      "turn": 2,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Call that bounce.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "bounce: x^2.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "0",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "x^2",
+              "name": "bounce"
+            }
+          ]
+        }
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/f7f953e33eb29686e704.png",
+          "text": "1\n𝑥\n2\n⌄\nHide graph\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-6\n-4\n-2\n2\n4\n6\n8\n10\ny",
+          "mathLabels": [
+            "x squared"
+          ],
+          "graphExpressions": [
+            "x^{2}"
+          ],
+          "matchesSavedWork": true
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": true,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3ebc404d852a6d05c1fc.png",
+          "text": "1\n𝑥\n2\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nx\ny",
+          "mathLabels": [
+            "x squared"
+          ],
+          "graphExpressions": [
+            "x^{2}"
+          ],
+          "matchesSavedWork": true
+        }
+      ]
+    },
+    {
+      "id": "graph-name-preserved-after-edit:3:final",
+      "caseId": "graph-name-preserved-after-edit",
+      "turn": 3,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Make bounce x squared plus one.",
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ],
+      "expectedMessage": "bounce: x^2+1.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "0",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "x^2+1",
+              "name": "bounce"
+            }
+          ]
+        }
+      },
+      "source": "unchanged-prestate-no-executable-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/515d0ee36fed2ea71de7.png",
+          "text": "2\nbounce: \n𝑦\n=\n𝑥\n2\n1\n𝑥\n2\n⌄\nHide graph\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-4\n-2\n2\n4\n6\n8\n10\ny",
+          "mathLabels": [
+            "x^2",
+            "x squared"
+          ],
+          "graphExpressions": [
+            "x^{2}"
+          ],
+          "matchesSavedWork": false
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e8a5a7ab17195b5ecff9.png",
+          "text": "2\nbounce: \n𝑦\n=\n𝑥\n2\n1\n𝑥\n2\n1\n-10\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nx\ny",
+          "mathLabels": [
+            "x^2",
+            "x squared"
+          ],
+          "graphExpressions": [
+            "x^{2}"
+          ],
+          "matchesSavedWork": false
+        }
+      ]
+    }
+  ],
+  "captureFailures": 0
+}

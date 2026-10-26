@@ -1,0 +1,87 @@
+{
+  "status": "candidate cases; recorded audio and live-provider grading are not yet run",
+  "purpose": "Multi-turn, multi-line and recorded-voice coverage for the first slice of issue #5",
+  "cases": [
+    {
+      "id": "named-right-triangle",
+      "utterances": ["Draw triangle A B C, with A at zero zero, B at four zero, and C at zero three. Mark the right angle at A and label the hypotenuse."],
+      "checks": ["Triangle vertices retain the named coordinates", "Right-angle mark is at A", "BC is labeled 5", "One saved step; one undo restores prior work"]
+    },
+    {
+      "id": "symbolic-hypotenuse-h",
+      "lane": "manual agent evaluation in the actual app",
+      "utterances": [
+        "Create a triangle with side lengths 3,4 and hypotenuse h"
+      ],
+      "setup": "Use a fresh isolated problem. Submit the exact request through the agent, without supplying a construction or expected answer to the model.",
+      "checks": [
+        "A right triangle appears with the two perpendicular legs labeled 3 and 4; orientation and vertex names may vary",
+        "The sloping hypotenuse is visibly labeled h, not 5 or h=5; the unknown is not solved or revealed",
+        "A right-angle marker is at the meeting point of the legs",
+        "The final spoken response and displayed caption agree with the rendered h label and do not claim an unapplied label or reveal 5",
+        "Inspect progressive drawing states when present: the hypotenuse must not temporarily reveal 5",
+        "Inspect desktop and mobile renders for readable labels, correct side association and clipping",
+        "Reload preserves the h label; one undo restores the prior work"
+      ],
+      "reported_failure": {
+        "date": "2026-10-24",
+        "evidence": "manual-agent-evidence/symbolic-hypotenuse-reported-failure.png",
+        "observed": "The diagram shows legs 3 and 4 and hypotenuse 5, while the caption says the hypotenuse is h.",
+        "limits": "User-supplied screenshot only. App revision, model, generated program, viewport and audio are not captured; root cause and current-build behavior are unverified."
+      },
+      "review_record_required": [
+        "app revision and platform",
+        "model and settings",
+        "exact generated prompt and tool contracts with source hashes",
+        "generated program and saved state",
+        "desktop/mobile viewport dimensions",
+        "reviewed initial, intermediate, final and reloaded screenshots",
+        "retained spoken audio and caption comparison",
+        "pass/fail for each check and any missing evidence"
+      ],
+      "status": "reported failure retained; current-build manual agent replay pending"
+    },
+    {
+      "id": "dependent-midpoint-edit",
+      "utterances": ["Draw a segment from A at zero zero to B at four zero.", "Add its midpoint M.", "Move B to eight zero.", "Read M.", "Undo that move."],
+      "checks": ["M changes from (2,0) to (4,0)", "M remains midpoint(A,B), not a frozen coordinate", "Undo restores B=(4,0) and M=(2,0)", "Queries do not save steps"]
+    },
+    {
+      "id": "ambiguous-intersection",
+      "utterances": ["Draw a circle centered at the origin with radius one and a line through minus two zero and two zero.", "Mark their intersection.", "Use the left one."],
+      "checks": ["Two intersections require clarification; no arbitrary branch is saved", "Left branch produces (-1,0)", "Clarification itself changes no mathematical state"]
+    },
+    {
+      "id": "spoken-correction",
+      "utterances": ["Draw segment A B from zero zero to four zero, and add midpoint M.", "Move B to eight zero.", "Actually, I meant six zero."],
+      "checks": ["B ends at (6,0) and M at (3,0)", "Correction uses the prior turn's starting state", "Undo retains the established correction recovery behavior"]
+    },
+    {
+      "id": "false-right-angle",
+      "utterances": ["Draw A at zero zero, B at four zero, and C at one three. Join them into a triangle.", "Mark angle A B C as a right angle."],
+      "checks": ["False right-angle mark is rejected", "Saved triangle remains unchanged", "Reply never claims the mark was applied"]
+    },
+    {
+      "id": "thinking-pause",
+      "utterances": ["Draw a triangle with A at zero zero [pause] B at four zero [pause] and C at zero three."],
+      "checks": ["Thinking pauses do not prematurely commit incomplete geometry", "Names and coordinates retain their associations", "No fabricated missing coordinate"]
+    },
+    {
+      "id": "overlapping-reply-and-edit",
+      "utterances": ["Draw triangle A B C at zero zero, four zero and zero three, and add its incircle.", "[during reply] Move B to eight zero."],
+      "checks": ["Interruption stops stale speech", "Only the current revision is saved", "Incircle recalculates from the moved triangle", "Displayed and spoken replies describe the accepted result"]
+    },
+    {
+      "id": "save-retry-and-switch",
+      "utterances": ["Draw segment A B from zero zero to four zero.", "Add midpoint M."],
+      "injections": ["Lose the save response after commit; retry using the same request ID", "Separately switch problems while a build is pending"],
+      "checks": ["Retry does not duplicate the midpoint step", "Pending results cannot overwrite another problem", "Failed or unconfirmed save has explicit recovery"]
+    }
+  ],
+  "timing": {
+    "primary": ["end of student speech to first meaningful spoken response", "end of student speech to correct math displayed", "end of student speech to both outcomes complete"],
+    "diagnostic": ["first valid drawable preview", "provider generation", "validation", "render", "confirmed save"],
+    "controls": ["existing subtract-both-sides case", "existing graph y=x^2 case"],
+    "reporting": "Record every attempt and failure, missing stages, p50/p95 only when supported by sample size, and the success interval. Five trials per scenario is an initial smoke check, not a reliable tail-latency estimate."
+  }
+}

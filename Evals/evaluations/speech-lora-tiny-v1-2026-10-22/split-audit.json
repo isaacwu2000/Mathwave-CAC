@@ -1,0 +1,64 @@
+{
+  "splitSha256": "530ecee7b4b03f15f56c997de5b360e255df50ac3d0e1abb7a874bfb08f4e78b",
+  "independentReviewer": "student_geometry",
+  "review": "No blocking leakage/LoRA-selection issue; reviewed without inspecting sealed test predictions.",
+  "groups": 229,
+  "largestGroup": 43,
+  "partitions": {
+    "test": {
+      "conversations": 40,
+      "retainedClips": 116,
+      "categories": {
+        "geometry": 20,
+        "graphs": 14,
+        "algebra": 5,
+        "history-and-diagrams": 1
+      }
+    },
+    "val": {
+      "conversations": 40,
+      "retainedClips": 115,
+      "categories": {
+        "geometry": 31,
+        "algebra": 4,
+        "graphs": 3,
+        "history-and-diagrams": 2
+      }
+    },
+    "train": {
+      "conversations": 320,
+      "retainedClips": 922,
+      "categories": {
+        "statistics": 50,
+        "history-and-diagrams": 22,
+        "cross-topic": 25,
+        "algebra": 91,
+        "geometry": 49,
+        "graphs": 83
+      }
+    }
+  },
+  "crossPartitionOverlap": {
+    "test-val": {
+      "conversations": 0,
+      "transcripts": 0,
+      "waveforms": 0
+    },
+    "test-train": {
+      "conversations": 0,
+      "transcripts": 0,
+      "waveforms": 0
+    },
+    "val-train": {
+      "conversations": 0,
+      "transcripts": 0,
+      "waveforms": 0
+    }
+  },
+  "limits": [
+    "All six synthetic voices occur in each partition; no held-out-speaker claim.",
+    "Grouping masks numbers, not all variable/object renamings; semantic near-duplicates may remain.",
+    "Validation and test geometry-heavy; no statistics conversations in held-out sets.",
+    "Full conversation assignments retained, but duplicate turns excluded from independent STT training."
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "split": "test-v9",
+  "mode": "parser",
+  "datasetSHA256": "5e3d040fa3cf67fd91d33404c591f9955870a3a4e3b43e8c6f8f80512d07cfe4",
+  "createdAt": "2026-10-11T05:21:40.440Z",
+  "total": 10,
+  "scored": 10,
+  "passed": 10,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "graph_exploration": {
+      "passed": 10,
+      "scored": 10
+    }
+  },
+  "results": [
+    {
+      "id": "v9-001",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "show the key points of graph one",
+        "message": ""
+      },
+      "latencyMs": 14
+    },
+    {
+      "id": "v9-002",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "read key points of graph two",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v9-003",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "find intersections of graphs one and three",
+        "message": ""
+      },
+      "latencyMs": 3
+    },
+    {
+      "id": "v9-004",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "evaluate graph two at x five",
+        "message": ""
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v9-005",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "edit graph two to y=x+four",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v9-006",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "cancel graph three",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v9-007",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "That graph expression does not exist."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v9-008",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "Choose two different graph expressions."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v9-009",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "read the intercepts of graph two",
+        "message": ""
+      },
+      "latencyMs": 2
+    },
+    {
+      "id": "v9-010",
+      "category": "graph_exploration",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "find key points",
+        "message": ""
+      },
+      "latencyMs": 1
+    }
+  ]
+}

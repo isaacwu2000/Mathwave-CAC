@@ -1,0 +1,5 @@
+module CustomModelBridge {
+  header "mathwave_models.h"
+  export *
+  link "mathwave-local-models"
+}

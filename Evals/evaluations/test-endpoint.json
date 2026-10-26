@@ -1,0 +1,184 @@
+{
+  "split": "test",
+  "mode": "endpoint",
+  "datasetSHA256": "1c565ff2e142d4f64436a44d472129b8df149eb1876f0e82defc56ebae4d6564",
+  "createdAt": "2026-10-10T01:34:05.502Z",
+  "total": 20,
+  "scored": 0,
+  "passed": 0,
+  "unavailable": 20,
+  "accuracy": null,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "statistics": {
+      "passed": 0,
+      "scored": 0
+    },
+    "algebra": {
+      "passed": 0,
+      "scored": 0
+    },
+    "navigation": {
+      "passed": 0,
+      "scored": 0
+    },
+    "reading": {
+      "passed": 0,
+      "scored": 0
+    },
+    "clarification": {
+      "passed": 0,
+      "scored": 0
+    },
+    "safety": {
+      "passed": 0,
+      "scored": 0
+    },
+    "unsupported": {
+      "passed": 0,
+      "scored": 0
+    }
+  },
+  "results": [
+    {
+      "id": "test-001",
+      "category": "statistics",
+      "pass": null,
+      "reason": "Endpoint HTTP 502",
+      "latencyMs": 690
+    },
+    {
+      "id": "test-002",
+      "category": "statistics",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-003",
+      "category": "statistics",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-004",
+      "category": "statistics",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-005",
+      "category": "statistics",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-006",
+      "category": "statistics",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-007",
+      "category": "algebra",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-008",
+      "category": "algebra",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-009",
+      "category": "navigation",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-010",
+      "category": "reading",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-011",
+      "category": "navigation",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-012",
+      "category": "algebra",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-013",
+      "category": "statistics",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-014",
+      "category": "clarification",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-015",
+      "category": "clarification",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-016",
+      "category": "safety",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-017",
+      "category": "clarification",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-018",
+      "category": "unsupported",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-019",
+      "category": "safety",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "test-020",
+      "category": "safety",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "split": "train",
+  "mode": "parser",
+  "datasetSHA256": "eaac1ee7c4f0325a68aa75e7d32b6e28589f29ea3fdc98184dbd5b61a4bcfd96",
+  "createdAt": "2026-10-10T01:38:03.876Z",
+  "total": 20,
+  "scored": 20,
+  "passed": 20,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "statistics": {
+      "passed": 7,
+      "scored": 7
+    },
+    "algebra": {
+      "passed": 3,
+      "scored": 3
+    },
+    "navigation": {
+      "passed": 2,
+      "scored": 2
+    },
+    "reading": {
+      "passed": 1,
+      "scored": 1
+    },
+    "clarification": {
+      "passed": 3,
+      "scored": 3
+    },
+    "safety": {
+      "passed": 3,
+      "scored": 3
+    },
+    "unsupported": {
+      "passed": 1,
+      "scored": 1
+    }
+  },
+  "results": [
+    {
+      "id": "train-001",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "find the median",
+        "message": ""
+      },
+      "latencyMs": 3
+    },
+    {
+      "id": "train-002",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "what is the average",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "train-003",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "show out liars",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "train-004",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "sum",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "train-005",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "count",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "train-006",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "data four, five, minus two",
+        "message": ""
+      },
+      "latencyMs": 2
+    },
+    {
+      "id": "train-007",
+      "category": "algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "subtract three from both sides",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "train-008",
+      "category": "algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "divide both sides by two",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "train-009",
+      "category": "navigation",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "show graph",
+        "message": ""
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "train-010",
+      "category": "reading",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "read left side",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "train-011",
+      "category": "navigation",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "next part",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "train-012",
+      "category": "algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "write x plus seven equals nine",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "train-013",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "sample variance",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "train-014",
+      "category": "clarification",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Do you want sample or population variance? Say, for example, sample variance."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "train-015",
+      "category": "clarification",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which term should I replace? Say replace, the exact term, and its new value."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "train-016",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "Use a nonzero finite number so this operation preserves the equation."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "train-017",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “delete”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "train-018",
+      "category": "unsupported",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “integrate”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "train-019",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “ignore”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "train-020",
+      "category": "clarification",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "What would you like to change? Name the term to replace or the operation to apply."
+      },
+      "latencyMs": 0
+    }
+  ]
+}

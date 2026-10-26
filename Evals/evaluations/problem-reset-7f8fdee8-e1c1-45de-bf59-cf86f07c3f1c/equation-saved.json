@@ -1,0 +1,170 @@
+{
+  "book": {
+    "version": 2,
+    "assignments": [
+      {
+        "id": "24aad622-f88b-4628-b106-b5cf55269706",
+        "title": "My homework",
+        "problems": [
+          {
+            "id": "24170c02-47b9-410c-ab78-b9b88b6979c3",
+            "title": "Problem 1",
+            "state": {
+              "mode": "equation",
+              "expression": "x^2 + 3 * x + 2",
+              "data": [
+                0,
+                0
+              ],
+              "selection": 0,
+              "graph": true
+            },
+            "steps": [
+              {
+                "command": "typescript\nproblem.save(graph.plot(\"y=x^2\"));",
+                "displayCommand": "graph y=x^2",
+                "state": {
+                  "mode": "equation",
+                  "expression": "y = x^2",
+                  "data": [
+                    0,
+                    0
+                  ],
+                  "selection": 0,
+                  "graph": true
+                },
+                "at": "2026-10-24T17:54:27.768Z"
+              },
+              {
+                "command": "typescript\nproblem.save(math.expression(\"x^2 + 3 * x + 2\"));",
+                "displayCommand": "Write x squared plus three x plus two.",
+                "state": {
+                  "mode": "equation",
+                  "expression": "x^2 + 3 * x + 2",
+                  "data": [
+                    0,
+                    0
+                  ],
+                  "selection": 0,
+                  "graph": true
+                },
+                "at": "2026-10-24T17:54:28.490Z"
+              }
+            ],
+            "initialState": {
+              "mode": "equation",
+              "expression": "0",
+              "data": [
+                0,
+                0
+              ],
+              "selection": 0,
+              "graph": false
+            },
+            "undoRevisions": [
+              {
+                "state": {
+                  "mode": "equation",
+                  "expression": "0",
+                  "data": [
+                    0,
+                    0
+                  ],
+                  "selection": 0,
+                  "graph": false
+                },
+                "steps": [],
+                "undoStates": []
+              },
+              {
+                "state": {
+                  "mode": "equation",
+                  "expression": "y = x^2",
+                  "data": [
+                    0,
+                    0
+                  ],
+                  "selection": 0,
+                  "graph": true
+                },
+                "steps": [
+                  {
+                    "command": "typescript\nproblem.save(graph.plot(\"y=x^2\"));",
+                    "displayCommand": "graph y=x^2",
+                    "state": {
+                      "mode": "equation",
+                      "expression": "y = x^2",
+                      "data": [
+                        0,
+                        0
+                      ],
+                      "selection": 0,
+                      "graph": true
+                    },
+                    "at": "2026-10-24T17:54:27.768Z"
+                  }
+                ],
+                "undoStates": [
+                  {
+                    "mode": "equation",
+                    "expression": "0",
+                    "data": [
+                      0,
+                      0
+                    ],
+                    "selection": 0,
+                    "graph": false
+                  }
+                ]
+              }
+            ],
+            "redoRevisions": [],
+            "draft": "",
+            "undoStates": [
+              {
+                "mode": "equation",
+                "expression": "0",
+                "data": [
+                  0,
+                  0
+                ],
+                "selection": 0,
+                "graph": false
+              },
+              {
+                "mode": "equation",
+                "expression": "y = x^2",
+                "data": [
+                  0,
+                  0
+                ],
+                "selection": 0,
+                "graph": true
+              }
+            ],
+            "conversation": [
+              {
+                "request": "Write x squared plus three x plus two.",
+                "response": "Your expression is now x squared plus 3 times x plus 2.",
+                "status": "command",
+                "stateKey": "90:4232104065",
+                "revisable": true,
+                "stepCount": 2,
+                "undoDepth": 1
+              }
+            ],
+            "conversationArchive": []
+          }
+        ]
+      }
+    ],
+    "assignmentId": "24aad622-f88b-4628-b106-b5cf55269706",
+    "problemId": "24170c02-47b9-410c-ab78-b9b88b6979c3",
+    "draft": ""
+  },
+  "clarification": null,
+  "status": "command",
+  "message": "Your expression is now x squared plus 3 times x plus 2.",
+  "aiUnavailable": false,
+  "revision": 1
+}

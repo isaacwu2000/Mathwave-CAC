@@ -1,0 +1,112 @@
+{
+  "pairedRecordings": 116,
+  "primaryUniqueTranscripts": 110,
+  "trainableParameters": 147456,
+  "totalParameters": 37907712,
+  "optimizerSteps": 232,
+  "selectedEpoch": 2,
+  "trainingSeconds": 633.5034031249997,
+  "measuredRunSecondsAfterImports": 764.5027621249974,
+  "before": {
+    "clips": 110,
+    "referenceWords": 740,
+    "wordErrors": 132,
+    "normalizedWER": 0.1783783783783784,
+    "normalizedExact": 53,
+    "rawWER": 0.35,
+    "mathTokenErrorRate": 0.145,
+    "generationSeconds": 20.76634925002145,
+    "audioSeconds": 268.371
+  },
+  "after": {
+    "clips": 110,
+    "referenceWords": 740,
+    "wordErrors": 34,
+    "normalizedWER": 0.04594594594594595,
+    "normalizedExact": 88,
+    "rawWER": 0.06891891891891892,
+    "mathTokenErrorRate": 0.02,
+    "generationSeconds": 26.42327758202373,
+    "audioSeconds": 268.371
+  },
+  "relativeWordErrorReduction": 0.7424242424242424,
+  "meanGenerationSeconds": {
+    "before": 0.1895807740777008,
+    "after": 0.2416517011381451
+  },
+  "medianGenerationSeconds": {
+    "before": 0.18124929150144453,
+    "after": 0.21181372850151092
+  },
+  "verification": [
+    "same held-out recording/reference pairs before and after",
+    "no decode token limit reached",
+    "frozen split/code/adapter hashes match",
+    "checkpoint selected by minimum validation loss",
+    "232 LoRA-only updates and unchanged base parameter bytes"
+  ],
+  "limits": [
+    "Synthetic speech and geometry-heavy held-out conversations; not human/iPhone evidence.",
+    "Generation-only timing, one pass; preprocessing caches differ.",
+    "Small-number normalization and restricted math-token metric have documented limitations.",
+    "App visual review remains 2/400; speech training does not fix existing command-parser bugs."
+  ],
+  "illustrativeImprovements": [
+    {
+      "case": "graph-small-feature-window",
+      "turn": 2,
+      "reference": "Zoom to x negative one to one and y negative one to one.",
+      "before": " So x-naked of 1 to 1 and y-naked of 1 to 1.",
+      "after": "Zoop to x negative one to one and y negative one to one.",
+      "beforeErrors": 8,
+      "afterErrors": 1
+    },
+    {
+      "case": "geo-altitude-overlay",
+      "turn": 2,
+      "reference": "Drop the altitude to side c.",
+      "before": " Blaapi Altitude Society",
+      "after": "Drop the altitude to side C.",
+      "beforeErrors": 5,
+      "afterErrors": 0
+    },
+    {
+      "case": "geo-median-overlay",
+      "turn": 2,
+      "reference": "Draw the median to side a.",
+      "before": " rather median society.",
+      "after": "Draw the median to side A.",
+      "beforeErrors": 5,
+      "afterErrors": 0
+    }
+  ],
+  "illustrativeRegressions": [
+    {
+      "case": "graph-cosine-quarter-cycle",
+      "turn": 1,
+      "reference": "Plot cosine x.",
+      "before": " Plot cosine X.",
+      "after": "Plought cos i next.",
+      "beforeErrors": 0,
+      "afterErrors": 4
+    },
+    {
+      "case": "graph-cosine-quarter-cycle",
+      "turn": 3,
+      "reference": "And at pi?",
+      "before": " and at pi.",
+      "after": "And that pie.",
+      "beforeErrors": 0,
+      "afterErrors": 2
+    },
+    {
+      "case": "graph-parametric-parabola-direction",
+      "turn": 3,
+      "reference": "And at t two?",
+      "before": " and a T2.",
+      "after": "And a t too?",
+      "beforeErrors": 1,
+      "afterErrors": 2
+    }
+  ]
+}

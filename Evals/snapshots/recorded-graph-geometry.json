@@ -1,0 +1,9 @@
+{
+  "implementationCommit": "50c3e37",
+  "sha256": {
+    "lib/workspace.ts": "7216b142ef1b1653d63a7b7c2d6ebacda98f13e49db7bc1142f413c9f58eb26d",
+    "lib/geometry.ts": "6334f9cf786a7aa4ae150d7b612d2544348e37cd9bbb50cd6380d3c27c44f3c2",
+    "lib/graph.ts": "ecdcf79984c86d2ea582e6e5cf6399abcd94c0446adfc3b1aa46d4635e5815c5",
+    "lib/clarification-context.ts": "4aaffc9829343a86eb046774651f2426229a3f8f1582df5a28e115a29b1dff97"
+  }
+}

@@ -1,0 +1,81 @@
+W1023 15:00:01.814000 15291 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<00:32,  9.40it/s]Loading weights:  45%|████▌     | 140/311 [00:00<00:00, 739.58it/s]Loading weights:  76%|███████▌  | 236/311 [00:00<00:00, 813.16it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 767.84it/s]
+Traceback (most recent call last):
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/scripts/train_lora.py", line 241, in <module>
+    main(args.data,args.output,args.smoke)
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/scripts/train_lora.py", line 182, in main
+    model.train(); clock=time.perf_counter();loss,count=loss_for(model,encoded['train'][0]);loss.backward();torch.mps.synchronize()
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/scripts/train_lora.py", line 146, in loss_for
+    logits=model(input_ids=ids,logits_to_keep=positions-1,use_cache=False).logits[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/peft/peft_model.py", line 2120, in forward
+    return self.base_model(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/peft/tuners/tuners_utils.py", line 359, in forward
+    return self.model(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 469, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+                                       ^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 1081, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/transformers/utils/output_capturing.py", line 287, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 405, in forward
+    hidden_states = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/transformers/modeling_layers.py", line 111, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 299, in forward
+    hidden_states, _ = self.self_attn(
+                       ^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 258, in forward
+    attn_output, attn_weights = attention_interface(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/isaac/Documents/GitHub/Math-Audio/Training/STT/.venv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py", line 170, in sdpa_attention_forward
+    attn_output = torch.nn.functional.scaled_dot_product_attention(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: MPS backend out of memory (MPS allocated: 20.02 GiB, other allocations: 720.00 KiB, max allowed: 20.13 GiB). Tried to allocate 456.00 MiB on shared pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure).

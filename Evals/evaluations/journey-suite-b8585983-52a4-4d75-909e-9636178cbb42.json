@@ -1,0 +1,555 @@
+{
+  "runId": "b8585983-52a4-4d75-909e-9636178cbb42",
+  "startedAt": "2026-10-19T18:57:01.264Z",
+  "finishedAt": "2026-10-19T18:57:03.370Z",
+  "lane": "suite",
+  "revision": "a23c292ec498d84cb1fba55895da929312128ea5",
+  "dirty": true,
+  "sourceSHA256": "a61e5392f23a4d9402837fbb3677e11043fd8f035f3396792e3327b6c2bb78e4",
+  "runnerSHA256": "64c79d675e1b9fad2374455dc55a9dfce83622fe0506987e1f8279d779f377ee",
+  "models": {
+    "live": "gpt-live-1",
+    "command": "gpt-6-luna"
+  },
+  "commandProfile": "luna-default",
+  "reasoning": null,
+  "latencyDefinition": "Harness duration includes setup, fixture, saved outcome, finished reply and evidence capture; responseLatencyMs separately measures last input to display.",
+  "scope": "Synthetic recorded speech through browser, GPT Live, backend, persistence and React commit; excludes physical microphone and student usability.",
+  "failure": "Evaluation app exited (7).",
+  "repetitions": 1,
+  "selection": {
+    "sample": 6,
+    "seed": "voice-2026-10-19",
+    "selected": [
+      {
+        "id": "median",
+        "category": "statistics",
+        "turns": 1,
+        "variants": [
+          {
+            "voice": "Daniel",
+            "case": "median",
+            "transcript": "Find the median of two, four, eight, ten.",
+            "expectedCommand": "median of 2, 4, 8, 10",
+            "audio": "/demo-voices/daniel-median.wav",
+            "sha256": "aefc6157cdc9ac4289e4f363b1bbc4cd6d1ea0c84faf14e519e522ada3930bb2",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 3.909,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Karen",
+            "case": "median",
+            "transcript": "Find the median of two, four, eight, ten.",
+            "expectedCommand": "median of 2, 4, 8, 10",
+            "audio": "/demo-voices/karen-median.wav",
+            "sha256": "9117ebfadc5e62a5d1addaab371127d647dd4beca845a7b40997343cbdd6936a",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 3.767,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Rishi",
+            "case": "median",
+            "transcript": "Find the median of two, four, eight, ten.",
+            "expectedCommand": "median of 2, 4, 8, 10",
+            "audio": "/demo-voices/rishi-median.wav",
+            "sha256": "30d80f23274951d5ff6d3be89b55d27c26a56b3a8c1cdeff765c73e31cea6c28",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 3.605,
+            "recognitionStatus": "not-tested"
+          }
+        ],
+        "variant": {
+          "voice": "Daniel",
+          "case": "median",
+          "transcript": "Find the median of two, four, eight, ten.",
+          "expectedCommand": "median of 2, 4, 8, 10",
+          "audio": "/demo-voices/daniel-median.wav",
+          "sha256": "aefc6157cdc9ac4289e4f363b1bbc4cd6d1ea0c84faf14e519e522ada3930bb2",
+          "source": "macOS installed speech synthesis",
+          "durationSeconds": 3.909,
+          "recognitionStatus": "not-tested"
+        }
+      },
+      {
+        "id": "natural-conversation",
+        "category": "conversation",
+        "turns": 4,
+        "variants": [],
+        "variant": null
+      },
+      {
+        "id": "intercepts",
+        "category": "graphs",
+        "turns": 1,
+        "variants": [
+          {
+            "voice": "Daniel",
+            "case": "intercepts",
+            "transcript": "Find the x intercepts.",
+            "expectedCommand": "find roots",
+            "audio": "/demo-voices/graph-geometry/daniel-intercepts.wav",
+            "sha256": "6073a504076ce43a43a80ff4b4ca4b6c42a63dc66505848d237411e416999571",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 1.981,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Karen",
+            "case": "intercepts",
+            "transcript": "Find the x intercepts.",
+            "expectedCommand": "find roots",
+            "audio": "/demo-voices/graph-geometry/karen-intercepts.wav",
+            "sha256": "8bf9532085725175066ba3ce8098e2d9e143bf1147cfe46f487877ab7c487b2c",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 1.991,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Rishi",
+            "case": "intercepts",
+            "transcript": "Find the x intercepts.",
+            "expectedCommand": "find roots",
+            "audio": "/demo-voices/graph-geometry/rishi-intercepts.wav",
+            "sha256": "6bf18bbf61f747fefbaa3c91108cc35662ecccc0ec50373dcdd41b9158cebf78",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 2.083,
+            "recognitionStatus": "not-tested"
+          }
+        ],
+        "variant": {
+          "voice": "Karen",
+          "case": "intercepts",
+          "transcript": "Find the x intercepts.",
+          "expectedCommand": "find roots",
+          "audio": "/demo-voices/graph-geometry/karen-intercepts.wav",
+          "sha256": "8bf9532085725175066ba3ce8098e2d9e143bf1147cfe46f487877ab7c487b2c",
+          "source": "macOS installed speech synthesis",
+          "durationSeconds": 1.991,
+          "recognitionStatus": "not-tested"
+        }
+      },
+      {
+        "id": "equation",
+        "category": "algebra",
+        "turns": 1,
+        "variants": [
+          {
+            "voice": "Daniel",
+            "case": "equation",
+            "transcript": "Write two x plus three equals eleven.",
+            "expectedCommand": "write 2*x + 3 = 11",
+            "audio": "/demo-voices/daniel-equation.wav",
+            "sha256": "fecf429d7526b2908843a43f200dc1d8a929b17898dfda8d73bff4f78d0bd2d9",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 2.8,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Karen",
+            "case": "equation",
+            "transcript": "Write two x plus three equals eleven.",
+            "expectedCommand": "write 2*x + 3 = 11",
+            "audio": "/demo-voices/karen-equation.wav",
+            "sha256": "7fd3e8e180f5a929657ad1440d7047494d7f93717580e26234a7c8a871509a4e",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 2.75,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Rishi",
+            "case": "equation",
+            "transcript": "Write two x plus three equals eleven.",
+            "expectedCommand": "write 2*x + 3 = 11",
+            "audio": "/demo-voices/rishi-equation.wav",
+            "sha256": "4872983dde938326c774a803d8e89d3ffe6594831abd06dbfd5d5515e4ea0a8d",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 2.84,
+            "recognitionStatus": "not-tested"
+          }
+        ],
+        "variant": {
+          "voice": "Karen",
+          "case": "equation",
+          "transcript": "Write two x plus three equals eleven.",
+          "expectedCommand": "write 2*x + 3 = 11",
+          "audio": "/demo-voices/karen-equation.wav",
+          "sha256": "7fd3e8e180f5a929657ad1440d7047494d7f93717580e26234a7c8a871509a4e",
+          "source": "macOS installed speech synthesis",
+          "durationSeconds": 2.75,
+          "recognitionStatus": "not-tested"
+        }
+      },
+      {
+        "id": "hypotenuse",
+        "category": "geometry",
+        "turns": 1,
+        "variants": [
+          {
+            "voice": "Daniel",
+            "case": "hypotenuse",
+            "transcript": "Find the hypotenuse.",
+            "expectedCommand": "hypotenuse",
+            "audio": "/demo-voices/graph-geometry/daniel-hypotenuse.wav",
+            "sha256": "d4120df100c176f6e00845fc02d34b1e7b588ef8b70c361d3881ae3fa65ebc5b",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 1.854,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Karen",
+            "case": "hypotenuse",
+            "transcript": "Find the hypotenuse.",
+            "expectedCommand": "hypotenuse",
+            "audio": "/demo-voices/graph-geometry/karen-hypotenuse.wav",
+            "sha256": "d45d16efc9cda8f2be5ba76aaf12a70afe627e91ae1a05600f6e0db1658d6b9c",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 1.747,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Rishi",
+            "case": "hypotenuse",
+            "transcript": "Find the hypotenuse.",
+            "expectedCommand": "hypotenuse",
+            "audio": "/demo-voices/graph-geometry/rishi-hypotenuse.wav",
+            "sha256": "9b0390bd001c32a1a74589c5498ec636545d5dc7a250c9bd33f7139e0410a463",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 1.839,
+            "recognitionStatus": "not-tested"
+          }
+        ],
+        "variant": {
+          "voice": "Daniel",
+          "case": "hypotenuse",
+          "transcript": "Find the hypotenuse.",
+          "expectedCommand": "hypotenuse",
+          "audio": "/demo-voices/graph-geometry/daniel-hypotenuse.wav",
+          "sha256": "d4120df100c176f6e00845fc02d34b1e7b588ef8b70c361d3881ae3fa65ebc5b",
+          "source": "macOS installed speech synthesis",
+          "durationSeconds": 1.854,
+          "recognitionStatus": "not-tested"
+        }
+      },
+      {
+        "id": "missing-height",
+        "category": "clarification",
+        "turns": 1,
+        "variants": [
+          {
+            "voice": "Daniel",
+            "case": "missing-height",
+            "transcript": "Rectangle width six.",
+            "expectedCommand": "rectangle width 6",
+            "audio": "/demo-voices/graph-geometry/daniel-missing-height.wav",
+            "sha256": "75f0717d74dbf05c6729c03647f2ca87fe607815a5c4d58367416b789b9faf0a",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 1.766,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Karen",
+            "case": "missing-height",
+            "transcript": "Rectangle width six.",
+            "expectedCommand": "rectangle width 6",
+            "audio": "/demo-voices/graph-geometry/karen-missing-height.wav",
+            "sha256": "d7c1f91236402cc596fa91d718841a0723d0dad6713138bec3691da20f508854",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 1.682,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Rishi",
+            "case": "missing-height",
+            "transcript": "Rectangle width six.",
+            "expectedCommand": "rectangle width 6",
+            "audio": "/demo-voices/graph-geometry/rishi-missing-height.wav",
+            "sha256": "769bc99d5c61ef9e40507da18944c3efba0949e125f92f3f268f82af71621883",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 1.83,
+            "recognitionStatus": "not-tested"
+          }
+        ],
+        "variant": {
+          "voice": "Rishi",
+          "case": "missing-height",
+          "transcript": "Rectangle width six.",
+          "expectedCommand": "rectangle width 6",
+          "audio": "/demo-voices/graph-geometry/rishi-missing-height.wav",
+          "sha256": "769bc99d5c61ef9e40507da18944c3efba0949e125f92f3f268f82af71621883",
+          "source": "macOS installed speech synthesis",
+          "durationSeconds": 1.83,
+          "recognitionStatus": "not-tested"
+        }
+      }
+    ],
+    "catalogSHA256": "9237dee895f4af5eb221a28a89c8c5ed4f606cca6869e9aa0d949a97ce3325b6"
+  },
+  "campaignSummary": {
+    "correctness": {
+      "planned": 9,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "unattempted": 9
+    },
+    "latency": {
+      "measured": 0,
+      "missing": 0,
+      "p50": null,
+      "p95": null
+    },
+    "latencyDefinition": "Last input signal to saved display commit; milliseconds. Correctness has no speed budget. Harness durations include setup, playback and evidence capture.",
+    "byCategory": {
+      "statistics": {
+        "correctness": {
+          "planned": 1,
+          "attempted": 0,
+          "passed": 0,
+          "failed": 0,
+          "unattempted": 1
+        },
+        "latency": {
+          "measured": 0,
+          "missing": 0,
+          "p50": null,
+          "p95": null
+        }
+      },
+      "conversation": {
+        "correctness": {
+          "planned": 4,
+          "attempted": 0,
+          "passed": 0,
+          "failed": 0,
+          "unattempted": 4
+        },
+        "latency": {
+          "measured": 0,
+          "missing": 0,
+          "p50": null,
+          "p95": null
+        }
+      },
+      "graphs": {
+        "correctness": {
+          "planned": 1,
+          "attempted": 0,
+          "passed": 0,
+          "failed": 0,
+          "unattempted": 1
+        },
+        "latency": {
+          "measured": 0,
+          "missing": 0,
+          "p50": null,
+          "p95": null
+        }
+      },
+      "algebra": {
+        "correctness": {
+          "planned": 1,
+          "attempted": 0,
+          "passed": 0,
+          "failed": 0,
+          "unattempted": 1
+        },
+        "latency": {
+          "measured": 0,
+          "missing": 0,
+          "p50": null,
+          "p95": null
+        }
+      },
+      "geometry": {
+        "correctness": {
+          "planned": 1,
+          "attempted": 0,
+          "passed": 0,
+          "failed": 0,
+          "unattempted": 1
+        },
+        "latency": {
+          "measured": 0,
+          "missing": 0,
+          "p50": null,
+          "p95": null
+        }
+      },
+      "clarification": {
+        "correctness": {
+          "planned": 1,
+          "attempted": 0,
+          "passed": 0,
+          "failed": 0,
+          "unattempted": 1
+        },
+        "latency": {
+          "measured": 0,
+          "missing": 0,
+          "p50": null,
+          "p95": null
+        }
+      }
+    },
+    "unattemptedCases": [
+      {
+        "trial": 1,
+        "family": "median",
+        "scenario": "median"
+      },
+      {
+        "trial": 1,
+        "family": "natural-conversation",
+        "scenario": "natural-equation"
+      },
+      {
+        "trial": 1,
+        "family": "natural-conversation",
+        "scenario": "read-only-suggestion"
+      },
+      {
+        "trial": 1,
+        "family": "natural-conversation",
+        "scenario": "natural-acceptance"
+      },
+      {
+        "trial": 1,
+        "family": "natural-conversation",
+        "scenario": "spoken-correction"
+      },
+      {
+        "trial": 1,
+        "family": "intercepts",
+        "scenario": "intercepts"
+      },
+      {
+        "trial": 1,
+        "family": "equation",
+        "scenario": "equation"
+      },
+      {
+        "trial": 1,
+        "family": "hypotenuse",
+        "scenario": "hypotenuse"
+      },
+      {
+        "trial": 1,
+        "family": "missing-height",
+        "scenario": "missing-height"
+      }
+    ]
+  },
+  "planned": 9,
+  "unattempted": 9,
+  "groups": {
+    "median": {
+      "successInterval80": null,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {}
+    },
+    "natural-conversation": {
+      "successInterval80": null,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {}
+    },
+    "intercepts": {
+      "successInterval80": null,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {}
+    },
+    "equation": {
+      "successInterval80": null,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {}
+    },
+    "hypotenuse": {
+      "successInterval80": null,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {}
+    },
+    "missing-height": {
+      "successInterval80": null,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {}
+    }
+  },
+  "summary": {
+    "successInterval80": null,
+    "attempted": 0,
+    "passed": 0,
+    "failed": 0,
+    "successMs": {
+      "p50": null,
+      "p95": null
+    },
+    "failureMs": {
+      "p50": null,
+      "p95": null
+    },
+    "stages": {}
+  },
+  "intervalMethod": "Two-sided 80% Wilson score; per scenario only. Pooled confidence omitted because scenarios share trials.",
+  "samples": []
+}

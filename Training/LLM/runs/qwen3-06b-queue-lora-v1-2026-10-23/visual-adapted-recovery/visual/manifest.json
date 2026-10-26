@@ -1,0 +1,91 @@
+{
+  "lane": "Actual local-app saved-state replay of conditional per-turn model outcomes.",
+  "visualReview": "incomplete: every image and graph must be inspected by a human or agent",
+  "limitations": [
+    "No live microphone, STT, iPhone binary, streaming or latency acceptance.",
+    "Normal spoken-only replies are retained as text in this index; this does not claim they appeared on screen.",
+    "Invalid generations have no executable outcome; their unchanged prestate is labeled separately.",
+    "Repeated identical saved work may share one image, with all row mappings retained."
+  ],
+  "sources": {
+    "dataPath": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted-recovery/test-row.jsonl",
+    "gradesPath": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted-recovery/grade-row.json",
+    "dataSha256": "0a02e147a8377ac65573c9ae411ab7dccca3cb72d571d5658b51f336aac3bd61",
+    "gradesSha256": "28554ddc941d013d06979612e36efc86da3d541f0dccff4f66ad6c092277ce90",
+    "origin": "http://localhost:5186",
+    "captureSourceSha256": "3968c5e3cf7e879007b886ac6e46306476daa9df9d15b3a214610d03c982aeba",
+    "screenEvidenceSourceSha256": "c2ddec8d79df013c7758ee472ceaee8291418f43e6279b66fb80625ba0496c97"
+  },
+  "rows": [
+    {
+      "id": "graph-polar-half-circle-domain:2:final",
+      "caseId": "graph-polar-half-circle-domain",
+      "turn": 2,
+      "stage": "final",
+      "category": "graphs",
+      "request": "Only draw angles from zero to pi.",
+      "pass": false,
+      "reasons": [
+        "Saved workspace or history differs from reference outcome."
+      ],
+      "message": "A: point (0, 0). B: point (1, 0). C: point (0, 1).",
+      "expectedMessage": "Graph row 1: r=2.",
+      "expectedState": {
+        "mode": "equation",
+        "expression": "0",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": true,
+        "graphScene": {
+          "rows": [
+            {
+              "expression": "r=2",
+              "domain": {
+                "min": 0,
+                "max": 3.141592653589793
+              }
+            }
+          ]
+        }
+      },
+      "source": "generated-outcome",
+      "review": "pending",
+      "screenshots": [
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted-recovery/visual/3b3abcdd016db4eb572d.png",
+          "text": "A\nB\nC\n45°\n1\n1.414\n1",
+          "mathLabels": [],
+          "graphExpressions": [],
+          "matchesSavedWork": false
+        },
+        {
+          "snapshot": "final",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "sharedImage": false,
+          "screenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted-recovery/visual/8e7ca31cfac3d9b6b107.png",
+          "text": "A\nB\nC\n45°\n1\n1.414\n1",
+          "mathLabels": [],
+          "graphExpressions": [],
+          "matchesSavedWork": false
+        }
+      ]
+    }
+  ],
+  "captureFailures": 0
+}

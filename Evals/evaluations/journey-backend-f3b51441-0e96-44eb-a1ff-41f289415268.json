@@ -1,0 +1,953 @@
+{
+  "runId": "f3b51441-0e96-44eb-a1ff-41f289415268",
+  "startedAt": "2026-10-16T16:20:30.167Z",
+  "finishedAt": "2026-10-16T16:21:32.795Z",
+  "lane": "backend",
+  "revision": "a944ea5df4c1b04f8f1fc0b40293290d70f954ee",
+  "dirty": true,
+  "sourceSHA256": "412bf9849c1e9b4024c0f33f59d95ce899c4b0d92f7408fb4c176b087f367188",
+  "runnerSHA256": "f73e1fa50248e29138efd219da11f4563b7acf2711191e0d3203ddafda3ca9a8",
+  "models": {
+    "live": "gpt-live-1",
+    "command": "anthropic/claude-haiku-5.5"
+  },
+  "commandProfile": "haiku-off",
+  "reasoning": {
+    "effort": "low",
+    "enabled": false
+  },
+  "latencyDefinition": "HTTP request start through complete parsed response body.",
+  "scope": "Live provider and isolated local HTTP; excludes voice and rendering.",
+  "repetitions": 5,
+  "planned": 25,
+  "unattempted": 0,
+  "groups": {
+    "equation": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0.7527428728793252,
+        "upper": 1
+      },
+      "attempted": 5,
+      "passed": 5,
+      "failed": 0,
+      "successMs": {
+        "p50": 1882.6961250000022,
+        "p95": 4923.842209
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {
+        "model_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1867,
+          "p95": 4880
+        },
+        "validate_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1,
+          "p95": 12
+        },
+        "total": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1869,
+          "p95": 4895
+        }
+      }
+    },
+    "both-sides": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0.7527428728793252,
+        "upper": 1
+      },
+      "attempted": 5,
+      "passed": 5,
+      "failed": 0,
+      "successMs": {
+        "p50": 1713.7520000000004,
+        "p95": 2030.2008330000026
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {
+        "model_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1692,
+          "p95": 2008
+        },
+        "validate_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1,
+          "p95": 8
+        },
+        "total": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1693,
+          "p95": 2008
+        }
+      }
+    },
+    "two-steps": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0,
+        "upper": 0.24725712712067477
+      },
+      "attempted": 5,
+      "passed": 0,
+      "failed": 5,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": 1858.7868330000001,
+        "p95": 2076.3171250000014
+      },
+      "stages": {
+        "model_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1787,
+          "p95": 2046
+        },
+        "validate_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 4,
+          "p95": 28
+        },
+        "total": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1815,
+          "p95": 2051
+        }
+      }
+    },
+    "clarification": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0.7527428728793252,
+        "upper": 1
+      },
+      "attempted": 5,
+      "passed": 5,
+      "failed": 0,
+      "successMs": {
+        "p50": 1804.7049589999951,
+        "p95": 2260.519458999999
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {
+        "model_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1786,
+          "p95": 2242
+        },
+        "validate_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0,
+          "p95": 1
+        },
+        "total": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1786,
+          "p95": 2244
+        }
+      }
+    },
+    "explanation": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0.7527428728793252,
+        "upper": 1
+      },
+      "attempted": 5,
+      "passed": 5,
+      "failed": 0,
+      "successMs": {
+        "p50": 2663.2025420000064,
+        "p95": 7184.165125000001
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {
+        "model_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 2644,
+          "p95": 7159
+        },
+        "validate_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 2,
+          "p95": 2
+        },
+        "total": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 2645,
+          "p95": 7162
+        }
+      }
+    }
+  },
+  "summary": {
+    "successInterval80": null,
+    "attempted": 25,
+    "passed": 20,
+    "failed": 5,
+    "successMs": {
+      "p50": 1882.6961250000022,
+      "p95": 4923.842209
+    },
+    "failureMs": {
+      "p50": 1858.7868330000001,
+      "p95": 2076.3171250000014
+    },
+    "stages": {
+      "model_1": {
+        "observed": 25,
+        "missing": 0,
+        "p50": 1858,
+        "p95": 4880
+      },
+      "validate_1": {
+        "observed": 25,
+        "missing": 0,
+        "p50": 1,
+        "p95": 12
+      },
+      "total": {
+        "observed": 25,
+        "missing": 0,
+        "p50": 1863,
+        "p95": 4895
+      }
+    }
+  },
+  "intervalMethod": "Two-sided 80% Wilson score; per scenario only. Pooled confidence omitted because scenarios share trials.",
+  "samples": [
+    {
+      "scenario": "equation",
+      "trial": 1,
+      "text": "Please set up the equation: twice x plus three equals eleven.",
+      "passed": true,
+      "status": "command",
+      "expression": "2 * x + 3 = 11",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "elapsedMs": 4923.842209,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 4880,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 12,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 4895,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "both-sides",
+      "trial": 1,
+      "text": "Take three away from each side of my equation.",
+      "passed": true,
+      "status": "command",
+      "expression": "2 * x + 3 - 3 = 11 - 3",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 - 3 = 11 - 3",
+      "elapsedMs": 1755.7607079999998,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 1727,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 8,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1735,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "two-steps",
+      "trial": 1,
+      "text": "Subtract three from both sides, then divide both sides by two. Keep both steps.",
+      "passed": false,
+      "status": "command",
+      "expression": "x = 4",
+      "httpStatus": 200,
+      "expectedExpression": "(2 * x + 3 - 3) / 2 = (11 - 3) / 2",
+      "elapsedMs": 1858.7868330000001,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 1787,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 28,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1815,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "clarification",
+      "trial": 1,
+      "text": "Make it better.",
+      "passed": true,
+      "status": "clarification",
+      "expression": "2 * x + 3 = 11",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "elapsedMs": 1935.340542,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 1902,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 0,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1902,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "explanation",
+      "trial": 1,
+      "text": "Explain why subtracting three from both sides keeps this equation balanced without changing my work.",
+      "passed": true,
+      "status": "explanation",
+      "expression": "2 * x + 3 = 11",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "elapsedMs": 7184.165125000001,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 7159,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 2,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 7162,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "equation",
+      "trial": 2,
+      "text": "Please set up the equation: twice x plus three equals eleven.",
+      "passed": true,
+      "status": "command",
+      "expression": "2 * x + 3 = 11",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "elapsedMs": 1707.953375000001,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 1690,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 1,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1692,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "both-sides",
+      "trial": 2,
+      "text": "Take three away from each side of my equation.",
+      "passed": true,
+      "status": "command",
+      "expression": "2 * x + 3 - 3 = 11 - 3",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 - 3 = 11 - 3",
+      "elapsedMs": 1713.7520000000004,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 1692,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 1,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1693,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "two-steps",
+      "trial": 2,
+      "text": "Subtract three from both sides, then divide both sides by two. Keep both steps.",
+      "passed": false,
+      "status": "command",
+      "expression": "x = 4",
+      "httpStatus": 200,
+      "expectedExpression": "(2 * x + 3 - 3) / 2 = (11 - 3) / 2",
+      "elapsedMs": 1813.001874999998,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 1782,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 4,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1788,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "clarification",
+      "trial": 2,
+      "text": "Make it better.",
+      "passed": true,
+      "status": "clarification",
+      "expression": "2 * x + 3 = 11",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "elapsedMs": 2260.519458999999,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 2242,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 1,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 2244,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "explanation",
+      "trial": 2,
+      "text": "Explain why subtracting three from both sides keeps this equation balanced without changing my work.",
+      "passed": true,
+      "status": "explanation",
+      "expression": "2 * x + 3 = 11",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "elapsedMs": 2842.2727920000034,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 2821,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 2,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 2824,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "equation",
+      "trial": 3,
+      "text": "Please set up the equation: twice x plus three equals eleven.",
+      "passed": true,
+      "status": "command",
+      "expression": "2 * x + 3 = 11",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "elapsedMs": 1999.714208999998,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 1973,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 1,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1974,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "both-sides",
+      "trial": 3,
+      "text": "Take three away from each side of my equation.",
+      "passed": true,
+      "status": "command",
+      "expression": "2 * x + 3 - 3 = 11 - 3",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 - 3 = 11 - 3",
+      "elapsedMs": 2030.2008330000026,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 2008,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 0,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 2008,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "two-steps",
+      "trial": 3,
+      "text": "Subtract three from both sides, then divide both sides by two. Keep both steps.",
+      "passed": false,
+      "status": "command",
+      "expression": "x = 4",
+      "httpStatus": 200,
+      "expectedExpression": "(2 * x + 3 - 3) / 2 = (11 - 3) / 2",
+      "elapsedMs": 1747.2451250000013,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 1719,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 3,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1724,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "clarification",
+      "trial": 3,
+      "text": "Make it better.",
+      "passed": true,
+      "status": "clarification",
+      "expression": "2 * x + 3 = 11",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "elapsedMs": 1639.263500000001,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 1625,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 0,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1625,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "explanation",
+      "trial": 3,
+      "text": "Explain why subtracting three from both sides keeps this equation balanced without changing my work.",
+      "passed": true,
+      "status": "explanation",
+      "expression": "2 * x + 3 = 11",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "elapsedMs": 2203.296957999999,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 2186,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 2,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 2188,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "equation",
+      "trial": 4,
+      "text": "Please set up the equation: twice x plus three equals eleven.",
+      "passed": true,
+      "status": "command",
+      "expression": "2 * x + 3 = 11",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "elapsedMs": 1611.7252500000031,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 1588,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 1,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1589,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "both-sides",
+      "trial": 4,
+      "text": "Take three away from each side of my equation.",
+      "passed": true,
+      "status": "command",
+      "expression": "2 * x + 3 - 3 = 11 - 3",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 - 3 = 11 - 3",
+      "elapsedMs": 1656.1199169999963,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 1636,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 1,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1637,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "two-steps",
+      "trial": 4,
+      "text": "Subtract three from both sides, then divide both sides by two. Keep both steps.",
+      "passed": false,
+      "status": "command",
+      "expression": "x = 4",
+      "httpStatus": 200,
+      "expectedExpression": "(2 * x + 3 - 3) / 2 = (11 - 3) / 2",
+      "elapsedMs": 2076.3171250000014,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 2046,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 4,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 2051,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "clarification",
+      "trial": 4,
+      "text": "Make it better.",
+      "passed": true,
+      "status": "clarification",
+      "expression": "2 * x + 3 = 11",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "elapsedMs": 1796.6344169999938,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 1772,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 0,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1772,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "explanation",
+      "trial": 4,
+      "text": "Explain why subtracting three from both sides keeps this equation balanced without changing my work.",
+      "passed": true,
+      "status": "explanation",
+      "expression": "2 * x + 3 = 11",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "elapsedMs": 2322.9210420000018,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 2295,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 0,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 2297,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "equation",
+      "trial": 5,
+      "text": "Please set up the equation: twice x plus three equals eleven.",
+      "passed": true,
+      "status": "command",
+      "expression": "2 * x + 3 = 11",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "elapsedMs": 1882.6961250000022,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 1867,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 0,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1869,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "both-sides",
+      "trial": 5,
+      "text": "Take three away from each side of my equation.",
+      "passed": true,
+      "status": "command",
+      "expression": "2 * x + 3 - 3 = 11 - 3",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 - 3 = 11 - 3",
+      "elapsedMs": 1620.4765839999964,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 1593,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 1,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1595,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "two-steps",
+      "trial": 5,
+      "text": "Subtract three from both sides, then divide both sides by two. Keep both steps.",
+      "passed": false,
+      "status": "command",
+      "expression": "x = 4",
+      "httpStatus": 200,
+      "expectedExpression": "(2 * x + 3 - 3) / 2 = (11 - 3) / 2",
+      "elapsedMs": 1888.9574999999968,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 1858,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 4,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1863,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "clarification",
+      "trial": 5,
+      "text": "Make it better.",
+      "passed": true,
+      "status": "clarification",
+      "expression": "2 * x + 3 = 11",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "elapsedMs": 1804.7049589999951,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 1786,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 0,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1786,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "explanation",
+      "trial": 5,
+      "text": "Explain why subtracting three from both sides keeps this equation balanced without changing my work.",
+      "passed": true,
+      "status": "explanation",
+      "expression": "2 * x + 3 = 11",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "elapsedMs": 2663.2025420000064,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 2644,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 1,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 2645,
+          "kind": "span"
+        }
+      ]
+    }
+  ]
+}

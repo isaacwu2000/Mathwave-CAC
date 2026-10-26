@@ -1,0 +1,68 @@
+{
+  "split": "test-v18",
+  "mode": "endpoint",
+  "datasetSHA256": "1a46367003ae61053f82876d5768379de172521f12a771f15a538125aa43abe5",
+  "createdAt": "2026-10-14T15:30:21.963Z",
+  "total": 4,
+  "scored": 4,
+  "passed": 3,
+  "unavailable": 0,
+  "accuracy": 0.75,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "shift-polygon": {
+      "passed": 3,
+      "scored": 4
+    }
+  },
+  "results": [
+    {
+      "id": "shift-polygon-1",
+      "category": "shift-polygon",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "shift graph 1 right 2 up 3",
+        "message": ""
+      },
+      "latencyMs": 2339
+    },
+    {
+      "id": "shift-polygon-2",
+      "category": "shift-polygon",
+      "pass": false,
+      "reason": "Expected command, received clarification",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "I only see one graph. Which graph should I shift?"
+      },
+      "latencyMs": 4428
+    },
+    {
+      "id": "shift-polygon-3",
+      "category": "shift-polygon",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "regular polygon sides 5 side 3",
+        "message": ""
+      },
+      "latencyMs": 2488
+    },
+    {
+      "id": "shift-polygon-4",
+      "category": "shift-polygon",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "interior angle",
+        "message": ""
+      },
+      "latencyMs": 3526
+    }
+  ]
+}

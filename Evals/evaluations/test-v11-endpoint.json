@@ -1,0 +1,106 @@
+{
+  "split": "test-v11",
+  "mode": "endpoint",
+  "datasetSHA256": "7a96d2d57e65f33ec5751225777a00bd032c5b829fbf781b25aa83d70175c361",
+  "createdAt": "2026-10-12T19:22:33.471Z",
+  "total": 6,
+  "scored": 6,
+  "passed": 5,
+  "unavailable": 0,
+  "accuracy": 0.8333333333333334,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "ai_math": {
+      "passed": 5,
+      "scored": 6
+    }
+  },
+  "results": [
+    {
+      "id": "fresh-001",
+      "category": "ai_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "subtract 6 from both sides",
+          "simplify"
+        ]
+      },
+      "latencyMs": 2132
+    },
+    {
+      "id": "fresh-002",
+      "category": "ai_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "multiply both sides by 7",
+          "simplify"
+        ]
+      },
+      "latencyMs": 3039
+    },
+    {
+      "id": "fresh-003",
+      "category": "ai_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "add 9 to both sides",
+          "simplify",
+          "divide both sides by 5",
+          "simplify"
+        ]
+      },
+      "latencyMs": 2515
+    },
+    {
+      "id": "fresh-004",
+      "category": "ai_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "mean",
+        "message": ""
+      },
+      "latencyMs": 1867
+    },
+    {
+      "id": "fresh-005",
+      "category": "ai_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "perimeter",
+        "message": ""
+      },
+      "latencyMs": 2014
+    },
+    {
+      "id": "fresh-006",
+      "category": "ai_math",
+      "pass": false,
+      "reason": "Expected clarification, received command",
+      "prediction": {
+        "status": "command",
+        "command": "replace part 4 with 7",
+        "message": ""
+      },
+      "latencyMs": 2692
+    }
+  ]
+}

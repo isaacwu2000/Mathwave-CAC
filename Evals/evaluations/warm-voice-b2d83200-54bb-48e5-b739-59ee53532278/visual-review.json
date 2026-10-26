@@ -1,0 +1,17 @@
+{
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "reviewed": [
+    "function-before.png",
+    "function-after.png",
+    "rectangle-before.png",
+    "rectangle-after.png"
+  ],
+  "findings": {
+    "function": "Expected graph is missing; equation y=x^2-4 is visible. Provider input omitted Graph.",
+    "rectangle": "Expected rectangle is missing; only 4 is visible. Provider input contains only the tail of the recording."
+  },
+  "passed": false
+}

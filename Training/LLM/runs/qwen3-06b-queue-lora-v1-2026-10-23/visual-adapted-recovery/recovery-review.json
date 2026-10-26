@@ -1,0 +1,34 @@
+{
+  "id": "graph-polar-half-circle-domain:2:final",
+  "purpose": "Recover capture failure only; generated model remains semantically incorrect.",
+  "originalFailedManifest": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/manifest.json",
+  "recoveryManifest": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted-recovery/visual/manifest.json",
+  "cause": "Generated geometry mode retained inactive graphScene metadata. The old helper waited for a graph panel which the actual app correctly did not render.",
+  "fix": "Wait for graph canvas only when the actual app-shell data-graph attribute is true.",
+  "captureFailures": 0,
+  "automaticModelPassUnchanged": false,
+  "reviewScope": "Only the two recovered images were reviewed here; other full model screenshots remain pending separate review.",
+  "screenshots": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "originalCaptureError": "waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.graph-card canvas').first() to be visible\u001b[22m\n",
+      "recoveredScreenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted-recovery/visual/3b3abcdd016db4eb572d.png",
+      "reviewed": true,
+      "notes": "Visible generated right triangle A(0,0), B(1,0), C(0,1), unit legs, hypotenuse1.414 and45degreeangle. Clearly incorrect for requested polar half circle, confirming the model failure. Canvas and labels are readable."
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "originalCaptureError": "waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.graph-card canvas').first() to be visible\u001b[22m\n",
+      "recoveredScreenshot": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted-recovery/visual/8e7ca31cfac3d9b6b107.png",
+      "reviewed": true,
+      "notes": "Visible generated right triangle A(0,0), B(1,0), C(0,1), unit legs, hypotenuse1.414 and45degreeangle. Clearly incorrect for requested polar half circle, confirming the model failure. Canvas and labels are readable."
+    }
+  ],
+  "automatedCheckLimit": "matchesSavedWork is false because the existing screen-content checker also prioritizes inactive graphScene metadata. This is retained, not suppressed; manual images verify the actual generated geometry result."
+}

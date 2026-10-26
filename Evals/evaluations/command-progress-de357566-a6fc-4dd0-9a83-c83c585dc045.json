@@ -1,0 +1,10 @@
+{
+  "run": "de357566-a6fc-4dd0-9a83-c83c585dc045",
+  "scope": "One mocked browser lifecycle case; no provider or saved-user-data access.",
+  "checks": [
+    "Checking preview visible before save; revision stays zero.",
+    "Fixing preview visible at 390px with no save or horizontal overflow.",
+    "Final result replaces preview and increments revision once."
+  ],
+  "passed": true
+}

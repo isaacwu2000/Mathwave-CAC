@@ -1,0 +1,44 @@
+{
+  "split": "test-v24",
+  "mode": "endpoint",
+  "datasetSHA256": "23265a7d5e9a42edfc32699a3666b939f7d2086828b2a41faae8113e899111ec",
+  "createdAt": "2026-10-14T15:57:44.734Z",
+  "total": 2,
+  "scored": 2,
+  "passed": 2,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "integral-annulus": {
+      "passed": 2,
+      "scored": 2
+    }
+  },
+  "results": [
+    {
+      "id": "fresh-integral-annulus-1",
+      "category": "integral-annulus",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "integral graph 2 from 2 to -2",
+        "message": ""
+      },
+      "latencyMs": 4891
+    },
+    {
+      "id": "fresh-integral-annulus-2",
+      "category": "integral-annulus",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "thickness",
+        "message": ""
+      },
+      "latencyMs": 1749
+    }
+  ]
+}

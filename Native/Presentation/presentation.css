@@ -1,0 +1,131 @@
+/* Platform shell stays native; these are the same worksheet and graph surfaces as Web. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+body {
+  font-family:
+    "Instrument Sans",
+    -apple-system,
+    sans-serif;
+  color: var(--foreground);
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.native-presentation {
+  padding: 0 2px 12px;
+}
+.native-presentation .problem-canvas {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+.native-presentation .equation-scroll {
+  height: clamp(90px, calc(100dvh - 24px), 340px);
+  min-height: 0;
+  max-height: 510px;
+}
+.native-presentation .graph-card {
+  margin-top: 0;
+}
+.native-presentation .graph-expressions {
+  max-height: none;
+  overflow: visible;
+}
+@media (min-width: 900px) {
+  .native-presentation .problem-canvas:has(.graph-card) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+.print-work {
+  padding: 24px;
+  color: #252323;
+  background: white;
+}
+.print-work h1 {
+  font-size: 24px;
+}
+.print-work li {
+  padding: 18px 0;
+  break-inside: avoid;
+}
+.print-work math {
+  font-family: var(--font-graph-math);
+  font-size: 25px;
+}
+@media print {
+  body {
+    background: white;
+  }
+  .print-work {
+    padding: 0;
+  }
+}
+
+.native-presentation .equation-step,
+.native-presentation .equation-step * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.step-options {
+  position: fixed;
+  inset: auto 16px 16px;
+  width: auto;
+  max-width: 480px;
+  border: 0;
+  border-radius: 16px;
+  padding: 12px;
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+  background: var(--card);
+  color: var(--foreground);
+  box-shadow: 0 8px 32px #0002;
+}
+.step-options::backdrop {
+  background: #0004;
+}
+.step-options button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  text-align: left;
+}
+
+.drawing-only .learnunlock-canvas {
+  height: max(120px, calc(100dvh - 48px));
+  min-height: 0;
+}
+
+/* Scale mathematical text with system text size without zooming graph coordinates. */
+.math-input math-field {
+  font-size: calc(22px * var(--native-text-scale, 1));
+}
+.native-presentation .step-equation {
+  font-size: calc(25px * var(--native-text-scale, 1));
+}
+.native-presentation .equation-carousel li[data-focused="true"] .step-equation {
+  font-size: calc(32px * var(--native-text-scale, 1));
+}
+.native-presentation .soft-button,
+.native-presentation summary,
+.native-presentation .part-navigation {
+  font-size: 1rem;
+}

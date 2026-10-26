@@ -1,0 +1,32 @@
+{
+  "split": "train-v30",
+  "mode": "endpoint",
+  "datasetSHA256": "5a99867bc9859c358b1c1d833959f29c7be209a7afd2c6a0d4047ee677e7938b",
+  "createdAt": "2026-10-14T16:53:48.830Z",
+  "total": 1,
+  "scored": 1,
+  "passed": 1,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "normals-chords": {
+      "passed": 1,
+      "scored": 1
+    }
+  },
+  "results": [
+    {
+      "id": "normals-chords-3",
+      "category": "normals-chords",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "chord length",
+        "message": ""
+      },
+      "latencyMs": 2906
+    }
+  ]
+}

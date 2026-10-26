@@ -1,0 +1,225 @@
+import { ClarificationError } from '../../math/index.ts';
+import { validatePresentation } from '../../visuals/index.ts';
+import { type Workspace } from '../../workspace/state.ts';
+import type { Interpretation } from '../types/command-interpreter.ts';
+import { explanationRequest } from './conversation.ts';
+import { normalizeGraphReferences } from './graph-command.ts';
+import { parseHistoryCommand, type HistoryContext } from './history-command.ts';
+import {
+  isMathProgramCommand,
+  mathProgramCommand,
+  runMathProgram,
+} from './math-program.ts';
+import { panelCommand } from './panel-command.ts';
+import { runCommand } from './run-command.ts';
+export type { Interpretation } from '../types/command-interpreter.ts';
+
+export { interpreterInstructions } from '../config/interpreter.ts';
+/** Validates the DSL-only provider envelope before converting it to engine commands. */
+export function validateModelInterpretation(
+  value: unknown,
+  state: Workspace,
+  history?: HistoryContext,
+  request?: string,
+): Interpretation {
+  if (!value || typeof value !== 'object') throw new Error('Invalid interpretation.');
+  const raw = value as Record<string, unknown>;
+  if (Object.keys(raw).some((key) => !['status', 'programs', 'message', 'presentation'].includes(key)) ||
+      !Array.isArray(raw.programs) || typeof raw.message !== 'string' || !('presentation' in raw))
+    throw new Error('Use the DSL response format: status, programs, message, presentation.');
+  return validateInterpretation({ ...raw, command: '' }, state, history, request);
+}
+export function validateInterpretation(
+  value: unknown,
+  state: Workspace,
+  history?: HistoryContext,
+  request?: string,
+): Interpretation {
+  if (!value || typeof value !== 'object')
+    throw new Error('Invalid interpretation.');
+  const v = { ...(value as Interpretation) };
+  // A batch uses the existing atomic plan path, so every result keeps its own saved step.
+  if (v.programs !== undefined) {
+    if (
+      !Array.isArray(v.programs) ||
+      v.programs.length > 6 ||
+      !v.programs.every(
+        (source) =>
+          typeof source === 'string' && source.trim() && source.length <= 1800,
+      )
+    )
+      throw new Error('Use up to six complete math programs.');
+    if (v.programs.length) {
+      if (v.program?.trim() || v.command || v.commands?.length)
+        throw new Error('Use a program batch or other commands, never both.');
+      if (v.programs.length === 1) v.program = v.programs[0];
+      else v.commands = v.programs.map(mathProgramCommand);
+    }
+  }
+  if (v.program !== undefined && typeof v.program !== 'string')
+    throw new Error('Invalid program.');
+  if (v.program?.trim()) {
+    if (
+      v.command ||
+      v.commands?.length ||
+      !['command', 'explanation', 'reply', 'correction'].includes(v.status)
+    )
+      throw new Error('Use a program or legacy commands, never both.');
+    const control =
+      v.status === 'correction'
+        ? undefined
+        : runMathProgram(state, v.program).control;
+    if (control && v.status !== 'command')
+      throw new Error('Controls cannot be suggested in a math program.');
+    const command = control ?? mathProgramCommand(v.program);
+    if (v.status === 'command') v.command = command;
+    else v.commands = [command];
+  }
+  if (
+    ![
+      'command',
+      'reply',
+      'clarification',
+      'unsupported',
+      'explanation',
+      'correction',
+    ].includes(v.status) ||
+    typeof v.command !== 'string' ||
+    typeof v.message !== 'string' ||
+    v.command.length > 2000 ||
+    v.message.length > 1000
+  )
+    throw new Error('Invalid interpretation.');
+  if (
+    v.commands !== undefined &&
+    (!Array.isArray(v.commands) ||
+      v.commands.length > 6 ||
+      !v.commands.every(
+        (c) => typeof c === 'string' && c.trim().length > 0 && c.length <= 2000,
+      ))
+  )
+    throw new Error('Invalid command plan.');
+  if (
+    ['command', 'correction'].includes(v.status) &&
+    request &&
+    explanationRequest(request)
+  )
+    throw new ClarificationError(
+      'Please ask for an explanation separately from an action; your work is unchanged.',
+    );
+  const presentation = validatePresentation(v.presentation);
+  if (presentation && !['reply', 'explanation', 'command'].includes(v.status))
+    throw new Error(
+      'A clarification or correction cannot also change the explanation.',
+    );
+  if (v.status === 'explanation' || v.status === 'reply') {
+    if (v.command.trim() || !v.message.trim())
+      throw new Error('Invalid explanation.');
+    if (v.commands?.length)
+      validateInterpretation(
+        { status: 'command', command: '', message: '', commands: v.commands },
+        state,
+        history,
+      );
+    return {
+      status: v.status,
+      command: '',
+      message: v.message,
+      commands: v.commands || [],
+      ...(presentation ? { presentation } : {}),
+    };
+  }
+  if (v.status === 'correction') {
+    if (
+      request &&
+      !/\b(?:actually|meant|instead|correction|no|not|rather|said)\b/i.test(
+        request,
+      )
+    )
+      throw new ClarificationError(
+        'Which previous operation should I correct?',
+      );
+    if (v.command.trim() || v.message.trim() || !v.commands?.length)
+      throw new Error('Invalid correction.');
+    // The problem validates the full plan against the restored pre-turn state.
+    // Validating here against post-turn work can reject a graph just removed.
+    return {
+      status: 'correction',
+      command: '',
+      message: '',
+      commands: v.commands,
+    };
+  }
+  if (v.commands?.length) {
+    if (v.status !== 'command' || v.command.trim())
+      throw new Error('Invalid command plan.');
+    let next = state;
+    for (const command of v.commands) {
+      validateInterpretation(
+        { status: 'command', command, message: '' },
+        next,
+        history,
+      );
+      if (panelCommand(command) || parseHistoryCommand(command, history))
+        throw new Error(
+          'Submit history and controls separately from a math plan.',
+        );
+      const result = runCommand(next, command);
+      if (result.action)
+        throw new Error(
+          'Submit voice and problem controls separately from a math plan.',
+        );
+      next = result.state;
+    }
+    return {
+      status: 'command',
+      command: '',
+      message: v.message,
+      commands: [...v.commands],
+      ...(presentation ? { presentation } : {}),
+    };
+  }
+  if (v.status === 'command') {
+    if (isMathProgramCommand(v.command)) {
+      runCommand(state, v.command);
+      return {
+        status: v.status,
+        command: v.command,
+        message: v.message,
+        ...(presentation ? { presentation } : {}),
+      };
+    }
+    v.command = normalizeGraphReferences(v.command);
+    if (panelCommand(v.command))
+      return {
+        status: v.status,
+        command: v.command,
+        message: v.message,
+        ...(presentation ? { presentation } : {}),
+      };
+    const action = parseHistoryCommand(v.command, history);
+    if (action) {
+      if (!history) throw new Error('Missing history context.');
+      return {
+        status: v.status,
+        command: v.command,
+        message: v.message,
+        ...(presentation ? { presentation } : {}),
+      };
+    }
+    if (
+      !/^(show centroid$|median [abc]$|derivative of graph \d+$|add derivative of graph \d+$|segment area$|normal of graph \d+ at x |add normal to graph \d+ at x |chord length$|hide construction$|hide comparison$|fit comparison$|inradius$|circumradius$|altitude [abc]$|add secant to graph \d+ from |trace graph \d+ at x |area between graphs \d+ and \d+ from |rectangular prism |cube |space diagonal$|integral graph \d+ from |total area graph \d+ from |annulus |thickness$|reflect graph \d+ across |scale graph \d+ vertically by |sector |arc length$|slope of graph \d+ at x |shift graph \d+ |regular polygon |apothem$|interior angle$|exterior angle$|average rate of change(?: of graph \d+)? from |classify triangle$|table(?: graph \d+)?$|scale shape by |double shape$|halve shape$|swap sides$|find outliers|median|mean|mode|range|sum|count|minimum|maximum|sample |population |data |diagram |help$|close help$|stop listening$|simplify(?: |$)|combine (?:the )?(?:constants|like terms)|write |replace |change |select part |add |subtract |multiply |divide |read\b|describe (?:graph|shape)$|graph(?: |$)|plot |(?:set )?(?:graph |x )?range |view x |pan(?: graph)? (?:left|right|up|down)$|edit graph |(?:remove|delete|cancel) (?:graph|curve|expression) |(?:find|show|read)(?: the)? key points(?:$| (?:of|for) graph )|(?:find|show|read)(?: the)? intersections(?:$| (?:of|between) )|(?:fit graph|fit curves|zoom fit)$|(?:find|show|read)(?: the)? (?:roots|intercepts|x[ -]intercepts)(?: of| for)? graph |evaluate graph |zoom (?:in|out)$|reset graph$|find roots$|(?:find |read |show )?(?:the )?x[ -]intercepts$|(?:draw |create |make |geometry )?(?:a )?(?:circle|square|rectangle|triangle|right triangle|sphere|cylinder|cone|parallelogram|trapezoid)\b|set (?:the )?(?:radius|outer|inner|length|width|height|base|angle|sides|side|a|b|c|leg a|leg b) |(?:find |calculate |read |show |what is )?(?:the |its )?(?:area|perimeter|circumference|diameter|diagonal|hypotenuse|volume|surface area|slant height|angle [abc])(?: of |$)|hide graph$|solve$|calculate$|evaluate at x |next part$|previous part$|statistics$|equations$|diagrams$|play data$|play graph(?: \d+)?$)/i.test(
+        v.command,
+      )
+    )
+      throw new Error('Unsupported interpretation.');
+    runCommand(state, v.command);
+  } else if (!v.message.trim() || v.command.trim())
+    throw new Error('Invalid clarification.');
+  return {
+    status: v.status,
+    command: v.command,
+    message: v.message,
+    ...(presentation ? { presentation } : {}),
+  };
+}

@@ -1,0 +1,68 @@
+{
+  "split": "train-v6",
+  "mode": "endpoint",
+  "datasetSHA256": "b95f44e50cac6578c2f8e9d0a47bca1bb47774a4e079749f1b439c9581439305",
+  "createdAt": "2026-10-12T19:33:30.202Z",
+  "total": 4,
+  "scored": 4,
+  "passed": 4,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "ai_context": {
+      "passed": 4,
+      "scored": 4
+    }
+  },
+  "results": [
+    {
+      "id": "context-001",
+      "category": "ai_context",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which 3 should I change to 5: the coefficient of x or the added constant?"
+      },
+      "latencyMs": 2504
+    },
+    {
+      "id": "context-002",
+      "category": "ai_context",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "replace part 4 with 5",
+        "message": ""
+      },
+      "latencyMs": 1679
+    },
+    {
+      "id": "context-003",
+      "category": "ai_context",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "replace part 4 with 7",
+        "message": ""
+      },
+      "latencyMs": 2039
+    },
+    {
+      "id": "context-004",
+      "category": "ai_context",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "read left side",
+        "message": ""
+      },
+      "latencyMs": 2003
+    }
+  ]
+}

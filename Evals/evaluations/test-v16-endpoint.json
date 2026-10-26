@@ -1,0 +1,68 @@
+{
+  "split": "test-v16",
+  "mode": "endpoint",
+  "datasetSHA256": "1e4416d2440fc77f40d887be566adbf94b149b3eb227f68bddfd68b24382478d",
+  "createdAt": "2026-10-14T15:25:17.733Z",
+  "total": 4,
+  "scored": 4,
+  "passed": 4,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "rate-triangle": {
+      "passed": 4,
+      "scored": 4
+    }
+  },
+  "results": [
+    {
+      "id": "rate-triangle-1",
+      "category": "rate-triangle",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "average rate of change of graph 1 from 1 to 3",
+        "message": ""
+      },
+      "latencyMs": 2194
+    },
+    {
+      "id": "rate-triangle-2",
+      "category": "rate-triangle",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "classify triangle",
+        "message": ""
+      },
+      "latencyMs": 1946
+    },
+    {
+      "id": "rate-triangle-3",
+      "category": "rate-triangle",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "angle c",
+        "message": ""
+      },
+      "latencyMs": 5126
+    },
+    {
+      "id": "rate-triangle-4",
+      "category": "rate-triangle",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "What are the triangle’s three side lengths, or its two perpendicular legs if it is a right triangle?"
+      },
+      "latencyMs": 2536
+    }
+  ]
+}

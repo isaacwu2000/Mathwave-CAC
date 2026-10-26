@@ -1,0 +1,287 @@
+{
+  "scope": "Post-hoc breakdown of the frozen held-out test predictions; no re-splitting, retraining or model inference.",
+  "deduplication": "Select the original global first representative per transcript before assigning conversation-theme strata; this preserves the original 110 clips/740 words.",
+  "sourceSha256": {
+    "before": "d66951153e4cb1a132e2a06cc46219ffb62747a0173a9a5f937c44b25edd7de8",
+    "after": "62b41fb75adf4f8c9c01ef1e4e4757aa8f48614eec198c0cc1e5f7680c8e15f9"
+  },
+  "domains": {
+    "graphs": {
+      "before": {
+        "clips": 46,
+        "referenceWords": 255,
+        "wordErrors": 56,
+        "normalizedWER": 0.2196078431372549,
+        "normalizedExact": 18,
+        "rawWER": 0.4,
+        "mathTokenErrorRate": 0.20202020202020202,
+        "generationSeconds": 8.068807918010862,
+        "audioSeconds": 97.057,
+        "conversations": 14,
+        "edits": {
+          "substitutions": 39,
+          "deletions": 7,
+          "insertions": 10
+        },
+        "caseIds": [
+          "graph-conic-edit-preserves-relation",
+          "graph-cosine-quarter-cycle",
+          "graph-filled-disk",
+          "graph-parabola-right-translation",
+          "graph-parabola-up-translation",
+          "graph-parametric-parabola-direction",
+          "graph-piecewise-sign-branches",
+          "graph-reflect-odd-x",
+          "graph-rename-without-changing-values",
+          "graph-shift-then-stretch",
+          "graph-small-feature-window",
+          "graph-tangent-origin",
+          "graph-translation-order",
+          "graph-vertical-half-plane"
+        ]
+      },
+      "after": {
+        "clips": 46,
+        "referenceWords": 255,
+        "wordErrors": 16,
+        "normalizedWER": 0.06274509803921569,
+        "normalizedExact": 35,
+        "rawWER": 0.06666666666666667,
+        "mathTokenErrorRate": 0.04040404040404041,
+        "generationSeconds": 9.42712641800972,
+        "audioSeconds": 97.057,
+        "conversations": 14,
+        "edits": {
+          "substitutions": 15,
+          "deletions": 0,
+          "insertions": 1
+        },
+        "caseIds": [
+          "graph-conic-edit-preserves-relation",
+          "graph-cosine-quarter-cycle",
+          "graph-filled-disk",
+          "graph-parabola-right-translation",
+          "graph-parabola-up-translation",
+          "graph-parametric-parabola-direction",
+          "graph-piecewise-sign-branches",
+          "graph-reflect-odd-x",
+          "graph-rename-without-changing-values",
+          "graph-shift-then-stretch",
+          "graph-small-feature-window",
+          "graph-tangent-origin",
+          "graph-translation-order",
+          "graph-vertical-half-plane"
+        ]
+      }
+    },
+    "geometry-diagrams": {
+      "before": {
+        "clips": 50,
+        "referenceWords": 385,
+        "wordErrors": 67,
+        "normalizedWER": 0.17402597402597403,
+        "normalizedExact": 26,
+        "rawWER": 0.3194805194805195,
+        "mathTokenErrorRate": 0.140625,
+        "generationSeconds": 9.965138207011478,
+        "audioSeconds": 134.876875,
+        "conversations": 20,
+        "edits": {
+          "substitutions": 44,
+          "deletions": 16,
+          "insertions": 7
+        },
+        "caseIds": [
+          "geo-altitude-overlay",
+          "geo-centroid-overlay",
+          "geo-circumcircle-overlay",
+          "geo-classify-equilateral",
+          "geo-foot-follows-height",
+          "geo-incircle-overlay",
+          "geo-median-overlay",
+          "geo-perpendicular-bisector",
+          "geo-project-oblique",
+          "geo-reflect-diagonal",
+          "geo-reflect-x-axis",
+          "geo-ring-hole-edit",
+          "geo-ring-width",
+          "geo-similar-perimeter",
+          "geo-triangle-circumradius",
+          "geo-triangle-heron",
+          "geo-triangle-inradius",
+          "geo-triangle-rope",
+          "geo-two-circle-lower",
+          "geo-two-circle-upper"
+        ]
+      },
+      "after": {
+        "clips": 50,
+        "referenceWords": 385,
+        "wordErrors": 17,
+        "normalizedWER": 0.04415584415584416,
+        "normalizedExact": 40,
+        "rawWER": 0.07272727272727272,
+        "mathTokenErrorRate": 0.0,
+        "generationSeconds": 12.966099415003555,
+        "audioSeconds": 134.876875,
+        "conversations": 20,
+        "edits": {
+          "substitutions": 15,
+          "deletions": 0,
+          "insertions": 2
+        },
+        "caseIds": [
+          "geo-altitude-overlay",
+          "geo-centroid-overlay",
+          "geo-circumcircle-overlay",
+          "geo-classify-equilateral",
+          "geo-foot-follows-height",
+          "geo-incircle-overlay",
+          "geo-median-overlay",
+          "geo-perpendicular-bisector",
+          "geo-project-oblique",
+          "geo-reflect-diagonal",
+          "geo-reflect-x-axis",
+          "geo-ring-hole-edit",
+          "geo-ring-width",
+          "geo-similar-perimeter",
+          "geo-triangle-circumradius",
+          "geo-triangle-heron",
+          "geo-triangle-inradius",
+          "geo-triangle-rope",
+          "geo-two-circle-lower",
+          "geo-two-circle-upper"
+        ]
+      }
+    },
+    "equations": {
+      "before": {
+        "clips": 12,
+        "referenceWords": 86,
+        "wordErrors": 9,
+        "normalizedWER": 0.10465116279069768,
+        "normalizedExact": 7,
+        "rawWER": 0.36046511627906974,
+        "mathTokenErrorRate": 0.0,
+        "generationSeconds": 2.324054166998394,
+        "audioSeconds": 30.477125,
+        "conversations": 5,
+        "edits": {
+          "substitutions": 6,
+          "deletions": 1,
+          "insertions": 2
+        },
+        "caseIds": [
+          "alg-different-letter-a",
+          "alg-negative-outside-square",
+          "alg-read-left-only",
+          "alg-rectangle-perimeter-expression",
+          "alg-solve-opposite-roots"
+        ]
+      },
+      "after": {
+        "clips": 12,
+        "referenceWords": 86,
+        "wordErrors": 1,
+        "normalizedWER": 0.011627906976744186,
+        "normalizedExact": 11,
+        "rawWER": 0.05813953488372093,
+        "mathTokenErrorRate": 0.0,
+        "generationSeconds": 3.557211333009036,
+        "audioSeconds": 30.477125,
+        "conversations": 5,
+        "edits": {
+          "substitutions": 0,
+          "deletions": 1,
+          "insertions": 0
+        },
+        "caseIds": [
+          "alg-different-letter-a",
+          "alg-negative-outside-square",
+          "alg-read-left-only",
+          "alg-rectangle-perimeter-expression",
+          "alg-solve-opposite-roots"
+        ]
+      }
+    },
+    "flow-diagrams": {
+      "before": {
+        "clips": 2,
+        "referenceWords": 14,
+        "wordErrors": 0,
+        "normalizedWER": 0.0,
+        "normalizedExact": 2,
+        "rawWER": 0.21428571428571427,
+        "mathTokenErrorRate": 0.0,
+        "generationSeconds": 0.40834895800071536,
+        "audioSeconds": 5.960000000000001,
+        "conversations": 1,
+        "edits": {
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0
+        },
+        "caseIds": [
+          "student-diagram-sequence"
+        ]
+      },
+      "after": {
+        "clips": 2,
+        "referenceWords": 14,
+        "wordErrors": 0,
+        "normalizedWER": 0.0,
+        "normalizedExact": 2,
+        "rawWER": 0.07142857142857142,
+        "mathTokenErrorRate": 0.0,
+        "generationSeconds": 0.4728404160014179,
+        "audioSeconds": 5.960000000000001,
+        "conversations": 1,
+        "edits": {
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0
+        },
+        "caseIds": [
+          "student-diagram-sequence"
+        ]
+      }
+    }
+  },
+  "aggregate": {
+    "before": {
+      "normalized": {
+        "substitutions": 89,
+        "deletions": 24,
+        "insertions": 19
+      },
+      "raw": {
+        "substitutions": 213,
+        "deletions": 40,
+        "insertions": 6
+      },
+      "clipsWithAnyNormalizedError": 57,
+      "rawReferenceWords": 740
+    },
+    "after": {
+      "normalized": {
+        "substitutions": 30,
+        "deletions": 1,
+        "insertions": 3
+      },
+      "raw": {
+        "substitutions": 47,
+        "deletions": 1,
+        "insertions": 3
+      },
+      "clipsWithAnyNormalizedError": 22,
+      "rawReferenceWords": 740
+    }
+  },
+  "limits": [
+    "Conversation-theme categories, not separate labels inferred from each turn.",
+    "Flow diagrams contain only one conversation; equation and graph samples are small.",
+    "No statistics/cross-topic conversations in the frozen held-out split.",
+    "Counts use one optimal edit alignment; component counts may differ under tied alignments, but total errors and WER are invariant.",
+    "One canonical source transcript per synthetic clip; normalization is limited and not semantic command grading."
+  ]
+}

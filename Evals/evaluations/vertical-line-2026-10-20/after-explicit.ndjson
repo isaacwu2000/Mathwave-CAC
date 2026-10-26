@@ -1,0 +1,2 @@
+{"type":"preview","state":{"data":[0,0],"mode":"equation","graph":true,"diagram":["Start","Finish"],"selection":0,"expression":"0","graphScene":{"rows":[{"expression":"x=4"}]}},"message":"Graph row 1: x=4.","commands":["typescript\nproblem.save(graph.plot(\"x=4\"));"],"revision":8}
+{"type":"ready","commands":["typescript\nproblem.save(graph.plot(\"x=4\"));"],"revision":8}

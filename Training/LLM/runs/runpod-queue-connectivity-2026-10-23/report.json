@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "transport": "Runpod supported queue API over verified HTTPS api.runpod.ai; no SSH or Pod proxy used.",
+  "sdk": "runpod==2.0.0rc1",
+  "gpuResult": {
+    "cuda": true,
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb",
+    "torch": "2.9.1+cu128",
+    "value": 16
+  },
+  "temporaryEndpointId": "viviasehwhoezg",
+  "endpointDeleted": true,
+  "remainingEndpoints": 0,
+  "accountBalanceDeltaUsd": 0.049166666699999695,
+  "limits": [
+    "Hardware/connectivity diagnostic only; no model training or task accuracy tested.",
+    "The reported GPU differs from requested A5000; actual worker hardware must be recorded for the experiment."
+  ],
+  "fortinetBlock": {
+    "httpStatus": 403,
+    "category": "Proxy Avoidance",
+    "affectedHost": "*.proxy.runpod.net"
+  },
+  "tlsVerification": "Enabled for all authenticated API traffic. The public block-page diagnostic sent no credentials."
+}

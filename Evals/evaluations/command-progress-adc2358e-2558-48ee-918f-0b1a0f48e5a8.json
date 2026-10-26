@@ -1,0 +1,7 @@
+{
+  "run": "adc2358e-2558-48ee-918f-0b1a0f48e5a8",
+  "scope": "One mocked browser lifecycle case; no provider or saved-user-data access.",
+  "checks": [],
+  "passed": false,
+  "failure": "microphone wake: waitForFunction: Timeout 30000ms exceeded."
+}

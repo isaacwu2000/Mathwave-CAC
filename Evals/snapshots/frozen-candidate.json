@@ -1,0 +1,14 @@
+{
+  "frozenAt": "2026-10-10T01:38:10.863Z",
+  "trainingSource": "train.jsonl only",
+  "files": {
+    "lib/workspace.ts": "df4d6d7ead63f425ce21301cff82a2004e027da4e8d701336709ddcd0a473f0f",
+    "lib/clarification.ts": "dfe901b56c1be2b2ed418544b4360fafdf5ce40aa591222d236a3bf441e52b30",
+    "lib/math-intent.ts": "d8e0eacb2227223e19905a7f20d35a767fbb0be84b19ea3a90c37c0ecd864eaf",
+    "lib/math-engine.ts": "1182b414717bbef64d1e47e7f75928847a59124c45fc5c3edecae0ed81ac735a",
+    "lib/command-interpreter.ts": "40d54454128f5cb60ad54cd21c03469c00849826785804f594a99fb4be0d2cab",
+    "app/page.tsx": "5bfa8465c54afdb1f5c66c6b2a94af26b5a5dba5c824baaa2aa62561183b98f9",
+    "scripts/evaluate.ts": "8454f876870e2c8c3e37a50b39870d69d09b45976e4e6170aec721f512cafe05",
+    "evals/grade.ts": "f7f99c604e1185cb5e688f6e758c411eec11919803fca991f4a228c6362636da"
+  }
+}

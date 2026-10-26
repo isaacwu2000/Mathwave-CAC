@@ -1,0 +1,33 @@
+import type { Workspace } from '../../workspace/state.ts';
+
+const constructionInstructions = `
+Named 2D constructions (deterministic; numerical checks are not a theorem prover):
+geometry.construct(source) -> ShapeValue; geometry.extend(value, additionalSource) -> ShapeValue;
+geometry.editObject(value, existingName, replacementExpression) -> ShapeValue;
+geometry.inspect(value, name) -> computed readback. geometry.current() captures the current shape/construction.
+problem.read(value) reads all named values. Save the final value once with problem.save(value).
+Source has one statement per line (<=200 lines, <=16000 characters), # comments, immutable declarations name=expression,
+draw object,object; assert predicate; measure segment(A,B); angle A,B,C; rightangle A,B,C (vertex B).
+Numbers, pi/e, scalar + - * / ^ and sqrt/cbrt/sin/cos/tan/asin/acos/atan/atan2/abs/exp/ln are supported, in radians.
+point(x,y); line(A,B), segment(A,B), ray(A,B), polygon(A,B,C,...), triangle(A,B,C).
+circle(center,positiveRadius) or circle(center,pointOnCircle); midpoint(A,B), distance(A,B), foot(P,line), reflection(P,line).
+parallel(P,line), perpendicular(P,line), bisector(A,B,C) at B; circumcenter/centroid/orthocenter/incenter(A,B,C), circumcircle/incircle(A,B,C).
+intersection(lineOrCircle,lineOrCircle,branch): branch 1 or 2 ordered by x then y; omit only for a unique intersection.
+Assertions: on(point,lineOrCircleOrSegmentOrRay), equal(scalar,scalar), parallel(line,line), perpendicular(line,line).
+Forward references are allowed within a complete source; undefined names, cycles, false assertions, degeneracy and ambiguous intersections reject the entire operation.
+Up to 60 visible objects including angle marks. Coordinates and circle radii must stay within +/-1000000. No 3D, arbitrary code or geometric constraint solver.
+Preserve names and dependency formulas when editing. Include relevant givens as assertions. Do not invent missing givens.
+For progressive builds first save a complete drawable construction, then extend it with complete dependency-valid additions; never emit incomplete source.
+Use existing dimension-based geometry.create/measure for simple shapes when sufficient. Do not approximate unsupported graph features with a construction.
+Example: problem.save(geometry.construct("A=point(0,0)\\nB=point(4,0)\\nC=point(0,3)\\ndraw triangle(A,B,C)\\nrightangle B,A,C"));
+`;
+
+/** Selects extra DSL context locally; ordinary algebra/graph requests add no text or model round trip. */
+export function constructionInstructionsFor(text: string, state: Workspace) {
+  return (state.mode === 'geometry' && state.construction) ||
+    /\b(?:geometry|construction|construct|draw|sketch|point|points|segment|ray|circle|triangle|polygon|midpoint|bisector|circumcenter|circumcircle|centroid|orthocenter|incenter|incircle|perpendicular|parallel|projection|reflect|intersection)\b/i.test(
+      text,
+    )
+    ? constructionInstructions
+    : '';
+}

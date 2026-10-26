@@ -1,0 +1,71 @@
+{
+  "scope": "Actual browser rendering of every captured provider outcome. Saved synthetic report data is replayed through a mocked problem API; no provider calls or student data. Capture alone is not visual review.",
+  "reportSha256": "c2978a09f462ae0b25919d3f80b28aa464605b14644fc811cacb7618c9efbd78",
+  "reviews": [
+    {
+      "scenario": "two-curves-preview-1",
+      "variant": "generated",
+      "text": "Plot y=x squared and y=x plus one. Draw the first curve before adding the second.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/graph-catalog-f5de4035-1d29-49ed-bfc1-7c0c1e560a12/visual/00-generated-two-curves-preview-1.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed parabola y=x\u00b2 alone, then parabola plus line y=x+1 in intermediate/final frames; both correct."
+    },
+    {
+      "scenario": "two-curves-preview-2",
+      "variant": "generated",
+      "text": "Plot y=x squared and y=x plus one. Draw the first curve before adding the second.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/graph-catalog-f5de4035-1d29-49ed-bfc1-7c0c1e560a12/visual/01-generated-two-curves-preview-2.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed parabola y=x\u00b2 alone, then parabola plus line y=x+1 in intermediate/final frames; both correct."
+    },
+    {
+      "scenario": "two-curves",
+      "variant": "generated",
+      "text": "Plot y=x squared and y=x plus one. Draw the first curve before adding the second.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/graph-catalog-f5de4035-1d29-49ed-bfc1-7c0c1e560a12/visual/02-generated-two-curves.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed parabola y=x\u00b2 alone, then parabola plus line y=x+1 in intermediate/final frames; both correct."
+    },
+    {
+      "scenario": "segment-length-preview-1",
+      "variant": "generated",
+      "text": "Draw segment AB from A at zero, zero to B at three, four and show its length.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/graph-catalog-f5de4035-1d29-49ed-bfc1-7c0c1e560a12/visual/03-generated-segment-length-preview-1.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed visible AB endpoints and length: 5 for (0,0)-(3,4), 6 after moving B to (0,6)."
+    },
+    {
+      "scenario": "segment-length",
+      "variant": "generated",
+      "text": "Draw segment AB from A at zero, zero to B at three, four and show its length.",
+      "passed": true,
+      "screenshot": "Evals/evaluations/graph-catalog-f5de4035-1d29-49ed-bfc1-7c0c1e560a12/visual/04-generated-segment-length.png",
+      "viewport": {
+        "width": 1000,
+        "height": 760
+      },
+      "reviewed": true,
+      "notes": "Reviewed visible AB endpoints and length: 5 for (0,0)-(3,4), 6 after moving B to (0,6)."
+    }
+  ]
+}

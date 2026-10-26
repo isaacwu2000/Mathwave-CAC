@@ -1,0 +1,240 @@
+{
+  "runId": "3f0fad2b-00ae-43e1-9054-0d4600deb94f",
+  "startedAt": "2026-10-16T16:25:08.555Z",
+  "finishedAt": "2026-10-16T16:25:31.293Z",
+  "lane": "backend",
+  "revision": "a944ea5df4c1b04f8f1fc0b40293290d70f954ee",
+  "dirty": true,
+  "sourceSHA256": "e52276a15ec557314b3c4a92acf2e36c1da0a7806cb03a84b30296cffd1a8480",
+  "runnerSHA256": "bf0e9498565bdc61f47db1c47b98723af2b52b7665e0f7e7ba8ad369d660fc58",
+  "models": {
+    "live": "gpt-live-1",
+    "command": "anthropic/claude-haiku-5.5"
+  },
+  "commandProfile": "haiku-medium",
+  "reasoning": {
+    "effort": "medium",
+    "enabled": true
+  },
+  "latencyDefinition": "HTTP request start through complete parsed response body.",
+  "scope": "Live provider and isolated local HTTP; excludes voice and rendering.",
+  "repetitions": 1,
+  "planned": 2,
+  "unattempted": 0,
+  "groups": {
+    "equation": {
+      "successInterval80": null,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {}
+    },
+    "both-sides": {
+      "successInterval80": null,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {}
+    },
+    "two-steps": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0.3784475032253529,
+        "upper": 1
+      },
+      "attempted": 1,
+      "passed": 1,
+      "failed": 0,
+      "successMs": {
+        "p50": 8887.27125,
+        "p95": 8887.27125
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {
+        "model_1": {
+          "observed": 1,
+          "missing": 0,
+          "p50": 8838,
+          "p95": 8838
+        },
+        "validate_1": {
+          "observed": 1,
+          "missing": 0,
+          "p50": 19,
+          "p95": 19
+        },
+        "total": {
+          "observed": 1,
+          "missing": 0,
+          "p50": 8859,
+          "p95": 8859
+        }
+      }
+    },
+    "clarification": {
+      "successInterval80": null,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {}
+    },
+    "explanation": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0.3784475032253529,
+        "upper": 1
+      },
+      "attempted": 1,
+      "passed": 1,
+      "failed": 0,
+      "successMs": {
+        "p50": 9779.531417,
+        "p95": 9779.531417
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {
+        "model_1": {
+          "observed": 1,
+          "missing": 0,
+          "p50": 9750,
+          "p95": 9750
+        },
+        "validate_1": {
+          "observed": 1,
+          "missing": 0,
+          "p50": 8,
+          "p95": 8
+        },
+        "total": {
+          "observed": 1,
+          "missing": 0,
+          "p50": 9759,
+          "p95": 9759
+        }
+      }
+    }
+  },
+  "summary": {
+    "successInterval80": null,
+    "attempted": 2,
+    "passed": 2,
+    "failed": 0,
+    "successMs": {
+      "p50": 8887.27125,
+      "p95": 9779.531417
+    },
+    "failureMs": {
+      "p50": null,
+      "p95": null
+    },
+    "stages": {
+      "model_1": {
+        "observed": 2,
+        "missing": 0,
+        "p50": 8838,
+        "p95": 9750
+      },
+      "validate_1": {
+        "observed": 2,
+        "missing": 0,
+        "p50": 8,
+        "p95": 19
+      },
+      "total": {
+        "observed": 2,
+        "missing": 0,
+        "p50": 8859,
+        "p95": 9759
+      }
+    }
+  },
+  "intervalMethod": "Two-sided 80% Wilson score; per scenario only. Pooled confidence omitted because scenarios share trials.",
+  "samples": [
+    {
+      "scenario": "two-steps",
+      "trial": 1,
+      "text": "Subtract three from both sides, then divide both sides by two. Keep both steps.",
+      "passed": true,
+      "status": "command",
+      "expression": "(2 * x + 3 - 3) / 2 = (11 - 3) / 2",
+      "httpStatus": 200,
+      "expectedExpression": "(2 * x + 3 - 3) / 2 = (11 - 3) / 2",
+      "elapsedMs": 8887.27125,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 8838,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 19,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 8859,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "scenario": "explanation",
+      "trial": 1,
+      "text": "Explain why subtracting three from both sides keeps this equation balanced without changing my work.",
+      "passed": true,
+      "status": "explanation",
+      "expression": "2 * x + 3 = 11",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "elapsedMs": 9779.531417,
+      "timings": [
+        {
+          "stage": "model_1",
+          "duration": 9750,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 8,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 9759,
+          "kind": "span"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "case": "alg-constant-on-both-sides",
+  "turn": 1,
+  "expectedSavedPrediction": "Write three x plus eight equals x minus two.",
+  "freshProcessPrediction": "Write three x plus eight equals x minus two.",
+  "exactlyReproduced": true,
+  "elapsedSecondsIncludingImports": 25.393355874999543,
+  "scope": "Saved-adapter reload on one fixed validation clip; not an additional test-set selection."
+}

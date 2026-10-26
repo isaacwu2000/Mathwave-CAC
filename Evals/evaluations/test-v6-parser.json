@@ -1,0 +1,212 @@
+{
+  "split": "test-v6",
+  "mode": "parser",
+  "datasetSHA256": "965fc4f79f54f1f780ece3a4b700f32e6e3b75b9acf9d49aabae1a612fb6294c",
+  "createdAt": "2026-10-10T23:17:42.650Z",
+  "total": 16,
+  "scored": 16,
+  "passed": 16,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "graph_geometry": {
+      "passed": 16,
+      "scored": 16
+    }
+  },
+  "results": [
+    {
+      "id": "v6-001",
+      "category": "graph_geometry",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "Could you please add graph y equals three x plus two?",
+        "message": ""
+      },
+      "latencyMs": 7
+    },
+    {
+      "id": "v6-002",
+      "category": "graph_geometry",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "Please edit graph 2 to y equals seven",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v6-003",
+      "category": "graph_geometry",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "remove curve 2",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v6-004",
+      "category": "graph_geometry",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "evaluate graph 2 at x negative two",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v6-005",
+      "category": "graph_geometry",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "show the intersections",
+        "message": ""
+      },
+      "latencyMs": 2
+    },
+    {
+      "id": "v6-006",
+      "category": "graph_geometry",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "pan graph down",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v6-007",
+      "category": "graph_geometry",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "view x negative six to twelve y negative nine to fifteen",
+        "message": ""
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v6-008",
+      "category": "graph_geometry",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "find the volume of a cone with radius two and height nine",
+        "message": ""
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v6-009",
+      "category": "graph_geometry",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "create a parallelogram with base seven and height five",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v6-010",
+      "category": "graph_geometry",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "find the area of a trapezoid with base a ten base b six height four",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v6-011",
+      "category": "graph_geometry",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "what is the median of -3 1 5 9",
+        "message": ""
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v6-012",
+      "category": "graph_geometry",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "What is the cone height?"
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v6-013",
+      "category": "graph_geometry",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "That graph expression does not exist."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v6-014",
+      "category": "graph_geometry",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "Use an increasing x range between −1,000,000 and 1,000,000, at least 0.000001 wide."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v6-015",
+      "category": "graph_geometry",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "perimeter is unavailable for this parallelogram. Available: area."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v6-016",
+      "category": "graph_geometry",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "What number should the radius change to?"
+      },
+      "latencyMs": 0
+    }
+  ]
+}

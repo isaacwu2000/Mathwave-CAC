@@ -1,0 +1,336 @@
+{
+  "split": "test-v5",
+  "mode": "parser",
+  "datasetSHA256": "c2f0f6b231c31272101d7ca81715ef799beb113b63f11a034b6953a98f86dda0",
+  "createdAt": "2026-10-10T03:22:26.841Z",
+  "total": 24,
+  "scored": 24,
+  "passed": 22,
+  "unavailable": 0,
+  "accuracy": 0.9166666666666666,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "clarification": {
+      "passed": 7,
+      "scored": 8
+    },
+    "statistics": {
+      "passed": 5,
+      "scored": 6
+    },
+    "diagram": {
+      "passed": 1,
+      "scored": 1
+    },
+    "editing": {
+      "passed": 1,
+      "scored": 1
+    },
+    "algebra": {
+      "passed": 1,
+      "scored": 1
+    },
+    "navigation": {
+      "passed": 1,
+      "scored": 1
+    },
+    "safety": {
+      "passed": 5,
+      "scored": 5
+    },
+    "unsupported": {
+      "passed": 1,
+      "scored": 1
+    }
+  },
+  "results": [
+    {
+      "id": "v5-001",
+      "category": "clarification",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which term should I replace? Say replace, the exact term, and its new value."
+      },
+      "latencyMs": 2
+    },
+    {
+      "id": "v5-002",
+      "category": "clarification",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "What would you like to change? Name the term to replace or the operation to apply."
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v5-003",
+      "category": "clarification",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which term should I replace? Say replace, the exact term, and its new value."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v5-004",
+      "category": "clarification",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "What would you like to change? Name the term to replace or the operation to apply."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v5-005",
+      "category": "clarification",
+      "pass": false,
+      "reason": "Expected clarification, received unsupported",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “that”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 2
+    },
+    {
+      "id": "v5-006",
+      "category": "clarification",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which term is wrong, and what should replace it? Say replace, the exact term, and its new value."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v5-007",
+      "category": "clarification",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which term should change, and what is its new value? Say replace, the exact term, and its new value."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v5-008",
+      "category": "clarification",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which number or expression should I use? Say the operation again with its exact value."
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v5-009",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "can you show these suspicious values?",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v5-010",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "please inspect the outlying measurements",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v5-011",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "would you identify my unusual measurements please?",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v5-012",
+      "category": "statistics",
+      "pass": false,
+      "reason": "Expected command, received unsupported",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “find”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v5-013",
+      "category": "diagram",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "replace The number with Retry",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v5-014",
+      "category": "editing",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "could you replace eight with nine point zero five?",
+        "message": ""
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v5-015",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "would you find the median please?",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v5-016",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "can you tell me the maximum?",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v5-017",
+      "category": "algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "will you divide both sides by negative two point five?",
+        "message": ""
+      },
+      "latencyMs": 2
+    },
+    {
+      "id": "v5-018",
+      "category": "navigation",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "could you explore last step please?",
+        "message": ""
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v5-019",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "Use a nonzero finite number so this operation preserves the equation."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v5-020",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "Say the digits after point, for example three point zero five."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v5-021",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "Make the function's argument explicit: use sqrt(...) or say “sqrt open parenthesis ... close parenthesis”."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v5-022",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “email”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v5-023",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “pretend”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v5-024",
+      "category": "unsupported",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “integrate”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    }
+  ]
+}

@@ -1,0 +1,5304 @@
+{
+  "sourceReport": "/Users/isaac/Documents/GitHub/Math-Audio/Evals/evaluations/short-prompt-regression-6a7016aa-bd3e-4b2d-adc6-8251f1723d3a/report.json",
+  "providerCalls": 0,
+  "scorerSHA256": "901175fb643c7794e42915e9070134c608e3fb962de3f0b2ec4ce7b4f047fcad",
+  "scope": "Separate conservative offline audit of captured answers. Original historical strict scores and labels are unmodified. Positive adjustments require validated engine execution, preserved unrelated state and authored result/action. Different clarification wording remains unresolved. No general algebraic equivalence is inferred.",
+  "summary": {
+    "baseline": {
+      "attempted": 263,
+      "historicalStrictPassed": 76,
+      "currentContractPassed": 148,
+      "unresolvedOrFailed": 115,
+      "classifications": {
+        "behavior-or-query-format-review": 31,
+        "clarification-wording-review": 18,
+        "explicit-graph-representation": 3,
+        "invalid-or-unavailable-proposal": 2,
+        "program-save-flag": 63,
+        "response-review": 2,
+        "status-mismatch": 62,
+        "strict-pass": 76,
+        "temporary-data-read-only-policy": 6
+      }
+    },
+    "short": {
+      "attempted": 263,
+      "historicalStrictPassed": 95,
+      "currentContractPassed": 163,
+      "unresolvedOrFailed": 100,
+      "classifications": {
+        "behavior-or-query-format-review": 39,
+        "clarification-wording-review": 20,
+        "explicit-graph-representation": 3,
+        "invalid-or-unavailable-proposal": 3,
+        "program-save-flag": 57,
+        "response-review": 2,
+        "status-mismatch": 36,
+        "strict-pass": 95,
+        "temporary-data-read-only-policy": 8
+      }
+    }
+  },
+  "rows": [
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-003",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-004",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-001",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-002",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-003",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-004",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-001",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-005",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-002",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "invalid-or-unavailable-proposal",
+      "reason": "Which number or part should I change? Name it or select a part first."
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-006",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-008",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-007",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected clarification, received command"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-005",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-006",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-008",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-009",
+      "category": "editing",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-007",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-010",
+      "category": "algebra",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-011",
+      "category": "algebra",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-012",
+      "category": "reading",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-009",
+      "category": "editing",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-010",
+      "category": "algebra",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-011",
+      "category": "algebra",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-014",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "temporary-data-read-only-policy",
+      "reason": "Correct requested engine query on temporary data; original workspace preserved."
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-012",
+      "category": "reading",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-013",
+      "category": "navigation",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received clarification"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-016",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "temporary-data-read-only-policy",
+      "reason": "Correct requested engine query on temporary data; original workspace preserved."
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-015",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "temporary-data-read-only-policy",
+      "reason": "Correct requested engine query on temporary data; original workspace preserved."
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-015",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "temporary-data-read-only-policy",
+      "reason": "Correct requested engine query on temporary data; original workspace preserved."
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-013",
+      "category": "navigation",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-014",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-016",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "temporary-data-read-only-policy",
+      "reason": "Correct requested engine query on temporary data; original workspace preserved."
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-018",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-017",
+      "category": "data",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-020",
+      "category": "editing",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-019",
+      "category": "diagram",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-018",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-017",
+      "category": "data",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-020",
+      "category": "editing",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-019",
+      "category": "diagram",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-021",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-023",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-022",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-021",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-023",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-022",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-002",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-001",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-003",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-002",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-024",
+      "category": "unsupported",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-003",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-004",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-001",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v2.jsonl",
+      "id": "fresh-024",
+      "category": "unsupported",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-004",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-006",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-005",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-007",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-006",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-008",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected clarification, received command"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-005",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-007",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-009",
+      "category": "data",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-010",
+      "category": "algebra",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-011",
+      "category": "editing",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-009",
+      "category": "data",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-010",
+      "category": "algebra",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-008",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-011",
+      "category": "editing",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-012",
+      "category": "editing",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-013",
+      "category": "navigation",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-015",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-014",
+      "category": "navigation",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-012",
+      "category": "editing",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-013",
+      "category": "navigation",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-015",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-016",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-014",
+      "category": "navigation",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-017",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "temporary-data-read-only-policy",
+      "reason": "Correct requested engine query on temporary data; original workspace preserved."
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-018",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-016",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-019",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-017",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "temporary-data-read-only-policy",
+      "reason": "Correct requested engine query on temporary data; original workspace preserved."
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-019",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-018",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-022",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-020",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-023",
+      "category": "unsupported",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-021",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-020",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received command"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-022",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-023",
+      "category": "unsupported",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-001",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-001",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-021",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-002",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected clarification, received command"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-024",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-003",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-004",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v3.jsonl",
+      "id": "v3-024",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-002",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected clarification, received command"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-005",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-004",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-003",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-005",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-007",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-008",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-006",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected clarification, received command"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-009",
+      "category": "editing",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-007",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-008",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-006",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-009",
+      "category": "editing",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-011",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-012",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-010",
+      "category": "navigation",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-011",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-013",
+      "category": "diagram",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-012",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-015",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "temporary-data-read-only-policy",
+      "reason": "Correct requested engine query on temporary data; original workspace preserved."
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-013",
+      "category": "diagram",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-014",
+      "category": "diagram",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-010",
+      "category": "navigation",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-015",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "temporary-data-read-only-policy",
+      "reason": "Correct requested engine query on temporary data; original workspace preserved."
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-016",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-014",
+      "category": "diagram",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-017",
+      "category": "reading",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-018",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-016",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-019",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-018",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-020",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-017",
+      "category": "reading",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-019",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received explanation"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-021",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-020",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-021",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-023",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received command"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-022",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received command"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-001",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-024",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-023",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received command"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-001",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-024",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-002",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v4.jsonl",
+      "id": "v4-022",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received command"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-003",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-002",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-004",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-005",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "invalid-or-unavailable-proposal",
+      "reason": "Which number or part should I change? Name it or select a part first."
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-004",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-006",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-005",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "invalid-or-unavailable-proposal",
+      "reason": "Which number or part should I change? Name it or select a part first."
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-006",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-003",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected clarification, received command"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-009",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-010",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-008",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-009",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-007",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-010",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-008",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-007",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-011",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-012",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-011",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-012",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-014",
+      "category": "editing",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-013",
+      "category": "diagram",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-016",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-014",
+      "category": "editing",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-015",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-013",
+      "category": "diagram",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-017",
+      "category": "algebra",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-015",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-017",
+      "category": "algebra",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-019",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-018",
+      "category": "navigation",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-016",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-020",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received command"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-019",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-018",
+      "category": "navigation",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-021",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received command"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-022",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-023",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received command"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-022",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-021",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received command"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-023",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received command"
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-020",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-001",
+      "category": "graph_geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "explicit-graph-representation",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-003",
+      "category": "graph_geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-024",
+      "category": "unsupported",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-002",
+      "category": "graph_geometry",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "explicit-graph-representation",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-003",
+      "category": "graph_geometry",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-001",
+      "category": "graph_geometry",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "explicit-graph-representation",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-004",
+      "category": "graph_geometry",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-002",
+      "category": "graph_geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "explicit-graph-representation",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v5.jsonl",
+      "id": "v5-024",
+      "category": "unsupported",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-007",
+      "category": "graph_geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-006",
+      "category": "graph_geometry",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received clarification"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-005",
+      "category": "graph_geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-004",
+      "category": "graph_geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-005",
+      "category": "graph_geometry",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-006",
+      "category": "graph_geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-007",
+      "category": "graph_geometry",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-009",
+      "category": "graph_geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-011",
+      "category": "graph_geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "temporary-data-read-only-policy",
+      "reason": "Correct requested engine query on temporary data; original workspace preserved."
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-008",
+      "category": "graph_geometry",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-011",
+      "category": "graph_geometry",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "temporary-data-read-only-policy",
+      "reason": "Correct requested engine query on temporary data; original workspace preserved."
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-009",
+      "category": "graph_geometry",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-008",
+      "category": "graph_geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-010",
+      "category": "graph_geometry",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-013",
+      "category": "graph_geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-013",
+      "category": "graph_geometry",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-014",
+      "category": "graph_geometry",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-015",
+      "category": "graph_geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-010",
+      "category": "graph_geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-014",
+      "category": "graph_geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-016",
+      "category": "graph_geometry",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-016",
+      "category": "graph_geometry",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-012",
+      "category": "graph_geometry",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-015",
+      "category": "graph_geometry",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received explanation"
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-001",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v6.jsonl",
+      "id": "v6-012",
+      "category": "graph_geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-003",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-002",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-001",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-003",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-005",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-002",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-004",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-006",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-004",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-005",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-006",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-007",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-009",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-007",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-008",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-008",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-001",
+      "category": "geometry_edit",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-009",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-001",
+      "category": "geometry_edit",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-010",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "response-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-002",
+      "category": "geometry_edit",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-003",
+      "category": "geometry_edit",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-004",
+      "category": "geometry_edit",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-002",
+      "category": "geometry_edit",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-003",
+      "category": "geometry_edit",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-005",
+      "category": "geometry_edit",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-006",
+      "category": "graph_pair",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-004",
+      "category": "geometry_edit",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v7.jsonl",
+      "id": "v7-010",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-005",
+      "category": "geometry_edit",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-006",
+      "category": "graph_pair",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-009",
+      "category": "graph_pair",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-010",
+      "category": "geometry_edit",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-009",
+      "category": "graph_pair",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-010",
+      "category": "geometry_edit",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-008",
+      "category": "graph_pair",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received reply"
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-002",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-007",
+      "category": "graph_pair",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-002",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-008",
+      "category": "graph_pair",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-003",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v8.jsonl",
+      "id": "v8-007",
+      "category": "graph_pair",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-001",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-004",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-005",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "explicit-graph-representation",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-003",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-001",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-005",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "explicit-graph-representation",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-007",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-006",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-007",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-006",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-004",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-009",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-010",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-008",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received clarification"
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-001",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-010",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-009",
+      "category": "graph_exploration",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-001",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-003",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v9.jsonl",
+      "id": "v9-008",
+      "category": "graph_exploration",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received reply"
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-002",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-003",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-005",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-004",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received clarification"
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-002",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-006",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-005",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-007",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-008",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-006",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-004",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received clarification"
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-007",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-008",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-009",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-012",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-010",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-011",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-009",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-012",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-010",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-011",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-013",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-014",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-016",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "response-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-015",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-013",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-014",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "clarification-wording-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-015",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-016",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "response-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v11.jsonl",
+      "id": "fresh-001",
+      "category": "ai_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-017",
+      "category": "natural_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "response-review",
+      "reason": "Clarification did not identify the missing information"
+    },
+    {
+      "split": "test-v11.jsonl",
+      "id": "fresh-002",
+      "category": "ai_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v11.jsonl",
+      "id": "fresh-001",
+      "category": "ai_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v11.jsonl",
+      "id": "fresh-002",
+      "category": "ai_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v11.jsonl",
+      "id": "fresh-003",
+      "category": "ai_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v11.jsonl",
+      "id": "fresh-004",
+      "category": "ai_math",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v11.jsonl",
+      "id": "fresh-003",
+      "category": "ai_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v11.jsonl",
+      "id": "fresh-005",
+      "category": "ai_math",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v11.jsonl",
+      "id": "fresh-004",
+      "category": "ai_math",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v11.jsonl",
+      "id": "fresh-005",
+      "category": "ai_math",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v10.jsonl",
+      "id": "v10-017",
+      "category": "natural_math",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v11.jsonl",
+      "id": "fresh-006",
+      "category": "ai_math",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v12.jsonl",
+      "id": "fresh2-001",
+      "category": "ai_math",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v12.jsonl",
+      "id": "fresh2-002",
+      "category": "ai_math",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v12.jsonl",
+      "id": "fresh2-001",
+      "category": "ai_math",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v12.jsonl",
+      "id": "fresh2-003",
+      "category": "ai_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v11.jsonl",
+      "id": "fresh-006",
+      "category": "ai_math",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v12.jsonl",
+      "id": "fresh2-003",
+      "category": "ai_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v12.jsonl",
+      "id": "fresh2-004",
+      "category": "ai_math",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v13.jsonl",
+      "id": "fresh-context-001",
+      "category": "ai_context",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v13.jsonl",
+      "id": "fresh-context-002",
+      "category": "ai_context",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v12.jsonl",
+      "id": "fresh2-004",
+      "category": "ai_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v13.jsonl",
+      "id": "fresh-context-001",
+      "category": "ai_context",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v13.jsonl",
+      "id": "fresh-context-002",
+      "category": "ai_context",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v12.jsonl",
+      "id": "fresh2-002",
+      "category": "ai_math",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "invalid-or-unavailable-proposal",
+      "reason": "Which number or part should I change? Name it or select a part first."
+    },
+    {
+      "split": "test-v13.jsonl",
+      "id": "fresh-context-003",
+      "category": "ai_context",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v13.jsonl",
+      "id": "fresh-context-005",
+      "category": "ai_context",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v13.jsonl",
+      "id": "fresh-context-004",
+      "category": "ai_context",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v13.jsonl",
+      "id": "fresh-context-006",
+      "category": "ai_context",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected clarification, received command"
+    },
+    {
+      "split": "test-v13.jsonl",
+      "id": "fresh-context-003",
+      "category": "ai_context",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v13.jsonl",
+      "id": "fresh-context-004",
+      "category": "ai_context",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v13.jsonl",
+      "id": "fresh-context-006",
+      "category": "ai_context",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v14.jsonl",
+      "id": "holdout-natural-001",
+      "category": "ai_algebra",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v14.jsonl",
+      "id": "holdout-natural-002",
+      "category": "ai_algebra",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v14.jsonl",
+      "id": "holdout-natural-001",
+      "category": "ai_algebra",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v14.jsonl",
+      "id": "holdout-natural-003",
+      "category": "ai_algebra",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v14.jsonl",
+      "id": "holdout-natural-004",
+      "category": "ai_algebra",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v14.jsonl",
+      "id": "holdout-natural-002",
+      "category": "ai_algebra",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v14.jsonl",
+      "id": "holdout-natural-003",
+      "category": "ai_algebra",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v14.jsonl",
+      "id": "holdout-natural-004",
+      "category": "ai_algebra",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v14.jsonl",
+      "id": "holdout-natural-005",
+      "category": "ai_algebra",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v14.jsonl",
+      "id": "holdout-natural-006",
+      "category": "ai_algebra",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v14.jsonl",
+      "id": "holdout-natural-005",
+      "category": "ai_algebra",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v15.jsonl",
+      "id": "exploration-1",
+      "category": "graph-geometry",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v14.jsonl",
+      "id": "holdout-natural-006",
+      "category": "ai_algebra",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v13.jsonl",
+      "id": "fresh-context-005",
+      "category": "ai_context",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v15.jsonl",
+      "id": "exploration-1",
+      "category": "graph-geometry",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v15.jsonl",
+      "id": "exploration-3",
+      "category": "graph-geometry",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v15.jsonl",
+      "id": "exploration-2",
+      "category": "graph-geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v15.jsonl",
+      "id": "exploration-4",
+      "category": "graph-geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v15.jsonl",
+      "id": "exploration-2",
+      "category": "graph-geometry",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v15.jsonl",
+      "id": "exploration-3",
+      "category": "graph-geometry",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v16.jsonl",
+      "id": "rate-triangle-1",
+      "category": "rate-triangle",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v15.jsonl",
+      "id": "exploration-4",
+      "category": "graph-geometry",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v16.jsonl",
+      "id": "rate-triangle-1",
+      "category": "rate-triangle",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v16.jsonl",
+      "id": "rate-triangle-4",
+      "category": "rate-triangle",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v17.jsonl",
+      "id": "fresh-rate-triangle-1",
+      "category": "rate-triangle",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v16.jsonl",
+      "id": "rate-triangle-2",
+      "category": "rate-triangle",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v16.jsonl",
+      "id": "rate-triangle-2",
+      "category": "rate-triangle",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v17.jsonl",
+      "id": "fresh-rate-triangle-1",
+      "category": "rate-triangle",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v16.jsonl",
+      "id": "rate-triangle-4",
+      "category": "rate-triangle",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v17.jsonl",
+      "id": "fresh-rate-triangle-2",
+      "category": "rate-triangle",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v18.jsonl",
+      "id": "shift-polygon-1",
+      "category": "shift-polygon",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v18.jsonl",
+      "id": "shift-polygon-2",
+      "category": "shift-polygon",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v16.jsonl",
+      "id": "rate-triangle-3",
+      "category": "rate-triangle",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received clarification"
+    },
+    {
+      "split": "test-v17.jsonl",
+      "id": "fresh-rate-triangle-2",
+      "category": "rate-triangle",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v18.jsonl",
+      "id": "shift-polygon-1",
+      "category": "shift-polygon",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v18.jsonl",
+      "id": "shift-polygon-2",
+      "category": "shift-polygon",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v16.jsonl",
+      "id": "rate-triangle-3",
+      "category": "rate-triangle",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v18.jsonl",
+      "id": "shift-polygon-4",
+      "category": "shift-polygon",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v19.jsonl",
+      "id": "fresh-shift-polygon-1",
+      "category": "shift-polygon",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v18.jsonl",
+      "id": "shift-polygon-3",
+      "category": "shift-polygon",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v19.jsonl",
+      "id": "fresh-shift-polygon-1",
+      "category": "shift-polygon",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v18.jsonl",
+      "id": "shift-polygon-4",
+      "category": "shift-polygon",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v18.jsonl",
+      "id": "shift-polygon-3",
+      "category": "shift-polygon",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v20.jsonl",
+      "id": "tangent-leg-1",
+      "category": "tangent-leg",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v20.jsonl",
+      "id": "tangent-leg-2",
+      "category": "tangent-leg",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v20.jsonl",
+      "id": "tangent-leg-1",
+      "category": "tangent-leg",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v20.jsonl",
+      "id": "tangent-leg-2",
+      "category": "tangent-leg",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v19.jsonl",
+      "id": "fresh-shift-polygon-2",
+      "category": "shift-polygon",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v20.jsonl",
+      "id": "tangent-leg-4",
+      "category": "tangent-leg",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v21.jsonl",
+      "id": "fresh-tangent-leg-1",
+      "category": "tangent-leg",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v20.jsonl",
+      "id": "tangent-leg-3",
+      "category": "tangent-leg",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v19.jsonl",
+      "id": "fresh-shift-polygon-2",
+      "category": "shift-polygon",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v21.jsonl",
+      "id": "fresh-tangent-leg-1",
+      "category": "tangent-leg",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v20.jsonl",
+      "id": "tangent-leg-3",
+      "category": "tangent-leg",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v22.jsonl",
+      "id": "reflection-sector-1",
+      "category": "reflection-sector",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v21.jsonl",
+      "id": "fresh-tangent-leg-2",
+      "category": "tangent-leg",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v20.jsonl",
+      "id": "tangent-leg-4",
+      "category": "tangent-leg",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received command"
+    },
+    {
+      "split": "test-v22.jsonl",
+      "id": "reflection-sector-2",
+      "category": "reflection-sector",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v22.jsonl",
+      "id": "reflection-sector-1",
+      "category": "reflection-sector",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v22.jsonl",
+      "id": "reflection-sector-2",
+      "category": "reflection-sector",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v22.jsonl",
+      "id": "reflection-sector-4",
+      "category": "reflection-sector",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v22.jsonl",
+      "id": "reflection-sector-3",
+      "category": "reflection-sector",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received clarification"
+    },
+    {
+      "split": "test-v23.jsonl",
+      "id": "integral-annulus-1",
+      "category": "integral-annulus",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v21.jsonl",
+      "id": "fresh-tangent-leg-2",
+      "category": "tangent-leg",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v22.jsonl",
+      "id": "reflection-sector-4",
+      "category": "reflection-sector",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v22.jsonl",
+      "id": "reflection-sector-3",
+      "category": "reflection-sector",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v23.jsonl",
+      "id": "integral-annulus-2",
+      "category": "integral-annulus",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v23.jsonl",
+      "id": "integral-annulus-4",
+      "category": "integral-annulus",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v23.jsonl",
+      "id": "integral-annulus-3",
+      "category": "integral-annulus",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v23.jsonl",
+      "id": "integral-annulus-2",
+      "category": "integral-annulus",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v23.jsonl",
+      "id": "integral-annulus-4",
+      "category": "integral-annulus",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v23.jsonl",
+      "id": "integral-annulus-3",
+      "category": "integral-annulus",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v24.jsonl",
+      "id": "fresh-integral-annulus-1",
+      "category": "integral-annulus",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v23.jsonl",
+      "id": "integral-annulus-5",
+      "category": "integral-annulus",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected clarification, received command"
+    },
+    {
+      "split": "test-v24.jsonl",
+      "id": "fresh-integral-annulus-1",
+      "category": "integral-annulus",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v23.jsonl",
+      "id": "integral-annulus-1",
+      "category": "integral-annulus",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v24.jsonl",
+      "id": "fresh-integral-annulus-2",
+      "category": "integral-annulus",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v23.jsonl",
+      "id": "integral-annulus-5",
+      "category": "integral-annulus",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v24.jsonl",
+      "id": "fresh-integral-annulus-2",
+      "category": "integral-annulus",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v25.jsonl",
+      "id": "between-solid-3",
+      "category": "between-solid",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v25.jsonl",
+      "id": "between-solid-2",
+      "category": "between-solid",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received unsupported"
+    },
+    {
+      "split": "test-v25.jsonl",
+      "id": "between-solid-1",
+      "category": "between-solid",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v25.jsonl",
+      "id": "between-solid-2",
+      "category": "between-solid",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v25.jsonl",
+      "id": "between-solid-3",
+      "category": "between-solid",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v25.jsonl",
+      "id": "between-solid-1",
+      "category": "between-solid",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v25.jsonl",
+      "id": "between-solid-4",
+      "category": "between-solid",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "invalid-or-unavailable-proposal",
+      "reason": "The preview budget was exhausted."
+    },
+    {
+      "split": "test-v27.jsonl",
+      "id": "exact-trace-1",
+      "category": "exact-trace",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v26.jsonl",
+      "id": "fresh-between-solid-2",
+      "category": "between-solid",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v25.jsonl",
+      "id": "between-solid-4",
+      "category": "between-solid",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v26.jsonl",
+      "id": "fresh-between-solid-1",
+      "category": "between-solid",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v26.jsonl",
+      "id": "fresh-between-solid-2",
+      "category": "between-solid",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v27.jsonl",
+      "id": "exact-trace-2",
+      "category": "exact-trace",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v27.jsonl",
+      "id": "exact-trace-1",
+      "category": "exact-trace",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v27.jsonl",
+      "id": "exact-trace-3",
+      "category": "exact-trace",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v26.jsonl",
+      "id": "fresh-between-solid-1",
+      "category": "between-solid",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v27.jsonl",
+      "id": "exact-trace-2",
+      "category": "exact-trace",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v28.jsonl",
+      "id": "secant-circles-1",
+      "category": "secant-circles",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v27.jsonl",
+      "id": "exact-trace-3",
+      "category": "exact-trace",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v28.jsonl",
+      "id": "secant-circles-2",
+      "category": "secant-circles",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v28.jsonl",
+      "id": "secant-circles-1",
+      "category": "secant-circles",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v27.jsonl",
+      "id": "exact-trace-4",
+      "category": "exact-trace",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v28.jsonl",
+      "id": "secant-circles-2",
+      "category": "secant-circles",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v27.jsonl",
+      "id": "exact-trace-4",
+      "category": "exact-trace",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v29.jsonl",
+      "id": "construction-controls-1",
+      "category": "view-controls",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v28.jsonl",
+      "id": "secant-circles-4",
+      "category": "secant-circles",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v29.jsonl",
+      "id": "construction-controls-2",
+      "category": "view-controls",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received unsupported"
+    },
+    {
+      "split": "test-v29.jsonl",
+      "id": "construction-controls-1",
+      "category": "view-controls",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v29.jsonl",
+      "id": "construction-controls-2",
+      "category": "view-controls",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v28.jsonl",
+      "id": "secant-circles-4",
+      "category": "secant-circles",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v28.jsonl",
+      "id": "secant-circles-3",
+      "category": "secant-circles",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v29.jsonl",
+      "id": "construction-controls-3",
+      "category": "view-controls",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v30.jsonl",
+      "id": "normals-chords-1",
+      "category": "normals-chords",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v30.jsonl",
+      "id": "normals-chords-2",
+      "category": "normals-chords",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v29.jsonl",
+      "id": "construction-controls-3",
+      "category": "view-controls",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v28.jsonl",
+      "id": "secant-circles-3",
+      "category": "secant-circles",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test-v30.jsonl",
+      "id": "normals-chords-1",
+      "category": "normals-chords",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v30.jsonl",
+      "id": "normals-chords-2",
+      "category": "normals-chords",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v31.jsonl",
+      "id": "chord-followup-3",
+      "category": "normals-chords",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v31.jsonl",
+      "id": "chord-followup-1",
+      "category": "normals-chords",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v30.jsonl",
+      "id": "normals-chords-3",
+      "category": "normals-chords",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v31.jsonl",
+      "id": "chord-followup-3",
+      "category": "normals-chords",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v31.jsonl",
+      "id": "chord-followup-2",
+      "category": "normals-chords",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v30.jsonl",
+      "id": "normals-chords-3",
+      "category": "normals-chords",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v32.jsonl",
+      "id": "derivatives-segments-1",
+      "category": "derivatives-segments",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v31.jsonl",
+      "id": "chord-followup-1",
+      "category": "normals-chords",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v32.jsonl",
+      "id": "derivatives-segments-2",
+      "category": "derivatives-segments",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v31.jsonl",
+      "id": "chord-followup-2",
+      "category": "normals-chords",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v32.jsonl",
+      "id": "derivatives-segments-1",
+      "category": "derivatives-segments",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v33.jsonl",
+      "id": "medians-centroid-1",
+      "category": "medians-centroid",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v32.jsonl",
+      "id": "derivatives-segments-2",
+      "category": "derivatives-segments",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test-v33.jsonl",
+      "id": "medians-centroid-2",
+      "category": "medians-centroid",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v33.jsonl",
+      "id": "medians-centroid-1",
+      "category": "medians-centroid",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v33.jsonl",
+      "id": "medians-centroid-2",
+      "category": "medians-centroid",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test-v33.jsonl",
+      "id": "medians-centroid-3",
+      "category": "medians-centroid",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-001",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "temporary-data-read-only-policy",
+      "reason": "Correct requested engine query on temporary data; original workspace preserved."
+    },
+    {
+      "split": "test-v32.jsonl",
+      "id": "derivatives-segments-3",
+      "category": "derivatives-segments",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-002",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "temporary-data-read-only-policy",
+      "reason": "Correct requested engine query on temporary data; original workspace preserved."
+    },
+    {
+      "split": "test-v33.jsonl",
+      "id": "medians-centroid-3",
+      "category": "medians-centroid",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-003",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-002",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "temporary-data-read-only-policy",
+      "reason": "Correct requested engine query on temporary data; original workspace preserved."
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-003",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-004",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test-v32.jsonl",
+      "id": "derivatives-segments-3",
+      "category": "derivatives-segments",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-005",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-004",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-001",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-006",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-005",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-007",
+      "category": "algebra",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-008",
+      "category": "algebra",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-006",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-009",
+      "category": "navigation",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-008",
+      "category": "algebra",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-010",
+      "category": "reading",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected command, received reply"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-007",
+      "category": "algebra",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-009",
+      "category": "navigation",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-010",
+      "category": "reading",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "behavior-or-query-format-review",
+      "reason": "Wrong state, action, answer, or numeric expectation"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-011",
+      "category": "navigation",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-012",
+      "category": "algebra",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-013",
+      "category": "statistics",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-011",
+      "category": "navigation",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-014",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-012",
+      "category": "algebra",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": true,
+      "classification": "program-save-flag",
+      "reason": "Validated saved result matches authored work and action; legacy confirmation wording is irrelevant."
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-013",
+      "category": "statistics",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct behavior",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-015",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-014",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-017",
+      "category": "clarification",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-015",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-018",
+      "category": "unsupported",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-019",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-017",
+      "category": "clarification",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-019",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received reply"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-020",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-016",
+      "category": "safety",
+      "variant": "baseline",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received reply"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-020",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": true,
+      "pass": true,
+      "reason": "Correct abstention",
+      "classification": "strict-pass"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-018",
+      "category": "unsupported",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received reply"
+    },
+    {
+      "split": "test.jsonl",
+      "id": "test-016",
+      "category": "safety",
+      "variant": "short",
+      "historicalStrictPass": false,
+      "pass": false,
+      "classification": "status-mismatch",
+      "reason": "Expected unsupported, received reply"
+    }
+  ]
+}

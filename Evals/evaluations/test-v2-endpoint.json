@@ -1,0 +1,224 @@
+{
+  "split": "test-v2",
+  "mode": "endpoint",
+  "datasetSHA256": "e7fde354d214aff4c9e38457c50d4465a2cc10fa06b1e2744470be992182850c",
+  "createdAt": "2026-10-10T01:40:38.402Z",
+  "total": 24,
+  "scored": 0,
+  "passed": 0,
+  "unavailable": 24,
+  "accuracy": null,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "clarification": {
+      "passed": 0,
+      "scored": 0
+    },
+    "editing": {
+      "passed": 0,
+      "scored": 0
+    },
+    "algebra": {
+      "passed": 0,
+      "scored": 0
+    },
+    "reading": {
+      "passed": 0,
+      "scored": 0
+    },
+    "navigation": {
+      "passed": 0,
+      "scored": 0
+    },
+    "statistics": {
+      "passed": 0,
+      "scored": 0
+    },
+    "data": {
+      "passed": 0,
+      "scored": 0
+    },
+    "diagram": {
+      "passed": 0,
+      "scored": 0
+    },
+    "safety": {
+      "passed": 0,
+      "scored": 0
+    },
+    "unsupported": {
+      "passed": 0,
+      "scored": 0
+    }
+  },
+  "results": [
+    {
+      "id": "fresh-001",
+      "category": "clarification",
+      "pass": null,
+      "reason": "Endpoint HTTP 502",
+      "latencyMs": 1140
+    },
+    {
+      "id": "fresh-002",
+      "category": "clarification",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-003",
+      "category": "clarification",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-004",
+      "category": "clarification",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-005",
+      "category": "clarification",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-006",
+      "category": "clarification",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-007",
+      "category": "clarification",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-008",
+      "category": "clarification",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-009",
+      "category": "editing",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-010",
+      "category": "algebra",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-011",
+      "category": "algebra",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-012",
+      "category": "reading",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-013",
+      "category": "navigation",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-014",
+      "category": "statistics",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-015",
+      "category": "statistics",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-016",
+      "category": "statistics",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-017",
+      "category": "data",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-018",
+      "category": "statistics",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-019",
+      "category": "diagram",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-020",
+      "category": "editing",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-021",
+      "category": "safety",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-022",
+      "category": "safety",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-023",
+      "category": "safety",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    },
+    {
+      "id": "fresh-024",
+      "category": "unsupported",
+      "pass": null,
+      "reason": "Provider unavailable; remaining calls skipped",
+      "latencyMs": 0
+    }
+  ]
+}

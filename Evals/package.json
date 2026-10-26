@@ -1,0 +1,10 @@
+{
+  "name": "math-audio-evals",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "22.19.19",
+    "playwright": "1.64.1",
+    "vitest": "^5.0.4"
+  }
+}

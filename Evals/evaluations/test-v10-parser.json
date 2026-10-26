@@ -1,0 +1,224 @@
+{
+  "split": "test-v10",
+  "mode": "parser",
+  "datasetSHA256": "e5094b119be56b4090f431cc24194562337a60f8d3d320818f45e864644a62e7",
+  "createdAt": "2026-10-12T00:24:50.095Z",
+  "total": 17,
+  "scored": 17,
+  "passed": 17,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "natural_math": {
+      "passed": 17,
+      "scored": 17
+    }
+  },
+  "results": [
+    {
+      "id": "v10-001",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "could you clean up this expression please",
+        "message": ""
+      },
+      "latencyMs": 10
+    },
+    {
+      "id": "v10-002",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "collect my like terms together",
+        "message": ""
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v10-003",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "reduce this equation",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v10-004",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "cancel out these common factors on both sides",
+        "message": ""
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v10-005",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "combine constants in this equation",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v10-006",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "take five away from both sides of the equation",
+        "message": ""
+      },
+      "latencyMs": 2
+    },
+    {
+      "id": "v10-007",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "add negative seven on each side",
+        "message": ""
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v10-008",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "divide the equation by four",
+        "message": ""
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v10-009",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "multiply by one half on each side",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v10-010",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "double this equation",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v10-011",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "halve the both sides",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v10-012",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "subtract x from the left and right sides",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v10-013",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which number or expression should I use? Say the operation again with its exact value."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v10-014",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which number or expression should I use? Say the operation again with its exact value."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v10-015",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which operation do you mean? For example, say “subtract three from both sides.”"
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v10-016",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "Use a nonzero finite number so this operation preserves the equation."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v10-017",
+      "category": "natural_math",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "Multiplying or dividing by a variable can change the solution set. For now, use a nonzero number or dictate the next step explicitly."
+      },
+      "latencyMs": 0
+    }
+  ]
+}

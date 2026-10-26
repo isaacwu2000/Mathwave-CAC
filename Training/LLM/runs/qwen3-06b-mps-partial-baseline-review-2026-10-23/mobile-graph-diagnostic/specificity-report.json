@@ -1,0 +1,828 @@
+[
+  {
+    "id": "graph-exponential-base-parameter:2:final",
+    "lane": "Unchanged gold prestate replay from invalid generation; no model output applied",
+    "state": {
+      "mode": "equation",
+      "expression": "0",
+      "data": [
+        0,
+        0
+      ],
+      "diagram": [
+        "Start",
+        "Finish"
+      ],
+      "selection": 0,
+      "graph": true,
+      "graphScene": {
+        "rows": [
+          {
+            "expression": "b=2"
+          },
+          {
+            "expression": "y=b^x"
+          }
+        ]
+      }
+    },
+    "early": [
+      {
+        "tag": "SECTION",
+        "className": "graph-card learnunlock-controls",
+        "rect": {
+          "x": 0,
+          "y": 422,
+          "width": 390,
+          "height": 422
+        },
+        "height": "422px",
+        "maxHeight": "none",
+        "display": "flex",
+        "position": "fixed",
+        "flex": "0 1 auto",
+        "overflow": "hidden",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-panel-body",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 374
+        },
+        "height": "374px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "1 1 0%",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-studio graph-scene-studio learnunlock-controls",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 374
+        },
+        "height": "374px",
+        "maxHeight": "none",
+        "display": "flex",
+        "position": "static",
+        "flex": "0 1 auto",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-expressions",
+        "rect": {
+          "x": 0,
+          "y": 486,
+          "width": 390,
+          "height": 360
+        },
+        "height": "360px",
+        "maxHeight": "360px",
+        "display": "grid",
+        "position": "static",
+        "flex": "0 0 auto",
+        "overflow": "auto",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "chart-wrap",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 0
+        },
+        "height": "0px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "1 1 0%",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "learnunlock-canvas",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 0
+        },
+        "height": "0px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "relative",
+        "flex": "0 1 auto",
+        "overflow": "hidden",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "CANVAS",
+        "className": "",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 26
+        },
+        "height": "26px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "0 1 auto",
+        "overflow": "clip",
+        "widthAttribute": "390",
+        "heightAttribute": "26"
+      }
+    ],
+    "late": [
+      {
+        "tag": "SECTION",
+        "className": "graph-card learnunlock-controls",
+        "rect": {
+          "x": 0,
+          "y": 422,
+          "width": 390,
+          "height": 422
+        },
+        "height": "422px",
+        "maxHeight": "none",
+        "display": "flex",
+        "position": "fixed",
+        "flex": "0 1 auto",
+        "overflow": "hidden",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-panel-body",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 374
+        },
+        "height": "374px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "1 1 0%",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-studio graph-scene-studio learnunlock-controls",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 374
+        },
+        "height": "374px",
+        "maxHeight": "none",
+        "display": "flex",
+        "position": "static",
+        "flex": "0 1 auto",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-expressions",
+        "rect": {
+          "x": 0,
+          "y": 486,
+          "width": 390,
+          "height": 360
+        },
+        "height": "360px",
+        "maxHeight": "360px",
+        "display": "grid",
+        "position": "static",
+        "flex": "0 0 auto",
+        "overflow": "auto",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "chart-wrap",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 0
+        },
+        "height": "0px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "1 1 0%",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "learnunlock-canvas",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 0
+        },
+        "height": "0px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "relative",
+        "flex": "0 1 auto",
+        "overflow": "hidden",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "CANVAS",
+        "className": "",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 26
+        },
+        "height": "26px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "0 1 auto",
+        "overflow": "clip",
+        "widthAttribute": "390",
+        "heightAttribute": "26"
+      }
+    ],
+    "probe": [
+      {
+        "tag": "SECTION",
+        "className": "graph-card learnunlock-controls",
+        "rect": {
+          "x": 0,
+          "y": 422,
+          "width": 390,
+          "height": 422
+        },
+        "height": "422px",
+        "maxHeight": "none",
+        "display": "flex",
+        "position": "fixed",
+        "flex": "0 1 auto",
+        "overflow": "hidden",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-panel-body",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 374
+        },
+        "height": "374px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "1 1 0%",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-studio graph-scene-studio learnunlock-controls",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 374
+        },
+        "height": "374px",
+        "maxHeight": "none",
+        "display": "flex",
+        "position": "static",
+        "flex": "0 1 auto",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-expressions",
+        "rect": {
+          "x": 0,
+          "y": 708.96875,
+          "width": 390,
+          "height": 135.03125
+        },
+        "height": "135.031px",
+        "maxHeight": "135.04px",
+        "display": "grid",
+        "position": "static",
+        "flex": "0 0 auto",
+        "overflow": "auto",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "chart-wrap",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 222.96875
+        },
+        "height": "222.969px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "1 1 0%",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "learnunlock-canvas",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 222.96875
+        },
+        "height": "222.969px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "relative",
+        "flex": "0 1 auto",
+        "overflow": "hidden",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "CANVAS",
+        "className": "",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 223
+        },
+        "height": "223px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "0 1 auto",
+        "overflow": "clip",
+        "widthAttribute": "390",
+        "heightAttribute": "223"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "id": "graph-named-function-redefinition:2:final",
+    "lane": "Unchanged gold prestate replay from invalid generation; no model output applied",
+    "state": {
+      "mode": "equation",
+      "expression": "0",
+      "data": [
+        0,
+        0
+      ],
+      "diagram": [
+        "Start",
+        "Finish"
+      ],
+      "selection": 0,
+      "graph": true,
+      "graphScene": {
+        "rows": [
+          {
+            "expression": "f(x)=x+1"
+          },
+          {
+            "expression": "y=2*f(x)"
+          }
+        ]
+      }
+    },
+    "early": [
+      {
+        "tag": "SECTION",
+        "className": "graph-card learnunlock-controls",
+        "rect": {
+          "x": 0,
+          "y": 422,
+          "width": 390,
+          "height": 422
+        },
+        "height": "422px",
+        "maxHeight": "none",
+        "display": "flex",
+        "position": "fixed",
+        "flex": "0 1 auto",
+        "overflow": "hidden",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-panel-body",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 374
+        },
+        "height": "374px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "1 1 0%",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-studio graph-scene-studio learnunlock-controls",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 374
+        },
+        "height": "374px",
+        "maxHeight": "none",
+        "display": "flex",
+        "position": "static",
+        "flex": "0 1 auto",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-expressions",
+        "rect": {
+          "x": 0,
+          "y": 486,
+          "width": 390,
+          "height": 360
+        },
+        "height": "360px",
+        "maxHeight": "360px",
+        "display": "grid",
+        "position": "static",
+        "flex": "0 0 auto",
+        "overflow": "auto",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "chart-wrap",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 0
+        },
+        "height": "0px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "1 1 0%",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "learnunlock-canvas",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 0
+        },
+        "height": "0px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "relative",
+        "flex": "0 1 auto",
+        "overflow": "hidden",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "CANVAS",
+        "className": "",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 26
+        },
+        "height": "26px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "0 1 auto",
+        "overflow": "clip",
+        "widthAttribute": "390",
+        "heightAttribute": "26"
+      }
+    ],
+    "late": [
+      {
+        "tag": "SECTION",
+        "className": "graph-card learnunlock-controls",
+        "rect": {
+          "x": 0,
+          "y": 422,
+          "width": 390,
+          "height": 422
+        },
+        "height": "422px",
+        "maxHeight": "none",
+        "display": "flex",
+        "position": "fixed",
+        "flex": "0 1 auto",
+        "overflow": "hidden",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-panel-body",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 374
+        },
+        "height": "374px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "1 1 0%",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-studio graph-scene-studio learnunlock-controls",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 374
+        },
+        "height": "374px",
+        "maxHeight": "none",
+        "display": "flex",
+        "position": "static",
+        "flex": "0 1 auto",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-expressions",
+        "rect": {
+          "x": 0,
+          "y": 486,
+          "width": 390,
+          "height": 360
+        },
+        "height": "360px",
+        "maxHeight": "360px",
+        "display": "grid",
+        "position": "static",
+        "flex": "0 0 auto",
+        "overflow": "auto",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "chart-wrap",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 0
+        },
+        "height": "0px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "1 1 0%",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "learnunlock-canvas",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 0
+        },
+        "height": "0px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "relative",
+        "flex": "0 1 auto",
+        "overflow": "hidden",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "CANVAS",
+        "className": "",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 26
+        },
+        "height": "26px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "0 1 auto",
+        "overflow": "clip",
+        "widthAttribute": "390",
+        "heightAttribute": "26"
+      }
+    ],
+    "probe": [
+      {
+        "tag": "SECTION",
+        "className": "graph-card learnunlock-controls",
+        "rect": {
+          "x": 0,
+          "y": 422,
+          "width": 390,
+          "height": 422
+        },
+        "height": "422px",
+        "maxHeight": "none",
+        "display": "flex",
+        "position": "fixed",
+        "flex": "0 1 auto",
+        "overflow": "hidden",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-panel-body",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 374
+        },
+        "height": "374px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "1 1 0%",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-studio graph-scene-studio learnunlock-controls",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 374
+        },
+        "height": "374px",
+        "maxHeight": "none",
+        "display": "flex",
+        "position": "static",
+        "flex": "0 1 auto",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "graph-expressions",
+        "rect": {
+          "x": 0,
+          "y": 708.96875,
+          "width": 390,
+          "height": 135.03125
+        },
+        "height": "135.031px",
+        "maxHeight": "135.04px",
+        "display": "grid",
+        "position": "static",
+        "flex": "0 0 auto",
+        "overflow": "auto",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "chart-wrap",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 222.96875
+        },
+        "height": "222.969px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "1 1 0%",
+        "overflow": "visible",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "DIV",
+        "className": "learnunlock-canvas",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 222.96875
+        },
+        "height": "222.969px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "relative",
+        "flex": "0 1 auto",
+        "overflow": "hidden",
+        "widthAttribute": null,
+        "heightAttribute": null
+      },
+      {
+        "tag": "CANVAS",
+        "className": "",
+        "rect": {
+          "x": 0,
+          "y": 470,
+          "width": 390,
+          "height": 223
+        },
+        "height": "223px",
+        "maxHeight": "none",
+        "display": "block",
+        "position": "static",
+        "flex": "0 1 auto",
+        "overflow": "clip",
+        "widthAttribute": "390",
+        "heightAttribute": "223"
+      }
+    ],
+    "errors": []
+  }
+]

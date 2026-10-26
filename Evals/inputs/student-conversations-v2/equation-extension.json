@@ -1,0 +1,4771 @@
+[
+  {
+    "id": "eq2-coefficient-before-balancing",
+    "family": "eq2-coefficient-before-balancing",
+    "category": "algebra",
+    "focus": "Repair coefficient then remove an added constant",
+    "turns": [
+      {
+        "student": "Write three x plus four equals sixteen.",
+        "programs": [
+          "problem.save(math.equation(\"3*x+4=16\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "The three in front of x should be two.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),3,2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Take four off both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 6"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-right-total-before-dividing",
+    "family": "eq2-right-total-before-dividing",
+    "category": "algebra",
+    "focus": "Correct the total before undoing a coefficient",
+    "turns": [
+      {
+        "student": "Put down four x minus two equals ten.",
+        "programs": [
+          "problem.save(math.equation(\"4*x-2=10\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "The ten on the right should be eighteen.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),10,18));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Add two to each side.",
+        "programs": [
+          "problem.save(math.addBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 5"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-constant-sign-before-isolating",
+    "family": "eq2-constant-sign-before-isolating",
+    "category": "algebra",
+    "focus": "Correct an offset sign then apply its inverse",
+    "turns": [
+      {
+        "student": "Write five x plus seven equals eighteen.",
+        "programs": [
+          "problem.save(math.equation(\"5*x+7=18\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the plus seven to negative seven.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),7,-7));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Add seven to both sides.",
+        "programs": [
+          "problem.save(math.addBothSides(problem.currentEquation(),7));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 5"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-negative-coefficient-repair",
+    "family": "eq2-negative-coefficient-repair",
+    "category": "algebra",
+    "focus": "Repair negative coefficient without negating the constant",
+    "turns": [
+      {
+        "student": "Start with negative two x plus six equals twenty.",
+        "programs": [
+          "problem.save(math.equation(\"-2*x+6=20\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "That coefficient should be positive two.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"-2*x\",\"2*x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract six on both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),6));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 7"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-fraction-denominator-repair",
+    "family": "eq2-fraction-denominator-repair",
+    "category": "algebra",
+    "focus": "Correct a quotient denominator before clearing it",
+    "turns": [
+      {
+        "student": "Write x over five plus one equals four.",
+        "programs": [
+          "problem.save(math.equation(\"x/5+1=4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the five on the bottom to three.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),5,3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract one on each side.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),1));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 9"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-decimal-point-in-coefficient",
+    "family": "eq2-decimal-point-in-coefficient",
+    "category": "algebra",
+    "focus": "Repair decimal coefficient then divide by it",
+    "turns": [
+      {
+        "student": "Write zero point four x plus one equals three.",
+        "programs": [
+          "problem.save(math.equation(\"0.4*x+1=3\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "I meant zero point two, not zero point four.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),0.4,0.2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract one from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),1));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 10"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-replace-term-with-zero",
+    "family": "eq2-replace-term-with-zero",
+    "category": "algebra",
+    "focus": "Remove an extra term then divide a retained coefficient",
+    "turns": [
+      {
+        "student": "Put up six x plus five equals eighteen.",
+        "programs": [
+          "problem.save(math.equation(\"6*x+5=18\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "That extra five should be zero.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),5,0));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Divide both sides by six.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),6));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 3"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-edit-subtracted-variable-term",
+    "family": "eq2-edit-subtracted-variable-term",
+    "category": "algebra",
+    "focus": "Change a subtracted coefficient while keeping its subtraction",
+    "turns": [
+      {
+        "student": "Write seven x minus two x equals twenty.",
+        "programs": [
+          "problem.save(math.equation(\"7*x-2*x=20\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the two x term three x instead.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"2*x\",\"3*x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Combine like terms.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 5"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-edit-added-variable-term",
+    "family": "eq2-edit-added-variable-term",
+    "category": "algebra",
+    "focus": "Change one added product then simplify its sum",
+    "turns": [
+      {
+        "student": "Write two x plus five x equals twenty-four.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+5*x=24\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make that five x into six x.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"5*x\",\"6*x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Combine the x terms.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 3"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-edit-opposite-side-variable",
+    "family": "eq2-edit-opposite-side-variable",
+    "category": "algebra",
+    "focus": "Repair the right variable coefficient then collect left",
+    "turns": [
+      {
+        "student": "Write six x plus one equals two x plus thirteen.",
+        "programs": [
+          "problem.save(math.equation(\"6*x+1=2*x+13\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "The right-hand two x should be three x.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"2*x\",\"3*x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract three x from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),\"3*x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 4"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-edit-whole-right-expression",
+    "family": "eq2-edit-whole-right-expression",
+    "category": "algebra",
+    "focus": "Replace a whole equation side then collect variables",
+    "turns": [
+      {
+        "student": "Put up seven x plus four equals two x plus nine.",
+        "programs": [
+          "problem.save(math.equation(\"7*x+4=2*x+9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "The right side should be three x plus sixteen.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"2*x+9\",\"3*x+16\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract three x on both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),\"3*x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 3"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-edit-whole-left-expression",
+    "family": "eq2-edit-whole-left-expression",
+    "category": "algebra",
+    "focus": "Replace the left side rather than adding an operation",
+    "turns": [
+      {
+        "student": "Write two x minus three equals nine.",
+        "programs": [
+          "problem.save(math.equation(\"2*x-3=9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the whole left side four x plus one.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"2*x-3\",\"4*x+1\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract one from each side.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),1));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 2"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-group-constant-inside",
+    "family": "eq2-group-constant-inside",
+    "category": "algebra",
+    "focus": "Edit inside a product grouping before undoing its scale",
+    "turns": [
+      {
+        "student": "Write three times x plus two in brackets equals twenty-one.",
+        "programs": [
+          "problem.save(math.equation(\"3*(x+2)=21\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Inside the brackets, use x plus four.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"x+2\",\"x+4\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Divide both sides by three.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 3"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-group-to-difference",
+    "family": "eq2-group-to-difference",
+    "category": "algebra",
+    "focus": "Change a grouped sum to a difference then isolate",
+    "turns": [
+      {
+        "student": "Write two times x plus one in brackets equals eight.",
+        "programs": [
+          "problem.save(math.equation(\"2*(x+1)=8\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the brackets x minus one instead.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"x+1\",\"x-1\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Divide each side by two.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 5"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-outside-group-factor",
+    "family": "eq2-outside-group-factor",
+    "category": "algebra",
+    "focus": "Repair the outside factor while leaving bracket contents intact",
+    "turns": [
+      {
+        "student": "Write four times x minus two in brackets equals eighteen.",
+        "programs": [
+          "problem.save(math.equation(\"4*(x-2)=18\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "The four outside should be three.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),4,3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Divide both sides by three.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 8"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-negative-outside-group",
+    "family": "eq2-negative-outside-group",
+    "category": "algebra",
+    "focus": "Edit a negative outside factor then divide by a negative",
+    "turns": [
+      {
+        "student": "Write negative two times x plus one in brackets equals twelve.",
+        "programs": [
+          "problem.save(math.equation(\"-2*(x+1)=12\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change negative two outside to negative three.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"-2*(x+1)\",\"-3*(x+1)\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Divide both sides by negative three.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),-3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = -5"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-numerator-sum-correction",
+    "family": "eq2-numerator-sum-correction",
+    "category": "algebra",
+    "focus": "Edit a grouped numerator before clearing a denominator",
+    "turns": [
+      {
+        "student": "Write x plus two all over three equals four.",
+        "programs": [
+          "problem.save(math.equation(\"(x+2)/3=4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the numerator to x minus two.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"x+2\",\"x-2\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Multiply both sides by three.",
+        "programs": [
+          "problem.save(math.multiplyBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 14"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-whole-quotient-replacement",
+    "family": "eq2-whole-quotient-replacement",
+    "category": "algebra",
+    "focus": "Replace a quotient structure without changing the other side",
+    "turns": [
+      {
+        "student": "Write x over two plus three equals nine.",
+        "programs": [
+          "problem.save(math.equation(\"x/2+3=9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Replace x over two with x over three.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"x/2\",\"x/3\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract three on both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 18"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-fractional-offset-correction",
+    "family": "eq2-fractional-offset-correction",
+    "category": "algebra",
+    "focus": "Edit a fraction constant before removing it",
+    "turns": [
+      {
+        "student": "Write x plus one half equals two.",
+        "programs": [
+          "problem.save(math.equation(\"x+1/2=2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "That one half should be three halves.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"1/2\",\"3/2\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract three halves on both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),\"3/2\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 0.5"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-fractional-coefficient-correction",
+    "family": "eq2-fractional-coefficient-correction",
+    "category": "algebra",
+    "focus": "Replace fractional product coefficient then undo it",
+    "turns": [
+      {
+        "student": "Write one half times x equals six.",
+        "programs": [
+          "problem.save(math.equation(\"(1/2)*x=6\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Use one third times x instead.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"(1/2)*x\",\"(1/3)*x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Multiply both sides by three.",
+        "programs": [
+          "problem.save(math.multiplyBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 18"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-subtract-negative-correction",
+    "family": "eq2-subtract-negative-correction",
+    "category": "algebra",
+    "focus": "Correct a negative being subtracted before balancing",
+    "turns": [
+      {
+        "student": "Put up x minus negative two equals seven.",
+        "programs": [
+          "problem.save(math.equation(\"x-(-2)=7\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "The negative two should be negative three.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),-2,-3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract three from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 4"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-negative-numerator-correction",
+    "family": "eq2-negative-numerator-correction",
+    "category": "algebra",
+    "focus": "Repair a negative numerator without editing its denominator",
+    "turns": [
+      {
+        "student": "Write negative x over four equals three.",
+        "programs": [
+          "problem.save(math.equation(\"-x/4=3\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "The numerator should be negative two x.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"-x\",\"-2*x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Multiply both sides by four.",
+        "programs": [
+          "problem.save(math.multiplyBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = -6"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-switch-coefficient-to-fraction",
+    "family": "eq2-switch-coefficient-to-fraction",
+    "category": "algebra",
+    "focus": "Turn a whole coefficient into a fractional coefficient",
+    "turns": [
+      {
+        "student": "Write two x plus one equals seven.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+1=7\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make two x into x over two.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"2*x\",\"x/2\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Take one off both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),1));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 12"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-right-side-signed-group",
+    "family": "eq2-right-side-signed-group",
+    "category": "algebra",
+    "focus": "Repair a grouped right side then simplify it",
+    "turns": [
+      {
+        "student": "Write three x equals two times five minus one in brackets.",
+        "programs": [
+          "problem.save(math.equation(\"3*x=2*(5-1)\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Inside the brackets, that five should be seven.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),5,7));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Simplify both sides.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 4"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-insert-parentheses-left",
+    "family": "eq2-insert-parentheses-left",
+    "category": "algebra",
+    "focus": "Replace an ungrouped left side with a grouped product",
+    "turns": [
+      {
+        "student": "Write two x plus three equals twenty.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+3=20\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Actually the left side is two times x plus three in brackets.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"2*x+3\",\"2*(x+3)\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Divide both sides by two.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 7"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-remove-unintended-parentheses",
+    "family": "eq2-remove-unintended-parentheses",
+    "category": "algebra",
+    "focus": "Remove grouping around an unintended multiplied constant",
+    "turns": [
+      {
+        "student": "Write three times x plus four in brackets equals nineteen.",
+        "programs": [
+          "problem.save(math.equation(\"3*(x+4)=19\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "I meant three x plus four, with the four outside.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"3*(x+4)\",\"3*x+4\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract four on both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 5"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-coefficient-not-equal-constant",
+    "family": "eq2-coefficient-not-equal-constant",
+    "category": "algebra",
+    "focus": "Repeated two must edit the coefficient occurrence only",
+    "turns": [
+      {
+        "student": "Write two x plus two equals ten.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+2=10\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change only the two in front of x to four.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,4,\"2\"),4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract the other two from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 2"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-offset-not-equal-coefficient",
+    "family": "eq2-offset-not-equal-coefficient",
+    "category": "algebra",
+    "focus": "Repeated three must edit only the added constant",
+    "turns": [
+      {
+        "student": "Write three x plus three equals fifteen.",
+        "programs": [
+          "problem.save(math.equation(\"3*x+3=15\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the added three to six. Leave three x alone.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,6,\"3\"),6));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract six on both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),6));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 3"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-right-constant-not-left-copy",
+    "family": "eq2-right-constant-not-left-copy",
+    "category": "algebra",
+    "focus": "Equal literals on opposing equation sides require right-only editing",
+    "turns": [
+      {
+        "student": "Write two x plus four equals four.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+4=4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change just the four on the right to twelve.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,7,\"4\"),12));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract four on each side.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 4"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-left-coefficient-not-right-copy",
+    "family": "eq2-left-coefficient-not-right-copy",
+    "category": "algebra",
+    "focus": "Same coefficient on both sides must preserve the right copy",
+    "turns": [
+      {
+        "student": "Write four x plus one equals four x plus nine.",
+        "programs": [
+          "problem.save(math.equation(\"4*x+1=4*x+9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the left coefficient to six. Keep the right one four.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,4,\"4\"),6));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract four x from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),\"4*x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 4"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-right-coefficient-not-left-copy",
+    "family": "eq2-right-coefficient-not-left-copy",
+    "category": "algebra",
+    "focus": "Same coefficient on both sides must preserve the left copy",
+    "turns": [
+      {
+        "student": "Write three x plus two equals three x plus ten.",
+        "programs": [
+          "problem.save(math.equation(\"3*x+2=3*x+10\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the right-hand three x just x.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,8,\"3 * x\"),\"x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract x on each side.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),\"x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 4"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-first-of-two-added-constants",
+    "family": "eq2-first-of-two-added-constants",
+    "category": "algebra",
+    "focus": "Two equal addends require first occurrence only",
+    "turns": [
+      {
+        "student": "Write x plus two plus two equals nine.",
+        "programs": [
+          "problem.save(math.equation(\"x+2+2=9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the first added two to four.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,5,\"2\"),4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract six on both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),6));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 3"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-second-of-two-added-constants",
+    "family": "eq2-second-of-two-added-constants",
+    "category": "algebra",
+    "focus": "Two equal addends require second occurrence only",
+    "turns": [
+      {
+        "student": "Write x plus three plus three equals eleven.",
+        "programs": [
+          "problem.save(math.equation(\"x+3+3=11\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the second added three to five.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,6,\"3\"),5));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract eight from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),8));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 3"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-numerator-variable-not-denominator",
+    "family": "eq2-numerator-variable-not-denominator",
+    "category": "algebra",
+    "focus": "Repeated variable must edit only the numerator occurrence",
+    "turns": [
+      {
+        "student": "Write x plus one over x plus two equals three. Put brackets around the top and bottom.",
+        "programs": [
+          "problem.save(math.equation(\"(x+1)/(x+2)=3\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the x in the numerator to two x.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,4,\"x\"),\"2*x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read just the numerator back.",
+        "programs": [
+          "math.read(math.part(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "stepDelta": 0,
+          "messageIncludes": [
+            "2 times x plus 1"
+          ]
+        }
+      },
+      {
+        "student": "Read the bottom too.",
+        "programs": [
+          "math.read(math.part(problem.currentEquation(),8));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "stepDelta": 0,
+          "messageIncludes": [
+            "x plus 2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-denominator-constant-not-numerator",
+    "family": "eq2-denominator-constant-not-numerator",
+    "category": "algebra",
+    "focus": "Repeated literal in fraction must edit only denominator",
+    "turns": [
+      {
+        "student": "Write x plus two all over two equals five.",
+        "programs": [
+          "problem.save(math.equation(\"(x+2)/2=5\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change only the bottom two to four.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,6,\"2\"),4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Multiply both sides by four.",
+        "programs": [
+          "problem.save(math.multiplyBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 18"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-base-not-exponent",
+    "family": "eq2-base-not-exponent",
+    "category": "algebra",
+    "focus": "Equal numeric base and exponent need different targets",
+    "turns": [
+      {
+        "student": "Write two squared, times x, equals eighteen.",
+        "programs": [
+          "problem.save(math.equation(\"2^2*x=18\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the base two to three, but keep it squared.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,4,\"2\"),3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Simplify the coefficient.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 2"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-left-side-to-difference",
+    "family": "eq2-left-side-to-difference",
+    "category": "algebra",
+    "focus": "Swap only a complete left side to a difference",
+    "turns": [
+      {
+        "student": "Write x plus one equals nine.",
+        "programs": [
+          "problem.save(math.equation(\"x+1=9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the whole left side two x minus three.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,2,\"x + 1\"),\"2*x-3\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Add three on both sides.",
+        "programs": [
+          "problem.save(math.addBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 6"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-right-side-to-variable-sum",
+    "family": "eq2-right-side-to-variable-sum",
+    "category": "algebra",
+    "focus": "Replace complete right side with a variable sum",
+    "turns": [
+      {
+        "student": "Write five x equals ten.",
+        "programs": [
+          "problem.save(math.equation(\"5*x=10\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "The right side should be two x plus nine.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,5,\"10\"),\"2*x+9\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract two x from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),\"2*x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 3"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-left-side-to-grouped-quotient",
+    "family": "eq2-left-side-to-grouped-quotient",
+    "category": "algebra",
+    "focus": "Change complete left expression into a grouped quotient",
+    "turns": [
+      {
+        "student": "Write x plus two equals four.",
+        "programs": [
+          "problem.save(math.equation(\"x+2=4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the left side to x plus two all over three.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,2,\"x + 2\"),\"(x+2)/3\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Multiply both sides by three.",
+        "programs": [
+          "problem.save(math.multiplyBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 10"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-right-side-to-negative-value",
+    "family": "eq2-right-side-to-negative-value",
+    "category": "algebra",
+    "focus": "Replace complete right sum with a negative literal",
+    "turns": [
+      {
+        "student": "Write two x equals eight minus two.",
+        "programs": [
+          "problem.save(math.equation(\"2*x=8-2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "The whole right side should be negative six.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,5,\"8 - 2\"),-6));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Divide both sides by two.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = -3"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-left-side-retain-right-group",
+    "family": "eq2-left-side-retain-right-group",
+    "category": "algebra",
+    "focus": "Left-only replacement leaves a grouped right side intact",
+    "turns": [
+      {
+        "student": "Write x plus one equals two times three plus one in brackets.",
+        "programs": [
+          "problem.save(math.equation(\"x+1=2*(3+1)\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make only the left side two x.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,2,\"x + 1\"),\"2*x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Simplify the right side too.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 4"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-right-side-repeated-whole-group",
+    "family": "eq2-right-side-repeated-whole-group",
+    "category": "algebra",
+    "focus": "Right-only group replacement when both sides share a term",
+    "turns": [
+      {
+        "student": "Write x plus two equals x plus two.",
+        "programs": [
+          "problem.save(math.equation(\"x+2=x+2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make just the right side three x minus four.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,5,\"x + 2\"),\"3*x-4\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract x from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),\"x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 3"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-left-side-repeated-whole-group",
+    "family": "eq2-left-side-repeated-whole-group",
+    "category": "algebra",
+    "focus": "Left-only group replacement breaks an initial identity",
+    "turns": [
+      {
+        "student": "Write x minus three equals x minus three.",
+        "programs": [
+          "problem.save(math.equation(\"x-3=x-3\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make only the left side two x plus one.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,2,\"x - 3\"),\"2*x+1\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract x on both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),\"x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = -4"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-replace-right-zero-with-expression",
+    "family": "eq2-replace-right-zero-with-expression",
+    "category": "algebra",
+    "focus": "A right zero becomes an expression rather than a missing-value marker",
+    "turns": [
+      {
+        "student": "Write three x minus four equals zero.",
+        "programs": [
+          "problem.save(math.equation(\"3*x-4=0\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Put x plus six on the right instead of zero.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),0,\"x+6\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract x on both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),\"x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 5"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-replace-coefficient-product-with-quotient",
+    "family": "eq2-replace-coefficient-product-with-quotient",
+    "category": "algebra",
+    "focus": "A product becomes a quotient before clearing its denominator",
+    "turns": [
+      {
+        "student": "Write four x minus two equals six.",
+        "programs": [
+          "problem.save(math.equation(\"4*x-2=6\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Replace four x with x over four.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"4*x\",\"x/4\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Add two on both sides.",
+        "programs": [
+          "problem.save(math.addBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check what x is now without changing my steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 32"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-coefficient-then-offset",
+    "family": "eq2-coefficient-then-offset",
+    "category": "algebra",
+    "focus": "Two explicit edits target the updated equation in sequence",
+    "turns": [
+      {
+        "student": "Write two x plus three equals eleven.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+3=11\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the coefficient four.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),2,4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "And change the three to negative one.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),3,-1));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check the solution for this version?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 3"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-offset-then-total",
+    "family": "eq2-offset-then-total",
+    "category": "algebra",
+    "focus": "A second edit changes the total after a constant correction",
+    "turns": [
+      {
+        "student": "Write three x minus two equals ten.",
+        "programs": [
+          "problem.save(math.equation(\"3*x-2=10\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "The two should be five.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),2,5));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Also change ten to thirteen.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),10,13));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check the solution for this version?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 6"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-group-factor-then-inner-offset",
+    "family": "eq2-group-factor-then-inner-offset",
+    "category": "algebra",
+    "focus": "Two edits distinguish outer and inner parts of a product",
+    "turns": [
+      {
+        "student": "Write two times x plus three in brackets equals twenty.",
+        "programs": [
+          "problem.save(math.equation(\"2*(x+3)=20\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the outside two a four.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),2,4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Inside, change x plus three to x minus one.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"x+3\",\"x-1\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check the solution for this version?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 6"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-denominator-then-numerator",
+    "family": "eq2-denominator-then-numerator",
+    "category": "algebra",
+    "focus": "Edit denominator then numerator on current quotient",
+    "turns": [
+      {
+        "student": "Write x plus one all over two equals five.",
+        "programs": [
+          "problem.save(math.equation(\"(x+1)/2=5\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the denominator three.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,6,\"2\"),3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Now change the numerator to x minus two.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"x+1\",\"x-2\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check the solution for this version?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x \u2248 17"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-two-sides-coefficient-corrections",
+    "family": "eq2-two-sides-coefficient-corrections",
+    "category": "algebra",
+    "focus": "Two coefficient edits on opposite sides keep roles separate",
+    "turns": [
+      {
+        "student": "Write two x plus one equals three x minus five.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+1=3*x-5\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the left coefficient four.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,4,\"2\"),4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Make the right coefficient two.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,9,\"3\"),2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check the solution for this version?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = -3"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-introduce-then-remove-duplicate",
+    "family": "eq2-introduce-then-remove-duplicate",
+    "category": "algebra",
+    "focus": "Repeated constant introduced by first edit needs scoped second edit",
+    "turns": [
+      {
+        "student": "Write two x plus three equals nine.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+3=9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the three to two.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),3,2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Now change only the coefficient two to one.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,4,\"2\"),1));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check the solution for this version?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 7"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-rename-back-before-solve",
+    "family": "eq2-rename-back-before-solve",
+    "category": "algebra",
+    "focus": "Variable renaming is reversible before an x-only solve",
+    "turns": [
+      {
+        "student": "Write five x minus two equals eighteen.",
+        "programs": [
+          "problem.save(math.equation(\"5*x-2=18\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Use t instead of x for a moment.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"x\",\"t\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Actually switch t back to x.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"t\",\"x\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check the solution for this version?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 4"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-change-sign-twice",
+    "family": "eq2-change-sign-twice",
+    "category": "algebra",
+    "focus": "Two sign edits are ordinary current-value edits",
+    "turns": [
+      {
+        "student": "Write x plus four equals nine.",
+        "programs": [
+          "problem.save(math.equation(\"x+4=9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make that added four negative four.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),4,-4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Change the right nine to negative nine too.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),9,-9));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check the solution for this version?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = -5"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-replace-whole-left-then-inner-term",
+    "family": "eq2-replace-whole-left-then-inner-term",
+    "category": "algebra",
+    "focus": "Editing a whole side then a newly introduced subexpression",
+    "turns": [
+      {
+        "student": "Write x plus one equals sixteen.",
+        "programs": [
+          "problem.save(math.equation(\"x+1=16\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the left side two times x plus three in brackets.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"x+1\",\"2*(x+3)\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Now make the brackets x minus one.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"x+3\",\"x-1\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check the solution for this version?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 9"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-quotient-then-repeated-constant",
+    "family": "eq2-quotient-then-repeated-constant",
+    "category": "algebra",
+    "focus": "Current part references must be rebuilt after expression structure changes",
+    "turns": [
+      {
+        "student": "Write four x equals twelve.",
+        "programs": [
+          "problem.save(math.equation(\"4*x=12\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make four x into x plus four all over four.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"4*x\",\"(x+4)/4\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Change only the bottom four to two.",
+        "programs": [
+          "const e=problem.currentEquation(); problem.save(math.replacePart(e,math.part(e,6,\"4\"),2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check the solution for this version?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 20"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-undo-edited-coefficient-resume",
+    "family": "eq2-undo-edited-coefficient-resume",
+    "category": "algebra",
+    "focus": "Undo a coefficient edit before resuming original algebra",
+    "turns": [
+      {
+        "student": "Write three x plus two equals eleven.",
+        "programs": [
+          "problem.save(math.equation(\"3*x+2=11\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the three to five.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),3,5));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Undo that coefficient change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {
+          "expression": "3 * x + 2 = 11"
+        }
+      },
+      {
+        "student": "Take two off both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Check x for the original problem.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 3"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-redo-offset-after-query",
+    "family": "eq2-redo-offset-after-query",
+    "category": "algebra",
+    "focus": "A read-only solution does not consume a redoable offset edit",
+    "turns": [
+      {
+        "student": "Write two x plus one equals nine.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+1=9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change one to three.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),1,3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Undo that.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Check x before I redo it.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 4"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      },
+      {
+        "student": "Redo that offset change.",
+        "programs": [
+          "history.redo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Check x again now.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 3"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-two-edits-single-request-undo",
+    "family": "eq2-two-edits-single-request-undo",
+    "category": "algebra",
+    "focus": "Undo a two-program edit request as a whole",
+    "turns": [
+      {
+        "student": "Write two x plus three equals eleven.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+3=11\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the coefficient to four and the right side to nineteen.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),2,4));",
+          "problem.save(math.replace(problem.currentEquation(),11,19));"
+        ],
+        "expect": {
+          "stepDelta": 2
+        }
+      },
+      {
+        "student": "Undo that request.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {
+          "expression": "2 * x + 3 = 11"
+        }
+      },
+      {
+        "student": "Check the original answer.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 4"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-ordered-balancing-after-correction",
+    "family": "eq2-ordered-balancing-after-correction",
+    "category": "algebra",
+    "focus": "Apply an ordered balancing request after an entry fix",
+    "turns": [
+      {
+        "student": "Write three x plus five equals fourteen.",
+        "programs": [
+          "problem.save(math.equation(\"3*x+5=14\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "The five should be two.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),5,2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract two, then divide both sides by three. Keep both steps.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),2));",
+          "problem.save(math.divideBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "stepDelta": 2
+        }
+      },
+      {
+        "student": "Simplify that result.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 4",
+          "stepDelta": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-edit-after-undo-branches",
+    "family": "eq2-edit-after-undo-branches",
+    "category": "algebra",
+    "focus": "Branch from restored equation instead of editing the discarded version",
+    "turns": [
+      {
+        "student": "Write x plus two equals eight.",
+        "programs": [
+          "problem.save(math.equation(\"x+2=8\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the two to five.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),2,5));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Undo that.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Use negative two instead of the original two.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),2,-2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "What is x for this branch?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 10"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-correction-replaces-wrong-addition",
+    "family": "eq2-correction-replaces-wrong-addition",
+    "category": "algebra",
+    "focus": "Correct a mistaken balancing operand without applying both operands",
+    "turns": [
+      {
+        "student": "Write x minus four equals six.",
+        "programs": [
+          "problem.save(math.equation(\"x-4=6\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Add three to both sides.",
+        "programs": [
+          "problem.save(math.addBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Sorry, I meant add four instead.",
+        "programs": [
+          "problem.save(math.addBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {
+          "expression": "x - 4 + 4 = 6 + 4"
+        },
+        "status": "correction"
+      },
+      {
+        "student": "Simplify it.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 10",
+          "stepDelta": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-correction-replaces-wrong-division",
+    "family": "eq2-correction-replaces-wrong-division",
+    "category": "algebra",
+    "focus": "Correction rewinds a mistaken divisor instead of dividing twice",
+    "turns": [
+      {
+        "student": "Write six x equals eighteen.",
+        "programs": [
+          "problem.save(math.equation(\"6*x=18\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Divide both sides by three.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Wait, I meant divide by six.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),6));"
+        ],
+        "expect": {},
+        "status": "correction"
+      },
+      {
+        "student": "Simplify the corrected step.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 3",
+          "stepDelta": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-correction-replaces-wrong-multiplication",
+    "family": "eq2-correction-replaces-wrong-multiplication",
+    "category": "algebra",
+    "focus": "Correct a denominator-clearing multiplier",
+    "turns": [
+      {
+        "student": "Write x over four equals three.",
+        "programs": [
+          "problem.save(math.equation(\"x/4=3\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Multiply both sides by two.",
+        "programs": [
+          "problem.save(math.multiplyBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "I meant multiply both sides by four instead.",
+        "programs": [
+          "problem.save(math.multiplyBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {},
+        "status": "correction"
+      },
+      {
+        "student": "Simplify now.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 12",
+          "stepDelta": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-correct-edit-target-before-solving",
+    "family": "eq2-correct-edit-target-before-solving",
+    "category": "algebra",
+    "focus": "Replace a mistaken literal edit with the intended literal edit",
+    "turns": [
+      {
+        "student": "Write two x plus five equals thirteen.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+5=13\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the five to seven.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),5,7));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Sorry, I meant change five to three.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),5,3));"
+        ],
+        "expect": {},
+        "status": "correction"
+      },
+      {
+        "student": "Can you check x after that fix?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 5"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-correct-sign-of-balancing-operand",
+    "family": "eq2-correct-sign-of-balancing-operand",
+    "category": "algebra",
+    "focus": "Correct a subtraction operand from positive to negative",
+    "turns": [
+      {
+        "student": "Write x minus two equals seven.",
+        "programs": [
+          "problem.save(math.equation(\"x-2=7\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract two on each side.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "I meant subtract negative two.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),-2));"
+        ],
+        "expect": {},
+        "status": "correction"
+      },
+      {
+        "student": "Simplify the corrected version.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 9",
+          "stepDelta": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-suggest-after-coefficient-edit",
+    "family": "eq2-suggest-after-coefficient-edit",
+    "category": "algebra",
+    "focus": "An algebra suggestion is deferred after an explicit edit",
+    "turns": [
+      {
+        "student": "Write two x plus four equals twelve.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+4=12\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the coefficient to four.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),2,4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Suggest the next move, but do not do it.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "stepDelta": 0
+        },
+        "status": "explanation",
+        "message": "Try subtracting four from both sides."
+      },
+      {
+        "student": "Yes, do that.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Check what x should be.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 2"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-decline-suggested-edit",
+    "family": "eq2-decline-suggested-edit",
+    "category": "algebra",
+    "focus": "A deferred edit stays unapplied when a different action is requested",
+    "turns": [
+      {
+        "student": "Write x plus three equals ten.",
+        "programs": [
+          "problem.save(math.equation(\"x+3=10\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Suggest changing the three to five, but leave it for now.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),3,5));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "stepDelta": 0
+        },
+        "status": "explanation",
+        "message": "You could change the added three to five."
+      },
+      {
+        "student": "No, keep the equation. Subtract three from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Simplify it.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 7",
+          "stepDelta": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-suggest-two-ordered-steps",
+    "family": "eq2-suggest-two-ordered-steps",
+    "category": "algebra",
+    "focus": "Acceptance applies both requested suggested steps in order",
+    "turns": [
+      {
+        "student": "Write two x plus six equals sixteen.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+6=16\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Suggest subtracting six and then dividing by two. Do not apply it yet.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),6));",
+          "problem.save(math.divideBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "stepDelta": 0
+        },
+        "status": "explanation",
+        "message": "Subtract six from both sides, then divide both sides by two."
+      },
+      {
+        "student": "Okay, do it.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),6));",
+          "problem.save(math.divideBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {
+          "stepDelta": 2
+        }
+      },
+      {
+        "student": "Simplify the answer.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 5",
+          "stepDelta": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-undo-query-edited-right-side",
+    "family": "eq2-undo-query-edited-right-side",
+    "category": "algebra",
+    "focus": "Undo still targets the edit after reading one side",
+    "turns": [
+      {
+        "student": "Write three x equals fifteen.",
+        "programs": [
+          "problem.save(math.equation(\"3*x=15\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change fifteen to twenty-one.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),15,21));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read only the right side.",
+        "programs": [
+          "math.read(math.rightSide(problem.currentEquation()));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "stepDelta": 0,
+          "messageIncludes": [
+            "21"
+          ]
+        }
+      },
+      {
+        "student": "Undo that last change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {
+          "expression": "3 * x = 15"
+        }
+      },
+      {
+        "student": "Check x now.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 5"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-undo-two-edits-then-read",
+    "family": "eq2-undo-two-edits-then-read",
+    "category": "algebra",
+    "focus": "Counted undo restores original equation after independent edits",
+    "turns": [
+      {
+        "student": "Write two x plus one equals nine.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+1=9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the coefficient to four.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),2,4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Change the one to five.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),1,5));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Undo both of those changes.",
+        "programs": [
+          "history.undo(2);"
+        ],
+        "expect": {
+          "expression": "2 * x + 1 = 9"
+        }
+      },
+      {
+        "student": "Can you check the original x?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 4"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-redo-two-edits-then-read",
+    "family": "eq2-redo-two-edits-then-read",
+    "category": "algebra",
+    "focus": "Counted redo restores two consecutive edits",
+    "turns": [
+      {
+        "student": "Write two x plus one equals nine.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+1=9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the coefficient to four.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),2,4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Change the one to five.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),1,5));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Undo both changes.",
+        "programs": [
+          "history.undo(2);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Redo both changes.",
+        "programs": [
+          "history.redo(2);"
+        ],
+        "expect": {
+          "expression": "4 * x + 5 = 9"
+        }
+      },
+      {
+        "student": "Check x in the redone version.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 1"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-read-left-after-right-edit",
+    "family": "eq2-read-left-after-right-edit",
+    "category": "algebra",
+    "focus": "Reading left side must ignore a corrected right-hand value",
+    "turns": [
+      {
+        "student": "Write two x plus three equals nine.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+3=9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the right nine to eleven.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),9,11));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read only the left side.",
+        "programs": [
+          "math.read(math.leftSide(problem.currentEquation()));"
+        ],
+        "expect": {
+          "readOnly": true,
+          "stepDelta": 0,
+          "messageIncludes": [
+            "2 times x plus 3"
+          ]
+        }
+      },
+      {
+        "student": "Now check x.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 4"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-swap-before-scoped-edit",
+    "family": "eq2-swap-before-scoped-edit",
+    "category": "algebra",
+    "focus": "Side labels are resolved after a swap, not against old orientation",
+    "turns": [
+      {
+        "student": "Write x plus four equals two x minus one.",
+        "programs": [
+          "problem.save(math.equation(\"x+4=2*x-1\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Swap the sides.",
+        "programs": [
+          "problem.save(math.swapSides(problem.currentEquation()));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "On the new left, change the minus one to minus three.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),1,3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Check x for that equation.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 7"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-swap-after-edit-and-resume",
+    "family": "eq2-swap-after-edit-and-resume",
+    "category": "algebra",
+    "focus": "After editing, swapping sides retains the corrected expression",
+    "turns": [
+      {
+        "student": "Write four x plus two equals ten.",
+        "programs": [
+          "problem.save(math.equation(\"4*x+2=10\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the four to two.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),4,2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Swap the sides.",
+        "programs": [
+          "problem.save(math.swapSides(problem.currentEquation()));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract two from both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Can you check x?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 4"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-read-equation-after-two-step-request",
+    "family": "eq2-read-equation-after-two-step-request",
+    "category": "algebra",
+    "focus": "Readback must describe the result of both ordered operations",
+    "turns": [
+      {
+        "student": "Write x over three plus two equals six.",
+        "programs": [
+          "problem.save(math.equation(\"x/3+2=6\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Subtract two and then multiply both sides by three.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),2));",
+          "problem.save(math.multiplyBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "stepDelta": 2
+        }
+      },
+      {
+        "student": "Simplify the result.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 12",
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read the whole result.",
+        "programs": [
+          "math.read(problem.currentEquation());"
+        ],
+        "expect": {
+          "readOnly": true,
+          "stepDelta": 0,
+          "messageIncludes": [
+            "x equals 12"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-read-only-check-between-two-edits",
+    "family": "eq2-read-only-check-between-two-edits",
+    "category": "algebra",
+    "focus": "A solution query does not change targets for the next edit",
+    "turns": [
+      {
+        "student": "Write two x plus one equals nine.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+1=9\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the one to three.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),1,3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Check x for a second.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 3"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      },
+      {
+        "student": "Now change that three to five.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),3,5));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Check x after the second edit.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 2"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-undo-group-replacement",
+    "family": "eq2-undo-group-replacement",
+    "category": "algebra",
+    "focus": "Undo restores a grouped expression rather than its simplified shape",
+    "turns": [
+      {
+        "student": "Write two times x plus three in brackets equals sixteen.",
+        "programs": [
+          "problem.save(math.equation(\"2*(x+3)=16\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the bracketed part x minus one.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"x+3\",\"x-1\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Undo the bracket change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {
+          "expression": "2 * (x + 3) = 16"
+        }
+      },
+      {
+        "student": "What is x for the original brackets?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 5"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-redo-fraction-edit",
+    "family": "eq2-redo-fraction-edit",
+    "category": "algebra",
+    "focus": "Redo restores a denominator correction exactly once",
+    "turns": [
+      {
+        "student": "Write x over two equals six.",
+        "programs": [
+          "problem.save(math.equation(\"x/2=6\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the denominator to three.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),2,3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Undo that.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Redo it.",
+        "programs": [
+          "history.redo(1);"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "What is x after the redo?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 18"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-cancel-extra-negative-term",
+    "family": "eq2-cancel-extra-negative-term",
+    "category": "algebra",
+    "focus": "Remove an accidentally added negative term and continue balancing",
+    "turns": [
+      {
+        "student": "Write three x plus negative two equals ten.",
+        "programs": [
+          "problem.save(math.equation(\"3*x+(-2)=10\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "That negative two should be zero.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),-2,0));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Also change the ten to twelve.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),10,12));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Divide both sides by three and simplify.",
+        "programs": [
+          "problem.save(math.divideBothSides(problem.currentEquation(),3));",
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 4",
+          "stepDelta": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-clear-undo-after-edit",
+    "family": "eq2-clear-undo-after-edit",
+    "category": "algebra",
+    "focus": "Clearing after an edit is recoverable as the edited equation",
+    "turns": [
+      {
+        "student": "Write x plus two equals eight.",
+        "programs": [
+          "problem.save(math.equation(\"x+2=8\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the two to three.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),2,3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Clear this problem.",
+        "programs": [
+          "problem.save(problem.blank());"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Undo the clear.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {
+          "expression": "x + 3 = 8"
+        }
+      },
+      {
+        "student": "Check x in the recovered equation.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 5"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-replace-entire-problem-undo",
+    "family": "eq2-replace-entire-problem-undo",
+    "category": "algebra",
+    "focus": "Undo a new equation recovers prior edited work",
+    "turns": [
+      {
+        "student": "Write two x plus one equals seven.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+1=7\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the one to three.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),1,3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "New problem: write five x equals twenty.",
+        "programs": [
+          "problem.save(math.equation(\"5*x=20\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Undo that new problem.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {
+          "expression": "2 * x + 3 = 7"
+        }
+      },
+      {
+        "student": "Check the equation we came back to.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 2"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-two-balances-one-request-undo",
+    "family": "eq2-two-balances-one-request-undo",
+    "category": "algebra",
+    "focus": "Undo an ordered balancing request keeps the earlier entry correction",
+    "turns": [
+      {
+        "student": "Write four x minus two equals ten.",
+        "programs": [
+          "problem.save(math.equation(\"4*x-2=10\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change ten to eighteen.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),10,18));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Add two then divide both sides by four.",
+        "programs": [
+          "problem.save(math.addBothSides(problem.currentEquation(),2));",
+          "problem.save(math.divideBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {
+          "stepDelta": 2
+        }
+      },
+      {
+        "student": "Undo those two operations together.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {
+          "expression": "4 * x - 2 = 18"
+        }
+      },
+      {
+        "student": "Can you check x without doing the steps?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 5"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-coefficient-edit-after-simplifying",
+    "family": "eq2-coefficient-edit-after-simplifying",
+    "category": "algebra",
+    "focus": "Edit a combined coefficient after two original terms merge",
+    "turns": [
+      {
+        "student": "Write two x plus three x plus one equals sixteen.",
+        "programs": [
+          "problem.save(math.equation(\"2*x+3*x+1=16\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Combine the x terms.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Make the combined coefficient three instead of five.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),5,3));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract one then divide by three.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),1));",
+          "problem.save(math.divideBothSides(problem.currentEquation(),3));"
+        ],
+        "expect": {
+          "stepDelta": 2
+        }
+      },
+      {
+        "student": "Simplify that.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "x = 5",
+          "stepDelta": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-denominator-edit-after-side-swap",
+    "family": "eq2-denominator-edit-after-side-swap",
+    "category": "algebra",
+    "focus": "Find a quotient denominator after equation orientation changes",
+    "turns": [
+      {
+        "student": "Write x over three equals four.",
+        "programs": [
+          "problem.save(math.equation(\"x/3=4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Swap the sides.",
+        "programs": [
+          "problem.save(math.swapSides(problem.currentEquation()));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Change the denominator on the right to two.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),3,2));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "What is x for this version?",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 8"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-two-whole-side-edits-then-balance",
+    "family": "eq2-two-whole-side-edits-then-balance",
+    "category": "algebra",
+    "focus": "Successive whole-side replacements establish a new relation before algebra",
+    "turns": [
+      {
+        "student": "Write x plus one equals two.",
+        "programs": [
+          "problem.save(math.equation(\"x+1=2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the whole left side three x minus four.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"x+1\",\"3*x-4\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Make the right side x plus six.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),2,\"x+6\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Subtract x, then add four to both sides.",
+        "programs": [
+          "problem.save(math.subtractBothSides(problem.currentEquation(),\"x\"));",
+          "problem.save(math.addBothSides(problem.currentEquation(),4));"
+        ],
+        "expect": {
+          "stepDelta": 2
+        }
+      },
+      {
+        "student": "Check x after both of those steps.",
+        "programs": [
+          "math.solve(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "x = 5"
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-arithmetic-precedence-after-edit",
+    "family": "eq2-arithmetic-precedence-after-edit",
+    "category": "arithmetic",
+    "focus": "Changing a multiplication factor retains multiplication-before-addition",
+    "turns": [
+      {
+        "student": "Write two plus three times four.",
+        "programs": [
+          "problem.save(math.expression(\"2+3*4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the three to five.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),3,5));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Work that out and keep the result on screen.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "22",
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read the value back without changing it.",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 22."
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-arithmetic-grouping-repair",
+    "family": "eq2-arithmetic-grouping-repair",
+    "category": "arithmetic",
+    "focus": "Adding parentheses changes arithmetic grouping rather than values alone",
+    "turns": [
+      {
+        "student": "Write two plus three times four.",
+        "programs": [
+          "problem.save(math.expression(\"2+3*4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "I meant two plus three in brackets, then times four.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"2+3*4\",\"(2+3)*4\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Work that out and keep the result on screen.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "20",
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read the value back without changing it.",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 20."
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-arithmetic-negative-square-scope",
+    "family": "eq2-arithmetic-negative-square-scope",
+    "category": "arithmetic",
+    "focus": "Distinguish negative of a square from a squared negative",
+    "turns": [
+      {
+        "student": "Write negative three squared, with the minus outside the square.",
+        "programs": [
+          "problem.save(math.expression(\"-3^2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Put negative three inside brackets before squaring it.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"-3^2\",\"(-3)^2\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Work that out and keep the result on screen.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "9",
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read the value back without changing it.",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 9."
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-arithmetic-fraction-denominator",
+    "family": "eq2-arithmetic-fraction-denominator",
+    "category": "arithmetic",
+    "focus": "Correct a fraction denominator while preserving its numerator",
+    "turns": [
+      {
+        "student": "Write three over eight plus one quarter.",
+        "programs": [
+          "problem.save(math.expression(\"3/8+1/4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the eight on the bottom a four.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),8,4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Work that out and keep the result on screen.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "1",
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read the value back without changing it.",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 1."
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-arithmetic-fraction-numerator",
+    "family": "eq2-arithmetic-fraction-numerator",
+    "category": "arithmetic",
+    "focus": "Repair a fraction numerator without changing the common denominator",
+    "turns": [
+      {
+        "student": "Write one over eight plus three over eight.",
+        "programs": [
+          "problem.save(math.expression(\"1/8+3/8\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the three in the second numerator to five.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),3,5));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Work that out and keep the result on screen.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "0.75",
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read the value back without changing it.",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 0.75."
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-arithmetic-division-grouping",
+    "family": "eq2-arithmetic-division-grouping",
+    "category": "arithmetic",
+    "focus": "Regroup chained division instead of treating division as associative",
+    "turns": [
+      {
+        "student": "Write twenty-four divided by six, then divided by two.",
+        "programs": [
+          "problem.save(math.expression(\"24/6/2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Actually divide twenty-four by the quantity six divided by two.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"24/6/2\",\"24/(6/2)\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Work that out and keep the result on screen.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "8",
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read the value back without changing it.",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 8."
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-arithmetic-decimal-place",
+    "family": "eq2-arithmetic-decimal-place",
+    "category": "arithmetic",
+    "focus": "A decimal-point correction changes the value of one addend",
+    "turns": [
+      {
+        "student": "Write one point five plus two point five.",
+        "programs": [
+          "problem.save(math.expression(\"1.5+2.5\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "The first number should be fifteen, not one point five.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),1.5,15));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Work that out and keep the result on screen.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "17.5",
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read the value back without changing it.",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 17.5."
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-arithmetic-exact-eighth",
+    "family": "eq2-arithmetic-exact-eighth",
+    "category": "arithmetic",
+    "focus": "A denominator edit produces an exact terminating decimal",
+    "turns": [
+      {
+        "student": "Write one over four.",
+        "programs": [
+          "problem.save(math.expression(\"1/4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change the denominator to eight.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),4,8));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Work that out and keep the result on screen.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "0.125",
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read the value back without changing it.",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 0.125."
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-arithmetic-power-base",
+    "family": "eq2-arithmetic-power-base",
+    "category": "arithmetic",
+    "focus": "Edit a power base while keeping its exponent fixed",
+    "turns": [
+      {
+        "student": "Write two cubed plus one.",
+        "programs": [
+          "problem.save(math.expression(\"2^3+1\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Change two cubed to three cubed.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"2^3\",\"3^3\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Work that out and keep the result on screen.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "28",
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read the value back without changing it.",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 28."
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-arithmetic-zero-exponent",
+    "family": "eq2-arithmetic-zero-exponent",
+    "category": "arithmetic",
+    "focus": "Set an exponent to zero while preserving a surrounding multiplier",
+    "turns": [
+      {
+        "student": "Write four times seven squared.",
+        "programs": [
+          "problem.save(math.expression(\"4*7^2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make seven squared into seven to the power zero.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"7^2\",\"7^0\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Work that out and keep the result on screen.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "4",
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read the value back without changing it.",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 4."
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-arithmetic-negative-product",
+    "family": "eq2-arithmetic-negative-product",
+    "category": "arithmetic",
+    "focus": "Changing one sign changes the parity of negative factors",
+    "turns": [
+      {
+        "student": "Write negative two times negative three times four.",
+        "programs": [
+          "problem.save(math.expression(\"(-2)*(-3)*4\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Make the last four negative four.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),4,-4));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Work that out and keep the result on screen.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "-24",
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read the value back without changing it.",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: -24."
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-arithmetic-subtract-negative",
+    "family": "eq2-arithmetic-subtract-negative",
+    "category": "arithmetic",
+    "focus": "Correct a negative operand inside a subtraction",
+    "turns": [
+      {
+        "student": "Write nine minus negative two.",
+        "programs": [
+          "problem.save(math.expression(\"9-(-2)\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "I meant negative five instead of negative two.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),-2,-5));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Work that out and keep the result on screen.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "14",
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read the value back without changing it.",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 14."
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-arithmetic-nested-subtraction",
+    "family": "eq2-arithmetic-nested-subtraction",
+    "category": "arithmetic",
+    "focus": "Moving parentheses changes which subtraction happens first",
+    "turns": [
+      {
+        "student": "Write twelve minus five minus two.",
+        "programs": [
+          "problem.save(math.expression(\"12-5-2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "The five minus two should be inside brackets.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"12-5-2\",\"12-(5-2)\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Work that out and keep the result on screen.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "9",
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read the value back without changing it.",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 9."
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-arithmetic-square-root-radicand",
+    "family": "eq2-arithmetic-square-root-radicand",
+    "category": "arithmetic",
+    "focus": "Edit a complete radicand instead of changing the outer square root",
+    "turns": [
+      {
+        "student": "Write square root of nine plus seven, with both numbers inside.",
+        "programs": [
+          "problem.save(math.expression(\"sqrt(9+7)\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Use nine plus sixteen inside the root instead.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"9+7\",\"9+16\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Simplify what is inside the root and keep it on screen.",
+        "programs": [
+          "problem.save(math.simplify(problem.currentEquation()));"
+        ],
+        "expect": {
+          "expression": "sqrt(25)",
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Read the value back without changing it.",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 5."
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "eq2-arithmetic-undo-redo-group",
+    "family": "eq2-arithmetic-undo-redo-group",
+    "category": "arithmetic",
+    "focus": "Undo and redo a grouping correction before evaluating the retained version",
+    "turns": [
+      {
+        "student": "Write three plus five times two.",
+        "programs": [
+          "problem.save(math.expression(\"3+5*2\"));"
+        ],
+        "expect": {}
+      },
+      {
+        "student": "Put three plus five in brackets before multiplying by two.",
+        "programs": [
+          "problem.save(math.replace(problem.currentEquation(),\"3+5*2\",\"(3+5)*2\"));"
+        ],
+        "expect": {
+          "stepDelta": 1
+        }
+      },
+      {
+        "student": "Undo that bracket change.",
+        "programs": [
+          "history.undo(1);"
+        ],
+        "expect": {
+          "expression": "3 + 5 * 2"
+        }
+      },
+      {
+        "student": "Actually redo it.",
+        "programs": [
+          "history.redo(1);"
+        ],
+        "expect": {
+          "expression": "(3 + 5) * 2"
+        }
+      },
+      {
+        "student": "Tell me the value, but keep the expression.",
+        "programs": [
+          "math.evaluate(problem.currentEquation());"
+        ],
+        "expect": {
+          "messageIncludes": [
+            "Value: 16."
+          ],
+          "readOnly": true,
+          "stepDelta": 0
+        }
+      }
+    ]
+  }
+]

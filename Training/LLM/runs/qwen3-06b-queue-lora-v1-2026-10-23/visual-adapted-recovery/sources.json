@@ -1,0 +1,31 @@
+{
+  "purpose": "Recapture two failed screenshots only; preserve original failed manifest and exact source row/grade values. No model rerun or regrading.",
+  "id": "graph-polar-half-circle-domain:2:final",
+  "originalDataPath": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/data/student-commands-v1-dedup-2026-10-23/test.jsonl",
+  "originalDataSha256": "6c4ceafe8c5f17452159d5836939ad0facbd8761f361b6715ab0705818e2351b",
+  "originalGradesPath": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/run/adapted-grades.json",
+  "originalGradesSha256": "347cd9acb47494e0edbc5662b446cc2201385b003cd3738ee4fd6a01630fa1e9",
+  "failedManifest": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-adapted/manifest.json",
+  "actualGeneratedState": {
+    "mode": "geometry",
+    "expression": "0",
+    "data": [
+      0,
+      0
+    ],
+    "diagram": [
+      "Start",
+      "Finish"
+    ],
+    "selection": 0,
+    "graph": false,
+    "graphScene": {
+      "rows": [
+        {
+          "expression": "r=2"
+        }
+      ]
+    },
+    "construction": "A=point(0,0)\nB=point(1,0)\nC=point(0,1)\ndraw triangle(A,B,C)\nangle A,B,C"
+  }
+}

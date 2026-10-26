@@ -1,0 +1,134 @@
+[
+  {
+    "voice": "Daniel",
+    "case": "equation",
+    "transcript": "Write two x plus three equals eleven.",
+    "expectedCommand": "write 2*x + 3 = 11",
+    "audio": "/demo-voices/daniel-equation.wav",
+    "sha256": "fecf429d7526b2908843a43f200dc1d8a929b17898dfda8d73bff4f78d0bd2d9",
+    "source": "macOS installed speech synthesis",
+    "durationSeconds": 2.8,
+    "recognitionStatus": "not-tested"
+  },
+  {
+    "voice": "Daniel",
+    "case": "step",
+    "transcript": "Subtract three from both sides.",
+    "expectedCommand": "subtract 3 from both sides",
+    "audio": "/demo-voices/daniel-step.wav",
+    "sha256": "8a2189b916dc05c896a537df16af4fdab649319b417afd34adb5020b70d807c1",
+    "source": "macOS installed speech synthesis",
+    "durationSeconds": 2.438,
+    "recognitionStatus": "not-tested"
+  },
+  {
+    "voice": "Daniel",
+    "case": "median",
+    "transcript": "Find the median of two, four, eight, ten.",
+    "expectedCommand": "median of 2, 4, 8, 10",
+    "audio": "/demo-voices/daniel-median.wav",
+    "sha256": "aefc6157cdc9ac4289e4f363b1bbc4cd6d1ea0c84faf14e519e522ada3930bb2",
+    "source": "macOS installed speech synthesis",
+    "durationSeconds": 3.909,
+    "recognitionStatus": "not-tested"
+  },
+  {
+    "voice": "Daniel",
+    "case": "outliers",
+    "transcript": "Find outliers.",
+    "expectedCommand": "find outliers",
+    "audio": "/demo-voices/daniel-outliers.wav",
+    "sha256": "70bd1821a99cb5813fde9a8926ec4bf5344d21beff4265cf1e4db159d3a7946e",
+    "source": "macOS installed speech synthesis",
+    "durationSeconds": 1.343,
+    "recognitionStatus": "not-tested"
+  },
+  {
+    "voice": "Karen",
+    "case": "equation",
+    "transcript": "Write two x plus three equals eleven.",
+    "expectedCommand": "write 2*x + 3 = 11",
+    "audio": "/demo-voices/karen-equation.wav",
+    "sha256": "7fd3e8e180f5a929657ad1440d7047494d7f93717580e26234a7c8a871509a4e",
+    "source": "macOS installed speech synthesis",
+    "durationSeconds": 2.75,
+    "recognitionStatus": "not-tested"
+  },
+  {
+    "voice": "Karen",
+    "case": "step",
+    "transcript": "Subtract three from both sides.",
+    "expectedCommand": "subtract 3 from both sides",
+    "audio": "/demo-voices/karen-step.wav",
+    "sha256": "fa1c54d3ff4270ececcc3b58dafdbcaa2059071e0d9b09187fc26d66a92382af",
+    "source": "macOS installed speech synthesis",
+    "durationSeconds": 2.335,
+    "recognitionStatus": "not-tested"
+  },
+  {
+    "voice": "Karen",
+    "case": "median",
+    "transcript": "Find the median of two, four, eight, ten.",
+    "expectedCommand": "median of 2, 4, 8, 10",
+    "audio": "/demo-voices/karen-median.wav",
+    "sha256": "9117ebfadc5e62a5d1addaab371127d647dd4beca845a7b40997343cbdd6936a",
+    "source": "macOS installed speech synthesis",
+    "durationSeconds": 3.767,
+    "recognitionStatus": "not-tested"
+  },
+  {
+    "voice": "Karen",
+    "case": "outliers",
+    "transcript": "Find outliers.",
+    "expectedCommand": "find outliers",
+    "audio": "/demo-voices/karen-outliers.wav",
+    "sha256": "9078666902ea95181fe5fd806ca86ff725bcb90bec79d6cf7cb1a7cad80cfb15",
+    "source": "macOS installed speech synthesis",
+    "durationSeconds": 1.283,
+    "recognitionStatus": "not-tested"
+  },
+  {
+    "voice": "Rishi",
+    "case": "equation",
+    "transcript": "Write two x plus three equals eleven.",
+    "expectedCommand": "write 2*x + 3 = 11",
+    "audio": "/demo-voices/rishi-equation.wav",
+    "sha256": "4872983dde938326c774a803d8e89d3ffe6594831abd06dbfd5d5515e4ea0a8d",
+    "source": "macOS installed speech synthesis",
+    "durationSeconds": 2.84,
+    "recognitionStatus": "not-tested"
+  },
+  {
+    "voice": "Rishi",
+    "case": "step",
+    "transcript": "Subtract three from both sides.",
+    "expectedCommand": "subtract 3 from both sides",
+    "audio": "/demo-voices/rishi-step.wav",
+    "sha256": "48d3de2374cb4c8f7f8264dbba2eb8c09df720c0d87a55e9d0dcdc8a1546092f",
+    "source": "macOS installed speech synthesis",
+    "durationSeconds": 2.49,
+    "recognitionStatus": "not-tested"
+  },
+  {
+    "voice": "Rishi",
+    "case": "median",
+    "transcript": "Find the median of two, four, eight, ten.",
+    "expectedCommand": "median of 2, 4, 8, 10",
+    "audio": "/demo-voices/rishi-median.wav",
+    "sha256": "30d80f23274951d5ff6d3be89b55d27c26a56b3a8c1cdeff765c73e31cea6c28",
+    "source": "macOS installed speech synthesis",
+    "durationSeconds": 3.605,
+    "recognitionStatus": "not-tested"
+  },
+  {
+    "voice": "Rishi",
+    "case": "outliers",
+    "transcript": "Find outliers.",
+    "expectedCommand": "find outliers",
+    "audio": "/demo-voices/rishi-outliers.wav",
+    "sha256": "31680c3629e794e9de671cbbcd1d57f117cd54b1b44f2d1df63f1f81c185ca12",
+    "source": "macOS installed speech synthesis",
+    "durationSeconds": 1.363,
+    "recognitionStatus": "not-tested"
+  }
+]

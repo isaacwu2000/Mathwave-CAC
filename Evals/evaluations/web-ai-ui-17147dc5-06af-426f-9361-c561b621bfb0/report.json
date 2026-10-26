@@ -1,0 +1,27 @@
+{
+  "revision": "0e1dd5b11cdd2a79c89346ef8b1bec9b484d4da6",
+  "workingChanges": true,
+  "origin": "http://localhost:3067",
+  "checks": [
+    "390x844: graph occupies the bottom half; collapse and keyboard expansion retain the canvas. Fork control is absent.",
+    "An equation/graph edit saves while the sheet is collapsed; resize to desktop retains the full left-half graph.",
+    "Edited graph survives reload; captured 320x640 and 844x390 layouts. Provider and persistence transport are synthetic."
+  ],
+  "mobile": {
+    "x": 0,
+    "y": 422,
+    "width": 390,
+    "height": 422,
+    "viewport": 844
+  },
+  "desktop": {
+    "x": 0,
+    "y": 0,
+    "width": 720,
+    "height": 1000,
+    "viewport": 1000
+  },
+  "errors": [],
+  "provider": "not called",
+  "persistence": "in memory"
+}

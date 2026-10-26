@@ -1,0 +1,294 @@
+[
+  {
+    "index": 1,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/03435d82281af028f494.png",
+    "rowIds": [
+      "graph-replace-entire-graph:3:final"
+    ]
+  },
+  {
+    "index": 2,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/0392aa96cbf33466c418.png",
+    "rowIds": [
+      "alg-negative-variable-on-right:5:final"
+    ]
+  },
+  {
+    "index": 3,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/129a6a13e8176ccb758d.png",
+    "rowIds": [
+      "alg-expand-before-substitute:2:final",
+      "alg-expand-before-substitute:3:final"
+    ]
+  },
+  {
+    "index": 4,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/14a675f5e3b86a7911be.png",
+    "rowIds": [
+      "graph-translation-order:4:final"
+    ]
+  },
+  {
+    "index": 5,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/1bffd9ab9327f59c03cb.png",
+    "rowIds": [
+      "graph-exponential-base-parameter:4:final"
+    ]
+  },
+  {
+    "index": 6,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/2229955a915dfe1b946d.png",
+    "rowIds": [
+      "graph-exponential-base-parameter:2:final",
+      "graph-exponential-base-parameter:3:final"
+    ]
+  },
+  {
+    "index": 7,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/38136e3c161b9b417591.png",
+    "rowIds": [
+      "alg-combine-repeated-variable:3:final"
+    ]
+  },
+  {
+    "index": 8,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3b1eaccb45a1ffb1a6f2.png",
+    "rowIds": [
+      "alg-negative-variable-on-right:2:final"
+    ]
+  },
+  {
+    "index": 9,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3ebc404d852a6d05c1fc.png",
+    "rowIds": [
+      "graph-translation-order:2:final",
+      "graph-replace-entire-graph:2:final",
+      "graph-name-preserved-after-edit:2:final"
+    ]
+  },
+  {
+    "index": 10,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/3f2dd9ac329107920f9d.png",
+    "rowIds": [
+      "graph-square-root-endpoint:2:final",
+      "graph-square-root-endpoint:3:final"
+    ]
+  },
+  {
+    "index": 11,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/429a81d6614ee2b217a9.png",
+    "rowIds": [
+      "graph-named-function-redefinition:3:final"
+    ]
+  },
+  {
+    "index": 12,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/448ddbb91f3eeaa1f158.png",
+    "rowIds": [
+      "graph-exponential-base-parameter:2:final",
+      "graph-exponential-base-parameter:3:final"
+    ]
+  },
+  {
+    "index": 13,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/515d0ee36fed2ea71de7.png",
+    "rowIds": [
+      "graph-name-preserved-after-edit:3:final"
+    ]
+  },
+  {
+    "index": 14,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/61cde0fc1e50f7d928c8.png",
+    "rowIds": [
+      "alg-solve-denominator-constant:2:preview",
+      "alg-solve-denominator-constant:2:final"
+    ]
+  },
+  {
+    "index": 15,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62ad286a575f8d258937.png",
+    "rowIds": [
+      "alg-combine-repeated-variable:1:final",
+      "alg-negative-variable-on-right:1:final",
+      "alg-negative-outside-square:1:final",
+      "alg-difference-of-squares-value:1:final",
+      "alg-solve-denominator-constant:1:final",
+      "alg-expand-before-substitute:1:final",
+      "alg-expression-to-equation:1:final",
+      "alg-accept-unapplied-suggestion:1:final",
+      "graph-square-root-endpoint:1:final",
+      "graph-translation-order:1:final",
+      "graph-replace-entire-graph:1:final",
+      "graph-named-function-redefinition:1:final",
+      "graph-exponential-base-parameter:1:final",
+      "graph-name-preserved-after-edit:1:final"
+    ]
+  },
+  {
+    "index": 16,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/62f3335d35be084b2ce6.png",
+    "rowIds": [
+      "alg-negative-variable-on-right:4:final"
+    ]
+  },
+  {
+    "index": 17,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/633fbac01571922ecfeb.png",
+    "rowIds": [
+      "graph-replace-entire-graph:4:preview",
+      "graph-replace-entire-graph:4:final"
+    ]
+  },
+  {
+    "index": 18,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/667026bf6a0db8dc8b68.png",
+    "rowIds": [
+      "alg-difference-of-squares-value:2:final"
+    ]
+  },
+  {
+    "index": 19,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/697fff14b277bb8325e3.png",
+    "rowIds": [
+      "alg-negative-variable-on-right:3:final"
+    ]
+  },
+  {
+    "index": 20,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/69d6334a2630d9dddd4c.png",
+    "rowIds": [
+      "alg-combine-repeated-variable:4:final"
+    ]
+  },
+  {
+    "index": 21,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/6b9b889f1f5190cb2481.png",
+    "rowIds": [
+      "alg-combine-repeated-variable:2:final"
+    ]
+  },
+  {
+    "index": 22,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/754a92037da32fac2d9a.png",
+    "rowIds": [
+      "graph-replace-entire-graph:4:preview",
+      "graph-replace-entire-graph:4:final"
+    ]
+  },
+  {
+    "index": 23,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/83f5b3611abb76633eed.png",
+    "rowIds": [
+      "alg-expression-to-equation:2:final"
+    ]
+  },
+  {
+    "index": 24,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/89397d47343227cc7f12.png",
+    "rowIds": [
+      "alg-expression-to-equation:3:final"
+    ]
+  },
+  {
+    "index": 25,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/8eaa02c8e2a7568a5e60.png",
+    "rowIds": [
+      "graph-translation-order:3:final"
+    ]
+  },
+  {
+    "index": 26,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/9cfb1bfdee89590d91fe.png",
+    "rowIds": [
+      "graph-named-function-redefinition:2:final"
+    ]
+  },
+  {
+    "index": 27,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/9fa2ddf1c7676a974f3c.png",
+    "rowIds": [
+      "alg-negative-outside-square:2:final"
+    ]
+  },
+  {
+    "index": 28,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/ac39d21982313ad4b4a9.png",
+    "rowIds": [
+      "graph-translation-order:4:final"
+    ]
+  },
+  {
+    "index": 29,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/b6c781dabead1caf1d4e.png",
+    "rowIds": [
+      "graph-named-function-redefinition:2:final"
+    ]
+  },
+  {
+    "index": 30,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/d00310a7c75df3d8f07a.png",
+    "rowIds": [
+      "alg-combine-repeated-variable:5:final"
+    ]
+  },
+  {
+    "index": 31,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/d49afd3b72b05389f5eb.png",
+    "rowIds": [
+      "graph-named-function-redefinition:3:final"
+    ]
+  },
+  {
+    "index": 32,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e08cc935325e24e22bc0.png",
+    "rowIds": [
+      "alg-accept-unapplied-suggestion:2:final",
+      "alg-accept-unapplied-suggestion:3:final"
+    ]
+  },
+  {
+    "index": 33,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e76c2a138734e061d1a1.png",
+    "rowIds": [
+      "graph-translation-order:3:final"
+    ]
+  },
+  {
+    "index": 34,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e8a5a7ab17195b5ecff9.png",
+    "rowIds": [
+      "graph-name-preserved-after-edit:3:final"
+    ]
+  },
+  {
+    "index": 35,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/e97a9dd553e8e3bdceeb.png",
+    "rowIds": [
+      "graph-replace-entire-graph:3:final"
+    ]
+  },
+  {
+    "index": 36,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/f7f953e33eb29686e704.png",
+    "rowIds": [
+      "graph-translation-order:2:final",
+      "graph-replace-entire-graph:2:final",
+      "graph-name-preserved-after-edit:2:final"
+    ]
+  },
+  {
+    "index": 37,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/f9fb4ab7e82d7289b37e.png",
+    "rowIds": [
+      "graph-exponential-base-parameter:4:final"
+    ]
+  },
+  {
+    "index": 38,
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-mps-partial-baseline-review-2026-10-23/visual/fd8ec22a279523a6bf23.png",
+    "rowIds": [
+      "graph-square-root-endpoint:2:final",
+      "graph-square-root-endpoint:3:final"
+    ]
+  }
+]

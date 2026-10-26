@@ -1,0 +1,86 @@
+{
+  "runId": "7e022312-3fc3-42ae-9d53-16e4ee2452c0",
+  "startedAt": "2026-10-22T18:34:34.870Z",
+  "finishedAt": "2026-10-22T18:34:46.231Z",
+  "lane": "voice",
+  "revision": "3d2e46d550b07f2b5efcc5b4d793869e4c1c16a0",
+  "dirty": true,
+  "sourceSHA256": "da44b9c8d063555206ca7346f9a3429a7fc70a031035dd750e346624bb0c75b6",
+  "runnerSHA256": "7d8b4feab7e96e5c35d97451fb6c366cd7a9d7c5ac93da5cab571005d1ef051e",
+  "models": {
+    "live": "gpt-live-1",
+    "command": "gpt-6-luna"
+  },
+  "commandProfile": "luna-default",
+  "reasoning": null,
+  "latencyDefinition": "Last detected input signal through React display commit; harnessElapsedMs includes fixture playback, polling and deliberate idle waits.",
+  "scope": "Synthetic recorded speech through browser, GPT Live, backend, persistence and React commit; excludes physical microphone and student usability.",
+  "failure": "Problem read failed (401).",
+  "repetitions": 1,
+  "planned": 3,
+  "unattempted": 3,
+  "groups": {
+    "cold-equation": {
+      "successInterval80": null,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {}
+    },
+    "warm-step": {
+      "successInterval80": null,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {}
+    },
+    "reconnected-equation": {
+      "successInterval80": null,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "successMs": {
+        "p50": null,
+        "p95": null
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {}
+    }
+  },
+  "summary": {
+    "successInterval80": null,
+    "attempted": 0,
+    "passed": 0,
+    "failed": 0,
+    "successMs": {
+      "p50": null,
+      "p95": null
+    },
+    "failureMs": {
+      "p50": null,
+      "p95": null
+    },
+    "stages": {}
+  },
+  "intervalMethod": "Two-sided 80% Wilson score; per scenario only. Pooled confidence omitted because scenarios share trials.",
+  "samples": []
+}

@@ -1,0 +1,56 @@
+{
+  "split": "test-v31",
+  "mode": "endpoint",
+  "datasetSHA256": "af5f3a995a511d3e191063cfc386e3faced78ef06672aeb3540fc724abb9f7c2",
+  "createdAt": "2026-10-14T16:54:14.912Z",
+  "total": 3,
+  "scored": 3,
+  "passed": 3,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "normals-chords": {
+      "passed": 3,
+      "scored": 3
+    }
+  },
+  "results": [
+    {
+      "id": "chord-followup-1",
+      "category": "normals-chords",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "chord length",
+        "message": ""
+      },
+      "latencyMs": 2755
+    },
+    {
+      "id": "chord-followup-2",
+      "category": "normals-chords",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "chord length",
+        "message": ""
+      },
+      "latencyMs": 2363
+    },
+    {
+      "id": "chord-followup-3",
+      "category": "normals-chords",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "add normal to graph 1 at x 2",
+        "message": ""
+      },
+      "latencyMs": 2181
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "lane": "local deterministic CPU only; 2000 alternating legacy trials; 20 warmed rendering trials per graph; 5 fresh processes per import lane; no provider/network/real-student evidence",
+  "baseline": "599dbaa",
+  "legacy": {
+    "subtract 3 from both sides": {
+      "before": {
+        "medianMs": 0.011834000000000344,
+        "p95Ms": 0.018166000000000793
+      },
+      "after": {
+        "medianMs": 0.012083999999987327,
+        "p95Ms": 0.01841699999999946
+      }
+    },
+    "graph y=x^2": {
+      "before": {
+        "medianMs": 0.01841699999999946,
+        "p95Ms": 0.024957999999998037
+      },
+      "after": {
+        "medianMs": 0.01887499999997999,
+        "p95Ms": 0.025791999999995596
+      }
+    },
+    "circle radius 5": {
+      "before": {
+        "medianMs": 0.003457999999994854,
+        "p95Ms": 0.0058339999999930114
+      },
+      "after": {
+        "medianMs": 0.0036249999999995453,
+        "p95Ms": 0.005834000000021433
+      }
+    },
+    "mean": {
+      "before": {
+        "medianMs": 0.003084000000001197,
+        "p95Ms": 0.004792000000009011
+      },
+      "after": {
+        "medianMs": 0.003208000000000766,
+        "p95Ms": 0.004832999999990761
+      }
+    }
+  },
+  "core": {
+    "implicit": {
+      "validation": {
+        "medianMs": 0.015540999999984706,
+        "p95Ms": 0.0388749999999618
+      },
+      "renderInputs": {
+        "medianMs": 2.9514580000000024,
+        "p95Ms": 3.469875000000002
+      }
+    },
+    "inequality": {
+      "validation": {
+        "medianMs": 0.007749999999987267,
+        "p95Ms": 0.017333000000007814
+      },
+      "renderInputs": {
+        "medianMs": 2.8122920000000136,
+        "p95Ms": 3.335374999999999
+      }
+    },
+    "polar": {
+      "validation": {
+        "medianMs": 0.0049159999999801585,
+        "p95Ms": 0.017583000000001903
+      },
+      "renderInputs": {
+        "medianMs": 0.32325000000003,
+        "p95Ms": 0.6411249999999882
+      }
+    },
+    "parametric": {
+      "validation": {
+        "medianMs": 0.006874999999979536,
+        "p95Ms": 0.013750000000015916
+      },
+      "renderInputs": {
+        "medianMs": 0.8740420000000313,
+        "p95Ms": 1.025874999999985
+      }
+    },
+    "piecewise": {
+      "validation": {
+        "medianMs": 0.011082999999985077,
+        "p95Ms": 0.01912499999997408
+      },
+      "renderInputs": {
+        "medianMs": 0.40533300000004147,
+        "p95Ms": 0.6878329999999551
+      }
+    },
+    "named": {
+      "validation": {
+        "medianMs": 0.0077500000000441105,
+        "p95Ms": 0.014624999999966803
+      },
+      "renderInputs": {
+        "medianMs": 0.3219579999999951,
+        "p95Ms": 0.6189579999999637
+      }
+    },
+    "combined": {
+      "validation": {
+        "medianMs": 0.048833000000058746,
+        "p95Ms": 0.07487500000002001
+      },
+      "renderInputs": {
+        "medianMs": 7.905250000000024,
+        "p95Ms": 8.770917000000054
+      }
+    }
+  },
+  "coldImports": {
+    "before": {
+      "medianMs": 9.22575,
+      "p95Ms": 9.717458
+    },
+    "after": {
+      "medianMs": 9.443416,
+      "p95Ms": 9.616792
+    }
+  },
+  "extraProviderCalls": 0,
+  "ordinaryExtraPromptCharacters": {
+    "subtract 3 from both sides": 0,
+    "graph y=x^2": 0
+  }
+}

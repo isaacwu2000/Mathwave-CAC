@@ -1,0 +1,119 @@
+{
+  "status": "Candidate typed/multiline and recorded-voice cases; provider accuracy, audio capture and student acceptance have not been run",
+  "purpose": "Core-course scope of issue #5; run text and recorded audio separately with shared computed expectations",
+  "cases": [
+    {
+      "id": "multiline-definitions",
+      "utterances": [
+        "Define a equals two.\nDefine f of x equals a times x squared.\nGraph f and name it Parabola.",
+        "Change a to three.",
+        "Read Parabola at x equals two."
+      ],
+      "checks": [
+        "Keep scalar and function as linked rows; f(2)=12 after edit",
+        "One final save per request; query saves nothing; undo restores a=2"
+      ]
+    },
+    {
+      "id": "implicit-relation",
+      "utterances": [
+        "Graph x squared plus y squared equals four.",
+        "Is zero comma two on it?",
+        "Is zero comma zero on it?"
+      ],
+      "checks": [
+        "Circle radius2, not residual plotted as y",
+        "Membership true then false; no save for queries"
+      ]
+    },
+    {
+      "id": "inequality-boundary",
+      "utterances": [
+        "Shade y less than x.",
+        "Make the boundary inclusive."
+      ],
+      "checks": [
+        "Shade below diagonal; strict broken boundary then solid inclusive boundary",
+        "No flattening to an equality"
+      ]
+    },
+    {
+      "id": "chained-restriction",
+      "utterances": [
+        "Graph y equals x, only where negative two is less than x and x is less than two."
+      ],
+      "checks": [
+        "No curve at x=-2,2 or outside interval",
+        "Correct spoken negative signs and strict comparisons"
+      ]
+    },
+    {
+      "id": "polar-voice",
+      "utterances": [
+        "Plot r equals two times cosine theta.",
+        "Set theta from zero to pi over two."
+      ],
+      "checks": [
+        "Radians, saved finite domain 0..pi/2",
+        "Point at theta0=(2,0); endpoint at pi/2=(0,0)"
+      ]
+    },
+    {
+      "id": "parametric-named",
+      "utterances": [
+        "Graph x equals three cosine t and y equals two sine t for t from zero to pi. Name it Orbit.",
+        "Read Orbit at t equals pi over two."
+      ],
+      "checks": [
+        "Single tuple row and saved name/domain",
+        "Computed point=(0,2); no extra query step"
+      ]
+    },
+    {
+      "id": "piecewise-multiline",
+      "utterances": [
+        "Graph y equals negative x when x is below zero.\nWhen x is zero or more, y equals x squared.",
+        "Read it at negative two, then at two."
+      ],
+      "checks": [
+        "Ordered piecewise branches, values2 and4",
+        "Both branches survive voice pauses and multiline transcription"
+      ]
+    },
+    {
+      "id": "correction-recovery",
+      "utterances": [
+        "Define a equals two and graph f of x equals a x squared.",
+        "Change a to eight.",
+        "Actually, I meant three.",
+        "Undo."
+      ],
+      "checks": [
+        "Correction uses prior starting state, f(2)=12",
+        "Undo recovers preceding valid scene without frozen dependent values"
+      ]
+    },
+    {
+      "id": "atomic-invalid",
+      "utterances": [
+        "Define a equals two and f of x equals a x squared.",
+        "Change a to missing."
+      ],
+      "checks": [
+        "Undefined symbol leaves saved scene and revision unchanged",
+        "Clear recoverable error; no partial save"
+      ]
+    },
+    {
+      "id": "voice-interruption",
+      "utterances": [
+        "Graph a circle x squared plus y squared equals four, and also y less than x.",
+        "Stop."
+      ],
+      "checks": [
+        "Cancellation prevents late preview/save from superseded turn",
+        "Next voice request works; no extra acceptance model roundtrip"
+      ]
+    }
+  ]
+}

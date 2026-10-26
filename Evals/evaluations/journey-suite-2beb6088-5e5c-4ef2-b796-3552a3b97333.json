@@ -1,0 +1,243 @@
+{
+  "runId": "2beb6088-5e5c-4ef2-b796-3552a3b97333",
+  "startedAt": "2026-10-22T21:23:35.529Z",
+  "finishedAt": "2026-10-22T21:24:28.117Z",
+  "lane": "suite",
+  "revision": "70ac0378a71e9f6111422c5f9bd81e6a2d3d811a",
+  "dirty": true,
+  "sourceSHA256": "178a39f51d0b9b99493410fe31ba9a54bd79581f56b88f722a00c5655cb30181",
+  "runnerSHA256": "ff3617d316a49a2f4f15c87c72804dfbee3c3be3e0189ff05985aa404992e43d",
+  "models": {
+    "live": "gpt-live-1",
+    "command": "gpt-6-luna"
+  },
+  "commandProfile": "luna-default",
+  "reasoning": null,
+  "latencyDefinition": "Harness duration includes setup, fixture, saved outcome, finished reply and evidence capture; responseLatencyMs separately measures last input to display.",
+  "scope": "Synthetic recorded speech through browser, GPT Live, backend, persistence and React commit; excludes physical microphone and student usability.",
+  "failure": "Isolated evaluation app did not start.",
+  "repetitions": 1,
+  "selection": {
+    "cases": [
+      "function",
+      "rectangle"
+    ],
+    "seed": "9acd5734-d159-4e38-86a0-4fbd85ee1f87",
+    "selected": [
+      {
+        "id": "function",
+        "category": "graphs",
+        "turns": 1,
+        "variants": [
+          {
+            "voice": "Daniel",
+            "case": "function",
+            "transcript": "Graph y equals x squared minus four.",
+            "expectedCommand": "graph y=x^2-4",
+            "audio": "/demo-voices/graph-geometry/daniel-function.wav",
+            "sha256": "060cd6643a34c325245d38093275782b89defb1d7030df92c44b2f514c55fa57",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 3.09,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Karen",
+            "case": "function",
+            "transcript": "Graph y equals x squared minus four.",
+            "expectedCommand": "graph y=x^2-4",
+            "audio": "/demo-voices/graph-geometry/karen-function.wav",
+            "sha256": "5a6b7d1a8dc5e96e39030c3b42ac3f2043100f337ab8ea6aa12dcb4b0049f8a3",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 2.899,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Rishi",
+            "case": "function",
+            "transcript": "Graph y equals x squared minus four.",
+            "expectedCommand": "graph y=x^2-4",
+            "audio": "/demo-voices/graph-geometry/rishi-function.wav",
+            "sha256": "61fe17451e6ddbf12c977eefb3c7500eb66d7eb2b11bade08a8549b92fac78af",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 3.014,
+            "recognitionStatus": "not-tested"
+          }
+        ],
+        "variant": {
+          "voice": "Karen",
+          "case": "function",
+          "transcript": "Graph y equals x squared minus four.",
+          "expectedCommand": "graph y=x^2-4",
+          "audio": "/demo-voices/graph-geometry/karen-function.wav",
+          "sha256": "5a6b7d1a8dc5e96e39030c3b42ac3f2043100f337ab8ea6aa12dcb4b0049f8a3",
+          "source": "macOS installed speech synthesis",
+          "durationSeconds": 2.899,
+          "recognitionStatus": "not-tested"
+        }
+      },
+      {
+        "id": "rectangle",
+        "category": "geometry",
+        "turns": 1,
+        "variants": [
+          {
+            "voice": "Daniel",
+            "case": "rectangle",
+            "transcript": "Create a rectangle with width six and height four.",
+            "expectedCommand": "rectangle width 6 height 4",
+            "audio": "/demo-voices/graph-geometry/daniel-rectangle.wav",
+            "sha256": "d008597df83935a32809483bc3ca3c61c67ceda3668cd47c4e5466c7816b74b1",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 3.163,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Karen",
+            "case": "rectangle",
+            "transcript": "Create a rectangle with width six and height four.",
+            "expectedCommand": "rectangle width 6 height 4",
+            "audio": "/demo-voices/graph-geometry/karen-rectangle.wav",
+            "sha256": "c0c9eba3ebd0e01838d523ccb31507ce272e1dc7997c5fceee1852284647e946",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 2.91,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Rishi",
+            "case": "rectangle",
+            "transcript": "Create a rectangle with width six and height four.",
+            "expectedCommand": "rectangle width 6 height 4",
+            "audio": "/demo-voices/graph-geometry/rishi-rectangle.wav",
+            "sha256": "7c157cf19bbe9a63c1e688f8da01ce4122d5fdbc38ba1db9cdeb1e051b2013ac",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 3.335,
+            "recognitionStatus": "not-tested"
+          }
+        ],
+        "variant": {
+          "voice": "Daniel",
+          "case": "rectangle",
+          "transcript": "Create a rectangle with width six and height four.",
+          "expectedCommand": "rectangle width 6 height 4",
+          "audio": "/demo-voices/graph-geometry/daniel-rectangle.wav",
+          "sha256": "d008597df83935a32809483bc3ca3c61c67ceda3668cd47c4e5466c7816b74b1",
+          "source": "macOS installed speech synthesis",
+          "durationSeconds": 3.163,
+          "recognitionStatus": "not-tested"
+        }
+      }
+    ],
+    "catalogSHA256": "291053f2b07d593123ed27b67dadc454e75c51550eb3acae525d5ddd8bacbdfd"
+  },
+  "campaignSummary": {
+    "correctness": {
+      "planned": 2,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "unattempted": 2
+    },
+    "latency": {
+      "measured": 0,
+      "missing": 0,
+      "p50": null,
+      "p95": null
+    },
+    "latencyDefinition": "Last input signal to saved display commit; milliseconds. Correctness has no speed budget. Harness durations include setup, playback and evidence capture.",
+    "byCategory": {
+      "graphs": {
+        "correctness": {
+          "planned": 1,
+          "attempted": 0,
+          "passed": 0,
+          "failed": 0,
+          "unattempted": 1
+        },
+        "latency": {
+          "measured": 0,
+          "missing": 0,
+          "p50": null,
+          "p95": null
+        }
+      },
+      "geometry": {
+        "correctness": {
+          "planned": 1,
+          "attempted": 0,
+          "passed": 0,
+          "failed": 0,
+          "unattempted": 1
+        },
+        "latency": {
+          "measured": 0,
+          "missing": 0,
+          "p50": null,
+          "p95": null
+        }
+      }
+    },
+    "unattemptedCases": [
+      {
+        "trial": 1,
+        "family": "function",
+        "scenario": "function"
+      },
+      {
+        "trial": 1,
+        "family": "rectangle",
+        "scenario": "rectangle"
+      }
+    ]
+  },
+  "planned": 2,
+  "unattempted": 2,
+  "groups": {
+    "function": {
+      "correctness": {
+        "planned": 1,
+        "attempted": 0,
+        "passed": 0,
+        "failed": 0,
+        "unattempted": 1
+      },
+      "latency": {
+        "measured": 0,
+        "missing": 0,
+        "p50": null,
+        "p95": null
+      }
+    },
+    "rectangle": {
+      "correctness": {
+        "planned": 1,
+        "attempted": 0,
+        "passed": 0,
+        "failed": 0,
+        "unattempted": 1
+      },
+      "latency": {
+        "measured": 0,
+        "missing": 0,
+        "p50": null,
+        "p95": null
+      }
+    }
+  },
+  "summary": {
+    "correctness": {
+      "planned": 2,
+      "attempted": 0,
+      "passed": 0,
+      "failed": 0,
+      "unattempted": 2
+    },
+    "latency": {
+      "measured": 0,
+      "missing": 0,
+      "p50": null,
+      "p95": null
+    }
+  },
+  "intervalMethod": "No pooled interval: cases are stratified families and conversation turns share state.",
+  "samples": []
+}

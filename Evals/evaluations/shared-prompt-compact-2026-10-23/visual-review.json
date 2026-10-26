@@ -1,0 +1,342 @@
+{
+  "method": "Root agent inspected every listed PNG rendered by actual app; paired saved-state replay, not UI voice/input journey.",
+  "count": 28,
+  "reviews": [
+    {
+      "case": "ordered-algebra",
+      "variant": "baseline",
+      "turn": 1,
+      "viewport": [
+        1280,
+        900
+      ],
+      "evidence": "ordered-algebra-baseline-1-1280.png",
+      "reviewed": true,
+      "notes": "Final 2x=8 and both preceding steps readable; intermediate subtraction retained."
+    },
+    {
+      "case": "ordered-algebra",
+      "variant": "baseline",
+      "turn": 1,
+      "viewport": [
+        390,
+        844
+      ],
+      "evidence": "ordered-algebra-baseline-1-390.png",
+      "reviewed": true,
+      "notes": "Final 2x=8 and both preceding steps readable; intermediate subtraction retained."
+    },
+    {
+      "case": "ordered-algebra",
+      "variant": "compact",
+      "turn": 1,
+      "viewport": [
+        1280,
+        900
+      ],
+      "evidence": "ordered-algebra-compact-1-1280.png",
+      "reviewed": true,
+      "notes": "Final 2x=8 and both preceding steps readable; intermediate subtraction retained."
+    },
+    {
+      "case": "ordered-algebra",
+      "variant": "compact",
+      "turn": 1,
+      "viewport": [
+        390,
+        844
+      ],
+      "evidence": "ordered-algebra-compact-1-390.png",
+      "reviewed": true,
+      "notes": "Final 2x=8 and both preceding steps readable; intermediate subtraction retained."
+    },
+    {
+      "case": "occurrence-edit",
+      "variant": "compact",
+      "turn": 1,
+      "viewport": [
+        1280,
+        900
+      ],
+      "evidence": "occurrence-edit-compact-1-1280.png",
+      "reviewed": true,
+      "notes": "Only constant changes from 4 to 7; 3x coefficient and 19 retained."
+    },
+    {
+      "case": "occurrence-edit",
+      "variant": "compact",
+      "turn": 1,
+      "viewport": [
+        390,
+        844
+      ],
+      "evidence": "occurrence-edit-compact-1-390.png",
+      "reviewed": true,
+      "notes": "Only constant changes from 4 to 7; 3x coefficient and 19 retained."
+    },
+    {
+      "case": "occurrence-edit",
+      "variant": "baseline",
+      "turn": 1,
+      "viewport": [
+        1280,
+        900
+      ],
+      "evidence": "occurrence-edit-baseline-1-1280.png",
+      "reviewed": true,
+      "notes": "Only constant changes from 4 to 7; 3x coefficient and 19 retained."
+    },
+    {
+      "case": "occurrence-edit",
+      "variant": "baseline",
+      "turn": 1,
+      "viewport": [
+        390,
+        844
+      ],
+      "evidence": "occurrence-edit-baseline-1-390.png",
+      "reviewed": true,
+      "notes": "Only constant changes from 4 to 7; 3x coefficient and 19 retained."
+    },
+    {
+      "case": "graph-follow-up",
+      "variant": "baseline",
+      "turn": 1,
+      "viewport": [
+        1280,
+        900
+      ],
+      "evidence": "graph-follow-up-baseline-1-1280.png",
+      "reviewed": true,
+      "notes": "Both curves visible: red parabola and blue y=x+1. Turn 1 shows original vertex (0,0); turn 2 shifts only parabola to (0,2). Editor agrees."
+    },
+    {
+      "case": "graph-follow-up",
+      "variant": "baseline",
+      "turn": 1,
+      "viewport": [
+        390,
+        844
+      ],
+      "evidence": "graph-follow-up-baseline-1-390.png",
+      "reviewed": true,
+      "notes": "Both curves visible: red parabola and blue y=x+1. Turn 1 shows original vertex (0,0); turn 2 shifts only parabola to (0,2). Editor agrees."
+    },
+    {
+      "case": "graph-follow-up",
+      "variant": "baseline",
+      "turn": 2,
+      "viewport": [
+        1280,
+        900
+      ],
+      "evidence": "graph-follow-up-baseline-2-1280.png",
+      "reviewed": true,
+      "notes": "Both curves visible: red parabola and blue y=x+1. Turn 1 shows original vertex (0,0); turn 2 shifts only parabola to (0,2). Editor agrees."
+    },
+    {
+      "case": "graph-follow-up",
+      "variant": "baseline",
+      "turn": 2,
+      "viewport": [
+        390,
+        844
+      ],
+      "evidence": "graph-follow-up-baseline-2-390.png",
+      "reviewed": true,
+      "notes": "Both curves visible: red parabola and blue y=x+1. Turn 1 shows original vertex (0,0); turn 2 shifts only parabola to (0,2). Editor agrees."
+    },
+    {
+      "case": "graph-follow-up",
+      "variant": "compact",
+      "turn": 1,
+      "viewport": [
+        1280,
+        900
+      ],
+      "evidence": "graph-follow-up-compact-1-1280.png",
+      "reviewed": true,
+      "notes": "Both curves visible: red parabola and blue y=x+1. Turn 1 shows original vertex (0,0); turn 2 shifts only parabola to (0,2). Editor agrees."
+    },
+    {
+      "case": "graph-follow-up",
+      "variant": "compact",
+      "turn": 1,
+      "viewport": [
+        390,
+        844
+      ],
+      "evidence": "graph-follow-up-compact-1-390.png",
+      "reviewed": true,
+      "notes": "Both curves visible: red parabola and blue y=x+1. Turn 1 shows original vertex (0,0); turn 2 shifts only parabola to (0,2). Editor agrees."
+    },
+    {
+      "case": "graph-follow-up",
+      "variant": "compact",
+      "turn": 2,
+      "viewport": [
+        1280,
+        900
+      ],
+      "evidence": "graph-follow-up-compact-2-1280.png",
+      "reviewed": true,
+      "notes": "Both curves visible: red parabola and blue y=x+1. Turn 1 shows original vertex (0,0); turn 2 shifts only parabola to (0,2). Editor agrees."
+    },
+    {
+      "case": "graph-follow-up",
+      "variant": "compact",
+      "turn": 2,
+      "viewport": [
+        390,
+        844
+      ],
+      "evidence": "graph-follow-up-compact-2-390.png",
+      "reviewed": true,
+      "notes": "Both curves visible: red parabola and blue y=x+1. Turn 1 shows original vertex (0,0); turn 2 shifts only parabola to (0,2). Editor agrees."
+    },
+    {
+      "case": "geometry-scale",
+      "variant": "compact",
+      "turn": 1,
+      "viewport": [
+        1280,
+        900
+      ],
+      "evidence": "geometry-scale-compact-1-1280.png",
+      "reviewed": true,
+      "notes": "Right triangle labeled 6,8,10; right-angle marker and labels visible within viewport."
+    },
+    {
+      "case": "geometry-scale",
+      "variant": "compact",
+      "turn": 1,
+      "viewport": [
+        390,
+        844
+      ],
+      "evidence": "geometry-scale-compact-1-390.png",
+      "reviewed": true,
+      "notes": "Right triangle labeled 6,8,10; right-angle marker and labels visible within viewport."
+    },
+    {
+      "case": "geometry-scale",
+      "variant": "baseline",
+      "turn": 1,
+      "viewport": [
+        1280,
+        900
+      ],
+      "evidence": "geometry-scale-baseline-1-1280.png",
+      "reviewed": true,
+      "notes": "Right triangle labeled 6,8,10; right-angle marker and labels visible within viewport."
+    },
+    {
+      "case": "geometry-scale",
+      "variant": "baseline",
+      "turn": 1,
+      "viewport": [
+        390,
+        844
+      ],
+      "evidence": "geometry-scale-baseline-1-390.png",
+      "reviewed": true,
+      "notes": "Right triangle labeled 6,8,10; right-angle marker and labels visible within viewport."
+    },
+    {
+      "case": "statistics-edit",
+      "variant": "baseline",
+      "turn": 1,
+      "viewport": [
+        1280,
+        900
+      ],
+      "evidence": "statistics-edit-baseline-1-1280.png",
+      "reviewed": true,
+      "notes": "Data 2,8,9; mean 6.33333, median 8, no outliers; plotted values match."
+    },
+    {
+      "case": "statistics-edit",
+      "variant": "baseline",
+      "turn": 1,
+      "viewport": [
+        390,
+        844
+      ],
+      "evidence": "statistics-edit-baseline-1-390.png",
+      "reviewed": true,
+      "notes": "Data 2,8,9; mean 6.33333, median 8, no outliers; plotted values match."
+    },
+    {
+      "case": "statistics-edit",
+      "variant": "compact",
+      "turn": 1,
+      "viewport": [
+        1280,
+        900
+      ],
+      "evidence": "statistics-edit-compact-1-1280.png",
+      "reviewed": true,
+      "notes": "Data 2,8,9; mean 6.33333, median 8, no outliers; plotted values match."
+    },
+    {
+      "case": "statistics-edit",
+      "variant": "compact",
+      "turn": 1,
+      "viewport": [
+        390,
+        844
+      ],
+      "evidence": "statistics-edit-compact-1-390.png",
+      "reviewed": true,
+      "notes": "Data 2,8,9; mean 6.33333, median 8, no outliers; plotted values match."
+    },
+    {
+      "case": "undo",
+      "variant": "compact",
+      "turn": 1,
+      "viewport": [
+        1280,
+        900
+      ],
+      "evidence": "undo-compact-1-1280.png",
+      "reviewed": true,
+      "notes": "Restored x+3=8, one initial step visible; saved-version link remains available."
+    },
+    {
+      "case": "undo",
+      "variant": "compact",
+      "turn": 1,
+      "viewport": [
+        390,
+        844
+      ],
+      "evidence": "undo-compact-1-390.png",
+      "reviewed": true,
+      "notes": "Restored x+3=8, one initial step visible; saved-version link remains available."
+    },
+    {
+      "case": "undo",
+      "variant": "baseline",
+      "turn": 1,
+      "viewport": [
+        1280,
+        900
+      ],
+      "evidence": "undo-baseline-1-1280.png",
+      "reviewed": true,
+      "notes": "Restored x+3=8, one initial step visible; saved-version link remains available."
+    },
+    {
+      "case": "undo",
+      "variant": "baseline",
+      "turn": 1,
+      "viewport": [
+        390,
+        844
+      ],
+      "evidence": "undo-baseline-1-390.png",
+      "reviewed": true,
+      "notes": "Restored x+3=8, one initial step visible; saved-version link remains available."
+    }
+  ]
+}

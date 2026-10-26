@@ -1,0 +1,72 @@
+.math-input {
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+  border-radius: 12px;
+  background: var(--card);
+  color: var(--foreground);
+  box-shadow: var(--shadow-inner);
+}
+.math-input:focus-within {
+  outline: 2px solid var(--accent-700);
+  outline-offset: 2px;
+}
+.math-input-host:empty {
+  display: none;
+}
+.math-input math-field {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: inherit;
+  font-size: 22px;
+  --caret-color: var(--accent-700);
+  --selection-background-color: var(--accent-100);
+  --contains-highlight-background-color: var(--accent-100);
+  --placeholder-color: var(--muted-foreground);
+  --placeholder-opacity: 1;
+  --text-font-family: var(--font-lexend), sans-serif;
+}
+.math-input math-field:focus-within {
+  outline: none;
+}
+.math-input math-field::part(virtual-keyboard-toggle) {
+  display: none;
+  color: var(--muted-foreground);
+}
+@media (max-width: 760px) and (pointer: coarse) {
+  .math-input math-field::part(virtual-keyboard-toggle) {
+    display: block;
+  }
+}
+.math-input math-field::part(menu-toggle) {
+  display: none;
+}
+.math-input input:not([type='hidden']) {
+  width: 100%;
+  min-width: 0;
+}
+.math-input-error {
+  display: block;
+  padding: 4px 12px 8px;
+  font-family: var(--font-lexend), sans-serif;
+  font-size: 14px;
+  color: var(--error-600);
+  text-transform: none;
+}
+.geometry-editor .math-input {
+  width: 160px;
+}
+.input-row > .math-input {
+  background: transparent;
+  box-shadow: none;
+}
+@media (forced-colors: active) {
+  .math-input {
+    border: 1px solid CanvasText;
+  }
+}

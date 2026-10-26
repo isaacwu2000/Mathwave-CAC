@@ -1,0 +1,10 @@
+{
+  "expectedTorchVersion": "2.9.1+cu128",
+  "expectedCudaVersion": "12.8",
+  "actual": {
+    "torchVersion": "2.9.1+cu128",
+    "cudaVersion": "12.8",
+    "mpsReferenceTorchVersion": "2.14.1",
+    "comparisonLimit": "CUDA and MPS runtime versions differ; before/after CUDA share this runtime."
+  }
+}

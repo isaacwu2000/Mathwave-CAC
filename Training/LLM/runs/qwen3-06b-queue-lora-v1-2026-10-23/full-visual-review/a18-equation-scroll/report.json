@@ -1,0 +1,148 @@
+{
+  "case": {
+    "key": "b50c474bf9e8d8a97228.png",
+    "image": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/visual-baseline/b50c474bf9e8d8a97228.png",
+    "sha256": "d0ac27597aed60e8076386b0fe2e1e02b004f30bd3d419219ad755caf6334eed",
+    "refs": [
+      {
+        "phase": "baseline",
+        "id": "eq2-read-equation-after-two-step-request:3:final",
+        "category": "algebra",
+        "request": "Simplify the result.",
+        "source": "unchanged-prestate-no-executable-outcome",
+        "pass": false,
+        "reasons": [
+          "JSON Parse error: Unexpected identifier \"The\""
+        ],
+        "snapshot": "final",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "renderedState": {
+          "mode": "equation",
+          "expression": "(x / 3 + 2 - 2) * 3 = (6 - 2) * 3",
+          "data": [
+            0,
+            0
+          ],
+          "diagram": [
+            "Start",
+            "Finish"
+          ],
+          "selection": 0,
+          "graph": false
+        },
+        "expectedFinalState": {
+          "mode": "equation",
+          "expression": "x = 12",
+          "data": [
+            0,
+            0
+          ],
+          "diagram": [
+            "Start",
+            "Finish"
+          ],
+          "selection": 0,
+          "graph": false
+        },
+        "matchesSavedWork": true
+      }
+    ],
+    "reviewIndex": "a18"
+  },
+  "lane": "Actual app replay of unchanged gold prestate from invalid baseline generation; no model call or output applied.",
+  "before": {
+    "scrollLeft": 0,
+    "clientWidth": 282,
+    "scrollWidth": 363,
+    "overflowX": "auto",
+    "touchAction": "auto",
+    "scrollbarWidth": "none",
+    "rect": {
+      "x": 54,
+      "y": 266.125,
+      "width": 282,
+      "height": 71.734375
+    },
+    "mathRect": {
+      "x": 62,
+      "right": 409.140625,
+      "width": 347.140625
+    },
+    "tabIndex": -1,
+    "activeTag": "BODY",
+    "activeClass": "",
+    "spokenEquation": "the quantity the quantity x divided by 3 end quantity plus 2 minus 2 end quantity times 3 equals the quantity 6 minus 2 end quantity times 3"
+  },
+  "keyboard": {
+    "scrollLeft": 40,
+    "clientWidth": 282,
+    "scrollWidth": 363,
+    "overflowX": "auto",
+    "touchAction": "auto",
+    "scrollbarWidth": "none",
+    "rect": {
+      "x": 54,
+      "y": 266.125,
+      "width": 282,
+      "height": 71.734375
+    },
+    "mathRect": {
+      "x": 22,
+      "right": 369.140625,
+      "width": 347.140625
+    },
+    "tabIndex": -1,
+    "activeTag": "SPAN",
+    "activeClass": "step-equation",
+    "spokenEquation": "the quantity the quantity x divided by 3 end quantity plus 2 minus 2 end quantity times 3 equals the quantity 6 minus 2 end quantity times 3"
+  },
+  "touch": {
+    "scrollLeft": 81,
+    "clientWidth": 282,
+    "scrollWidth": 363,
+    "overflowX": "auto",
+    "touchAction": "auto",
+    "scrollbarWidth": "none",
+    "rect": {
+      "x": 54,
+      "y": 266.125,
+      "width": 282,
+      "height": 71.734375
+    },
+    "mathRect": {
+      "x": -19,
+      "right": 328.140625,
+      "width": 347.140625
+    },
+    "tabIndex": -1,
+    "activeTag": "SPAN",
+    "activeClass": "step-equation",
+    "spokenEquation": "the quantity the quantity x divided by 3 end quantity plus 2 minus 2 end quantity times 3 equals the quantity 6 minus 2 end quantity times 3"
+  },
+  "farRight": {
+    "scrollLeft": 81,
+    "clientWidth": 282,
+    "scrollWidth": 363,
+    "overflowX": "auto",
+    "touchAction": "auto",
+    "scrollbarWidth": "none",
+    "rect": {
+      "x": 54,
+      "y": 266.125,
+      "width": 282,
+      "height": 71.734375
+    },
+    "mathRect": {
+      "x": -19,
+      "right": 328.140625,
+      "width": 347.140625
+    },
+    "tabIndex": -1,
+    "activeTag": "SPAN",
+    "activeClass": "step-equation",
+    "spokenEquation": "the quantity the quantity x divided by 3 end quantity plus 2 minus 2 end quantity times 3 equals the quantity 6 minus 2 end quantity times 3"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "case": "alg-expand-before-substitute",
+  "turn": 1,
+  "partition": "validation",
+  "freshProcess": true,
+  "adapterLoadedFromDisk": true,
+  "hypothesis": "Write three times x minus two in brackets plus four.",
+  "matchesRecordedSelectedCheckpoint": true,
+  "reference": "Write three times x minus two in brackets plus four.",
+  "paidApiCalls": 0
+}

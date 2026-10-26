@@ -1,0 +1,9 @@
+{
+  "lane": "Partial interrupted MPS baseline only; never substituted into CUDA before/after comparison.",
+  "predictions": 48,
+  "totalTestRows": 166,
+  "source": "/Users/isaac/Documents/GitHub/Math-Audio/Training/LLM/runs/qwen3-06b-lora-v1-2026-10-23/baseline-test-predictions.jsonl",
+  "sourceSha256": "92bfd18b7348037982afbdab82c82112b720fb4c27e19111520c37cb9a4a2176",
+  "datasetSha256": "6c4ceafe8c5f17452159d5836939ad0facbd8761f361b6715ab0705818e2351b",
+  "visualReview": "Pending actual pixel inspection."
+}

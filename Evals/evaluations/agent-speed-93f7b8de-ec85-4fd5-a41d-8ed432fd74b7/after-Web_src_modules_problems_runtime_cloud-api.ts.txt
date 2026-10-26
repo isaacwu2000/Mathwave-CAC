@@ -1,0 +1,333 @@
+import { RequestTiming } from '../../diagnostics/index.ts';
+import { normalizeViewportHistory } from '../services/viewport-history.ts';
+import { parseMath } from '../../math/index.ts';
+import {
+  applyCloudOperation,
+  type CloudOperation,
+  type Interpreter,
+} from '../services/cloud-problem-library.ts';
+import type {
+  CloudSnapshot,
+  ProblemLibraryStore,
+  Receipt,
+} from '../types/cloud-api.ts';
+import type { ProblemLibrary } from '../types/problem-library.ts';
+import type { InterpretationProgress } from '../types/cloud-problem-library.ts';
+import { progressResponse } from './command-progress.ts';
+import { currentProblem } from '../services/problem-library.ts';
+export type {
+  CloudResponse,
+  CloudSnapshot,
+  ProblemLibraryStore,
+  Receipt,
+} from '../types/cloud-api.ts';
+function reply(body: unknown, status = 200) {
+  return Response.json(body, {
+    status,
+    headers: { 'Cache-Control': 'no-store' },
+  });
+}
+function operationFrom(value: unknown): CloudOperation {
+  if (!value || typeof value !== 'object')
+    throw new Error('Invalid operation.');
+  const v = value as Record<string, unknown>;
+  const text = (key: string, max = 4000): string => {
+    if (typeof v[key] !== 'string' || (v[key] as string).length > max)
+      throw new Error('Invalid operation.');
+    return v[key] as string;
+  };
+  switch (v.kind) {
+    case 'graph-question':
+      if (!Number.isSafeInteger(v.baseRevision))
+        throw new Error('Invalid graph question.');
+      return {
+        kind: 'graph-question',
+        text: text('text'),
+        question: text('question', 1000),
+        baseRevision: v.baseRevision as number,
+      };
+    case 'graph': {
+      const commands = v.commands;
+      if (
+        !Array.isArray(commands) ||
+        commands.length < 1 ||
+        commands.length > 6 ||
+        !commands.every((c) => typeof c === 'string' && c.length <= 2000) ||
+        !Number.isSafeInteger(v.baseRevision) ||
+        (v.consumeDraft !== undefined && typeof v.consumeDraft !== 'boolean')
+      )
+        throw new Error('Invalid graph build.');
+      return {
+        kind: 'graph',
+        commands,
+        text: text('text'),
+        baseRevision: v.baseRevision as number,
+        consumeDraft: v.consumeDraft as boolean | undefined,
+      };
+    }
+
+    case 'revise-step':
+      if (parseMath(text('expression')).kind !== 'equation')
+        throw new Error('Invalid equation.');
+      if (!Number.isSafeInteger(v.step) || (v.step as number) < 1)
+        throw new Error('Invalid revision step.');
+      return {
+        kind: v.kind,
+        step: v.step as number,
+        expression: text('expression'),
+      };
+    case 'branch':
+      if (!Number.isSafeInteger(v.index) || (v.index as number) < 0)
+        throw new Error('Invalid branch.');
+      return { kind: v.kind, index: v.index as number };
+    case 'dismiss-exploration':
+      return { kind: v.kind };
+    case 'exploration':
+      if (typeof v.value !== 'number' || !Number.isFinite(v.value))
+        throw new Error('Invalid control value.');
+      return { kind: v.kind, name: text('name', 200), value: v.value };
+    case 'command': {
+      const command = text('text');
+      if (
+        !command.trim() ||
+        (v.interpret !== undefined && typeof v.interpret !== 'boolean') ||
+        (v.consumeDraft !== undefined && typeof v.consumeDraft !== 'boolean')
+      )
+        throw new Error('Invalid command.');
+      return {
+        kind: v.kind,
+        text: command,
+        interpret: v.interpret as boolean | undefined,
+        consumeDraft: v.consumeDraft as boolean | undefined,
+      };
+    }
+    case 'draft':
+      return {
+        kind: v.kind,
+        text: text('text'),
+        problemId: text('problemId', 200),
+      };
+    case 'delete':
+    case 'select':
+      return {
+        kind: v.kind,
+        assignmentId: text('assignmentId', 200),
+        problemId: text('problemId', 200),
+      };
+    case 'new':
+      return {
+        kind: v.kind,
+        title: v.title === undefined ? undefined : text('title', 200),
+        assignmentTitle:
+          v.assignmentTitle === undefined
+            ? undefined
+            : text('assignmentTitle', 200),
+      };
+    case 'import':
+      return { kind: v.kind, notebook: text('notebook', 10_000_000) };
+    case 'recovery':
+      return { kind: v.kind, text: text('text') };
+    default:
+      throw new Error('Invalid operation.');
+  }
+}
+
+/** Authenticated API boundary; persistence is an external dependency. */
+export function createProblemLibraryApi(deps: {
+  store: ProblemLibraryStore;
+  owner(request: Request): Promise<string>;
+  interpret?: Interpreter;
+}) {
+  const normalize = <T extends { book: ProblemLibrary }>(snapshot: T): T => ({
+    ...snapshot,
+    book: normalizeViewportHistory(snapshot.book),
+  });
+  /**
+   * Persists history cleanup before exposing new step numbers.
+   * - Revision checks prevent an older tab from changing a newly numbered step.
+   * - Concurrent saves are reloaded at most three times; failures expose no rewritten snapshot.
+   */
+  const loadCurrent = async (
+    owner: string,
+    initial?: CloudSnapshot,
+  ): Promise<CloudSnapshot> => {
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const saved =
+        attempt === 0 && initial ? initial : await deps.store.load(owner);
+      const cleaned = normalize(saved);
+      if (JSON.stringify(cleaned.book) === JSON.stringify(saved.book))
+        return saved;
+      const outcome = { ...cleaned, status: 'command' as const, message: '' };
+      if (
+        await deps.store.commit(
+          owner,
+          `history-cleanup:${crypto.randomUUID()}`,
+          saved.revision,
+          outcome,
+          'viewport-history-cleanup-v1',
+        )
+      )
+        return { ...cleaned, revision: saved.revision + 1 };
+    }
+    throw new Error(
+      'Your problem changed during history cleanup. Retry loading.',
+    );
+  };
+  /** Old receipts keep their original step numbers; changed history requires a fresh snapshot. */
+  const receiptReply = async (owner: string, receipt: Receipt) =>
+    JSON.stringify(normalize(receipt.result).book) ===
+    JSON.stringify(receipt.result.book)
+      ? reply(receipt.result)
+      : reply(
+          {
+            error:
+              'Your saved history was updated. Reload before making another change.',
+            snapshot: await loadCurrent(owner),
+          },
+          409,
+        );
+  return {
+    async GET(this: void, request: Request) {
+      try {
+        return reply(await loadCurrent(await deps.owner(request)));
+      } catch (error) {
+        return error instanceof Response
+          ? error
+          : reply({ error: 'Cloud problem could not be loaded.' }, 503);
+      }
+    },
+    async POST(this: void, request: Request) {
+      const timing = new RequestTiming();
+      let progress: ((value: InterpretationProgress) => void) | undefined;
+      const respond = async () => {
+        if (request.headers.get('origin') !== new URL(request.url).origin)
+          return reply({ error: 'Request origin is not allowed.' }, 403);
+        try {
+          const owner = await deps.owner(request);
+          let id: string, revision: number, operation: CloudOperation;
+          try {
+            const raw = await request.text();
+            if (raw.length > 10_100_000) throw new Error('Request too large.');
+            const data = JSON.parse(raw);
+            if (
+              typeof data.id !== 'string' ||
+              !data.id ||
+              data.id.length > 200 ||
+              !Number.isSafeInteger(data.revision) ||
+              data.revision < 0
+            )
+              throw new Error('Invalid request.');
+            id = data.id;
+            revision = data.revision;
+            operation = operationFrom(data.operation);
+          } catch {
+            return reply({ error: 'Invalid problem request.' }, 400);
+          }
+          const fingerprint = JSON.stringify({ revision, operation });
+          // Overlap raw reads only. A receipt wins even if the speculative load fails;
+          // history cleanup must wait until we know this is a new request.
+          const receiptRead = timing.measure('receipt', () =>
+            deps.store.receipt(owner, id),
+          );
+          const snapshotRead = timing
+            .measure('load', () => deps.store.load(owner))
+            .then(
+              (snapshot) => ({ snapshot, error: undefined }),
+              (error: unknown) => ({ snapshot: undefined, error }),
+            );
+          const previous = await receiptRead;
+          if (previous)
+            return previous.request === fingerprint
+              ? await receiptReply(owner, previous)
+              : reply({ error: 'That request ID was already used.' }, 409);
+          const loaded = await snapshotRead;
+          if (!loaded.snapshot) throw loaded.error;
+          const snapshot = await loadCurrent(owner, loaded.snapshot);
+          if (snapshot.revision !== revision)
+            return reply(
+              {
+                error: 'Your problem changed. Reload before retrying.',
+                snapshot,
+              },
+              409,
+            );
+          if (
+            (operation.kind === 'graph' ||
+              operation.kind === 'graph-question') &&
+            operation.baseRevision !== revision
+          )
+            return reply(
+              {
+                error:
+                  'The graph was built from older work. Retry using the current problem.',
+                snapshot,
+              },
+              409,
+            );
+          let interpreted = false;
+          const outcome = normalize(
+            await timing.measure('execute', () =>
+              applyCloudOperation(
+                snapshot,
+                operation,
+                deps.interpret
+                  ? (text, saved) => {
+                      interpreted = true;
+                      return timing.measure('interpret', () =>
+                        deps.interpret!(text, saved, timing, progress),
+                      );
+                    }
+                  : undefined,
+              ),
+            ),
+          );
+          if (
+            interpreted &&
+            (outcome.status === 'command' || outcome.status === 'correction')
+          )
+            progress?.({
+              phase: 'checking',
+              workspace: currentProblem(outcome.book).state,
+            });
+          if (
+            await timing.measure('commit', () =>
+              deps.store.commit(owner, id, revision, outcome, fingerprint),
+            )
+          )
+            return reply({ ...outcome, revision: revision + 1 });
+          const raced = await deps.store.receipt(owner, id);
+          if (raced?.request === fingerprint)
+            return await receiptReply(owner, raced);
+          return reply(
+            {
+              error: 'Your problem changed. Reload before retrying.',
+              snapshot: await loadCurrent(owner),
+            },
+            409,
+          );
+        } catch (error) {
+          return error instanceof Response
+            ? error
+            : reply(
+                {
+                  error:
+                    'The cloud save could not be confirmed. Retry this request before submitting another.',
+                },
+                503,
+              );
+        }
+      };
+      const complete = async () => {
+        const response = await respond();
+        response.headers.set('Server-Timing', timing.header());
+        return response;
+      };
+      return request.headers.get('Accept') === 'application/x-ndjson'
+        ? progressResponse((emit) => {
+            progress = emit;
+            return complete();
+          })
+        : complete();
+    },
+  };
+}

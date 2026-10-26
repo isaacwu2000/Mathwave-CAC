@@ -1,0 +1,23 @@
+{
+  "webVerify": {
+    "command": "bun run verify",
+    "exitCode": 0,
+    "testFilesPassed": 130,
+    "testFilesSkipped": 3,
+    "testsPassed": 609,
+    "testsSkipped": 5,
+    "logSha256": "6dd03c1842ea77dc753ed8ca29f7022c83f8cb158c32683b63aecbcdeb659568"
+  },
+  "referenceReplay": {
+    "cases": 500,
+    "passed": 497,
+    "knownFailures": [
+      "alg-solve-sides-reversed",
+      "alg-undo-two-separate-steps",
+      "eq2-edit-added-variable-term"
+    ],
+    "limitation": "Recorded deterministic parser regressions remain; speech-only experiment does not fix product math parsing."
+  },
+  "visualAcceptance": "No new app-rendering acceptance; prior v1 evidence remains2/400conversations.",
+  "paidComputeUsd": 0
+}

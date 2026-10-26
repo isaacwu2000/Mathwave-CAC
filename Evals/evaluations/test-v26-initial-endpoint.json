@@ -1,0 +1,39 @@
+{
+  "split": "test-v26",
+  "mode": "endpoint",
+  "datasetSHA256": "66a2efb17db1a02d22b25555ba5a1d784863286a015f8652d6a85eeb99b105b0",
+  "createdAt": "2026-10-14T16:07:58.963Z",
+  "total": 2,
+  "scored": 2,
+  "passed": 1,
+  "unavailable": 0,
+  "accuracy": 0.5,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "between-solid": {
+      "passed": 1,
+      "scored": 2
+    }
+  },
+  "results": [
+    {
+      "id": "fresh-between-solid-1",
+      "category": "between-solid",
+      "pass": false,
+      "reason": "Endpoint rejected context or interpretation (HTTP 422)",
+      "latencyMs": 2827
+    },
+    {
+      "id": "fresh-between-solid-2",
+      "category": "between-solid",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "space diagonal",
+        "message": ""
+      },
+      "latencyMs": 2052
+    }
+  ]
+}

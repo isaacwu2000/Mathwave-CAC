@@ -1,0 +1,44 @@
+{
+  "split": "test-v17",
+  "mode": "endpoint",
+  "datasetSHA256": "a2508172f23a428f40aab95eccc4b45c33bc004581cb3d614f3fc5eab69ca35a",
+  "createdAt": "2026-10-14T15:26:04.332Z",
+  "total": 2,
+  "scored": 2,
+  "passed": 2,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "rate-triangle": {
+      "passed": 2,
+      "scored": 2
+    }
+  },
+  "results": [
+    {
+      "id": "fresh-rate-triangle-1",
+      "category": "rate-triangle",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "average rate of change of graph 1 from -2 to 4",
+        "message": ""
+      },
+      "latencyMs": 2960
+    },
+    {
+      "id": "fresh-rate-triangle-2",
+      "category": "rate-triangle",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "classify triangle",
+        "message": ""
+      },
+      "latencyMs": 5113
+    }
+  ]
+}

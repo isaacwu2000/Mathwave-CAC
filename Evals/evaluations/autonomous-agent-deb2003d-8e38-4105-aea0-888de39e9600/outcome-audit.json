@@ -1,0 +1,185 @@
+{
+  "scope": "Offline stricter outcome audit; raw report is unchanged. Circle kind/radius, one exact replacement with unrelated fields preserved, coefficient division, downward viewport. No provider calls.",
+  "reportSha256": "c3720fdb51031457d7110ac1dbb1651c5928453137c5bf7d6043c4cc9f8e62e1",
+  "oracleSha256": "ef6388c82b1ec34abea45d31bd4ce613b73a7c4a138e5d0d598bc21bf01be516",
+  "summary": {
+    "baseline": {
+      "passed": 9,
+      "attempted": 11,
+      "planned": 12
+    },
+    "short": {
+      "passed": 12,
+      "attempted": 12,
+      "planned": 12
+    }
+  },
+  "samples": [
+    {
+      "scenario": "cancel-division",
+      "variant": "baseline",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "cancel-division",
+      "variant": "short",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "cancel-product",
+      "variant": "short",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "cancel-product",
+      "variant": "baseline",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "halve",
+      "variant": "baseline",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "halve",
+      "variant": "short",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "no-over-solving",
+      "variant": "short",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "no-over-solving",
+      "variant": "baseline",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "vague-circle",
+      "variant": "baseline",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "vague-circle",
+      "variant": "short",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "vague-edit",
+      "variant": "short",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "vague-edit",
+      "variant": "short",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "vague-edit",
+      "variant": "baseline",
+      "attempted": true,
+      "passed": false,
+      "rawPassed": false
+    },
+    {
+      "scenario": "vague-edit",
+      "variant": "baseline",
+      "attempted": false
+    },
+    {
+      "scenario": "missing-divisor",
+      "variant": "baseline",
+      "attempted": true,
+      "passed": false,
+      "rawPassed": false
+    },
+    {
+      "scenario": "missing-divisor",
+      "variant": "short",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "viewport",
+      "variant": "short",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "viewport",
+      "variant": "baseline",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "polar",
+      "variant": "baseline",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "polar",
+      "variant": "short",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "segment-length",
+      "variant": "short",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "segment-length",
+      "variant": "short",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "segment-length",
+      "variant": "baseline",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    },
+    {
+      "scenario": "segment-length",
+      "variant": "baseline",
+      "attempted": true,
+      "passed": true,
+      "rawPassed": true
+    }
+  ]
+}

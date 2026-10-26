@@ -1,0 +1,5 @@
+{
+  "reason": "Pre-training-method audit found zero arithmetic conversations in test within combined algebra stratum. Stopped early; no test scores inspected and no after-test run. Repartition with secondary original-category balancing before a fresh base+LoRA run.",
+  "testScoreInspected": false,
+  "runComplete": false
+}

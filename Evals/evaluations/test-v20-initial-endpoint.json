@@ -1,0 +1,68 @@
+{
+  "split": "test-v20",
+  "mode": "endpoint",
+  "datasetSHA256": "fd157a52229cca4c46661c076af5f2899f12dff6a0a1b6d2976e64ca8a2414ea",
+  "createdAt": "2026-10-14T15:41:27.768Z",
+  "total": 4,
+  "scored": 4,
+  "passed": 3,
+  "unavailable": 0,
+  "accuracy": 0.75,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "tangent-leg": {
+      "passed": 3,
+      "scored": 4
+    }
+  },
+  "results": [
+    {
+      "id": "tangent-leg-1",
+      "category": "tangent-leg",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "add tangent to graph 1 at x 2",
+        "message": ""
+      },
+      "latencyMs": 2722
+    },
+    {
+      "id": "tangent-leg-2",
+      "category": "tangent-leg",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "slope of graph 1 at x 3",
+        "message": ""
+      },
+      "latencyMs": 2677
+    },
+    {
+      "id": "tangent-leg-3",
+      "category": "tangent-leg",
+      "pass": false,
+      "reason": "Rejected by command validator",
+      "prediction": {
+        "status": "command",
+        "command": "right triangle hypotenuse 13 leg 5",
+        "message": ""
+      },
+      "latencyMs": 2637
+    },
+    {
+      "id": "tangent-leg-4",
+      "category": "tangent-leg",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "Tangent commands are supported only for linear and quadratic graphs, not sine graphs."
+      },
+      "latencyMs": 3338
+    }
+  ]
+}

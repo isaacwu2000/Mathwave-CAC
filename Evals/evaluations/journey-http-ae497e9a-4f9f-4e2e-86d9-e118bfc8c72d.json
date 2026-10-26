@@ -1,0 +1,302 @@
+{
+  "runId": "ae497e9a-4f9f-4e2e-86d9-e118bfc8c72d",
+  "startedAt": "2026-10-16T01:13:28.890Z",
+  "finishedAt": "2026-10-16T01:13:44.249Z",
+  "lane": "http",
+  "revision": "3feedfae024ca241392d5ef02ac56aa92c8614c0",
+  "dirty": true,
+  "runnerSHA256": "488a38d3072ea4c8bf85cab400e4c9aa5e5412a42cffdf8b561cc5b44ae0b129",
+  "models": {
+    "live": "gpt-live-1",
+    "command": "gpt-6-luna"
+  },
+  "scope": "Live provider and isolated local HTTP; excludes voice and rendering.",
+  "summary": {
+    "attempted": 4,
+    "passed": 4,
+    "failed": 0,
+    "successMs": {
+      "p50": 1890.5462499999994,
+      "p95": 4776.435833
+    },
+    "failureMs": {
+      "p50": null,
+      "p95": null
+    },
+    "stages": {
+      "receipt": {
+        "observed": 4,
+        "missing": 0,
+        "p50": 22,
+        "p95": 24
+      },
+      "load": {
+        "observed": 4,
+        "missing": 0,
+        "p50": 28,
+        "p95": 32
+      },
+      "execute": {
+        "observed": 4,
+        "missing": 0,
+        "p50": 1775,
+        "p95": 4665
+      },
+      "commit": {
+        "observed": 4,
+        "missing": 0,
+        "p50": 38,
+        "p95": 76
+      },
+      "total": {
+        "observed": 4,
+        "missing": 0,
+        "p50": 1868,
+        "p95": 4759
+      },
+      "model_1": {
+        "observed": 3,
+        "missing": 1,
+        "p50": 1903,
+        "p95": 2650
+      },
+      "preview_1": {
+        "observed": 2,
+        "missing": 2,
+        "p50": 6,
+        "p95": 7
+      },
+      "model_2": {
+        "observed": 2,
+        "missing": 2,
+        "p50": 1732,
+        "p95": 2748
+      },
+      "validate_2": {
+        "observed": 2,
+        "missing": 2,
+        "p50": 4,
+        "p95": 4
+      },
+      "interpret": {
+        "observed": 3,
+        "missing": 1,
+        "p50": 4394,
+        "p95": 4663
+      },
+      "validate_1": {
+        "observed": 1,
+        "missing": 3,
+        "p50": 4,
+        "p95": 4
+      }
+    }
+  },
+  "samples": [
+    {
+      "text": "write x=0",
+      "interpret": false,
+      "passed": true,
+      "status": "command",
+      "httpStatus": 200,
+      "elapsedMs": 111.06220899999971,
+      "timings": [
+        {
+          "stage": "receipt",
+          "duration": 23,
+          "kind": "span"
+        },
+        {
+          "stage": "load",
+          "duration": 26,
+          "kind": "span"
+        },
+        {
+          "stage": "execute",
+          "duration": 11,
+          "kind": "span"
+        },
+        {
+          "stage": "commit",
+          "duration": 37,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 97,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "text": "write 2*x+3=11",
+      "interpret": true,
+      "passed": true,
+      "status": "command",
+      "httpStatus": 200,
+      "elapsedMs": 4776.435833,
+      "timings": [
+        {
+          "stage": "receipt",
+          "duration": 24,
+          "kind": "span"
+        },
+        {
+          "stage": "load",
+          "duration": 32,
+          "kind": "span"
+        },
+        {
+          "stage": "model_1",
+          "duration": 1903,
+          "kind": "span"
+        },
+        {
+          "stage": "preview_1",
+          "duration": 6,
+          "kind": "span"
+        },
+        {
+          "stage": "model_2",
+          "duration": 2748,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_2",
+          "duration": 4,
+          "kind": "span"
+        },
+        {
+          "stage": "interpret",
+          "duration": 4663,
+          "kind": "span"
+        },
+        {
+          "stage": "execute",
+          "duration": 4665,
+          "kind": "span"
+        },
+        {
+          "stage": "commit",
+          "duration": 38,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 4759,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "text": "subtract 3 from both sides",
+      "interpret": true,
+      "passed": true,
+      "status": "command",
+      "httpStatus": 200,
+      "elapsedMs": 1890.5462499999994,
+      "timings": [
+        {
+          "stage": "receipt",
+          "duration": 22,
+          "kind": "span"
+        },
+        {
+          "stage": "load",
+          "duration": 28,
+          "kind": "span"
+        },
+        {
+          "stage": "model_1",
+          "duration": 1768,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 4,
+          "kind": "span"
+        },
+        {
+          "stage": "interpret",
+          "duration": 1773,
+          "kind": "span"
+        },
+        {
+          "stage": "execute",
+          "duration": 1775,
+          "kind": "span"
+        },
+        {
+          "stage": "commit",
+          "duration": 43,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1868,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "text": "divide both sides by 2",
+      "interpret": true,
+      "passed": true,
+      "status": "command",
+      "httpStatus": 200,
+      "elapsedMs": 4548.470791,
+      "timings": [
+        {
+          "stage": "receipt",
+          "duration": 22,
+          "kind": "span"
+        },
+        {
+          "stage": "load",
+          "duration": 28,
+          "kind": "span"
+        },
+        {
+          "stage": "model_1",
+          "duration": 2650,
+          "kind": "span"
+        },
+        {
+          "stage": "preview_1",
+          "duration": 7,
+          "kind": "span"
+        },
+        {
+          "stage": "model_2",
+          "duration": 1732,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_2",
+          "duration": 4,
+          "kind": "span"
+        },
+        {
+          "stage": "interpret",
+          "duration": 4394,
+          "kind": "span"
+        },
+        {
+          "stage": "execute",
+          "duration": 4396,
+          "kind": "span"
+        },
+        {
+          "stage": "commit",
+          "duration": 76,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 4523,
+          "kind": "span"
+        }
+      ]
+    }
+  ]
+}

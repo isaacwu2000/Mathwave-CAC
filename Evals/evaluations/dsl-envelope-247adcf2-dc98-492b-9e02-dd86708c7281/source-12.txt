@@ -1,0 +1,13 @@
+import { PROGRAM_LIMITS, toolInstructions } from './tool-catalog.ts';
+
+/** Shared language and save semantics; signatures and tool-specific rules come from executable contracts. */
+export const programProtocol = `Math program API. Names separated by | share the following signature.
+Use initialized const bindings, finite numeric arithmetic (+ - * / **), strings, arrays, explicit object properties and the approved calls. Imports, loops, functions, assignment, property reads, computed calls, casts and network access are unavailable.
+Use <=${PROGRAM_LIMITS.characters} source characters, <=${PROGRAM_LIMITS.statements} statements and <=${PROGRAM_LIMITS.calls} calls per program. Bindings live within that program only. Values are immutable: transforms return a new value. A reference belongs to its exact value; select parts again after transforming. Graph handles contain a collection and selected curve; select other curves from that same collection rather than combining unrelated collections.
+Call problem.save once for the final value to apply. Without save the program is read-only. A failed statement rejects the whole program. For explicitly sequenced operations, use a separate complete program for each requested step, even subtraction followed by simplification. For multiple requested results use up to six complete programs, each running against the preceding saved result. The entire batch is checked before persistence; undo recovers the request. Preserve requested order and step boundaries.
+A control must be the only call in its program. Queries return engine readbacks without saving temporary inputs. Never save only to answer a question.`;
+
+/** Complete interpreter reference; optional graph/construction language context adds its own registered calls. */
+export const programInstructions = `${programProtocol}
+${toolInstructions('interpreter')}
+For an action, query, suggestion or correction, use programs: an array of one to six complete sources. Use an empty array for a reply without a proposal, unsupported or clarification responses. For a suggestion, programs must contain the proposed action including problem.save; the app keeps it unapplied until accepted. Put read-only calculations in previews, not in the retained proposal. Honor requests not to change work yet. Corrections describe the full replacement against the previous turn's original state, not its current mistaken result. Preserve mathematical domains and do not solve beyond the requested operation.`;

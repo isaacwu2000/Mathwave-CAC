@@ -1,0 +1,44 @@
+{
+  "split": "test-v19",
+  "mode": "endpoint",
+  "datasetSHA256": "a70cd387b272dc1765262a927e762d2ec830818479f3f6d2bf2d92a10ee20c1a",
+  "createdAt": "2026-10-14T15:32:41.309Z",
+  "total": 2,
+  "scored": 2,
+  "passed": 2,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "shift-polygon": {
+      "passed": 2,
+      "scored": 2
+    }
+  },
+  "results": [
+    {
+      "id": "fresh-shift-polygon-1",
+      "category": "shift-polygon",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "shift graph 3 right -1 up 0",
+        "message": ""
+      },
+      "latencyMs": 2993
+    },
+    {
+      "id": "fresh-shift-polygon-2",
+      "category": "shift-polygon",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "exterior angle",
+        "message": ""
+      },
+      "latencyMs": 2241
+    }
+  ]
+}

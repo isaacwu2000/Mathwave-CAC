@@ -1,0 +1,800 @@
+{
+  "runId": "57ff5738-ab4f-46e7-91d6-e01d074dffdc",
+  "startedAt": "2026-10-16T01:19:12.636Z",
+  "finishedAt": "2026-10-16T01:20:13.769Z",
+  "lane": "voice",
+  "revision": "3feedfae024ca241392d5ef02ac56aa92c8614c0",
+  "dirty": true,
+  "sourceSHA256": "d1beff8f73b0534814aa36053cc652d1547efc09de27df5833c2357296c86942",
+  "runnerSHA256": "054b69c7a2809d9e9c70ad6add3fd9b4837394dbbdf88a86225831416a3f0809",
+  "models": {
+    "live": "gpt-live-1",
+    "command": "gpt-6-luna"
+  },
+  "latencyDefinition": "Last detected input signal through React display commit; harnessElapsedMs includes fixture playback, polling and deliberate idle waits.",
+  "scope": "Synthetic recorded speech through browser, GPT Live, backend, persistence and React commit; excludes physical microphone and student usability.",
+  "planned": 3,
+  "unattempted": 0,
+  "summary": {
+    "attempted": 3,
+    "passed": 3,
+    "failed": 0,
+    "successMs": {
+      "p50": 6279.299999998882,
+      "p95": 17546.099999999627
+    },
+    "failureMs": {
+      "p50": null,
+      "p95": null
+    },
+    "stages": {
+      "live-server:load": {
+        "observed": 2,
+        "missing": 1,
+        "p50": 26,
+        "p95": 100
+      },
+      "live-server:live_provider_headers": {
+        "observed": 2,
+        "missing": 1,
+        "p50": 197,
+        "p95": 382
+      },
+      "live-server:total": {
+        "observed": 2,
+        "missing": 1,
+        "p50": 270,
+        "p95": 535
+      },
+      "problem-server:receipt": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 24,
+        "p95": 67
+      },
+      "problem-server:load": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 27,
+        "p95": 27
+      },
+      "problem-server:model_1": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 2186,
+        "p95": 2814
+      },
+      "problem-server:preview_1": {
+        "observed": 2,
+        "missing": 1,
+        "p50": 2,
+        "p95": 18
+      },
+      "problem-server:model_2": {
+        "observed": 2,
+        "missing": 1,
+        "p50": 1714,
+        "p95": 1789
+      },
+      "problem-server:validate_2": {
+        "observed": 2,
+        "missing": 1,
+        "p50": 1,
+        "p95": 2
+      },
+      "problem-server:interpret": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 3170,
+        "p95": 3980
+      },
+      "problem-server:execute": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 3173,
+        "p95": 3980
+      },
+      "problem-server:commit": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 46,
+        "p95": 77
+      },
+      "problem-server:total": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 3266,
+        "p95": 4077
+      },
+      "input-detected": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 0,
+        "p95": 0
+      },
+      "connection-start": {
+        "observed": 2,
+        "missing": 1,
+        "p50": 0.09999999962747097,
+        "p95": 0.40000000037252903
+      },
+      "connection-ready": {
+        "observed": 2,
+        "missing": 1,
+        "p50": 784.2999999988824,
+        "p95": 1015.8000000007451
+      },
+      "last-input-signal": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 2517.4000000003725,
+        "p95": 2538.7999999988824
+      },
+      "delegated": {
+        "observed": 2,
+        "missing": 1,
+        "p50": 4381,
+        "p95": 5048.699999999255
+      },
+      "voice-command": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 5049.4000000003725,
+        "p95": 17047.900000000373
+      },
+      "save-confirmed": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 8474.200000001118,
+        "p95": 20054.700000001118
+      },
+      "workspace-result": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 8474.300000000745,
+        "p95": 20054.800000000745
+      },
+      "result-returned": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 8474.300000000745,
+        "p95": 20055
+      },
+      "commentary-sent": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 8474.400000000373,
+        "p95": 20055.099999999627
+      },
+      "display-commit": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 8482,
+        "p95": 20063.5
+      },
+      "next-audio-observed": {
+        "observed": 2,
+        "missing": 1,
+        "p50": 9033,
+        "p95": 9304.900000000373
+      },
+      "connection": {
+        "observed": 2,
+        "missing": 1,
+        "p50": 783.7999999988824,
+        "p95": 1015.7000000011176
+      },
+      "webrtc-offer": {
+        "observed": 2,
+        "missing": 1,
+        "p50": 7.800000000745058,
+        "p95": 13.099999999627471
+      },
+      "ice-gather": {
+        "observed": 2,
+        "missing": 1,
+        "p50": 117.29999999888241,
+        "p95": 129.2000000011176
+      },
+      "live-token-request": {
+        "observed": 2,
+        "missing": 1,
+        "p50": 288.09999999962747,
+        "p95": 552.8000000007451
+      },
+      "prior-save-wait": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 0,
+        "p95": 0
+      },
+      "save-queue": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 0,
+        "p95": 0
+      },
+      "request-body": {
+        "observed": 3,
+        "missing": 0,
+        "p50": 3285.7000000011176,
+        "p95": 4092.5999999996275
+      },
+      "problem-server:validate_1": {
+        "observed": 1,
+        "missing": 2,
+        "p50": 1,
+        "p95": 1
+      },
+      "transcript-fallback": {
+        "observed": 1,
+        "missing": 2,
+        "p50": 17047.800000000745,
+        "p95": 17047.800000000745
+      },
+      "session-closed": {
+        "observed": 1,
+        "missing": 2,
+        "p50": 21375.800000000745,
+        "p95": 21375.800000000745
+      }
+    }
+  },
+  "samples": [
+    {
+      "scenario": "cold-equation",
+      "audio": "/demo-voices/daniel-equation.wav",
+      "sha256": "fecf429d7526b2908843a43f200dc1d8a929b17898dfda8d73bff4f78d0bd2d9",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 = 11",
+      "expression": "2 * x + 3 = 11",
+      "elapsedMs": 5823.5,
+      "responseLatencyMs": 5823.5,
+      "harnessElapsedMs": 9747.996,
+      "timings": [
+        {
+          "stage": "live-server:load",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 26
+        },
+        {
+          "stage": "live-server:live_provider_headers",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 197
+        },
+        {
+          "stage": "live-server:total",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 270
+        },
+        {
+          "stage": "problem-server:receipt",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 22
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 27
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 1437
+        },
+        {
+          "stage": "problem-server:preview_1",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 18
+        },
+        {
+          "stage": "problem-server:model_2",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 1714
+        },
+        {
+          "stage": "problem-server:validate_2",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 1
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 3170
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 3173
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 43
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 3266
+        },
+        {
+          "stage": "input-detected",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "connection-start",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "milestone",
+          "duration": 0.40000000037252903
+        },
+        {
+          "stage": "connection-ready",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "milestone",
+          "duration": 784.2999999988824
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "milestone",
+          "duration": 2538.7999999988824
+        },
+        {
+          "stage": "delegated",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "milestone",
+          "duration": 5048.699999999255
+        },
+        {
+          "stage": "voice-command",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "milestone",
+          "duration": 5049.4000000003725
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "milestone",
+          "duration": 8337
+        },
+        {
+          "stage": "workspace-result",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "milestone",
+          "duration": 8337
+        },
+        {
+          "stage": "result-returned",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "milestone",
+          "duration": 8337.099999999627
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "milestone",
+          "duration": 8337.699999999255
+        },
+        {
+          "stage": "display-commit",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "milestone",
+          "duration": 8362.299999998882
+        },
+        {
+          "stage": "next-audio-observed",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "milestone",
+          "duration": 9033
+        },
+        {
+          "stage": "connection",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 783.7999999988824
+        },
+        {
+          "stage": "webrtc-offer",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 13.099999999627471
+        },
+        {
+          "stage": "ice-gather",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 129.2000000011176
+        },
+        {
+          "stage": "live-token-request",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 288.09999999962747
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "save-queue",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "request-body",
+          "id": "9703af2e-52a2-4cfe-8e06-497bc5d56c8c",
+          "kind": "span",
+          "duration": 3285.7000000011176
+        }
+      ],
+      "audioObserved": true,
+      "connectionObserved": true
+    },
+    {
+      "scenario": "warm-step",
+      "audio": "/demo-voices/daniel-step.wav",
+      "sha256": "8a2189b916dc05c896a537df16af4fdab649319b417afd34adb5020b70d807c1",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 - 3 = 11 - 3",
+      "expression": "2 * x + 3 - 3 = 11 - 3",
+      "elapsedMs": 6279.299999998882,
+      "responseLatencyMs": 6279.299999998882,
+      "harnessElapsedMs": 9752.695083999999,
+      "timings": [
+        {
+          "stage": "problem-server:receipt",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "span",
+          "duration": 24
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "span",
+          "duration": 27
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "span",
+          "duration": 2186
+        },
+        {
+          "stage": "problem-server:preview_1",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "span",
+          "duration": 2
+        },
+        {
+          "stage": "problem-server:model_2",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "span",
+          "duration": 1789
+        },
+        {
+          "stage": "problem-server:validate_2",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "span",
+          "duration": 2
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "span",
+          "duration": 3980
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "span",
+          "duration": 3980
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "span",
+          "duration": 46
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "span",
+          "duration": 4077
+        },
+        {
+          "stage": "input-detected",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "milestone",
+          "duration": 2202.7000000011176
+        },
+        {
+          "stage": "delegated",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "milestone",
+          "duration": 4381
+        },
+        {
+          "stage": "voice-command",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "milestone",
+          "duration": 4381
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "milestone",
+          "duration": 8474.200000001118
+        },
+        {
+          "stage": "workspace-result",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "milestone",
+          "duration": 8474.300000000745
+        },
+        {
+          "stage": "result-returned",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "milestone",
+          "duration": 8474.300000000745
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "milestone",
+          "duration": 8474.400000000373
+        },
+        {
+          "stage": "display-commit",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "milestone",
+          "duration": 8482
+        },
+        {
+          "stage": "next-audio-observed",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "milestone",
+          "duration": 9304.900000000373
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "save-queue",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "request-body",
+          "id": "6d7fcdae-250c-4ce5-87af-6c2e499fbb1e",
+          "kind": "span",
+          "duration": 4092.5999999996275
+        }
+      ],
+      "audioObserved": true,
+      "connectionObserved": false
+    },
+    {
+      "scenario": "reconnected-equation",
+      "audio": "/demo-voices/daniel-equation.wav",
+      "sha256": "fecf429d7526b2908843a43f200dc1d8a929b17898dfda8d73bff4f78d0bd2d9",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 = 11",
+      "expression": "2 * x + 3 = 11",
+      "elapsedMs": 17546.099999999627,
+      "responseLatencyMs": 17546.099999999627,
+      "harnessElapsedMs": 33924.037375,
+      "timings": [
+        {
+          "stage": "live-server:load",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 100
+        },
+        {
+          "stage": "live-server:live_provider_headers",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 382
+        },
+        {
+          "stage": "live-server:total",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 535
+        },
+        {
+          "stage": "problem-server:receipt",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 67
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 23
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 2814
+        },
+        {
+          "stage": "problem-server:validate_1",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 1
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 2815
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 2816
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 77
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 2984
+        },
+        {
+          "stage": "input-detected",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "connection-start",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "milestone",
+          "duration": 0.09999999962747097
+        },
+        {
+          "stage": "connection-ready",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "milestone",
+          "duration": 1015.8000000007451
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "milestone",
+          "duration": 2517.4000000003725
+        },
+        {
+          "stage": "transcript-fallback",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "milestone",
+          "duration": 17047.800000000745
+        },
+        {
+          "stage": "voice-command",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "milestone",
+          "duration": 17047.900000000373
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "milestone",
+          "duration": 20054.700000001118
+        },
+        {
+          "stage": "workspace-result",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "milestone",
+          "duration": 20054.800000000745
+        },
+        {
+          "stage": "result-returned",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "milestone",
+          "duration": 20055
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "milestone",
+          "duration": 20055.099999999627
+        },
+        {
+          "stage": "display-commit",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "milestone",
+          "duration": 20063.5
+        },
+        {
+          "stage": "session-closed",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "milestone",
+          "duration": 21375.800000000745
+        },
+        {
+          "stage": "connection",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 1015.7000000011176
+        },
+        {
+          "stage": "webrtc-offer",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 7.800000000745058
+        },
+        {
+          "stage": "ice-gather",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 117.29999999888241
+        },
+        {
+          "stage": "live-token-request",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 552.8000000007451
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "save-queue",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "request-body",
+          "id": "aafb4a84-bcd2-447e-b6f2-36bfa1083c26",
+          "kind": "span",
+          "duration": 3005.300000000745
+        }
+      ],
+      "audioObserved": false,
+      "connectionObserved": true
+    }
+  ]
+}

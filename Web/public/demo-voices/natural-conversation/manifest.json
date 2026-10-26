@@ -1,0 +1,34 @@
+[
+  {
+    "id": "natural-equation",
+    "voice": "Daniel",
+    "text": "I'm working on eight x plus three equals nineteen. Could you write that for me?",
+    "audio": "/demo-voices/natural-conversation/natural-equation.wav",
+    "sha256": "6221fb49b1091a182acb09fa7eea4ff85410e745082933b4b9eda3e41b6c6b20",
+    "source": "macOS installed speech synthesis"
+  },
+  {
+    "id": "read-only-suggestion",
+    "voice": "Daniel",
+    "text": "How would you get rid of that added three? Don't change it yet.",
+    "audio": "/demo-voices/natural-conversation/read-only-suggestion.wav",
+    "sha256": "208d709ed5e2d5d8ce164ceadaef4ca78bfa31a983d499a9371e04d7b0472611",
+    "source": "macOS installed speech synthesis"
+  },
+  {
+    "id": "natural-acceptance",
+    "voice": "Daniel",
+    "text": "Yeah, let's do that.",
+    "audio": "/demo-voices/natural-conversation/natural-acceptance.wav",
+    "sha256": "b0721e0de13a2d4129694b0bff9b50088e7f6c189e734837f2cf8b3a78924948",
+    "source": "macOS installed speech synthesis"
+  },
+  {
+    "id": "spoken-correction",
+    "voice": "Daniel",
+    "text": "Actually, take away five instead of three.",
+    "audio": "/demo-voices/natural-conversation/spoken-correction.wav",
+    "sha256": "907a1f6c353889ddad19e869c5434efbea9b464181875cbc825c12249d354491",
+    "source": "macOS installed speech synthesis"
+  }
+]

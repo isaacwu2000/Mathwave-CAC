@@ -1,0 +1,164 @@
+{
+  "runId": "ca811909-acb0-4de9-ac64-0c6a7f4b29bd",
+  "startedAt": "2026-10-24T13:59:55.414Z",
+  "finishedAt": "2026-10-24T14:00:05.849Z",
+  "lane": "suite",
+  "revision": "4fa331e6e32d55dc6658cbe98e08bfa181365dc4",
+  "dirty": true,
+  "sourceSHA256": "e78fdcbd59d3378fddce6dca5acd728cc963f3f8b070726cb4d0873459f62574",
+  "runnerSHA256": "ff3617d316a49a2f4f15c87c72804dfbee3c3be3e0189ff05985aa404992e43d",
+  "models": {
+    "live": "gpt-live-1",
+    "command": "gpt-6-luna"
+  },
+  "commandProfile": "luna-default",
+  "reasoning": null,
+  "latencyDefinition": "Harness duration includes setup, fixture, saved outcome, finished reply and evidence capture; responseLatencyMs separately measures last input to display.",
+  "scope": "Synthetic recorded speech through browser, GPT Live, backend, persistence and React commit; excludes physical microphone and student usability.",
+  "repetitions": 1,
+  "selection": {
+    "cases": [
+      "right-triangle"
+    ],
+    "seed": "112ed495-a87f-4a04-b453-7a57d82787da",
+    "selected": [
+      {
+        "id": "right-triangle",
+        "category": "geometry",
+        "turns": 1,
+        "variants": [
+          {
+            "voice": "Daniel",
+            "case": "right-triangle",
+            "transcript": "Draw a right triangle with legs three and four.",
+            "expectedCommand": "right triangle a 3 b 4",
+            "audio": "/demo-voices/graph-geometry/daniel-right-triangle.wav",
+            "sha256": "1bdca0e34e5d203a9c6e45e1628a46f59bd8d04f2d82ee43fe9989d4efadf0b4",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 3.055,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Karen",
+            "case": "right-triangle",
+            "transcript": "Draw a right triangle with legs three and four.",
+            "expectedCommand": "right triangle a 3 b 4",
+            "audio": "/demo-voices/graph-geometry/karen-right-triangle.wav",
+            "sha256": "728abeb249c3617134940a5dc943a40850870e4e44e2040745d77cf237bdca56",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 2.935,
+            "recognitionStatus": "not-tested"
+          },
+          {
+            "voice": "Rishi",
+            "case": "right-triangle",
+            "transcript": "Draw a right triangle with legs three and four.",
+            "expectedCommand": "right triangle a 3 b 4",
+            "audio": "/demo-voices/graph-geometry/rishi-right-triangle.wav",
+            "sha256": "0c287c7b8fe2b914b426cd3d3faa4dd6af42f5866169c8f6d64cf860b8bed9dd",
+            "source": "macOS installed speech synthesis",
+            "durationSeconds": 3.154,
+            "recognitionStatus": "not-tested"
+          }
+        ],
+        "variant": {
+          "voice": "Rishi",
+          "case": "right-triangle",
+          "transcript": "Draw a right triangle with legs three and four.",
+          "expectedCommand": "right triangle a 3 b 4",
+          "audio": "/demo-voices/graph-geometry/rishi-right-triangle.wav",
+          "sha256": "0c287c7b8fe2b914b426cd3d3faa4dd6af42f5866169c8f6d64cf860b8bed9dd",
+          "source": "macOS installed speech synthesis",
+          "durationSeconds": 3.154,
+          "recognitionStatus": "not-tested"
+        }
+      }
+    ],
+    "catalogSHA256": "291053f2b07d593123ed27b67dadc454e75c51550eb3acae525d5ddd8bacbdfd"
+  },
+  "campaignSummary": {
+    "correctness": {
+      "planned": 1,
+      "attempted": 1,
+      "passed": 0,
+      "failed": 1,
+      "unattempted": 0
+    },
+    "latency": {
+      "measured": 0,
+      "missing": 1,
+      "p50": null,
+      "p95": null
+    },
+    "latencyDefinition": "Last input signal to saved display commit; milliseconds. Correctness has no speed budget. Harness durations include setup, playback and evidence capture.",
+    "byCategory": {
+      "geometry": {
+        "correctness": {
+          "planned": 1,
+          "attempted": 1,
+          "passed": 0,
+          "failed": 1,
+          "unattempted": 0
+        },
+        "latency": {
+          "measured": 0,
+          "missing": 1,
+          "p50": null,
+          "p95": null
+        }
+      }
+    },
+    "unattemptedCases": []
+  },
+  "planned": 1,
+  "unattempted": 0,
+  "groups": {
+    "right-triangle": {
+      "correctness": {
+        "planned": 1,
+        "attempted": 1,
+        "passed": 0,
+        "failed": 1,
+        "unattempted": 0
+      },
+      "latency": {
+        "measured": 0,
+        "missing": 1,
+        "p50": null,
+        "p95": null
+      }
+    }
+  },
+  "summary": {
+    "correctness": {
+      "planned": 1,
+      "attempted": 1,
+      "passed": 0,
+      "failed": 1,
+      "unattempted": 0
+    },
+    "latency": {
+      "measured": 0,
+      "missing": 1,
+      "p50": null,
+      "p95": null
+    }
+  },
+  "intervalMethod": "No pooled interval: cases are stratified families and conversation turns share state.",
+  "samples": [
+    {
+      "scenario": "right-triangle",
+      "family": "right-triangle",
+      "category": "geometry",
+      "voice": "Rishi",
+      "audio": "/demo-voices/graph-geometry/rishi-right-triangle.wav",
+      "sha256": "0c287c7b8fe2b914b426cd3d3faa4dd6af42f5866169c8f6d64cf860b8bed9dd",
+      "passed": false,
+      "failure": "launch: Executable doesn't exist at /Users/isaac/Library/Caches/ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+      "elapsedMs": 284.5763330000009,
+      "responseLatencyMs": null,
+      "timings": [],
+      "trial": 1
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "run": "67b4bbfd-17ae-4ad7-927c-3600e4ce9e66",
+  "scope": "One mocked browser lifecycle case; no provider or saved-user-data access.",
+  "checks": [],
+  "passed": false,
+  "failure": "waitForFunction: Timeout 30000ms exceeded."
+}

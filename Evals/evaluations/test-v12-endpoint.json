@@ -1,0 +1,76 @@
+{
+  "split": "test-v12",
+  "mode": "endpoint",
+  "datasetSHA256": "34d04774587396fea02bf57a79677e077a2de31e08772242fe3dba2210988e96",
+  "createdAt": "2026-10-12T19:24:17.630Z",
+  "total": 4,
+  "scored": 4,
+  "passed": 4,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "ai_math": {
+      "passed": 4,
+      "scored": 4
+    }
+  },
+  "results": [
+    {
+      "id": "fresh2-001",
+      "category": "ai_math",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which number would you like to change to 9: 6, 8, or 44?"
+      },
+      "latencyMs": 3048
+    },
+    {
+      "id": "fresh2-002",
+      "category": "ai_math",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which part should I replace with negative fifteen?"
+      },
+      "latencyMs": 3235
+    },
+    {
+      "id": "fresh2-003",
+      "category": "ai_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "subtract 8 from both sides",
+          "simplify"
+        ]
+      },
+      "latencyMs": 2655
+    },
+    {
+      "id": "fresh2-004",
+      "category": "ai_math",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "divide both sides by 6",
+          "simplify"
+        ]
+      },
+      "latencyMs": 2055
+    }
+  ]
+}

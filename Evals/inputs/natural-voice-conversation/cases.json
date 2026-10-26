@@ -1,0 +1,26 @@
+[
+  {
+    "id": "natural-equation",
+    "text": "I'm working on eight x plus three equals nineteen. Could you write that for me?",
+    "expression": "8*x+3=19",
+    "kind": "write"
+  },
+  {
+    "id": "read-only-suggestion",
+    "text": "How would you get rid of that added three? Don't change it yet.",
+    "expression": "8*x+3=19",
+    "kind": "explanation"
+  },
+  {
+    "id": "natural-acceptance",
+    "text": "Yeah, let's do that.",
+    "expression": "8*x=16",
+    "kind": "apply"
+  },
+  {
+    "id": "spoken-correction",
+    "text": "Actually, take away five instead of three.",
+    "expression": "8*x-2=14",
+    "kind": "correction"
+  }
+]

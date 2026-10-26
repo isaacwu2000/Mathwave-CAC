@@ -1,0 +1,80 @@
+{
+  "split": "test-v23",
+  "mode": "endpoint",
+  "datasetSHA256": "7e106bd458f973db19b8af8d965394a250f7d09355d84b8cc12724523c0da5d0",
+  "createdAt": "2026-10-14T15:56:35.061Z",
+  "total": 5,
+  "scored": 5,
+  "passed": 5,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "integral-annulus": {
+      "passed": 5,
+      "scored": 5
+    }
+  },
+  "results": [
+    {
+      "id": "integral-annulus-1",
+      "category": "integral-annulus",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "integral graph 1 from 0 to 3",
+        "message": ""
+      },
+      "latencyMs": 2792
+    },
+    {
+      "id": "integral-annulus-2",
+      "category": "integral-annulus",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "total area graph 1 from -1 to 1",
+        "message": ""
+      },
+      "latencyMs": 1772
+    },
+    {
+      "id": "integral-annulus-3",
+      "category": "integral-annulus",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "annulus outer 5 inner 3",
+        "message": ""
+      },
+      "latencyMs": 2549
+    },
+    {
+      "id": "integral-annulus-4",
+      "category": "integral-annulus",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "thickness",
+        "message": ""
+      },
+      "latencyMs": 2007
+    },
+    {
+      "id": "integral-annulus-5",
+      "category": "integral-annulus",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Do you want the signed integral or the total geometric area between the curve and the x-axis?"
+      },
+      "latencyMs": 2393
+    }
+  ]
+}

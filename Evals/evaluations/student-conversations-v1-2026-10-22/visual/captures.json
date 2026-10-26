@@ -1,0 +1,173 @@
+{
+  "lane": "Actual Web application; authored reference states; intercepted problem API with in-memory synthetic store; no model or audio provider calls.",
+  "captures": [
+    {
+      "case": "graph-viewport-then-translation",
+      "turn": 1,
+      "student": "Graph x squared.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "filename": "graph-viewport-then-translation-turn-1-desktop.png",
+      "horizontalOverflow": false,
+      "expression": "x^2"
+    },
+    {
+      "case": "graph-viewport-then-translation",
+      "turn": 1,
+      "student": "Graph x squared.",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "filename": "graph-viewport-then-translation-turn-1-mobile.png",
+      "horizontalOverflow": false,
+      "expression": "x^2"
+    },
+    {
+      "case": "graph-viewport-then-translation",
+      "turn": 2,
+      "student": "Pan the view left.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "filename": "graph-viewport-then-translation-turn-2-desktop.png",
+      "horizontalOverflow": false,
+      "expression": "x^2"
+    },
+    {
+      "case": "graph-viewport-then-translation",
+      "turn": 2,
+      "student": "Pan the view left.",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "filename": "graph-viewport-then-translation-turn-2-mobile.png",
+      "horizontalOverflow": false,
+      "expression": "x^2"
+    },
+    {
+      "case": "graph-viewport-then-translation",
+      "turn": 3,
+      "student": "Now move the curve itself up four.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "filename": "graph-viewport-then-translation-turn-3-desktop.png",
+      "horizontalOverflow": false,
+      "expression": "y = x^2 + 4"
+    },
+    {
+      "case": "graph-viewport-then-translation",
+      "turn": 3,
+      "student": "Now move the curve itself up four.",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "filename": "graph-viewport-then-translation-turn-3-mobile.png",
+      "horizontalOverflow": false,
+      "expression": "y = x^2 + 4"
+    },
+    {
+      "case": "graph-viewport-then-translation",
+      "turn": 4,
+      "student": "What does it give at zero?",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "filename": "graph-viewport-then-translation-turn-4-desktop.png",
+      "horizontalOverflow": false,
+      "expression": "y = x^2 + 4"
+    },
+    {
+      "case": "graph-viewport-then-translation",
+      "turn": 4,
+      "student": "What does it give at zero?",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "filename": "graph-viewport-then-translation-turn-4-mobile.png",
+      "horizontalOverflow": false,
+      "expression": "y = x^2 + 4"
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 1,
+      "student": "Draw two horizontal parallel lines four units apart, with a transversal from zero zero through four eight.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "filename": "geo-corresponding-angle-marks-turn-1-desktop.png",
+      "horizontalOverflow": false,
+      "expression": "0"
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 1,
+      "student": "Draw two horizontal parallel lines four units apart, with a transversal from zero zero through four eight.",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "filename": "geo-corresponding-angle-marks-turn-1-mobile.png",
+      "horizontalOverflow": false,
+      "expression": "0"
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 2,
+      "student": "Mark the matching upper-right angles at the crossings.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "filename": "geo-corresponding-angle-marks-turn-2-desktop.png",
+      "horizontalOverflow": false,
+      "expression": "0"
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 2,
+      "student": "Mark the matching upper-right angles at the crossings.",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "filename": "geo-corresponding-angle-marks-turn-2-mobile.png",
+      "horizontalOverflow": false,
+      "expression": "0"
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 3,
+      "student": "Where is the upper crossing?",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "filename": "geo-corresponding-angle-marks-turn-3-desktop.png",
+      "horizontalOverflow": false,
+      "expression": "0"
+    },
+    {
+      "case": "geo-corresponding-angle-marks",
+      "turn": 3,
+      "student": "Where is the upper crossing?",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "filename": "geo-corresponding-angle-marks-turn-3-mobile.png",
+      "horizontalOverflow": false,
+      "expression": "0"
+    }
+  ]
+}

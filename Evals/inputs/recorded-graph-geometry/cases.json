@@ -1,0 +1,173 @@
+[
+  {
+    "id": "function",
+    "transcript": "Graph y equals x squared minus four.",
+    "expectedCommand": "graph y=x^2-4",
+    "setup": []
+  },
+  {
+    "id": "range",
+    "transcript": "Set graph range from negative five to five.",
+    "expectedCommand": "range -5 to 5",
+    "setup": [
+      "graph y=x^2-4"
+    ]
+  },
+  {
+    "id": "intercepts",
+    "transcript": "Find the x intercepts.",
+    "expectedCommand": "find roots",
+    "setup": [
+      "graph y=x^2-4"
+    ]
+  },
+  {
+    "id": "point",
+    "transcript": "Read graph at x equals three.",
+    "expectedCommand": "evaluate at x 3",
+    "setup": [
+      "graph y=x^2-4"
+    ]
+  },
+  {
+    "id": "right-triangle",
+    "transcript": "Draw a right triangle with legs three and four.",
+    "expectedCommand": "right triangle a 3 b 4",
+    "setup": []
+  },
+  {
+    "id": "hypotenuse",
+    "transcript": "Find the hypotenuse.",
+    "expectedCommand": "hypotenuse",
+    "setup": [
+      "right triangle a 3 b 4"
+    ]
+  },
+  {
+    "id": "rectangle",
+    "transcript": "Create a rectangle with width six and height four.",
+    "expectedCommand": "rectangle width 6 height 4",
+    "setup": []
+  },
+  {
+    "id": "dimension-edit",
+    "transcript": "Change the width to eight.",
+    "expectedCommand": "set width to 8",
+    "setup": [
+      "rectangle width 6 height 4"
+    ]
+  },
+  {
+    "id": "triangle-area",
+    "transcript": "Find the area of a triangle with base ten and height six.",
+    "expectedCommand": "area of triangle base 10 height 6",
+    "setup": [],
+    "expectedCommands": [
+      "triangle base 10 height 6",
+      "area"
+    ]
+  },
+  {
+    "id": "circle",
+    "transcript": "Draw a circle with a radius of five.",
+    "expectedCommand": "circle radius 5",
+    "setup": []
+  },
+  {
+    "id": "radius-edit",
+    "transcript": "Set the radius to seven.",
+    "expectedCommand": "set radius to 7",
+    "setup": [
+      "circle radius 5"
+    ]
+  },
+  {
+    "id": "cylinder",
+    "transcript": "Create a cylinder with radius two and height five.",
+    "expectedCommand": "cylinder radius 2 height 5",
+    "setup": []
+  },
+  {
+    "id": "volume",
+    "transcript": "Find its volume.",
+    "expectedCommand": "volume",
+    "setup": [
+      "cylinder radius 2 height 5"
+    ]
+  },
+  {
+    "id": "triangle-sides",
+    "transcript": "Triangle with sides three, four, five.",
+    "expectedCommand": "triangle a 3 b 4 c 5",
+    "setup": []
+  },
+  {
+    "id": "angle",
+    "transcript": "Find angle C.",
+    "expectedCommand": "angle c",
+    "setup": [
+      "triangle a 3 b 4 c 5"
+    ]
+  },
+  {
+    "id": "missing-height",
+    "transcript": "Rectangle width six.",
+    "expectedCommand": "rectangle width 6",
+    "setup": [],
+    "expectedStatus": "clarification"
+  },
+  {
+    "id": "height-reply",
+    "transcript": "Four.",
+    "expectedCommand": "rectangle width 6 height 4",
+    "setup": [],
+    "clarification": {
+      "request": "Rectangle width six.",
+      "question": "What is the rectangle height?"
+    }
+  },
+  {
+    "id": "width-reply",
+    "transcript": "Eight.",
+    "expectedCommand": "set width to 8",
+    "setup": [
+      "rectangle width 6 height 4"
+    ],
+    "clarification": {
+      "request": "Change the width to age.",
+      "question": "What number should the width change to?"
+    }
+  },
+  {
+    "id": "height-confirm",
+    "transcript": "Height four.",
+    "expectedCommand": "rectangle width 6 height 4",
+    "setup": [],
+    "clarification": {
+      "request": "Rectangle width six.",
+      "question": "What is the rectangle height?"
+    }
+  },
+  {
+    "id": "width-clear-reply",
+    "transcript": "The width should be eight.",
+    "expectedCommand": "set width to 8",
+    "setup": [
+      "rectangle width 6 height 4"
+    ],
+    "clarification": {
+      "request": "Change the width to age.",
+      "question": "What number should the width change to?"
+    }
+  },
+  {
+    "id": "height-clear-reply",
+    "transcript": "The height is four.",
+    "expectedCommand": "rectangle width 6 height 4",
+    "setup": [],
+    "clarification": {
+      "request": "Rectangle width six.",
+      "question": "What is the rectangle height?"
+    }
+  }
+]

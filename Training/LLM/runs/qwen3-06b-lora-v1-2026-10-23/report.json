@@ -1,0 +1,111 @@
+{
+  "config": {
+    "model": "Qwen/Qwen3-0.6B",
+    "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "seed": 20261023,
+    "epochs": 2,
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "learningRate": 0.0002,
+    "batchSize": 1,
+    "gradientAccumulation": 8,
+    "maxContext": 16384,
+    "maxNewTokens": 512,
+    "warmupUpdates": 10,
+    "precision": "float16 base, float32 adapters",
+    "device": "mps",
+    "selection": "lowest full validation assistant-token cross entropy at epoch ends",
+    "paidComputeUsd": 0,
+    "enableThinking": false,
+    "decoding": "greedy; stop at complete JSON",
+    "gradientCheckpointing": true,
+    "targets": [
+      "q_proj",
+      "v_proj"
+    ],
+    "smokeOnly": false
+  },
+  "startedUnix": 1792782692.0768352,
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "dataHashes": {
+    "train.jsonl": "a895810b7aa721fd95d6c2b9101bbc983b4699d396c42447f97f916c922a9ab6",
+    "test.jsonl": "6c4ceafe8c5f17452159d5836939ad0facbd8761f361b6715ab0705818e2351b",
+    "val.jsonl": "c6e3aeea477a80f39356b46211aa046bd8203771680c853073b8303f0aab7329",
+    "system-prompt.txt": "2b3be606c655d5855cd0184bfb752bb4cc9fcdba3953fd606c4dc59a258bbb25",
+    "manifest.json": "8a3ed7b9c37c63609a4d93d15c75b82eff21becbf145153f6cf153a3d87345a9",
+    "transport-guidance.txt": "cbf4ea1799646cb9aa254d675918b3f3c32121b21cbdf7a7517dbc2c29d12008"
+  },
+  "sourceHashes": {
+    "grade_predictions.test.ts": "08240af00bcb00ea3521a85ed0a2d21bd0ba70b26beffd15d3d635c94c0416f2",
+    "test_train_lora.py": "0bc02f5ce42af284fe2fd0024096ca1d164cc05581388429f731eda5724c1c34",
+    "plot_run.py": "c27e2e387ff36e79284841fe5d3656a2b65afddafd24af293c16c12ae4b76b60",
+    "grade_predictions.ts": "2a6fd6f4945cee68c71ec47efa3afbc856d6d70ca4712eb3f33de71931b27825",
+    "export_dataset.test.ts": "053cd948ced57439be703bee0f2bcd56136571cd987972507c4e5abe3a9933ea",
+    "train_lora.py": "1fc88d51a542f969903c2f09818e2b0bd1bb7fb94bae5b4595c3df1ae67bbec7",
+    "export_dataset.ts": "656616a73b372b8e70cec9b73348914747aabdd9767721de81dccdf93a5b0166"
+  },
+  "versions": {
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "peft": "0.21.2",
+    "safetensors": "0.8.0",
+    "numpy": "2.5.4"
+  },
+  "counts": {
+    "train": 1278,
+    "val": 163,
+    "test": 166
+  },
+  "progress": {
+    "stage": "baseline-test",
+    "completed": 48,
+    "total": 166,
+    "lastSeconds": 48.72802666699863,
+    "elapsedSeconds": 914.7767670420008
+  },
+  "checklist": {
+    "splitChecked": true,
+    "baseline": false,
+    "trained": false,
+    "reloaded": false,
+    "retest": false,
+    "frozenBaseUnchanged": false
+  },
+  "limits": [
+    "Previously examined synthetic corpus; not an unseen external benchmark.",
+    "Conditional per-turn evaluation uses authored prior state; not autonomous conversation rollout.",
+    "No microphone, STT, iPhone integration, quantization or speed acceptance.",
+    "Assistant predictions are graded separately by the shared engine; exact text match is diagnostic only."
+  ],
+  "visualReview": "Pending actual-app rendering and inspection of graded predictions.",
+  "tokenCounts": {
+    "train": {
+      "total": 5238417,
+      "supervised": 40070,
+      "maximum": 5144
+    },
+    "val": {
+      "total": 670177,
+      "supervised": 5036,
+      "maximum": 4999
+    },
+    "test": {
+      "total": 678136,
+      "supervised": 5066,
+      "maximum": 4993
+    }
+  },
+  "parameters": {
+    "trainable": 1146880,
+    "total": 597196800
+  },
+  "firstBackward": {
+    "seconds": 71.70201283300048,
+    "loss": 2.4519765377044678,
+    "tokens": 3762,
+    "supervisedTokens": 31,
+    "allocatedGiB": 1.1408698558807373,
+    "driverGiB": 5.7577667236328125
+  }
+}

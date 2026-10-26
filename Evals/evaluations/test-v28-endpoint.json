@@ -1,0 +1,68 @@
+{
+  "split": "test-v28",
+  "mode": "endpoint",
+  "datasetSHA256": "0cb39a2d57d6dad9a5d2d7c9defb8cef5edda1ef20113c74e449c613a798f29f",
+  "createdAt": "2026-10-14T16:29:34.939Z",
+  "total": 4,
+  "scored": 4,
+  "passed": 4,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "secant-circles": {
+      "passed": 4,
+      "scored": 4
+    }
+  },
+  "results": [
+    {
+      "id": "secant-circles-1",
+      "category": "secant-circles",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "add secant to graph 1 from -2 to 3",
+        "message": ""
+      },
+      "latencyMs": 2433
+    },
+    {
+      "id": "secant-circles-2",
+      "category": "secant-circles",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "inradius",
+        "message": ""
+      },
+      "latencyMs": 2633
+    },
+    {
+      "id": "secant-circles-3",
+      "category": "secant-circles",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "circumradius",
+        "message": ""
+      },
+      "latencyMs": 2250
+    },
+    {
+      "id": "secant-circles-4",
+      "category": "secant-circles",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "altitude c",
+        "message": ""
+      },
+      "latencyMs": 1835
+    }
+  ]
+}

@@ -1,0 +1,472 @@
+import { randomUUID, createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import { mkdir, writeFile, readFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import {
+  COMMAND_PROFILES,
+  interpretationInstructions,
+} from '../../Web/src/modules/ai/index.ts';
+import {
+  createProblemLibrary,
+  currentProblem,
+  applyCloudOperation,
+  decodeProblemLibrary,
+} from '../../Web/src/modules/problems/index.ts';
+import { isRadiusTwoCircle } from '../src/prompt-context-oracles.ts';
+import { parseMath, simplifyMath } from '../../Web/src/modules/math/index.ts';
+import { validateConstruction } from '../../Web/src/modules/visuals/index.ts';
+import {
+  interpretWithPrompt,
+  type PromptProvider,
+  type PromptOutcome,
+} from '../src/prompt-provider.ts';
+import { shortInterpretationInstructions } from '../experiments/short-interpreter-prompt.ts';
+import {
+  naturalVoiceCases,
+  assessNaturalVoiceTurn,
+} from '../src/natural-voice-conversation.ts';
+
+type Saved = Parameters<typeof applyCloudOperation>[0];
+type Outcome = Awaited<ReturnType<typeof applyCloudOperation>>;
+type Turn = {
+  text: string;
+  expectation: string;
+  prepare?: (saved: Saved) => Promise<Saved>;
+  assess: (after: Outcome, before: Saved) => boolean;
+};
+type Scenario = { id: string; setup: string[]; turns: Turn[] };
+const sameWork = (after: Saved, before: Saved) =>
+  JSON.stringify(currentProblem(after.book).state) ===
+    JSON.stringify(currentProblem(before.book).state) &&
+  JSON.stringify(currentProblem(after.book).steps) ===
+    JSON.stringify(currentProblem(before.book).steps);
+const math = (after: Saved, expected: string) =>
+  JSON.stringify(
+    simplifyMath(parseMath(currentProblem(after.book).state.expression)),
+  ) === JSON.stringify(simplifyMath(parseMath(expected)));
+const point = (after: Saved, name: string, x: number, y: number) => {
+  const source = currentProblem(after.book).state.construction;
+  if (!source) return false;
+  const p = validateConstruction(source).values.get(name);
+  return (
+    p?.kind === 'point' && Math.abs(p.x - x) < 1e-9 && Math.abs(p.y - y) < 1e-9
+  );
+};
+const normalizedRows = (after: Saved) =>
+  currentProblem(after.book).state.graphScene?.rows.map((row) =>
+    row.expression.replace(/\s/g, ''),
+  ) || [];
+const scenarios: Scenario[] = [
+  {
+    id: 'natural-conversation',
+    setup: [],
+    turns: naturalVoiceCases.map((example) => ({
+      text: example.text,
+      expectation: example.kind + ': ' + example.expression,
+      assess: (a, b) => assessNaturalVoiceTurn(b.book, a.book, example).passed,
+    })),
+  },
+  {
+    id: 'delayed-correction',
+    setup: ['write 3*x+5=20'],
+    turns: [
+      {
+        text: 'Subtract five from both sides and simplify.',
+        expectation: '3*x=15; one recoverable operation',
+        assess: (a) => math(a, '3*x=15'),
+      },
+      {
+        text: 'Actually, take away seven instead of five.',
+        expectation:
+          '3*x-2=13; replace original operation after 18 read-only turns',
+        prepare: async (saved) => {
+          for (let i = 0; i < 18; i++)
+            saved = await applyCloudOperation(saved, {
+              kind: 'command',
+              text: 'read equation',
+            });
+          return saved;
+        },
+        assess: (a, b) =>
+          a.status === 'correction' &&
+          math(a, '3*x-2=13') &&
+          currentProblem(a.book).steps.length ===
+            currentProblem(b.book).steps.length,
+      },
+      {
+        text: 'Change that number to nine.',
+        expectation: 'Ask which number; work unchanged',
+        assess: (a, b) => a.status === 'clarification' && sameWork(a, b),
+      },
+    ],
+  },
+  {
+    id: 'missing-number',
+    setup: ['write 4*x+3=11'],
+    turns: [
+      {
+        text: 'Divide both sides by a number.',
+        expectation: 'Ask for missing divisor without saving',
+        assess: (a, b) => a.status === 'clarification' && sameWork(a, b),
+      },
+      {
+        text: 'Two.',
+        expectation: 'Resolve original division request using divisor2',
+        assess: (a) => a.status === 'command' && math(a, '(4*x+3)/2=11/2'),
+      },
+    ],
+  },
+  {
+    id: 'linked-graph',
+    setup: [],
+    turns: [
+      {
+        text: 'Define a equals two and f of x equals a times x squared. Plot f, keeping its definition linked to a.',
+        expectation: 'Two linked rows a=2,f(x)=a*x^2',
+        assess: (a) => {
+          const r = normalizedRows(a);
+          return (
+            r.length === 2 && r.includes('a=2') && r.includes('f(x)=a*x^2')
+          );
+        },
+      },
+      {
+        text: 'Change a to three.',
+        expectation: 'a=3; function stays linked',
+        assess: (a) => {
+          const r = normalizedRows(a);
+          return (
+            r.length === 2 && r.includes('a=3') && r.includes('f(x)=a*x^2')
+          );
+        },
+      },
+      {
+        text: 'Read f at x equals two without changing the graph.',
+        expectation: 'Computed value12, no saved step',
+        assess: (a, b) =>
+          sameWork(a, b) && /\b12\b/.test(a.message) && a.status === 'command',
+      },
+    ],
+  },
+  {
+    id: 'implicit-graph',
+    setup: [],
+    turns: [
+      {
+        text: 'Graph x squared plus y squared equals four.',
+        expectation: 'Implicit circle relation, not explicit residual',
+        assess: (a) => isRadiusTwoCircle(currentProblem(a.book).state),
+      },
+    ],
+  },
+  {
+    id: 'polar-graph',
+    setup: [],
+    turns: [
+      {
+        text: 'Plot r equals two times cosine theta for theta from zero to pi over two.',
+        expectation: 'Polar row with domain0..pi/2',
+        assess: (a) => {
+          const rows = currentProblem(a.book).state.graphScene?.rows;
+          const r = rows?.[0];
+          return (
+            rows?.length === 1 &&
+            !!r &&
+            r.expression.replace(/\s/g, '') === 'r=2*cos(theta)' &&
+            r.domain?.min === 0 &&
+            Math.abs((r.domain?.max ?? 0) - Math.PI / 2) < 1e-9
+          );
+        },
+      },
+    ],
+  },
+  {
+    id: 'construction-edit-correction',
+    setup: [
+      'typescript\nproblem.save(geometry.construct("A=point(0,0)\\nB=point(4,0)\\ndraw segment(A,B)"));',
+    ],
+    turns: [
+      {
+        text: 'Add the midpoint M of segment A B.',
+        expectation: 'M=(2,0), dependent midpoint',
+        assess: (a) =>
+          point(a, 'M', 2, 0) &&
+          /M\s*=\s*midpoint\(A\s*,\s*B\)/.test(
+            currentProblem(a.book).state.construction || '',
+          ),
+      },
+      {
+        text: 'Move B to eight zero.',
+        expectation: 'B=(8,0),M=(4,0)',
+        assess: (a) => point(a, 'B', 8, 0) && point(a, 'M', 4, 0),
+      },
+      {
+        text: 'Actually, I meant six zero.',
+        expectation:
+          'Replace prior move withB=(6,0),M=(3,0), preserve step count',
+        assess: (a, b) =>
+          a.status === 'correction' &&
+          point(a, 'B', 6, 0) &&
+          point(a, 'M', 3, 0) &&
+          currentProblem(a.book).steps.length ===
+            currentProblem(b.book).steps.length,
+      },
+      {
+        text: 'Read M.',
+        expectation: 'M=(3,0); no save',
+        assess: (a, b) => sameWork(a, b) && /M.*3/.test(a.message),
+      },
+    ],
+  },
+  {
+    id: 'construction-intersection',
+    setup: [
+      'typescript\nproblem.save(geometry.construct("O=point(0,0)\\nA=point(-2,0)\\nB=point(2,0)\\nc=circle(O,1)\\nl=line(A,B)\\ndraw c,l"));',
+    ],
+    turns: [
+      {
+        text: 'Mark the intersection of the circle and line as P.',
+        expectation: 'Ask which of two intersections, no save',
+        assess: (a, b) => a.status === 'clarification' && sameWork(a, b),
+      },
+      {
+        text: 'Use the left one.',
+        expectation: 'P=(-1,0)',
+        assess: (a) => point(a, 'P', -1, 0),
+      },
+    ],
+  },
+  {
+    id: 'false-geometry-assertion',
+    setup: [
+      'typescript\nproblem.save(geometry.construct("A=point(0,0)\\nB=point(4,0)\\nC=point(1,3)\\ndraw triangle(A,B,C)"));',
+    ],
+    turns: [
+      {
+        text: 'Mark angle A B C as a right angle.',
+        expectation: 'Reject false right-angle mark; construction unchanged',
+        assess: (a, b) =>
+          ['unsupported', 'clarification', 'reply', 'explanation'].includes(
+            a.status,
+          ) &&
+          sameWork(a, b) &&
+          !/marked|added the right angle/i.test(a.message),
+      },
+    ],
+  },
+];
+const planned = scenarios.reduce((sum, s) => sum + s.turns.length, 0) * 2;
+if (process.argv.includes('--dry-run')) {
+  console.log(
+    JSON.stringify(
+      {
+        plannedTurns: planned,
+        maximumProviderCalls: planned * 3,
+        scenarios: scenarios.map((s) => ({
+          id: s.id,
+          turns: s.turns.map((t) => ({
+            text: t.text,
+            expectation: t.expectation,
+          })),
+        })),
+      },
+      null,
+      2,
+    ),
+  );
+  process.exit(0);
+}
+if (process.env.RUN_LIVE_CHECK !== 'true')
+  throw new Error(
+    'Set RUN_LIVE_CHECK=true for paid synthetic text context checks.',
+  );
+const root = fileURLToPath(new URL('../../', import.meta.url));
+process.loadEnvFile(root + 'Web/.env');
+const profile = process.env.MATH_AUDIO_COMMAND_PROFILE || 'luna-default';
+if (!Object.hasOwn(COMMAND_PROFILES, profile))
+  throw new Error('Unknown profile.');
+const settings = COMMAND_PROFILES[profile as keyof typeof COMMAND_PROFILES];
+const key =
+  profile === 'luna-default'
+    ? process.env.OPENAI_API_KEY
+    : process.env.OPENROUTER_API_KEY;
+if (!key) throw new Error('Missing provider credentials.');
+const provider: PromptProvider = {
+  ...settings,
+  key,
+  url:
+    profile === 'luna-default'
+      ? 'https://api.openai.com/v1/responses'
+      : 'https://openrouter.ai/api/v1/responses',
+};
+const variants = {
+  baseline: interpretationInstructions,
+  short: shortInterpretationInstructions,
+};
+const directory = new URL(
+  `../evaluations/short-prompt-context-${randomUUID()}/`,
+  import.meta.url,
+);
+await mkdir(directory, { recursive: true });
+const sources = [
+  'Evals/scripts/evaluate-prompt-context.ts',
+  'Evals/src/prompt-provider.ts',
+  'Web/src/modules/ai/config/interpretation.ts',
+  'Web/src/modules/commands/config/program-instructions.ts',
+  'Web/src/modules/commands/config/construction-instructions.ts',
+  'Web/src/modules/commands/config/graph-scene-instructions.ts',
+  'Evals/experiments/short-interpreter-prompt.ts',
+  'Evals/src/natural-voice-conversation.ts',
+];
+const sourceHashes: Record<string, string> = {};
+for (const [index, path] of sources.entries()) {
+  const text = await readFile(root + path, 'utf8');
+  sourceHashes[path] = createHash('sha256').update(text).digest('hex');
+  await writeFile(new URL(`source-${index}.txt`, directory), text);
+}
+for (const [name, prompt] of Object.entries(variants))
+  await writeFile(new URL(name + '-prompt.txt', directory), prompt);
+const samples: Record<string, unknown>[] = [];
+let calls = 0,
+  fatal: string | undefined;
+const revision = execFileSync('git', ['rev-parse', 'HEAD'], {
+  encoding: 'utf8',
+}).trim();
+const checkpoint = () =>
+  writeFile(
+    new URL('report.json', directory),
+    JSON.stringify(
+      {
+        revision,
+        workingChanges: true,
+        profile,
+        model: provider.model,
+        plannedTurns: planned,
+        maximumProviderCalls: planned * 3,
+        calls,
+        fatal,
+        sourceHashes,
+        scope:
+          'Real text-model provider with actual cloud operation, conversation and recovery logic; synthetic in-memory persistence. Excludes microphone, voice, browser and graph streaming transport. Stops dependent turns after a failure; skipped turns remain explicit.',
+        samples,
+      },
+      null,
+      2,
+    ),
+  );
+console.log(JSON.stringify({ output: directory.pathname, planned }));
+for (const [index, scenario] of scenarios.entries()) {
+  for (const variant of (index % 2
+    ? ['short', 'baseline']
+    : ['baseline', 'short']) as ('short' | 'baseline')[]) {
+    let saved: Saved = { book: createProblemLibrary(), clarification: null };
+    for (const text of scenario.setup)
+      saved = await applyCloudOperation(saved, {
+        kind: 'command',
+        text,
+        interpret: false,
+      });
+    let blocked = false;
+    for (const turn of scenario.turns) {
+      if (blocked || fatal) {
+        samples.push({
+          scenario: scenario.id,
+          variant,
+          text: turn.text,
+          expectation: turn.expectation,
+          attempted: false,
+          reason: fatal || 'Prior dependent turn failed',
+        });
+        continue;
+      }
+      if (turn.prepare) saved = await turn.prepare(saved);
+      const before = saved;
+      const providerResults: PromptOutcome[] = [];
+      let after: Outcome | undefined,
+        passed = false,
+        error: string | undefined;
+      try {
+        after = await applyCloudOperation(
+          saved,
+          { kind: 'command', text: turn.text, interpret: true },
+          async (text, library) => {
+            const result = await interpretWithPrompt(
+              text,
+              library,
+              variants[variant],
+              provider,
+              () => {
+                if (++calls > planned * 3)
+                  throw new Error('Call budget exhausted.');
+              },
+            );
+            providerResults.push(result);
+            if (result.providerFailure) fatal = result.error;
+            if (!result.interpretation)
+              throw new Error(result.error || 'No valid proposal');
+            return result.interpretation;
+          },
+        );
+        passed = !after.aiUnavailable && turn.assess(after, before);
+      } catch (e) {
+        error = e instanceof Error ? e.message : 'Context check failed';
+      }
+      samples.push({
+        scenario: scenario.id,
+        variant,
+        text: turn.text,
+        expectation: turn.expectation,
+        attempted: true,
+        passed,
+        error,
+        status: after?.status,
+        message: after?.message,
+        before: currentProblem(before.book),
+        after: after ? currentProblem(after.book) : undefined,
+        aiUnavailable: after?.aiUnavailable,
+        providerResults,
+      });
+      if (after)
+        saved = {
+          book: decodeProblemLibrary(JSON.stringify(after.book)),
+          clarification: after.clarification,
+        };
+      blocked = !passed;
+      await checkpoint();
+      console.log(
+        JSON.stringify({
+          scenario: scenario.id,
+          variant,
+          passed,
+          text: turn.text,
+          calls,
+        }),
+      );
+    }
+  }
+  if (fatal) break;
+}
+await checkpoint();
+console.log(
+  JSON.stringify({
+    output: directory.pathname,
+    calls,
+    summary: Object.fromEntries(
+      Object.keys(variants).map((variant) => {
+        const rows = samples.filter((s) => s.variant === variant);
+        return [
+          variant,
+          {
+            planned: planned / 2,
+            attempted: rows.filter((r) => r.attempted).length,
+            passed: rows.filter((r) => r.passed).length,
+            failed: rows.filter((r) => r.attempted && !r.passed).length,
+            blocked: rows.filter((r) => !r.attempted).length,
+          },
+        ];
+      }),
+    ),
+    fatal,
+  }),
+);
+if (fatal) process.exitCode = 1;

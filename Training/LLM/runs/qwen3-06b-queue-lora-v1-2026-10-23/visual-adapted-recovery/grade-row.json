@@ -1,0 +1,276 @@
+{
+  "results": [
+    {
+      "id": "graph-polar-half-circle-domain:2:final",
+      "caseId": "graph-polar-half-circle-domain",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": true,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "Saved workspace or history differs from reference outcome."
+      ],
+      "book": {
+        "version": 2,
+        "assignments": [
+          {
+            "id": "807315ee-013b-410d-b548-7ba06ccdac1e",
+            "title": "My homework",
+            "problems": [
+              {
+                "id": "06097fd7-1d88-4476-a900-39458ff7b4ea",
+                "title": "Problem 1",
+                "state": {
+                  "mode": "geometry",
+                  "expression": "0",
+                  "data": [
+                    0,
+                    0
+                  ],
+                  "diagram": [
+                    "Start",
+                    "Finish"
+                  ],
+                  "selection": 0,
+                  "graph": false,
+                  "graphScene": {
+                    "rows": [
+                      {
+                        "expression": "r=2"
+                      }
+                    ]
+                  },
+                  "construction": "A=point(0,0)\nB=point(1,0)\nC=point(0,1)\ndraw triangle(A,B,C)\nangle A,B,C"
+                },
+                "steps": [
+                  {
+                    "command": "typescript\nproblem.save(graph.scene([\"r=2\"]));",
+                    "displayCommand": "No, execute the authored reference.",
+                    "state": {
+                      "mode": "equation",
+                      "expression": "0",
+                      "data": [
+                        0,
+                        0
+                      ],
+                      "diagram": [
+                        "Start",
+                        "Finish"
+                      ],
+                      "selection": 0,
+                      "graph": true,
+                      "graphScene": {
+                        "rows": [
+                          {
+                            "expression": "r=2"
+                          }
+                        ]
+                      }
+                    },
+                    "at": "2026-10-23T19:09:54.276Z"
+                  },
+                  {
+                    "command": "typescript\nproblem.save(geometry.construct(\"A=point(0,0)\\nB=point(1,0)\\nC=point(0,1)\\ndraw triangle(A,B,C)\\nangle A,B,C\"));",
+                    "displayCommand": "No, execute the generated model proposal for this evaluation.",
+                    "state": {
+                      "mode": "geometry",
+                      "expression": "0",
+                      "data": [
+                        0,
+                        0
+                      ],
+                      "diagram": [
+                        "Start",
+                        "Finish"
+                      ],
+                      "selection": 0,
+                      "graph": false,
+                      "graphScene": {
+                        "rows": [
+                          {
+                            "expression": "r=2"
+                          }
+                        ]
+                      },
+                      "construction": "A=point(0,0)\nB=point(1,0)\nC=point(0,1)\ndraw triangle(A,B,C)\nangle A,B,C"
+                    },
+                    "at": "2026-10-23T20:52:04.825Z"
+                  }
+                ],
+                "initialState": {
+                  "mode": "equation",
+                  "expression": "0",
+                  "data": [
+                    0,
+                    0
+                  ],
+                  "diagram": [
+                    "Start",
+                    "Finish"
+                  ],
+                  "selection": 0,
+                  "graph": false
+                },
+                "undoRevisions": [
+                  {
+                    "state": {
+                      "mode": "equation",
+                      "expression": "0",
+                      "data": [
+                        0,
+                        0
+                      ],
+                      "diagram": [
+                        "Start",
+                        "Finish"
+                      ],
+                      "selection": 0,
+                      "graph": false
+                    },
+                    "steps": [],
+                    "undoStates": []
+                  },
+                  {
+                    "state": {
+                      "mode": "equation",
+                      "expression": "0",
+                      "data": [
+                        0,
+                        0
+                      ],
+                      "diagram": [
+                        "Start",
+                        "Finish"
+                      ],
+                      "selection": 0,
+                      "graph": true,
+                      "graphScene": {
+                        "rows": [
+                          {
+                            "expression": "r=2"
+                          }
+                        ]
+                      }
+                    },
+                    "steps": [
+                      {
+                        "command": "typescript\nproblem.save(graph.scene([\"r=2\"]));",
+                        "displayCommand": "No, execute the authored reference.",
+                        "state": {
+                          "mode": "equation",
+                          "expression": "0",
+                          "data": [
+                            0,
+                            0
+                          ],
+                          "diagram": [
+                            "Start",
+                            "Finish"
+                          ],
+                          "selection": 0,
+                          "graph": true,
+                          "graphScene": {
+                            "rows": [
+                              {
+                                "expression": "r=2"
+                              }
+                            ]
+                          }
+                        },
+                        "at": "2026-10-23T19:09:54.276Z"
+                      }
+                    ],
+                    "undoStates": [
+                      {
+                        "mode": "equation",
+                        "expression": "0",
+                        "data": [
+                          0,
+                          0
+                        ],
+                        "diagram": [
+                          "Start",
+                          "Finish"
+                        ],
+                        "selection": 0,
+                        "graph": false
+                      }
+                    ]
+                  }
+                ],
+                "redoRevisions": [],
+                "draft": "",
+                "undoStates": [
+                  {
+                    "mode": "equation",
+                    "expression": "0",
+                    "data": [
+                      0,
+                      0
+                    ],
+                    "diagram": [
+                      "Start",
+                      "Finish"
+                    ],
+                    "selection": 0,
+                    "graph": false
+                  },
+                  {
+                    "mode": "equation",
+                    "expression": "0",
+                    "data": [
+                      0,
+                      0
+                    ],
+                    "diagram": [
+                      "Start",
+                      "Finish"
+                    ],
+                    "selection": 0,
+                    "graph": true,
+                    "graphScene": {
+                      "rows": [
+                        {
+                          "expression": "r=2"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "conversation": [
+                  {
+                    "request": "Draw r equals two.",
+                    "response": "Graph row 1: r=2.",
+                    "status": "command",
+                    "stateKey": "150:1877114204",
+                    "revisable": true,
+                    "stepCount": 1,
+                    "undoDepth": 1
+                  },
+                  {
+                    "request": "No, execute the generated model proposal for this evaluation.",
+                    "response": "A: point (0, 0). B: point (1, 0). C: point (0, 1).",
+                    "status": "command",
+                    "stateKey": "244:2469085498",
+                    "revisable": true,
+                    "stepCount": 2,
+                    "undoDepth": 1
+                  }
+                ],
+                "conversationArchive": []
+              }
+            ]
+          }
+        ],
+        "assignmentId": "807315ee-013b-410d-b548-7ba06ccdac1e",
+        "problemId": "06097fd7-1d88-4476-a900-39458ff7b4ea",
+        "draft": ""
+      },
+      "message": "A: point (0, 0). B: point (1, 0). C: point (0, 1)."
+    }
+  ]
+}

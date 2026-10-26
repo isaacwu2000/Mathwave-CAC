@@ -1,0 +1,13 @@
+{
+  "origin": "http://localhost:5179",
+  "checkedAt": "2026-10-19T23:06:51.478Z",
+  "checks": [
+    "Separate browser guests receive separate private identities and three-minute trials.",
+    "A different guest cannot submit a request under the first guest identity.",
+    "Exhaustion blocks interpretation, graph generation, and voice before provider work; saved work remains readable.",
+    "Ordinary email/password sign-in restores the ten-hour development account and carries guest work into it.",
+    "Sign-out hides account work and retains the browser’s already-used trial allowance.",
+    "Unverified identities cannot access work; verified student accounts receive five hours, and reset revokes another session.",
+    "A freshly authenticated disposable account can delete its identity and private work."
+  ]
+}

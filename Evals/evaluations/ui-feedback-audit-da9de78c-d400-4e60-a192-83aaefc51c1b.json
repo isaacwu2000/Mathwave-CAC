@@ -1,0 +1,175 @@
+{
+  "kind": "requested-ui-feedback-audit",
+  "createdAt": "2026-10-16T21:11:32.406810+00:00",
+  "revision": "059d2a09f8204d75f5832848a435476bd395b404",
+  "dirty": true,
+  "sourceScope": "Current shared checkout; concurrent geometry/settings work preserved and excluded from this task commit.",
+  "items": [
+    {
+      "request": "Hide routine saving labels",
+      "implemented": true,
+      "evidence": "Browser + workspace routineSave sr-only"
+    },
+    {
+      "request": "Prevent repeated identical graph equations",
+      "implemented": true,
+      "evidence": "12 identical synthetic API requests produced one step; graph-save/viewport-history tests"
+    },
+    {
+      "request": "Widen the arrow and reduce the oversized speaking bar",
+      "implemented": true,
+      "evidence": "Responsive audio widths and visible desktop/mobile review"
+    },
+    {
+      "request": "Hide audio in Settings and show Back to problem solving",
+      "implemented": true,
+      "evidence": "Codex browser Settings controls"
+    },
+    {
+      "request": "Hide problem-name labels outside and on the solving screen",
+      "implemented": true,
+      "evidence": "Workspace heading sr-only; browser inspection"
+    },
+    {
+      "request": "Remove both footer variants",
+      "implemented": true,
+      "evidence": "Workspace source and full-screen browser inspection"
+    },
+    {
+      "request": "Clean settings and align content",
+      "implemented": true,
+      "evidence": "Browser heading/account common left edge; newer equal-column Settings request preserved"
+    },
+    {
+      "request": "Remove speaking speed/read/stop/sample controls from Settings",
+      "implemented": true,
+      "evidence": "Browser Settings controls and workspace source"
+    },
+    {
+      "request": "Remove manual-command and problem-history UI",
+      "implemented": true,
+      "evidence": "Workspace source and browser accessible controls"
+    },
+    {
+      "request": "Keep equation and graph tools available through commands without exposing controls",
+      "implemented": true,
+      "evidence": "GraphView and command-engine source audit"
+    },
+    {
+      "request": "Remove click-a-step and graph instructions labels",
+      "implemented": true,
+      "evidence": "Workspace/GraphView source and graph browser inspection"
+    },
+    {
+      "request": "Remove redundant storage-draft label",
+      "implemented": true,
+      "evidence": "Workspace source; factual Account disclosure retained"
+    },
+    {
+      "request": "Use full viewport with profile left and voice right",
+      "implemented": true,
+      "evidence": "Desktop graph bounds and profile coordinates"
+    },
+    {
+      "request": "Make graph occupy full half including height",
+      "implemented": true,
+      "evidence": "Browser graph800x1000 in1600x1000 viewport"
+    },
+    {
+      "request": "Use shared Pico artwork for favicon and character; title Mathwave",
+      "implemented": true,
+      "evidence": "Shared pico.svg component/metadata source and browser title"
+    },
+    {
+      "request": "Replace revise-step label with hover/focus branch action",
+      "implemented": true,
+      "evidence": "Browser opacity0 normally and1 on keyboard focus"
+    },
+    {
+      "request": "Remove New assignment, New problem, step counts and past-problem subtitle",
+      "implemented": true,
+      "evidence": "Browser Settings and library component audit"
+    },
+    {
+      "request": "Add export/import icons and active profile glow",
+      "implemented": true,
+      "evidence": "Browser Settings buttons and computed warm box-shadow"
+    },
+    {
+      "request": "Darken and saturate Pico",
+      "implemented": true,
+      "evidence": "Shared SVG peach f5bc98"
+    },
+    {
+      "request": "Widen graph expression fields",
+      "implemented": true,
+      "evidence": "Browser input overlay752px within800px graph half"
+    },
+    {
+      "request": "Autosave graph edits; mobile-only math keyboard",
+      "implemented": true,
+      "evidence": "Browser blur edit saved new x step; graph-draft tests and MathInput touch media query"
+    },
+    {
+      "request": "Center complete equations consistently",
+      "implemented": true,
+      "evidence": "EquationCarousel symmetric gutters; browser whole-equation view"
+    },
+    {
+      "request": "Allow deleting problems using trash",
+      "implemented": true,
+      "evidence": "Delete confirmation opened and canceled; delete-problem tests"
+    },
+    {
+      "request": "Remove redundant bottom Pico response block",
+      "implemented": true,
+      "evidence": "Workspace conditional error/clarification block and browser inspection"
+    },
+    {
+      "request": "Fix mixed-development React crash",
+      "implemented": true,
+      "evidence": "Dev-instance identity/reload guard from layout; prior restart browser check retained"
+    },
+    {
+      "request": "Center empty-state audio with geometry, graph and algebra text examples",
+      "implemented": true,
+      "evidence": "Desktop/mobile browser inspection"
+    },
+    {
+      "request": "Synchronize speaking state and visible spoken text",
+      "implemented": true,
+      "evidence": "Fresh live recorded voice trial3/3 with parity checks and stopped-recording cleanup"
+    },
+    {
+      "request": "Blank microphone text while recording is off",
+      "implemented": true,
+      "evidence": "Browser mic text empty; AudioPanel and parity tests"
+    },
+    {
+      "request": "Put AI text centered beneath Pico",
+      "implemented": true,
+      "evidence": "Desktop mock-layout center delta<0.001px; live transcript checks read pico-reply"
+    },
+    {
+      "request": "Add large one-line welcome heading using horizontal space",
+      "implemented": true,
+      "evidence": "Browser height55px equals line-height55px, desktop nowrap"
+    },
+    {
+      "request": "Complete every request and follow-up before stopping",
+      "implemented": true,
+      "evidence": "AGENTS.md explicit checklist/verification rule"
+    }
+  ],
+  "focusedTestsPassed": 23,
+  "liveReport": "journey-voice-ed35141b-4ccd-49c9-8dc7-b61c19594227.json",
+  "browserViewports": {
+    "desktop": "1440x900 emulation; observed CSS viewport1600x1000 due existing zoom",
+    "mobile": "320x780; document width320 and scroll width320"
+  },
+  "limits": [
+    "Live evidence uses synthetic recorded speech, not a physical microphone or student usability study.",
+    "Long mobile headings wrap to preserve readable text.",
+    "Wide reply layout used synthetic DOM text for visual inspection; live parity used actual provider output."
+  ]
+}

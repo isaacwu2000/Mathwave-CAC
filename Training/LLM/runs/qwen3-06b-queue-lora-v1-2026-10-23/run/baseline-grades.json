@@ -1,0 +1,2582 @@
+{
+  "lane": "conditional per-turn model inference; gold prestate; no rollout",
+  "visualReview": {
+    "status": "incomplete",
+    "reason": "Actual-app screenshots have not been inspected for these generated outcomes."
+  },
+  "groundingLimit": "Read-only replies must match the normalized reference and authored phrases. This conservative reference-match check can reject valid paraphrases; it is not a general prose-accuracy measure. All prose still requires review.",
+  "summary": {
+    "total": 166,
+    "syntaxValid": 0,
+    "semanticCorrect": 0,
+    "pass": 0,
+    "exactTarget": 0,
+    "repliesChecked": 0,
+    "replyAssertionsSatisfied": 0,
+    "replyReferenceMatches": 0
+  },
+  "categories": {
+    "algebra": {
+      "total": 69,
+      "syntaxValid": 0,
+      "semanticCorrect": 0,
+      "pass": 0,
+      "exactTarget": 0,
+      "repliesChecked": 0,
+      "replyAssertionsSatisfied": 0,
+      "replyReferenceMatches": 0
+    },
+    "graphs": {
+      "total": 36,
+      "syntaxValid": 0,
+      "semanticCorrect": 0,
+      "pass": 0,
+      "exactTarget": 0,
+      "repliesChecked": 0,
+      "replyAssertionsSatisfied": 0,
+      "replyReferenceMatches": 0
+    },
+    "geometry": {
+      "total": 26,
+      "syntaxValid": 0,
+      "semanticCorrect": 0,
+      "pass": 0,
+      "exactTarget": 0,
+      "repliesChecked": 0,
+      "replyAssertionsSatisfied": 0,
+      "replyReferenceMatches": 0
+    },
+    "statistics": {
+      "total": 10,
+      "syntaxValid": 0,
+      "semanticCorrect": 0,
+      "pass": 0,
+      "exactTarget": 0,
+      "repliesChecked": 0,
+      "replyAssertionsSatisfied": 0,
+      "replyReferenceMatches": 0
+    },
+    "cross-topic": {
+      "total": 9,
+      "syntaxValid": 0,
+      "semanticCorrect": 0,
+      "pass": 0,
+      "exactTarget": 0,
+      "repliesChecked": 0,
+      "replyAssertionsSatisfied": 0,
+      "replyReferenceMatches": 0
+    },
+    "history-and-diagrams": {
+      "total": 7,
+      "syntaxValid": 0,
+      "semanticCorrect": 0,
+      "pass": 0,
+      "exactTarget": 0,
+      "repliesChecked": 0,
+      "replyAssertionsSatisfied": 0,
+      "replyReferenceMatches": 0
+    },
+    "arithmetic": {
+      "total": 9,
+      "syntaxValid": 0,
+      "semanticCorrect": 0,
+      "pass": 0,
+      "exactTarget": 0,
+      "repliesChecked": 0,
+      "replyAssertionsSatisfied": 0,
+      "replyReferenceMatches": 0
+    }
+  },
+  "results": [
+    {
+      "id": "alg-combine-repeated-variable:1:final",
+      "caseId": "alg-combine-repeated-variable",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-combine-repeated-variable:2:final",
+      "caseId": "alg-combine-repeated-variable",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-combine-repeated-variable:3:final",
+      "caseId": "alg-combine-repeated-variable",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "alg-combine-repeated-variable:4:final",
+      "caseId": "alg-combine-repeated-variable",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-combine-repeated-variable:5:final",
+      "caseId": "alg-combine-repeated-variable",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-negative-variable-on-right:1:final",
+      "caseId": "alg-negative-variable-on-right",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-negative-variable-on-right:2:final",
+      "caseId": "alg-negative-variable-on-right",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-negative-variable-on-right:3:final",
+      "caseId": "alg-negative-variable-on-right",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-negative-variable-on-right:4:final",
+      "caseId": "alg-negative-variable-on-right",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "alg-negative-variable-on-right:5:final",
+      "caseId": "alg-negative-variable-on-right",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-negative-outside-square:1:final",
+      "caseId": "alg-negative-outside-square",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "alg-negative-outside-square:2:final",
+      "caseId": "alg-negative-outside-square",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "alg-difference-of-squares-value:1:final",
+      "caseId": "alg-difference-of-squares-value",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-difference-of-squares-value:2:final",
+      "caseId": "alg-difference-of-squares-value",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-solve-denominator-constant:1:final",
+      "caseId": "alg-solve-denominator-constant",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-solve-denominator-constant:2:preview",
+      "caseId": "alg-solve-denominator-constant",
+      "category": "algebra",
+      "stage": "preview",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"x\""
+      ]
+    },
+    {
+      "id": "alg-solve-denominator-constant:2:final",
+      "caseId": "alg-solve-denominator-constant",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"x\""
+      ]
+    },
+    {
+      "id": "alg-expand-before-substitute:1:final",
+      "caseId": "alg-expand-before-substitute",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-expand-before-substitute:2:final",
+      "caseId": "alg-expand-before-substitute",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unrecognized token '*'"
+      ]
+    },
+    {
+      "id": "alg-expand-before-substitute:3:final",
+      "caseId": "alg-expand-before-substitute",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-expression-to-equation:1:final",
+      "caseId": "alg-expression-to-equation",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-expression-to-equation:2:final",
+      "caseId": "alg-expression-to-equation",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-expression-to-equation:3:final",
+      "caseId": "alg-expression-to-equation",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-accept-unapplied-suggestion:1:final",
+      "caseId": "alg-accept-unapplied-suggestion",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-accept-unapplied-suggestion:2:final",
+      "caseId": "alg-accept-unapplied-suggestion",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "alg-accept-unapplied-suggestion:3:final",
+      "caseId": "alg-accept-unapplied-suggestion",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"x\""
+      ]
+    },
+    {
+      "id": "graph-square-root-endpoint:1:final",
+      "caseId": "graph-square-root-endpoint",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-square-root-endpoint:2:final",
+      "caseId": "graph-square-root-endpoint",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-square-root-endpoint:3:final",
+      "caseId": "graph-square-root-endpoint",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-translation-order:1:final",
+      "caseId": "graph-translation-order",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-translation-order:2:final",
+      "caseId": "graph-translation-order",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-translation-order:3:final",
+      "caseId": "graph-translation-order",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-translation-order:4:final",
+      "caseId": "graph-translation-order",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-replace-entire-graph:1:final",
+      "caseId": "graph-replace-entire-graph",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-replace-entire-graph:2:final",
+      "caseId": "graph-replace-entire-graph",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "graph-replace-entire-graph:3:final",
+      "caseId": "graph-replace-entire-graph",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-replace-entire-graph:4:preview",
+      "caseId": "graph-replace-entire-graph",
+      "category": "graphs",
+      "stage": "preview",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-replace-entire-graph:4:final",
+      "caseId": "graph-replace-entire-graph",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-named-function-redefinition:1:final",
+      "caseId": "graph-named-function-redefinition",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-named-function-redefinition:2:final",
+      "caseId": "graph-named-function-redefinition",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "graph-named-function-redefinition:3:final",
+      "caseId": "graph-named-function-redefinition",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-exponential-base-parameter:1:final",
+      "caseId": "graph-exponential-base-parameter",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-exponential-base-parameter:2:final",
+      "caseId": "graph-exponential-base-parameter",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-exponential-base-parameter:3:final",
+      "caseId": "graph-exponential-base-parameter",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "graph-exponential-base-parameter:4:final",
+      "caseId": "graph-exponential-base-parameter",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-name-preserved-after-edit:1:final",
+      "caseId": "graph-name-preserved-after-edit",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-name-preserved-after-edit:2:final",
+      "caseId": "graph-name-preserved-after-edit",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-name-preserved-after-edit:3:final",
+      "caseId": "graph-name-preserved-after-edit",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-name-preserved-after-edit:4:final",
+      "caseId": "graph-name-preserved-after-edit",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-polar-half-circle-domain:1:final",
+      "caseId": "graph-polar-half-circle-domain",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-polar-half-circle-domain:2:final",
+      "caseId": "graph-polar-half-circle-domain",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-polar-half-circle-domain:3:final",
+      "caseId": "graph-polar-half-circle-domain",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "graph-pan-not-shift:1:final",
+      "caseId": "graph-pan-not-shift",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-pan-not-shift:2:final",
+      "caseId": "graph-pan-not-shift",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "graph-pan-not-shift:3:final",
+      "caseId": "graph-pan-not-shift",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-max-function-floor:1:final",
+      "caseId": "graph-max-function-floor",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-max-function-floor:2:preview",
+      "caseId": "graph-max-function-floor",
+      "category": "graphs",
+      "stage": "preview",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-max-function-floor:2:final",
+      "caseId": "graph-max-function-floor",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-max-function-floor:3:final",
+      "caseId": "graph-max-function-floor",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-two-actions-one-request:1:final",
+      "caseId": "graph-two-actions-one-request",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "graph-two-actions-one-request:2:final",
+      "caseId": "graph-two-actions-one-request",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "Invalid interactive control."
+      ]
+    },
+    {
+      "id": "graph-two-actions-one-request:3:final",
+      "caseId": "graph-two-actions-one-request",
+      "category": "graphs",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-ramp-area:1:final",
+      "caseId": "geo-ramp-area",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-ramp-area:2:final",
+      "caseId": "geo-ramp-area",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-triangle-heron:1:final",
+      "caseId": "geo-triangle-heron",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-triangle-heron:2:final",
+      "caseId": "geo-triangle-heron",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-box-diagonal:1:final",
+      "caseId": "geo-box-diagonal",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-box-diagonal:2:final",
+      "caseId": "geo-box-diagonal",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-model-half-volume:1:final",
+      "caseId": "geo-model-half-volume",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-model-half-volume:2:final",
+      "caseId": "geo-model-half-volume",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-model-half-volume:3:final",
+      "caseId": "geo-model-half-volume",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-median-overlay:1:final",
+      "caseId": "geo-median-overlay",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-median-overlay:2:final",
+      "caseId": "geo-median-overlay",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-median-overlay:3:final",
+      "caseId": "geo-median-overlay",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-classify-equilateral:1:final",
+      "caseId": "geo-classify-equilateral",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-classify-equilateral:2:final",
+      "caseId": "geo-classify-equilateral",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-reflect-y-axis:1:final",
+      "caseId": "geo-reflect-y-axis",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-reflect-y-axis:2:final",
+      "caseId": "geo-reflect-y-axis",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "Invalid interactive control."
+      ]
+    },
+    {
+      "id": "geo-reflect-y-axis:3:final",
+      "caseId": "geo-reflect-y-axis",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-two-circle-lower:1:final",
+      "caseId": "geo-two-circle-lower",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-two-circle-lower:2:final",
+      "caseId": "geo-two-circle-lower",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "Unterminated string constant. (1:19)"
+      ]
+    },
+    {
+      "id": "geo-two-circle-lower:3:final",
+      "caseId": "geo-two-circle-lower",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-median-two-to-one:1:final",
+      "caseId": "geo-median-two-to-one",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-median-two-to-one:2:final",
+      "caseId": "geo-median-two-to-one",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "Invalid interactive explanation."
+      ]
+    },
+    {
+      "id": "geo-median-two-to-one:3:final",
+      "caseId": "geo-median-two-to-one",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-isosceles-altitude-midpoint:1:final",
+      "caseId": "geo-isosceles-altitude-midpoint",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-isosceles-altitude-midpoint:2:final",
+      "caseId": "geo-isosceles-altitude-midpoint",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "geo-isosceles-altitude-midpoint:3:final",
+      "caseId": "geo-isosceles-altitude-midpoint",
+      "category": "geometry",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-savings-total:1:final",
+      "caseId": "student-savings-total",
+      "category": "statistics",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-savings-total:2:final",
+      "caseId": "student-savings-total",
+      "category": "statistics",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-one-large-outlier:1:final",
+      "caseId": "student-one-large-outlier",
+      "category": "statistics",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-one-large-outlier:2:final",
+      "caseId": "student-one-large-outlier",
+      "category": "statistics",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-zero-spread:1:final",
+      "caseId": "student-zero-spread",
+      "category": "statistics",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-zero-spread:2:final",
+      "caseId": "student-zero-spread",
+      "category": "statistics",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-decimal-sum:1:final",
+      "caseId": "student-decimal-sum",
+      "category": "statistics",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-decimal-sum:2:final",
+      "caseId": "student-decimal-sum",
+      "category": "statistics",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-smallest-zero:1:final",
+      "caseId": "student-smallest-zero",
+      "category": "statistics",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "student-smallest-zero:2:final",
+      "caseId": "student-smallest-zero",
+      "category": "statistics",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-graph-temporary-median:1:final",
+      "caseId": "student-graph-temporary-median",
+      "category": "cross-topic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-graph-temporary-median:2:final",
+      "caseId": "student-graph-temporary-median",
+      "category": "cross-topic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-graph-temporary-median:3:final",
+      "caseId": "student-graph-temporary-median",
+      "category": "cross-topic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-data-temporary-equation:1:final",
+      "caseId": "student-data-temporary-equation",
+      "category": "cross-topic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-data-temporary-equation:2:final",
+      "caseId": "student-data-temporary-equation",
+      "category": "cross-topic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-data-temporary-equation:3:final",
+      "caseId": "student-data-temporary-equation",
+      "category": "cross-topic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-temporary-max-on-graph:1:final",
+      "caseId": "student-temporary-max-on-graph",
+      "category": "cross-topic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-temporary-max-on-graph:2:final",
+      "caseId": "student-temporary-max-on-graph",
+      "category": "cross-topic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-temporary-max-on-graph:3:final",
+      "caseId": "student-temporary-max-on-graph",
+      "category": "cross-topic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-diagram-new-procedure:1:final",
+      "caseId": "student-diagram-new-procedure",
+      "category": "history-and-diagrams",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-diagram-new-procedure:2:final",
+      "caseId": "student-diagram-new-procedure",
+      "category": "history-and-diagrams",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "student-diagram-new-procedure:3:final",
+      "caseId": "student-diagram-new-procedure",
+      "category": "history-and-diagrams",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-diagram-undo-new-flow:1:final",
+      "caseId": "student-diagram-undo-new-flow",
+      "category": "history-and-diagrams",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-diagram-undo-new-flow:2:final",
+      "caseId": "student-diagram-undo-new-flow",
+      "category": "history-and-diagrams",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "student-diagram-undo-new-flow:3:final",
+      "caseId": "student-diagram-undo-new-flow",
+      "category": "history-and-diagrams",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "student-diagram-undo-new-flow:4:final",
+      "caseId": "student-diagram-undo-new-flow",
+      "category": "history-and-diagrams",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "eq2-first-of-two-added-constants:1:final",
+      "caseId": "eq2-first-of-two-added-constants",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-first-of-two-added-constants:2:final",
+      "caseId": "eq2-first-of-two-added-constants",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-first-of-two-added-constants:3:final",
+      "caseId": "eq2-first-of-two-added-constants",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"x\""
+      ]
+    },
+    {
+      "id": "eq2-first-of-two-added-constants:4:final",
+      "caseId": "eq2-first-of-two-added-constants",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"x\""
+      ]
+    },
+    {
+      "id": "eq2-second-of-two-added-constants:1:final",
+      "caseId": "eq2-second-of-two-added-constants",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-second-of-two-added-constants:2:final",
+      "caseId": "eq2-second-of-two-added-constants",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-second-of-two-added-constants:3:final",
+      "caseId": "eq2-second-of-two-added-constants",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"x\""
+      ]
+    },
+    {
+      "id": "eq2-second-of-two-added-constants:4:final",
+      "caseId": "eq2-second-of-two-added-constants",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"x\""
+      ]
+    },
+    {
+      "id": "eq2-denominator-constant-not-numerator:1:final",
+      "caseId": "eq2-denominator-constant-not-numerator",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-denominator-constant-not-numerator:2:final",
+      "caseId": "eq2-denominator-constant-not-numerator",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-denominator-constant-not-numerator:3:final",
+      "caseId": "eq2-denominator-constant-not-numerator",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-denominator-constant-not-numerator:4:final",
+      "caseId": "eq2-denominator-constant-not-numerator",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"x\""
+      ]
+    },
+    {
+      "id": "eq2-group-factor-then-inner-offset:1:final",
+      "caseId": "eq2-group-factor-then-inner-offset",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-group-factor-then-inner-offset:2:final",
+      "caseId": "eq2-group-factor-then-inner-offset",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-group-factor-then-inner-offset:3:final",
+      "caseId": "eq2-group-factor-then-inner-offset",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-group-factor-then-inner-offset:4:final",
+      "caseId": "eq2-group-factor-then-inner-offset",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-quotient-then-repeated-constant:1:final",
+      "caseId": "eq2-quotient-then-repeated-constant",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "eq2-quotient-then-repeated-constant:2:final",
+      "caseId": "eq2-quotient-then-repeated-constant",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-quotient-then-repeated-constant:3:final",
+      "caseId": "eq2-quotient-then-repeated-constant",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-quotient-then-repeated-constant:4:final",
+      "caseId": "eq2-quotient-then-repeated-constant",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-suggest-after-coefficient-edit:1:final",
+      "caseId": "eq2-suggest-after-coefficient-edit",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-suggest-after-coefficient-edit:2:final",
+      "caseId": "eq2-suggest-after-coefficient-edit",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-suggest-after-coefficient-edit:3:final",
+      "caseId": "eq2-suggest-after-coefficient-edit",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-suggest-after-coefficient-edit:4:final",
+      "caseId": "eq2-suggest-after-coefficient-edit",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-suggest-after-coefficient-edit:5:final",
+      "caseId": "eq2-suggest-after-coefficient-edit",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-swap-before-scoped-edit:1:final",
+      "caseId": "eq2-swap-before-scoped-edit",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-swap-before-scoped-edit:2:final",
+      "caseId": "eq2-swap-before-scoped-edit",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "eq2-swap-before-scoped-edit:3:final",
+      "caseId": "eq2-swap-before-scoped-edit",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-swap-before-scoped-edit:4:final",
+      "caseId": "eq2-swap-before-scoped-edit",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-read-equation-after-two-step-request:1:final",
+      "caseId": "eq2-read-equation-after-two-step-request",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-read-equation-after-two-step-request:2:final",
+      "caseId": "eq2-read-equation-after-two-step-request",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-read-equation-after-two-step-request:3:final",
+      "caseId": "eq2-read-equation-after-two-step-request",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-read-equation-after-two-step-request:4:final",
+      "caseId": "eq2-read-equation-after-two-step-request",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-read-only-check-between-two-edits:1:final",
+      "caseId": "eq2-read-only-check-between-two-edits",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-read-only-check-between-two-edits:2:final",
+      "caseId": "eq2-read-only-check-between-two-edits",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "eq2-read-only-check-between-two-edits:3:final",
+      "caseId": "eq2-read-only-check-between-two-edits",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-read-only-check-between-two-edits:4:final",
+      "caseId": "eq2-read-only-check-between-two-edits",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"x\""
+      ]
+    },
+    {
+      "id": "eq2-read-only-check-between-two-edits:5:final",
+      "caseId": "eq2-read-only-check-between-two-edits",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"x\""
+      ]
+    },
+    {
+      "id": "eq2-replace-entire-problem-undo:1:final",
+      "caseId": "eq2-replace-entire-problem-undo",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-replace-entire-problem-undo:2:final",
+      "caseId": "eq2-replace-entire-problem-undo",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "eq2-replace-entire-problem-undo:3:final",
+      "caseId": "eq2-replace-entire-problem-undo",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "eq2-replace-entire-problem-undo:4:final",
+      "caseId": "eq2-replace-entire-problem-undo",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "eq2-replace-entire-problem-undo:5:final",
+      "caseId": "eq2-replace-entire-problem-undo",
+      "category": "algebra",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-exact-eighth:1:final",
+      "caseId": "eq2-arithmetic-exact-eighth",
+      "category": "arithmetic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-exact-eighth:2:final",
+      "caseId": "eq2-arithmetic-exact-eighth",
+      "category": "arithmetic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-exact-eighth:3:final",
+      "caseId": "eq2-arithmetic-exact-eighth",
+      "category": "arithmetic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-exact-eighth:4:final",
+      "caseId": "eq2-arithmetic-exact-eighth",
+      "category": "arithmetic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-undo-redo-group:1:final",
+      "caseId": "eq2-arithmetic-undo-redo-group",
+      "category": "arithmetic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-undo-redo-group:2:final",
+      "caseId": "eq2-arithmetic-undo-redo-group",
+      "category": "arithmetic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-undo-redo-group:3:final",
+      "caseId": "eq2-arithmetic-undo-redo-group",
+      "category": "arithmetic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"status\""
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-undo-redo-group:4:final",
+      "caseId": "eq2-arithmetic-undo-redo-group",
+      "category": "arithmetic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    },
+    {
+      "id": "eq2-arithmetic-undo-redo-group:5:final",
+      "caseId": "eq2-arithmetic-undo-redo-group",
+      "category": "arithmetic",
+      "stage": "final",
+      "syntaxValid": false,
+      "semanticCorrect": false,
+      "groundedReplyAssertionsSatisfied": null,
+      "replyReferenceMatch": null,
+      "exactTarget": false,
+      "pass": false,
+      "reasons": [
+        "JSON Parse error: Unexpected identifier \"The\""
+      ]
+    }
+  ]
+}

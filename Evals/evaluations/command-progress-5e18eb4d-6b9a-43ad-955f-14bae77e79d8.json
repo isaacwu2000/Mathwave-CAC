@@ -1,0 +1,7 @@
+{
+  "run": "5e18eb4d-6b9a-43ad-955f-14bae77e79d8",
+  "scope": "One mocked browser lifecycle case; no provider or saved-user-data access.",
+  "checks": [],
+  "passed": false,
+  "failure": "setup: goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3049/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3049/\", waiting until \"load\"\u001b[22m\n"
+}

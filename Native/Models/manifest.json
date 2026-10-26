@@ -1,0 +1,55 @@
+{
+  "formatVersion": 1,
+  "startedAtUnix": 1792807305.099637,
+  "llamaRevision": "7894e8b92481a8bb8ffe94f73b656ffe0dd01e10",
+  "whisperRevision": "231638a0717b7822784297e5980965ffcec05810",
+  "exports": {
+    "llm": {
+      "model": "Qwen/Qwen3-0.6B",
+      "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "adapter": "Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/run/adapter",
+      "adapterSha256": "369f9106b3ef517edb69f277612d1df0e48abbf725ecee3251bc6515c6081dc7",
+      "converterSha256": "e9a1da876330bbce9687541ab31736542a01b4ac43c6686126514a50f122fb7f",
+      "file": "language.gguf",
+      "bytes": 639446880,
+      "sha256": "7669dede9f5b8e73c7bcf18e8dd772b7b0ff49495f3b8f2c4f6d7942d1815a4d",
+      "format": "q8_0",
+      "mergedAdapter": true
+    },
+    "stt": {
+      "model": "openai/whisper-tiny.en",
+      "revision": "87c7102498dcde7456f24cfd30239ca606ed9063",
+      "adapter": "Training/STT/runs/tiny-en-lora-v2-2026-10-22/adapter",
+      "adapterSha256": "c4bf259ac2bd11628383fee95b2a50068e095138ec0e235aae3912f80ee420b3",
+      "converterSha256": "9cc282dfcd9a24da03ffa1b4123b5508ee935e19e369c33520b1a73f89440094",
+      "file": "speech.bin",
+      "bytes": 77704715,
+      "sha256": "dfb698bb080ee1d8e44cfeb03a80fb2b8d19201a269904bccb732cb13b00e903",
+      "format": "f16",
+      "mergedAdapter": true
+    }
+  },
+  "limitations": [
+    "Q8_0 language weights are quantized; previous training metrics do not establish native runtime accuracy.",
+    "Whisper export uses float16 native weights; no audio/quality acceptance implied by conversion."
+  ],
+  "language": {
+    "file": "language.gguf",
+    "sha256": "7669dede9f5b8e73c7bcf18e8dd772b7b0ff49495f3b8f2c4f6d7942d1815a4d",
+    "base": "Qwen/Qwen3-0.6B",
+    "adapter": "Training/LLM/runs/qwen3-06b-queue-lora-v1-2026-10-23/run/adapter",
+    "quantization": "q8_0"
+  },
+  "speech": {
+    "file": "speech.bin",
+    "sha256": "dfb698bb080ee1d8e44cfeb03a80fb2b8d19201a269904bccb732cb13b00e903",
+    "base": "openai/whisper-tiny.en",
+    "adapter": "Training/STT/runs/tiny-en-lora-v2-2026-10-22/adapter",
+    "quantization": "f16"
+  },
+  "completedAtUnix": 1792807401.021711,
+  "conversionNotes": [
+    "Language exported in first completed converter attempt; speech converter rerun with original cached vocabulary files required by official converter.",
+    "Earlier failed export logs are preserved under /tmp; original trained adapters unchanged."
+  ]
+}

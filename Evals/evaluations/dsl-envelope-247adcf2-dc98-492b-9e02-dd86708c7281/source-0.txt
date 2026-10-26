@@ -1,0 +1,489 @@
+import {
+  chosenCircle,
+  oneNumberToFive,
+  divideByCoefficient,
+  panDown,
+} from '../src/autonomous-oracles.ts';
+import { randomUUID, createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import { mkdir, writeFile, readFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import {
+  COMMAND_PROFILES,
+  interpretationInstructions,
+} from '../../Web/src/modules/ai/index.ts';
+import { toolCatalog } from '../../Web/src/modules/commands/index.ts';
+import {
+  createProblemLibrary,
+  currentProblem,
+  applyCloudOperation,
+  decodeProblemLibrary,
+} from '../../Web/src/modules/problems/index.ts';
+import { parseMath, simplifyMath } from '../../Web/src/modules/math/index.ts';
+import {
+  validateConstruction,
+  constructionRenderData,
+} from '../../Web/src/modules/visuals/index.ts';
+import {
+  interpretWithPrompt,
+  type PromptProvider,
+  type PromptOutcome,
+} from '../src/prompt-provider.ts';
+
+type Saved = Parameters<typeof applyCloudOperation>[0];
+type Outcome = Awaited<ReturnType<typeof applyCloudOperation>>;
+type Turn = {
+  text: string;
+  expectation: string;
+  prepare?: (saved: Saved) => Promise<Saved>;
+  assess: (after: Outcome, before: Saved) => boolean;
+};
+type Scenario = { id: string; setup: string[]; turns: Turn[] };
+const currentOnly = process.argv.includes('--current-only');
+const math = (after: Saved, expected: string) =>
+  JSON.stringify(
+    simplifyMath(parseMath(currentProblem(after.book).state.expression)),
+  ) === JSON.stringify(simplifyMath(parseMath(expected)));
+const point = (after: Saved, name: string, x: number, y: number) => {
+  const source = currentProblem(after.book).state.construction;
+  if (!source) return false;
+  const p = validateConstruction(source).values.get(name);
+  return (
+    p?.kind === 'point' && Math.abs(p.x - x) < 1e-9 && Math.abs(p.y - y) < 1e-9
+  );
+};
+const action = (a: Outcome) =>
+  !['clarification', 'unsupported', 'explanation', 'reply'].includes(
+    a.status,
+  ) && !a.clarification;
+const scenarios: Scenario[] = [
+  {
+    id: 'cancel-division',
+    setup: ['write x/7=3'],
+    turns: [
+      {
+        text: 'Remove the division by seven.',
+        expectation: 'x=21, cancellation completed',
+        assess: (a) =>
+          action(a) &&
+          math(a, 'x=21') &&
+          !currentProblem(a.book).state.expression.includes('/ 7'),
+      },
+    ],
+  },
+  {
+    id: 'cancel-product',
+    setup: ['write 6*x=18'],
+    turns: [
+      {
+        text: 'Cancel the multiplication by six.',
+        expectation: 'x=3, cancellation completed',
+        assess: (a) => action(a) && math(a, 'x=3'),
+      },
+    ],
+  },
+  {
+    id: 'halve',
+    setup: ['write 2*x=8'],
+    turns: [
+      {
+        text: 'Halve the equation.',
+        expectation: 'x=4',
+        assess: (a) => action(a) && math(a, 'x=4'),
+      },
+    ],
+  },
+  {
+    id: 'no-over-solving',
+    setup: [],
+    turns: [
+      {
+        text: 'Let us solve the problem x plus five equals seven.',
+        expectation: 'Record x+5=7 without solving',
+        assess: (a) =>
+          action(a) && currentProblem(a.book).state.expression === 'x + 5 = 7',
+      },
+    ],
+  },
+  {
+    id: 'vague-circle',
+    setup: [],
+    turns: [
+      {
+        text: 'Draw a circle.',
+        expectation: 'Choose a valid radius, state it, no question',
+        assess: (a) =>
+          action(a) &&
+          chosenCircle(currentProblem(a.book).state) &&
+          !!a.message.trim() &&
+          !a.message.includes('?'),
+      },
+    ],
+  },
+  {
+    id: 'vague-edit',
+    setup: ['write 2*x+3=9'],
+    turns: [
+      {
+        text: 'Change that number to five.',
+        expectation:
+          'Choose one exact number, explain target; preserve rest and support undo',
+        assess: (a, b) =>
+          action(a) &&
+          oneNumberToFive(
+            currentProblem(b.book).state,
+            currentProblem(a.book).state,
+          ) &&
+          !a.message.includes('?') &&
+          !!a.message.trim() &&
+          currentProblem(a.book).steps.length ===
+            currentProblem(b.book).steps.length + 1,
+      },
+      {
+        text: 'Undo that.',
+        expectation: 'Restore original equation',
+        assess: (a) => math(a, '2*x+3=9'),
+      },
+    ],
+  },
+  {
+    id: 'missing-divisor',
+    setup: ['write 2*x=8'],
+    turns: [
+      {
+        text: 'Divide both sides.',
+        expectation:
+          'Infer divisor two from the coefficient and state it, no question',
+        assess: (a, b) =>
+          action(a) &&
+          divideByCoefficient(
+            currentProblem(b.book).state,
+            currentProblem(a.book).state,
+          ) &&
+          !!a.message.trim() &&
+          !a.message.includes('?'),
+      },
+    ],
+  },
+  {
+    id: 'viewport',
+    setup: ['graph x^2', 'add graph x+1'],
+    turns: [
+      {
+        text: 'Pan graph down.',
+        expectation: 'Pan shared viewport without asking for a curve',
+        assess: (a, b) =>
+          action(a) &&
+          panDown(currentProblem(b.book).state, currentProblem(a.book).state),
+      },
+    ],
+  },
+  {
+    id: 'polar',
+    setup: [],
+    turns: [
+      {
+        text: 'Plot r equals two times cosine theta for theta from zero to pi over two.',
+        expectation: 'Polar r=2*cos(theta) with finite 0..pi/2 domain',
+        assess: (a) => {
+          const r = currentProblem(a.book).state.graphScene?.rows[0];
+          return (
+            !!r &&
+            r.expression.replace(/\s/g, '') === 'r=2*cos(theta)' &&
+            r.domain?.min === 0 &&
+            Math.abs((r.domain?.max ?? 0) - Math.PI / 2) < 1e-9
+          );
+        },
+      },
+    ],
+  },
+  {
+    id: 'segment-length',
+    setup: [],
+    turns: [
+      {
+        text: 'Draw segment AB from A at zero, zero to B at three, four and show its length.',
+        expectation: 'Finite segment length 5 rendered by engine',
+        assess: (a) => {
+          const s = currentProblem(a.book).state.construction;
+          return (
+            action(a) &&
+            !!s &&
+            constructionRenderData(s).result.labels!.some((l) => l.text === '5')
+          );
+        },
+      },
+      {
+        text: 'Move B to zero, six.',
+        expectation: 'Named endpoint updates and rendered length becomes 6',
+        assess: (a) => {
+          const s = currentProblem(a.book).state.construction;
+          return (
+            action(a) &&
+            !!s &&
+            point(a, 'B', 0, 6) &&
+            constructionRenderData(s).result.labels!.some((l) => l.text === '6')
+          );
+        },
+      },
+    ],
+  },
+];
+if (currentOnly) scenarios.push(
+  { id: 'dsl-batch', setup: ['write x+3=7'], turns: [{
+    text: 'Subtract three from both sides, then simplify.',
+    expectation: 'Both operations save in order and finish at x=4',
+    assess: (after) => action(after) && math(after, 'x=4') && currentProblem(after.book).steps.length === 3,
+  }] },
+  { id: 'dsl-query', setup: ['graph y=x^2'], turns: [{
+    text: 'What is the value of graph one at x equals two?',
+    expectation: 'Read back four without saving another mathematical step',
+    assess: (after) => action(after) && currentProblem(after.book).steps.length === 1 && /4|four/i.test(after.message),
+  }] },
+  { id: 'dsl-suggestion', setup: ['write x+3=7'], turns: [{
+    text: 'Explain subtracting three from both sides and propose that operation for me to apply next. Do not change the equation yet.',
+    expectation: 'Explain and retain a proposal without applying it',
+    assess: (after) => ['reply', 'explanation'].includes(after.status) && currentProblem(after.book).state.expression === 'x + 3 = 7' && !!currentProblem(after.book).conversation?.at(-1)?.commands?.length,
+  }, {
+    text: 'Go ahead.', expectation: 'Apply the retained DSL suggestion',
+    assess: (after) => action(after) && math(after, 'x=4'),
+  }] },
+);
+const planned = scenarios.reduce((sum, s) => sum + s.turns.length, 0) * (currentOnly ? 1 : 2);
+if (process.argv.includes('--dry-run')) {
+  console.log(
+    JSON.stringify(
+      {
+        plannedTurns: planned,
+        maximumProviderCalls: planned * 3,
+        scenarios: scenarios.map((s) => ({
+          id: s.id,
+          turns: s.turns.map((t) => ({
+            text: t.text,
+            expectation: t.expectation,
+          })),
+        })),
+      },
+      null,
+      2,
+    ),
+  );
+  process.exit(0);
+}
+if (process.env.RUN_LIVE_CHECK !== 'true')
+  throw new Error(
+    'Set RUN_LIVE_CHECK=true for paid synthetic text context checks.',
+  );
+const root = fileURLToPath(new URL('../../', import.meta.url));
+process.loadEnvFile(root + 'Web/.env');
+const profile = process.env.MATH_AUDIO_COMMAND_PROFILE || 'luna-default';
+if (!Object.hasOwn(COMMAND_PROFILES, profile))
+  throw new Error('Unknown profile.');
+const settings = COMMAND_PROFILES[profile as keyof typeof COMMAND_PROFILES];
+const key =
+  profile === 'luna-default'
+    ? process.env.OPENAI_API_KEY
+    : process.env.OPENROUTER_API_KEY;
+if (!key) throw new Error('Missing provider credentials.');
+const provider: PromptProvider = {
+  ...settings,
+  key,
+  url:
+    profile === 'luna-default'
+      ? 'https://api.openai.com/v1/responses'
+      : 'https://openrouter.ai/api/v1/responses',
+};
+const catalogRun = process.argv.includes('--catalog');
+const variants = {
+  baseline: await readFile(
+    new URL(
+      catalogRun
+        ? '../evaluations/autonomous-agent-deb2003d-8e38-4105-aea0-888de39e9600/short-prompt.txt'
+        : '../evaluations/short-prompt-regression-6a7016aa-bd3e-4b2d-adc6-8251f1723d3a/baseline-prompt.txt',
+      import.meta.url,
+    ),
+    'utf8',
+  ),
+  short: interpretationInstructions,
+};
+const directory = new URL(
+  `../evaluations/${currentOnly ? 'dsl-envelope' : catalogRun ? 'tool-catalog' : 'autonomous-agent'}-${randomUUID()}/`,
+  import.meta.url,
+);
+await mkdir(directory, { recursive: true });
+const sources = [
+  'Evals/scripts/evaluate-autonomous-agent.ts',
+  'Web/src/modules/commands/config/tool-catalog.ts',
+  'Web/src/modules/commands/types/tool.ts',
+  'Web/src/modules/commands/services/math-program.ts',
+  'Web/src/modules/commands/services/tool-execution.ts',
+  'Web/src/modules/commands/services/program-parser.ts',
+  'Web/src/modules/ai/config/openai-config.ts',
+  'Web/src/modules/ai/runtime/graph-build.ts',
+  'Web/src/modules/ai/config/interpretation.ts',
+  'Web/src/modules/commands/config/graph-scene-instructions.ts',
+  'Web/src/modules/commands/services/command-interpreter.ts',
+  'Evals/src/prompt-provider.ts',
+  'Web/src/modules/commands/config/program-instructions.ts',
+  'Web/src/modules/commands/config/construction-instructions.ts',
+  'Evals/experiments/short-interpreter-prompt.ts',
+  'Evals/src/natural-voice-conversation.ts',
+];
+const sourceHashes: Record<string, string> = {};
+for (const [index, path] of sources.entries()) {
+  const text = await readFile(root + path, 'utf8');
+  sourceHashes[path] = createHash('sha256').update(text).digest('hex');
+  await writeFile(new URL(`source-${index}.txt`, directory), text);
+}
+for (const [name, prompt] of Object.entries(variants))
+  await writeFile(new URL(name + '-prompt.txt', directory), prompt);
+await writeFile(
+  new URL('tool-contracts.json', directory),
+  JSON.stringify(toolCatalog, null, 2),
+);
+const samples: Record<string, unknown>[] = [];
+let calls = 0,
+  fatal: string | undefined;
+const revision = execFileSync('git', ['rev-parse', 'HEAD'], {
+  encoding: 'utf8',
+}).trim();
+const checkpoint = () =>
+  writeFile(
+    new URL('report.json', directory),
+    JSON.stringify(
+      {
+        revision,
+        workingChanges: true,
+        catalogRun,
+        profile,
+        model: provider.model,
+        reasoning: provider.reasoning ?? 'provider-default',
+        plannedTurns: planned,
+        maximumProviderCalls: planned * 3,
+        calls,
+        fatal,
+        sourceHashes,
+        scope:
+          'Real text-model provider with actual cloud operation, conversation and recovery logic; synthetic in-memory persistence. Excludes microphone, voice, browser and graph streaming transport. Stops dependent turns after a failure; skipped turns remain explicit.',
+        samples,
+      },
+      null,
+      2,
+    ),
+  );
+console.log(JSON.stringify({ output: directory.pathname, planned }));
+for (const [index, scenario] of scenarios.entries()) {
+  for (const variant of (index % 2
+    ? ['short', 'baseline']
+    : ['baseline', 'short']).filter((variant) => !currentOnly || variant === 'short') as ('short' | 'baseline')[]) {
+    let saved: Saved = { book: createProblemLibrary(), clarification: null };
+    for (const text of scenario.setup)
+      saved = await applyCloudOperation(saved, {
+        kind: 'command',
+        text,
+        interpret: false,
+      });
+    let blocked = false;
+    for (const turn of scenario.turns) {
+      if (blocked || fatal) {
+        samples.push({
+          scenario: scenario.id,
+          variant,
+          text: turn.text,
+          expectation: turn.expectation,
+          attempted: false,
+          reason: fatal || 'Prior dependent turn failed',
+        });
+        continue;
+      }
+      if (turn.prepare) saved = await turn.prepare(saved);
+      const before = saved;
+      const providerResults: PromptOutcome[] = [];
+      let after: Outcome | undefined,
+        passed = false,
+        error: string | undefined;
+      try {
+        after = await applyCloudOperation(
+          saved,
+          { kind: 'command', text: turn.text, interpret: true },
+          async (text, library) => {
+            const result = await interpretWithPrompt(
+              text,
+              library,
+              variants[variant],
+              provider,
+              () => {
+                if (++calls > planned * 3)
+                  throw new Error('Call budget exhausted.');
+              },
+            );
+            providerResults.push(result);
+            if (result.providerFailure) fatal = result.error;
+            if (!result.interpretation)
+              throw new Error(result.error || 'No valid proposal');
+            return result.interpretation;
+          },
+        );
+        passed = !after.aiUnavailable && turn.assess(after, before);
+      } catch (e) {
+        error = e instanceof Error ? e.message : 'Context check failed';
+      }
+      samples.push({
+        scenario: scenario.id,
+        variant,
+        text: turn.text,
+        expectation: turn.expectation,
+        attempted: true,
+        passed,
+        error,
+        status: after?.status,
+        message: after?.message,
+        before: currentProblem(before.book),
+        after: after ? currentProblem(after.book) : undefined,
+        aiUnavailable: after?.aiUnavailable,
+        providerResults,
+      });
+      if (after)
+        saved = {
+          book: decodeProblemLibrary(JSON.stringify(after.book)),
+          clarification: after.clarification,
+        };
+      blocked = !passed;
+      await checkpoint();
+      console.log(
+        JSON.stringify({
+          scenario: scenario.id,
+          variant,
+          passed,
+          text: turn.text,
+          calls,
+        }),
+      );
+    }
+  }
+  if (fatal) break;
+}
+await checkpoint();
+console.log(
+  JSON.stringify({
+    output: directory.pathname,
+    calls,
+    summary: Object.fromEntries(
+      Object.keys(variants).filter((variant) => !currentOnly || variant === 'short').map((variant) => {
+        const rows = samples.filter((s) => s.variant === variant);
+        return [
+          variant,
+          {
+            planned: planned / (currentOnly ? 1 : 2),
+            attempted: rows.filter((r) => r.attempted).length,
+            passed: rows.filter((r) => r.passed).length,
+            failed: rows.filter((r) => r.attempted && !r.passed).length,
+            blocked: rows.filter((r) => !r.attempted).length,
+          },
+        ];
+      }),
+    ),
+    fatal,
+  }),
+);
+if (fatal) process.exitCode = 1;

@@ -1,0 +1,7 @@
+{
+  "checks": [
+    "implicit, inequality, polar, parametric, named function and piecewise canvas plus structured history"
+  ],
+  "errors": [],
+  "error": "Error: evaluate: TypeError: math.setValue is not a function\n    at eval (eval at evaluate (:370:30), <anonymous>:3:10)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+}

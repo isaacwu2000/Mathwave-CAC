@@ -1,0 +1,104 @@
+{
+  "split": "test-v14",
+  "mode": "endpoint",
+  "datasetSHA256": "8376e34535d87b3ffcb6b5132ccbf59d94340d7b8d6c690f915371d1a79f2dbf",
+  "createdAt": "2026-10-13T17:01:14.254Z",
+  "total": 6,
+  "scored": 6,
+  "passed": 6,
+  "unavailable": 0,
+  "accuracy": 1,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "ai_algebra": {
+      "passed": 6,
+      "scored": 6
+    }
+  },
+  "results": [
+    {
+      "id": "holdout-natural-001",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "multiply both sides by 8",
+          "simplify"
+        ]
+      },
+      "latencyMs": 6575
+    },
+    {
+      "id": "holdout-natural-002",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "add 7 to both sides",
+          "simplify"
+        ]
+      },
+      "latencyMs": 2579
+    },
+    {
+      "id": "holdout-natural-003",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "",
+        "message": "",
+        "commands": [
+          "divide both sides by 2",
+          "simplify"
+        ]
+      },
+      "latencyMs": 2804
+    },
+    {
+      "id": "holdout-natural-004",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "swap sides",
+        "message": ""
+      },
+      "latencyMs": 1715
+    },
+    {
+      "id": "holdout-natural-005",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Would you like me to subtract 5 from both sides?"
+      },
+      "latencyMs": 1843
+    },
+    {
+      "id": "holdout-natural-006",
+      "category": "ai_algebra",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "divide both sides by 4",
+        "message": ""
+      },
+      "latencyMs": 3070
+    }
+  ]
+}

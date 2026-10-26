@@ -1,0 +1,442 @@
+{
+  "runId": "ae196ea2-ded3-42a4-80ff-2584e1a12ecd",
+  "startedAt": "2026-10-16T01:20:25.324Z",
+  "finishedAt": "2026-10-16T01:20:38.973Z",
+  "lane": "http",
+  "revision": "3feedfae024ca241392d5ef02ac56aa92c8614c0",
+  "dirty": true,
+  "sourceSHA256": "d1beff8f73b0534814aa36053cc652d1547efc09de27df5833c2357296c86942",
+  "runnerSHA256": "054b69c7a2809d9e9c70ad6add3fd9b4837394dbbdf88a86225831416a3f0809",
+  "models": {
+    "live": "gpt-live-1",
+    "command": "gpt-6-luna"
+  },
+  "latencyDefinition": "HTTP request start through complete parsed response body.",
+  "scope": "Live provider and isolated local HTTP; excludes voice and rendering.",
+  "planned": 4,
+  "unattempted": 0,
+  "groups": {
+    "direct": {
+      "attempted": 1,
+      "passed": 1,
+      "failed": 0,
+      "successMs": {
+        "p50": 153.98729200000025,
+        "p95": 153.98729200000025
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {
+        "receipt": {
+          "observed": 1,
+          "missing": 0,
+          "p50": 24,
+          "p95": 24
+        },
+        "load": {
+          "observed": 1,
+          "missing": 0,
+          "p50": 42,
+          "p95": 42
+        },
+        "execute": {
+          "observed": 1,
+          "missing": 0,
+          "p50": 9,
+          "p95": 9
+        },
+        "commit": {
+          "observed": 1,
+          "missing": 0,
+          "p50": 65,
+          "p95": 65
+        },
+        "total": {
+          "observed": 1,
+          "missing": 0,
+          "p50": 140,
+          "p95": 140
+        }
+      }
+    },
+    "interpreted": {
+      "attempted": 3,
+      "passed": 3,
+      "failed": 0,
+      "successMs": {
+        "p50": 3234.580416,
+        "p95": 4675.985332999999
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {
+        "receipt": {
+          "observed": 3,
+          "missing": 0,
+          "p50": 22,
+          "p95": 27
+        },
+        "load": {
+          "observed": 3,
+          "missing": 0,
+          "p50": 28,
+          "p95": 30
+        },
+        "model_1": {
+          "observed": 3,
+          "missing": 0,
+          "p50": 1736,
+          "p95": 3230
+        },
+        "preview_1": {
+          "observed": 2,
+          "missing": 1,
+          "p50": 4,
+          "p95": 13
+        },
+        "model_2": {
+          "observed": 2,
+          "missing": 1,
+          "p50": 1288,
+          "p95": 1544
+        },
+        "validate_2": {
+          "observed": 2,
+          "missing": 1,
+          "p50": 3,
+          "p95": 3
+        },
+        "interpret": {
+          "observed": 3,
+          "missing": 0,
+          "p50": 3126,
+          "p95": 4526
+        },
+        "execute": {
+          "observed": 3,
+          "missing": 0,
+          "p50": 3128,
+          "p95": 4528
+        },
+        "commit": {
+          "observed": 3,
+          "missing": 0,
+          "p50": 60,
+          "p95": 70
+        },
+        "total": {
+          "observed": 3,
+          "missing": 0,
+          "p50": 3224,
+          "p95": 4655
+        },
+        "validate_1": {
+          "observed": 1,
+          "missing": 2,
+          "p50": 5,
+          "p95": 5
+        }
+      }
+    }
+  },
+  "summary": {
+    "attempted": 4,
+    "passed": 4,
+    "failed": 0,
+    "successMs": {
+      "p50": 1871.8379999999997,
+      "p95": 4675.985332999999
+    },
+    "failureMs": {
+      "p50": null,
+      "p95": null
+    },
+    "stages": {
+      "receipt": {
+        "observed": 4,
+        "missing": 0,
+        "p50": 22,
+        "p95": 27
+      },
+      "load": {
+        "observed": 4,
+        "missing": 0,
+        "p50": 28,
+        "p95": 42
+      },
+      "execute": {
+        "observed": 4,
+        "missing": 0,
+        "p50": 1745,
+        "p95": 4528
+      },
+      "commit": {
+        "observed": 4,
+        "missing": 0,
+        "p50": 60,
+        "p95": 70
+      },
+      "total": {
+        "observed": 4,
+        "missing": 0,
+        "p50": 1855,
+        "p95": 4655
+      },
+      "model_1": {
+        "observed": 3,
+        "missing": 1,
+        "p50": 1736,
+        "p95": 3230
+      },
+      "preview_1": {
+        "observed": 2,
+        "missing": 2,
+        "p50": 4,
+        "p95": 13
+      },
+      "model_2": {
+        "observed": 2,
+        "missing": 2,
+        "p50": 1288,
+        "p95": 1544
+      },
+      "validate_2": {
+        "observed": 2,
+        "missing": 2,
+        "p50": 3,
+        "p95": 3
+      },
+      "interpret": {
+        "observed": 3,
+        "missing": 1,
+        "p50": 3126,
+        "p95": 4526
+      },
+      "validate_1": {
+        "observed": 1,
+        "missing": 3,
+        "p50": 5,
+        "p95": 5
+      }
+    }
+  },
+  "samples": [
+    {
+      "text": "write x=0",
+      "interpret": false,
+      "passed": true,
+      "status": "command",
+      "httpStatus": 200,
+      "expectedExpression": "x = 0",
+      "expression": "x = 0",
+      "elapsedMs": 153.98729200000025,
+      "timings": [
+        {
+          "stage": "receipt",
+          "duration": 24,
+          "kind": "span"
+        },
+        {
+          "stage": "load",
+          "duration": 42,
+          "kind": "span"
+        },
+        {
+          "stage": "execute",
+          "duration": 9,
+          "kind": "span"
+        },
+        {
+          "stage": "commit",
+          "duration": 65,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 140,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "text": "write 2*x+3=11",
+      "interpret": true,
+      "passed": true,
+      "status": "command",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 = 11",
+      "expression": "2 * x + 3 = 11",
+      "elapsedMs": 3234.580416,
+      "timings": [
+        {
+          "stage": "receipt",
+          "duration": 22,
+          "kind": "span"
+        },
+        {
+          "stage": "load",
+          "duration": 28,
+          "kind": "span"
+        },
+        {
+          "stage": "model_1",
+          "duration": 1565,
+          "kind": "span"
+        },
+        {
+          "stage": "preview_1",
+          "duration": 13,
+          "kind": "span"
+        },
+        {
+          "stage": "model_2",
+          "duration": 1544,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_2",
+          "duration": 3,
+          "kind": "span"
+        },
+        {
+          "stage": "interpret",
+          "duration": 3126,
+          "kind": "span"
+        },
+        {
+          "stage": "execute",
+          "duration": 3128,
+          "kind": "span"
+        },
+        {
+          "stage": "commit",
+          "duration": 46,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 3224,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "text": "subtract 3 from both sides",
+      "interpret": true,
+      "passed": true,
+      "status": "command",
+      "httpStatus": 200,
+      "expectedExpression": "2 * x + 3 - 3 = 11 - 3",
+      "expression": "2 * x + 3 - 3 = 11 - 3",
+      "elapsedMs": 1871.8379999999997,
+      "timings": [
+        {
+          "stage": "receipt",
+          "duration": 21,
+          "kind": "span"
+        },
+        {
+          "stage": "load",
+          "duration": 28,
+          "kind": "span"
+        },
+        {
+          "stage": "model_1",
+          "duration": 1736,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_1",
+          "duration": 5,
+          "kind": "span"
+        },
+        {
+          "stage": "interpret",
+          "duration": 1742,
+          "kind": "span"
+        },
+        {
+          "stage": "execute",
+          "duration": 1745,
+          "kind": "span"
+        },
+        {
+          "stage": "commit",
+          "duration": 60,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 1855,
+          "kind": "span"
+        }
+      ]
+    },
+    {
+      "text": "divide both sides by 2",
+      "interpret": true,
+      "passed": true,
+      "status": "command",
+      "httpStatus": 200,
+      "expectedExpression": "(2 * x + 3 - 3) / 2 = (11 - 3) / 2",
+      "expression": "(2 * x + 3 - 3) / 2 = (11 - 3) / 2",
+      "elapsedMs": 4675.985332999999,
+      "timings": [
+        {
+          "stage": "receipt",
+          "duration": 27,
+          "kind": "span"
+        },
+        {
+          "stage": "load",
+          "duration": 30,
+          "kind": "span"
+        },
+        {
+          "stage": "model_1",
+          "duration": 3230,
+          "kind": "span"
+        },
+        {
+          "stage": "preview_1",
+          "duration": 4,
+          "kind": "span"
+        },
+        {
+          "stage": "model_2",
+          "duration": 1288,
+          "kind": "span"
+        },
+        {
+          "stage": "validate_2",
+          "duration": 3,
+          "kind": "span"
+        },
+        {
+          "stage": "interpret",
+          "duration": 4526,
+          "kind": "span"
+        },
+        {
+          "stage": "execute",
+          "duration": 4528,
+          "kind": "span"
+        },
+        {
+          "stage": "commit",
+          "duration": 70,
+          "kind": "span"
+        },
+        {
+          "stage": "total",
+          "duration": 4655,
+          "kind": "span"
+        }
+      ]
+    }
+  ]
+}

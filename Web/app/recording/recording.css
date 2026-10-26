@@ -1,0 +1,89 @@
+/* Keep the real audio controls readable and the vertex visible in a silent take. */
+.app-shell[data-recording='true'] .audio-transcript {
+  white-space: normal;
+  overflow: visible;
+  overflow-wrap: anywhere;
+}
+
+.app-shell[data-recording='true'] .graph-expressions {
+  display: none;
+}
+
+@media (min-width: 901px) {
+  .app-shell[data-recording='true'][data-graph='true'] .audio-group {
+    --reply-width: 120px;
+    width: calc(50vw - 64px);
+    gap: 16px;
+  }
+
+  .app-shell[data-recording='true'][data-graph='true'] .audio-arrow {
+    width: 56px;
+    margin-right: 0;
+  }
+}
+
+/* New saved equations enter from the direction of the preceding step. */
+@media (prefers-reduced-motion: no-preference) {
+  .app-shell[data-recording='true'] .equation-step {
+    animation: recording-equation-enter 450ms cubic-bezier(0.22, 1, 0.36, 1)
+      both;
+  }
+}
+@keyframes recording-equation-enter {
+  from {
+    opacity: 0.25;
+    transform: translateX(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .app-shell[data-recording='true']
+    [data-recording-graph-ready='pending']
+    > .absolute {
+    opacity: 0;
+  }
+  .app-shell[data-recording='true']
+    [data-recording-graph-ready='true']
+    > .absolute {
+    animation: recording-first-graph 800ms cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+}
+@keyframes recording-first-graph {
+  from {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.recording-guided-cue {
+  position: fixed;
+  z-index: 1000;
+  bottom: 24px;
+  right: 24px;
+  width: min(360px, calc(100vw - 48px));
+  padding: 18px;
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: 0 6px 24px #0002;
+}
+.recording-guided-cue h2 {
+  font-size: 16px;
+  margin: 0 0 12px;
+}
+.recording-guided-cue p {
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+.recording-guided-cue output,
+.recording-guided-cue small {
+  display: block;
+  margin: 8px 0;
+}

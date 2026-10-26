@@ -1,0 +1,713 @@
+{
+  "scope": "Individual text/contract review, not visual/audio acceptance",
+  "reviewer": "student_graphs",
+  "cases": [
+    {
+      "id": "alg-isolate-added-constant",
+      "verdict": "pass",
+      "notes": [
+        "Removing 3 then dividing by 2 gives x=4; each follow-up has an established equation."
+      ]
+    },
+    {
+      "id": "alg-restore-subtracted-constant",
+      "verdict": "pass",
+      "notes": [
+        "Adding 7 then dividing by 5 gives x=5; request order is preserved."
+      ]
+    },
+    {
+      "id": "alg-negative-leading-coefficient",
+      "verdict": "pass",
+      "notes": [
+        "The retained expression -(3*x)/-3=-5 is equivalent to x=-5. Twenty-one wording is an intentional product regression, not an incorrect reference answer."
+      ]
+    },
+    {
+      "id": "alg-negative-right-side",
+      "verdict": "pass",
+      "notes": [
+        "Subtracting 9 and dividing by 4 yields -2; negative answer is preserved."
+      ]
+    },
+    {
+      "id": "alg-fraction-coefficient",
+      "verdict": "pass",
+      "notes": [
+        "Subtracting 2 then multiplying by 3 gives 15; the denominator is cleared in the requested order."
+      ]
+    },
+    {
+      "id": "alg-decimal-coefficient",
+      "verdict": "pass",
+      "notes": [
+        "Adding 1 then dividing by 0.5 gives 8 with no rounding."
+      ]
+    },
+    {
+      "id": "alg-grouped-quotient",
+      "verdict": "pass",
+      "notes": [
+        "The spoken quantity establishes (x+4)/2; multiplying by 2 then subtracting 4 yields 8."
+      ]
+    },
+    {
+      "id": "alg-variables-both-sides",
+      "verdict": "pass",
+      "notes": [
+        "Subtracting 3x gives 4x-2=10, then the requested addition and division yield 3."
+      ]
+    },
+    {
+      "id": "alg-constant-first-order",
+      "verdict": "pass",
+      "notes": [
+        "The side swap preserves 12=3x+6 and the requested operations yield x=2."
+      ]
+    },
+    {
+      "id": "alg-fraction-answer-retained",
+      "verdict": "pass",
+      "notes": [
+        "The answer is 5/3; the decimal oracle is the current engine representation, not a claim of an exact terminating decimal."
+      ]
+    },
+    {
+      "id": "alg-double-negative-operand",
+      "verdict": "pass",
+      "notes": [
+        "Subtracting negative four is adding four, giving x=-5; the unusual sign instruction is still plausible student speech."
+      ]
+    },
+    {
+      "id": "alg-negative-denominator",
+      "verdict": "pass",
+      "notes": [
+        "Multiplying x/(-2)=5 by -2 yields x=-10; the denominator sign is maintained."
+      ]
+    },
+    {
+      "id": "alg-distribute-positive-factor",
+      "verdict": "pass",
+      "notes": [
+        "The student actually requests division before subtraction, correctly avoiding an unnecessary expansion."
+      ]
+    },
+    {
+      "id": "alg-distribute-negative-factor",
+      "verdict": "pass",
+      "notes": [
+        "Dividing -2(x-3)=8 by -2 gives x-3=-4; adding 3 gives -1."
+      ]
+    },
+    {
+      "id": "alg-combine-repeated-variable",
+      "verdict": "pass",
+      "notes": [
+        "Combining 2x+3x, adding 4, then dividing by 5 yields 3."
+      ]
+    },
+    {
+      "id": "alg-zero-solution",
+      "verdict": "pass",
+      "notes": [
+        "Equal constants cancel and the solution is zero, not an absent result."
+      ]
+    },
+    {
+      "id": "alg-negative-variable-on-right",
+      "verdict": "pass",
+      "notes": [
+        "Swapping and subtracting 10 gives -y=-4; multiplying by -1 gives y=4. The unsimplified oracle remains equivalent."
+      ]
+    },
+    {
+      "id": "alg-different-letter-a",
+      "verdict": "pass",
+      "notes": [
+        "The commands preserve a and yield a=3; no silent x substitution."
+      ]
+    },
+    {
+      "id": "alg-different-letter-t",
+      "verdict": "pass",
+      "notes": [
+        "The commands preserve t and yield t=4."
+      ]
+    },
+    {
+      "id": "alg-fraction-offset",
+      "verdict": "pass",
+      "notes": [
+        "Subtracting one half from three halves yields x=1."
+      ]
+    },
+    {
+      "id": "alg-fractional-right-side",
+      "verdict": "pass",
+      "notes": [
+        "Multiplying 3/2 by four yields six; the whole equation is scaled."
+      ]
+    },
+    {
+      "id": "alg-decimal-offset",
+      "verdict": "pass",
+      "notes": [
+        "2.25 minus 0.75 is 1.5; the spoken decimals match the arguments."
+      ]
+    },
+    {
+      "id": "alg-move-negative-variable",
+      "verdict": "pass",
+      "notes": [
+        "Adding x yields 3x+4=13; subsequent requested steps give x=3."
+      ]
+    },
+    {
+      "id": "alg-balance-variable-only",
+      "verdict": "pass",
+      "notes": [
+        "Dividing -7x=28 by -7 yields -4. Twenty-eight wording is an intentional product regression."
+      ]
+    },
+    {
+      "id": "alg-swap-final-orientation",
+      "verdict": "pass",
+      "notes": [
+        "The requested side swap correctly leaves 6=x after simplification."
+      ]
+    },
+    {
+      "id": "alg-clear-parenthesized-negative",
+      "verdict": "pass",
+      "notes": [
+        "Multiplying by -3 yields x-5=-6; adding five yields -1."
+      ]
+    },
+    {
+      "id": "alg-coefficient-one-after-cancel",
+      "verdict": "pass",
+      "notes": [
+        "Combining 6x-5x leaves x and subtracting 2 gives 7."
+      ]
+    },
+    {
+      "id": "alg-constant-on-both-sides",
+      "verdict": "pass",
+      "notes": [
+        "Collecting variables yields 2x=-10. The oracle x=-10/2 is mathematically correct despite incomplete engine simplification."
+      ]
+    },
+    {
+      "id": "alg-negative-fraction-coefficient",
+      "verdict": "pass",
+      "notes": [
+        "Multiplying -x/5=3 by -5 gives x=-15; the double-negation oracle remains equivalent."
+      ]
+    },
+    {
+      "id": "alg-formula-simple-rearrange",
+      "verdict": "pass",
+      "notes": [
+        "Subtracting six from y=3x+6 correctly gives y-6=3x without choosing a numeric value for either variable."
+      ]
+    },
+    {
+      "id": "alg-square-negative-input",
+      "verdict": "pass",
+      "notes": [
+        "(-3)^2+1 equals 10; the evaluation is correctly read-only."
+      ]
+    },
+    {
+      "id": "alg-negative-outside-square",
+      "verdict": "pass",
+      "notes": [
+        "The expression -x^2 at -4 equals -16, preserving precedence."
+      ]
+    },
+    {
+      "id": "alg-parenthesized-negative-square",
+      "verdict": "pass",
+      "notes": [
+        "(-x)^2 at x=4 equals 16, distinct from a leading negative outside the square."
+      ]
+    },
+    {
+      "id": "alg-two-variable-substitution",
+      "verdict": "pass",
+      "notes": [
+        "2(4)+3(-2)=2 and both bindings are supplied in one query."
+      ]
+    },
+    {
+      "id": "alg-rectangle-perimeter-expression",
+      "verdict": "pass",
+      "notes": [
+        "2(7+3)=20; spoken length and width correspond to l and w without changing workspace mode."
+      ]
+    },
+    {
+      "id": "alg-triangle-area-expression",
+      "verdict": "pass",
+      "notes": [
+        "8 times 5 divided by 2 equals 20; base and height references are established by the formula."
+      ]
+    },
+    {
+      "id": "alg-quadratic-three-terms",
+      "verdict": "pass",
+      "notes": [
+        "At x=2, 4-10+6=0; substitution remains read-only."
+      ]
+    },
+    {
+      "id": "alg-fraction-input",
+      "verdict": "pass",
+      "notes": [
+        "At x=1/2, 6x-1=2; half is represented exactly as 0.5."
+      ]
+    },
+    {
+      "id": "alg-negative-exponent",
+      "verdict": "pass",
+      "notes": [
+        "2 to power -2 is one quarter; the negative exponent is grouped in the reference program."
+      ]
+    },
+    {
+      "id": "alg-cube-negative",
+      "verdict": "pass",
+      "notes": [
+        "(-2)^3+2=-6; the odd-power sign is correct."
+      ]
+    },
+    {
+      "id": "alg-difference-of-squares-value",
+      "verdict": "pass",
+      "notes": [
+        "The student explicitly says the whole difference is squared; (2-5)^2=9."
+      ]
+    },
+    {
+      "id": "alg-rational-nonzero-input",
+      "verdict": "pass",
+      "notes": [
+        "At x=3, (x+1)/(x-1)=2; the denominator is nonzero and both groups are spoken."
+      ]
+    },
+    {
+      "id": "alg-natural-log-input",
+      "verdict": "pass",
+      "notes": [
+        "ln(1)=0; the input respects the logarithm domain."
+      ]
+    },
+    {
+      "id": "alg-square-root-input",
+      "verdict": "pass",
+      "notes": [
+        "The whole sum is explicitly inside the radical; sqrt(7+9)=4 and the explanation response is read-only."
+      ]
+    },
+    {
+      "id": "alg-powers-before-products",
+      "verdict": "pass",
+      "notes": [
+        "2+3*4^2=50; exponent precedence is correct."
+      ]
+    },
+    {
+      "id": "alg-nested-groups-value",
+      "verdict": "pass",
+      "notes": [
+        "The quantity establishes 10-(2*3-1)=5; the query does not overwrite the expression."
+      ]
+    },
+    {
+      "id": "alg-fraction-sum-value",
+      "verdict": "pass",
+      "notes": [
+        "One half plus one quarter is 0.75 and the input expression is preserved."
+      ]
+    },
+    {
+      "id": "alg-zero-exponent-value",
+      "verdict": "pass",
+      "notes": [
+        "7^0+4 equals 5; the base is nonzero."
+      ]
+    },
+    {
+      "id": "alg-mixed-sign-product-value",
+      "verdict": "pass",
+      "notes": [
+        "Three negative factors yield -24; the oracle checks sign as well as magnitude."
+      ]
+    },
+    {
+      "id": "alg-correct-coefficient",
+      "verdict": "pass",
+      "notes": [
+        "Replacing the only 2 with 3 gives 3x+5; at x=4 the result is 17."
+      ]
+    },
+    {
+      "id": "alg-correct-negative-constant",
+      "verdict": "pass",
+      "notes": [
+        "Replacing positive 8 with -8 makes x-8; evaluating at 10 gives 2."
+      ]
+    },
+    {
+      "id": "alg-correct-exponent",
+      "verdict": "pass",
+      "notes": [
+        "The only literal 2 is the exponent, so its replacement yields x^3+4 and value 12 at x=2."
+      ]
+    },
+    {
+      "id": "alg-rename-variable",
+      "verdict": "pass",
+      "notes": [
+        "Replacing x with t preserves 4t-1; evaluating t=3 gives 11."
+      ]
+    },
+    {
+      "id": "alg-replace-group",
+      "verdict": "pass",
+      "notes": [
+        "The targeted group x+1 becomes x-3, retaining the outer factor; at x=5 the value is 4."
+      ]
+    },
+    {
+      "id": "alg-change-denominator",
+      "verdict": "pass",
+      "notes": [
+        "Only the divisor 4 changes to 2; at x=6 the result is 4 and the explanation does not save work."
+      ]
+    },
+    {
+      "id": "alg-change-root-radicand",
+      "verdict": "pass",
+      "notes": [
+        "Revise the first utterance to say the whole quantity x plus five is inside the square root. It currently permits sqrt(x)+5 as well as sqrt(x+5); the later correction cannot justify the first-turn assumption.",
+        "Resolved during independent review: Clarified the first utterance: the whole quantity x plus five is inside the square root."
+      ]
+    },
+    {
+      "id": "alg-replace-linear-term",
+      "verdict": "pass",
+      "notes": [
+        "The complete 3x term becomes 5x; 5(2)+2=12."
+      ]
+    },
+    {
+      "id": "alg-constant-to-variable",
+      "verdict": "pass",
+      "notes": [
+        "Replacing seven with y gives 2x+y and the two-variable evaluation gives 10."
+      ]
+    },
+    {
+      "id": "alg-remove-extra-term",
+      "verdict": "pass",
+      "notes": [
+        "The student explicitly sets the 3x term to zero, retaining x squared plus two; at x=4 the value is 18."
+      ]
+    },
+    {
+      "id": "alg-negative-to-positive",
+      "verdict": "pass",
+      "notes": [
+        "The literal -5 is the requested replacement target; the corrected expression gives 17 at x=3."
+      ]
+    },
+    {
+      "id": "alg-decimal-correction",
+      "verdict": "pass",
+      "notes": [
+        "Replacing 0.2 with 2 changes only the coefficient; at x=4 the result is 9."
+      ]
+    },
+    {
+      "id": "alg-reciprocal-structure-edit",
+      "verdict": "pass",
+      "notes": [
+        "The full denominator x+2 becomes x-2; at x=4 the reciprocal is 0.5."
+      ]
+    },
+    {
+      "id": "alg-cube-to-square",
+      "verdict": "pass",
+      "notes": [
+        "The sole literal 3 is the exponent; changing it to two gives 3 at x=-2."
+      ]
+    },
+    {
+      "id": "alg-replace-product-with-sum",
+      "verdict": "pass",
+      "notes": [
+        "Replacing the product xy with x+y retains the extra six; 2+3+6=11."
+      ]
+    },
+    {
+      "id": "alg-solve-readonly-positive",
+      "verdict": "pass",
+      "notes": [
+        "9x-6=30 gives x=4; the explicit request to retain work matches a query."
+      ]
+    },
+    {
+      "id": "alg-solve-readonly-negative",
+      "verdict": "pass",
+      "notes": [
+        "2x+10=4 gives x=-3 with no saved algebra mutation."
+      ]
+    },
+    {
+      "id": "alg-solve-denominator-constant",
+      "verdict": "pass",
+      "notes": [
+        "x/5=4 gives x=20; preview and explanation preserve the displayed equation."
+      ]
+    },
+    {
+      "id": "alg-solve-zero-root",
+      "verdict": "pass",
+      "notes": [
+        "4x=0 has the genuine root zero, and the oracle includes it."
+      ]
+    },
+    {
+      "id": "alg-solve-variable-both-sides",
+      "verdict": "pass",
+      "notes": [
+        "6x+1=2x+13 reduces to 4x=12, giving 3; the request explicitly retains working."
+      ]
+    },
+    {
+      "id": "alg-solve-grouped-linear",
+      "verdict": "pass",
+      "notes": [
+        "2(x-4)=10 gives x=9; the spoken bracket scope is consistent."
+      ]
+    },
+    {
+      "id": "alg-solve-noninteger",
+      "verdict": "pass",
+      "notes": [
+        "2x=3 gives 1.5; the answer is not rounded to a whole number."
+      ]
+    },
+    {
+      "id": "alg-solve-square-two-roots",
+      "verdict": "pass",
+      "notes": [
+        "x squared equals nine has roots -3 and 3; the query asks for all answers."
+      ]
+    },
+    {
+      "id": "alg-solve-zero-product",
+      "verdict": "pass",
+      "notes": [
+        "x(x-5)=0 has roots zero and five; both are required by the oracle."
+      ]
+    },
+    {
+      "id": "alg-solve-quadratic-two-positive",
+      "verdict": "pass",
+      "notes": [
+        "The quadratic factors as (x-2)(x-3); both positive roots are present despite the engine using approximate symbols."
+      ]
+    },
+    {
+      "id": "alg-solve-repeated-root",
+      "verdict": "pass",
+      "notes": [
+        "The quadratic is (x-3)^2; the response identifies the repeated root three, answering the distinct-root question by implication."
+      ]
+    },
+    {
+      "id": "alg-solve-opposite-roots",
+      "verdict": "pass",
+      "notes": [
+        "x squared minus sixteen has roots -4 and 4; both signs are checked."
+      ]
+    },
+    {
+      "id": "alg-solve-negative-linear-divisor",
+      "verdict": "pass",
+      "notes": [
+        "-4x+3=19 gives -4; the user asks for a read-only answer."
+      ]
+    },
+    {
+      "id": "alg-solve-sides-reversed",
+      "verdict": "pass",
+      "notes": [
+        "23=5x-2 gives x=5 without needing a side swap."
+      ]
+    },
+    {
+      "id": "alg-read-left-only",
+      "verdict": "pass",
+      "notes": [
+        "The query isolates 3x+7 rather than reading the full equality; the expected speech matches that side."
+      ]
+    },
+    {
+      "id": "alg-read-right-only",
+      "verdict": "pass",
+      "notes": [
+        "The right side is 4x+1; the preview explanation preserves work and reads only the requested side."
+      ]
+    },
+    {
+      "id": "alg-read-negative-fraction",
+      "verdict": "pass",
+      "notes": [
+        "Strengthen the oracle beyond divided by 4: require the leading negative, coefficient three, variable x and plus two. The present check would accept a wrong sign or numerator.",
+        "Resolved during independent review: The oracle now requires the complete grouped speech: the quantity negative 3 times x divided by 4 end quantity plus 2."
+      ]
+    },
+    {
+      "id": "alg-read-bracket-scope",
+      "verdict": "pass",
+      "notes": [
+        "Strengthen the oracle to require the spoken grouping boundary and outer factor two, not just x plus 5. The current check could accept flattened, incorrect scope.",
+        "Resolved during independent review: The oracle now requires the outer factor and full grouping: 2 times the quantity x plus 5 end quantity."
+      ]
+    },
+    {
+      "id": "alg-evaluate-left-side-only",
+      "verdict": "pass",
+      "notes": [
+        "The left expression at x=4 is eleven; the equality itself is not evaluated as a boolean."
+      ]
+    },
+    {
+      "id": "alg-evaluate-right-side-only",
+      "verdict": "pass",
+      "notes": [
+        "The right expression at y=4 is ten; the reference selects only that side."
+      ]
+    },
+    {
+      "id": "alg-query-unsaved-transform",
+      "verdict": "pass",
+      "notes": [
+        "Strengthen the oracle to require subtraction of three from both sides, not a single occurrence of minus 3. Read-only preservation is otherwise correctly asserted.",
+        "Resolved during independent review: The oracle now requires the entire balanced result: x plus 3 minus 3 equals 8 minus 3."
+      ]
+    },
+    {
+      "id": "alg-query-temporary-simplification",
+      "verdict": "pass",
+      "notes": [
+        "The temporary simplification is 5x+1, read aloud without saving over the entered expression."
+      ]
+    },
+    {
+      "id": "alg-read-right-constant-sign",
+      "verdict": "pass",
+      "notes": [
+        "The selected right side is negative eight and the speech oracle explicitly retains its sign."
+      ]
+    },
+    {
+      "id": "alg-simplify-then-recheck",
+      "verdict": "pass",
+      "notes": [
+        "Combining 2x+x yields 3x+4, which evaluates to ten at x=2; the follow-up uses the saved simplified form."
+      ]
+    },
+    {
+      "id": "alg-nested-parenthesis-simplify",
+      "verdict": "pass",
+      "notes": [
+        "The spoken bracketed sum is 3+4, multiplied by two; simplification and numeric readback both yield fourteen."
+      ]
+    },
+    {
+      "id": "alg-expand-before-substitute",
+      "verdict": "pass",
+      "notes": [
+        "The grouped expression 3(x-2)+4 gives thirteen at x=5; no unsupported expansion claim is asserted."
+      ]
+    },
+    {
+      "id": "alg-replace-whole-problem",
+      "verdict": "pass",
+      "notes": [
+        "The second equation explicitly replaces the first; 2x-4=10 gives x=7 and the explanation refers to the new equation."
+      ]
+    },
+    {
+      "id": "alg-expression-to-equation",
+      "verdict": "pass",
+      "notes": [
+        "The previously entered 4x+1 is set equal to thirteen and solving gives three."
+      ]
+    },
+    {
+      "id": "alg-separate-requested-steps",
+      "verdict": "pass",
+      "notes": [
+        "Add an explicit check of two separate saved intermediate steps, in addition to final x=10. Two programs express the requested split, but the existing final-only oracle cannot detect a history-boundary regression.",
+        "Resolved during independent review: The multi-operation turn now requires stepDelta=2, in addition to the final numeric result; root is adding this harness assertion."
+      ]
+    },
+    {
+      "id": "alg-correct-equation-constant",
+      "verdict": "pass",
+      "notes": [
+        "Replacing thirteen with seventeen yields 4x+1=17; the corrected solution is four."
+      ]
+    },
+    {
+      "id": "alg-simplify-cancelled-variable",
+      "verdict": "pass",
+      "notes": [
+        "The variable terms cancel, leaving nine for every x; the follow-up at three correctly remains nine."
+      ]
+    },
+    {
+      "id": "alg-undo-redo-balancing",
+      "verdict": "pass",
+      "notes": [
+        "Undo restores the entered equation and redo restores the unsimplified subtraction on both sides; no hidden simplification is assumed."
+      ]
+    },
+    {
+      "id": "alg-undo-two-separate-steps",
+      "verdict": "pass",
+      "notes": [
+        "Two separate commands create two undoable operations; undo(2) correctly returns the original 3x+6=21."
+      ]
+    },
+    {
+      "id": "alg-correct-previous-operation",
+      "verdict": "pass",
+      "notes": [
+        "Correction status replaces the previous subtraction of two with subtraction of three applied to its original input; the oracle correctly avoids cumulative subtraction."
+      ]
+    },
+    {
+      "id": "alg-accept-unapplied-suggestion",
+      "verdict": "pass",
+      "notes": [
+        "The explanation response proposes a program without applying it; the student's acceptance then applies the same subtraction to the unchanged equation."
+      ]
+    },
+    {
+      "id": "alg-query-between-undo-and-redo",
+      "verdict": "pass",
+      "notes": [
+        "The read-only solve returns nine while retaining redo history; redo then restores the original addition rather than issuing it twice."
+      ]
+    }
+  ],
+  "sourceSha256": "fd1e33652bbafbd791c9df58e67f73f595ab8797cb72be619220d1890f729e1b",
+  "authorAgent": "student_algebra"
+}

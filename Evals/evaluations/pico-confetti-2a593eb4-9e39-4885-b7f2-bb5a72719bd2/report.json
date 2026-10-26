@@ -1,0 +1,28 @@
+{
+  "run": "2a593eb4-9e39-4885-b7f2-bb5a72719bd2",
+  "revision": "93a614ffb52616ddd6a8b9cd22b042de423c2c39",
+  "environment": "Local Vinext app; actual applyCloudOperation and exact completion service; synthetic voice transport and isolated in-memory storage. No live provider or student data.",
+  "passed": false,
+  "checks": [
+    "desktop: idle, listening, simultaneous playback, and immediate interruption verified."
+  ],
+  "failure": "desktop: pending and expressions: waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.pico[data-working=\"true\"]') to be visible\u001b[22m\n",
+  "captures": [
+    {
+      "file": "desktop-01-ready.png",
+      "caption": "1280×900: approved Soft peak, matching eyes, no idle animation."
+    },
+    {
+      "file": "desktop-02-listening.png",
+      "caption": "Listening lean and input arrow; no speaking waves."
+    },
+    {
+      "file": "desktop-03-speaking.png",
+      "caption": "Listening and audible playback overlap; outward waves are separate from the input waveform."
+    },
+    {
+      "file": "desktop-failure.png",
+      "caption": "desktop: pending and expressions: TimeoutError: waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.pico[data-working=\"true\"]') to be visible\u001b[22m\n"
+    }
+  ]
+}

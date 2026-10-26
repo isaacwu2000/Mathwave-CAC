@@ -1,0 +1,6 @@
+{
+  "Web/src/modules/ai/config/openai-config.ts": "3caa0da9a562f452d65d81fc16f6ba5e0838ded24d037f05b488da0dc1ea1f9d",
+  "Web/src/modules/voice/runtime/openai-voice-session.ts": "5590bf3290cac06eb53397ca31105cad6630fbdf4b1190c922231fc92df9eb19",
+  "Web/src/modules/workspace/hooks/use-workspace.ts": "f5f43e2734f2026d496af0750a11edaba3c3f08d76a8ee0d5f5ed6b0e19c99c7",
+  "Evals/src/voice-parity.ts": "555f87084bf2fe79d8465c8f476cfab5ad07b075a1cca0449e5688c040024694"
+}

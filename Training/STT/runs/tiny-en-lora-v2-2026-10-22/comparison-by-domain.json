@@ -1,0 +1,999 @@
+{
+  "scope": "Same globally unique test transcripts, then stratified by conversation category. Synthetic voices; not human speech or command accuracy.",
+  "sourceSha256": {
+    "report.json": "dcac969e85b889e6249400e39f121b370b0ad23df2a361af377c6e3d9005ba03",
+    "baseline-test-sealed.json": "28122fafdace154629e385b9cc0d2e02409e6ff53ab0edabe1bf2dc1be119487",
+    "adapted-test.json": "dab2b9c85e8d75094a0d37582a697f04109d4d12aea0e1c7fb5a2370690f670e"
+  },
+  "plotCodeSha256": "c6112fc935cf9bc040c7dbfa55ba35b53162d870a51017e51ecbe2898679b404",
+  "plottingVersion": "3.11.2",
+  "domains": {
+    "algebra": {
+      "conversations": 20,
+      "before": {
+        "clips": 72,
+        "referenceWords": 473,
+        "wordErrors": 50,
+        "normalizedWER": 0.10570824524312897,
+        "normalizedExact": 43,
+        "rawWER": 0.3686440677966102,
+        "mathTokenErrorRate": 0.08808290155440414,
+        "generationSeconds": 22.01773712906288,
+        "audioSeconds": 177.572375,
+        "byCategory": {
+          "algebra": {
+            "clips": 72,
+            "referenceWords": 473,
+            "wordErrors": 50,
+            "normalizedWER": 0.10570824524312897,
+            "normalizedExact": 43,
+            "rawWER": 0.3686440677966102,
+            "mathTokenErrorRate": 0.08808290155440414,
+            "generationSeconds": 22.01773712906288,
+            "audioSeconds": 177.572375
+          }
+        }
+      },
+      "after": {
+        "clips": 72,
+        "referenceWords": 473,
+        "wordErrors": 6,
+        "normalizedWER": 0.012684989429175475,
+        "normalizedExact": 67,
+        "rawWER": 0.014830508474576272,
+        "mathTokenErrorRate": 0.010362694300518135,
+        "generationSeconds": 52.996900170976005,
+        "audioSeconds": 177.572375,
+        "byCategory": {
+          "algebra": {
+            "clips": 72,
+            "referenceWords": 473,
+            "wordErrors": 6,
+            "normalizedWER": 0.012684989429175475,
+            "normalizedExact": 67,
+            "rawWER": 0.014830508474576272,
+            "mathTokenErrorRate": 0.010362694300518135,
+            "generationSeconds": 52.996900170976005,
+            "audioSeconds": 177.572375
+          }
+        }
+      }
+    },
+    "cross-topic": {
+      "conversations": 3,
+      "before": {
+        "clips": 8,
+        "referenceWords": 68,
+        "wordErrors": 5,
+        "normalizedWER": 0.07352941176470588,
+        "normalizedExact": 5,
+        "rawWER": 0.38461538461538464,
+        "mathTokenErrorRate": 0.04,
+        "generationSeconds": 3.3948302089993376,
+        "audioSeconds": 24.5145625,
+        "byCategory": {
+          "cross-topic": {
+            "clips": 8,
+            "referenceWords": 68,
+            "wordErrors": 5,
+            "normalizedWER": 0.07352941176470588,
+            "normalizedExact": 5,
+            "rawWER": 0.38461538461538464,
+            "mathTokenErrorRate": 0.04,
+            "generationSeconds": 3.3948302089993376,
+            "audioSeconds": 24.5145625
+          }
+        }
+      },
+      "after": {
+        "clips": 8,
+        "referenceWords": 68,
+        "wordErrors": 2,
+        "normalizedWER": 0.029411764705882353,
+        "normalizedExact": 6,
+        "rawWER": 0.06153846153846154,
+        "mathTokenErrorRate": 0.0,
+        "generationSeconds": 3.874450707997312,
+        "audioSeconds": 24.5145625,
+        "byCategory": {
+          "cross-topic": {
+            "clips": 8,
+            "referenceWords": 68,
+            "wordErrors": 2,
+            "normalizedWER": 0.029411764705882353,
+            "normalizedExact": 6,
+            "rawWER": 0.06153846153846154,
+            "mathTokenErrorRate": 0.0,
+            "generationSeconds": 3.874450707997312,
+            "audioSeconds": 24.5145625
+          }
+        }
+      }
+    },
+    "geometry": {
+      "conversations": 10,
+      "before": {
+        "clips": 26,
+        "referenceWords": 208,
+        "wordErrors": 43,
+        "normalizedWER": 0.20673076923076922,
+        "normalizedExact": 10,
+        "rawWER": 0.3605769230769231,
+        "mathTokenErrorRate": 0.35185185185185186,
+        "generationSeconds": 6.635589209996397,
+        "audioSeconds": 77.7035625,
+        "byCategory": {
+          "geometry": {
+            "clips": 26,
+            "referenceWords": 208,
+            "wordErrors": 43,
+            "normalizedWER": 0.20673076923076922,
+            "normalizedExact": 10,
+            "rawWER": 0.3605769230769231,
+            "mathTokenErrorRate": 0.35185185185185186,
+            "generationSeconds": 6.635589209996397,
+            "audioSeconds": 77.7035625
+          }
+        }
+      },
+      "after": {
+        "clips": 26,
+        "referenceWords": 208,
+        "wordErrors": 6,
+        "normalizedWER": 0.028846153846153848,
+        "normalizedExact": 21,
+        "rawWER": 0.0673076923076923,
+        "mathTokenErrorRate": 0.037037037037037035,
+        "generationSeconds": 25.069971167002223,
+        "audioSeconds": 77.7035625,
+        "byCategory": {
+          "geometry": {
+            "clips": 26,
+            "referenceWords": 208,
+            "wordErrors": 6,
+            "normalizedWER": 0.028846153846153848,
+            "normalizedExact": 21,
+            "rawWER": 0.0673076923076923,
+            "mathTokenErrorRate": 0.037037037037037035,
+            "generationSeconds": 25.069971167002223,
+            "audioSeconds": 77.7035625
+          }
+        }
+      }
+    },
+    "graphs": {
+      "conversations": 10,
+      "before": {
+        "clips": 33,
+        "referenceWords": 213,
+        "wordErrors": 41,
+        "normalizedWER": 0.19248826291079812,
+        "normalizedExact": 12,
+        "rawWER": 0.34615384615384615,
+        "mathTokenErrorRate": 0.21518987341772153,
+        "generationSeconds": 8.466113499009225,
+        "audioSeconds": 75.4310625,
+        "byCategory": {
+          "graphs": {
+            "clips": 33,
+            "referenceWords": 213,
+            "wordErrors": 41,
+            "normalizedWER": 0.19248826291079812,
+            "normalizedExact": 12,
+            "rawWER": 0.34615384615384615,
+            "mathTokenErrorRate": 0.21518987341772153,
+            "generationSeconds": 8.466113499009225,
+            "audioSeconds": 75.4310625
+          }
+        }
+      },
+      "after": {
+        "clips": 33,
+        "referenceWords": 213,
+        "wordErrors": 11,
+        "normalizedWER": 0.051643192488262914,
+        "normalizedExact": 24,
+        "rawWER": 0.057692307692307696,
+        "mathTokenErrorRate": 0.0759493670886076,
+        "generationSeconds": 31.453320334971067,
+        "audioSeconds": 75.4310625,
+        "byCategory": {
+          "graphs": {
+            "clips": 33,
+            "referenceWords": 213,
+            "wordErrors": 11,
+            "normalizedWER": 0.051643192488262914,
+            "normalizedExact": 24,
+            "rawWER": 0.057692307692307696,
+            "mathTokenErrorRate": 0.0759493670886076,
+            "generationSeconds": 31.453320334971067,
+            "audioSeconds": 75.4310625
+          }
+        }
+      }
+    },
+    "history-and-diagrams": {
+      "conversations": 2,
+      "before": {
+        "clips": 7,
+        "referenceWords": 34,
+        "wordErrors": 7,
+        "normalizedWER": 0.20588235294117646,
+        "normalizedExact": 1,
+        "rawWER": 0.45454545454545453,
+        "mathTokenErrorRate": 0.0,
+        "generationSeconds": 2.179652749990055,
+        "audioSeconds": 19.3565,
+        "byCategory": {
+          "history-and-diagrams": {
+            "clips": 7,
+            "referenceWords": 34,
+            "wordErrors": 7,
+            "normalizedWER": 0.20588235294117646,
+            "normalizedExact": 1,
+            "rawWER": 0.45454545454545453,
+            "mathTokenErrorRate": 0.0,
+            "generationSeconds": 2.179652749990055,
+            "audioSeconds": 19.3565
+          }
+        }
+      },
+      "after": {
+        "clips": 7,
+        "referenceWords": 34,
+        "wordErrors": 3,
+        "normalizedWER": 0.08823529411764706,
+        "normalizedExact": 4,
+        "rawWER": 0.15151515151515152,
+        "mathTokenErrorRate": 0.25,
+        "generationSeconds": 3.036042916995939,
+        "audioSeconds": 19.3565,
+        "byCategory": {
+          "history-and-diagrams": {
+            "clips": 7,
+            "referenceWords": 34,
+            "wordErrors": 3,
+            "normalizedWER": 0.08823529411764706,
+            "normalizedExact": 4,
+            "rawWER": 0.15151515151515152,
+            "mathTokenErrorRate": 0.25,
+            "generationSeconds": 3.036042916995939,
+            "audioSeconds": 19.3565
+          }
+        }
+      }
+    },
+    "statistics": {
+      "conversations": 5,
+      "before": {
+        "clips": 10,
+        "referenceWords": 64,
+        "wordErrors": 8,
+        "normalizedWER": 0.125,
+        "normalizedExact": 6,
+        "rawWER": 0.4142857142857143,
+        "mathTokenErrorRate": 0.045454545454545456,
+        "generationSeconds": 2.6651688749843743,
+        "audioSeconds": 30.2100625,
+        "byCategory": {
+          "statistics": {
+            "clips": 10,
+            "referenceWords": 64,
+            "wordErrors": 8,
+            "normalizedWER": 0.125,
+            "normalizedExact": 6,
+            "rawWER": 0.4142857142857143,
+            "mathTokenErrorRate": 0.045454545454545456,
+            "generationSeconds": 2.6651688749843743,
+            "audioSeconds": 30.2100625
+          }
+        }
+      },
+      "after": {
+        "clips": 10,
+        "referenceWords": 64,
+        "wordErrors": 1,
+        "normalizedWER": 0.015625,
+        "normalizedExact": 9,
+        "rawWER": 0.05714285714285714,
+        "mathTokenErrorRate": 0.0,
+        "generationSeconds": 3.6672046269886778,
+        "audioSeconds": 30.2100625,
+        "byCategory": {
+          "statistics": {
+            "clips": 10,
+            "referenceWords": 64,
+            "wordErrors": 1,
+            "normalizedWER": 0.015625,
+            "normalizedExact": 9,
+            "rawWER": 0.05714285714285714,
+            "mathTokenErrorRate": 0.0,
+            "generationSeconds": 3.6672046269886778,
+            "audioSeconds": 30.2100625
+          }
+        }
+      }
+    }
+  },
+  "originalCategories": {
+    "algebra": {
+      "conversations": 18,
+      "before": {
+        "clips": 63,
+        "referenceWords": 417,
+        "wordErrors": 40,
+        "normalizedWER": 0.09592326139088729,
+        "normalizedExact": 39,
+        "rawWER": 0.37259615384615385,
+        "mathTokenErrorRate": 0.08287292817679558,
+        "generationSeconds": 18.75994062904647,
+        "audioSeconds": 156.1203125,
+        "byCategory": {
+          "algebra": {
+            "clips": 63,
+            "referenceWords": 417,
+            "wordErrors": 40,
+            "normalizedWER": 0.09592326139088729,
+            "normalizedExact": 39,
+            "rawWER": 0.37259615384615385,
+            "mathTokenErrorRate": 0.08287292817679558,
+            "generationSeconds": 18.75994062904647,
+            "audioSeconds": 156.1203125
+          }
+        }
+      },
+      "after": {
+        "clips": 63,
+        "referenceWords": 417,
+        "wordErrors": 5,
+        "normalizedWER": 0.011990407673860911,
+        "normalizedExact": 59,
+        "rawWER": 0.014423076923076924,
+        "mathTokenErrorRate": 0.0055248618784530384,
+        "generationSeconds": 49.80022091997671,
+        "audioSeconds": 156.1203125,
+        "byCategory": {
+          "algebra": {
+            "clips": 63,
+            "referenceWords": 417,
+            "wordErrors": 5,
+            "normalizedWER": 0.011990407673860911,
+            "normalizedExact": 59,
+            "rawWER": 0.014423076923076924,
+            "mathTokenErrorRate": 0.0055248618784530384,
+            "generationSeconds": 49.80022091997671,
+            "audioSeconds": 156.1203125
+          }
+        }
+      }
+    },
+    "arithmetic": {
+      "conversations": 2,
+      "before": {
+        "clips": 9,
+        "referenceWords": 56,
+        "wordErrors": 10,
+        "normalizedWER": 0.17857142857142858,
+        "normalizedExact": 4,
+        "rawWER": 0.3392857142857143,
+        "mathTokenErrorRate": 0.16666666666666666,
+        "generationSeconds": 3.2577965000164113,
+        "audioSeconds": 21.4520625,
+        "byCategory": {
+          "algebra": {
+            "clips": 9,
+            "referenceWords": 56,
+            "wordErrors": 10,
+            "normalizedWER": 0.17857142857142858,
+            "normalizedExact": 4,
+            "rawWER": 0.3392857142857143,
+            "mathTokenErrorRate": 0.16666666666666666,
+            "generationSeconds": 3.2577965000164113,
+            "audioSeconds": 21.4520625
+          }
+        }
+      },
+      "after": {
+        "clips": 9,
+        "referenceWords": 56,
+        "wordErrors": 1,
+        "normalizedWER": 0.017857142857142856,
+        "normalizedExact": 8,
+        "rawWER": 0.017857142857142856,
+        "mathTokenErrorRate": 0.08333333333333333,
+        "generationSeconds": 3.1966792509992956,
+        "audioSeconds": 21.4520625,
+        "byCategory": {
+          "algebra": {
+            "clips": 9,
+            "referenceWords": 56,
+            "wordErrors": 1,
+            "normalizedWER": 0.017857142857142856,
+            "normalizedExact": 8,
+            "rawWER": 0.017857142857142856,
+            "mathTokenErrorRate": 0.08333333333333333,
+            "generationSeconds": 3.1966792509992956,
+            "audioSeconds": 21.4520625
+          }
+        }
+      }
+    },
+    "cross-topic": {
+      "conversations": 3,
+      "before": {
+        "clips": 8,
+        "referenceWords": 68,
+        "wordErrors": 5,
+        "normalizedWER": 0.07352941176470588,
+        "normalizedExact": 5,
+        "rawWER": 0.38461538461538464,
+        "mathTokenErrorRate": 0.04,
+        "generationSeconds": 3.3948302089993376,
+        "audioSeconds": 24.5145625,
+        "byCategory": {
+          "cross-topic": {
+            "clips": 8,
+            "referenceWords": 68,
+            "wordErrors": 5,
+            "normalizedWER": 0.07352941176470588,
+            "normalizedExact": 5,
+            "rawWER": 0.38461538461538464,
+            "mathTokenErrorRate": 0.04,
+            "generationSeconds": 3.3948302089993376,
+            "audioSeconds": 24.5145625
+          }
+        }
+      },
+      "after": {
+        "clips": 8,
+        "referenceWords": 68,
+        "wordErrors": 2,
+        "normalizedWER": 0.029411764705882353,
+        "normalizedExact": 6,
+        "rawWER": 0.06153846153846154,
+        "mathTokenErrorRate": 0.0,
+        "generationSeconds": 3.874450707997312,
+        "audioSeconds": 24.5145625,
+        "byCategory": {
+          "cross-topic": {
+            "clips": 8,
+            "referenceWords": 68,
+            "wordErrors": 2,
+            "normalizedWER": 0.029411764705882353,
+            "normalizedExact": 6,
+            "rawWER": 0.06153846153846154,
+            "mathTokenErrorRate": 0.0,
+            "generationSeconds": 3.874450707997312,
+            "audioSeconds": 24.5145625
+          }
+        }
+      }
+    },
+    "geometry": {
+      "conversations": 10,
+      "before": {
+        "clips": 26,
+        "referenceWords": 208,
+        "wordErrors": 43,
+        "normalizedWER": 0.20673076923076922,
+        "normalizedExact": 10,
+        "rawWER": 0.3605769230769231,
+        "mathTokenErrorRate": 0.35185185185185186,
+        "generationSeconds": 6.635589209996397,
+        "audioSeconds": 77.7035625,
+        "byCategory": {
+          "geometry": {
+            "clips": 26,
+            "referenceWords": 208,
+            "wordErrors": 43,
+            "normalizedWER": 0.20673076923076922,
+            "normalizedExact": 10,
+            "rawWER": 0.3605769230769231,
+            "mathTokenErrorRate": 0.35185185185185186,
+            "generationSeconds": 6.635589209996397,
+            "audioSeconds": 77.7035625
+          }
+        }
+      },
+      "after": {
+        "clips": 26,
+        "referenceWords": 208,
+        "wordErrors": 6,
+        "normalizedWER": 0.028846153846153848,
+        "normalizedExact": 21,
+        "rawWER": 0.0673076923076923,
+        "mathTokenErrorRate": 0.037037037037037035,
+        "generationSeconds": 25.069971167002223,
+        "audioSeconds": 77.7035625,
+        "byCategory": {
+          "geometry": {
+            "clips": 26,
+            "referenceWords": 208,
+            "wordErrors": 6,
+            "normalizedWER": 0.028846153846153848,
+            "normalizedExact": 21,
+            "rawWER": 0.0673076923076923,
+            "mathTokenErrorRate": 0.037037037037037035,
+            "generationSeconds": 25.069971167002223,
+            "audioSeconds": 77.7035625
+          }
+        }
+      }
+    },
+    "graphs": {
+      "conversations": 10,
+      "before": {
+        "clips": 33,
+        "referenceWords": 213,
+        "wordErrors": 41,
+        "normalizedWER": 0.19248826291079812,
+        "normalizedExact": 12,
+        "rawWER": 0.34615384615384615,
+        "mathTokenErrorRate": 0.21518987341772153,
+        "generationSeconds": 8.466113499009225,
+        "audioSeconds": 75.4310625,
+        "byCategory": {
+          "graphs": {
+            "clips": 33,
+            "referenceWords": 213,
+            "wordErrors": 41,
+            "normalizedWER": 0.19248826291079812,
+            "normalizedExact": 12,
+            "rawWER": 0.34615384615384615,
+            "mathTokenErrorRate": 0.21518987341772153,
+            "generationSeconds": 8.466113499009225,
+            "audioSeconds": 75.4310625
+          }
+        }
+      },
+      "after": {
+        "clips": 33,
+        "referenceWords": 213,
+        "wordErrors": 11,
+        "normalizedWER": 0.051643192488262914,
+        "normalizedExact": 24,
+        "rawWER": 0.057692307692307696,
+        "mathTokenErrorRate": 0.0759493670886076,
+        "generationSeconds": 31.453320334971067,
+        "audioSeconds": 75.4310625,
+        "byCategory": {
+          "graphs": {
+            "clips": 33,
+            "referenceWords": 213,
+            "wordErrors": 11,
+            "normalizedWER": 0.051643192488262914,
+            "normalizedExact": 24,
+            "rawWER": 0.057692307692307696,
+            "mathTokenErrorRate": 0.0759493670886076,
+            "generationSeconds": 31.453320334971067,
+            "audioSeconds": 75.4310625
+          }
+        }
+      }
+    },
+    "history-and-diagrams": {
+      "conversations": 2,
+      "before": {
+        "clips": 7,
+        "referenceWords": 34,
+        "wordErrors": 7,
+        "normalizedWER": 0.20588235294117646,
+        "normalizedExact": 1,
+        "rawWER": 0.45454545454545453,
+        "mathTokenErrorRate": 0.0,
+        "generationSeconds": 2.179652749990055,
+        "audioSeconds": 19.3565,
+        "byCategory": {
+          "history-and-diagrams": {
+            "clips": 7,
+            "referenceWords": 34,
+            "wordErrors": 7,
+            "normalizedWER": 0.20588235294117646,
+            "normalizedExact": 1,
+            "rawWER": 0.45454545454545453,
+            "mathTokenErrorRate": 0.0,
+            "generationSeconds": 2.179652749990055,
+            "audioSeconds": 19.3565
+          }
+        }
+      },
+      "after": {
+        "clips": 7,
+        "referenceWords": 34,
+        "wordErrors": 3,
+        "normalizedWER": 0.08823529411764706,
+        "normalizedExact": 4,
+        "rawWER": 0.15151515151515152,
+        "mathTokenErrorRate": 0.25,
+        "generationSeconds": 3.036042916995939,
+        "audioSeconds": 19.3565,
+        "byCategory": {
+          "history-and-diagrams": {
+            "clips": 7,
+            "referenceWords": 34,
+            "wordErrors": 3,
+            "normalizedWER": 0.08823529411764706,
+            "normalizedExact": 4,
+            "rawWER": 0.15151515151515152,
+            "mathTokenErrorRate": 0.25,
+            "generationSeconds": 3.036042916995939,
+            "audioSeconds": 19.3565
+          }
+        }
+      }
+    },
+    "statistics": {
+      "conversations": 5,
+      "before": {
+        "clips": 10,
+        "referenceWords": 64,
+        "wordErrors": 8,
+        "normalizedWER": 0.125,
+        "normalizedExact": 6,
+        "rawWER": 0.4142857142857143,
+        "mathTokenErrorRate": 0.045454545454545456,
+        "generationSeconds": 2.6651688749843743,
+        "audioSeconds": 30.2100625,
+        "byCategory": {
+          "statistics": {
+            "clips": 10,
+            "referenceWords": 64,
+            "wordErrors": 8,
+            "normalizedWER": 0.125,
+            "normalizedExact": 6,
+            "rawWER": 0.4142857142857143,
+            "mathTokenErrorRate": 0.045454545454545456,
+            "generationSeconds": 2.6651688749843743,
+            "audioSeconds": 30.2100625
+          }
+        }
+      },
+      "after": {
+        "clips": 10,
+        "referenceWords": 64,
+        "wordErrors": 1,
+        "normalizedWER": 0.015625,
+        "normalizedExact": 9,
+        "rawWER": 0.05714285714285714,
+        "mathTokenErrorRate": 0.0,
+        "generationSeconds": 3.6672046269886778,
+        "audioSeconds": 30.2100625,
+        "byCategory": {
+          "statistics": {
+            "clips": 10,
+            "referenceWords": 64,
+            "wordErrors": 1,
+            "normalizedWER": 0.015625,
+            "normalizedExact": 9,
+            "rawWER": 0.05714285714285714,
+            "mathTokenErrorRate": 0.0,
+            "generationSeconds": 3.6672046269886778,
+            "audioSeconds": 30.2100625
+          }
+        }
+      }
+    }
+  },
+  "overall": {
+    "before": {
+      "uniqueTranscript": {
+        "clips": 156,
+        "referenceWords": 1060,
+        "wordErrors": 154,
+        "normalizedWER": 0.14528301886792452,
+        "normalizedExact": 77,
+        "rawWER": 0.3693181818181818,
+        "mathTokenErrorRate": 0.14588859416445624,
+        "generationSeconds": 45.35909167204227,
+        "audioSeconds": 404.788125,
+        "byCategory": {
+          "algebra": {
+            "clips": 72,
+            "referenceWords": 473,
+            "wordErrors": 50,
+            "normalizedWER": 0.10570824524312897,
+            "normalizedExact": 43,
+            "rawWER": 0.3686440677966102,
+            "mathTokenErrorRate": 0.08808290155440414,
+            "generationSeconds": 22.01773712906288,
+            "audioSeconds": 177.572375
+          },
+          "cross-topic": {
+            "clips": 8,
+            "referenceWords": 68,
+            "wordErrors": 5,
+            "normalizedWER": 0.07352941176470588,
+            "normalizedExact": 5,
+            "rawWER": 0.38461538461538464,
+            "mathTokenErrorRate": 0.04,
+            "generationSeconds": 3.3948302089993376,
+            "audioSeconds": 24.5145625
+          },
+          "geometry": {
+            "clips": 26,
+            "referenceWords": 208,
+            "wordErrors": 43,
+            "normalizedWER": 0.20673076923076922,
+            "normalizedExact": 10,
+            "rawWER": 0.3605769230769231,
+            "mathTokenErrorRate": 0.35185185185185186,
+            "generationSeconds": 6.635589209996397,
+            "audioSeconds": 77.7035625
+          },
+          "graphs": {
+            "clips": 33,
+            "referenceWords": 213,
+            "wordErrors": 41,
+            "normalizedWER": 0.19248826291079812,
+            "normalizedExact": 12,
+            "rawWER": 0.34615384615384615,
+            "mathTokenErrorRate": 0.21518987341772153,
+            "generationSeconds": 8.466113499009225,
+            "audioSeconds": 75.4310625
+          },
+          "history-and-diagrams": {
+            "clips": 7,
+            "referenceWords": 34,
+            "wordErrors": 7,
+            "normalizedWER": 0.20588235294117646,
+            "normalizedExact": 1,
+            "rawWER": 0.45454545454545453,
+            "mathTokenErrorRate": 0.0,
+            "generationSeconds": 2.179652749990055,
+            "audioSeconds": 19.3565
+          },
+          "statistics": {
+            "clips": 10,
+            "referenceWords": 64,
+            "wordErrors": 8,
+            "normalizedWER": 0.125,
+            "normalizedExact": 6,
+            "rawWER": 0.4142857142857143,
+            "mathTokenErrorRate": 0.045454545454545456,
+            "generationSeconds": 2.6651688749843743,
+            "audioSeconds": 30.2100625
+          }
+        }
+      },
+      "allClips": {
+        "clips": 163,
+        "referenceWords": 1109,
+        "wordErrors": 167,
+        "normalizedWER": 0.15058611361587015,
+        "normalizedExact": 79,
+        "rawWER": 0.3680870353581142,
+        "mathTokenErrorRate": 0.15544041450777202,
+        "generationSeconds": 47.4095752960493,
+        "audioSeconds": 421.8424375,
+        "byCategory": {
+          "algebra": {
+            "clips": 77,
+            "referenceWords": 514,
+            "wordErrors": 59,
+            "normalizedWER": 0.11478599221789883,
+            "normalizedExact": 45,
+            "rawWER": 0.36257309941520466,
+            "mathTokenErrorRate": 0.10204081632653061,
+            "generationSeconds": 23.657468003060785,
+            "audioSeconds": 191.1164375
+          },
+          "cross-topic": {
+            "clips": 9,
+            "referenceWords": 72,
+            "wordErrors": 7,
+            "normalizedWER": 0.09722222222222222,
+            "normalizedExact": 5,
+            "rawWER": 0.39705882352941174,
+            "mathTokenErrorRate": 0.07142857142857142,
+            "generationSeconds": 3.6028269170055864,
+            "audioSeconds": 26.26975
+          },
+          "geometry": {
+            "clips": 26,
+            "referenceWords": 208,
+            "wordErrors": 43,
+            "normalizedWER": 0.20673076923076922,
+            "normalizedExact": 10,
+            "rawWER": 0.3605769230769231,
+            "mathTokenErrorRate": 0.35185185185185186,
+            "generationSeconds": 6.635589209996397,
+            "audioSeconds": 77.7035625
+          },
+          "graphs": {
+            "clips": 34,
+            "referenceWords": 217,
+            "wordErrors": 43,
+            "normalizedWER": 0.19815668202764977,
+            "normalizedExact": 12,
+            "rawWER": 0.35071090047393366,
+            "mathTokenErrorRate": 0.21951219512195122,
+            "generationSeconds": 8.6688695410121,
+            "audioSeconds": 77.186125
+          },
+          "history-and-diagrams": {
+            "clips": 7,
+            "referenceWords": 34,
+            "wordErrors": 7,
+            "normalizedWER": 0.20588235294117646,
+            "normalizedExact": 1,
+            "rawWER": 0.45454545454545453,
+            "mathTokenErrorRate": 0.0,
+            "generationSeconds": 2.179652749990055,
+            "audioSeconds": 19.3565
+          },
+          "statistics": {
+            "clips": 10,
+            "referenceWords": 64,
+            "wordErrors": 8,
+            "normalizedWER": 0.125,
+            "normalizedExact": 6,
+            "rawWER": 0.4142857142857143,
+            "mathTokenErrorRate": 0.045454545454545456,
+            "generationSeconds": 2.6651688749843743,
+            "audioSeconds": 30.2100625
+          }
+        }
+      }
+    },
+    "after": {
+      "uniqueTranscript": {
+        "clips": 156,
+        "referenceWords": 1060,
+        "wordErrors": 29,
+        "normalizedWER": 0.027358490566037737,
+        "normalizedExact": 131,
+        "rawWER": 0.043560606060606064,
+        "mathTokenErrorRate": 0.029177718832891247,
+        "generationSeconds": 120.09788992493122,
+        "audioSeconds": 404.788125,
+        "byCategory": {
+          "algebra": {
+            "clips": 72,
+            "referenceWords": 473,
+            "wordErrors": 6,
+            "normalizedWER": 0.012684989429175475,
+            "normalizedExact": 67,
+            "rawWER": 0.014830508474576272,
+            "mathTokenErrorRate": 0.010362694300518135,
+            "generationSeconds": 52.996900170976005,
+            "audioSeconds": 177.572375
+          },
+          "cross-topic": {
+            "clips": 8,
+            "referenceWords": 68,
+            "wordErrors": 2,
+            "normalizedWER": 0.029411764705882353,
+            "normalizedExact": 6,
+            "rawWER": 0.06153846153846154,
+            "mathTokenErrorRate": 0.0,
+            "generationSeconds": 3.874450707997312,
+            "audioSeconds": 24.5145625
+          },
+          "geometry": {
+            "clips": 26,
+            "referenceWords": 208,
+            "wordErrors": 6,
+            "normalizedWER": 0.028846153846153848,
+            "normalizedExact": 21,
+            "rawWER": 0.0673076923076923,
+            "mathTokenErrorRate": 0.037037037037037035,
+            "generationSeconds": 25.069971167002223,
+            "audioSeconds": 77.7035625
+          },
+          "graphs": {
+            "clips": 33,
+            "referenceWords": 213,
+            "wordErrors": 11,
+            "normalizedWER": 0.051643192488262914,
+            "normalizedExact": 24,
+            "rawWER": 0.057692307692307696,
+            "mathTokenErrorRate": 0.0759493670886076,
+            "generationSeconds": 31.453320334971067,
+            "audioSeconds": 75.4310625
+          },
+          "history-and-diagrams": {
+            "clips": 7,
+            "referenceWords": 34,
+            "wordErrors": 3,
+            "normalizedWER": 0.08823529411764706,
+            "normalizedExact": 4,
+            "rawWER": 0.15151515151515152,
+            "mathTokenErrorRate": 0.25,
+            "generationSeconds": 3.036042916995939,
+            "audioSeconds": 19.3565
+          },
+          "statistics": {
+            "clips": 10,
+            "referenceWords": 64,
+            "wordErrors": 1,
+            "normalizedWER": 0.015625,
+            "normalizedExact": 9,
+            "rawWER": 0.05714285714285714,
+            "mathTokenErrorRate": 0.0,
+            "generationSeconds": 3.6672046269886778,
+            "audioSeconds": 30.2100625
+          }
+        }
+      },
+      "allClips": {
+        "clips": 163,
+        "referenceWords": 1109,
+        "wordErrors": 29,
+        "normalizedWER": 0.026149684400360685,
+        "normalizedExact": 138,
+        "rawWER": 0.04170444242973708,
+        "mathTokenErrorRate": 0.02849740932642487,
+        "generationSeconds": 122.91987742393394,
+        "audioSeconds": 421.8424375,
+        "byCategory": {
+          "algebra": {
+            "clips": 77,
+            "referenceWords": 514,
+            "wordErrors": 6,
+            "normalizedWER": 0.011673151750972763,
+            "normalizedExact": 72,
+            "rawWER": 0.01364522417153996,
+            "mathTokenErrorRate": 0.01020408163265306,
+            "generationSeconds": 55.21482037897658,
+            "audioSeconds": 191.1164375
+          },
+          "cross-topic": {
+            "clips": 9,
+            "referenceWords": 72,
+            "wordErrors": 2,
+            "normalizedWER": 0.027777777777777776,
+            "normalizedExact": 7,
+            "rawWER": 0.058823529411764705,
+            "mathTokenErrorRate": 0.0,
+            "generationSeconds": 4.017372082998918,
+            "audioSeconds": 26.26975
+          },
+          "geometry": {
+            "clips": 26,
+            "referenceWords": 208,
+            "wordErrors": 6,
+            "normalizedWER": 0.028846153846153848,
+            "normalizedExact": 21,
+            "rawWER": 0.0673076923076923,
+            "mathTokenErrorRate": 0.037037037037037035,
+            "generationSeconds": 25.069971167002223,
+            "audioSeconds": 77.7035625
+          },
+          "graphs": {
+            "clips": 34,
+            "referenceWords": 217,
+            "wordErrors": 11,
+            "normalizedWER": 0.05069124423963134,
+            "normalizedExact": 25,
+            "rawWER": 0.05687203791469194,
+            "mathTokenErrorRate": 0.07317073170731707,
+            "generationSeconds": 31.9144662509716,
+            "audioSeconds": 77.186125
+          },
+          "history-and-diagrams": {
+            "clips": 7,
+            "referenceWords": 34,
+            "wordErrors": 3,
+            "normalizedWER": 0.08823529411764706,
+            "normalizedExact": 4,
+            "rawWER": 0.15151515151515152,
+            "mathTokenErrorRate": 0.25,
+            "generationSeconds": 3.036042916995939,
+            "audioSeconds": 19.3565
+          },
+          "statistics": {
+            "clips": 10,
+            "referenceWords": 64,
+            "wordErrors": 1,
+            "normalizedWER": 0.015625,
+            "normalizedExact": 9,
+            "rawWER": 0.05714285714285714,
+            "mathTokenErrorRate": 0.0,
+            "generationSeconds": 3.6672046269886778,
+            "audioSeconds": 30.2100625
+          }
+        }
+      }
+    }
+  }
+}

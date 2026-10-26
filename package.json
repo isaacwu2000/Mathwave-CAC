@@ -1,0 +1,35 @@
+{
+  "name": "math-audio-repository",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "pnpm --dir Web run dev",
+    "dev:open": "pnpm --dir Web run dev:open",
+    "build": "pnpm --dir Web run build",
+    "start": "pnpm --dir Web run start",
+    "lint": "pnpm --dir Web run lint",
+    "format": "pnpm --dir Web run format",
+    "test": "pnpm --dir Web run test",
+    "typecheck": "pnpm --dir Web run typecheck",
+    "eval:train": "pnpm --dir Web run eval:train",
+    "eval:test": "pnpm --dir Web run eval:test",
+    "eval:agent": "pnpm --dir Web run eval:agent",
+    "check:setup": "pnpm --dir Web run check:setup",
+    "migrate:cloud": "pnpm --dir Web run migrate:cloud",
+    "test:watch": "pnpm --dir Web run test:watch",
+    "check:boundaries": "pnpm --dir Web run check:boundaries",
+    "verify": "pnpm --dir Web run verify",
+    "test:native": "bash Native/scripts/test.sh",
+    "build:native": "bash Native/scripts/build-macos.sh",
+    "eval:voice": "tsx --env-file-if-exists=.env --env-file-if-exists=.env.local Evals/scripts/evaluate-journey.ts suite",
+    "eval:journey": "tsx --env-file-if-exists=.env --env-file-if-exists=.env.local Evals/scripts/evaluate-journey.ts"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "devDependencies": {
+    "esbuild": "0.28.1",
+    "tsx": "4.23.15"
+  }
+}

@@ -1,0 +1,716 @@
+{
+  "scope": "Individual text/contract review, not visual/audio validation",
+  "reviewer": "student_geometry",
+  "cases": [
+    {
+      "id": "graph-linear-starting-value",
+      "verdict": "pass",
+      "notes": [
+        "Taxi context resolves zero miles and three miles; 2(0)+5=5 and 2(3)+5=11."
+      ]
+    },
+    {
+      "id": "graph-negative-slope-cooling",
+      "verdict": "pass",
+      "notes": [
+        "Cooling example preserves negative slope; 20-12=8 and 20-21=-1. Explanation preview matches the asked input."
+      ]
+    },
+    {
+      "id": "graph-quadratic-two-zeroes",
+      "verdict": "pass",
+      "notes": [
+        "Roots -3 and 3 and midpoint value -9 are independently correct; references resolve to the same parabola."
+      ]
+    },
+    {
+      "id": "graph-repeated-root-touch",
+      "verdict": "pass",
+      "notes": [
+        "Repeated-root expression is (x-3)^2; values 0 and 1 are correct. The student asks point checks, not an unsupported multiplicity proof."
+      ]
+    },
+    {
+      "id": "graph-quadratic-no-real-crossing",
+      "verdict": "pass",
+      "notes": [
+        "Minimum height 4 and no real intercepts are correct for x^2+4."
+      ]
+    },
+    {
+      "id": "graph-cubic-odd-signs",
+      "verdict": "pass",
+      "notes": [
+        "Odd-power sign checks give -8 and 8; both inputs are explicit."
+      ]
+    },
+    {
+      "id": "graph-absolute-distance",
+      "verdict": "pass",
+      "notes": [
+        "Turn 1 ambiguously means abs(x)-3 or abs(x-3); use absolute value of the quantity x minus three. The expected distance values 3 and 2 are correct only for the latter.",
+        "Resolved: first utterance now explicitly scopes the quantity x minus three inside absolute value."
+      ]
+    },
+    {
+      "id": "graph-square-root-endpoint",
+      "verdict": "pass",
+      "notes": [
+        "The phrase inside the root explicitly resolves grouping; sqrt(4-4)=0 and sqrt(13-4)=3."
+      ]
+    },
+    {
+      "id": "graph-cube-root-negative",
+      "verdict": "pass",
+      "notes": [
+        "Cube-root inputs -8 and 27 produce -2 and 3; this tests an odd root rather than numerical padding of square root."
+      ]
+    },
+    {
+      "id": "graph-reciprocal-signs",
+      "verdict": "pass",
+      "notes": [
+        "Reciprocal branch signs are correct: 1/2 and -1/2; no query at the undefined origin."
+      ]
+    },
+    {
+      "id": "graph-exponential-doubling",
+      "verdict": "pass",
+      "notes": [
+        "One step later resolves from x=3 to x=4; doubling gives 8 then 16."
+      ]
+    },
+    {
+      "id": "graph-exponential-decay",
+      "verdict": "pass",
+      "notes": [
+        "Repeated halving gives 0.25 at 2 and 1 at the start; start resolves to x=0 in this growth context."
+      ]
+    },
+    {
+      "id": "graph-natural-log-anchor",
+      "verdict": "pass",
+      "notes": [
+        "Natural logarithm anchors ln(1)=0 and ln(e)=1 are correct; e is passed as its numeric value."
+      ]
+    },
+    {
+      "id": "graph-sine-radian-zero",
+      "verdict": "pass",
+      "notes": [
+        "Sine landmarks 0 and pi/2 give 0 and 1; radians are explicit."
+      ]
+    },
+    {
+      "id": "graph-cosine-quarter-cycle",
+      "verdict": "pass",
+      "notes": [
+        "Cosine gives 1 at zero and -1 at pi; half-cycle landmarks differ from the sine case."
+      ]
+    },
+    {
+      "id": "graph-tangent-origin",
+      "verdict": "pass",
+      "notes": [
+        "Tangent at zero is finite, and adding one raises that height to 1; no pole query."
+      ]
+    },
+    {
+      "id": "graph-floor-step-boundary",
+      "verdict": "pass",
+      "notes": [
+        "Floor gives 1 at 1.9 and 2 at 2; natural boundary comparison."
+      ]
+    },
+    {
+      "id": "graph-ceiling-negative-step",
+      "verdict": "pass",
+      "notes": [
+        "Ceiling of -1.2 is -1 and of -2 is -2; signs and exact boundary are correct."
+      ]
+    },
+    {
+      "id": "graph-parabola-right-translation",
+      "verdict": "pass",
+      "notes": [
+        "Right translation changes the vertex to (3,0); zero at three confirms the horizontal sign."
+      ]
+    },
+    {
+      "id": "graph-parabola-up-translation",
+      "verdict": "pass",
+      "notes": [
+        "Upward translation gives y=5 at zero; follow-up distinguishes input and output."
+      ]
+    },
+    {
+      "id": "graph-absolute-left-down",
+      "verdict": "pass",
+      "notes": [
+        "Left two and down one correctly gives abs(x+2)-1 and corner (-2,-1)."
+      ]
+    },
+    {
+      "id": "graph-reflect-odd-x",
+      "verdict": "pass",
+      "notes": [
+        "Reflecting x^3-1 over x axis gives -x^3+1 and value -7 at 2."
+      ]
+    },
+    {
+      "id": "graph-reflect-line-y",
+      "verdict": "pass",
+      "notes": [
+        "Reflection over y axis replaces x with -x; -2x+3 equals 1 at x=1."
+      ]
+    },
+    {
+      "id": "graph-vertical-stretch-corner",
+      "verdict": "pass",
+      "notes": [
+        "Vertical stretch of abs(x) by three gives 6 at -2; no horizontal scaling."
+      ]
+    },
+    {
+      "id": "graph-vertical-compression",
+      "verdict": "pass",
+      "notes": [
+        "Half-height scale of x^2 gives 8 at four; compression remains distinct from shifting."
+      ]
+    },
+    {
+      "id": "graph-negative-scale-both-effects",
+      "verdict": "pass",
+      "notes": [
+        "Negative scale is composed as reflection then positive stretch; value -2 at zero is correct."
+      ]
+    },
+    {
+      "id": "graph-translation-order",
+      "verdict": "pass",
+      "notes": [
+        "Two sequential translations yield (x-2)^2+3 and value 3 at two."
+      ]
+    },
+    {
+      "id": "graph-shift-then-stretch",
+      "verdict": "pass",
+      "notes": [
+        "Stretching the already lifted output doubles the offset as well; value at zero becomes 4."
+      ]
+    },
+    {
+      "id": "graph-compare-line-parabola",
+      "verdict": "pass",
+      "notes": [
+        "Line-parabola comparison intersects at (0,0) and (1,1); addition preserves the original."
+      ]
+    },
+    {
+      "id": "graph-parallel-lines-no-meeting",
+      "verdict": "pass",
+      "notes": [
+        "Second parallel line value -3 is correct, but current turns do not ask whether the lines meet; focus overstates intersection coverage.",
+        "Resolved metadata overstatement: focus now describes separate parallel-row addressability, which the requested turns exercise."
+      ]
+    },
+    {
+      "id": "graph-perpendicular-linear-crossing",
+      "verdict": "pass",
+      "notes": [
+        "Opposite reciprocal slopes intersect at (2,4); coordinate arithmetic is independent and correct."
+      ]
+    },
+    {
+      "id": "graph-two-parabolas-selected-edit",
+      "verdict": "pass",
+      "notes": [
+        "Turn 4 verifies only that the first curve remains unchanged. Add an oracle for the requested second-curve edit; a no-op edit currently passes.",
+        "Resolved: turn 3 independently samples first curve at (0,0) and edited second curve at (0,-2)."
+      ]
+    },
+    {
+      "id": "graph-remove-comparison-retain-original",
+      "verdict": "pass",
+      "notes": [
+        "The remaining parabola gives 3 at two, but no oracle checks that the comparison line was actually removed.",
+        "Resolved: removal turn independently asserts one remaining graph row."
+      ]
+    },
+    {
+      "id": "graph-replace-entire-graph",
+      "verdict": "pass",
+      "notes": [
+        "New abs(x) value at -4 is 4, but this numeric check alone cannot establish that old comparison rows were removed.",
+        "Resolved: start-over turn independently asserts a single graph row; following value checks the replacement."
+      ]
+    },
+    {
+      "id": "graph-named-curves-select-by-name",
+      "verdict": "pass",
+      "notes": [
+        "Names original and raised resolve independently; raised at three gives 11."
+      ]
+    },
+    {
+      "id": "graph-rename-without-changing-values",
+      "verdict": "pass",
+      "notes": [
+        "Renaming bus to train preserves 3x-2; value 10 at four is correct and previews the new name."
+      ]
+    },
+    {
+      "id": "graph-trace-then-followup-value",
+      "verdict": "pass",
+      "notes": [
+        "Query at -2 correctly returns zero despite trace at three; this checks that reading is independent of trace position."
+      ]
+    },
+    {
+      "id": "graph-secant-two-points",
+      "verdict": "pass",
+      "notes": [
+        "Secant through (1,1) and (3,9) is y=4x-3, giving 5 at two."
+      ]
+    },
+    {
+      "id": "graph-linked-slope-parameter",
+      "verdict": "pass",
+      "notes": [
+        "Scalar update a=5 propagates to f(3)=15; natural follow-up references f."
+      ]
+    },
+    {
+      "id": "graph-linked-intercept-parameter",
+      "verdict": "pass",
+      "notes": [
+        "Changing b to -1 changes only line intercept; f(0)=-1 is correct."
+      ]
+    },
+    {
+      "id": "graph-shared-coefficient-two-curves",
+      "verdict": "pass",
+      "notes": [
+        "Shared scalar a=3 makes g(2)=12; both functions remain defined in a single scene."
+      ]
+    },
+    {
+      "id": "graph-function-composition",
+      "verdict": "pass",
+      "notes": [
+        "Composition yields 7 at two before edit and 11 afterward; dependent row follows f."
+      ]
+    },
+    {
+      "id": "graph-function-input-shift",
+      "verdict": "pass",
+      "notes": [
+        "Inside-shift grouping is explicit; f(x-2) gives 0 at two and abs(-2)=2 after f changes."
+      ]
+    },
+    {
+      "id": "graph-forward-reference-scene",
+      "verdict": "pass",
+      "notes": [
+        "Forward-defined a=3 yields f(2)=12; changing a to 0.5 yields 2. Dependencies remain complete."
+      ]
+    },
+    {
+      "id": "graph-named-function-redefinition",
+      "verdict": "pass",
+      "notes": [
+        "Redefined f(x)=x-1 makes the dependent 2f(x) equal 4 at three."
+      ]
+    },
+    {
+      "id": "graph-trig-amplitude-parameter",
+      "verdict": "pass",
+      "notes": [
+        "Amplitude update to four gives cosine height 4 at zero; scalar meaning is clear."
+      ]
+    },
+    {
+      "id": "graph-exponential-base-parameter",
+      "verdict": "pass",
+      "notes": [
+        "Changing exponential base from two to three at the same x=3 gives 8 then 27."
+      ]
+    },
+    {
+      "id": "graph-distance-function-two-inputs",
+      "verdict": "pass",
+      "notes": [
+        "Two-input h(u,v)=u^2+v^2 gives 13 then 10 when the second argument changes from two to one."
+      ]
+    },
+    {
+      "id": "graph-nested-function-chain",
+      "verdict": "pass",
+      "notes": [
+        "Nested chain after f(x)=x-2 gives g(5)+3=9; all references resolve."
+      ]
+    },
+    {
+      "id": "graph-scalar-dependency-chain",
+      "verdict": "pass",
+      "notes": [
+        "Scalar chain a=4, b=7 produces 14 at x=2."
+      ]
+    },
+    {
+      "id": "graph-function-and-independent-curve",
+      "verdict": "pass",
+      "notes": [
+        "Independent straight-line value remains 3, but add an oracle for the linked parabola update to confirm that changing a actually happened.",
+        "Resolved: scalar-change turn samples linked curve at (2,16) and independent line at (2,3)."
+      ]
+    },
+    {
+      "id": "graph-name-preserved-after-edit",
+      "verdict": "pass",
+      "notes": [
+        "Edited named curve bounce evaluates to 5 at two; both naming and formula edit are exercised."
+      ]
+    },
+    {
+      "id": "graph-implicit-circle-boundary",
+      "verdict": "pass",
+      "notes": [
+        "Point (3,4) lies on radius-five circle and origin does not; boundary and interior are correctly separated."
+      ]
+    },
+    {
+      "id": "graph-shifted-circle-center",
+      "verdict": "pass",
+      "notes": [
+        "Shifted center (2,-1) and radius three give boundary point (5,-1); the center itself is not on the circumference."
+      ]
+    },
+    {
+      "id": "graph-ellipse-axis-endpoints",
+      "verdict": "pass",
+      "notes": [
+        "Ellipse endpoints (3,0) and (0,2) satisfy the unequal-axis equation."
+      ]
+    },
+    {
+      "id": "graph-hyperbola-two-branches",
+      "verdict": "pass",
+      "notes": [
+        "Both hyperbola vertices satisfy x^2-y^2=1; origin fails. The two branches are retained."
+      ]
+    },
+    {
+      "id": "graph-vertical-line-not-horizontal",
+      "verdict": "pass",
+      "notes": [
+        "Vertical x=4 relation is queried using y, yielding (4,7) and (4,-2)."
+      ]
+    },
+    {
+      "id": "graph-horizontal-relation-height",
+      "verdict": "pass",
+      "notes": [
+        "Constant y=-3 remains the same at both positive and negative inputs."
+      ]
+    },
+    {
+      "id": "graph-strict-linear-boundary",
+      "verdict": "pass",
+      "notes": [
+        "Strict y<2x+1 includes (0,0) and excludes (0,1); boundary semantics are correct."
+      ]
+    },
+    {
+      "id": "graph-inclusive-linear-boundary",
+      "verdict": "pass",
+      "notes": [
+        "Closed y<=2x+1 includes (0,1) and excludes (0,2); distinct from strict case."
+      ]
+    },
+    {
+      "id": "graph-above-parabola-region",
+      "verdict": "pass",
+      "notes": [
+        "At x=2, y=5 lies above x^2 while y=3 does not; region direction is correct."
+      ]
+    },
+    {
+      "id": "graph-filled-disk",
+      "verdict": "pass",
+      "notes": [
+        "Closed radius-four disk includes origin and (4,0), excludes (5,0)."
+      ]
+    },
+    {
+      "id": "graph-outside-circle-strict",
+      "verdict": "pass",
+      "notes": [
+        "Strict exterior of radius-three circle includes (4,0) and excludes boundary (3,0)."
+      ]
+    },
+    {
+      "id": "graph-vertical-half-plane",
+      "verdict": "pass",
+      "notes": [
+        "Vertical closed half-plane includes x=-2 and excludes x=-3, independently of y."
+      ]
+    },
+    {
+      "id": "graph-sideways-parabola",
+      "verdict": "pass",
+      "notes": [
+        "Sideways x=y^2 gives (4,2) and (4,-2); query preserves both branches."
+      ]
+    },
+    {
+      "id": "graph-conic-edit-preserves-relation",
+      "verdict": "pass",
+      "notes": [
+        "Changing radius from two to five requires right side 25; (3,4) satisfies the edited circle."
+      ]
+    },
+    {
+      "id": "graph-multiple-regions-independent",
+      "verdict": "pass",
+      "notes": [
+        "Point (2,3) satisfies both y>=x and y<=4, while (2,5) fails the second; region references are clear."
+      ]
+    },
+    {
+      "id": "graph-parametric-ellipse-landmarks",
+      "verdict": "pass",
+      "notes": [
+        "Ellipse start (3,0) is fully checked. The pi/2 check asserts only y=2; add an independent near-zero x check to verify the complete point.",
+        "Resolved: turn 3 independently checks complete point (0,2) at pi/2 with numeric tolerance."
+      ]
+    },
+    {
+      "id": "graph-parametric-linear-path",
+      "verdict": "pass",
+      "notes": [
+        "At t=2, (t+1,2t-3)=(3,1); later domain restriction is a supported operation needing visual review."
+      ]
+    },
+    {
+      "id": "graph-parametric-projectile",
+      "verdict": "pass",
+      "notes": [
+        "Projectile at t=3 is (6,9), halfway through the explicit zero-to-six parameter interval."
+      ]
+    },
+    {
+      "id": "graph-parametric-parabola-direction",
+      "verdict": "pass",
+      "notes": [
+        "Parameter is not assumed equal to x; t=+-2 gives x=+-4 and y=4."
+      ]
+    },
+    {
+      "id": "graph-polar-constant-circle",
+      "verdict": "pass",
+      "notes": [
+        "Constant polar radius three yields (3,0) and x=-3 at pi; tiny floating y is intentionally not asserted as exactly zero."
+      ]
+    },
+    {
+      "id": "graph-polar-cosine-circle",
+      "verdict": "pass",
+      "notes": [
+        "Turn 3 repeats exactly the same zero-angle query as turn 2, offering no new landmark. Replace it with pi/2 or pi to test this nonconstant polar radius.",
+        "Resolved: third turn now asks pi/2 and checks the complete origin crossing, replacing the duplicate zero-angle query."
+      ]
+    },
+    {
+      "id": "graph-polar-cardioid-landmarks",
+      "verdict": "pass",
+      "notes": [
+        "Cardioid maximum at zero is (4,0), cusp at pi is origin; independent landmarks are correct."
+      ]
+    },
+    {
+      "id": "graph-polar-half-circle-domain",
+      "verdict": "pass",
+      "notes": [
+        "Upper-half angular domain zero through pi is supported; endpoint x=-2 is correct with floating ordinate tolerance needed visually."
+      ]
+    },
+    {
+      "id": "graph-parametric-two-paths",
+      "verdict": "pass",
+      "notes": [
+        "Two parameterized paths remain addressable; second at two is (2,-4), first is (2,4)."
+      ]
+    },
+    {
+      "id": "graph-polar-petal-domain",
+      "verdict": "pass",
+      "notes": [
+        "Rose starts at (2,0); domain restriction retains the start. Shape/domain correctness still needs actual rendered inspection."
+      ]
+    },
+    {
+      "id": "graph-pan-not-shift",
+      "verdict": "pass",
+      "notes": [
+        "Student explicitly distinguishes camera motion from changing the curve; value at zero stays 2. Camera movement needs visual evidence."
+      ]
+    },
+    {
+      "id": "graph-zoom-not-stretch",
+      "verdict": "pass",
+      "notes": [
+        "Zoom request changes the camera, with unchanged line value 6 at two; no stretch is implied."
+      ]
+    },
+    {
+      "id": "graph-large-window-preserves-function",
+      "verdict": "pass",
+      "notes": [
+        "Large finite window is within supported ranges; x=50 gives 2500."
+      ]
+    },
+    {
+      "id": "graph-small-feature-window",
+      "verdict": "pass",
+      "notes": [
+        "One-hundredth offset is correctly 0.01; viewport request does not edit formula."
+      ]
+    },
+    {
+      "id": "graph-reset-view-not-graph",
+      "verdict": "pass",
+      "notes": [
+        "Camera reset after pan preserves line intercept -7; camera restoration is a separate visual check."
+      ]
+    },
+    {
+      "id": "graph-fit-high-intercept",
+      "verdict": "pass",
+      "notes": [
+        "Fit request for a high-intercept parabola is supported; bottom height remains 100."
+      ]
+    },
+    {
+      "id": "graph-viewport-then-translation",
+      "verdict": "pass",
+      "notes": [
+        "Camera pan followed by curve translation are clearly distinguished; final value at zero is 4."
+      ]
+    },
+    {
+      "id": "graph-comparison-shared-window",
+      "verdict": "pass",
+      "notes": [
+        "Shared viewport changes through graph two while straight line still gives 6 at three."
+      ]
+    },
+    {
+      "id": "graph-zoom-out-then-trace",
+      "verdict": "pass",
+      "notes": [
+        "Zoom and trace are distinct requested changes; cubic height at -2 is -8."
+      ]
+    },
+    {
+      "id": "graph-piecewise-sign-branches",
+      "verdict": "pass",
+      "notes": [
+        "Piecewise negative branch gives 3 at -3 and quadratic branch gives 9 at 3."
+      ]
+    },
+    {
+      "id": "graph-piecewise-boundary-choice",
+      "verdict": "pass",
+      "notes": [
+        "Boundary belongs to the x>=2 branch, so value 5 at two is correct; value 2 at one uses the other branch."
+      ]
+    },
+    {
+      "id": "graph-restricted-square-root",
+      "verdict": "pass",
+      "notes": [
+        "Square-root finite domain includes both endpoints; values 3 at nine and 0 at zero are correct."
+      ]
+    },
+    {
+      "id": "graph-restricted-line-segment",
+      "verdict": "pass",
+      "notes": [
+        "Restricted line includes endpoints -1 and three, giving -1 and 7."
+      ]
+    },
+    {
+      "id": "graph-max-function-floor",
+      "verdict": "pass",
+      "notes": [
+        "Maximum clamp gives 2 below the threshold and 5 above it."
+      ]
+    },
+    {
+      "id": "graph-min-function-cap",
+      "verdict": "pass",
+      "notes": [
+        "Minimum cap gives 1 at one and 4 at three."
+      ]
+    },
+    {
+      "id": "graph-rational-hole-values",
+      "verdict": "pass",
+      "notes": [
+        "Grouping explicitly identifies rational numerator and denominator; values 1 at zero and 3 at two are correct. No undefined-hole query is claimed."
+      ]
+    },
+    {
+      "id": "graph-factored-polynomial-crossings",
+      "verdict": "pass",
+      "notes": [
+        "Updated quantity wording groups the factors correctly; roots -1, two and zero all satisfy x(x-2)(x+1)=0."
+      ]
+    },
+    {
+      "id": "graph-average-rate-quadratic",
+      "verdict": "pass",
+      "notes": [
+        "Average rate over one to three is (9-1)/2=4; start height is 1."
+      ]
+    },
+    {
+      "id": "graph-table-then-specific-point",
+      "verdict": "pass",
+      "notes": [
+        "Default table zero through five yields -1 through nine; specific x=12 gives 23."
+      ]
+    },
+    {
+      "id": "graph-turning-point-vs-intercept",
+      "verdict": "pass",
+      "notes": [
+        "Vertex of x^2-4x+3 is (2,-1) and roots are one and three."
+      ]
+    },
+    {
+      "id": "graph-read-original-after-three-curves",
+      "verdict": "pass",
+      "notes": [
+        "Ordinal first graph remains x^2 after two comparisons; value nine at three is correct."
+      ]
+    },
+    {
+      "id": "graph-edit-sign-after-misstatement",
+      "verdict": "pass",
+      "notes": [
+        "Natural sign correction changes only constant term; new intercept -4 confirms the edit."
+      ]
+    },
+    {
+      "id": "graph-two-actions-one-request",
+      "verdict": "pass",
+      "notes": [
+        "Right-two shift yields (x-2)^2-1; trace at three has height zero. Actual trace position still needs visual review."
+      ]
+    }
+  ],
+  "sourceSha256": "f5666d66c19622c7c1e7791285a432ac3b296ab367df76b802cdd15268492ecb",
+  "authorAgent": "student_graphs"
+}

@@ -1,0 +1,332 @@
+{
+  "split": "test-v4",
+  "mode": "parser",
+  "datasetSHA256": "ea8a51a0fd1937ae7e1efcc74775cfe8b4a096ad6d1131c3ef46babc24513f48",
+  "createdAt": "2026-10-10T01:53:06.431Z",
+  "total": 24,
+  "scored": 24,
+  "passed": 21,
+  "unavailable": 0,
+  "accuracy": 0.875,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "clarification": {
+      "passed": 6,
+      "scored": 8
+    },
+    "editing": {
+      "passed": 1,
+      "scored": 1
+    },
+    "navigation": {
+      "passed": 1,
+      "scored": 1
+    },
+    "statistics": {
+      "passed": 4,
+      "scored": 5
+    },
+    "diagram": {
+      "passed": 2,
+      "scored": 2
+    },
+    "reading": {
+      "passed": 1,
+      "scored": 1
+    },
+    "safety": {
+      "passed": 6,
+      "scored": 6
+    }
+  },
+  "results": [
+    {
+      "id": "v4-001",
+      "category": "clarification",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "What would you like to change? Name the term to replace or the operation to apply."
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v4-002",
+      "category": "clarification",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which term should I replace? Say replace, the exact term, and its new value."
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v4-003",
+      "category": "clarification",
+      "pass": false,
+      "reason": "Expected clarification, received unsupported",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “the”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 2
+    },
+    {
+      "id": "v4-004",
+      "category": "clarification",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which term is wrong, and what should replace it? Say replace, the exact term, and its new value."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-005",
+      "category": "clarification",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which number or expression should I use? Say the operation again with its exact value."
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v4-006",
+      "category": "clarification",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Do you want sample or population standard deviation? Say, for example, sample standard deviation of 1, 4, 7."
+      },
+      "latencyMs": 1
+    },
+    {
+      "id": "v4-007",
+      "category": "clarification",
+      "pass": false,
+      "reason": "Expected clarification, received unsupported",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “make”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-008",
+      "category": "clarification",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "Which operation do you mean? For example, say “subtract three from both sides.”"
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-009",
+      "category": "editing",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "would you please write negative zero point zero six times x equals one point two?",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-010",
+      "category": "navigation",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "can you read first point please?",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-011",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "would you inspect these unusual values?",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-012",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "which observations seem extremely far away?",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-013",
+      "category": "diagram",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "change Begin to Please",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-014",
+      "category": "diagram",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "would you change That value to Validate?",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-015",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "can you find population variance of 1, 3, 5 please?",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-016",
+      "category": "statistics",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "will you find the minimum?",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-017",
+      "category": "reading",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "would you read left side?",
+        "message": ""
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-018",
+      "category": "statistics",
+      "pass": false,
+      "reason": "Expected command, received unsupported",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “identify”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-019",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "Use a nonzero finite number so this operation preserves the equation."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-020",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “delete”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-021",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “send”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-022",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "I don't recognize “ignore”. Use single-letter variables, numbers, explicit math phrases, or sqrt(...), sin(...), cos(...), log(...), ln(...). Write products such as x*y explicitly."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-023",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "Make the function's argument explicit: use log(...) or say “log open parenthesis ... close parenthesis”."
+      },
+      "latencyMs": 0
+    },
+    {
+      "id": "v4-024",
+      "category": "safety",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "unsupported",
+        "command": "",
+        "message": "Say the digits after point, for example three point zero five."
+      },
+      "latencyMs": 0
+    }
+  ]
+}

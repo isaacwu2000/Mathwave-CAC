@@ -1,0 +1,59 @@
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { createHash, randomUUID } from 'node:crypto';
+import { fileURLToPath } from 'node:url';
+import { graphInterpretationInstructions, graphBuildOutputInstructions, COMMAND_PROFILES } from '../../Web/src/modules/ai/index.ts';
+import { graphStreamOutput } from '../../Web/src/modules/ai/services/graph-stream.ts';
+import { constructionLanguageFor, graphSceneLanguageFor, mathContext, previewGraphCommands, toolCatalog } from '../../Web/src/modules/commands/index.ts';
+import { createProblemLibrary, currentProblem, historyContext } from '../../Web/src/modules/problems/index.ts';
+import { constructionRenderData, numberedGraphs } from '../../Web/src/modules/visuals/index.ts';
+if (process.env.RUN_LIVE_CHECK !== 'true') throw new Error('Set RUN_LIVE_CHECK=true for two paid graph requests.');
+const root = fileURLToPath(new URL('../../', import.meta.url));
+process.loadEnvFile(root + 'Web/.env');
+const directory = root + 'Evals/evaluations/graph-catalog-' + randomUUID();
+await mkdir(directory, { recursive: true });
+const sources = ['Evals/scripts/evaluate-graph-catalog.ts', 'Web/src/modules/ai/runtime/graph-build.ts', 'Web/src/modules/ai/config/interpretation.ts', 'Web/src/modules/commands/config/tool-catalog.ts', 'Web/src/modules/commands/config/construction-instructions.ts', 'Web/src/modules/commands/config/graph-scene-instructions.ts'];
+const sourceHashes: Record<string, string> = {};
+for (const [i, source] of sources.entries()) {
+  const text = await readFile(root + source, 'utf8');
+  sourceHashes[source] = createHash('sha256').update(text).digest('hex');
+  await writeFile(directory + `/source-${i}.txt`, text);
+}
+await writeFile(directory + '/tool-contracts.json', JSON.stringify(toolCatalog, null, 2));
+const samples: object[] = [];
+for (const [scenario, text] of [
+  ['two-curves', 'Plot y=x squared and y=x plus one. Draw the first curve before adding the second.'],
+  ['segment-length', 'Draw segment AB from A at zero, zero to B at three, four and show its length.'],
+]) {
+  const book = createProblemLibrary();
+  const before = currentProblem(book);
+  const instructions = graphInterpretationInstructions + constructionLanguageFor(text, before.state) + graphSceneLanguageFor(text, before.state) + graphBuildOutputInstructions;
+  const request = { model: COMMAND_PROFILES['luna-default'].model, store: false, stream: true, max_output_tokens: 800, instructions };
+  const started = performance.now();
+  const previews: object[] = [], commands: string[] = [], usage: unknown[] = [];
+  let after = before, passed = false, error: string | undefined;
+  try {
+    const signal = AbortSignal.timeout(15000);
+    const response = await fetch('https://api.openai.com/v1/responses', {
+      method: 'POST', signal,
+      headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...request, input: JSON.stringify({ request: text, workspace: before.state, mathContext: mathContext(before.state), history: historyContext(book), clarification: null }) }),
+    });
+    for await (const event of graphStreamOutput(response, signal, item => usage.push(item))) {
+      if (!('command' in event)) throw new Error(event.message);
+      commands.push(event.command);
+      const preview = previewGraphCommands(before.state, commands);
+      after = { ...before, state: preview.state };
+      previews.push({ elapsedMs: performance.now() - started, commands: [...commands], after });
+    }
+    if (scenario === 'two-curves') {
+      const curves = numberedGraphs(after.state);
+      passed = curves.length === 2 && previews.length >= 2;
+    } else {
+      const construction = after.state.construction;
+      passed = !!construction && constructionRenderData(construction).result.labels?.some(label => label.text === '5') === true;
+    }
+  } catch (failure) { error = String(failure); }
+  samples.push({ scenario, variant: 'generated', text, attempted: true, passed, error, before, after, previews, usage, request, reasoning: 'provider-default', elapsedMs: performance.now() - started });
+  await writeFile(directory + '/report.json', JSON.stringify({ scope: 'Two live provider requests using production graph prompt, stream parser and preview executor. No HTTP app route or persistence. Visual replay is separate.', sourceHashes, samples }, null, 2));
+  console.log(JSON.stringify({ directory, scenario, passed, error, previews: previews.length }));
+}

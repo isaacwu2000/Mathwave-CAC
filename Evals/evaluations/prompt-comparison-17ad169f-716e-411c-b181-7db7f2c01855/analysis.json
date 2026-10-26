@@ -1,0 +1,224 @@
+{
+  "summary": {
+    "baseline": {
+      "turns": 20,
+      "strictPasses": 15,
+      "medianAllTurnMs": 2795.366666999995,
+      "providerInputTokens": 158717,
+      "providerOutputTokens": 3452,
+      "cachedInputTokens": 119567,
+      "modelCalls": 22,
+      "midpointMedianMs": 2843.411791499997
+    },
+    "short": {
+      "turns": 20,
+      "strictPasses": 20,
+      "medianAllTurnMs": 2144.893542,
+      "providerInputTokens": 60072,
+      "providerOutputTokens": 2396,
+      "cachedInputTokens": 45480,
+      "modelCalls": 20,
+      "midpointMedianMs": 2151.267396
+    }
+  },
+  "promptCharacters": {
+    "baseline": 31079,
+    "short": 10781
+  },
+  "characterReductionPercent": 65.31098169181763,
+  "latencyReductionPercent": 23.269688827551448,
+  "pairedMedianDifferenceMs": -482.98564600000464,
+  "shortFasterPairs": 17,
+  "pairs": [
+    {
+      "case": "equation",
+      "repetition": 0,
+      "baselineMs": 3496.221334,
+      "shortMs": 3475.7986250000004,
+      "differenceMs": -20.422708999999486
+    },
+    {
+      "case": "equation",
+      "repetition": 1,
+      "baselineMs": 1986.8875419999968,
+      "shortMs": 1857.9910420000015,
+      "differenceMs": -128.89649999999529
+    },
+    {
+      "case": "both-sides",
+      "repetition": 0,
+      "baselineMs": 2891.456915999999,
+      "shortMs": 2070.6958749999994,
+      "differenceMs": -820.7610409999998
+    },
+    {
+      "case": "both-sides",
+      "repetition": 1,
+      "baselineMs": 2143.992624999999,
+      "shortMs": 1562.0200419999965,
+      "differenceMs": -581.9725830000025
+    },
+    {
+      "case": "two-steps",
+      "repetition": 0,
+      "baselineMs": 3484.8336249999993,
+      "shortMs": 2144.893542,
+      "differenceMs": -1339.9400829999995
+    },
+    {
+      "case": "two-steps",
+      "repetition": 1,
+      "baselineMs": 5094.885750000001,
+      "shortMs": 2291.943207999997,
+      "differenceMs": -2802.9425420000043
+    },
+    {
+      "case": "clarification",
+      "repetition": 0,
+      "baselineMs": 1913.2580000000016,
+      "shortMs": 2246.7636669999993,
+      "differenceMs": 333.50566699999763
+    },
+    {
+      "case": "clarification",
+      "repetition": 1,
+      "baselineMs": 2425.750125000006,
+      "shortMs": 2322.930250000005,
+      "differenceMs": -102.81987500000105
+    },
+    {
+      "case": "explanation",
+      "repetition": 0,
+      "baselineMs": 3057.3627500000002,
+      "shortMs": 3401.6471249999995,
+      "differenceMs": 344.2843749999993
+    },
+    {
+      "case": "explanation",
+      "repetition": 1,
+      "baselineMs": 3544.8181669999904,
+      "shortMs": 2554.685500000007,
+      "differenceMs": -990.1326669999835
+    },
+    {
+      "case": "coefficient",
+      "repetition": 0,
+      "baselineMs": 2751.0503750000025,
+      "shortMs": 2443.3244159999995,
+      "differenceMs": -307.72595900000306
+    },
+    {
+      "case": "coefficient",
+      "repetition": 1,
+      "baselineMs": 2774.0734999999986,
+      "shortMs": 1596.1936669999996,
+      "differenceMs": -1177.879832999999
+    },
+    {
+      "case": "revise-step",
+      "repetition": 0,
+      "baselineMs": 1959.110415999996,
+      "shortMs": 1967.994375000002,
+      "differenceMs": 8.883959000006143
+    },
+    {
+      "case": "revise-step",
+      "repetition": 1,
+      "baselineMs": 2607.282167000012,
+      "shortMs": 2157.6412500000006,
+      "differenceMs": -449.64091700001154
+    },
+    {
+      "case": "geometry",
+      "repetition": 0,
+      "baselineMs": 2586.337541999994,
+      "shortMs": 2070.007166999996,
+      "differenceMs": -516.3303749999977
+    },
+    {
+      "case": "geometry",
+      "repetition": 1,
+      "baselineMs": 6291.644291999997,
+      "shortMs": 1759.4263749999955,
+      "differenceMs": -4532.217917000002
+    },
+    {
+      "case": "statistics",
+      "repetition": 0,
+      "baselineMs": 4565.896667000001,
+      "shortMs": 1688.9753750000018,
+      "differenceMs": -2876.921291999999
+    },
+    {
+      "case": "statistics",
+      "repetition": 1,
+      "baselineMs": 3020.3056249999936,
+      "shortMs": 1353.981083999999,
+      "differenceMs": -1666.3245409999945
+    },
+    {
+      "case": "linked-graph",
+      "repetition": 0,
+      "baselineMs": 2795.366666999995,
+      "shortMs": 2388.3369999999995,
+      "differenceMs": -407.02966699999524
+    },
+    {
+      "case": "linked-graph",
+      "repetition": 1,
+      "baselineMs": 2958.8233749999927,
+      "shortMs": 2738.948875000002,
+      "differenceMs": -219.8744999999908
+    }
+  ],
+  "strictFailureAudit": [
+    {
+      "variant": "baseline",
+      "case": "equation",
+      "repetition": 0,
+      "classification": "Harmless no-op acknowledgment; requested equation was already present. Strict command-status check failed."
+    },
+    {
+      "variant": "baseline",
+      "case": "equation",
+      "repetition": 1,
+      "classification": "Harmless no-op acknowledgment; requested equation was already present. Strict command-status check failed."
+    },
+    {
+      "variant": "baseline",
+      "case": "geometry",
+      "repetition": 1,
+      "classification": "Correct numerical reply with unchanged work. Strict scorer rejected reply status. Its revision field was empty; this was not engine-executed as a final command."
+    },
+    {
+      "variant": "baseline",
+      "case": "geometry",
+      "repetition": 0,
+      "classification": "Substantive response failure: promised to read area but only retained an unapplied suggested query; no area returned."
+    },
+    {
+      "variant": "baseline",
+      "case": "statistics",
+      "repetition": 1,
+      "classification": "Substantive response failure: promised to calculate mean but only retained an unapplied suggested query; no mean returned."
+    }
+  ],
+  "auditedUsableResponses": {
+    "baseline": 18,
+    "short": 20,
+    "perVariant": 20
+  },
+  "limitations": [
+    "Ten synthetic cases repeated twice on one configured model. No production or voice latency measured.",
+    "Two instruction sets differ in wording and policy as well as length; timing cannot be attributed to character count alone.",
+    "Default provider caching retained. Token usage includes cached tokens; no cold-cache guarantee.",
+    "No corrections/acceptance dialogue, ambiguous repeated coefficients, missing-number requests, streamed builds, or construction cases.",
+    "Explanation grade checks response type and expression, not teaching quality or every possible graph/presentation mutation.",
+    "Geometry/statistics explanation replies can pass numeric-text checks without requiring an engine query; inspect query provenance before any rollout.",
+    "Repetitions do not make twenty independent tasks. No stable p95 or general accuracy improvement established.",
+    "Source snapshots preserve benchmark/scorer/candidate exactly as run; current scripts subsequently received type-only and public-import cleanup.",
+    "Production prompts remain unchanged."
+  ],
+  "recommendation": "Promising candidate for a context/correction/graph regression pilot. Keep intent policy and API signatures with the interpreter, leave mathematical execution, domain validation and saving in the deterministic runner. Remove superseded English command grammar rather than relocating duplicate instructions.",
+  "percentileMethod": "Nearest rank, consistent with the repository journey evaluations; midpoint medians retained separately."
+}

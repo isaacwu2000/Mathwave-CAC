@@ -1,0 +1,63 @@
+{
+  "split": "test-v16",
+  "mode": "endpoint",
+  "datasetSHA256": "1e4416d2440fc77f40d887be566adbf94b149b3eb227f68bddfd68b24382478d",
+  "createdAt": "2026-10-14T15:24:07.328Z",
+  "total": 4,
+  "scored": 4,
+  "passed": 3,
+  "unavailable": 0,
+  "accuracy": 0.75,
+  "scope": "Text command behavior only; no microphone or voice quality claims.",
+  "categories": {
+    "rate-triangle": {
+      "passed": 3,
+      "scored": 4
+    }
+  },
+  "results": [
+    {
+      "id": "rate-triangle-1",
+      "category": "rate-triangle",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "average rate of change of graph 1 from 1 to 3",
+        "message": ""
+      },
+      "latencyMs": 3694
+    },
+    {
+      "id": "rate-triangle-2",
+      "category": "rate-triangle",
+      "pass": false,
+      "reason": "Endpoint rejected context or interpretation (HTTP 422)",
+      "latencyMs": 2483
+    },
+    {
+      "id": "rate-triangle-3",
+      "category": "rate-triangle",
+      "pass": true,
+      "reason": "Correct behavior",
+      "prediction": {
+        "status": "command",
+        "command": "angle c",
+        "message": ""
+      },
+      "latencyMs": 3602
+    },
+    {
+      "id": "rate-triangle-4",
+      "category": "rate-triangle",
+      "pass": true,
+      "reason": "Correct abstention",
+      "prediction": {
+        "status": "clarification",
+        "command": "",
+        "message": "What are the triangle’s three side lengths? Base and height alone aren’t enough to determine whether it is acute or obtuse."
+      },
+      "latencyMs": 2526
+    }
+  ]
+}

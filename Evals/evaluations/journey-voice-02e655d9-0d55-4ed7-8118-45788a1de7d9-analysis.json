@@ -1,0 +1,822 @@
+{
+  "sourceReport": "journey-voice-02e655d9-0d55-4ed7-8118-45788a1de7d9.json",
+  "sourceSHA256": "e745d98b078773c2b79ab90025b527842520470142ba8179a1c9cefc01e1e717",
+  "analyzedAt": "2026-10-16T02:22:09.177Z",
+  "intervalMethod": "Two-sided 80% Wilson score; per scenario. Pooled interval omitted because scenarios share trials.",
+  "summary": {
+    "successInterval80": null,
+    "attempted": 15,
+    "passed": 14,
+    "failed": 1,
+    "successMs": {
+      "p50": 6748.800000000745,
+      "p95": 13583.39999999851
+    },
+    "failureMs": {
+      "p50": 11492.5,
+      "p95": 11492.5
+    },
+    "stages": {
+      "live-server:load": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 69,
+        "p95": 262
+      },
+      "live-server:live_provider_headers": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 216,
+        "p95": 714
+      },
+      "live-server:total": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 400,
+        "p95": 978
+      },
+      "problem-server:receipt": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 27,
+        "p95": 96
+      },
+      "problem-server:load": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 31,
+        "p95": 108
+      },
+      "problem-server:model_1": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 3006,
+        "p95": 7070
+      },
+      "problem-server:preview_1": {
+        "observed": 13,
+        "missing": 2,
+        "p50": 2,
+        "p95": 14
+      },
+      "problem-server:model_2": {
+        "observed": 13,
+        "missing": 2,
+        "p50": 1839,
+        "p95": 2707
+      },
+      "problem-server:validate_2": {
+        "observed": 13,
+        "missing": 2,
+        "p50": 1,
+        "p95": 2
+      },
+      "problem-server:interpret": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 4732,
+        "p95": 9778
+      },
+      "problem-server:execute": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 4732,
+        "p95": 9778
+      },
+      "problem-server:commit": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 81,
+        "p95": 260
+      },
+      "problem-server:total": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 4835,
+        "p95": 10129
+      },
+      "input-detected": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 0,
+        "p95": 0
+      },
+      "connection-start": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 0.19999999925494194,
+        "p95": 0.9000000022351742
+      },
+      "connection-ready": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 1089.9000000022352,
+        "p95": 1551.8999999985099
+      },
+      "last-input-signal": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 2480.10000000149,
+        "p95": 2583.39999999851
+      },
+      "delegated": {
+        "observed": 12,
+        "missing": 3,
+        "p50": 4698.39999999851,
+        "p95": 6018.29999999702
+      },
+      "voice-command": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 5091.599999997765,
+        "p95": 8927.39999999851
+      },
+      "save-confirmed": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 9766.79999999702,
+        "p95": 16160.199999999255
+      },
+      "workspace-result": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 9766.79999999702,
+        "p95": 16160.199999999255
+      },
+      "result-returned": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 9766.89999999851,
+        "p95": 16160.29999999702
+      },
+      "commentary-sent": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 9766.89999999851,
+        "p95": 16160.39999999851
+      },
+      "display-commit": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 9773.89999999851,
+        "p95": 16166.79999999702
+      },
+      "next-audio-observed": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 10047.60000000149,
+        "p95": 16905.699999999255
+      },
+      "connection": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 1088.8999999985099,
+        "p95": 1551.800000000745
+      },
+      "webrtc-offer": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 9.099999997764826,
+        "p95": 14.099999997764826
+      },
+      "ice-gather": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 126.5,
+        "p95": 130
+      },
+      "live-token-request": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 463,
+        "p95": 992.6999999992549
+      },
+      "prior-save-wait": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 0,
+        "p95": 0.10000000149011612
+      },
+      "save-queue": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 0,
+        "p95": 0.09999999776482582
+      },
+      "request-body": {
+        "observed": 15,
+        "missing": 0,
+        "p50": 4869.60000000149,
+        "p95": 10141.800000000745
+      },
+      "transcript-fallback": {
+        "observed": 3,
+        "missing": 12,
+        "p50": 8611.199999999255,
+        "p95": 8927.29999999702
+      },
+      "problem-server:validate_1": {
+        "observed": 2,
+        "missing": 13,
+        "p50": 0,
+        "p95": 1
+      }
+    }
+  },
+  "groups": {
+    "cold-equation": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0.7527428728793252,
+        "upper": 1
+      },
+      "attempted": 5,
+      "passed": 5,
+      "failed": 0,
+      "successMs": {
+        "p50": 6748.800000000745,
+        "p95": 8271.099999997765
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {
+        "live-server:load": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 47,
+          "p95": 111
+        },
+        "live-server:live_provider_headers": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 216,
+          "p95": 714
+        },
+        "live-server:total": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 400,
+          "p95": 789
+        },
+        "problem-server:receipt": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 24,
+          "p95": 42
+        },
+        "problem-server:load": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 30,
+          "p95": 84
+        },
+        "problem-server:model_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 2003,
+          "p95": 3741
+        },
+        "problem-server:preview_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1,
+          "p95": 14
+        },
+        "problem-server:model_2": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1698,
+          "p95": 2117
+        },
+        "problem-server:validate_2": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1,
+          "p95": 2
+        },
+        "problem-server:interpret": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 3705,
+          "p95": 5862
+        },
+        "problem-server:execute": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 3706,
+          "p95": 5863
+        },
+        "problem-server:commit": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 67,
+          "p95": 93
+        },
+        "problem-server:total": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 3828,
+          "p95": 6005
+        },
+        "input-detected": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0,
+          "p95": 0
+        },
+        "connection-start": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0.6999999992549419,
+          "p95": 0.9000000022351742
+        },
+        "connection-ready": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1089.9000000022352,
+          "p95": 1322.699999999255
+        },
+        "last-input-signal": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 2518.5,
+          "p95": 2560.10000000149
+        },
+        "delegated": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 5091,
+          "p95": 5417
+        },
+        "voice-command": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 5091.599999997765,
+          "p95": 5417.60000000149
+        },
+        "save-confirmed": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 9276.5,
+          "p95": 10722.89999999851
+        },
+        "workspace-result": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 9276.60000000149,
+          "p95": 10723
+        },
+        "result-returned": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 9277,
+          "p95": 10723.300000000745
+        },
+        "commentary-sent": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 9277.5,
+          "p95": 10724
+        },
+        "display-commit": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 9308.900000002235,
+          "p95": 10751.199999999255
+        },
+        "next-audio-observed": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 10047.60000000149,
+          "p95": 11610.199999999255
+        },
+        "connection": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1088.8999999985099,
+          "p95": 1321.699999999255
+        },
+        "webrtc-offer": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 9.099999997764826,
+          "p95": 14.099999997764826
+        },
+        "ice-gather": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 129,
+          "p95": 130
+        },
+        "live-token-request": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 463,
+          "p95": 812.5
+        },
+        "prior-save-wait": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0,
+          "p95": 0
+        },
+        "save-queue": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0,
+          "p95": 0.09999999776482582
+        },
+        "request-body": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 3857.2999999970198,
+          "p95": 6022.39999999851
+        }
+      }
+    },
+    "warm-step": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0.7527428728793252,
+        "upper": 1
+      },
+      "attempted": 5,
+      "passed": 5,
+      "failed": 0,
+      "successMs": {
+        "p50": 5931.300000000745,
+        "p95": 7940.10000000149
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {
+        "problem-server:receipt": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 23,
+          "p95": 43
+        },
+        "problem-server:load": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 31,
+          "p95": 71
+        },
+        "problem-server:model_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 2144,
+          "p95": 4754
+        },
+        "problem-server:preview_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 2,
+          "p95": 3
+        },
+        "problem-server:model_2": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 2053,
+          "p95": 2692
+        },
+        "problem-server:validate_2": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1,
+          "p95": 2
+        },
+        "problem-server:interpret": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 4727,
+          "p95": 6810
+        },
+        "problem-server:execute": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 4728,
+          "p95": 6811
+        },
+        "problem-server:commit": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 77,
+          "p95": 93
+        },
+        "problem-server:total": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 4811,
+          "p95": 6948
+        },
+        "input-detected": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0,
+          "p95": 0
+        },
+        "last-input-signal": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 2181.199999999255,
+          "p95": 2240.099999997765
+        },
+        "delegated": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 3281.39999999851,
+          "p95": 3768.099999997765
+        },
+        "voice-command": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 3281.39999999851,
+          "p95": 3768.300000000745
+        },
+        "save-confirmed": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 8104.800000000745,
+          "p95": 10068.800000000745
+        },
+        "workspace-result": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 8104.89999999851,
+          "p95": 10068.800000000745
+        },
+        "result-returned": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 8105.10000000149,
+          "p95": 10068.900000002235
+        },
+        "commentary-sent": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 8105.199999999255,
+          "p95": 10069.10000000149
+        },
+        "display-commit": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 8112.5,
+          "p95": 10078.900000002235
+        },
+        "next-audio-observed": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 8346,
+          "p95": 9449.699999999255
+        },
+        "prior-save-wait": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0,
+          "p95": 0.10000000149011612
+        },
+        "save-queue": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0,
+          "p95": 0
+        },
+        "request-body": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 4822.599999997765,
+          "p95": 6966.60000000149
+        }
+      }
+    },
+    "reconnected-equation": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0.5135414727563554,
+        "upper": 0.9381042509712396
+      },
+      "attempted": 5,
+      "passed": 4,
+      "failed": 1,
+      "successMs": {
+        "p50": 11439.199999999255,
+        "p95": 13583.39999999851
+      },
+      "failureMs": {
+        "p50": 11492.5,
+        "p95": 11492.5
+      },
+      "stages": {
+        "live-server:load": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 188,
+          "p95": 262
+        },
+        "live-server:live_provider_headers": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 287,
+          "p95": 601
+        },
+        "live-server:total": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 562,
+          "p95": 978
+        },
+        "problem-server:receipt": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 64,
+          "p95": 96
+        },
+        "problem-server:load": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 49,
+          "p95": 108
+        },
+        "problem-server:model_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 4417,
+          "p95": 7070
+        },
+        "problem-server:preview_1": {
+          "observed": 3,
+          "missing": 2,
+          "p50": 1,
+          "p95": 5
+        },
+        "problem-server:model_2": {
+          "observed": 3,
+          "missing": 2,
+          "p50": 1899,
+          "p95": 2707
+        },
+        "problem-server:validate_2": {
+          "observed": 3,
+          "missing": 2,
+          "p50": 1,
+          "p95": 1
+        },
+        "problem-server:interpret": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 5213,
+          "p95": 9778
+        },
+        "problem-server:execute": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 5214,
+          "p95": 9778
+        },
+        "problem-server:commit": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 144,
+          "p95": 260
+        },
+        "problem-server:total": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 5449,
+          "p95": 10129
+        },
+        "input-detected": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0,
+          "p95": 0
+        },
+        "connection-start": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0.10000000149011612,
+          "p95": 0.19999999925494194
+        },
+        "connection-ready": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1157.0999999977648,
+          "p95": 1551.8999999985099
+        },
+        "last-input-signal": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 2538.5,
+          "p95": 2583.39999999851
+        },
+        "transcript-fallback": {
+          "observed": 3,
+          "missing": 2,
+          "p50": 8611.199999999255,
+          "p95": 8927.29999999702
+        },
+        "voice-command": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 8478.699999999255,
+          "p95": 8927.39999999851
+        },
+        "save-confirmed": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 13968.699999999255,
+          "p95": 16160.199999999255
+        },
+        "workspace-result": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 13968.800000000745,
+          "p95": 16160.199999999255
+        },
+        "result-returned": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 13968.89999999851,
+          "p95": 16160.29999999702
+        },
+        "commentary-sent": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 13968.89999999851,
+          "p95": 16160.39999999851
+        },
+        "display-commit": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 13977.800000000745,
+          "p95": 16166.79999999702
+        },
+        "next-audio-observed": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 14786.800000000745,
+          "p95": 16905.699999999255
+        },
+        "connection": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1157,
+          "p95": 1551.800000000745
+        },
+        "webrtc-offer": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 9.300000000745058,
+          "p95": 9.800000000745058
+        },
+        "ice-gather": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 119.90000000223517,
+          "p95": 127.69999999925494
+        },
+        "live-token-request": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 588.6999999992549,
+          "p95": 992.6999999992549
+        },
+        "prior-save-wait": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0,
+          "p95": 0.10000000149011612
+        },
+        "save-queue": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0,
+          "p95": 0
+        },
+        "request-body": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 5478.699999999255,
+          "p95": 10141.800000000745
+        },
+        "problem-server:validate_1": {
+          "observed": 2,
+          "missing": 3,
+          "p50": 0,
+          "p95": 1
+        },
+        "delegated": {
+          "observed": 2,
+          "missing": 3,
+          "p50": 5155.89999999851,
+          "p95": 6018.29999999702
+        }
+      }
+    }
+  }
+}

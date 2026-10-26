@@ -1,0 +1,187 @@
+{
+  "lane": "live text interpreter plus in-memory cloud operations; no DB or microphone",
+  "startedAt": "2026-10-18T18:50:24.562Z",
+  "modelCalls": 4,
+  "results": [
+    {
+      "text": "write 3*x+5=20",
+      "passed": true,
+      "ms": 8.887334000000003,
+      "modelCalls": 0,
+      "status": "command",
+      "message": "Your equation is now 3 times x plus 5 equals 20.",
+      "state": {
+        "mode": "equation",
+        "expression": "3 * x + 5 = 20",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      }
+    },
+    {
+      "text": "What would get the added five out of my way without changing the answer?",
+      "passed": true,
+      "ms": 6978.223166000001,
+      "modelCalls": 1,
+      "status": "explanation",
+      "message": "Subtract 5 from both sides. That cancels the added 5 on the left while keeping the equation balanced, so the answer stays the same. This is only a suggestion; it hasn’t been applied.",
+      "state": {
+        "mode": "equation",
+        "expression": "3 * x + 5 = 20",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      }
+    },
+    {
+      "text": "Okay, go ahead.",
+      "passed": true,
+      "ms": 3.2918339999996533,
+      "modelCalls": 0,
+      "status": "command",
+      "message": "3 times x equals 15",
+      "state": {
+        "mode": "equation",
+        "expression": "3 * x = 15",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      }
+    },
+    {
+      "memoryBytes": 1805,
+      "retainedBytes": 4046
+    },
+    {
+      "text": "Actually, take away seven instead of five.",
+      "passed": true,
+      "ms": 6041.283208000001,
+      "modelCalls": 1,
+      "status": "correction",
+      "message": "Corrected the previous turn. 1 step saved. 3 times x minus 2 equals 13 Say undo to restore the previous work.",
+      "state": {
+        "mode": "equation",
+        "expression": "3 * x - 2 = 13",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      }
+    },
+    {
+      "text": "Simplify.",
+      "passed": true,
+      "ms": 1.226208999998562,
+      "modelCalls": 0,
+      "status": "command",
+      "message": "No further supported simplification. 3 * x - 2 = 13",
+      "state": {
+        "mode": "equation",
+        "expression": "3 * x - 2 = 13",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      }
+    },
+    {
+      "text": "Why are we allowed to do that on both sides?",
+      "passed": true,
+      "ms": 5612.494374999998,
+      "modelCalls": 1,
+      "status": "explanation",
+      "message": "Subtracting 7 from both sides keeps the equation balanced: if the two sides were equal before, taking away the same amount from each leaves them equal. Here, 3x + 5 = 20 becomes 3x − 2 = 13.",
+      "state": {
+        "mode": "equation",
+        "expression": "3 * x - 2 = 13",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      }
+    },
+    {
+      "text": "Read the right side.",
+      "passed": true,
+      "ms": 0.6339999999981956,
+      "modelCalls": 0,
+      "status": "command",
+      "message": "right side: 13",
+      "state": {
+        "mode": "equation",
+        "expression": "3 * x - 2 = 13",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      }
+    },
+    {
+      "text": "Make the other one smaller.",
+      "passed": true,
+      "ms": 3639.7972499999996,
+      "modelCalls": 1,
+      "status": "clarification",
+      "message": "Which side or number do you mean by “the other one,” and by how much should it be smaller?",
+      "state": {
+        "mode": "equation",
+        "expression": "3 * x - 2 = 13",
+        "data": [
+          0,
+          0
+        ],
+        "diagram": [
+          "Start",
+          "Finish"
+        ],
+        "selection": 0,
+        "graph": false
+      }
+    }
+  ]
+}

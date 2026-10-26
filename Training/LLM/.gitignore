@@ -1,0 +1,6 @@
+.venv/
+# Intermediate optimizer state is recoverable local work, not a selected model.
+runs/**/recovery-adapter/
+runs/**/recovery-state.pt
+# Preserve the initial pre-dedup export locally; commit its audit manifest only.
+data/student-commands-v1-2026-10-23/*.jsonl

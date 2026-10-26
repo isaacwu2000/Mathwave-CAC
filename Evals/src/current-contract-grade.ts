@@ -1,0 +1,191 @@
+import {
+  runCommand,
+  validateInterpretation,
+  directMathCommand,
+  type Interpretation,
+} from '../../Web/src/modules/commands/index.ts';
+import { parseMath } from '../../Web/src/modules/math/index.ts';
+import type { Workspace } from '../../Web/src/modules/workspace/state.ts';
+import { grade, type Case } from './grade.ts';
+
+/** Normalizes only explicit graph notation, preserving expression structure and all unrelated state. */
+export function comparableGraphState(state: Workspace) {
+  const graphExpression = (source: string) => {
+    try {
+      const node = parseMath(source);
+      return JSON.stringify(
+        node.kind === 'equation' &&
+          node.left.kind === 'variable' &&
+          node.left.name === 'y'
+          ? node.right
+          : node,
+      );
+    } catch {
+      return source;
+    }
+  };
+  return {
+    ...state,
+    ...(state.graph && !state.graphScene
+      ? {
+          expression: graphExpression(state.expression),
+          ...(state.graphExpressions
+            ? { graphExpressions: state.graphExpressions.map(graphExpression) }
+            : {}),
+        }
+      : {}),
+  };
+}
+const equal = (a: unknown, b: unknown) =>
+  JSON.stringify(a) === JSON.stringify(b);
+const queryName = (text: string) =>
+  text
+    .match(
+      /^(?:find\s+)?(median|mean|mode|range|sum|count|minimum|maximum|(?:sample|population) (?:standard deviation|variance)|outliers)\b/i,
+    )?.[1]
+    .toLowerCase();
+
+/**
+ * Re-scores captured responses without model calls or changes to historical labels/reports.
+ * Recognizes program saves, exact explicit-graph representation equivalence and read-only temporary data.
+ * Does not auto-pass different clarification wording, arbitrary equivalent equations or unverified replies.
+ */
+export function gradeCurrentContract(
+  original: Case,
+  prediction: Interpretation,
+) {
+  const direct =
+    original.expected.status === 'clarification'
+      ? directMathCommand(original.utterance, original.state)
+      : null;
+  const item = direct
+    ? { ...original, expected: { status: 'command' as const, command: direct } }
+    : original;
+  const strict = grade(item, prediction);
+  const inlineQuery =
+    !!item.expected.command &&
+    !!queryName(item.expected.command) &&
+    /\bof\b/i.test(item.expected.command);
+  if (strict.pass && !inlineQuery)
+    return {
+      ...strict,
+      classification: direct ? 'updated-both-sides-policy' : 'strict-pass',
+    };
+  try {
+    const actual = validateInterpretation(
+      prediction,
+      structuredClone(item.state),
+      undefined,
+      item.clarification ? undefined : item.utterance,
+    );
+    if (actual.status !== item.expected.status)
+      return {
+        pass: false,
+        classification: direct ? 'updated-policy-mismatch' : 'status-mismatch',
+        reason: strict.reason,
+      };
+    if (actual.status !== 'command')
+      return {
+        pass: false,
+        classification:
+          actual.status === 'clarification'
+            ? 'clarification-wording-review'
+            : 'response-review',
+        reason: strict.reason,
+      };
+    if (!item.expected.command)
+      return {
+        pass: false,
+        classification: 'missing-oracle',
+        reason: strict.reason,
+      };
+    const expected = runCommand(
+      structuredClone(item.state),
+      item.expected.command,
+    );
+    let state = structuredClone(item.state),
+      saved = false,
+      action: ReturnType<typeof runCommand>['action'];
+    const messages: string[] = [];
+    const commands = actual.commands?.length
+      ? actual.commands
+      : [actual.command];
+    for (const command of commands) {
+      const result = runCommand(state, command);
+      state = result.state;
+      saved ||= !!(result.programSaved || result.changed || result.written);
+      action = result.action;
+      messages.push(result.message);
+    }
+    const sameState = equal(state, expected.state);
+    const sameGraphState = equal(
+      comparableGraphState(state),
+      comparableGraphState(expected.state),
+    );
+    const sameAction = action === expected.action;
+    const expectedMutation = !!(expected.changed || expected.written);
+    if (
+      !inlineQuery &&
+      expectedMutation &&
+      (sameState || sameGraphState) &&
+      sameAction &&
+      saved
+    )
+      return {
+        pass: true,
+        classification: sameState
+          ? 'program-save-flag'
+          : 'explicit-graph-representation',
+        reason:
+          'Validated saved result matches authored work and action; legacy confirmation wording is irrelevant.',
+      };
+    const normalize = (s: string) => s.replace(/\baverage\b/gi, 'Mean');
+    const message = messages.join('\n');
+    const sameAnswer = normalize(message) === normalize(expected.message);
+    if (!inlineQuery && !saved && sameState && sameAction && sameAnswer)
+      return {
+        pass: true,
+        classification: 'engine-query-equivalence',
+        reason: 'Unchanged state and matching deterministic answer.',
+      };
+    const query = queryName(item.expected.command);
+    const temporaryQuery =
+      query &&
+      /\bof\b/i.test(item.expected.command) &&
+      expected.state.mode === 'statistics' &&
+      !equal(expected.state.data, item.state.data);
+    // Only the same named engine query qualifies; a coincidentally equal mean/median is not sufficient.
+    const method = query?.replace(/\s+(\w)/g, (_, letter: string) =>
+      letter.toUpperCase(),
+    );
+    const requestedQuery =
+      method &&
+      commands.length === 1 &&
+      new RegExp(`\\bstatistics\\.${method}\\s*\\(`).test(commands[0]);
+    if (
+      temporaryQuery &&
+      requestedQuery &&
+      !saved &&
+      equal(state, item.state) &&
+      sameAction &&
+      sameAnswer
+    )
+      return {
+        pass: true,
+        classification: 'temporary-data-read-only-policy',
+        reason:
+          'Correct requested engine query on temporary data; original workspace preserved.',
+      };
+    return {
+      pass: false,
+      classification: 'behavior-or-query-format-review',
+      reason: strict.reason,
+    };
+  } catch (error) {
+    return {
+      pass: false,
+      classification: 'invalid-proposal-or-domain',
+      reason: error instanceof Error ? error.message : 'Rejected',
+    };
+  }
+}

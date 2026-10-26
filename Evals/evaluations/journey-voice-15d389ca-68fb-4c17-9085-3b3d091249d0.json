@@ -1,0 +1,3539 @@
+{
+  "runId": "15d389ca-68fb-4c17-9085-3b3d091249d0",
+  "startedAt": "2026-10-16T01:45:43.748Z",
+  "finishedAt": "2026-10-16T01:50:12.045Z",
+  "lane": "voice",
+  "revision": "6d46d19b9d8f95917ca4efc11b348177a90941d3",
+  "dirty": true,
+  "sourceSHA256": "d25e59e4e64dd4daa44f437b2708bea318309f5c3816b496057dbdd2232dfb26",
+  "runnerSHA256": "e4425fc694b44638026c27aa4852bc6baa8183e434b4391e7e2534b9dc0a2fc1",
+  "models": {
+    "live": "gpt-live-1",
+    "command": "gpt-6-luna"
+  },
+  "latencyDefinition": "Last detected input signal through React display commit; harnessElapsedMs includes fixture playback, polling and deliberate idle waits.",
+  "scope": "Synthetic recorded speech through browser, GPT Live, backend, persistence and React commit; excludes physical microphone and student usability.",
+  "repetitions": 5,
+  "planned": 15,
+  "unattempted": 0,
+  "groups": {
+    "cold-equation": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0.7527428728793252,
+        "upper": 1
+      },
+      "attempted": 5,
+      "passed": 5,
+      "failed": 0,
+      "successMs": {
+        "p50": 6104.9000000003725,
+        "p95": 9250.700000001118
+      },
+      "failureMs": {
+        "p50": null,
+        "p95": null
+      },
+      "stages": {
+        "live-server:load": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 34,
+          "p95": 67
+        },
+        "live-server:live_provider_headers": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 223,
+          "p95": 1422
+        },
+        "live-server:total": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 345,
+          "p95": 1527
+        },
+        "problem-server:receipt": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 27,
+          "p95": 41
+        },
+        "problem-server:load": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 45,
+          "p95": 49
+        },
+        "problem-server:model_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1834,
+          "p95": 2455
+        },
+        "problem-server:preview_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1,
+          "p95": 13
+        },
+        "problem-server:model_2": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1670,
+          "p95": 4677
+        },
+        "problem-server:validate_2": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 1,
+          "p95": 2
+        },
+        "problem-server:interpret": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 3364,
+          "p95": 6514
+        },
+        "problem-server:execute": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 3366,
+          "p95": 6515
+        },
+        "problem-server:commit": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 68,
+          "p95": 131
+        },
+        "problem-server:total": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 3517,
+          "p95": 6715
+        },
+        "input-detected": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0,
+          "p95": 0
+        },
+        "connection-start": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0.5,
+          "p95": 1.099999999627471
+        },
+        "connection-ready": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 838.0999999996275,
+          "p95": 2059.2999999988824
+        },
+        "last-input-signal": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 2517.5,
+          "p95": 2562.0999999996275
+        },
+        "delegated": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 5003.4000000003725,
+          "p95": 6206.699999999255
+        },
+        "voice-command": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 5003.9000000003725,
+          "p95": 6207.5
+        },
+        "save-confirmed": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 8616.89999999851,
+          "p95": 11707.099999999627
+        },
+        "workspace-result": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 8617,
+          "p95": 11707.099999999627
+        },
+        "result-returned": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 8617.199999999255,
+          "p95": 11707.400000000373
+        },
+        "commentary-sent": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 8617.5,
+          "p95": 11707.700000001118
+        },
+        "display-commit": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 8643.5,
+          "p95": 11730.700000001118
+        },
+        "next-audio-observed": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 9479.799999998882,
+          "p95": 11422.900000000373
+        },
+        "connection": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 837.5999999996275,
+          "p95": 2058.699999999255
+        },
+        "webrtc-offer": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 8.800000000745058,
+          "p95": 11.599999999627471
+        },
+        "ice-gather": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 117.79999999888241,
+          "p95": 130.30000000074506
+        },
+        "live-token-request": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 369.40000000037253,
+          "p95": 1545.5999999996275
+        },
+        "prior-save-wait": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0,
+          "p95": 0.10000000149011612
+        },
+        "save-queue": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0,
+          "p95": 0.09999999962747097
+        },
+        "request-body": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 3535.9000000003725,
+          "p95": 6733.699999999255
+        },
+        "session-closed": {
+          "observed": 1,
+          "missing": 4,
+          "p50": 12814,
+          "p95": 12814
+        }
+      }
+    },
+    "warm-step": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0.5135414727563554,
+        "upper": 0.9381042509712396
+      },
+      "attempted": 5,
+      "passed": 4,
+      "failed": 1,
+      "successMs": {
+        "p50": 5954.10000000149,
+        "p95": 7259.299999998882
+      },
+      "failureMs": {
+        "p50": 66.19445799998357,
+        "p95": 66.19445799998357
+      },
+      "stages": {
+        "problem-server:receipt": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 27,
+          "p95": 115
+        },
+        "problem-server:load": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 34,
+          "p95": 52
+        },
+        "problem-server:model_1": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 1791,
+          "p95": 2067
+        },
+        "problem-server:preview_1": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 1,
+          "p95": 3
+        },
+        "problem-server:model_2": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 1623,
+          "p95": 1708
+        },
+        "problem-server:validate_2": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 1,
+          "p95": 2
+        },
+        "problem-server:interpret": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 3502,
+          "p95": 3696
+        },
+        "problem-server:execute": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 3502,
+          "p95": 3697
+        },
+        "problem-server:commit": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 62,
+          "p95": 74
+        },
+        "problem-server:total": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 3630,
+          "p95": 3905
+        },
+        "input-detected": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 0,
+          "p95": 0
+        },
+        "last-input-signal": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 2181.300000000745,
+          "p95": 2240.0999999996275
+        },
+        "delegated": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 4416.5999999996275,
+          "p95": 5529.799999998882
+        },
+        "voice-command": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 4416.699999999255,
+          "p95": 5529.89999999851
+        },
+        "save-confirmed": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 8063.0999999996275,
+          "p95": 9451.299999998882
+        },
+        "workspace-result": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 8063.0999999996275,
+          "p95": 9451.299999998882
+        },
+        "result-returned": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 8063.299999998882,
+          "p95": 9451.39999999851
+        },
+        "commentary-sent": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 8063.39999999851,
+          "p95": 9451.5
+        },
+        "display-commit": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 8071.5,
+          "p95": 9461.89999999851
+        },
+        "next-audio-observed": {
+          "observed": 3,
+          "missing": 2,
+          "p50": 9397.200000001118,
+          "p95": 10442.699999999255
+        },
+        "prior-save-wait": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 0,
+          "p95": 0.09999999962747097
+        },
+        "save-queue": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 0,
+          "p95": 0
+        },
+        "request-body": {
+          "observed": 4,
+          "missing": 1,
+          "p50": 3646.300000000745,
+          "p95": 3919.9000000003725
+        }
+      }
+    },
+    "reconnected-equation": {
+      "successInterval80": {
+        "confidence": 0.8,
+        "lower": 0.5135414727563554,
+        "upper": 0.9381042509712396
+      },
+      "attempted": 5,
+      "passed": 4,
+      "failed": 1,
+      "successMs": {
+        "p50": 17165.800000000745,
+        "p95": 21124.400000000373
+      },
+      "failureMs": {
+        "p50": 18064,
+        "p95": 18064
+      },
+      "stages": {
+        "live-server:load": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 85,
+          "p95": 97
+        },
+        "live-server:live_provider_headers": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 203,
+          "p95": 459
+        },
+        "live-server:total": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 335,
+          "p95": 611
+        },
+        "problem-server:receipt": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 69,
+          "p95": 77
+        },
+        "problem-server:load": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 31,
+          "p95": 50
+        },
+        "problem-server:model_1": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 3154,
+          "p95": 5218
+        },
+        "problem-server:validate_1": {
+          "observed": 3,
+          "missing": 2,
+          "p50": 1,
+          "p95": 1
+        },
+        "problem-server:interpret": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 4425,
+          "p95": 5220
+        },
+        "problem-server:execute": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 4426,
+          "p95": 5222
+        },
+        "problem-server:commit": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 73,
+          "p95": 110
+        },
+        "problem-server:total": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 4601,
+          "p95": 5415
+        },
+        "input-detected": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0,
+          "p95": 0
+        },
+        "connection-start": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0.09999999962747097,
+          "p95": 0.30000000074505806
+        },
+        "connection": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 813.0999999996275,
+          "p95": 1102
+        },
+        "connection-ready": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 813.4000000003725,
+          "p95": 1102.0999999996275
+        },
+        "last-input-signal": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 2538.0999999996275,
+          "p95": 2560.800000000745
+        },
+        "transcript-fallback": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 15069.599999999627,
+          "p95": 19985.700000001118
+        },
+        "voice-command": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 15069.700000001118,
+          "p95": 19985.800000000745
+        },
+        "save-confirmed": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 19763.599999999627,
+          "p95": 23652.700000001118
+        },
+        "workspace-result": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 19763.599999999627,
+          "p95": 23652.700000001118
+        },
+        "result-returned": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 19763.699999999255,
+          "p95": 23652.800000000745
+        },
+        "commentary-sent": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 19763.800000000745,
+          "p95": 23652.900000000373
+        },
+        "display-commit": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 19772.5,
+          "p95": 23663
+        },
+        "next-audio-observed": {
+          "observed": 3,
+          "missing": 2,
+          "p50": 20660.400000000373,
+          "p95": 24541.400000000373
+        },
+        "webrtc-offer": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 9.099999999627471,
+          "p95": 10.299999998882413
+        },
+        "ice-gather": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 119.90000000037253,
+          "p95": 124.40000000037253
+        },
+        "live-token-request": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 348.30000000074506,
+          "p95": 631.3000000007451
+        },
+        "prior-save-wait": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0,
+          "p95": 0.09999999962747097
+        },
+        "save-queue": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 0,
+          "p95": 0
+        },
+        "request-body": {
+          "observed": 5,
+          "missing": 0,
+          "p50": 4621,
+          "p95": 5437.300000000745
+        },
+        "session-closed": {
+          "observed": 2,
+          "missing": 3,
+          "p50": 21009.099999999627,
+          "p95": 21826
+        },
+        "problem-server:preview_1": {
+          "observed": 2,
+          "missing": 3,
+          "p50": 0,
+          "p95": 2
+        },
+        "problem-server:model_2": {
+          "observed": 2,
+          "missing": 3,
+          "p50": 1270,
+          "p95": 1773
+        },
+        "problem-server:validate_2": {
+          "observed": 2,
+          "missing": 3,
+          "p50": 1,
+          "p95": 1
+        }
+      }
+    }
+  },
+  "summary": {
+    "successInterval80": {
+      "confidence": 0.8,
+      "lower": 0.717729290552471,
+      "upper": 0.9432340867638407
+    },
+    "attempted": 15,
+    "passed": 13,
+    "failed": 2,
+    "successMs": {
+      "p50": 7259.299999998882,
+      "p95": 21124.400000000373
+    },
+    "failureMs": {
+      "p50": 66.19445799998357,
+      "p95": 18064
+    },
+    "stages": {
+      "live-server:load": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 67,
+        "p95": 97
+      },
+      "live-server:live_provider_headers": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 203,
+        "p95": 1422
+      },
+      "live-server:total": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 335,
+        "p95": 1527
+      },
+      "problem-server:receipt": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 41,
+        "p95": 115
+      },
+      "problem-server:load": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 39,
+        "p95": 52
+      },
+      "problem-server:model_1": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 1896,
+        "p95": 5218
+      },
+      "problem-server:preview_1": {
+        "observed": 11,
+        "missing": 4,
+        "p50": 1,
+        "p95": 13
+      },
+      "problem-server:model_2": {
+        "observed": 11,
+        "missing": 4,
+        "p50": 1641,
+        "p95": 4677
+      },
+      "problem-server:validate_2": {
+        "observed": 11,
+        "missing": 4,
+        "p50": 1,
+        "p95": 2
+      },
+      "problem-server:interpret": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 3502,
+        "p95": 6514
+      },
+      "problem-server:execute": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 3502,
+        "p95": 6515
+      },
+      "problem-server:commit": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 68,
+        "p95": 131
+      },
+      "problem-server:total": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 3646,
+        "p95": 6715
+      },
+      "input-detected": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 0,
+        "p95": 0
+      },
+      "connection-start": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 0.30000000074505806,
+        "p95": 1.099999999627471
+      },
+      "connection-ready": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 813.4000000003725,
+        "p95": 2059.2999999988824
+      },
+      "last-input-signal": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 2480,
+        "p95": 2562.0999999996275
+      },
+      "delegated": {
+        "observed": 9,
+        "missing": 6,
+        "p50": 4971.300000000745,
+        "p95": 6206.699999999255
+      },
+      "voice-command": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 5079.39999999851,
+        "p95": 19985.800000000745
+      },
+      "save-confirmed": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 9451.299999998882,
+        "p95": 23652.700000001118
+      },
+      "workspace-result": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 9451.299999998882,
+        "p95": 23652.700000001118
+      },
+      "result-returned": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 9451.39999999851,
+        "p95": 23652.800000000745
+      },
+      "commentary-sent": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 9451.5,
+        "p95": 23652.900000000373
+      },
+      "display-commit": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 9461.89999999851,
+        "p95": 23663
+      },
+      "next-audio-observed": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 9617.199999999255,
+        "p95": 24541.400000000373
+      },
+      "connection": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 813.0999999996275,
+        "p95": 2058.699999999255
+      },
+      "webrtc-offer": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 8.800000000745058,
+        "p95": 11.599999999627471
+      },
+      "ice-gather": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 118,
+        "p95": 130.30000000074506
+      },
+      "live-token-request": {
+        "observed": 10,
+        "missing": 5,
+        "p50": 348.30000000074506,
+        "p95": 1545.5999999996275
+      },
+      "prior-save-wait": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 0,
+        "p95": 0.10000000149011612
+      },
+      "save-queue": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 0,
+        "p95": 0.09999999962747097
+      },
+      "request-body": {
+        "observed": 14,
+        "missing": 1,
+        "p50": 3665.2000000011176,
+        "p95": 6733.699999999255
+      },
+      "problem-server:validate_1": {
+        "observed": 3,
+        "missing": 12,
+        "p50": 1,
+        "p95": 1
+      },
+      "transcript-fallback": {
+        "observed": 5,
+        "missing": 10,
+        "p50": 15069.599999999627,
+        "p95": 19985.700000001118
+      },
+      "session-closed": {
+        "observed": 3,
+        "missing": 12,
+        "p50": 21009.099999999627,
+        "p95": 21826
+      }
+    }
+  },
+  "samples": [
+    {
+      "scenario": "cold-equation",
+      "audio": "/demo-voices/daniel-equation.wav",
+      "sha256": "fecf429d7526b2908843a43f200dc1d8a929b17898dfda8d73bff4f78d0bd2d9",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 = 11",
+      "expression": "2 * x + 3 = 11",
+      "elapsedMs": 7995.699999999255,
+      "responseLatencyMs": 7995.699999999255,
+      "harnessElapsedMs": 12130.210249999998,
+      "timings": [
+        {
+          "stage": "live-server:load",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 34
+        },
+        {
+          "stage": "live-server:live_provider_headers",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 1422
+        },
+        {
+          "stage": "live-server:total",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 1527
+        },
+        {
+          "stage": "problem-server:receipt",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 22
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 31
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 2455
+        },
+        {
+          "stage": "problem-server:preview_1",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 13
+        },
+        {
+          "stage": "problem-server:model_2",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 1670
+        },
+        {
+          "stage": "problem-server:validate_2",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 2
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 4141
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 4147
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 48
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 4248
+        },
+        {
+          "stage": "input-detected",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "connection-start",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "milestone",
+          "duration": 0.5
+        },
+        {
+          "stage": "connection-ready",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "milestone",
+          "duration": 2059.2999999988824
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "milestone",
+          "duration": 2517.5
+        },
+        {
+          "stage": "delegated",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "milestone",
+          "duration": 6206.699999999255
+        },
+        {
+          "stage": "voice-command",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "milestone",
+          "duration": 6207.5
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "milestone",
+          "duration": 10478
+        },
+        {
+          "stage": "workspace-result",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "milestone",
+          "duration": 10478
+        },
+        {
+          "stage": "result-returned",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "milestone",
+          "duration": 10478.199999999255
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "milestone",
+          "duration": 10478.799999998882
+        },
+        {
+          "stage": "display-commit",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "milestone",
+          "duration": 10513.199999999255
+        },
+        {
+          "stage": "next-audio-observed",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "milestone",
+          "duration": 11422.900000000373
+        },
+        {
+          "stage": "connection",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 2058.699999999255
+        },
+        {
+          "stage": "webrtc-offer",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 11.599999999627471
+        },
+        {
+          "stage": "ice-gather",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 123.70000000111759
+        },
+        {
+          "stage": "live-token-request",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 1545.5999999996275
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 0.10000000149011612
+        },
+        {
+          "stage": "save-queue",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 0.09999999962747097
+        },
+        {
+          "stage": "request-body",
+          "id": "2458d7bd-73b9-4bed-9566-50946a7771d9",
+          "kind": "span",
+          "duration": 4268.200000001118
+        }
+      ],
+      "audioObserved": true,
+      "connectionObserved": true,
+      "trial": 1,
+      "voice": "Daniel"
+    },
+    {
+      "scenario": "warm-step",
+      "audio": "/demo-voices/daniel-step.wav",
+      "sha256": "8a2189b916dc05c896a537df16af4fdab649319b417afd34adb5020b70d807c1",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 - 3 = 11 - 3",
+      "expression": "2 * x + 3 - 3 = 11 - 3",
+      "elapsedMs": 7259.299999998882,
+      "responseLatencyMs": 7259.299999998882,
+      "harnessElapsedMs": 10874.908667,
+      "timings": [
+        {
+          "stage": "problem-server:receipt",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "span",
+          "duration": 115
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "span",
+          "duration": 41
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "span",
+          "duration": 2067
+        },
+        {
+          "stage": "problem-server:preview_1",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "span",
+          "duration": 3
+        },
+        {
+          "stage": "problem-server:model_2",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "span",
+          "duration": 1623
+        },
+        {
+          "stage": "problem-server:validate_2",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "span",
+          "duration": 2
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "span",
+          "duration": 3696
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "span",
+          "duration": 3697
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "span",
+          "duration": 52
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "span",
+          "duration": 3905
+        },
+        {
+          "stage": "input-detected",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "milestone",
+          "duration": 2202.5999999996275
+        },
+        {
+          "stage": "delegated",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "milestone",
+          "duration": 5529.799999998882
+        },
+        {
+          "stage": "voice-command",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "milestone",
+          "duration": 5529.89999999851
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "milestone",
+          "duration": 9451.299999998882
+        },
+        {
+          "stage": "workspace-result",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "milestone",
+          "duration": 9451.299999998882
+        },
+        {
+          "stage": "result-returned",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "milestone",
+          "duration": 9451.39999999851
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "milestone",
+          "duration": 9451.5
+        },
+        {
+          "stage": "display-commit",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "milestone",
+          "duration": 9461.89999999851
+        },
+        {
+          "stage": "next-audio-observed",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "milestone",
+          "duration": 10442.699999999255
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "span",
+          "duration": 0.09999999962747097
+        },
+        {
+          "stage": "save-queue",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "request-body",
+          "id": "c1d58b39-7c0b-4517-8aa1-9a033a61fa89",
+          "kind": "span",
+          "duration": 3919.9000000003725
+        }
+      ],
+      "audioObserved": true,
+      "connectionObserved": false,
+      "trial": 1,
+      "voice": "Daniel"
+    },
+    {
+      "scenario": "reconnected-equation",
+      "audio": "/demo-voices/daniel-equation.wav",
+      "sha256": "fecf429d7526b2908843a43f200dc1d8a929b17898dfda8d73bff4f78d0bd2d9",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 = 11",
+      "expression": "2 * x + 3 = 11",
+      "elapsedMs": 21124.400000000373,
+      "responseLatencyMs": 21124.400000000373,
+      "harnessElapsedMs": 40404.063749999994,
+      "timings": [
+        {
+          "stage": "live-server:load",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 97
+        },
+        {
+          "stage": "live-server:live_provider_headers",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 459
+        },
+        {
+          "stage": "live-server:total",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 611
+        },
+        {
+          "stage": "problem-server:receipt",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 69
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 30
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 3481
+        },
+        {
+          "stage": "problem-server:validate_1",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 1
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 3482
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 3482
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 65
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 3646
+        },
+        {
+          "stage": "input-detected",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "connection-start",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "connection",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 1102
+        },
+        {
+          "stage": "connection-ready",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "milestone",
+          "duration": 1102.0999999996275
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "milestone",
+          "duration": 2538.5999999996275
+        },
+        {
+          "stage": "transcript-fallback",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "milestone",
+          "duration": 19985.700000001118
+        },
+        {
+          "stage": "voice-command",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "milestone",
+          "duration": 19985.800000000745
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "milestone",
+          "duration": 23652.700000001118
+        },
+        {
+          "stage": "workspace-result",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "milestone",
+          "duration": 23652.700000001118
+        },
+        {
+          "stage": "result-returned",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "milestone",
+          "duration": 23652.800000000745
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "milestone",
+          "duration": 23652.900000000373
+        },
+        {
+          "stage": "display-commit",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "milestone",
+          "duration": 23663
+        },
+        {
+          "stage": "next-audio-observed",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "milestone",
+          "duration": 24541.400000000373
+        },
+        {
+          "stage": "webrtc-offer",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 10.299999998882413
+        },
+        {
+          "stage": "ice-gather",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 118
+        },
+        {
+          "stage": "live-token-request",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 631.3000000007451
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "save-queue",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "request-body",
+          "id": "ab52c21e-a626-4186-ad63-77644691f6ae",
+          "kind": "span",
+          "duration": 3665.2000000011176
+        }
+      ],
+      "audioObserved": true,
+      "connectionObserved": true,
+      "trial": 1,
+      "voice": "Daniel"
+    },
+    {
+      "scenario": "cold-equation",
+      "audio": "/demo-voices/karen-equation.wav",
+      "sha256": "7fd3e8e180f5a929657ad1440d7047494d7f93717580e26234a7c8a871509a4e",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 = 11",
+      "expression": "2 * x + 3 = 11",
+      "elapsedMs": 5992.199999999255,
+      "responseLatencyMs": 5992.199999999255,
+      "harnessElapsedMs": 10151.687208000003,
+      "timings": [
+        {
+          "stage": "live-server:load",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 29
+        },
+        {
+          "stage": "live-server:live_provider_headers",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 436
+        },
+        {
+          "stage": "live-server:total",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 525
+        },
+        {
+          "stage": "problem-server:receipt",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 31
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 45
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 1497
+        },
+        {
+          "stage": "problem-server:preview_1",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 1
+        },
+        {
+          "stage": "problem-server:model_2",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 1787
+        },
+        {
+          "stage": "problem-server:validate_2",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 1
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 3287
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 3287
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 68
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 3432
+        },
+        {
+          "stage": "input-detected",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "connection-start",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "milestone",
+          "duration": 1.099999999627471
+        },
+        {
+          "stage": "connection-ready",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "milestone",
+          "duration": 1029.5999999996275
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "milestone",
+          "duration": 2480.0999999996275
+        },
+        {
+          "stage": "delegated",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "milestone",
+          "duration": 5003.4000000003725
+        },
+        {
+          "stage": "voice-command",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "milestone",
+          "duration": 5003.9000000003725
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "milestone",
+          "duration": 8453.799999998882
+        },
+        {
+          "stage": "workspace-result",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "milestone",
+          "duration": 8453.799999998882
+        },
+        {
+          "stage": "result-returned",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "milestone",
+          "duration": 8453.900000000373
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "milestone",
+          "duration": 8454.099999999627
+        },
+        {
+          "stage": "display-commit",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "milestone",
+          "duration": 8472.299999998882
+        },
+        {
+          "stage": "next-audio-observed",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "milestone",
+          "duration": 9479.799999998882
+        },
+        {
+          "stage": "connection",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 1028.4000000003725
+        },
+        {
+          "stage": "webrtc-offer",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 11.5
+        },
+        {
+          "stage": "ice-gather",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 116.30000000074506
+        },
+        {
+          "stage": "live-token-request",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 555.8000000007451
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "save-queue",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 0.09999999962747097
+        },
+        {
+          "stage": "request-body",
+          "id": "91e7fc93-8cca-4ca6-8e18-0a03e80a1970",
+          "kind": "span",
+          "duration": 3448.199999999255
+        }
+      ],
+      "audioObserved": true,
+      "connectionObserved": true,
+      "trial": 2,
+      "voice": "Karen"
+    },
+    {
+      "scenario": "warm-step",
+      "audio": "/demo-voices/karen-step.wav",
+      "sha256": "fa1c54d3ff4270ececcc3b58dafdbcaa2059071e0d9b09187fc26d66a92382af",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 - 3 = 11 - 3",
+      "expression": "2 * x + 3 - 3 = 11 - 3",
+      "elapsedMs": 5954.10000000149,
+      "responseLatencyMs": 5954.10000000149,
+      "harnessElapsedMs": 9477.346042000005,
+      "timings": [
+        {
+          "stage": "problem-server:receipt",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "span",
+          "duration": 27
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "span",
+          "duration": 30
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "span",
+          "duration": 1791
+        },
+        {
+          "stage": "problem-server:preview_1",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "span",
+          "duration": 2
+        },
+        {
+          "stage": "problem-server:model_2",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "span",
+          "duration": 1708
+        },
+        {
+          "stage": "problem-server:validate_2",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "span",
+          "duration": 1
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "span",
+          "duration": 3502
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "span",
+          "duration": 3502
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "span",
+          "duration": 71
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "span",
+          "duration": 3630
+        },
+        {
+          "stage": "input-detected",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "milestone",
+          "duration": 2117.39999999851
+        },
+        {
+          "stage": "delegated",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "milestone",
+          "duration": 4416.5999999996275
+        },
+        {
+          "stage": "voice-command",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "milestone",
+          "duration": 4416.699999999255
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "milestone",
+          "duration": 8063.0999999996275
+        },
+        {
+          "stage": "workspace-result",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "milestone",
+          "duration": 8063.0999999996275
+        },
+        {
+          "stage": "result-returned",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "milestone",
+          "duration": 8063.299999998882
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "milestone",
+          "duration": 8063.39999999851
+        },
+        {
+          "stage": "display-commit",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "milestone",
+          "duration": 8071.5
+        },
+        {
+          "stage": "next-audio-observed",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "milestone",
+          "duration": 9035.799999998882
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "save-queue",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "request-body",
+          "id": "4624f239-85b8-4246-bb91-ec44fe051085",
+          "kind": "span",
+          "duration": 3646.300000000745
+        }
+      ],
+      "audioObserved": true,
+      "connectionObserved": false,
+      "trial": 2,
+      "voice": "Karen"
+    },
+    {
+      "scenario": "reconnected-equation",
+      "audio": "/demo-voices/karen-equation.wav",
+      "sha256": "7fd3e8e180f5a929657ad1440d7047494d7f93717580e26234a7c8a871509a4e",
+      "passed": false,
+      "expectedExpression": "2 * x + 3 = 11",
+      "expression": "2 * x + 3 - 3 = 11 - 3",
+      "failure": "Saved equation did not match the fixture scenario.",
+      "elapsedMs": 18064,
+      "responseLatencyMs": 18064,
+      "harnessElapsedMs": 33890.22537500001,
+      "timings": [
+        {
+          "stage": "live-server:load",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 85
+        },
+        {
+          "stage": "live-server:live_provider_headers",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 246
+        },
+        {
+          "stage": "live-server:total",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 377
+        },
+        {
+          "stage": "problem-server:receipt",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 71
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 29
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 5218
+        },
+        {
+          "stage": "problem-server:validate_1",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 1
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 5220
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 5222
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 93
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 5415
+        },
+        {
+          "stage": "input-detected",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "connection-start",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "connection",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 849.0999999996275
+        },
+        {
+          "stage": "connection-ready",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "milestone",
+          "duration": 849.2000000011176
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "milestone",
+          "duration": 2480
+        },
+        {
+          "stage": "transcript-fallback",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "milestone",
+          "duration": 15100.599999999627
+        },
+        {
+          "stage": "voice-command",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "milestone",
+          "duration": 15100.700000001118
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "milestone",
+          "duration": 20538.800000000745
+        },
+        {
+          "stage": "workspace-result",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "milestone",
+          "duration": 20538.900000000373
+        },
+        {
+          "stage": "result-returned",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "milestone",
+          "duration": 20538.900000000373
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "milestone",
+          "duration": 20539
+        },
+        {
+          "stage": "display-commit",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "milestone",
+          "duration": 20544
+        },
+        {
+          "stage": "session-closed",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "milestone",
+          "duration": 21826
+        },
+        {
+          "stage": "webrtc-offer",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 4.599999999627471
+        },
+        {
+          "stage": "ice-gather",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 116.59999999962747
+        },
+        {
+          "stage": "live-token-request",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 392.2000000011176
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "save-queue",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "request-body",
+          "id": "e729d45c-6e97-4e9c-a585-918e77de9563",
+          "kind": "span",
+          "duration": 5437.300000000745
+        }
+      ],
+      "audioObserved": false,
+      "connectionObserved": true,
+      "trial": 2,
+      "voice": "Karen"
+    },
+    {
+      "scenario": "cold-equation",
+      "audio": "/demo-voices/rishi-equation.wav",
+      "sha256": "4872983dde938326c774a803d8e89d3ffe6594831abd06dbfd5d5515e4ea0a8d",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 = 11",
+      "expression": "2 * x + 3 = 11",
+      "elapsedMs": 5682,
+      "responseLatencyMs": 5682,
+      "harnessElapsedMs": 9727.609999999986,
+      "timings": [
+        {
+          "stage": "live-server:load",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 28
+        },
+        {
+          "stage": "live-server:live_provider_headers",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 180
+        },
+        {
+          "stage": "live-server:total",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 258
+        },
+        {
+          "stage": "problem-server:receipt",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 27
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 39
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 1535
+        },
+        {
+          "stage": "problem-server:preview_1",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 2
+        },
+        {
+          "stage": "problem-server:model_2",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 1612
+        },
+        {
+          "stage": "problem-server:validate_2",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 3149
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 3150
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 103
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 3319
+        },
+        {
+          "stage": "input-detected",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "connection-start",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "milestone",
+          "duration": 0.5
+        },
+        {
+          "stage": "connection-ready",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "milestone",
+          "duration": 761.3999999985099
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "milestone",
+          "duration": 2562.0999999996275
+        },
+        {
+          "stage": "delegated",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "milestone",
+          "duration": 4893.699999999255
+        },
+        {
+          "stage": "voice-command",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "milestone",
+          "duration": 4894.299999998882
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "milestone",
+          "duration": 8228.89999999851
+        },
+        {
+          "stage": "workspace-result",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "milestone",
+          "duration": 8228.89999999851
+        },
+        {
+          "stage": "result-returned",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "milestone",
+          "duration": 8229.099999999627
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "milestone",
+          "duration": 8229.299999998882
+        },
+        {
+          "stage": "display-commit",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "milestone",
+          "duration": 8244.099999999627
+        },
+        {
+          "stage": "next-audio-observed",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "milestone",
+          "duration": 9061.299999998882
+        },
+        {
+          "stage": "connection",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 760.7999999988824
+        },
+        {
+          "stage": "webrtc-offer",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 7.300000000745058
+        },
+        {
+          "stage": "ice-gather",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 115.19999999925494
+        },
+        {
+          "stage": "live-token-request",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 278.90000000037253
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "save-queue",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "request-body",
+          "id": "8add33c7-2ba3-4590-92ba-b62c923a63ca",
+          "kind": "span",
+          "duration": 3333.2999999988824
+        }
+      ],
+      "audioObserved": true,
+      "connectionObserved": true,
+      "trial": 3,
+      "voice": "Rishi"
+    },
+    {
+      "scenario": "warm-step",
+      "audio": "/demo-voices/rishi-step.wav",
+      "sha256": "48d3de2374cb4c8f7f8264dbba2eb8c09df720c0d87a55e9d0dcdc8a1546092f",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 - 3 = 11 - 3",
+      "expression": "2 * x + 3 - 3 = 11 - 3",
+      "elapsedMs": 5190.4000000003725,
+      "responseLatencyMs": 5190.4000000003725,
+      "harnessElapsedMs": 9375.285292000015,
+      "timings": [
+        {
+          "stage": "problem-server:receipt",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "span",
+          "duration": 20
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "span",
+          "duration": 34
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "span",
+          "duration": 1461
+        },
+        {
+          "stage": "problem-server:preview_1",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "span",
+          "duration": 1
+        },
+        {
+          "stage": "problem-server:model_2",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "span",
+          "duration": 1613
+        },
+        {
+          "stage": "problem-server:validate_2",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "span",
+          "duration": 3076
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "span",
+          "duration": 3077
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "span",
+          "duration": 74
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "span",
+          "duration": 3205
+        },
+        {
+          "stage": "input-detected",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "milestone",
+          "duration": 2240.0999999996275
+        },
+        {
+          "stage": "delegated",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "milestone",
+          "duration": 4203.800000000745
+        },
+        {
+          "stage": "voice-command",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "milestone",
+          "duration": 4203.9000000003725
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "milestone",
+          "duration": 7420.9000000003725
+        },
+        {
+          "stage": "workspace-result",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "milestone",
+          "duration": 7421
+        },
+        {
+          "stage": "result-returned",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "milestone",
+          "duration": 7421.0999999996275
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "milestone",
+          "duration": 7421.199999999255
+        },
+        {
+          "stage": "display-commit",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "milestone",
+          "duration": 7430.5
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "save-queue",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "request-body",
+          "id": "45c0bb81-02e5-4340-956b-6069d69a8609",
+          "kind": "span",
+          "duration": 3217
+        }
+      ],
+      "audioObserved": false,
+      "connectionObserved": false,
+      "trial": 3,
+      "voice": "Rishi"
+    },
+    {
+      "scenario": "reconnected-equation",
+      "audio": "/demo-voices/rishi-equation.wav",
+      "sha256": "4872983dde938326c774a803d8e89d3ffe6594831abd06dbfd5d5515e4ea0a8d",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 = 11",
+      "expression": "2 * x + 3 = 11",
+      "elapsedMs": 17211.699999999255,
+      "responseLatencyMs": 17211.699999999255,
+      "harnessElapsedMs": 32521.595625000016,
+      "timings": [
+        {
+          "stage": "live-server:load",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 82
+        },
+        {
+          "stage": "live-server:live_provider_headers",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 203
+        },
+        {
+          "stage": "live-server:total",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 335
+        },
+        {
+          "stage": "problem-server:receipt",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 77
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 31
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 2815
+        },
+        {
+          "stage": "problem-server:preview_1",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 2
+        },
+        {
+          "stage": "problem-server:model_2",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 1773
+        },
+        {
+          "stage": "problem-server:validate_2",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 1
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 4591
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 4592
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 73
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 4773
+        },
+        {
+          "stage": "input-detected",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "connection-start",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "milestone",
+          "duration": 0.09999999962747097
+        },
+        {
+          "stage": "connection-ready",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "milestone",
+          "duration": 812.5999999996275
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "milestone",
+          "duration": 2560.800000000745
+        },
+        {
+          "stage": "transcript-fallback",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "milestone",
+          "duration": 14971.900000000373
+        },
+        {
+          "stage": "voice-command",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "milestone",
+          "duration": 14972
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "milestone",
+          "duration": 19763.599999999627
+        },
+        {
+          "stage": "workspace-result",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "milestone",
+          "duration": 19763.599999999627
+        },
+        {
+          "stage": "result-returned",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "milestone",
+          "duration": 19763.699999999255
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "milestone",
+          "duration": 19763.800000000745
+        },
+        {
+          "stage": "display-commit",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "milestone",
+          "duration": 19772.5
+        },
+        {
+          "stage": "next-audio-observed",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "milestone",
+          "duration": 20660.400000000373
+        },
+        {
+          "stage": "connection",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 812.5
+        },
+        {
+          "stage": "webrtc-offer",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 9.099999999627471
+        },
+        {
+          "stage": "ice-gather",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 119.90000000037253
+        },
+        {
+          "stage": "live-token-request",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 348.30000000074506
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 0.09999999962747097
+        },
+        {
+          "stage": "save-queue",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "request-body",
+          "id": "2580c55f-1305-4e40-9b46-22e70b33a70f",
+          "kind": "span",
+          "duration": 4790.199999999255
+        }
+      ],
+      "audioObserved": true,
+      "connectionObserved": true,
+      "trial": 3,
+      "voice": "Rishi"
+    },
+    {
+      "scenario": "cold-equation",
+      "audio": "/demo-voices/daniel-equation.wav",
+      "sha256": "fecf429d7526b2908843a43f200dc1d8a929b17898dfda8d73bff4f78d0bd2d9",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 = 11",
+      "expression": "2 * x + 3 = 11",
+      "elapsedMs": 6104.9000000003725,
+      "responseLatencyMs": 6104.9000000003725,
+      "harnessElapsedMs": 10309.339042000007,
+      "timings": [
+        {
+          "stage": "live-server:load",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 67
+        },
+        {
+          "stage": "live-server:live_provider_headers",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 182
+        },
+        {
+          "stage": "live-server:total",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 306
+        },
+        {
+          "stage": "problem-server:receipt",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 41
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 49
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 1896
+        },
+        {
+          "stage": "problem-server:preview_1",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 1
+        },
+        {
+          "stage": "problem-server:model_2",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 1466
+        },
+        {
+          "stage": "problem-server:validate_2",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 1
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 3364
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 3366
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 61
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 3517
+        },
+        {
+          "stage": "input-detected",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "connection-start",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "milestone",
+          "duration": 0.599999999627471
+        },
+        {
+          "stage": "connection-ready",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "milestone",
+          "duration": 812
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "milestone",
+          "duration": 2538.5999999996275
+        },
+        {
+          "stage": "delegated",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "milestone",
+          "duration": 5078.799999998882
+        },
+        {
+          "stage": "voice-command",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "milestone",
+          "duration": 5079.39999999851
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "milestone",
+          "duration": 8616.89999999851
+        },
+        {
+          "stage": "workspace-result",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "milestone",
+          "duration": 8617
+        },
+        {
+          "stage": "result-returned",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "milestone",
+          "duration": 8617.199999999255
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "milestone",
+          "duration": 8617.5
+        },
+        {
+          "stage": "display-commit",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "milestone",
+          "duration": 8643.5
+        },
+        {
+          "stage": "next-audio-observed",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "milestone",
+          "duration": 9617.199999999255
+        },
+        {
+          "stage": "connection",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 811.4000000003725
+        },
+        {
+          "stage": "webrtc-offer",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 7.699999999254942
+        },
+        {
+          "stage": "ice-gather",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 130.30000000074506
+        },
+        {
+          "stage": "live-token-request",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 319.09999999962747
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 0.10000000149011612
+        },
+        {
+          "stage": "save-queue",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "request-body",
+          "id": "f8fd9cdf-12dc-4171-b9ed-c6001dcd39bb",
+          "kind": "span",
+          "duration": 3535.9000000003725
+        }
+      ],
+      "audioObserved": true,
+      "connectionObserved": true,
+      "trial": 4,
+      "voice": "Daniel"
+    },
+    {
+      "scenario": "warm-step",
+      "audio": "/demo-voices/daniel-step.wav",
+      "sha256": "8a2189b916dc05c896a537df16af4fdab649319b417afd34adb5020b70d807c1",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 - 3 = 11 - 3",
+      "expression": "2 * x + 3 - 3 = 11 - 3",
+      "elapsedMs": 6467.5999999996275,
+      "responseLatencyMs": 6467.5999999996275,
+      "harnessElapsedMs": 9852.961666999996,
+      "timings": [
+        {
+          "stage": "problem-server:receipt",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "span",
+          "duration": 67
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "span",
+          "duration": 52
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "span",
+          "duration": 1992
+        },
+        {
+          "stage": "problem-server:preview_1",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "span",
+          "duration": 1
+        },
+        {
+          "stage": "problem-server:model_2",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "span",
+          "duration": 1641
+        },
+        {
+          "stage": "problem-server:validate_2",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "span",
+          "duration": 1
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "span",
+          "duration": 3635
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "span",
+          "duration": 3638
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "span",
+          "duration": 62
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "span",
+          "duration": 3819
+        },
+        {
+          "stage": "input-detected",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "milestone",
+          "duration": 2181.300000000745
+        },
+        {
+          "stage": "delegated",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "milestone",
+          "duration": 4801.9000000003725
+        },
+        {
+          "stage": "voice-command",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "milestone",
+          "duration": 4802
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "milestone",
+          "duration": 8637.300000000745
+        },
+        {
+          "stage": "workspace-result",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "milestone",
+          "duration": 8637.400000000373
+        },
+        {
+          "stage": "result-returned",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "milestone",
+          "duration": 8637.60000000149
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "milestone",
+          "duration": 8637.700000001118
+        },
+        {
+          "stage": "display-commit",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "milestone",
+          "duration": 8648.900000000373
+        },
+        {
+          "stage": "next-audio-observed",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "milestone",
+          "duration": 9397.200000001118
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "save-queue",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "request-body",
+          "id": "0bab28d7-7dae-4d5c-ac18-d3ead0845ec5",
+          "kind": "span",
+          "duration": 3834.2999999988824
+        }
+      ],
+      "audioObserved": true,
+      "connectionObserved": false,
+      "trial": 4,
+      "voice": "Daniel"
+    },
+    {
+      "scenario": "reconnected-equation",
+      "audio": "/demo-voices/daniel-equation.wav",
+      "sha256": "fecf429d7526b2908843a43f200dc1d8a929b17898dfda8d73bff4f78d0bd2d9",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 = 11",
+      "expression": "2 * x + 3 = 11",
+      "elapsedMs": 17165.800000000745,
+      "responseLatencyMs": 17165.800000000745,
+      "harnessElapsedMs": 34603.54762500001,
+      "timings": [
+        {
+          "stage": "live-server:load",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 93
+        },
+        {
+          "stage": "live-server:live_provider_headers",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 187
+        },
+        {
+          "stage": "live-server:total",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 327
+        },
+        {
+          "stage": "problem-server:receipt",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 68
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 46
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 3154
+        },
+        {
+          "stage": "problem-server:preview_1",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "problem-server:model_2",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 1270
+        },
+        {
+          "stage": "problem-server:validate_2",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 1
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 4425
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 4426
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 60
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 4601
+        },
+        {
+          "stage": "input-detected",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "connection-start",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "milestone",
+          "duration": 0.30000000074505806
+        },
+        {
+          "stage": "connection-ready",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "milestone",
+          "duration": 813.4000000003725
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "milestone",
+          "duration": 2538.0999999996275
+        },
+        {
+          "stage": "transcript-fallback",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "milestone",
+          "duration": 15069.599999999627
+        },
+        {
+          "stage": "voice-command",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "milestone",
+          "duration": 15069.700000001118
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "milestone",
+          "duration": 19692
+        },
+        {
+          "stage": "workspace-result",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "milestone",
+          "duration": 19692.200000001118
+        },
+        {
+          "stage": "result-returned",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "milestone",
+          "duration": 19692.300000000745
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "milestone",
+          "duration": 19692.400000000373
+        },
+        {
+          "stage": "display-commit",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "milestone",
+          "duration": 19703.900000000373
+        },
+        {
+          "stage": "session-closed",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "milestone",
+          "duration": 21009.099999999627
+        },
+        {
+          "stage": "connection",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 813.0999999996275
+        },
+        {
+          "stage": "webrtc-offer",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 9.599999999627471
+        },
+        {
+          "stage": "ice-gather",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 124.40000000037253
+        },
+        {
+          "stage": "live-token-request",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 343.1000000014901
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "save-queue",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "request-body",
+          "id": "38ba6bb9-32b7-4151-931c-9bf1605e64e7",
+          "kind": "span",
+          "duration": 4621
+        }
+      ],
+      "audioObserved": false,
+      "connectionObserved": true,
+      "trial": 4,
+      "voice": "Daniel"
+    },
+    {
+      "scenario": "cold-equation",
+      "audio": "/demo-voices/karen-equation.wav",
+      "sha256": "7fd3e8e180f5a929657ad1440d7047494d7f93717580e26234a7c8a871509a4e",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 = 11",
+      "expression": "2 * x + 3 = 11",
+      "elapsedMs": 9250.700000001118,
+      "responseLatencyMs": 9250.700000001118,
+      "harnessElapsedMs": 13921.372208999994,
+      "timings": [
+        {
+          "stage": "live-server:load",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 62
+        },
+        {
+          "stage": "live-server:live_provider_headers",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 223
+        },
+        {
+          "stage": "live-server:total",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 345
+        },
+        {
+          "stage": "problem-server:receipt",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 21
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 48
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 1834
+        },
+        {
+          "stage": "problem-server:preview_1",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 1
+        },
+        {
+          "stage": "problem-server:model_2",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 4677
+        },
+        {
+          "stage": "problem-server:validate_2",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 1
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 6514
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 6515
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 131
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 6715
+        },
+        {
+          "stage": "input-detected",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "connection-start",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "milestone",
+          "duration": 0.5
+        },
+        {
+          "stage": "connection-ready",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "milestone",
+          "duration": 838.0999999996275
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "milestone",
+          "duration": 2480
+        },
+        {
+          "stage": "delegated",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "milestone",
+          "duration": 4971.300000000745
+        },
+        {
+          "stage": "voice-command",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "milestone",
+          "duration": 4971.9000000003725
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "milestone",
+          "duration": 11707.099999999627
+        },
+        {
+          "stage": "workspace-result",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "milestone",
+          "duration": 11707.099999999627
+        },
+        {
+          "stage": "result-returned",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "milestone",
+          "duration": 11707.400000000373
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "milestone",
+          "duration": 11707.700000001118
+        },
+        {
+          "stage": "display-commit",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "milestone",
+          "duration": 11730.700000001118
+        },
+        {
+          "stage": "session-closed",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "milestone",
+          "duration": 12814
+        },
+        {
+          "stage": "connection",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 837.5999999996275
+        },
+        {
+          "stage": "webrtc-offer",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 8.800000000745058
+        },
+        {
+          "stage": "ice-gather",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 117.79999999888241
+        },
+        {
+          "stage": "live-token-request",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 369.40000000037253
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "save-queue",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "request-body",
+          "id": "70724e67-2a4f-4883-a719-2cedecd8c6be",
+          "kind": "span",
+          "duration": 6733.699999999255
+        }
+      ],
+      "audioObserved": false,
+      "connectionObserved": true,
+      "trial": 5,
+      "voice": "Karen"
+    },
+    {
+      "scenario": "warm-step",
+      "audio": "/demo-voices/karen-step.wav",
+      "sha256": "fa1c54d3ff4270ececcc3b58dafdbcaa2059071e0d9b09187fc26d66a92382af",
+      "passed": false,
+      "expectedExpression": "2 * x + 3 - 3 = 11 - 3",
+      "expression": null,
+      "failure": "Warm connection was not available.",
+      "elapsedMs": 66.19445799998357,
+      "responseLatencyMs": null,
+      "harnessElapsedMs": 66.20020799999475,
+      "timings": [],
+      "audioObserved": false,
+      "connectionObserved": false,
+      "trial": 5,
+      "voice": "Karen"
+    },
+    {
+      "scenario": "reconnected-equation",
+      "audio": "/demo-voices/karen-equation.wav",
+      "sha256": "7fd3e8e180f5a929657ad1440d7047494d7f93717580e26234a7c8a871509a4e",
+      "passed": true,
+      "expectedExpression": "2 * x + 3 = 11",
+      "expression": "2 * x + 3 = 11",
+      "elapsedMs": 13851.599999999627,
+      "responseLatencyMs": 13851.599999999627,
+      "harnessElapsedMs": 17527.81258300002,
+      "timings": [
+        {
+          "stage": "live-server:load",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 69
+        },
+        {
+          "stage": "live-server:live_provider_headers",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 195
+        },
+        {
+          "stage": "live-server:total",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 328
+        },
+        {
+          "stage": "problem-server:receipt",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 63
+        },
+        {
+          "stage": "problem-server:load",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 50
+        },
+        {
+          "stage": "problem-server:model_1",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 1753
+        },
+        {
+          "stage": "problem-server:validate_1",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "problem-server:interpret",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 1753
+        },
+        {
+          "stage": "problem-server:execute",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 1753
+        },
+        {
+          "stage": "problem-server:commit",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 110
+        },
+        {
+          "stage": "problem-server:total",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 1977
+        },
+        {
+          "stage": "input-detected",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "milestone",
+          "duration": 0
+        },
+        {
+          "stage": "connection-start",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "milestone",
+          "duration": 0.09999999962747097
+        },
+        {
+          "stage": "connection-ready",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "milestone",
+          "duration": 753.2999999988824
+        },
+        {
+          "stage": "last-input-signal",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "milestone",
+          "duration": 2480
+        },
+        {
+          "stage": "transcript-fallback",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "milestone",
+          "duration": 14328.099999999627
+        },
+        {
+          "stage": "voice-command",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "milestone",
+          "duration": 14328.199999999255
+        },
+        {
+          "stage": "save-confirmed",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "milestone",
+          "duration": 16325.199999999255
+        },
+        {
+          "stage": "workspace-result",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "milestone",
+          "duration": 16325.299999998882
+        },
+        {
+          "stage": "result-returned",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "milestone",
+          "duration": 16325.39999999851
+        },
+        {
+          "stage": "commentary-sent",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "milestone",
+          "duration": 16325.5
+        },
+        {
+          "stage": "display-commit",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "milestone",
+          "duration": 16331.599999999627
+        },
+        {
+          "stage": "next-audio-observed",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "milestone",
+          "duration": 17028.5
+        },
+        {
+          "stage": "connection",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 753.0999999996275
+        },
+        {
+          "stage": "webrtc-offer",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 8.699999999254942
+        },
+        {
+          "stage": "ice-gather",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 121.20000000111759
+        },
+        {
+          "stage": "live-token-request",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 343
+        },
+        {
+          "stage": "prior-save-wait",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "save-queue",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 0
+        },
+        {
+          "stage": "request-body",
+          "id": "fabb65f9-371b-417d-ab2d-57a67bf9400a",
+          "kind": "span",
+          "duration": 1995.300000000745
+        }
+      ],
+      "audioObserved": true,
+      "connectionObserved": true,
+      "trial": 5,
+      "voice": "Karen"
+    }
+  ]
+}

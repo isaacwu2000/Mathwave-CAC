@@ -1,0 +1,220 @@
+{
+  "book": {
+    "version": 2,
+    "assignments": [
+      {
+        "id": "3d90fae0-11c4-4ec3-850f-9b298b968ded",
+        "title": "My homework",
+        "problems": [
+          {
+            "id": "19eba814-865b-4772-8032-c09ac5114220",
+            "title": "Problem 1",
+            "state": {
+              "mode": "geometry",
+              "expression": "y = x^2",
+              "data": [
+                0,
+                0
+              ],
+              "diagram": [
+                "Start",
+                "Finish"
+              ],
+              "selection": 0,
+              "graph": false,
+              "construction": "A=point(0,0)\nB=point(3,0)\nC=point(0,4)\ndraw triangle(A,B,C)\nrightangle B,A,C\nmeasure segment(A,B)\nmeasure segment(A,C)\nlabel segment(B,C), h"
+            },
+            "steps": [
+              {
+                "command": "typescript\nproblem.save(graph.plot(\"y=x^2\"));",
+                "displayCommand": "graph y=x^2",
+                "state": {
+                  "mode": "equation",
+                  "expression": "y = x^2",
+                  "data": [
+                    0,
+                    0
+                  ],
+                  "diagram": [
+                    "Start",
+                    "Finish"
+                  ],
+                  "selection": 0,
+                  "graph": true
+                },
+                "at": "2026-10-24T17:49:30.435Z"
+              },
+              {
+                "command": "typescript\nproblem.save(geometry.construct(\"A=point(0,0)\\nB=point(3,0)\\nC=point(0,4)\\ndraw triangle(A,B,C)\\nrightangle B,A,C\\nmeasure segment(A,B)\\nmeasure segment(A,C)\\nlabel segment(B,C), h\"))",
+                "displayCommand": "Draw a right triangle with legs 3 and 4, and label the hypotenuse h. Do not calculate h.",
+                "state": {
+                  "mode": "geometry",
+                  "expression": "y = x^2",
+                  "data": [
+                    0,
+                    0
+                  ],
+                  "diagram": [
+                    "Start",
+                    "Finish"
+                  ],
+                  "selection": 0,
+                  "graph": false,
+                  "construction": "A=point(0,0)\nB=point(3,0)\nC=point(0,4)\ndraw triangle(A,B,C)\nrightangle B,A,C\nmeasure segment(A,B)\nmeasure segment(A,C)\nlabel segment(B,C), h"
+                },
+                "at": "2026-10-24T17:49:36.148Z"
+              }
+            ],
+            "initialState": {
+              "mode": "equation",
+              "expression": "0",
+              "data": [
+                0,
+                0
+              ],
+              "diagram": [
+                "Start",
+                "Finish"
+              ],
+              "selection": 0,
+              "graph": false
+            },
+            "undoRevisions": [
+              {
+                "state": {
+                  "mode": "equation",
+                  "expression": "0",
+                  "data": [
+                    0,
+                    0
+                  ],
+                  "diagram": [
+                    "Start",
+                    "Finish"
+                  ],
+                  "selection": 0,
+                  "graph": false
+                },
+                "steps": [],
+                "undoStates": []
+              },
+              {
+                "state": {
+                  "mode": "equation",
+                  "expression": "y = x^2",
+                  "data": [
+                    0,
+                    0
+                  ],
+                  "diagram": [
+                    "Start",
+                    "Finish"
+                  ],
+                  "selection": 0,
+                  "graph": true
+                },
+                "steps": [
+                  {
+                    "command": "typescript\nproblem.save(graph.plot(\"y=x^2\"));",
+                    "displayCommand": "graph y=x^2",
+                    "state": {
+                      "mode": "equation",
+                      "expression": "y = x^2",
+                      "data": [
+                        0,
+                        0
+                      ],
+                      "diagram": [
+                        "Start",
+                        "Finish"
+                      ],
+                      "selection": 0,
+                      "graph": true
+                    },
+                    "at": "2026-10-24T17:49:30.435Z"
+                  }
+                ],
+                "undoStates": [
+                  {
+                    "mode": "equation",
+                    "expression": "0",
+                    "data": [
+                      0,
+                      0
+                    ],
+                    "diagram": [
+                      "Start",
+                      "Finish"
+                    ],
+                    "selection": 0,
+                    "graph": false
+                  }
+                ]
+              }
+            ],
+            "redoRevisions": [],
+            "draft": "",
+            "undoStates": [
+              {
+                "mode": "equation",
+                "expression": "0",
+                "data": [
+                  0,
+                  0
+                ],
+                "diagram": [
+                  "Start",
+                  "Finish"
+                ],
+                "selection": 0,
+                "graph": false
+              },
+              {
+                "mode": "equation",
+                "expression": "y = x^2",
+                "data": [
+                  0,
+                  0
+                ],
+                "diagram": [
+                  "Start",
+                  "Finish"
+                ],
+                "selection": 0,
+                "graph": true
+              }
+            ],
+            "conversation": [
+              {
+                "request": "Draw a right triangle with legs 3 and 4, and label the hypotenuse h. Do not calculate h.",
+                "response": "Right triangle drawn with legs 3 and 4. The hypotenuse is labeled h; it has not been calculated. A: point (0, 0). B: point (3, 0). C: point (0, 4).",
+                "status": "command",
+                "stateKey": "277:643528087",
+                "revisable": true,
+                "stepCount": 2,
+                "undoDepth": 1
+              },
+              {
+                "request": "Draw a right triangle with legs 3 and 4, and label the hypotenuse h. Do not calculate h.",
+                "response": "Right triangle drawn with legs 3 and 4. The hypotenuse is labeled h; it has not been calculated. A: point (0, 0). B: point (3, 0). C: point (0, 4).",
+                "status": "command",
+                "stateKey": "277:643528087",
+                "revisable": false,
+                "stepCount": 2
+              }
+            ],
+            "conversationArchive": []
+          }
+        ]
+      }
+    ],
+    "assignmentId": "3d90fae0-11c4-4ec3-850f-9b298b968ded",
+    "problemId": "19eba814-865b-4772-8032-c09ac5114220",
+    "draft": ""
+  },
+  "clarification": null,
+  "status": "command",
+  "message": "Right triangle drawn with legs 3 and 4. The hypotenuse is labeled h; it has not been calculated. A: point (0, 0). B: point (3, 0). C: point (0, 4).",
+  "aiUnavailable": false,
+  "revision": 2
+}

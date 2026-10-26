@@ -1,0 +1,13 @@
+packages:
+  - Web
+  - Evals
+  - Training/LLM
+
+overrides:
+  sharp: 0.35.4
+
+allowBuilds:
+  core-js: false
+  esbuild: true
+  workerd: true
+  sharp: true

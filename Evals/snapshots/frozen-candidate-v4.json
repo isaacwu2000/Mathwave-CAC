@@ -1,0 +1,15 @@
+{
+  "frozenAt": "2026-10-10T03:21:54.669Z",
+  "productionCommit": "52ea3d3",
+  "trainingSource": "train-v4.jsonl (112 observed cases)",
+  "files": {
+    "lib/workspace.ts": "d1833f08028f2a2d2cf577d71da70560a9dc55df6e92f4c39b92ddd422b66072",
+    "lib/clarification.ts": "dfe901b56c1be2b2ed418544b4360fafdf5ce40aa591222d236a3bf441e52b30",
+    "lib/math-intent.ts": "138584ed050919927b2f9fd2a71d6f130831a8e0ebe210a5aac40fc20bbfbb11",
+    "lib/math-engine.ts": "16092367d76a244da2fdefbd94465d47f4ae42a694f615710c439dce4f508aa8",
+    "lib/command-interpreter.ts": "40d54454128f5cb60ad54cd21c03469c00849826785804f594a99fb4be0d2cab",
+    "app/page.tsx": "5bfa8465c54afdb1f5c66c6b2a94af26b5a5dba5c824baaa2aa62561183b98f9",
+    "scripts/evaluate.ts": "9a050ce89b39c310d043bfb53bdf0d13bb751edf9b1eaef8517d2707227b9228",
+    "evals/grade.ts": "f7f99c604e1185cb5e688f6e758c411eec11919803fca991f4a228c6362636da"
+  }
+}

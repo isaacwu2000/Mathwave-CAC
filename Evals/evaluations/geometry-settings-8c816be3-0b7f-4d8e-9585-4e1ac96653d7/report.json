@@ -1,0 +1,48 @@
+{
+  "evidence": "mocked cloud transport; real deterministic command/save/recovery engine; no provider calls",
+  "checks": [
+    "construction canvas",
+    "direct point edit",
+    "reload",
+    "undo",
+    "equal top-aligned wide desktop settings columns",
+    "stacked mobile settings"
+  ],
+  "desktop": {
+    "left": {
+      "x": 43.203125,
+      "y": 397.796875,
+      "width": 640.796875
+    },
+    "right": {
+      "x": 756,
+      "y": 397.796875,
+      "width": 640.796875
+    },
+    "columns": {
+      "x": 43.203125,
+      "y": 397.796875,
+      "width": 1353.59375
+    },
+    "overflow": false
+  },
+  "mobile": {
+    "left": {
+      "x": 16,
+      "y": 429.59375,
+      "width": 358
+    },
+    "right": {
+      "x": 16,
+      "y": 603.59375,
+      "width": 358
+    },
+    "columns": {
+      "x": 16,
+      "y": 429.59375,
+      "width": 358
+    },
+    "overflow": false
+  },
+  "errors": []
+}

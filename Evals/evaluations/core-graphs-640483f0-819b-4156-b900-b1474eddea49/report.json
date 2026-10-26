@@ -1,0 +1,6 @@
+{
+  "lane": "synthetic browser, no provider calls",
+  "status": "failed",
+  "error": "MathLive custom element was not ready: math.setValue is not a function",
+  "resolution": "Browser script now waits for customElements.whenDefined; later complete runs retained separately"
+}
